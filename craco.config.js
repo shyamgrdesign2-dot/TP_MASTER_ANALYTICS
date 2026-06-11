@@ -21,6 +21,16 @@ module.exports = {
   },
   webpack: {
     configure: (webpackConfig) => {
+      // mini-css-extract-plugin emits "Conflicting order" warnings when CSS
+      // modules and global CSS are imported in different orders across chunks.
+      // They're harmless (the styles don't actually conflict), but Vercel runs
+      // with CI=true, which makes CRA treat any warning as a build error. Tell
+      // the plugin to ignore CSS ordering so the production build stays green.
+      const miniCss = webpackConfig.plugins.find(
+        (p) => p && p.constructor && p.constructor.name === 'MiniCssExtractPlugin'
+      );
+      if (miniCss) miniCss.options.ignoreOrder = true;
+
       // @cloudflare/realtimekit ships both ESM (dist/index.es.js) and CJS (dist/index.cjs.js).
       // CRA 5's outside-app Babel loader applies @babel/plugin-transform-parameters but NOT
       // @babel/plugin-transform-classes, which crashes on super() in arrow functions with rest
