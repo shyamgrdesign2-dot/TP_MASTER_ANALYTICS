@@ -859,7 +859,7 @@ Without the \`origin_id\` reuse log, only creation counts are computable; reuse 
     title: "Certificates (Care)",
     explanatory: `## What this page is
 
-Medical-certificate issuance for the clinic: how many certificates were issued, of what type, by which doctor, and whether they came from system templates or the clinic's own custom templates. Useful for admins (workload, template adoption) and for audit (who certified whom, when). Live data, verified against the reference tenant (194 issued, top type Medical Fitness, top doctor Dr Sheela BR).
+Medical-certificate issuance for the clinic: how many certificates were issued, of what type, by which doctor, and whether they came from system templates or the clinic's own custom templates. Useful for admins (workload, template adoption) and for audit (who certified whom, when). Live data, verified against the reference tenant (194 issued, top type Medical Fitness, top doctor Dr. Asha Verma in the anonymized demo data).
 
 ## Key metrics
 

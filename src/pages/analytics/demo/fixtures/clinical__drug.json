@@ -74,15 +74,15 @@
     ],
     "rows": [
       {
-        "k": "Samir Vankhade",
+        "k": "Dr. Asha Verma",
         "count": 977
       },
       {
-        "k": "richa(gyna)",
+        "k": "Dr. Neha Kulkarni",
         "count": 11
       },
       {
-        "k": "Piyush sharma (peadia)",
+        "k": "Dr. Suresh Menon",
         "count": 1
       }
     ]
@@ -2069,6 +2069,6 @@
   "meta": {
     "live": true,
     "rowCount": 100,
-    "note": "Top lists and registers exclude catalogue test entries; the count KPIs include every line."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

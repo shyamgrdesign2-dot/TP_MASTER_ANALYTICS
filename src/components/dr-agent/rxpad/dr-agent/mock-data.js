@@ -153,7 +153,7 @@ export const SMART_SUMMARY_BY_CONTEXT = {
       diagnosis: "Migraine without aura",
       medication: "Sumatriptan 50mg (As needed), Paracetamol 500mg (As needed)",
       labTestsSuggested: "Vitamin D, B12",
-      doctorName: "Dr. Sheela BR (Paediatrics)"
+      doctorName: "Dr. Meera Joshi (Paediatrics)"
     },
     labFlagCount: 1,
     todayVitals: { bp: "110/70", pulse: "72", spo2: "99", temp: "98.4", weight: "58", height: "162" },

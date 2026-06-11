@@ -15,7 +15,7 @@
     {
       "key": "topDoctor",
       "label": "Top issuing doctor",
-      "value": "Samir Vankhade",
+      "value": "Dr. Asha Verma",
       "description": "The doctor who issued the most certificates this period (73). This is the issuing doctor, not the template author."
     },
     {
@@ -72,15 +72,15 @@
         "count": 1
       },
       {
-        "k": "Test Sohil",
+        "k": "Sports Fitness Certificate",
         "count": 1
       },
       {
-        "k": "Test rohit",
+        "k": "School Absence Certificate",
         "count": 1
       },
       {
-        "k": "test certificate setting",
+        "k": "Vaccination Certificate",
         "count": 1
       },
       {
@@ -160,15 +160,15 @@
     ],
     "rows": [
       {
-        "k": "Samir Vankhade",
+        "k": "Dr. Asha Verma",
         "count": 73
       },
       {
-        "k": "Ami",
+        "k": "Dr. Demo 12",
         "count": 8
       },
       {
-        "k": "rox(gynae)",
+        "k": "Dr. Arjun Pillai",
         "count": 3
       }
     ]
@@ -201,594 +201,595 @@
         "date": null,
         "type": "Medical Fitness Certificate 67",
         "patient": "Demo Patient 40",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 2",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "System template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 233",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 233",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 233",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 7",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 101",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 312",
-        "doctor": "rox(gynae)",
+        "doctor": "Dr. Arjun Pillai",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "rox(gynae)",
+        "doctor": "Dr. Arjun Pillai",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 42",
-        "doctor": "rox(gynae)",
+        "doctor": "Dr. Arjun Pillai",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 312",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 312",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 42",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 42",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 42",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Ami",
+        "doctor": "Dr. Demo 12",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 9",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
-        "type": "test certificate setting",
+        "type": "Vaccination Certificate",
         "patient": "Demo Patient 250",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
-        "type": "Test rohit",
+        "type": "School Absence Certificate",
         "patient": "Demo Patient 250",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
-        "type": "Test Sohil",
+        "type": "Sports Fitness Certificate",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Print configuration",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Print configuration",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 62",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 44",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 44",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 44",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 44",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 6",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 6",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 14",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 102",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 25",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 23",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 80",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Visa",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 49",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 375",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 340",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 362",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 43",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Travel Certificate",
         "patient": "Demo Patient 6",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 8",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 6",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 69",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 15",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Fitness Certificate",
         "patient": "Demo Patient 102",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Leave Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 89",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Medical Certificate For COVID",
         "patient": "Demo Patient 43",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 5",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 23",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 23",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       },
       {
         "date": null,
         "type": "Fitness  Certificate",
         "patient": "Demo Patient 23",
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "source": "Custom template"
       }
     ]
   },
   "meta": {
     "live": true,
-    "rowCount": 84
+    "rowCount": 84,
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

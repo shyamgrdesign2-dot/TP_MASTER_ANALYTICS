@@ -955,6 +955,6 @@
   "meta": {
     "live": true,
     "rowCount": 100,
-    "note": "Vitals values are stored as free text at source; charts parse them defensively with sanity bounds and each chart notes how many values were discarded."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

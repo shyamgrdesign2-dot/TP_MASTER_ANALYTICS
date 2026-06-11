@@ -89,7 +89,7 @@
     {
       "key": "pharmacy",
       "label": "Net pharmacy sales",
-      "value": -100000099,
+      "value": 6500,
       "unit": "₹",
       "description": "Pharmacy counter revenue this period: gross medicine sales minus sale returns. The full pharmacy picture lives on the Pharmacy page."
     },
@@ -311,6 +311,7 @@
   "meta": {
     "live": true,
     "rowCount": 0,
-    "careSetting": "opd"
+    "careSetting": "opd",
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

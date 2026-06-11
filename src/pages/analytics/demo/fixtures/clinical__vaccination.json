@@ -3242,6 +3242,6 @@
   "meta": {
     "live": true,
     "rowCount": 361,
-    "note": "Doses are counted by their recorded given date only; entries saved without a given date (or with a placeholder date before 1901) are excluded. Bulk-entered doses are linked to the vaccine catalog via their bulk vaccine id, recovering records the previous report missed. IAP vs other is derived from the vaccination schedule template the dose was recorded against (system-provided IAP chart vs a clinic-customised template)."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

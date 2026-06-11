@@ -1880,6 +1880,6 @@
   "meta": {
     "live": true,
     "rowCount": 200,
-    "note": "Per-Rx symptoms parsed from the prescription's symptom box (structured entries only; legacy free-text rows excluded). Severity is folded onto a 3-level scale: high counts as Severe, medium as Moderate, low as Mild; anything else shows as Not recorded."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

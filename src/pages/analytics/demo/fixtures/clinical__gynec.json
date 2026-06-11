@@ -236,6 +236,6 @@
   "meta": {
     "live": false,
     "rowCount": 5,
-    "note": "SAMPLE DATA: this module's source lives in the pm-medicalhistory gynec service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

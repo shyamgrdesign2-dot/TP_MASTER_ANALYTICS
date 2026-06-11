@@ -28,6 +28,14 @@ Then open http://localhost:3000 — the root path redirects straight to
 
 ## Mock vs real-shaped data
 
+> **Everything you see is mock data.** ALL names — patients **and** doctors —
+> emails, phone numbers, identifiers and figures are anonymized or synthesized
+> demo values. Patient names are `Demo Patient N`, doctor names come from a
+> fixed fictional pool (`Dr. Asha Verma`, `Dr. Rohan Iyer`, …, `Dr. Demo N`),
+> emails are `patientNN@example.com`, mobiles are masked. No value on any
+> dashboard identifies a real person or a real clinic's finances. The
+> anonymization pass is reproducible: `node scripts/scrub-demo-fixtures.js`.
+
 Two kinds of demo data, both fully anonymized:
 
 1. **Captured fixtures** (`src/pages/analytics/demo/fixtures/*.json`) — real

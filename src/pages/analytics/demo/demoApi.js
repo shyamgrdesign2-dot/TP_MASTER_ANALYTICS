@@ -88,8 +88,8 @@ export function getFixture(path, params = {}) {
 // plausibly. NOTE: fixtures are pre-aggregated, so picking a doctor does not
 // re-slice the demo data — it only scopes the live-API paths in production.
 export const DEMO_DOCTORS = [
-  { um_id: "501", um_name: "Samir Vankhade" },
-  { um_id: "502", um_name: "Rushabh shah" },
-  { um_id: "503", um_name: "Piyush sharma (peadia)" },
-  { um_id: "504", um_name: "richa(gyna)" },
+  { um_id: "501", um_name: "Dr. Asha Verma" },
+  { um_id: "502", um_name: "Dr. Rohan Iyer" },
+  { um_id: "503", um_name: "Dr. Suresh Menon" },
+  { um_id: "504", um_name: "Dr. Neha Kulkarni" },
 ];

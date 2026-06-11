@@ -201,15 +201,15 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "revenue": 2063265
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "revenue": 39719
       },
       {
-        "doctor": "Piyush sharma (peadia)",
+        "doctor": "Dr. Suresh Menon",
         "revenue": 3772
       }
     ]
@@ -746,6 +746,7 @@
   },
   "meta": {
     "live": true,
-    "rowCount": 16
+    "rowCount": 16,
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

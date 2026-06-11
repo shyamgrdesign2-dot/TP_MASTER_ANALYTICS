@@ -532,6 +532,28 @@
   }
 }
 
+/* ── Demo mock-data disclaimer ──
+   Last flex row of .analytics-shell: always visible under the scroll area on
+   every leaf (OPD + IPD, incl. reports hubs), never overlapping content. */
+.analytics-demo-disclaimer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 7px 16px;
+  background: #eef0ff;
+  border-top: 1px solid #dfe1f7;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #4f4e9c;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  svg { flex: 0 0 auto; }
+}
+
 /* ── Body ── */
 .analytics-body {
   flex: 1;

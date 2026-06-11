@@ -163,77 +163,77 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "advised": "488",
         "kept": "363"
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "advised": "22",
         "kept": "16"
       },
       {
-        "doctor": "richa(gyna)",
+        "doctor": "Dr. Neha Kulkarni",
         "advised": "6",
         "kept": "4"
       },
       {
-        "doctor": "Bheesham",
+        "doctor": "Dr. Demo 11",
         "advised": "4",
         "kept": "1"
       },
       {
-        "doctor": "Vraj(Pulmo)",
+        "doctor": "Dr. Meera Joshi",
         "advised": "3",
         "kept": "2"
       },
       {
-        "doctor": "rox(gynae)",
+        "doctor": "Dr. Arjun Pillai",
         "advised": "3",
         "kept": "2"
       },
       {
-        "doctor": "Piyush sharma (peadia)",
+        "doctor": "Dr. Suresh Menon",
         "advised": "2",
         "kept": "1"
       },
       {
-        "doctor": "prachi patel(pedia)",
+        "doctor": "Dr. Vikram Shetty",
         "advised": "2",
         "kept": "2"
       },
       {
-        "doctor": "govind sharma Onco",
+        "doctor": "Dr. Demo 22",
         "advised": "1",
         "kept": "0"
       },
       {
-        "doctor": "Hitesh(Hemato)",
+        "doctor": "Dr. Demo 19",
         "advised": "1",
         "kept": "0"
       },
       {
-        "doctor": "Rohit Jadhav",
+        "doctor": "Dr. Demo 21",
         "advised": "1",
         "kept": "1"
       },
       {
-        "doctor": "Avinash Sharma",
+        "doctor": "Dr. Kavita Rao",
         "advised": "0",
         "kept": "0"
       },
       {
-        "doctor": "Viraj (Opth)",
+        "doctor": "Dr. Demo 31",
         "advised": "0",
         "kept": "0"
       },
       {
-        "doctor": "jayesh(neu)",
+        "doctor": "Dr. Demo 14",
         "advised": "0",
         "kept": "0"
       },
       {
-        "doctor": "Anurag(gastro)",
+        "doctor": "Dr. Demo 20",
         "advised": "0",
         "kept": "0"
       }
@@ -4535,6 +4535,7 @@
   },
   "meta": {
     "live": true,
-    "rowCount": 533
+    "rowCount": 533,
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

@@ -55200,6 +55200,6 @@
   "meta": {
     "live": true,
     "rowCount": 5000,
-    "note": "Pediatric scope: only measurements taken while the patient was under 18 count (entries without a date of birth are excluded). Adult BMI bands do not apply to children, so this page shows raw height and weight distributions instead of BMI categories; values outside a plausible pediatric range are bucketed as Implausible value rather than hidden."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

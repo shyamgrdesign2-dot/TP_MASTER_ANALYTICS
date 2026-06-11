@@ -495,6 +495,6 @@
     "live": true,
     "rowCount": 27,
     "parseFails": 0,
-    "note": "History is a registry, not an event stream: prevalence reflects each patient's latest saved history record over all time, so the selected date range applies only to the captures trend. Items unticked by the doctor (enable = N) are documented denials and are excluded from all counts. Doctor filter is not supported on this page (the history table records no doctor)."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

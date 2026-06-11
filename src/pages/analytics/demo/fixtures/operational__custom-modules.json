@@ -59,7 +59,7 @@
         "count": 6
       },
       {
-        "k": "Dummy module V2",
+        "k": "Diabetes Care Plan V2",
         "count": 4
       }
     ]
@@ -77,19 +77,19 @@
     ],
     "rows": [
       {
-        "k": "Dr Sheela BR",
+        "k": "Dr. Demo 25",
         "count": 8
       },
       {
-        "k": "Dr Janavi",
+        "k": "Dr. Demo 28",
         "count": 4
       },
       {
-        "k": "Dr Ashish",
+        "k": "Dr. Demo 27",
         "count": 2
       },
       {
-        "k": "Dr Ram",
+        "k": "Dr. Demo 29",
         "count": 1
       }
     ]
@@ -149,7 +149,7 @@
     "rows": [
       {
         "module": "Diet v2",
-        "creator": "Dr Sheela BR",
+        "creator": "Dr. Demo 25",
         "columns": 4,
         "created": "2026-02-11",
         "uses": 22,
@@ -157,7 +157,7 @@
       },
       {
         "module": "Bed Rest 2",
-        "creator": "Dr Sheela BR",
+        "creator": "Dr. Demo 25",
         "columns": 2,
         "created": "2026-01-08",
         "uses": 17,
@@ -165,7 +165,7 @@
       },
       {
         "module": "Gynec",
-        "creator": "Dr Janavi",
+        "creator": "Dr. Demo 28",
         "columns": 4,
         "created": "2026-03-02",
         "uses": 12,
@@ -173,7 +173,7 @@
       },
       {
         "module": "Liquid Diet",
-        "creator": "Dr Sheela BR",
+        "creator": "Dr. Demo 25",
         "columns": 1,
         "created": "2026-03-20",
         "uses": 9,
@@ -181,15 +181,15 @@
       },
       {
         "module": "NewCustom",
-        "creator": "Dr Ashish",
+        "creator": "Dr. Demo 27",
         "columns": 4,
         "created": "2026-04-15",
         "uses": 6,
         "reusedBy": 1
       },
       {
-        "module": "Dummy module V2",
-        "creator": "Dr Ram",
+        "module": "Diabetes Care Plan V2",
+        "creator": "Dr. Demo 29",
         "columns": 3,
         "created": "2026-05-05",
         "uses": 4,
@@ -200,6 +200,6 @@
   "meta": {
     "live": false,
     "rowCount": 6,
-    "note": "SAMPLE DATA: this module's source lives in the dynamic-modules service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

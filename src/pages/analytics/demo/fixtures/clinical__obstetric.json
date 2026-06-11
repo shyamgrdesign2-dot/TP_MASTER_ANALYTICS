@@ -921,6 +921,6 @@
   "meta": {
     "live": true,
     "rowCount": 59,
-    "note": "Covers the legacy obstetric records in this database (entries up to mid-2024). Newer obstetric entries are saved in the gynec service and are not available to analytics yet (a data feed is pending). G, P, L, A, E counters are not stored here; the event mix counts recorded events instead."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

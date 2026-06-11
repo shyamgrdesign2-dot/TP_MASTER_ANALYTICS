@@ -48,15 +48,15 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "revenue": 2063265
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "revenue": 39719
       },
       {
-        "doctor": "Piyush sharma (peadia)",
+        "doctor": "Dr. Suresh Menon",
         "revenue": 3772
       }
     ]
@@ -176,11 +176,11 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "discount": 843046
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "discount": 36
       }
     ]
@@ -390,12 +390,12 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "amount": 18127,
         "deposits": 16
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "amount": 4000,
         "deposits": 1
       }
@@ -415,11 +415,11 @@
     ],
     "rows": [
       {
-        "editor": "Samir Vankhade",
+        "editor": "Dr. Asha Verma",
         "edits": 25
       },
       {
-        "editor": "Rushabh shah",
+        "editor": "Dr. Rohan Iyer",
         "edits": 8
       }
     ]
@@ -443,12 +443,12 @@
     ],
     "rows": [
       {
-        "actor": "Samir Vankhade",
+        "actor": "Dr. Asha Verma",
         "cancelled": 3,
         "deleted": 77
       },
       {
-        "actor": "Rushabh shah",
+        "actor": "Dr. Rohan Iyer",
         "cancelled": 0,
         "deleted": 2
       }
@@ -543,6 +543,6 @@
   },
   "meta": {
     "live": true,
-    "note": "Bill-level figures cover real bills (invoices + cash memos) only. Advance DEBITS (wallet money used on bills) are settled in the billing service and are not present in this data: the wallet figures here are deposits and refunds."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

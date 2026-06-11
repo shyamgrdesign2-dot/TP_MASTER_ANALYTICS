@@ -265,6 +265,6 @@
   "meta": {
     "live": true,
     "rowCount": 87,
-    "note": "Source: legacy clinic replica. Hospitals on the modern pm-ipd microservice need that feed wired in before their data appears here."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

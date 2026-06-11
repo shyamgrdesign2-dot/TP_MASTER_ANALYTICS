@@ -122,19 +122,19 @@
     ],
     "rows": [
       {
-        "k": "Dr Sheela BR",
+        "k": "Dr. Demo 25",
         "count": 19
       },
       {
-        "k": "Dr Janavi",
+        "k": "Dr. Demo 28",
         "count": 12
       },
       {
-        "k": "Dr Ashish",
+        "k": "Dr. Demo 27",
         "count": 7
       },
       {
-        "k": "Dr Ram",
+        "k": "Dr. Demo 29",
         "count": 4
       }
     ]
@@ -167,35 +167,35 @@
         "date": "2026-06-09",
         "patient": "Demo Patient 386",
         "procedure": "Suturing",
-        "doctor": "Dr Sheela BR",
+        "doctor": "Dr. Demo 25",
         "notes": "3 sutures, forearm"
       },
       {
         "date": "2026-06-07",
         "patient": "Demo Patient 387",
         "procedure": "Wound dressing",
-        "doctor": "Dr Janavi",
+        "doctor": "Dr. Demo 28",
         "notes": ""
       },
       {
         "date": "2026-06-04",
         "patient": "Demo Patient 388",
         "procedure": "Incision and drainage",
-        "doctor": "Dr Sheela BR",
+        "doctor": "Dr. Demo 25",
         "notes": "abscess, left thigh"
       },
       {
         "date": "2026-05-30",
         "patient": "Demo Patient 389",
         "procedure": "Ear syringing",
-        "doctor": "Dr Ashish",
+        "doctor": "Dr. Demo 27",
         "notes": ""
       },
       {
         "date": "2026-05-27",
         "patient": "Demo Patient 390",
         "procedure": "Foreign body removal",
-        "doctor": "Dr Ram",
+        "doctor": "Dr. Demo 29",
         "notes": "splinter, palm"
       }
     ]
@@ -203,6 +203,6 @@
   "meta": {
     "live": false,
     "rowCount": 5,
-    "note": "SAMPLE DATA: this module's source lives in the pm-patient-docs surgeries service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

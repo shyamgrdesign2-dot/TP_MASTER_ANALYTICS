@@ -115,47 +115,47 @@
     ],
     "rows": [
       {
-        "doctor": "Samir Vankhade",
+        "doctor": "Dr. Asha Verma",
         "patients": 187
       },
       {
-        "doctor": "richa(gyna)",
+        "doctor": "Dr. Neha Kulkarni",
         "patients": 9
       },
       {
-        "doctor": "Piyush sharma (peadia)",
+        "doctor": "Dr. Suresh Menon",
         "patients": 5
       },
       {
-        "doctor": "Bheesham",
+        "doctor": "Dr. Demo 11",
         "patients": 4
       },
       {
-        "doctor": "rox(gynae)",
+        "doctor": "Dr. Arjun Pillai",
         "patients": 3
       },
       {
-        "doctor": "govind sharma Onco",
+        "doctor": "Dr. Demo 22",
         "patients": 2
       },
       {
-        "doctor": "prachi patel(pedia)",
+        "doctor": "Dr. Vikram Shetty",
         "patients": 2
       },
       {
-        "doctor": "Rushabh shah",
+        "doctor": "Dr. Rohan Iyer",
         "patients": 2
       },
       {
-        "doctor": "Vraj(Pulmo)",
+        "doctor": "Dr. Meera Joshi",
         "patients": 2
       },
       {
-        "doctor": "Hitesh(Hemato)",
+        "doctor": "Dr. Demo 19",
         "patients": 1
       },
       {
-        "doctor": "Rohit Jadhav",
+        "doctor": "Dr. Demo 21",
         "patients": 1
       }
     ]
@@ -5049,6 +5049,6 @@
   "meta": {
     "live": true,
     "rowCount": 509,
-    "note": "Investigations are captured as free text (tcm_investigation); top tests reflect that field verbatim."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }

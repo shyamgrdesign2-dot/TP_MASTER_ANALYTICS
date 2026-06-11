@@ -636,6 +636,19 @@ export default function AnalyticsWorkspace() {
         </div>
       </div>
 
+      {/* DEMO build: persistent mock-data disclaimer, pinned below the scroll
+          area on every leaf (both modules, incl. reports hubs). Rendered as the
+          shell's last flex row — never overlaps content, no fixed-position
+          padding hacks needed. */}
+      {DEMO && (
+        <footer className="analytics-demo-disclaimer" role="note">
+          <InfoCircle size={14} variant="Bulk" color="#4b4ad5" aria-hidden />
+          <span>
+            Demo environment: all figures are anonymized mock data. Connect pm-analytics-service and the production billing APIs for live analytics.
+          </span>
+        </footer>
+      )}
+
       <QueryBuilderDrawer
         open={builderOpen}
         onClose={() => setBuilderOpen(false)}

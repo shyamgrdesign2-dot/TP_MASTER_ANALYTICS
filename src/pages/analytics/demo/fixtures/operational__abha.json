@@ -3207,6 +3207,6 @@
   "meta": {
     "live": true,
     "rowCount": 443,
-    "note": "The KYC vs non-KYC channel, request-level consent success, and the KYC split of care contexts are not stored in this analytics database (they live only in the ABDM microservices). The cards above use the patient-level flags that ARE stored, labelled honestly as proxies."
+    "note": "Sample data: this demo renders anonymized mock data captured from a test environment."
   }
 }
