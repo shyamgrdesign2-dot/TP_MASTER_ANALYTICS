@@ -152,7 +152,7 @@
     {
       "key": "topMode",
       "label": "Top payment mode",
-      "value": "Unspecified",
+      "value": "Others",
       "description": "The payment method that collected the most money in this period."
     },
     {
@@ -552,32 +552,20 @@
     ],
     "rows": [
       {
-        "payment_mode": "Unspecified",
-        "amount": 991361
+        "payment_mode": "Others",
+        "amount": 995911
       },
       {
-        "payment_mode": "Bank Credit Cards",
+        "payment_mode": "Credit Card",
         "amount": 883293
       },
       {
-        "payment_mode": "Mobile Payments",
-        "amount": 193112
-      },
-      {
-        "payment_mode": "Bank Transfers",
-        "amount": 17340
-      },
-      {
-        "payment_mode": "Online Bank Transfers",
-        "amount": 15100
-      },
-      {
-        "payment_mode": "E-wallet Payments",
-        "amount": 4550
-      },
-      {
         "payment_mode": "UPI",
-        "amount": 2000
+        "amount": 195112
+      },
+      {
+        "payment_mode": "Net Banking",
+        "amount": 32440
       }
     ]
   },

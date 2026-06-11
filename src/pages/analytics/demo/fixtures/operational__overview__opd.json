@@ -229,28 +229,20 @@
         "amount": 991361
       },
       {
-        "k": "Bank Credit Cards",
+        "k": "Credit Card",
         "amount": 883293
       },
       {
-        "k": "Mobile Payments",
-        "amount": 193112
-      },
-      {
-        "k": "Bank Transfers",
-        "amount": 17340
-      },
-      {
-        "k": "Online Bank Transfers",
-        "amount": 15100
-      },
-      {
-        "k": "E-wallet Payments",
-        "amount": 4550
-      },
-      {
         "k": "UPI",
-        "amount": 2000
+        "amount": 195112
+      },
+      {
+        "k": "Net Banking",
+        "amount": 32440
+      },
+      {
+        "k": "Others",
+        "amount": 4550
       }
     ]
   },

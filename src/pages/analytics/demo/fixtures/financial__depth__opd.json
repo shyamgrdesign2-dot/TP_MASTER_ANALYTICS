@@ -18,13 +18,13 @@
     {
       "key": "topPayMode",
       "label": "Top payment mode",
-      "value": "Bank Credit Cards",
+      "value": "Credit Card",
       "description": "The most-used collection mode this period (5 receipts, ₹6,587)."
     },
     {
       "key": "topRefundMode",
       "label": "Top refund mode",
-      "value": "Mobile Payments",
+      "value": "UPI",
       "description": "The mode most refunds were returned through this period (₹6,900)."
     },
     {
@@ -119,19 +119,19 @@
     ],
     "rows": [
       {
-        "k": "Bank Credit Cards",
+        "k": "Credit Card",
         "amount": 6587
       },
       {
-        "k": "Mobile Payments",
+        "k": "UPI",
         "amount": 5305
       },
       {
-        "k": "Online Bank Transfers",
+        "k": "Net Banking",
         "amount": 1050
       },
       {
-        "k": "E-wallet Payments",
+        "k": "Others",
         "amount": 50
       }
     ]
@@ -149,15 +149,15 @@
     ],
     "rows": [
       {
-        "mode": "Mobile Payments",
+        "mode": "UPI",
         "amount": 6900
       },
       {
-        "mode": "Bank Credit Cards",
+        "mode": "Credit Card",
         "amount": 6800
       },
       {
-        "mode": "Bank Transfers",
+        "mode": "Net Banking",
         "amount": 2350
       }
     ]
@@ -354,19 +354,15 @@
     ],
     "rows": [
       {
-        "k": "Mobile Payments",
-        "amount": 16724
+        "k": "UPI",
+        "amount": 18724
       },
       {
-        "k": "Bank Credit Cards",
+        "k": "Credit Card",
         "amount": 3003
       },
       {
-        "k": "UPI",
-        "amount": 2000
-      },
-      {
-        "k": "Online Bank Transfers",
+        "k": "Net Banking",
         "amount": 400
       }
     ]

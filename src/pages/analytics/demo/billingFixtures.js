@@ -40,7 +40,11 @@ const mulberry32 = (seed) => {
 
 const FIRST = ["Aarav", "Diya", "Vihaan", "Ananya", "Arjun", "Isha", "Kabir", "Meera", "Rohan", "Sneha", "Aditya", "Priya", "Kunal", "Nisha", "Raghav", "Pooja", "Sameer", "Kavya", "Nikhil", "Ritu"];
 const LAST = ["Sharma", "Patel", "Reddy", "Iyer", "Khan", "Gupta", "Nair", "Singh", "Desai", "Joshi", "Kulkarni", "Mehta", "Chopra", "Banerjee", "Rao"];
-const MODES = ["Cash", "UPI", "Card", "Advance Deposit", "Net Banking"];
+// Canonical payment-mode vocabulary — the only modes the app ever shows (the
+// captured fixtures are normalized to the same set via
+// scripts/normalize-payment-modes.js). The first three are also the modes an
+// advance deposit can be funded through.
+const MODES = ["Cash", "UPI", "Credit Card", "Net Banking", "Debit Card", "Advance Deposit"];
 
 const iso = (d) => d.toISOString().slice(0, 10);
 const daysAgo = (n) => {
