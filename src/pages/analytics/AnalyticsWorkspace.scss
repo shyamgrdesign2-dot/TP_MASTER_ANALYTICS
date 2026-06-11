@@ -2,8 +2,8 @@
 
 .analytics-shell {
   display: flex;
-  flex-direction: column; /* full-width header on top, sidebar + content below */
-  height: calc(100vh - 56px);
+  flex-direction: column; /* demo strip + full-width header on top, sidebar + content below */
+  height: 100vh;
   min-height: 560px;
   background: var(--tp-bg);
   overflow: hidden;
@@ -533,8 +533,9 @@
 }
 
 /* ── Demo mock-data disclaimer ──
-   Last flex row of .analytics-shell: always visible under the scroll area on
-   every leaf (OPD + IPD, incl. reports hubs), never overlapping content. */
+   First flex row of .analytics-shell: pinned to the very top above the header,
+   always visible on every leaf (OPD + IPD, incl. reports hubs). Yellow so it
+   reads unmistakably as a demo banner, never overlapping content. */
 .analytics-demo-disclaimer {
   flex: 0 0 auto;
   display: flex;
@@ -543,11 +544,11 @@
   gap: 7px;
   width: 100%;
   padding: 7px 16px;
-  background: #eef0ff;
-  border-top: 1px solid #dfe1f7;
+  background: #fff3cd;
+  border-bottom: 1px solid #f3d98a;
   font-size: 12px;
   line-height: 1.4;
-  color: #4f4e9c;
+  color: #6b5300;
   letter-spacing: 0.01em;
   text-align: center;
 

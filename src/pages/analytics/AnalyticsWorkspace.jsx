@@ -385,6 +385,18 @@ export default function AnalyticsWorkspace() {
   return (
     <ConfigProvider theme={TP_THEME}>
     <div className="tp-analytics analytics-shell">
+      {/* DEMO build: persistent mock-data disclaimer, pinned to the very top of
+          the shell (above the header) on every leaf — both modules, incl. reports
+          hubs. Rendered as the shell's first flex row, so it never scrolls away
+          and never overlaps content. */}
+      {DEMO && (
+        <footer className="analytics-demo-disclaimer" role="note">
+          <InfoCircle size={14} variant="Bulk" color="#d99e00" aria-hidden />
+          <span>
+            Demo environment: all figures are anonymized mock data. Connect pm-analytics-service and the production billing APIs for live analytics.
+          </span>
+        </footer>
+      )}
       {/* Full-width app header across the very top — sidebar starts below it */}
       <header className="analytics-topbar">
         <div className="analytics-topbar__title">
@@ -635,19 +647,6 @@ export default function AnalyticsWorkspace() {
         </div>
         </div>
       </div>
-
-      {/* DEMO build: persistent mock-data disclaimer, pinned below the scroll
-          area on every leaf (both modules, incl. reports hubs). Rendered as the
-          shell's last flex row — never overlaps content, no fixed-position
-          padding hacks needed. */}
-      {DEMO && (
-        <footer className="analytics-demo-disclaimer" role="note">
-          <InfoCircle size={14} variant="Bulk" color="#4b4ad5" aria-hidden />
-          <span>
-            Demo environment: all figures are anonymized mock data. Connect pm-analytics-service and the production billing APIs for live analytics.
-          </span>
-        </footer>
-      )}
 
       <QueryBuilderDrawer
         open={builderOpen}

@@ -1246,9 +1246,12 @@ function blocksToWidgets(res) {
   }
 
   const widgets = [];
-  // Surface builder-level honesty notes (sample data, legacy gating, feed gaps)
-  // as a visible banner at the top of the page instead of an invisible field.
-  if (res.meta && res.meta.note) widgets.push({ id: "api-note", kind: "banner", text: res.meta.note, sample: res.meta.live === false });
+  // Surface builder-level honesty notes (legacy gating, feed gaps) as a visible
+  // banner at the top of the page. The generic "sample data" note is suppressed
+  // here — the standing demo notice in the footer already covers it on every page.
+  if (res.meta && res.meta.note && !/this demo renders anonymized mock data/i.test(res.meta.note)) {
+    widgets.push({ id: "api-note", kind: "banner", text: res.meta.note, sample: res.meta.live === false });
+  }
   const patientData = res.patients?.rows?.length
     ? { columns: res.patients.columns, rows: res.patients.rows }
     : undefined;
