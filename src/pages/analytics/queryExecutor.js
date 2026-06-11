@@ -7,6 +7,7 @@
 // renders without knowing which path ran.
 
 import { fetchBillingDashboard } from "../opdBilling/service";
+import { DEMO } from "./demo/demoApi";
 import { getAppointments, getAppointmentCounts } from "./service";
 import ApiAnalytics from "../../api/services/ApiAnalytics";
 import { collectionTrend, paymentMix, billsTable, caseTypeMix, appointmentStatusMix } from "./analyticsHelpers";
@@ -127,8 +128,10 @@ function stubResult(q) {
 export async function executeQuery(q) {
   if (!q) throw new Error("No query");
 
-  // 1. If the Analytics API is configured, use it first
-  if (config.analytics_api_url) {
+  // 1. If the Analytics API is configured, use it first.
+  // DEMO build: never attempt HTTP — the local loaders below are themselves
+  // fixture-backed (billing + appointments), so queries stay fully offline.
+  if (!DEMO && config.analytics_api_url) {
     try {
       return await runViaApi(q);
     } catch (e) {

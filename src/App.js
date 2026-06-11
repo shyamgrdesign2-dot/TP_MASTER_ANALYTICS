@@ -391,6 +391,9 @@ function App() {
 
   useEffect(() => {
     if (isReceptionist) return;
+    // DEMO build: feature flags stay at in-code defaults — no GrowthBook
+    // CDN fetch; the demo must make zero network requests.
+    if (DEMO) return;
     // Load features asynchronously when the app renders
     growthbook?.init({ streaming: true });
     const token = authToken || getToken();

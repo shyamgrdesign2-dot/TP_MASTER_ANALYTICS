@@ -138,8 +138,72 @@ function buildIpd(rnd) {
   };
 }
 
-function buildDashboard(path) {
+function buildOverview(rnd, careSetting) {
+  const care = String(careSetting || "opd").toLowerCase();
+  const appts = num(rnd, 1200, 2800);
+  const completed = num(rnd, Math.floor(appts * 0.6), Math.floor(appts * 0.85));
+  const cancelled = num(rnd, Math.floor(appts * 0.05), Math.floor(appts * 0.15));
+  const billed = num(rnd, 800000, 2400000);
+  const advance = num(rnd, 80000, 320000);
+  const pharmaNet = num(rnd, 120000, 480000);
+  const adherence = num(rnd, 38, 72);
+  const abha = num(rnd, 12, 55);
+  const spark = Array.from({ length: 10 }, () => num(rnd, 80, 280));
+  const sparkBill = Array.from({ length: 10 }, () => num(rnd, 60000, 240000));
+  const dates = ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10"];
+
+  const opdKpis = [
+    { key: "footfall", label: "Total footfall", value: appts, description: "All patient visits in this period: booked appointments plus walk-in consultations.", spark },
+    { key: "avgConsult", label: "Avg consult time", value: num(rnd, 8, 18), prefix: "~", unit: "min", description: "Approximate: the mean appointment duration per visit across this period." },
+  ];
+  const moneyKpis = [
+    { key: "billed", label: "Total billed", value: billed, unit: "₹", description: "Gross value billed in this period (OPD). Collections, dues and the full money picture live on the Billing page.", spark: sparkBill },
+    { key: "advance", label: "Advance received", value: advance, unit: "₹", description: "Advance money deposited by patients into their wallet this period." },
+  ];
+  const clinicalKpis = [
+    { key: "topSymptom", label: "Top symptoms", value: "—", description: "Per-patient symptoms are recorded in the separate symptoms service, which is not connected to analytics yet." },
+    { key: "topDx", label: "Top diagnosis", value: "Hypertension", description: "The most-recorded diagnosis in this period." },
+    { key: "topMed", label: "Top medication", value: "Dolo 650", description: "The most-prescribed medicine in this period." },
+    { key: "topLab", label: "Top lab test", value: "CBC", description: "The most-ordered investigation / lab test in this period." },
+    { key: "topCond", label: "Top chronic condition", value: "Diabetes", description: "The most-recorded chronic condition in patients' medical history." },
+  ];
+  const sectionKpis = [
+    { key: "pharmacy", label: "Net pharmacy sales", value: pharmaNet, unit: "₹", description: "Pharmacy counter revenue this period. The full pharmacy picture lives on the Pharmacy page." },
+    { key: "adherence", label: "Follow-up adherence", value: adherence, unit: "%", description: "Share of due follow-ups where the patient actually returned within 45 days." },
+    { key: "abha", label: "ABHA linked", value: abha, unit: "%", description: "Share of patients seen this period who have an ABHA linked." },
+  ];
+
+  const kpis = care === "ipd" ? moneyKpis : [...opdKpis, ...moneyKpis, ...clinicalKpis, ...sectionKpis];
+
+  return {
+    kpis,
+    apptStatusMix: {
+      columns: [{ key: "k", label: "Status" }, { key: "count", label: "Appointments" }],
+      rows: [
+        { k: "Completed", count: completed },
+        { k: "Cancelled", count: cancelled },
+        { k: "Scheduled", count: Math.max(appts - completed - cancelled, 0) },
+      ],
+    },
+    footfallTrend: {
+      columns: [{ key: "k", label: "Month" }, { key: "appointments", label: "Appointments" }, { key: "completed", label: "Completed" }],
+      rows: dates.map((k) => ({ k, appointments: num(rnd, 100, 320), completed: num(rnd, 70, 260) })),
+    },
+    paymentModeMix: {
+      columns: [{ key: "k", label: "Payment mode" }, { key: "amount", label: "Amount" }],
+      rows: [["Cash", num(rnd, 300000, 900000)], ["UPI", num(rnd, 200000, 700000)], ["Card", num(rnd, 80000, 300000)], ["Online", num(rnd, 40000, 180000)]].map(([k, amount]) => ({ k, amount })),
+    },
+    topDiagnoses: {
+      columns: [{ key: "k", label: "Diagnosis" }, { key: "count", label: "Patients" }],
+      rows: ["Hypertension", "Type 2 Diabetes", "URTI", "Gastritis", "Anemia", "Hypothyroidism", "Viral Fever", "Asthma", "Arthritis", "Anxiety"].map((k, i) => ({ k, count: 180 - i * 14 - pick(rnd, 10) })),
+    },
+    meta: { live: true, rowCount: 0, careSetting: care, source: "mock" },
+  };
+}
+
+function buildDashboard(path, query) {
   if (path === "ipd/summary") return buildIpd(seed(path));
+  if (path === "operational/overview") return buildOverview(seed(path), query.get("careSetting"));
   const e = ENTITIES[path];
   if (!e) return null;
   const rnd = seed(path);
@@ -215,7 +279,7 @@ const server = http.createServer((req, res) => {
   const path = url.pathname.replace(/^\/api\/v1\/analytics\//, "");
 
   res.setHeader("Content-Type", "application/json");
-  const payload = buildDashboard(path);
+  const payload = buildDashboard(path, url.searchParams);
   if (payload) { res.writeHead(200); res.end(JSON.stringify(payload)); return; }
   res.writeHead(404); res.end(JSON.stringify({ error: "Unknown analytics endpoint", path }));
 });

@@ -33,6 +33,7 @@ import {
 import { inr, num, DATA_AVAILABILITY_NOTE, PLANNED_REPORTS, API_REPORTS, isApiOn } from "./analyticsConfig";
 import { DEMO } from "./demo/demoApi";
 import { demoBillingDashboard, demoAdvanceDashboard, DEMO_USER_CREDIT, demoCampaigns } from "./demo/billingFixtures";
+import { demoAppointments, demoPatients } from "./demo/emrFixtures";
 import { PAGES } from "./analyticsPages";
 import { PAGE_MAP, DASHBOARD_ENDPOINTS } from "./shell/analyticsNav";
 
@@ -336,6 +337,9 @@ async function fetchAppointmentPage({ startDate, endDate }, apStatue, page) {
 // Counts-only fetch — one call; enough for the KPI band and the status donut,
 // which read the full-period counts fields, not app_data rows.
 export async function getAppointmentCounts(filters) {
+  // DEMO build: the appointment list is a production EMR API — synthesize
+  // shape-exact data instead of any HTTP (counts are a subset of the rows).
+  if (DEMO) return demoAppointments(filters);
   return fetchAppointmentPage(filters, APPT_STATUSES[0].apStatue, 0);
 }
 
@@ -348,6 +352,7 @@ const apptTime = (r) => {
 // three real statuses, each paged until its own count is reached or the page
 // cap trips. Returns { ...counts, app_data, rowsComplete }.
 export async function getAppointments(filters) {
+  if (DEMO) return demoAppointments(filters);
   const firstPages = await Promise.all(
     APPT_STATUSES.map((s) => fetchAppointmentPage(filters, s.apStatue, 0).catch(() => null))
   );
@@ -465,7 +470,10 @@ async function patientsWidgets(filters) {
   let res;
   try {
     // Pull the full count + a representative recent sample for demographics.
-    res = await fetchAllPatients({ page: 1, limit: 200, startDate: filters.startDate, endDate: filters.endDate });
+    // DEMO build: the patient register is a production EMR API — synthesize.
+    res = DEMO
+      ? demoPatients({ limit: 200 })
+      : await fetchAllPatients({ page: 1, limit: 200, startDate: filters.startDate, endDate: filters.endDate });
   } catch (e) {
     res = null;
   }

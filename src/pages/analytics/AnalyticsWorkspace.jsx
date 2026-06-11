@@ -410,7 +410,7 @@ export default function AnalyticsWorkspace() {
         <div className="analytics-topbar__actions">
           <button type="button" className="analytics-iconbtn" title="Tutorials" aria-label="Tutorials">
             <img
-              src="https://pmdoctorportal.blob.core.windows.net/tp-assets/assets/images/tutorial2.webp"
+              src={`${process.env.PUBLIC_URL}/tutorial-icon.webp`}
               alt=""
               width="20"
               height="20"
@@ -432,7 +432,7 @@ export default function AnalyticsWorkspace() {
             title={`About ${brand}: the complete project, scope and master APIs`}
             aria-label={`About ${brand}`}
           >
-            <InfoCircle size={18} variant="Bulk" color="#8a4dbb" />
+            <InfoCircle size={14} variant="Linear" color="var(--tp-slate-400)" />
           </button>
         </div>
       </header>
@@ -471,7 +471,7 @@ export default function AnalyticsWorkspace() {
             title={`About ${meta.label}: what this page shows, plus downloadable docs`}
             onClick={() => setInfoOpen(true)}
           >
-            <InfoCircle size={18} variant="Bulk" color="#8a4dbb" />
+            <InfoCircle size={14} variant="Linear" color="var(--tp-slate-400)" />
           </button>
         </div>
         <PageInfoDrawer leaf={leaf} title={meta.label} open={infoOpen} onClose={() => setInfoOpen(false)} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Drawer, Button, Divider } from "antd";
-import { DocumentDownload, DocumentText } from "iconsax-reactjs";
+import { DocumentDownload, DocumentText, InfoCircle } from "iconsax-reactjs";
 import { PAGE_DOCS } from "../docs/pageDocs";
 import { downloadPageGuide, downloadPageApiSpec, downloadFullDocsZip, downloadMasterApi, downloadScope } from "../docs/docExport";
 
@@ -53,6 +53,32 @@ export default function PageInfoDrawer({ leaf, title, open, onClose, project = f
       className="tp-analytics"
     >
       <div className="apid">
+        <div
+          role="note"
+          style={{
+            display: "flex",
+            gap: 10,
+            alignItems: "flex-start",
+            padding: "12px 14px",
+            marginBottom: 16,
+            borderRadius: 10,
+            border: "1px solid #f0c36d",
+            background: "#fff8e6",
+            color: "#7a5b00",
+          }}
+        >
+          <InfoCircle size={20} variant="Bold" color="#e0a915" style={{ flexShrink: 0, marginTop: 1 }} />
+          <div>
+            <strong style={{ display: "block", fontSize: 13, marginBottom: 2 }}>
+              For development reference only
+            </strong>
+            <span style={{ fontSize: 12, lineHeight: 1.5 }}>
+              This panel — the page guides, API specs and downloadable docs — is an
+              internal aid. It is <strong>not part of the product</strong> and will not
+              be shown in the build presented to users.
+            </span>
+          </div>
+        </div>
         <div className="apid__dl">
           {project ? (
             <>
