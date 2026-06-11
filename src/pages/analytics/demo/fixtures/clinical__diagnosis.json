@@ -361,7 +361,7 @@
     ],
     "rows": [
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -371,7 +371,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -381,7 +381,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -391,7 +391,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -401,7 +401,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0127",
         "patientName": "Demo Patient 116",
         "gender": "Male",
@@ -411,7 +411,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "gender": "Male",
@@ -421,7 +421,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "gender": "Male",
@@ -431,7 +431,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0158",
         "patientName": "Demo Patient 147",
         "gender": "Male",
@@ -441,7 +441,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0163",
         "patientName": "Demo Patient 152",
         "gender": "Male",
@@ -451,7 +451,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -461,7 +461,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0165",
         "patientName": "Demo Patient 154",
         "gender": "Male",
@@ -471,7 +471,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "gender": "Male",
@@ -481,7 +481,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "gender": "Male",
@@ -491,7 +491,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -501,7 +501,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0071",
         "patientName": "Demo Patient 66",
         "gender": "Male",
@@ -511,7 +511,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0071",
         "patientName": "Demo Patient 66",
         "gender": "Male",
@@ -521,7 +521,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -531,7 +531,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "gender": "Male",
@@ -541,7 +541,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0215",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -551,7 +551,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -561,7 +561,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "gender": "Male",
@@ -571,7 +571,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "gender": "Male",
@@ -581,7 +581,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -591,7 +591,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -601,7 +601,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -611,7 +611,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -621,7 +621,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0230",
         "patientName": "Demo Patient 217",
         "gender": "Female",
@@ -631,7 +631,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -641,7 +641,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -651,7 +651,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -661,7 +661,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -671,7 +671,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -681,7 +681,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "gender": "Male",
@@ -691,7 +691,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -701,7 +701,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -711,7 +711,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -721,7 +721,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "gender": "Male",
@@ -731,7 +731,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -741,7 +741,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -751,7 +751,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -761,7 +761,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -771,7 +771,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -781,7 +781,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0050",
         "patientName": "Demo Patient 46",
         "gender": "Female",
@@ -791,7 +791,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0050",
         "patientName": "Demo Patient 46",
         "gender": "Female",
@@ -801,7 +801,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "gender": "Male",
@@ -811,7 +811,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -821,7 +821,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -831,7 +831,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -841,7 +841,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -851,7 +851,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "gender": "Female",
@@ -861,7 +861,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -871,7 +871,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0025",
         "patientName": "Demo Patient 24",
         "gender": "Male",
@@ -881,7 +881,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -891,7 +891,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -901,7 +901,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0242",
         "patientName": "Demo Patient 228",
         "gender": "Female",
@@ -911,7 +911,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "gender": "Female",
@@ -921,7 +921,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -931,7 +931,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -941,7 +941,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -951,7 +951,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0249",
         "patientName": "Demo Patient 235",
         "gender": "Female",
@@ -961,7 +961,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0247",
         "patientName": "Demo Patient 233",
         "gender": "Female",
@@ -971,7 +971,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0245",
         "patientName": "Demo Patient 231",
         "gender": "Male",
@@ -981,7 +981,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -991,7 +991,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0252",
         "patientName": "Demo Patient 238",
         "gender": "Male",
@@ -1001,7 +1001,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0250",
         "patientName": "Demo Patient 236",
         "gender": "Female",
@@ -1011,7 +1011,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0254",
         "patientName": "Demo Patient 240",
         "gender": "Female",
@@ -1021,7 +1021,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0253",
         "patientName": "Demo Patient 239",
         "gender": "Female",
@@ -1031,7 +1031,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -1041,7 +1041,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1051,7 +1051,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0255",
         "patientName": "Demo Patient 241",
         "gender": "Female",
@@ -1061,7 +1061,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "gender": "Male",
@@ -1071,7 +1071,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "gender": "Male",
@@ -1081,7 +1081,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1091,7 +1091,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -1101,7 +1101,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1111,7 +1111,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0249",
         "patientName": "Demo Patient 235",
         "gender": "Female",
@@ -1121,7 +1121,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0259",
         "patientName": "Demo Patient 245",
         "gender": "Female",
@@ -1131,7 +1131,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0258",
         "patientName": "Demo Patient 244",
         "gender": "Male",
@@ -1141,7 +1141,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1151,7 +1151,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0262",
         "patientName": "Demo Patient 248",
         "gender": "Female",
@@ -1161,7 +1161,7 @@
         "icd_code": "2452421"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -1171,7 +1171,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0257",
         "patientName": "Demo Patient 243",
         "gender": "Female",
@@ -1181,7 +1181,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1191,7 +1191,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0249",
         "patientName": "Demo Patient 235",
         "gender": "Female",
@@ -1201,7 +1201,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -1211,7 +1211,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0266",
         "patientName": "Demo Patient 251",
         "gender": "Female",
@@ -1221,7 +1221,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0064",
         "patientName": "Demo Patient 59",
         "gender": "Male",
@@ -1231,7 +1231,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0106",
         "patientName": "Demo Patient 96",
         "gender": "Male",
@@ -1241,7 +1241,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1251,7 +1251,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -1261,7 +1261,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0284",
         "patientName": "Demo Patient 269",
         "gender": "Male",
@@ -1271,7 +1271,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0289",
         "patientName": "Demo Patient 237",
         "gender": "Female",
@@ -1281,7 +1281,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0280",
         "patientName": "Demo Patient 265",
         "gender": "Female",
@@ -1291,7 +1291,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0287",
         "patientName": "Demo Patient 272",
         "gender": "Female",
@@ -1301,7 +1301,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0269",
         "patientName": "Demo Patient 254",
         "gender": "Male",
@@ -1311,7 +1311,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0282",
         "patientName": "Demo Patient 267",
         "gender": "Male",
@@ -1321,7 +1321,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0271",
         "patientName": "Demo Patient 256",
         "gender": "Male",
@@ -1331,7 +1331,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0279",
         "patientName": "Demo Patient 264",
         "gender": "Male",
@@ -1341,7 +1341,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0275",
         "patientName": "Demo Patient 260",
         "gender": "Male",
@@ -1351,7 +1351,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0291",
         "patientName": "Demo Patient 275",
         "gender": "Female",
@@ -1361,7 +1361,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0265",
         "patientName": "Demo Patient 243",
         "gender": "Female",
@@ -1371,7 +1371,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0285",
         "patientName": "Demo Patient 270",
         "gender": "Female",
@@ -1381,7 +1381,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0263",
         "patientName": "Demo Patient 249",
         "gender": "Male",
@@ -1391,7 +1391,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0267",
         "patientName": "Demo Patient 252",
         "gender": "Male",
@@ -1401,7 +1401,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0273",
         "patientName": "Demo Patient 258",
         "gender": "Male",
@@ -1411,7 +1411,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0277",
         "patientName": "Demo Patient 262",
         "gender": "Male",
@@ -1421,7 +1421,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0321",
         "patientName": "Demo Patient 305",
         "gender": "Male",
@@ -1431,7 +1431,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0252",
         "patientName": "Demo Patient 238",
         "gender": "Male",
@@ -1441,7 +1441,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0317",
         "patientName": "Demo Patient 301",
         "gender": "Male",
@@ -1451,7 +1451,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0304",
         "patientName": "Demo Patient 288",
         "gender": "Male",
@@ -1461,7 +1461,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0308",
         "patientName": "Demo Patient 292",
         "gender": "Female",
@@ -1471,7 +1471,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0294",
         "patientName": "Demo Patient 278",
         "gender": "Male",
@@ -1481,7 +1481,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0301",
         "patientName": "Demo Patient 285",
         "gender": "Male",
@@ -1491,7 +1491,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0318",
         "patientName": "Demo Patient 302",
         "gender": "Male",
@@ -1501,7 +1501,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0314",
         "patientName": "Demo Patient 298",
         "gender": "Female",
@@ -1511,7 +1511,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0312",
         "patientName": "Demo Patient 296",
         "gender": "Male",
@@ -1521,7 +1521,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0319",
         "patientName": "Demo Patient 303",
         "gender": "Female",
@@ -1531,7 +1531,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0315",
         "patientName": "Demo Patient 299",
         "gender": "Female",
@@ -1541,7 +1541,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1551,7 +1551,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0112",
         "patientName": "Demo Patient 101",
         "gender": "Female",
@@ -1561,7 +1561,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0297",
         "patientName": "Demo Patient 281",
         "gender": "Male",
@@ -1571,7 +1571,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0306",
         "patientName": "Demo Patient 290",
         "gender": "Male",
@@ -1581,7 +1581,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0299",
         "patientName": "Demo Patient 283",
         "gender": "Female",
@@ -1591,7 +1591,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0310",
         "patientName": "Demo Patient 294",
         "gender": "Male",
@@ -1601,7 +1601,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0323",
         "patientName": "Demo Patient 307",
         "gender": "Male",
@@ -1611,7 +1611,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1621,7 +1621,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1631,7 +1631,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -1641,7 +1641,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0123",
         "patientName": "Demo Patient 112",
         "gender": "Male",
@@ -1651,7 +1651,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -1661,7 +1661,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -1671,7 +1671,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -1681,7 +1681,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1691,7 +1691,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0330",
         "patientName": "Demo Patient 313",
         "gender": "Female",
@@ -1701,7 +1701,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -1711,7 +1711,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1721,7 +1721,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "gender": "Female",
@@ -1731,7 +1731,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0264",
         "patientName": "Demo Patient 250",
         "gender": "Male",
@@ -1741,7 +1741,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "gender": "Female",
@@ -1751,7 +1751,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0335",
         "patientName": "Demo Patient 317",
         "gender": "Male",
@@ -1761,7 +1761,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1771,7 +1771,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "gender": "Male",
@@ -1781,7 +1781,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0107",
         "patientName": "Demo Patient 25",
         "gender": "Female",
@@ -1791,7 +1791,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "gender": "Male",
@@ -1801,7 +1801,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "gender": "Male",
@@ -1811,7 +1811,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "gender": "Female",
@@ -1821,7 +1821,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -1831,7 +1831,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0080",
         "patientName": "Demo Patient 73",
         "gender": "Male",
@@ -1841,7 +1841,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1851,7 +1851,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -1861,7 +1861,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0066",
         "patientName": "Demo Patient 61",
         "gender": "Male",
@@ -1871,7 +1871,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0331",
         "patientName": "Demo Patient 314",
         "gender": "Male",
@@ -1881,7 +1881,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0332",
         "patientName": "Demo Patient 315",
         "gender": "Female",
@@ -1891,7 +1891,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -1901,7 +1901,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -1911,7 +1911,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -1921,7 +1921,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -1931,7 +1931,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -1941,7 +1941,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "gender": "Male",
@@ -1951,7 +1951,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1961,7 +1961,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -1971,7 +1971,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1981,7 +1981,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -1991,7 +1991,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "gender": "Male",
@@ -2001,7 +2001,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -2011,7 +2011,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0111",
         "patientName": "Demo Patient 100",
         "gender": "Male",
@@ -2021,7 +2021,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2031,7 +2031,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0339",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2041,7 +2041,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2051,7 +2051,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0340",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2061,7 +2061,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0339",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2071,7 +2071,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -2081,7 +2081,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0078",
         "patientName": "Demo Patient 71",
         "gender": "Male",
@@ -2091,7 +2091,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0341",
         "patientName": "Demo Patient 320",
         "gender": "Male",
@@ -2101,7 +2101,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -2111,7 +2111,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0078",
         "patientName": "Demo Patient 71",
         "gender": "Male",
@@ -2121,7 +2121,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0108",
         "patientName": "Demo Patient 97",
         "gender": "Male",
@@ -2131,7 +2131,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0345",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -2141,7 +2141,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0347",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2151,7 +2151,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -2161,7 +2161,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0086",
         "patientName": "Demo Patient 79",
         "gender": "Male",
@@ -2171,7 +2171,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0350",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2181,7 +2181,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2191,7 +2191,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0366",
         "patientName": "Demo Patient 25",
         "gender": "Female",
@@ -2201,7 +2201,7 @@
         "icd_code": "123"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0365",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -2211,7 +2211,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -2221,7 +2221,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -2231,7 +2231,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0368",
         "patientName": "Demo Patient 104",
         "gender": "Male",
@@ -2241,7 +2241,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "gender": "Male",
@@ -2251,7 +2251,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0238",
         "patientName": "Demo Patient 224",
         "gender": "Male",
@@ -2261,7 +2261,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0346",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -2271,7 +2271,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -2281,7 +2281,7 @@
         "icd_code": "43"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0127",
         "patientName": "Demo Patient 116",
         "gender": "Male",
@@ -2291,7 +2291,7 @@
         "icd_code": "3233"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0017",
         "patientName": "Demo Patient 16",
         "gender": "Male",
@@ -2301,7 +2301,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2311,7 +2311,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "gender": "Female",
@@ -2321,7 +2321,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2331,7 +2331,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2341,7 +2341,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2351,7 +2351,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -2361,7 +2361,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -2371,7 +2371,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0087",
         "patientName": "Demo Patient 80",
         "gender": "Male",
@@ -2381,7 +2381,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0348",
         "patientName": "Demo Patient 323",
         "gender": "Male",
@@ -2391,7 +2391,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -2401,7 +2401,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0366",
         "patientName": "Demo Patient 25",
         "gender": "Female",
@@ -2411,7 +2411,7 @@
         "icd_code": "123"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0365",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -2421,7 +2421,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -2431,7 +2431,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -2441,7 +2441,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0368",
         "patientName": "Demo Patient 104",
         "gender": "Male",
@@ -2451,7 +2451,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0238",
         "patientName": "Demo Patient 224",
         "gender": "Male",
@@ -2461,7 +2461,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0346",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -2471,7 +2471,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -2481,7 +2481,7 @@
         "icd_code": "43"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0127",
         "patientName": "Demo Patient 116",
         "gender": "Male",
@@ -2491,7 +2491,7 @@
         "icd_code": "3233"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0017",
         "patientName": "Demo Patient 16",
         "gender": "Male",
@@ -2501,7 +2501,7 @@
         "icd_code": "43"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0367",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2511,7 +2511,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -2521,7 +2521,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -2531,7 +2531,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0368",
         "patientName": "Demo Patient 104",
         "gender": "Male",
@@ -2541,7 +2541,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0238",
         "patientName": "Demo Patient 224",
         "gender": "Male",
@@ -2551,7 +2551,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -2561,7 +2561,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -2571,7 +2571,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0099",
         "patientName": "Demo Patient 91",
         "gender": "Female",
@@ -2581,7 +2581,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0351",
         "patientName": "Demo Patient 324",
         "gender": "Female",
@@ -2591,7 +2591,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -2601,7 +2601,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "gender": "Male",
@@ -2611,7 +2611,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0351",
         "patientName": "Demo Patient 324",
         "gender": "Female",
@@ -2621,7 +2621,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -2631,7 +2631,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2641,7 +2641,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2651,7 +2651,7 @@
         "icd_code": "DVF D-10F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2661,7 +2661,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2671,7 +2671,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0375",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2681,7 +2681,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2691,7 +2691,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -2701,7 +2701,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -2711,7 +2711,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -2721,7 +2721,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -2731,7 +2731,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "gender": "Male",
@@ -2741,7 +2741,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0381",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2751,7 +2751,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -2761,7 +2761,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2771,7 +2771,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -2781,7 +2781,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0086",
         "patientName": "Demo Patient 79",
         "gender": "Male",
@@ -2791,7 +2791,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -2801,7 +2801,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "gender": "Male",
@@ -2811,7 +2811,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2821,7 +2821,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0347",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2831,7 +2831,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0082",
         "patientName": "Demo Patient 75",
         "gender": "Female",
@@ -2841,7 +2841,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0387",
         "patientName": "Demo Patient 343",
         "gender": "Female",
@@ -2851,7 +2851,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0347",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2861,7 +2861,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -2871,7 +2871,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2881,7 +2881,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -2891,7 +2891,7 @@
         "icd_code": "43"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0395",
         "patientName": "Demo Patient 349",
         "gender": "Male",
@@ -2901,7 +2901,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -2911,7 +2911,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -2921,7 +2921,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "gender": "Male",
@@ -2931,7 +2931,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2941,7 +2941,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -2951,7 +2951,7 @@
         "icd_code": "334"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0403",
         "patientName": "Demo Patient 89",
         "gender": "Male",
@@ -2961,7 +2961,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2971,7 +2971,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0404",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -2981,7 +2981,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0059",
         "patientName": "Demo Patient 54",
         "gender": "Female",
@@ -2991,7 +2991,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0347",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -3001,7 +3001,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "gender": "Female",
@@ -3011,7 +3011,7 @@
         "icd_code": "123123, R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -3021,7 +3021,7 @@
         "icd_code": "R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0113",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -3031,7 +3031,7 @@
         "icd_code": "45, 455"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "gender": "Male",
@@ -3041,7 +3041,7 @@
         "icd_code": "334"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0113",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -3051,7 +3051,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3061,7 +3061,7 @@
         "icd_code": "123456"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -3071,7 +3071,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -3081,7 +3081,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -3091,7 +3091,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3101,7 +3101,7 @@
         "icd_code": "123456, R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0097",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -3111,7 +3111,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "gender": "Male",
@@ -3121,7 +3121,7 @@
         "icd_code": "33322, R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0428",
         "patientName": "Demo Patient 364",
         "gender": "Female",
@@ -3131,7 +3131,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -3141,7 +3141,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3151,7 +3151,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0091",
         "patientName": "Demo Patient 84",
         "gender": "Male",
@@ -3161,7 +3161,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0083",
         "patientName": "Demo Patient 76",
         "gender": "Male",
@@ -3171,7 +3171,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0430",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3181,7 +3181,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -3191,7 +3191,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0429",
         "patientName": "Demo Patient 365",
         "gender": "Male",
@@ -3201,7 +3201,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0020",
         "patientName": "Demo Patient 19",
         "gender": "Male",
@@ -3211,7 +3211,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3221,7 +3221,7 @@
         "icd_code": "R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -3231,7 +3231,7 @@
         "icd_code": "33322, R94.02"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -3241,7 +3241,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -3251,7 +3251,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3261,7 +3261,7 @@
         "icd_code": "R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3271,7 +3271,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3281,7 +3281,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -3291,7 +3291,7 @@
         "icd_code": "33322, R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -3301,7 +3301,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -3311,7 +3311,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3321,7 +3321,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0017",
         "patientName": "Demo Patient 16",
         "gender": "Male",
@@ -3331,7 +3331,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0449",
         "patientName": "Demo Patient 376",
         "gender": "Female",
@@ -3341,7 +3341,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -3351,7 +3351,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0073",
         "patientName": "Demo Patient 68",
         "gender": "Male",
@@ -3361,7 +3361,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0020",
         "patientName": "Demo Patient 19",
         "gender": "Male",
@@ -3371,7 +3371,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3381,7 +3381,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -3391,7 +3391,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3401,7 +3401,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -3411,7 +3411,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -3421,7 +3421,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -3431,7 +3431,7 @@
         "icd_code": "33322"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "gender": "Male",
@@ -3441,7 +3441,7 @@
         "icd_code": "R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -3451,7 +3451,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "gender": "Male",
@@ -3461,7 +3461,7 @@
         "icd_code": "123456"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0442",
         "patientName": "Demo Patient 372",
         "gender": "Female",
@@ -3471,7 +3471,7 @@
         "icd_code": "123123"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0443",
         "patientName": "Demo Patient 373",
         "gender": "Male",
@@ -3481,7 +3481,7 @@
         "icd_code": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "gender": "Male",
@@ -3491,7 +3491,7 @@
         "icd_code": "123123"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "gender": "Male",
@@ -3501,7 +3501,7 @@
         "icd_code": "R94.01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0072",
         "patientName": "Demo Patient 67",
         "gender": "Male",

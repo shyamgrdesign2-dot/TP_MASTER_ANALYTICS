@@ -350,7 +350,7 @@
     ],
     "rows": [
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Influenza",
@@ -358,7 +358,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Varicella Dose 1",
@@ -366,7 +366,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Varicella Dose 1",
@@ -374,7 +374,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Varicella Dose 1",
@@ -382,7 +382,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Varicella Dose 1",
@@ -390,7 +390,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Meningococcal-2",
@@ -398,7 +398,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "JE-1",
@@ -406,7 +406,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Hep A-1",
@@ -414,7 +414,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "IPV 1",
@@ -422,7 +422,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HB 1",
@@ -430,7 +430,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "MMR-2",
@@ -438,7 +438,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "vaccine": "HB 2",
@@ -446,7 +446,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "vaccine": "Varicella Dose 2",
@@ -454,7 +454,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "vaccine": "HEP A-2",
@@ -462,7 +462,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "vaccine": "PPSV 23",
@@ -470,7 +470,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0130",
         "patientName": "Demo Patient 119",
         "vaccine": "BCG",
@@ -478,7 +478,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0130",
         "patientName": "Demo Patient 119",
         "vaccine": "IPV B2",
@@ -486,7 +486,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0130",
         "patientName": "Demo Patient 119",
         "vaccine": "DTP B2",
@@ -494,7 +494,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0130",
         "patientName": "Demo Patient 119",
         "vaccine": "MMR-3",
@@ -502,7 +502,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "vaccine": "BCG",
@@ -510,7 +510,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "vaccine": "HB 1",
@@ -518,7 +518,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "vaccine": "JE-1",
@@ -526,7 +526,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "vaccine": "Hep A-1",
@@ -534,7 +534,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "vaccine": "Meningococcal-2",
@@ -542,7 +542,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0134",
         "patientName": "Demo Patient 123",
         "vaccine": "HPV D2",
@@ -550,7 +550,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0139",
         "patientName": "Demo Patient 128",
         "vaccine": "JE-1",
@@ -558,7 +558,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0141",
         "patientName": "Demo Patient 130",
         "vaccine": "BCG",
@@ -566,7 +566,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0145",
         "patientName": "Demo Patient 134",
         "vaccine": "BCG",
@@ -574,7 +574,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0147",
         "patientName": "Demo Patient 136",
         "vaccine": "PPSV 23",
@@ -582,7 +582,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HPV D3",
@@ -590,7 +590,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Td",
@@ -598,7 +598,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HPV D1",
@@ -606,7 +606,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HPV D2",
@@ -614,7 +614,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HEP A-2",
@@ -622,7 +622,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "JE-2",
@@ -630,7 +630,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "PCV Booster",
@@ -638,7 +638,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Varicella Dose 2",
@@ -646,7 +646,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Hib B1",
@@ -654,7 +654,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "PPSV 23",
@@ -662,7 +662,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "MMR-3",
@@ -670,7 +670,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "IPV B2",
@@ -678,7 +678,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "DTP B2",
@@ -686,7 +686,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "Tdap",
@@ -694,7 +694,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HPV 1",
@@ -702,7 +702,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "HPV 2",
@@ -710,7 +710,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "Hib 1",
@@ -718,7 +718,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "DTP 1",
@@ -726,7 +726,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "IPV 1",
@@ -734,7 +734,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "PCV 1",
@@ -742,7 +742,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "RV 1",
@@ -750,7 +750,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "HB 2",
@@ -758,7 +758,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "HB 2",
@@ -766,7 +766,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "PCV 2",
@@ -774,7 +774,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "RV 2",
@@ -782,7 +782,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "HB 3",
@@ -790,7 +790,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "IPV 2",
@@ -798,7 +798,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "Hib 2",
@@ -806,7 +806,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "DTP 2",
@@ -814,7 +814,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "vaccine": "HB 4",
@@ -822,7 +822,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "HB 2",
@@ -830,7 +830,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "DTP 1",
@@ -838,7 +838,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "IPV 1",
@@ -846,7 +846,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "Hib 1",
@@ -854,7 +854,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "RV 1",
@@ -862,7 +862,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "vaccine": "PCV 1",
@@ -870,7 +870,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "vaccine": "OPV",
@@ -878,7 +878,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "vaccine": "BCG",
@@ -886,7 +886,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "vaccine": "HB 1",
@@ -894,7 +894,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "IPV B2",
@@ -902,7 +902,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "DTP B2",
@@ -910,7 +910,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "HPV D1",
@@ -918,7 +918,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "HPV D2",
@@ -926,7 +926,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "HPV D3",
@@ -934,7 +934,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "HPV 1",
@@ -942,7 +942,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "vaccine": "HPV 2",
@@ -950,7 +950,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0071",
         "patientName": "Demo Patient 66",
         "vaccine": "BCG",
@@ -958,7 +958,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0225",
         "patientName": "Demo Patient 212",
         "vaccine": "Influenza",
@@ -966,7 +966,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0225",
         "patientName": "Demo Patient 212",
         "vaccine": "Influenza",
@@ -974,7 +974,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0225",
         "patientName": "Demo Patient 212",
         "vaccine": "Influenza",
@@ -982,7 +982,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "IPV B-1",
@@ -990,7 +990,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0333",
         "patientName": "Demo Patient 148",
         "vaccine": "DTP B1",
@@ -998,7 +998,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0236",
         "patientName": "Demo Patient 222",
         "vaccine": "OPV",
@@ -1006,7 +1006,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0236",
         "patientName": "Demo Patient 222",
         "vaccine": "BCG",
@@ -1014,7 +1014,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0236",
         "patientName": "Demo Patient 222",
         "vaccine": "HB 1",
@@ -1022,7 +1022,7 @@
         "route": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "DTwP/DTaP-3\t",
@@ -1030,7 +1030,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "IPV-3\t",
@@ -1038,7 +1038,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hib-3\t",
@@ -1046,7 +1046,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hep B-4\t",
@@ -1054,7 +1054,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Rotavirus-3\t",
@@ -1062,7 +1062,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "PCV-3\t",
@@ -1070,7 +1070,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "DTwP/DTaP-2\t",
@@ -1078,7 +1078,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "IPV-2\t",
@@ -1086,7 +1086,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hib-2\t",
@@ -1094,7 +1094,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hep B-3\t",
@@ -1102,7 +1102,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "RotaVirus - 2\t",
@@ -1110,7 +1110,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "PCV-2\t",
@@ -1118,7 +1118,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "DTwP/DTaP-3\t",
@@ -1126,7 +1126,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "IPV-3\t",
@@ -1134,7 +1134,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hib-3\t",
@@ -1142,7 +1142,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hep B-4\t",
@@ -1150,7 +1150,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Rotavirus-3\t",
@@ -1158,7 +1158,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "PCV-3\t",
@@ -1166,7 +1166,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1174,7 +1174,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "IPV-1\t",
@@ -1182,7 +1182,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hib-1\t",
@@ -1190,7 +1190,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Hep B-2\t",
@@ -1198,7 +1198,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Rotavirus-1\t",
@@ -1206,7 +1206,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "PCV-1\t",
@@ -1214,7 +1214,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "DTwP/DTaP-2\t",
@@ -1222,7 +1222,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "IPV-2\t",
@@ -1230,7 +1230,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hib-2\t",
@@ -1238,7 +1238,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hep B-3\t",
@@ -1246,7 +1246,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "RotaVirus - 2\t",
@@ -1254,7 +1254,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "PCV-2\t",
@@ -1262,7 +1262,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "BCG",
@@ -1270,7 +1270,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV",
@@ -1278,7 +1278,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "HBV",
@@ -1286,7 +1286,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "BCG",
@@ -1294,7 +1294,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "OPV",
@@ -1302,7 +1302,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "HBV",
@@ -1310,7 +1310,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "DTwP/DTaP-3\t",
@@ -1318,7 +1318,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "IPV-3\t",
@@ -1326,7 +1326,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hib-3\t",
@@ -1334,7 +1334,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hep B-4\t",
@@ -1342,7 +1342,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Rotavirus-3\t",
@@ -1350,7 +1350,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "PCV-3\t",
@@ -1358,7 +1358,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-2\t",
@@ -1366,7 +1366,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-2\t",
@@ -1374,7 +1374,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-2\t",
@@ -1382,7 +1382,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-3\t",
@@ -1390,7 +1390,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "RotaVirus - 2\t",
@@ -1398,7 +1398,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-2\t",
@@ -1406,7 +1406,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "DTwP/DTaP-2\t",
@@ -1414,7 +1414,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "IPV-2\t",
@@ -1422,7 +1422,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hib-2\t",
@@ -1430,7 +1430,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hep B-3\t",
@@ -1438,7 +1438,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "RotaVirus - 2\t",
@@ -1446,7 +1446,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "PCV-2\t",
@@ -1454,7 +1454,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "DTwP/DTaP-2\t",
@@ -1462,7 +1462,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "IPV-2\t",
@@ -1470,7 +1470,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hib-2\t",
@@ -1478,7 +1478,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hep B-3\t",
@@ -1486,7 +1486,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "RotaVirus - 2\t",
@@ -1494,7 +1494,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "PCV-2\t",
@@ -1502,7 +1502,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Quadruvalent Influenza(IIV)-2\t",
@@ -1510,7 +1510,7 @@
         "route": "SC RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Quadruvalent Influenza(IIV)-1\t",
@@ -1518,7 +1518,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1526,7 +1526,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "IPV-1\t",
@@ -1534,7 +1534,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "Hib-1\t",
@@ -1542,7 +1542,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "Hep B-2\t",
@@ -1550,7 +1550,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "Rotavirus-1\t",
@@ -1558,7 +1558,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "PCV-1\t",
@@ -1566,7 +1566,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1574,7 +1574,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-1\t",
@@ -1582,7 +1582,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-1\t",
@@ -1590,7 +1590,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-2\t",
@@ -1598,7 +1598,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotavirus-1\t",
@@ -1606,7 +1606,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-1\t",
@@ -1614,7 +1614,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1622,7 +1622,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-1\t",
@@ -1630,7 +1630,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib-1\t",
@@ -1638,7 +1638,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "Hep B-2\t",
@@ -1646,7 +1646,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "Rotavirus-1\t",
@@ -1654,7 +1654,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "PCV-1\t",
@@ -1662,7 +1662,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1670,7 +1670,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "IPV-1\t",
@@ -1678,7 +1678,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hib-1\t",
@@ -1686,7 +1686,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hep B-2\t",
@@ -1694,7 +1694,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Rotavirus-1\t",
@@ -1702,7 +1702,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "PCV-1\t",
@@ -1710,7 +1710,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "DTwP/DTaP-3\t",
@@ -1718,7 +1718,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "IPV-3\t",
@@ -1726,7 +1726,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hib-3\t",
@@ -1734,7 +1734,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Hep B-4\t",
@@ -1742,7 +1742,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "Rotavirus-3\t",
@@ -1750,7 +1750,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "PCV-3\t",
@@ -1758,7 +1758,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1766,7 +1766,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "IPV-1\t",
@@ -1774,7 +1774,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hib-1\t",
@@ -1782,7 +1782,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Hep B-2\t",
@@ -1790,7 +1790,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "Rotavirus-1\t",
@@ -1798,7 +1798,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "PCV-1\t",
@@ -1806,7 +1806,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "DTwP/DTaP-1\t",
@@ -1814,7 +1814,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "IPV-1\t",
@@ -1822,7 +1822,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hib-1\t",
@@ -1830,7 +1830,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Hep B-2\t",
@@ -1838,7 +1838,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "Rotavirus-1\t",
@@ -1846,7 +1846,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "PCV-1\t",
@@ -1854,7 +1854,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "BCG",
@@ -1862,7 +1862,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "OPV",
@@ -1870,7 +1870,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "vaccine": "HBV",
@@ -1878,7 +1878,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "vaccine": "BCG",
@@ -1886,7 +1886,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "vaccine": "OPV",
@@ -1894,7 +1894,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "vaccine": "HBV",
@@ -1902,7 +1902,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "BCG",
@@ -1910,7 +1910,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "OPV",
@@ -1918,7 +1918,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0354",
         "patientName": "Demo Patient 4",
         "vaccine": "HBV",
@@ -1926,7 +1926,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "BCG",
@@ -1934,7 +1934,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "OPV",
@@ -1942,7 +1942,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "vaccine": "HBV",
@@ -1950,7 +1950,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "BCG",
@@ -1958,7 +1958,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "OPV",
@@ -1966,7 +1966,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "vaccine": "HBV",
@@ -1974,7 +1974,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "BCG",
@@ -1982,7 +1982,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "OPV",
@@ -1990,7 +1990,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "vaccine": "HBV",
@@ -1998,7 +1998,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-2\t",
@@ -2006,7 +2006,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-2\t",
@@ -2014,7 +2014,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib-2\t",
@@ -2022,7 +2022,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hep B-3\t",
@@ -2030,7 +2030,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "RotaVirus - 2\t",
@@ -2038,7 +2038,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "PCV-2\t",
@@ -2046,7 +2046,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "MMR",
@@ -2054,7 +2054,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "MCV",
@@ -2062,7 +2062,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "MMR",
@@ -2070,7 +2070,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "MCV",
@@ -2078,7 +2078,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Typhoid Conjugate Vaccine\t",
@@ -2086,7 +2086,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-3\t",
@@ -2094,7 +2094,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-3\t",
@@ -2102,7 +2102,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-3\t",
@@ -2110,7 +2110,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-4\t",
@@ -2118,7 +2118,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotavirus-3\t",
@@ -2126,7 +2126,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-3\t",
@@ -2134,7 +2134,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-2\t",
@@ -2142,7 +2142,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-2\t",
@@ -2150,7 +2150,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-2\t",
@@ -2158,7 +2158,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-3\t",
@@ -2166,7 +2166,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "RotaVirus - 2\t",
@@ -2174,7 +2174,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-2\t",
@@ -2182,7 +2182,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-2\t",
@@ -2190,7 +2190,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-2\t",
@@ -2198,7 +2198,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-2\t",
@@ -2206,7 +2206,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-3\t",
@@ -2214,7 +2214,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "RotaVirus - 2\t",
@@ -2222,7 +2222,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-2\t",
@@ -2230,7 +2230,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Quadruvalent Influenza(IIV)-1\t",
@@ -2238,7 +2238,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2246,7 +2246,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Pneumococcal - 10",
@@ -2254,7 +2254,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotaviral Vaccine",
@@ -2262,7 +2262,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-1\t",
@@ -2270,7 +2270,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-1\t",
@@ -2278,7 +2278,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib-1\t",
@@ -2286,7 +2286,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hep B-2\t",
@@ -2294,7 +2294,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Rotavirus-1\t",
@@ -2302,7 +2302,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "PCV-1\t",
@@ -2310,7 +2310,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Flu Vaccine\t",
@@ -2318,7 +2318,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Flu Vaccine\t",
@@ -2326,7 +2326,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Quadruvalent Influenza(IIV)-2\t",
@@ -2334,7 +2334,7 @@
         "route": "SC RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Quadruvalent Influenza(IIV)-2\t",
@@ -2342,7 +2342,7 @@
         "route": "SC RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hepatitis A\t",
@@ -2350,7 +2350,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "MCV -2\t",
@@ -2358,7 +2358,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "HepA-2\t",
@@ -2366,7 +2366,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Varicella-2\t",
@@ -2374,7 +2374,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Cholara 1 & 2\t",
@@ -2382,7 +2382,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-3\t",
@@ -2390,7 +2390,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-3\t",
@@ -2398,7 +2398,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib-3\t",
@@ -2406,7 +2406,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hep B-4\t",
@@ -2414,7 +2414,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Rotavirus-3\t",
@@ -2422,7 +2422,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "PCV-3\t",
@@ -2430,7 +2430,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "TdaP",
@@ -2438,7 +2438,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "HPV (against cervical cancer)\t",
@@ -2446,7 +2446,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Td",
@@ -2454,7 +2454,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "HPV 1, 2 & 3\t",
@@ -2462,7 +2462,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2470,7 +2470,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Pneumococcal - 10",
@@ -2478,7 +2478,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Rotaviral Vaccine",
@@ -2486,7 +2486,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Flu Vaccine\t",
@@ -2494,7 +2494,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Flu Vaccine\t",
@@ -2502,7 +2502,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Quadruvalent Influenza(IIV)-1\t",
@@ -2510,7 +2510,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "DTwP/DTaP-1\t",
@@ -2518,7 +2518,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "IPV-1\t",
@@ -2526,7 +2526,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hib-1\t",
@@ -2534,7 +2534,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Hep B-2\t",
@@ -2542,7 +2542,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotavirus-1\t",
@@ -2550,7 +2550,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "PCV-1\t",
@@ -2558,7 +2558,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "MMR-2\t",
@@ -2566,7 +2566,7 @@
         "route": "SC RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Varicella-1\t",
@@ -2574,7 +2574,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "PCV booster\t",
@@ -2582,7 +2582,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2590,7 +2590,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "Pneumococcal - 10",
@@ -2598,7 +2598,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "Rotaviral Vaccine",
@@ -2606,7 +2606,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-B1\t",
@@ -2614,7 +2614,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib-B1\t",
@@ -2622,7 +2622,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-B1\t",
@@ -2630,7 +2630,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Flu Vaccine\t",
@@ -2638,7 +2638,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2646,7 +2646,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Pneumococcal - 10",
@@ -2654,7 +2654,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Rotaviral Vaccine",
@@ -2662,7 +2662,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "DTwP/DTaP-3\t",
@@ -2670,7 +2670,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "IPV-3\t",
@@ -2678,7 +2678,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hib-3\t",
@@ -2686,7 +2686,7 @@
         "route": "RA "
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hep B-4\t",
@@ -2694,7 +2694,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Rotavirus-3\t",
@@ -2702,7 +2702,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "PCV-3\t",
@@ -2710,7 +2710,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "BCG",
@@ -2718,7 +2718,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV",
@@ -2726,7 +2726,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "HBV",
@@ -2734,7 +2734,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "BCG",
@@ -2742,7 +2742,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "OPV",
@@ -2750,7 +2750,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "HBV",
@@ -2758,7 +2758,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2766,7 +2766,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "Pneumococcal - 10",
@@ -2774,7 +2774,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "Rotaviral Vaccine",
@@ -2782,7 +2782,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Typhoid Conjugate Vaccine\t",
@@ -2790,7 +2790,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2798,7 +2798,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Pneumococcal - 10",
@@ -2806,7 +2806,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Rotaviral Vaccine",
@@ -2814,7 +2814,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Hexavalent painless",
@@ -2822,7 +2822,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Pneumococcal - 10",
@@ -2830,7 +2830,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Rotaviral Vaccine",
@@ -2838,7 +2838,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2846,7 +2846,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Pneumococcal - 10",
@@ -2854,7 +2854,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotaviral Vaccine",
@@ -2862,7 +2862,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "DTwP/DTaP-2\t",
@@ -2870,7 +2870,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "IPV-2\t",
@@ -2878,7 +2878,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hib-2\t",
@@ -2886,7 +2886,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hep B-3\t",
@@ -2894,7 +2894,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "RotaVirus - 2\t",
@@ -2902,7 +2902,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "PCV-2\t",
@@ -2910,7 +2910,7 @@
         "route": "BV"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "DTwP/DTaP-2\t",
@@ -2918,7 +2918,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Hib - B2\t",
@@ -2926,7 +2926,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "IPV-B2\t",
@@ -2934,7 +2934,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2942,7 +2942,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Pneumococcal - 10",
@@ -2950,7 +2950,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "Rotaviral Vaccine",
@@ -2958,7 +2958,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -2966,7 +2966,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Pneumococcal - 10",
@@ -2974,7 +2974,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "Rotaviral Vaccine",
@@ -2982,7 +2982,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "DTwP/DTaP-1\t",
@@ -2990,7 +2990,7 @@
         "route": "OG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "IPV-1\t",
@@ -2998,7 +2998,7 @@
         "route": "IN"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hib-1\t",
@@ -3006,7 +3006,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Hep B-2\t",
@@ -3014,7 +3014,7 @@
         "route": "RA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "Rotavirus-1\t",
@@ -3022,7 +3022,7 @@
         "route": "LA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "PCV-1\t",
@@ -3030,7 +3030,7 @@
         "route": "LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -3038,7 +3038,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Pneumococcal - 10",
@@ -3046,7 +3046,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "Rotaviral Vaccine",
@@ -3054,7 +3054,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "BCG",
@@ -3062,7 +3062,7 @@
         "route": "ID"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "OPV",
@@ -3070,7 +3070,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "vaccine": "HBV",
@@ -3078,7 +3078,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "BCG",
@@ -3086,7 +3086,7 @@
         "route": "ID"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "OPV",
@@ -3094,7 +3094,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "HBV",
@@ -3102,7 +3102,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "BCG",
@@ -3110,7 +3110,7 @@
         "route": "ID"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "OPV",
@@ -3118,7 +3118,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "vaccine": "HBV",
@@ -3126,7 +3126,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "BCG",
@@ -3134,7 +3134,7 @@
         "route": "ID"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "OPV",
@@ -3142,7 +3142,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "vaccine": "HBV",
@@ -3150,7 +3150,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "BCG",
@@ -3158,7 +3158,7 @@
         "route": "IM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "OPV",
@@ -3166,7 +3166,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "vaccine": "HBV",
@@ -3174,7 +3174,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "vaccine": "BCG",
@@ -3182,7 +3182,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "vaccine": "OPV (Oral)+Pentavalent",
@@ -3190,7 +3190,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "vaccine": "Pneumococcal - 13",
@@ -3198,7 +3198,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "vaccine": "Rotaviral Vaccine",
@@ -3206,7 +3206,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0216",
         "patientName": "Demo Patient 13",
         "vaccine": "Hexavalent Regular",
@@ -3214,7 +3214,7 @@
         "route": "IM LT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0216",
         "patientName": "Demo Patient 13",
         "vaccine": "Pneumococcal - 10",
@@ -3222,7 +3222,7 @@
         "route": "IM RT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0216",
         "patientName": "Demo Patient 13",
         "vaccine": "Rotaviral Vaccine",
@@ -3230,7 +3230,7 @@
         "route": "PO"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "vaccine": "Quadruvalent Influenza(IIV)-1\t",

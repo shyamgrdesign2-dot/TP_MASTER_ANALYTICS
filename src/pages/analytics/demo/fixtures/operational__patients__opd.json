@@ -378,7 +378,7 @@
         "patientName": "Demo Patient 243",
         "mobile": "98XXXXXX04",
         "visits": 2,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 972495
       },
       {
@@ -386,7 +386,7 @@
         "patientName": "Demo Patient 101",
         "mobile": "98XXXXXX04",
         "visits": 4,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 724867
       },
       {
@@ -394,7 +394,7 @@
         "patientName": "Demo Patient 74",
         "mobile": "98XXXXXX10",
         "visits": 6,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 66604
       },
       {
@@ -402,7 +402,7 @@
         "patientName": "Demo Patient 22",
         "mobile": "98XXXXXX03",
         "visits": 25,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 55587
       },
       {
@@ -410,7 +410,7 @@
         "patientName": "Demo Patient 19",
         "mobile": "98XXXXXX03",
         "visits": 27,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 29530
       },
       {
@@ -418,7 +418,7 @@
         "patientName": "Demo Patient 21",
         "mobile": "98XXXXXX03",
         "visits": 25,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 28050
       },
       {
@@ -426,7 +426,7 @@
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
         "visits": 19,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 27333
       },
       {
@@ -434,7 +434,7 @@
         "patientName": "Demo Patient 330",
         "mobile": "98XXXXXX64",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 24850
       },
       {
@@ -442,7 +442,7 @@
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
         "visits": 99,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 18574
       },
       {
@@ -450,7 +450,7 @@
         "patientName": "Demo Patient 15",
         "mobile": "98XXXXXX06",
         "visits": 32,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 17302
       },
       {
@@ -458,7 +458,7 @@
         "patientName": "Demo Patient 331",
         "mobile": "98XXXXXX64",
         "visits": 3,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 14000
       },
       {
@@ -466,7 +466,7 @@
         "patientName": "Demo Patient 104",
         "mobile": "98XXXXXX62",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 12963
       },
       {
@@ -474,7 +474,7 @@
         "patientName": "Demo Patient 144",
         "mobile": "98XXXXXX65",
         "visits": 2,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 10000
       },
       {
@@ -482,7 +482,7 @@
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
         "visits": 13,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 10000
       },
       {
@@ -490,7 +490,7 @@
         "patientName": "Demo Patient 58",
         "mobile": "98XXXXXX03",
         "visits": 9,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 10000
       },
       {
@@ -498,7 +498,7 @@
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
         "visits": 10,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 9500
       },
       {
@@ -506,7 +506,7 @@
         "patientName": "Demo Patient 43",
         "mobile": "98XXXXXX03",
         "visits": 12,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6750
       },
       {
@@ -514,7 +514,7 @@
         "patientName": "Demo Patient 367",
         "mobile": "98XXXXXX66",
         "visits": 2,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6240
       },
       {
@@ -522,7 +522,7 @@
         "patientName": "Demo Patient 10",
         "mobile": "98XXXXXX06",
         "visits": 43,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6175
       },
       {
@@ -530,7 +530,7 @@
         "patientName": "Demo Patient 77",
         "mobile": "98XXXXXX41",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5938
       },
       {
@@ -538,7 +538,7 @@
         "patientName": "Demo Patient 373",
         "mobile": "98XXXXXX67",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5640
       },
       {
@@ -546,7 +546,7 @@
         "patientName": "Demo Patient 86",
         "mobile": "98XXXXXX48",
         "visits": 5,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5500
       },
       {
@@ -554,7 +554,7 @@
         "patientName": "Demo Patient 67",
         "mobile": "98XXXXXX34",
         "visits": 7,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5250
       },
       {
@@ -562,7 +562,7 @@
         "patientName": "Demo Patient 6",
         "mobile": "98XXXXXX06",
         "visits": 63,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5200
       },
       {
@@ -570,7 +570,7 @@
         "patientName": "Demo Patient 362",
         "mobile": "98XXXXXX68",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -578,7 +578,7 @@
         "patientName": "Demo Patient 369",
         "mobile": "98XXXXXX10",
         "visits": 2,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -586,7 +586,7 @@
         "patientName": "Demo Patient 250",
         "mobile": "98XXXXXX69",
         "visits": 3,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -594,7 +594,7 @@
         "patientName": "Demo Patient 85",
         "mobile": "98XXXXXX47",
         "visits": 5,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -602,7 +602,7 @@
         "patientName": "Demo Patient 79",
         "mobile": "98XXXXXX03",
         "visits": 6,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -610,7 +610,7 @@
         "patientName": "Demo Patient 346",
         "mobile": "98XXXXXX10",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -618,7 +618,7 @@
         "patientName": "Demo Patient 23",
         "mobile": "98XXXXXX04",
         "visits": 25,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -626,7 +626,7 @@
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
         "visits": 36,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -634,7 +634,7 @@
         "patientName": "Demo Patient 4",
         "mobile": "98XXXXXX05",
         "visits": 2,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 4500
       },
       {
@@ -642,7 +642,7 @@
         "patientName": "Demo Patient 49",
         "mobile": "98XXXXXX03",
         "visits": 10,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 1500
       },
       {
@@ -650,7 +650,7 @@
         "patientName": "Demo Patient 30",
         "mobile": "98XXXXXX16",
         "visits": 17,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 1400
       },
       {
@@ -658,7 +658,7 @@
         "patientName": "Demo Patient 103",
         "mobile": "98XXXXXX61",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 1248
       },
       {
@@ -666,7 +666,7 @@
         "patientName": "Demo Patient 338",
         "mobile": "98XXXXXX04",
         "visits": 1,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 580
       },
       {
@@ -674,7 +674,7 @@
         "patientName": "Demo Patient 80",
         "mobile": "98XXXXXX42",
         "visits": 6,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 500
       },
       {
@@ -682,7 +682,7 @@
         "patientName": "",
         "mobile": null,
         "visits": 7,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 250
       },
       {
@@ -690,7 +690,7 @@
         "patientName": "Demo Patient 70",
         "mobile": "98XXXXXX37",
         "visits": 7,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 200
       },
       {
@@ -698,7 +698,7 @@
         "patientName": "Demo Patient 5",
         "mobile": "98XXXXXX04",
         "visits": 73,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 33
       },
       {
@@ -706,7 +706,7 @@
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
         "visits": 51,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 9
       }
     ]
@@ -748,7 +748,7 @@
         "mobile": "98XXXXXX04",
         "visits": 2,
         "daysSinceVisit": 341,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 972495
       },
       {
@@ -757,7 +757,7 @@
         "mobile": "98XXXXXX04",
         "visits": 4,
         "daysSinceVisit": 330,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 724867
       },
       {
@@ -766,7 +766,7 @@
         "mobile": "98XXXXXX10",
         "visits": 6,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 66604
       },
       {
@@ -775,7 +775,7 @@
         "mobile": "98XXXXXX03",
         "visits": 25,
         "daysSinceVisit": 511,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 55587
       },
       {
@@ -784,7 +784,7 @@
         "mobile": "98XXXXXX03",
         "visits": 27,
         "daysSinceVisit": 516,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 29530
       },
       {
@@ -793,7 +793,7 @@
         "mobile": "98XXXXXX03",
         "visits": 25,
         "daysSinceVisit": 533,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 28050
       },
       {
@@ -802,7 +802,7 @@
         "mobile": "98XXXXXX14",
         "visits": 19,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 27333
       },
       {
@@ -811,7 +811,7 @@
         "mobile": "98XXXXXX06",
         "visits": 32,
         "daysSinceVisit": 340,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 17302
       },
       {
@@ -820,7 +820,7 @@
         "mobile": "98XXXXXX64",
         "visits": 3,
         "daysSinceVisit": 560,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 14000
       },
       {
@@ -829,7 +829,7 @@
         "mobile": "98XXXXXX03",
         "visits": 9,
         "daysSinceVisit": 582,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 10000
       },
       {
@@ -838,7 +838,7 @@
         "mobile": "98XXXXXX03",
         "visits": 10,
         "daysSinceVisit": 569,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 9500
       },
       {
@@ -847,7 +847,7 @@
         "mobile": "98XXXXXX03",
         "visits": 12,
         "daysSinceVisit": 562,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6750
       },
       {
@@ -856,7 +856,7 @@
         "mobile": "98XXXXXX66",
         "visits": 2,
         "daysSinceVisit": 840,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6240
       },
       {
@@ -865,7 +865,7 @@
         "mobile": "98XXXXXX06",
         "visits": 43,
         "daysSinceVisit": 516,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 6175
       },
       {
@@ -874,7 +874,7 @@
         "mobile": "98XXXXXX48",
         "visits": 5,
         "daysSinceVisit": 583,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5500
       },
       {
@@ -883,7 +883,7 @@
         "mobile": "98XXXXXX34",
         "visits": 7,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5250
       },
       {
@@ -892,7 +892,7 @@
         "mobile": "98XXXXXX06",
         "visits": 63,
         "daysSinceVisit": 224,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5200
       },
       {
@@ -901,7 +901,7 @@
         "mobile": "98XXXXXX04",
         "visits": 25,
         "daysSinceVisit": 316,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -910,7 +910,7 @@
         "mobile": "98XXXXXX03",
         "visits": 6,
         "daysSinceVisit": 546,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -919,7 +919,7 @@
         "mobile": "98XXXXXX47",
         "visits": 5,
         "daysSinceVisit": 835,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -928,7 +928,7 @@
         "mobile": "98XXXXXX69",
         "visits": 3,
         "daysSinceVisit": 340,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -937,7 +937,7 @@
         "mobile": "98XXXXXX10",
         "visits": 2,
         "daysSinceVisit": 1009,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 5000
       },
       {
@@ -946,7 +946,7 @@
         "mobile": "98XXXXXX05",
         "visits": 2,
         "daysSinceVisit": 546,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 4500
       },
       {
@@ -955,7 +955,7 @@
         "mobile": "98XXXXXX03",
         "visits": 10,
         "daysSinceVisit": 532,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 1500
       },
       {
@@ -964,7 +964,7 @@
         "mobile": "98XXXXXX16",
         "visits": 17,
         "daysSinceVisit": 545,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 1400
       },
       {
@@ -973,7 +973,7 @@
         "mobile": "98XXXXXX42",
         "visits": 6,
         "daysSinceVisit": 561,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 500
       },
       {
@@ -982,7 +982,7 @@
         "mobile": null,
         "visits": 7,
         "daysSinceVisit": 806,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 250
       },
       {
@@ -991,7 +991,7 @@
         "mobile": "98XXXXXX37",
         "visits": 7,
         "daysSinceVisit": 560,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 200
       },
       {
@@ -1000,7 +1000,7 @@
         "mobile": "98XXXXXX04",
         "visits": 73,
         "daysSinceVisit": 366,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 33
       },
       {
@@ -1009,7 +1009,7 @@
         "mobile": "98XXXXXX04",
         "visits": 51,
         "daysSinceVisit": 202,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 9
       },
       {
@@ -1018,7 +1018,7 @@
         "mobile": "98XXXXXX01",
         "visits": 182,
         "daysSinceVisit": 513,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1027,7 +1027,7 @@
         "mobile": "98XXXXXX03",
         "visits": 97,
         "daysSinceVisit": 515,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1036,7 +1036,7 @@
         "mobile": "98XXXXXX05",
         "visits": 68,
         "daysSinceVisit": 903,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1045,7 +1045,7 @@
         "mobile": "98XXXXXX08",
         "visits": 46,
         "daysSinceVisit": 252,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1054,7 +1054,7 @@
         "mobile": "98XXXXXX11",
         "visits": 31,
         "daysSinceVisit": 516,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1063,7 +1063,7 @@
         "mobile": "98XXXXXX03",
         "visits": 26,
         "daysSinceVisit": 553,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1072,7 +1072,7 @@
         "mobile": "98XXXXXX04",
         "visits": 25,
         "daysSinceVisit": 299,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1081,7 +1081,7 @@
         "mobile": "98XXXXXX06",
         "visits": 18,
         "daysSinceVisit": 341,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1090,7 +1090,7 @@
         "mobile": "98XXXXXX18",
         "visits": 16,
         "daysSinceVisit": 238,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1099,7 +1099,7 @@
         "mobile": "98XXXXXX05",
         "visits": 15,
         "daysSinceVisit": 516,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1108,7 +1108,7 @@
         "mobile": "98XXXXXX20",
         "visits": 14,
         "daysSinceVisit": 543,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1117,7 +1117,7 @@
         "mobile": "98XXXXXX22",
         "visits": 14,
         "daysSinceVisit": 379,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1126,7 +1126,7 @@
         "mobile": "98XXXXXX05",
         "visits": 13,
         "daysSinceVisit": 543,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1135,7 +1135,7 @@
         "mobile": "98XXXXXX23",
         "visits": 13,
         "daysSinceVisit": 342,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1144,7 +1144,7 @@
         "mobile": "98XXXXXX04",
         "visits": 12,
         "daysSinceVisit": 330,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1153,7 +1153,7 @@
         "mobile": "98XXXXXX24",
         "visits": 11,
         "daysSinceVisit": 544,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1162,7 +1162,7 @@
         "mobile": "98XXXXXX25",
         "visits": 10,
         "daysSinceVisit": 672,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1171,7 +1171,7 @@
         "mobile": "98XXXXXX04",
         "visits": 10,
         "daysSinceVisit": 341,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1180,7 +1180,7 @@
         "mobile": "98XXXXXX28",
         "visits": 9,
         "daysSinceVisit": 240,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1189,7 +1189,7 @@
         "mobile": "98XXXXXX04",
         "visits": 9,
         "daysSinceVisit": 328,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1198,7 +1198,7 @@
         "mobile": "98XXXXXX04",
         "visits": 9,
         "daysSinceVisit": 398,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1207,7 +1207,7 @@
         "mobile": "98XXXXXX04",
         "visits": 9,
         "daysSinceVisit": 405,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1216,7 +1216,7 @@
         "mobile": "98XXXXXX30",
         "visits": 9,
         "daysSinceVisit": 328,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1225,7 +1225,7 @@
         "mobile": "98XXXXXX31",
         "visits": 9,
         "daysSinceVisit": 330,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1234,7 +1234,7 @@
         "mobile": "98XXXXXX32",
         "visits": 9,
         "daysSinceVisit": 377,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1243,7 +1243,7 @@
         "mobile": "98XXXXXX35",
         "visits": 7,
         "daysSinceVisit": 734,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1252,7 +1252,7 @@
         "mobile": "98XXXXXX05",
         "visits": 7,
         "daysSinceVisit": 520,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1261,7 +1261,7 @@
         "mobile": "98XXXXXX03",
         "visits": 7,
         "daysSinceVisit": 587,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1270,7 +1270,7 @@
         "mobile": "98XXXXXX36",
         "visits": 7,
         "daysSinceVisit": 250,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1279,7 +1279,7 @@
         "mobile": "98XXXXXX06",
         "visits": 7,
         "daysSinceVisit": 526,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1288,7 +1288,7 @@
         "mobile": "98XXXXXX39",
         "visits": 6,
         "daysSinceVisit": 330,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1297,7 +1297,7 @@
         "mobile": null,
         "visits": 6,
         "daysSinceVisit": 831,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1306,7 +1306,7 @@
         "mobile": "98XXXXXX40",
         "visits": 6,
         "daysSinceVisit": 595,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1315,7 +1315,7 @@
         "mobile": "98XXXXXX15",
         "visits": 6,
         "daysSinceVisit": 219,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1324,7 +1324,7 @@
         "mobile": "98XXXXXX41",
         "visits": 6,
         "daysSinceVisit": 217,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1333,7 +1333,7 @@
         "mobile": "98XXXXXX43",
         "visits": 6,
         "daysSinceVisit": 280,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1342,7 +1342,7 @@
         "mobile": "98XXXXXX44",
         "visits": 6,
         "daysSinceVisit": 377,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1351,7 +1351,7 @@
         "mobile": "98XXXXXX45",
         "visits": 6,
         "daysSinceVisit": 328,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1360,7 +1360,7 @@
         "mobile": "98XXXXXX46",
         "visits": 5,
         "daysSinceVisit": 574,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1369,7 +1369,7 @@
         "mobile": "98XXXXXX49",
         "visits": 5,
         "daysSinceVisit": 524,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1378,7 +1378,7 @@
         "mobile": "98XXXXXX50",
         "visits": 5,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1387,7 +1387,7 @@
         "mobile": "98XXXXXX51",
         "visits": 5,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1396,7 +1396,7 @@
         "mobile": "98XXXXXX52",
         "visits": 5,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1405,7 +1405,7 @@
         "mobile": "98XXXXXX04",
         "visits": 5,
         "daysSinceVisit": 553,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1414,7 +1414,7 @@
         "mobile": "98XXXXXX04",
         "visits": 5,
         "daysSinceVisit": 400,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1423,7 +1423,7 @@
         "mobile": "98XXXXXX04",
         "visits": 5,
         "daysSinceVisit": 651,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1432,7 +1432,7 @@
         "mobile": "98XXXXXX70",
         "visits": 5,
         "daysSinceVisit": 575,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1441,7 +1441,7 @@
         "mobile": "98XXXXXX71",
         "visits": 5,
         "daysSinceVisit": 555,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1450,7 +1450,7 @@
         "mobile": "98XXXXXX53",
         "visits": 5,
         "daysSinceVisit": 545,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1459,7 +1459,7 @@
         "mobile": "98XXXXXX56",
         "visits": 5,
         "daysSinceVisit": 540,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1468,7 +1468,7 @@
         "mobile": "98XXXXXX58",
         "visits": 5,
         "daysSinceVisit": 407,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1477,7 +1477,7 @@
         "mobile": "98XXXXXX08",
         "visits": 5,
         "daysSinceVisit": 324,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1486,7 +1486,7 @@
         "mobile": "98XXXXXX72",
         "visits": 4,
         "daysSinceVisit": 646,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1495,7 +1495,7 @@
         "mobile": "98XXXXXX73",
         "visits": 4,
         "daysSinceVisit": 677,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1504,7 +1504,7 @@
         "mobile": "98XXXXXX54",
         "visits": 4,
         "daysSinceVisit": 545,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1513,7 +1513,7 @@
         "mobile": null,
         "visits": 4,
         "daysSinceVisit": 804,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1522,7 +1522,7 @@
         "mobile": "98XXXXXX47",
         "visits": 4,
         "daysSinceVisit": 573,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1531,7 +1531,7 @@
         "mobile": "98XXXXXX04",
         "visits": 4,
         "daysSinceVisit": 366,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1540,7 +1540,7 @@
         "mobile": "98XXXXXX03",
         "visits": 4,
         "daysSinceVisit": 568,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1549,7 +1549,7 @@
         "mobile": "98XXXXXX47",
         "visits": 4,
         "daysSinceVisit": 533,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1558,7 +1558,7 @@
         "mobile": "98XXXXXX03",
         "visits": 4,
         "daysSinceVisit": 558,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1567,7 +1567,7 @@
         "mobile": "98XXXXXX74",
         "visits": 4,
         "daysSinceVisit": 384,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1576,7 +1576,7 @@
         "mobile": "98XXXXXX75",
         "visits": 4,
         "daysSinceVisit": 372,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1585,7 +1585,7 @@
         "mobile": "98XXXXXX04",
         "visits": 4,
         "daysSinceVisit": 338,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1594,7 +1594,7 @@
         "mobile": "98XXXXXX23",
         "visits": 4,
         "daysSinceVisit": 324,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1603,7 +1603,7 @@
         "mobile": "98XXXXXX76",
         "visits": 4,
         "daysSinceVisit": 335,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1612,7 +1612,7 @@
         "mobile": "98XXXXXX77",
         "visits": 3,
         "daysSinceVisit": 286,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1621,7 +1621,7 @@
         "mobile": "98XXXXXX78",
         "visits": 3,
         "daysSinceVisit": 573,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1630,7 +1630,7 @@
         "mobile": "98XXXXXX79",
         "visits": 3,
         "daysSinceVisit": 188,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       },
       {
@@ -1639,7 +1639,7 @@
         "mobile": "98XXXXXX28",
         "visits": 3,
         "daysSinceVisit": 264,
-        "lastVisit": {},
+        "lastVisit": null,
         "spent": 0
       }
     ]
@@ -1711,9 +1711,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 13,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0002",
@@ -1726,9 +1726,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 105,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0013",
@@ -1741,9 +1741,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 42,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0034",
@@ -1756,9 +1756,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 17,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0070",
@@ -1771,9 +1771,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 8,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0012",
@@ -1786,9 +1786,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 42,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0057",
@@ -1801,9 +1801,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0069",
@@ -1816,9 +1816,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 8,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0042",
@@ -1831,9 +1831,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 13,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0014",
@@ -1846,9 +1846,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 36,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0103",
@@ -1861,9 +1861,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0056",
@@ -1876,9 +1876,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 10,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0117",
@@ -1891,9 +1891,9 @@
         "state": "Maharashtra",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0003",
@@ -1906,9 +1906,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 99,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0118",
@@ -1921,9 +1921,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0119",
@@ -1936,9 +1936,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0009",
@@ -1951,9 +1951,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 46,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0120",
@@ -1966,9 +1966,9 @@
         "state": "",
         "bloodGroup": "A+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0121",
@@ -1981,9 +1981,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0122",
@@ -1996,9 +1996,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0123",
@@ -2011,9 +2011,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0124",
@@ -2026,9 +2026,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0044",
@@ -2041,9 +2041,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 13,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0033",
@@ -2056,9 +2056,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 17,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0095",
@@ -2071,9 +2071,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0030",
@@ -2086,9 +2086,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 18,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0127",
@@ -2101,9 +2101,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0125",
@@ -2116,9 +2116,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0126",
@@ -2131,9 +2131,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0129",
@@ -2146,9 +2146,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0128",
@@ -2161,9 +2161,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0130",
@@ -2176,9 +2176,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0019",
@@ -2191,9 +2191,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 29,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0031",
@@ -2206,9 +2206,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 18,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0049",
@@ -2221,9 +2221,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 12,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0131",
@@ -2236,9 +2236,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0132",
@@ -2251,9 +2251,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0133",
@@ -2266,9 +2266,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0134",
@@ -2281,9 +2281,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0135",
@@ -2296,9 +2296,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0136",
@@ -2311,9 +2311,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0137",
@@ -2326,9 +2326,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0138",
@@ -2341,9 +2341,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0139",
@@ -2356,9 +2356,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0140",
@@ -2371,9 +2371,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0141",
@@ -2386,9 +2386,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0142",
@@ -2401,9 +2401,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0143",
@@ -2416,9 +2416,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0144",
@@ -2431,9 +2431,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0145",
@@ -2446,9 +2446,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0146",
@@ -2461,9 +2461,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0147",
@@ -2476,9 +2476,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0037",
@@ -2491,9 +2491,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 16,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0148",
@@ -2506,9 +2506,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0149",
@@ -2521,9 +2521,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0150",
@@ -2536,9 +2536,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0151",
@@ -2551,9 +2551,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0152",
@@ -2566,9 +2566,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0153",
@@ -2581,9 +2581,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0154",
@@ -2596,9 +2596,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0155",
@@ -2611,9 +2611,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0079",
@@ -2626,9 +2626,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0156",
@@ -2641,9 +2641,9 @@
         "state": "",
         "bloodGroup": "A+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0068",
@@ -2656,9 +2656,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 8,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0015",
@@ -2671,9 +2671,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 35,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0157",
@@ -2686,9 +2686,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0158",
@@ -2701,9 +2701,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0159",
@@ -2716,9 +2716,9 @@
         "state": "Punjab",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0036",
@@ -2731,9 +2731,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 16,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0160",
@@ -2746,9 +2746,9 @@
         "state": "",
         "bloodGroup": "A+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0161",
@@ -2761,9 +2761,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0162",
@@ -2776,9 +2776,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0163",
@@ -2791,9 +2791,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0164",
@@ -2806,9 +2806,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0165",
@@ -2821,9 +2821,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0027",
@@ -2836,9 +2836,9 @@
         "state": "",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 18,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0166",
@@ -2851,9 +2851,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0167",
@@ -2866,9 +2866,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0168",
@@ -2881,9 +2881,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0169",
@@ -2896,9 +2896,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0170",
@@ -2911,9 +2911,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0171",
@@ -2926,9 +2926,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0172",
@@ -2941,9 +2941,9 @@
         "state": "",
         "bloodGroup": "B-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0173",
@@ -2956,9 +2956,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0174",
@@ -2971,9 +2971,9 @@
         "state": "",
         "bloodGroup": "AB+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0175",
@@ -2986,9 +2986,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0176",
@@ -3001,9 +3001,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0177",
@@ -3016,9 +3016,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0085",
@@ -3031,9 +3031,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0178",
@@ -3046,9 +3046,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0064",
@@ -3061,9 +3061,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0179",
@@ -3076,9 +3076,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0180",
@@ -3091,9 +3091,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0181",
@@ -3106,9 +3106,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0182",
@@ -3121,9 +3121,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0183",
@@ -3136,9 +3136,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0184",
@@ -3151,9 +3151,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0185",
@@ -3166,9 +3166,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0186",
@@ -3181,9 +3181,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0059",
@@ -3196,9 +3196,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0187",
@@ -3211,9 +3211,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0018",
@@ -3226,9 +3226,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 30,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0188",
@@ -3241,9 +3241,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0189",
@@ -3256,9 +3256,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0190",
@@ -3271,9 +3271,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0191",
@@ -3286,9 +3286,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0192",
@@ -3301,9 +3301,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0193",
@@ -3316,9 +3316,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0194",
@@ -3331,9 +3331,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0195",
@@ -3346,9 +3346,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0196",
@@ -3361,9 +3361,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0197",
@@ -3376,9 +3376,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0198",
@@ -3391,9 +3391,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0199",
@@ -3406,9 +3406,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0200",
@@ -3421,9 +3421,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0050",
@@ -3436,9 +3436,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 11,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0071",
@@ -3451,9 +3451,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 8,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0201",
@@ -3466,9 +3466,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0202",
@@ -3481,9 +3481,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0203",
@@ -3496,9 +3496,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0204",
@@ -3511,9 +3511,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0205",
@@ -3526,9 +3526,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0206",
@@ -3541,9 +3541,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0207",
@@ -3556,9 +3556,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0040",
@@ -3571,9 +3571,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 14,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0210",
@@ -3586,9 +3586,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0208",
@@ -3601,9 +3601,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0209",
@@ -3616,9 +3616,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0212",
@@ -3631,9 +3631,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0211",
@@ -3646,9 +3646,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0213",
@@ -3661,9 +3661,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0214",
@@ -3676,9 +3676,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0008",
@@ -3691,9 +3691,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 51,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0215",
@@ -3706,9 +3706,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0216",
@@ -3721,9 +3721,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0217",
@@ -3736,9 +3736,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0223",
@@ -3751,9 +3751,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0218",
@@ -3766,9 +3766,9 @@
         "state": "",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0219",
@@ -3781,9 +3781,9 @@
         "state": "",
         "bloodGroup": "AB+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0220",
@@ -3796,9 +3796,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0221",
@@ -3811,9 +3811,9 @@
         "state": "",
         "bloodGroup": "AB+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0222",
@@ -3826,9 +3826,9 @@
         "state": "California",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0224",
@@ -3841,9 +3841,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0084",
@@ -3856,9 +3856,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0225",
@@ -3871,9 +3871,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0226",
@@ -3886,9 +3886,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0227",
@@ -3901,9 +3901,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0083",
@@ -3916,9 +3916,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0007",
@@ -3931,9 +3931,9 @@
         "state": "Maharashtra",
         "bloodGroup": "A- (A negative)",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 63,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0228",
@@ -3946,9 +3946,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0229",
@@ -3961,9 +3961,9 @@
         "state": "",
         "bloodGroup": "AB- (AB negative)",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0230",
@@ -3976,9 +3976,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0231",
@@ -3991,9 +3991,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0035",
@@ -4006,9 +4006,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 16,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0232",
@@ -4021,9 +4021,9 @@
         "state": "Ahmedabad",
         "bloodGroup": "O-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0233",
@@ -4036,9 +4036,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0058",
@@ -4051,9 +4051,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0029",
@@ -4066,9 +4066,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 18,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0076",
@@ -4081,9 +4081,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0010",
@@ -4096,9 +4096,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 46,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0234",
@@ -4111,9 +4111,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0235",
@@ -4126,9 +4126,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0236",
@@ -4141,9 +4141,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0237",
@@ -4156,9 +4156,9 @@
         "state": "Maharashtra",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0088",
@@ -4171,9 +4171,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0238",
@@ -4186,9 +4186,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0240",
@@ -4201,9 +4201,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0239",
@@ -4216,9 +4216,9 @@
         "state": "Isanpur",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0241",
@@ -4231,9 +4231,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0242",
@@ -4246,9 +4246,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0025",
@@ -4261,9 +4261,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 25,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0243",
@@ -4276,9 +4276,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0244",
@@ -4291,9 +4291,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0024",
@@ -4306,9 +4306,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 25,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0245",
@@ -4321,9 +4321,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0246",
@@ -4336,9 +4336,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0249",
@@ -4351,9 +4351,9 @@
         "state": "Maharashtra",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0248",
@@ -4366,9 +4366,9 @@
         "state": "Maharashtra",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0247",
@@ -4381,9 +4381,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0252",
@@ -4396,9 +4396,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0250",
@@ -4411,9 +4411,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0251",
@@ -4426,9 +4426,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0253",
@@ -4441,9 +4441,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0254",
@@ -4456,9 +4456,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0060",
@@ -4471,9 +4471,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0065",
@@ -4486,9 +4486,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0090",
@@ -4501,9 +4501,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0080",
@@ -4516,9 +4516,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0048",
@@ -4531,9 +4531,9 @@
         "state": "Gujrart",
         "bloodGroup": "0-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 12,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0066",
@@ -4546,9 +4546,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0112",
@@ -4561,9 +4561,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0255",
@@ -4576,9 +4576,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0256",
@@ -4591,9 +4591,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0262",
@@ -4606,9 +4606,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0260",
@@ -4621,9 +4621,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0259",
@@ -4636,9 +4636,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0263",
@@ -4651,9 +4651,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0258",
@@ -4666,9 +4666,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0257",
@@ -4681,9 +4681,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0261",
@@ -4696,9 +4696,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0016",
@@ -4711,9 +4711,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 32,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0264",
@@ -4726,9 +4726,9 @@
         "state": "Gujrat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0028",
@@ -4741,9 +4741,9 @@
         "state": "Maharashtra",
         "bloodGroup": "A-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 18,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0055",
@@ -4756,9 +4756,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 10,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0265",
@@ -4771,9 +4771,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0266",
@@ -4786,9 +4786,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0106",
@@ -4801,9 +4801,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0046",
@@ -4816,9 +4816,9 @@
         "state": "Maharashtra",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 13,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0289",
@@ -4831,9 +4831,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0267",
@@ -4846,9 +4846,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0268",
@@ -4861,9 +4861,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0269",
@@ -4876,9 +4876,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0270",
@@ -4891,9 +4891,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0271",
@@ -4906,9 +4906,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0272",
@@ -4921,9 +4921,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0273",
@@ -4936,9 +4936,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0274",
@@ -4951,9 +4951,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0275",
@@ -4966,9 +4966,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0276",
@@ -4981,9 +4981,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0277",
@@ -4996,9 +4996,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0278",
@@ -5011,9 +5011,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0279",
@@ -5026,9 +5026,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0280",
@@ -5041,9 +5041,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0281",
@@ -5056,9 +5056,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0282",
@@ -5071,9 +5071,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0283",
@@ -5086,9 +5086,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0284",
@@ -5101,9 +5101,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0285",
@@ -5116,9 +5116,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0286",
@@ -5131,9 +5131,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0287",
@@ -5146,9 +5146,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0288",
@@ -5161,9 +5161,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0290",
@@ -5176,9 +5176,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0291",
@@ -5191,9 +5191,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0292",
@@ -5206,9 +5206,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0293",
@@ -5221,9 +5221,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0294",
@@ -5236,9 +5236,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0295",
@@ -5251,9 +5251,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0296",
@@ -5266,9 +5266,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0297",
@@ -5281,9 +5281,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0298",
@@ -5296,9 +5296,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0299",
@@ -5311,9 +5311,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0300",
@@ -5326,9 +5326,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0301",
@@ -5341,9 +5341,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0302",
@@ -5356,9 +5356,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0303",
@@ -5371,9 +5371,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0304",
@@ -5386,9 +5386,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0305",
@@ -5401,9 +5401,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0306",
@@ -5416,9 +5416,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0307",
@@ -5431,9 +5431,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0308",
@@ -5446,9 +5446,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0309",
@@ -5461,9 +5461,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0310",
@@ -5476,9 +5476,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0311",
@@ -5491,9 +5491,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0312",
@@ -5506,9 +5506,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0313",
@@ -5521,9 +5521,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0314",
@@ -5536,9 +5536,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0315",
@@ -5551,9 +5551,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0316",
@@ -5566,9 +5566,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0317",
@@ -5581,9 +5581,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0318",
@@ -5596,9 +5596,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0319",
@@ -5611,9 +5611,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0320",
@@ -5626,9 +5626,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0321",
@@ -5641,9 +5641,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0322",
@@ -5656,9 +5656,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0323",
@@ -5671,9 +5671,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0324",
@@ -5686,9 +5686,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0325",
@@ -5701,9 +5701,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0326",
@@ -5716,9 +5716,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0327",
@@ -5731,9 +5731,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0005",
@@ -5746,9 +5746,9 @@
         "state": "Gujarat",
         "bloodGroup": "0-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 73,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0328",
@@ -5761,9 +5761,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0329",
@@ -5776,9 +5776,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0330",
@@ -5791,9 +5791,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0332",
@@ -5806,9 +5806,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0331",
@@ -5821,9 +5821,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0067",
@@ -5836,9 +5836,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0089",
@@ -5851,9 +5851,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0041",
@@ -5866,9 +5866,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 14,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0333",
@@ -5881,9 +5881,9 @@
         "state": "",
         "bloodGroup": "AB+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0334",
@@ -5896,9 +5896,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0335",
@@ -5911,9 +5911,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0061",
@@ -5926,9 +5926,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0100",
@@ -5941,9 +5941,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0336",
@@ -5956,9 +5956,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0337",
@@ -5971,9 +5971,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0062",
@@ -5986,9 +5986,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0107",
@@ -6001,9 +6001,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0023",
@@ -6016,9 +6016,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 25,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0001",
@@ -6031,9 +6031,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 182,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0004",
@@ -6046,9 +6046,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 97,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0017",
@@ -6061,9 +6061,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 31,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0020",
@@ -6076,9 +6076,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 27,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0011",
@@ -6091,9 +6091,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 43,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0038",
@@ -6106,9 +6106,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 15,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0111",
@@ -6121,9 +6121,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0338",
@@ -6136,9 +6136,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0074",
@@ -6151,9 +6151,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0339",
@@ -6166,9 +6166,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0094",
@@ -6181,9 +6181,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0340",
@@ -6196,9 +6196,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0078",
@@ -6211,9 +6211,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0341",
@@ -6226,9 +6226,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0109",
@@ -6241,9 +6241,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0110",
@@ -6256,9 +6256,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0342",
@@ -6271,9 +6271,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0343",
@@ -6286,9 +6286,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0054",
@@ -6301,9 +6301,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 10,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0344",
@@ -6316,9 +6316,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0108",
@@ -6331,9 +6331,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0022",
@@ -6346,9 +6346,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 25,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0346",
@@ -6361,9 +6361,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0345",
@@ -6376,9 +6376,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0347",
@@ -6391,9 +6391,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0348",
@@ -6406,9 +6406,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0104",
@@ -6421,9 +6421,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0039",
@@ -6436,9 +6436,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 14,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0045",
@@ -6451,9 +6451,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 13,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0051",
@@ -6466,9 +6466,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 11,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0349",
@@ -6481,9 +6481,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0032",
@@ -6496,9 +6496,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 17,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0102",
@@ -6511,9 +6511,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0101",
@@ -6526,9 +6526,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0086",
@@ -6541,9 +6541,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0351",
@@ -6556,9 +6556,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0105",
@@ -6571,9 +6571,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0350",
@@ -6586,9 +6586,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0352",
@@ -6601,9 +6601,9 @@
         "state": "Karnataka",
         "bloodGroup": "Ab+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0353",
@@ -6616,9 +6616,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0021",
@@ -6631,9 +6631,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 26,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0099",
@@ -6646,9 +6646,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0354",
@@ -6661,9 +6661,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0355",
@@ -6676,9 +6676,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0356",
@@ -6691,9 +6691,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0357",
@@ -6706,9 +6706,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0360",
@@ -6721,9 +6721,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0077",
@@ -6736,9 +6736,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0358",
@@ -6751,9 +6751,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0359",
@@ -6766,9 +6766,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0361",
@@ -6781,9 +6781,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0087",
@@ -6796,9 +6796,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0047",
@@ -6811,9 +6811,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 12,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0362",
@@ -6826,9 +6826,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0052",
@@ -6841,9 +6841,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 10,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0363",
@@ -6856,9 +6856,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0364",
@@ -6871,9 +6871,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0113",
@@ -6886,9 +6886,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0365",
@@ -6901,9 +6901,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0366",
@@ -6916,9 +6916,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0367",
@@ -6931,9 +6931,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0091",
@@ -6946,9 +6946,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0368",
@@ -6961,9 +6961,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0369",
@@ -6976,9 +6976,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0370",
@@ -6991,9 +6991,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0063",
@@ -7006,9 +7006,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 9,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0093",
@@ -7021,9 +7021,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0371",
@@ -7036,9 +7036,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0075",
@@ -7051,9 +7051,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0372",
@@ -7066,9 +7066,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0373",
@@ -7081,9 +7081,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0374",
@@ -7096,9 +7096,9 @@
         "state": "Gujarat ",
         "bloodGroup": "0-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0375",
@@ -7111,9 +7111,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0082",
@@ -7126,9 +7126,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0376",
@@ -7141,9 +7141,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0377",
@@ -7156,9 +7156,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0378",
@@ -7171,9 +7171,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0379",
@@ -7186,9 +7186,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0380",
@@ -7201,9 +7201,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0381",
@@ -7216,9 +7216,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0382",
@@ -7231,9 +7231,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0383",
@@ -7246,9 +7246,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0384",
@@ -7261,9 +7261,9 @@
         "state": "",
         "bloodGroup": "0-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0385",
@@ -7276,9 +7276,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0386",
@@ -7291,9 +7291,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0387",
@@ -7306,9 +7306,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0388",
@@ -7321,9 +7321,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0389",
@@ -7336,9 +7336,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0390",
@@ -7351,9 +7351,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0391",
@@ -7366,9 +7366,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0392",
@@ -7381,9 +7381,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0393",
@@ -7396,9 +7396,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0394",
@@ -7411,9 +7411,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0395",
@@ -7426,9 +7426,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0072",
@@ -7441,9 +7441,9 @@
         "state": "State",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0396",
@@ -7456,9 +7456,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0400",
@@ -7471,9 +7471,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0081",
@@ -7486,9 +7486,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 6,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0096",
@@ -7501,9 +7501,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0097",
@@ -7516,9 +7516,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0398",
@@ -7531,9 +7531,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0026",
@@ -7546,9 +7546,9 @@
         "state": "Gujarat",
         "bloodGroup": "O-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 19,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0098",
@@ -7561,9 +7561,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0397",
@@ -7576,9 +7576,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0399",
@@ -7591,9 +7591,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0401",
@@ -7606,9 +7606,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0403",
@@ -7621,9 +7621,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 3,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0402",
@@ -7636,9 +7636,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0404",
@@ -7651,9 +7651,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0405",
@@ -7666,9 +7666,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0406",
@@ -7681,9 +7681,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0407",
@@ -7696,9 +7696,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0408",
@@ -7711,9 +7711,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0409",
@@ -7726,9 +7726,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0410",
@@ -7741,9 +7741,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0411",
@@ -7756,9 +7756,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0412",
@@ -7771,9 +7771,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0413",
@@ -7786,9 +7786,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0114",
@@ -7801,9 +7801,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0414",
@@ -7816,9 +7816,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0415",
@@ -7831,9 +7831,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0416",
@@ -7846,9 +7846,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0417",
@@ -7861,9 +7861,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0418",
@@ -7876,9 +7876,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0419",
@@ -7891,9 +7891,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0420",
@@ -7906,9 +7906,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0421",
@@ -7921,9 +7921,9 @@
         "state": "Gujarat",
         "bloodGroup": "O-",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0053",
@@ -7936,9 +7936,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 10,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0422",
@@ -7951,9 +7951,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0423",
@@ -7966,9 +7966,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0424",
@@ -7981,9 +7981,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0425",
@@ -7996,9 +7996,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0426",
@@ -8011,9 +8011,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0427",
@@ -8026,9 +8026,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0428",
@@ -8041,9 +8041,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0429",
@@ -8056,9 +8056,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 4,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0430",
@@ -8071,9 +8071,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0431",
@@ -8086,9 +8086,9 @@
         "state": "Gujarat",
         "bloodGroup": "B+",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0073",
@@ -8101,9 +8101,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 7,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0432",
@@ -8116,9 +8116,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0115",
@@ -8131,9 +8131,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0092",
@@ -8146,9 +8146,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 5,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0433",
@@ -8161,9 +8161,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0006",
@@ -8176,9 +8176,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 64,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0434",
@@ -8191,9 +8191,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0435",
@@ -8206,9 +8206,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0436",
@@ -8221,9 +8221,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0437",
@@ -8236,9 +8236,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0438",
@@ -8251,9 +8251,9 @@
         "state": "Uttar Pradesh",
         "bloodGroup": "",
         "abha": "KYC verified",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0116",
@@ -8266,9 +8266,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0439",
@@ -8281,9 +8281,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 2,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0440",
@@ -8296,9 +8296,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0441",
@@ -8311,9 +8311,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0442",
@@ -8326,9 +8326,9 @@
         "state": "Gujarat",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       },
       {
         "patientUHID": "DEMO-0443",
@@ -8341,9 +8341,9 @@
         "state": "",
         "bloodGroup": "",
         "abha": "Not linked",
-        "registered": {},
+        "registered": null,
         "visits": 1,
-        "lastVisit": {}
+        "lastVisit": null
       }
     ]
   },

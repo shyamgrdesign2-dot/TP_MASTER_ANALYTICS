@@ -464,7 +464,7 @@
     ],
     "rows": [
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -473,7 +473,7 @@
         "investigations": "Onion (Pyaaz) Allergy Test By ImmunoCAP, പനി"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -482,7 +482,7 @@
         "investigations": "MONOCYTES, MEAN PLATELET VOLUME(MPV), Estrogen"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0127",
         "patientName": "Demo Patient 116",
         "gender": "Male",
@@ -491,7 +491,7 @@
         "investigations": "Onion (Pyaaz) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0056",
         "patientName": "Demo Patient 51",
         "gender": "Female",
@@ -500,7 +500,7 @@
         "investigations": "Oak Allergy Test By ImmunoCAP, Heart Day Special Package - Advance, Smart Plus Full Body Checkup with Vitamin Screening & Free Heart Risk Assessment (HsCRP), PET SCAN OF HEART FOR VIABILITY, Critical Congenital Heart Disease Gene Panel"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "gender": "Male",
@@ -509,7 +509,7 @@
         "investigations": "Amino Acid Plasma - Qualitative Screen Test, Methionine Quantitative Plasma Test, Metanephrine Free Plasma Test, Liquid Biopsy Test For 56 Theranostic Genes"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "gender": "Male",
@@ -518,7 +518,7 @@
         "investigations": "Adenomatous Polyposis Coli (APC) Gene Analysis Test, Bilirubin (Total, Direct & Indirect) Test, ULTRASOUND OF UPPER LIMB, Microphthalmia & Anophthalmia Gene Panel"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "gender": "Male",
@@ -527,7 +527,7 @@
         "investigations": "Sesame (Til) Allergy Test By ImmunoCAP, Oak Allergy Test By ImmunoCAP, Antimony Blood Test, CT FACIAL BONE WITH 3D RECON"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "gender": "Male",
@@ -536,7 +536,7 @@
         "investigations": "Cashew (Kaju) Allergy Test By ImmunoCAP, USG B SCAN LEFT EYE, X-Ray Barium Mel Oesoph Stomach Duodenum, Blood Urea Nitrogen (BUN) Test, Blood Culture & Sensitivity, Bactec Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0130",
         "patientName": "Demo Patient 119",
         "gender": "Male",
@@ -545,7 +545,7 @@
         "investigations": "Onion (Pyaaz) Allergy Test By ImmunoCAP, Honey Bee Venom Allergy Test By ImmunoCAP, Allergy: Aspergillus Fumigatus Specific IgG Test By EIA, Bone-Marrow Failure Syndrome Gene Panel"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "gender": "Male",
@@ -554,7 +554,7 @@
         "investigations": "Honey Bee Venom Allergy Test By ImmunoCAP, Chilli Pepper Allergy Test By ImmunoCAP, Antimony Blood Test, CT FACIAL BONE WITH 3D RECON, Sesame (Til) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "gender": "Male",
@@ -563,7 +563,7 @@
         "investigations": "Antimony Blood Test, Oak Allergy Test By ImmunoCAP, Onion (Pyaaz) Allergy Test By ImmunoCAP, MONOCYTES, MEAN PLATELET VOLUME(MPV)"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "gender": "Male",
@@ -572,7 +572,7 @@
         "investigations": "Oak Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "gender": "Male",
@@ -581,7 +581,7 @@
         "investigations": "Antimony Blood Test, Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "gender": "Male",
@@ -590,7 +590,7 @@
         "investigations": "Oak Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0156",
         "patientName": "Demo Patient 145",
         "gender": "Male",
@@ -599,7 +599,7 @@
         "investigations": "Blood Culture & Sensitivity, Bactec Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0158",
         "patientName": "Demo Patient 147",
         "gender": "Male",
@@ -608,7 +608,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0158",
         "patientName": "Demo Patient 147",
         "gender": "Male",
@@ -617,7 +617,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0158",
         "patientName": "Demo Patient 147",
         "gender": "Male",
@@ -626,7 +626,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "gender": "Male",
@@ -635,7 +635,7 @@
         "investigations": "Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0162",
         "patientName": "Demo Patient 151",
         "gender": "Female",
@@ -644,7 +644,7 @@
         "investigations": "Blood Culture & Sensitivity, Bactec Test, Blood Urea Nitrogen (BUN) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -653,7 +653,7 @@
         "investigations": "Complete Blood Count (CBC), Malaria Rapid Diagnostic Test, Dengue NS1 Antigen"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "gender": "Male",
@@ -662,7 +662,7 @@
         "investigations": "Sesame (Til) Allergy Test By ImmunoCAP, CT FACIAL BONE WITH 3D RECON"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0165",
         "patientName": "Demo Patient 154",
         "gender": "Male",
@@ -671,7 +671,7 @@
         "investigations": "Throat examination, Ear X-ray, Complete Blood Count (CBC), C-Reactive Protein (CRP)"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "gender": "Male",
@@ -680,7 +680,7 @@
         "investigations": "Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "gender": "Male",
@@ -689,7 +689,7 @@
         "investigations": "Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0171",
         "patientName": "Demo Patient 160",
         "gender": "Female",
@@ -698,7 +698,7 @@
         "investigations": "Ammonia blood test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0170",
         "patientName": "Demo Patient 159",
         "gender": "Female",
@@ -707,7 +707,7 @@
         "investigations": "Ammonia blood test, Bladder biopsy, Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0169",
         "patientName": "Demo Patient 158",
         "gender": "Male",
@@ -716,7 +716,7 @@
         "investigations": "Ammonia blood test, Bladder biopsy"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0177",
         "patientName": "Demo Patient 166",
         "gender": "Female",
@@ -725,7 +725,7 @@
         "investigations": "Liver Kidney Function Profile, Liver Function Test (LFT), Thyroid Profile Free Test, Total T3 (Triiodothyronine) Test, Total T4 (Thyroxine) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0176",
         "patientName": "Demo Patient 165",
         "gender": "Female",
@@ -734,7 +734,7 @@
         "investigations": "Ultrasound Kidney Ureter Bladder, Liver Kidney Function Profile, 14q32.3 Gene Rearrangement (ALL, NHL) Test By FISH, Thyroid Profile Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "gender": "Male",
@@ -743,7 +743,7 @@
         "investigations": "Oak Allergy Test By ImmunoCAP, Chilli Pepper Allergy Test By ImmunoCAP, Complete Blood Count (CBC) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "gender": "Male",
@@ -752,7 +752,7 @@
         "investigations": "Antimony Blood Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0071",
         "patientName": "Demo Patient 66",
         "gender": "Male",
@@ -761,7 +761,7 @@
         "investigations": "Antimony Blood Test, Onion (Pyaaz) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0071",
         "patientName": "Demo Patient 66",
         "gender": "Male",
@@ -770,7 +770,7 @@
         "investigations": "Antimony Blood Test, Onion (Pyaaz) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -779,7 +779,7 @@
         "investigations": "Antimony Blood Test, CT FACIAL BONE WITH 3D RECON"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0213",
         "patientName": "Demo Patient 202",
         "gender": "Male",
@@ -788,7 +788,7 @@
         "investigations": "Blood Urea Nitrogen (BUN) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0212",
         "patientName": "Demo Patient 201",
         "gender": "Female",
@@ -797,7 +797,7 @@
         "investigations": "Sesame (Til) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0211",
         "patientName": "Demo Patient 200",
         "gender": "Male",
@@ -806,7 +806,7 @@
         "investigations": "Onion (Pyaaz) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -815,7 +815,7 @@
         "investigations": "Blood Culture & Sensitivity; Bactec Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0214",
         "patientName": "Demo Patient 203",
         "gender": "Female",
@@ -824,7 +824,7 @@
         "investigations": "Blood Urea Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -833,7 +833,7 @@
         "investigations": "Honey Bee Venom Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -842,7 +842,7 @@
         "investigations": "Oak Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -851,7 +851,7 @@
         "investigations": "X-Ray Chest AP View"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -860,7 +860,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -869,7 +869,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0232",
         "patientName": "Demo Patient 219",
         "gender": "Male",
@@ -878,7 +878,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -887,7 +887,7 @@
         "investigations": "Pea Allergy Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -896,7 +896,7 @@
         "investigations": "USG HAND LEFT"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -905,7 +905,7 @@
         "investigations": "MONOCYTES"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -914,7 +914,7 @@
         "investigations": "MONOCYTES"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -923,7 +923,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -932,7 +932,7 @@
         "investigations": "Cysticercus IgG Antibodies Serum Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -941,7 +941,7 @@
         "investigations": "Cysticercus IgG Antibodies Serum Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -950,16 +950,7 @@
         "investigations": "Cysticercus IgG Antibodies Serum Test"
       },
       {
-        "date": {},
-        "patientUHID": "DEMO-0042",
-        "patientName": "Demo Patient 39",
-        "gender": "Male",
-        "age": 4,
-        "mobile": "98XXXXXX21",
-        "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
-      },
-      {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -968,7 +959,16 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
+        "patientUHID": "DEMO-0042",
+        "patientName": "Demo Patient 39",
+        "gender": "Male",
+        "age": 4,
+        "mobile": "98XXXXXX21",
+        "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
+      },
+      {
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -977,7 +977,7 @@
         "investigations": "Cysticercus IgG Antibodies Serum Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0237",
         "patientName": "Demo Patient 223",
         "gender": "Male",
@@ -986,7 +986,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -995,7 +995,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -1004,7 +1004,7 @@
         "investigations": "COLOR DOPPLER BOTH UPPER LIMB ART & VENOUS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1013,7 +1013,7 @@
         "investigations": "Fungal Culture Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "gender": "Male",
@@ -1022,7 +1022,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1031,7 +1031,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1040,7 +1040,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1049,7 +1049,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC Arthritis Alpha Feto Protein Doctor Heading, Procedures, Male Tumor Panel - PAS A, PSA, Free PSA, Carcino Embryonic Antigen)CEA),, Female Tumor Panel - CA 19.9, Carcino Embryonic Antigen (CEA), CA 15.3, CA-125,"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1058,7 +1058,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1067,7 +1067,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1076,7 +1076,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -1085,7 +1085,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -1094,7 +1094,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1103,7 +1103,7 @@
         "investigations": "cholecystography, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1112,7 +1112,7 @@
         "investigations": "magnetoencephalography, mammography, angiocardiography, echocardiography, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0242",
         "patientName": "Demo Patient 228",
         "gender": "Female",
@@ -1121,7 +1121,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0025",
         "patientName": "Demo Patient 24",
         "gender": "Male",
@@ -1130,7 +1130,7 @@
         "investigations": "brain scanning"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0025",
         "patientName": "Demo Patient 24",
         "gender": "Male",
@@ -1139,7 +1139,7 @@
         "investigations": "cholecystography, mammography, pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "gender": "Female",
@@ -1148,7 +1148,7 @@
         "investigations": "cholecystography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1157,7 +1157,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1166,7 +1166,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1175,7 +1175,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1184,7 +1184,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1193,7 +1193,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1202,7 +1202,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1211,7 +1211,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -1220,7 +1220,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1229,7 +1229,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0242",
         "patientName": "Demo Patient 228",
         "gender": "Female",
@@ -1238,7 +1238,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -1247,7 +1247,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1256,7 +1256,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "gender": "Female",
@@ -1265,7 +1265,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1274,7 +1274,7 @@
         "investigations": "pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0249",
         "patientName": "Demo Patient 235",
         "gender": "Female",
@@ -1283,7 +1283,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0245",
         "patientName": "Demo Patient 231",
         "gender": "Male",
@@ -1292,7 +1292,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1301,7 +1301,7 @@
         "investigations": "CBC Blood katalon"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0247",
         "patientName": "Demo Patient 233",
         "gender": "Female",
@@ -1310,7 +1310,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0254",
         "patientName": "Demo Patient 240",
         "gender": "Female",
@@ -1319,7 +1319,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0254",
         "patientName": "Demo Patient 240",
         "gender": "Female",
@@ -1328,7 +1328,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0254",
         "patientName": "Demo Patient 240",
         "gender": "Female",
@@ -1337,7 +1337,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0253",
         "patientName": "Demo Patient 239",
         "gender": "Female",
@@ -1346,7 +1346,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0252",
         "patientName": "Demo Patient 238",
         "gender": "Male",
@@ -1355,7 +1355,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0250",
         "patientName": "Demo Patient 236",
         "gender": "Female",
@@ -1364,7 +1364,7 @@
         "investigations": "Factor V Functional/Activity Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -1373,7 +1373,7 @@
         "investigations": "cholecystography, angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1382,7 +1382,7 @@
         "investigations": "cholecystography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1391,7 +1391,7 @@
         "investigations": "Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -1400,7 +1400,7 @@
         "investigations": "magnetoencephalography, cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -1409,7 +1409,7 @@
         "investigations": "Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1418,7 +1418,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -1427,7 +1427,7 @@
         "investigations": "Blood - Urea & Urine,cerebral angiography,brain scanning,echoencephalography,cholecystography,echocardiography,CBC,Arthritis,Alpha Feto ProteinDoctor Heading,ProceduresMale Tumor Panel - PAS A,PSA,Free PSA,Carcino Embryonic Antigen)CEA),Female Tumor Panel - CA 19.9,Carcino Embryonic Antigen (CEA),CA 15.3,CA-125"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "gender": "Male",
@@ -1436,7 +1436,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "gender": "Male",
@@ -1445,7 +1445,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1454,7 +1454,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0255",
         "patientName": "Demo Patient 241",
         "gender": "Female",
@@ -1463,7 +1463,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1472,7 +1472,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1481,7 +1481,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0262",
         "patientName": "Demo Patient 248",
         "gender": "Female",
@@ -1490,7 +1490,7 @@
         "investigations": "angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1499,7 +1499,7 @@
         "investigations": "Blood - Urea & Urine,cerebral angiography,brain scanning,echoencephalography,cholecystography,echocardiography,CBC,Arthritis,Alpha Feto ProteinDoctor Heading,ProceduresMale Tumor Panel - PAS A,PSA,Free PSA,Carcino Embryonic Antigen)CEA),Female Tumor Panel - CA 19.9,Carcino Embryonic Antigen (CEA),CA 15.3,CA-125"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0259",
         "patientName": "Demo Patient 245",
         "gender": "Female",
@@ -1508,7 +1508,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0257",
         "patientName": "Demo Patient 243",
         "gender": "Female",
@@ -1517,7 +1517,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0258",
         "patientName": "Demo Patient 244",
         "gender": "Male",
@@ -1526,7 +1526,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1535,7 +1535,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1544,7 +1544,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0249",
         "patientName": "Demo Patient 235",
         "gender": "Female",
@@ -1553,7 +1553,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -1562,7 +1562,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0266",
         "patientName": "Demo Patient 251",
         "gender": "Female",
@@ -1571,7 +1571,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0064",
         "patientName": "Demo Patient 59",
         "gender": "Male",
@@ -1580,7 +1580,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0064",
         "patientName": "Demo Patient 59",
         "gender": "Male",
@@ -1589,7 +1589,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1598,7 +1598,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0106",
         "patientName": "Demo Patient 96",
         "gender": "Male",
@@ -1607,7 +1607,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0106",
         "patientName": "Demo Patient 96",
         "gender": "Male",
@@ -1616,7 +1616,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0265",
         "patientName": "Demo Patient 243",
         "gender": "Female",
@@ -1625,7 +1625,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0263",
         "patientName": "Demo Patient 249",
         "gender": "Male",
@@ -1634,7 +1634,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0289",
         "patientName": "Demo Patient 237",
         "gender": "Female",
@@ -1643,7 +1643,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0291",
         "patientName": "Demo Patient 275",
         "gender": "Female",
@@ -1652,7 +1652,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0287",
         "patientName": "Demo Patient 272",
         "gender": "Female",
@@ -1661,7 +1661,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0282",
         "patientName": "Demo Patient 267",
         "gender": "Male",
@@ -1670,7 +1670,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0284",
         "patientName": "Demo Patient 269",
         "gender": "Male",
@@ -1679,7 +1679,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0285",
         "patientName": "Demo Patient 270",
         "gender": "Female",
@@ -1688,7 +1688,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0280",
         "patientName": "Demo Patient 265",
         "gender": "Female",
@@ -1697,7 +1697,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0277",
         "patientName": "Demo Patient 262",
         "gender": "Male",
@@ -1706,7 +1706,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0279",
         "patientName": "Demo Patient 264",
         "gender": "Male",
@@ -1715,7 +1715,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0275",
         "patientName": "Demo Patient 260",
         "gender": "Male",
@@ -1724,7 +1724,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0271",
         "patientName": "Demo Patient 256",
         "gender": "Male",
@@ -1733,7 +1733,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0273",
         "patientName": "Demo Patient 258",
         "gender": "Male",
@@ -1742,7 +1742,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0265",
         "patientName": "Demo Patient 243",
         "gender": "Female",
@@ -1751,7 +1751,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0269",
         "patientName": "Demo Patient 254",
         "gender": "Male",
@@ -1760,7 +1760,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0267",
         "patientName": "Demo Patient 252",
         "gender": "Male",
@@ -1769,7 +1769,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0312",
         "patientName": "Demo Patient 296",
         "gender": "Male",
@@ -1778,7 +1778,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0310",
         "patientName": "Demo Patient 294",
         "gender": "Male",
@@ -1787,7 +1787,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0308",
         "patientName": "Demo Patient 292",
         "gender": "Female",
@@ -1796,7 +1796,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0317",
         "patientName": "Demo Patient 301",
         "gender": "Male",
@@ -1805,7 +1805,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0315",
         "patientName": "Demo Patient 299",
         "gender": "Female",
@@ -1814,7 +1814,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0314",
         "patientName": "Demo Patient 298",
         "gender": "Female",
@@ -1823,7 +1823,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0319",
         "patientName": "Demo Patient 303",
         "gender": "Female",
@@ -1832,7 +1832,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0318",
         "patientName": "Demo Patient 302",
         "gender": "Male",
@@ -1841,7 +1841,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0323",
         "patientName": "Demo Patient 307",
         "gender": "Male",
@@ -1850,7 +1850,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0321",
         "patientName": "Demo Patient 305",
         "gender": "Male",
@@ -1859,7 +1859,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0304",
         "patientName": "Demo Patient 288",
         "gender": "Male",
@@ -1868,7 +1868,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0301",
         "patientName": "Demo Patient 285",
         "gender": "Male",
@@ -1877,7 +1877,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0299",
         "patientName": "Demo Patient 283",
         "gender": "Female",
@@ -1886,7 +1886,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0306",
         "patientName": "Demo Patient 290",
         "gender": "Male",
@@ -1895,7 +1895,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0304",
         "patientName": "Demo Patient 288",
         "gender": "Male",
@@ -1904,7 +1904,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0294",
         "patientName": "Demo Patient 278",
         "gender": "Male",
@@ -1913,7 +1913,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0252",
         "patientName": "Demo Patient 238",
         "gender": "Male",
@@ -1922,7 +1922,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0297",
         "patientName": "Demo Patient 281",
         "gender": "Male",
@@ -1931,7 +1931,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0112",
         "patientName": "Demo Patient 101",
         "gender": "Female",
@@ -1940,7 +1940,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -1949,7 +1949,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1958,7 +1958,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1967,7 +1967,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1976,7 +1976,7 @@
         "investigations": "Fungal Culture Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1985,7 +1985,7 @@
         "investigations": "MONOCYTES"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -1994,7 +1994,7 @@
         "investigations": "mammography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2003,7 +2003,7 @@
         "investigations": "Fungal Culture Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2012,7 +2012,7 @@
         "investigations": "magnetoencephalography, cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0123",
         "patientName": "Demo Patient 112",
         "gender": "Male",
@@ -2021,7 +2021,7 @@
         "investigations": "USG ABDOMEN AND KUB"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0233",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2030,7 +2030,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0233",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2039,7 +2039,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0233",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2048,7 +2048,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2057,7 +2057,7 @@
         "investigations": "Urin report, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0327",
         "patientName": "Demo Patient 310",
         "gender": "Male",
@@ -2066,7 +2066,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "gender": "Female",
@@ -2075,7 +2075,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0233",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2084,7 +2084,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0233",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -2093,7 +2093,7 @@
         "investigations": "Allergy: Vanilla"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "gender": "Female",
@@ -2102,7 +2102,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "gender": "Female",
@@ -2111,7 +2111,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "gender": "Female",
@@ -2120,7 +2120,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "gender": "Female",
@@ -2129,7 +2129,7 @@
         "investigations": "ROMA (Ovarian Malignancy Risk Algorithm) Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0325",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -2138,7 +2138,7 @@
         "investigations": "USG ABDOMEN AND KUB"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0325",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -2147,7 +2147,7 @@
         "investigations": "Pineapple (Ananas) Allergy Test By ImmunoCAP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0325",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -2156,7 +2156,7 @@
         "investigations": "magnetoencephalography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2165,7 +2165,7 @@
         "investigations": "angiocardiography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0330",
         "patientName": "Demo Patient 313",
         "gender": "Female",
@@ -2174,7 +2174,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0330",
         "patientName": "Demo Patient 313",
         "gender": "Female",
@@ -2183,7 +2183,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0330",
         "patientName": "Demo Patient 313",
         "gender": "Female",
@@ -2192,7 +2192,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0330",
         "patientName": "Demo Patient 313",
         "gender": "Female",
@@ -2201,7 +2201,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2210,7 +2210,7 @@
         "investigations": "Dengue, Phenumonia, COVID-19, Joint Pain"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -2219,7 +2219,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "gender": "Female",
@@ -2228,7 +2228,7 @@
         "investigations": "pneumoencephalography, angiography, angiocardiography, Urin report, magnetoencephalography, cholecystography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "gender": "Female",
@@ -2237,7 +2237,7 @@
         "investigations": "pneumoencephalography, angiography, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "gender": "Female",
@@ -2246,7 +2246,7 @@
         "investigations": "pneumoencephalography, angiography, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "gender": "Female",
@@ -2255,7 +2255,7 @@
         "investigations": "Complete Hemogram"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2264,7 +2264,7 @@
         "investigations": "CBC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0264",
         "patientName": "Demo Patient 250",
         "gender": "Male",
@@ -2273,7 +2273,7 @@
         "investigations": "Renal Rubella ? IgM RED CELL DISTRIBUTION WIDTH (RDW-CV) Random Blood Sugar"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -2282,7 +2282,7 @@
         "investigations": "echocardiography, angiography, echocardiography, mn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "gender": "Female",
@@ -2291,7 +2291,7 @@
         "investigations": "need to take care., testing new line"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0335",
         "patientName": "Demo Patient 317",
         "gender": "Male",
@@ -2300,7 +2300,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -2309,7 +2309,7 @@
         "investigations": "magnetoencephalography, Blood report, space Electrolytes"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2318,7 +2318,7 @@
         "investigations": "magnetoencephalography, cholecystography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2327,7 +2327,7 @@
         "investigations": "angiocardiography, brain scanning, pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2336,7 +2336,7 @@
         "investigations": "magnetoencephalography, mammography, Blood report, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2345,7 +2345,7 @@
         "investigations": "magnetoencephalography, angiocardiography, pneumoencephalography, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2354,7 +2354,7 @@
         "investigations": "magnetoencephalography, brain scanning, pneumoencephalography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "gender": "Male",
@@ -2363,7 +2363,7 @@
         "investigations": "magnetoencephalography, cholecystography, pneumoencephalography, echocardiography, Urin report, angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "gender": "Male",
@@ -2372,7 +2372,7 @@
         "investigations": "Arthritis, CBA PA, dolo 36, testing 1234"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "gender": "Male",
@@ -2381,7 +2381,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "gender": "Male",
@@ -2390,7 +2390,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0107",
         "patientName": "Demo Patient 25",
         "gender": "Female",
@@ -2399,7 +2399,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -2408,7 +2408,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -2417,7 +2417,7 @@
         "investigations": "Iron Deficiency, Rubella ? IgG, EOSINOPHILS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -2426,7 +2426,7 @@
         "investigations": "cholecystography, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -2435,7 +2435,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0080",
         "patientName": "Demo Patient 73",
         "gender": "Male",
@@ -2444,7 +2444,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0080",
         "patientName": "Demo Patient 73",
         "gender": "Male",
@@ -2453,7 +2453,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0066",
         "patientName": "Demo Patient 61",
         "gender": "Male",
@@ -2462,7 +2462,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -2471,7 +2471,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "gender": "Male",
@@ -2480,7 +2480,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2489,7 +2489,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2498,7 +2498,7 @@
         "investigations": "CBC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2507,7 +2507,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0332",
         "patientName": "Demo Patient 315",
         "gender": "Female",
@@ -2516,7 +2516,7 @@
         "investigations": "Blood Sugar - Doctor Heading - Test - Doctor Heading - Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "gender": "Male",
@@ -2525,7 +2525,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0331",
         "patientName": "Demo Patient 314",
         "gender": "Male",
@@ -2534,7 +2534,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -2543,7 +2543,7 @@
         "investigations": "Liver"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "gender": "Female",
@@ -2552,7 +2552,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -2561,7 +2561,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -2570,7 +2570,7 @@
         "investigations": "magnetoencephalography, mammography, Blood report, Urin report, angiocardiography, brain scanning"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2579,7 +2579,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "gender": "Male",
@@ -2588,7 +2588,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2597,7 +2597,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2606,7 +2606,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2615,7 +2615,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2624,7 +2624,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2633,7 +2633,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2642,7 +2642,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2651,7 +2651,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2660,7 +2660,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2669,7 +2669,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2678,7 +2678,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2687,7 +2687,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2696,7 +2696,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2705,7 +2705,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2714,7 +2714,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2723,7 +2723,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2732,7 +2732,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2741,7 +2741,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2750,7 +2750,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2759,7 +2759,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0248",
         "patientName": "Demo Patient 234",
         "gender": "Female",
@@ -2768,7 +2768,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2777,7 +2777,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2786,7 +2786,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2795,7 +2795,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2804,7 +2804,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2813,7 +2813,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2822,7 +2822,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2831,7 +2831,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2840,7 +2840,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2849,7 +2849,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2858,7 +2858,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2867,7 +2867,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2876,7 +2876,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0450",
         "patientName": "Demo Patient 377",
         "gender": "Female",
@@ -2885,7 +2885,7 @@
         "investigations": "Caesium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2894,7 +2894,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -2903,7 +2903,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2912,7 +2912,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2921,7 +2921,7 @@
         "investigations": "Urine"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2930,7 +2930,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2939,7 +2939,7 @@
         "investigations": "Urine"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2948,7 +2948,7 @@
         "investigations": "CBC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "gender": "Male",
@@ -2957,7 +2957,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "gender": "Male",
@@ -2966,7 +2966,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "gender": "Male",
@@ -2975,7 +2975,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -2984,7 +2984,7 @@
         "investigations": "Blood report, brain scanning"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0100",
         "patientName": "Demo Patient 92",
         "gender": "Male",
@@ -2993,7 +2993,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "gender": "Female",
@@ -3002,7 +3002,7 @@
         "investigations": "magnetoencephalography, Blood report, Calculations or equations"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3011,7 +3011,7 @@
         "investigations": "magnetoencephalography, angiocardiography, pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3020,7 +3020,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3029,7 +3029,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "gender": "Male",
@@ -3038,7 +3038,7 @@
         "investigations": "Calculations or equations"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3047,7 +3047,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -3056,7 +3056,7 @@
         "investigations": "Allergy: Honey Bee Venom"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3065,7 +3065,7 @@
         "investigations": "Blood Sugar - Doctor Heading - Test - Doctor Heading - Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0264",
         "patientName": "Demo Patient 250",
         "gender": "Male",
@@ -3074,7 +3074,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0264",
         "patientName": "Demo Patient 250",
         "gender": "Male",
@@ -3083,7 +3083,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0264",
         "patientName": "Demo Patient 250",
         "gender": "Male",
@@ -3092,7 +3092,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3101,7 +3101,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3110,7 +3110,7 @@
         "investigations": "angiocardiography, Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -3119,7 +3119,7 @@
         "investigations": "HbA1c, CALCIUM"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3128,7 +3128,7 @@
         "investigations": "cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3137,7 +3137,7 @@
         "investigations": "cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3146,7 +3146,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3155,7 +3155,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3164,7 +3164,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "gender": "Male",
@@ -3173,7 +3173,7 @@
         "investigations": "Calcium"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -3182,7 +3182,7 @@
         "investigations": "HbA1c, CALCIUM, Fasting Blood Sugar"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -3191,7 +3191,7 @@
         "investigations": "HbA1c"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -3200,7 +3200,7 @@
         "investigations": "Calcium, HbA1c, Fasting Blood Sugar"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "gender": "Male",
@@ -3209,7 +3209,7 @@
         "investigations": "CALCIUM, HbA1c, Fasting Blood Sugar"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0339",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3218,7 +3218,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0373",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3227,7 +3227,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0373",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3236,7 +3236,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "gender": "Male",
@@ -3245,7 +3245,7 @@
         "investigations": "magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0111",
         "patientName": "Demo Patient 100",
         "gender": "Male",
@@ -3254,7 +3254,7 @@
         "investigations": "magnetoencephalography, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0340",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3263,7 +3263,7 @@
         "investigations": "Blood Sugar - Doctor Heading - Test - Doctor Heading - Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0339",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3272,7 +3272,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -3281,7 +3281,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0078",
         "patientName": "Demo Patient 71",
         "gender": "Male",
@@ -3290,7 +3290,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -3299,7 +3299,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -3308,7 +3308,7 @@
         "investigations": "Blood Sugar - Doctor Heading - Test - Doctor Heading - Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -3317,7 +3317,7 @@
         "investigations": "Blood - Urea & Urine,cerebral angiography,brain scanning,echoencephalography,cholecystography,echocardiography,CBC,Arthritis,Alpha Feto ProteinDoctor Heading,ProceduresMale Tumor Panel - PAS A,PSA,Free PSA,Carcino Embryonic Antigen)CEA),Female Tumor Panel - CA 19.9,Carcino Embryonic Antigen (CEA),CA 15.3,CA-125,Blood - Urea & Urine,cerebral angiography,brain scanning,echoencephalography,cholecystography,echocardiography,CBC,Arthritis,Alpha Feto ProteinDoctor Heading,ProceduresMale Tumor Panel - PAS A,PSA,Free PSA,Carcino Embryonic Antigen)CEA),Female Tumor Panel - CA 19.9,Carcino Embryonic Antigen (CEA),CA 15.3,CA-125"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0341",
         "patientName": "Demo Patient 320",
         "gender": "Male",
@@ -3326,7 +3326,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures, Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0341",
         "patientName": "Demo Patient 320",
         "gender": "Male",
@@ -3335,7 +3335,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0341",
         "patientName": "Demo Patient 320",
         "gender": "Male",
@@ -3344,7 +3344,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC, Arthritis, Alpha Feto ProteinDoctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0108",
         "patientName": "Demo Patient 97",
         "gender": "Male",
@@ -3353,7 +3353,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC Arthritis Alpha Feto Protein Doctor Heading, Procedures"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0078",
         "patientName": "Demo Patient 71",
         "gender": "Male",
@@ -3362,7 +3362,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBCArthritisAlpha Feto Protein"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0344",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3371,7 +3371,7 @@
         "investigations": "Blood - Urea &amp; Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, CBC Arthritis Alpha Feto Protein"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0344",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3380,7 +3380,7 @@
         "investigations": "Blood - Urea & Urine, cerebral angiography, brain scanning, echoencephalography, cholecystography, echocardiography, cbc"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0345",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -3389,7 +3389,7 @@
         "investigations": "ur"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0066",
         "patientName": "Demo Patient 61",
         "gender": "Male",
@@ -3398,7 +3398,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0066",
         "patientName": "Demo Patient 61",
         "gender": "Male",
@@ -3407,7 +3407,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0345",
         "patientName": "Demo Patient 102",
         "gender": "Male",
@@ -3416,7 +3416,7 @@
         "investigations": "Urin report, magnetoencephalography, pneumoencephalography, angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0347",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -3425,7 +3425,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3434,7 +3434,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3443,7 +3443,7 @@
         "investigations": "Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3452,7 +3452,7 @@
         "investigations": "Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3461,7 +3461,7 @@
         "investigations": "Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -3470,7 +3470,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0350",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3479,7 +3479,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0350",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3488,7 +3488,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -3497,7 +3497,7 @@
         "investigations": "Blood report, magnetoencephalography, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "gender": "Male",
@@ -3506,7 +3506,7 @@
         "investigations": "Blood report, magnetoencephalography, pneumoencephalography, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3515,7 +3515,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0353",
         "patientName": "Demo Patient 326",
         "gender": "Female",
@@ -3524,7 +3524,7 @@
         "investigations": "knvkjenvkjenvkev Test AB - Test AB - 02, ewcwvc"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "gender": "Female",
@@ -3533,7 +3533,7 @@
         "investigations": "knvkjenvkjenvkev Test AB - Test AB - 02, ewcwvc"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -3542,7 +3542,7 @@
         "investigations": "knvkjenvkjenvkev Test AB - Test AB - 02, ewcwvc"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3551,7 +3551,7 @@
         "investigations": "Test hub"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3560,7 +3560,7 @@
         "investigations": "Testing"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3569,7 +3569,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "gender": "Female",
@@ -3578,7 +3578,7 @@
         "investigations": "test investigation lets test, Blood Sugar -, Blood Sugar -, Doctor Heading -, Test -, Doctor Heading - Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "gender": "Male",
@@ -3587,7 +3587,7 @@
         "investigations": "knvkjenvkjenvkev Test AB - Test AB - 02, ewcwvc"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -3596,7 +3596,7 @@
         "investigations": "echoencephalography, lung ventilation/perfusion scan"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0087",
         "patientName": "Demo Patient 80",
         "gender": "Male",
@@ -3605,7 +3605,7 @@
         "investigations": "echoencephalography, lung ventilation/perfusion scan"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -3614,7 +3614,7 @@
         "investigations": "cholecystography, echocardiography, lung ventilation/perfusion scan, echoencephalography, cerebral angiography, angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0087",
         "patientName": "Demo Patient 80",
         "gender": "Male",
@@ -3623,7 +3623,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0348",
         "patientName": "Demo Patient 323",
         "gender": "Male",
@@ -3632,7 +3632,7 @@
         "investigations": "angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -3641,7 +3641,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -3650,7 +3650,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "gender": "Male",
@@ -3659,7 +3659,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0367",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3668,7 +3668,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -3677,7 +3677,7 @@
         "investigations": "cerebral angiography, cholecystography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3686,7 +3686,7 @@
         "investigations": "Blood report, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -3695,7 +3695,7 @@
         "investigations": "cerebral angiography, cholecystography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -3704,7 +3704,7 @@
         "investigations": "Blood Sugar Blood pressure"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3713,7 +3713,7 @@
         "investigations": "Blood report, Urin report, angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "gender": "Male",
@@ -3722,7 +3722,7 @@
         "investigations": "cerebral angiography, brain scanning"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0099",
         "patientName": "Demo Patient 91",
         "gender": "Female",
@@ -3731,7 +3731,7 @@
         "investigations": "Blood report, Urin report, angiocardiography, angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -3740,7 +3740,7 @@
         "investigations": "echoencephalography, lung ventilation/perfusion scan"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "gender": "Male",
@@ -3749,7 +3749,7 @@
         "investigations": "Blood report, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -3758,7 +3758,7 @@
         "investigations": "Blood report, Urin report, angiocardiography, angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3767,7 +3767,7 @@
         "investigations": "Blood report, Urin report, angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3776,7 +3776,7 @@
         "investigations": "Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3785,7 +3785,7 @@
         "investigations": "magnetoencephalography, pneumoencephalography, cerebral angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3794,7 +3794,7 @@
         "investigations": "Blood report, pneumoencephalography, cholecystography, echocardiography, lung ventilation/perfusion scan"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0370",
         "patientName": "Demo Patient 104",
         "gender": "Male",
@@ -3803,7 +3803,7 @@
         "investigations": "pneumoencephalography, echocardiography, lung ventilation/perfusion scan, echoencephalography, mammography, cholecystography, magnetoencephalography, Doctor Heading 1 - Doctor sub heading 1, Blood Sugar - Low"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0370",
         "patientName": "Demo Patient 104",
         "gender": "Male",
@@ -3812,7 +3812,7 @@
         "investigations": "angiocardiography, pneumoencephalography, cholecystography, echocardiography, lung ventilation/perfusion scan, echoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0351",
         "patientName": "Demo Patient 324",
         "gender": "Female",
@@ -3821,7 +3821,7 @@
         "investigations": "Urin report, magnetoencephalography, pneumoencephalography, cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "gender": "Male",
@@ -3830,7 +3830,7 @@
         "investigations": "magnetoencephalography, pneumoencephalography, cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3839,7 +3839,7 @@
         "investigations": "Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -3848,7 +3848,7 @@
         "investigations": "echocardiography, cholecystography, echocardiography, lung ventilation/perfusion scan"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -3857,7 +3857,7 @@
         "investigations": "cholecystography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "gender": "Male",
@@ -3866,7 +3866,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3875,7 +3875,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3884,7 +3884,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3893,7 +3893,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3902,7 +3902,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0373",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3911,7 +3911,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3920,7 +3920,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3929,7 +3929,7 @@
         "investigations": "angiocardiography, cholecystography, pneumoencephalography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3938,7 +3938,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -3947,7 +3947,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "gender": "Female",
@@ -3956,7 +3956,7 @@
         "investigations": "brain scanning, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -3965,7 +3965,7 @@
         "investigations": "lung ventilation/perfusion scan, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -3974,7 +3974,7 @@
         "investigations": "pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3983,7 +3983,7 @@
         "investigations": "cerebral angiography, brain scanning, angiocardiography, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -3992,7 +3992,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Doctor Heading 1 - Dengue infections, IgM, NAAT, RNA, a sdf Strontium pneumoencephalography, angiography, Urin report, magnetoencephalography, echocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0381",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4001,7 +4001,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4010,7 +4010,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4019,7 +4019,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0380",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4028,7 +4028,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, FGn, Urin report, angiocardiography, pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4037,7 +4037,7 @@
         "investigations": "Blood report, magnetoencephalography, pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -4046,7 +4046,7 @@
         "investigations": "Blood report~angiography~brain scanning"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4055,7 +4055,7 @@
         "investigations": "Blood Sugar~Blood pressure"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4064,7 +4064,7 @@
         "investigations": "pneumoencephalography~angiocardiography~Blood report~magnetoencephalography~cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -4073,7 +4073,7 @@
         "investigations": "Blood report~Urin report~Blood report~Urin report~Blood report~Urin report~Blood report~Urin report~"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -4082,7 +4082,7 @@
         "investigations": "Urin report~magnetoencephalography~pneumoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -4091,7 +4091,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -4100,7 +4100,7 @@
         "investigations": "Blood report~magnetoencephalography~pneumoencephalography~angiocardiography~angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4109,7 +4109,7 @@
         "investigations": "Blood Sugar - Low~High~Blood Sugar - Low~Blood Sugar - Low~Blood Sugar - Low~Blood report~Urin report~angiocardiography~angiography~cerebral angiography~Testing - Testing Para 2~Blood Sugar - Low~Testing - Test"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -4118,7 +4118,7 @@
         "investigations": "Blood report~angiocardiography~magnetoencephalography~echoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -4127,7 +4127,7 @@
         "investigations": "Blood report~angiocardiography~magnetoencephalography~cerebral angiography~cholecysto"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "gender": "Male",
@@ -4136,7 +4136,7 @@
         "investigations": "Blood report~magnetoencephalography~angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -4145,7 +4145,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0082",
         "patientName": "Demo Patient 75",
         "gender": "Female",
@@ -4154,7 +4154,7 @@
         "investigations": "Blood report, magnetoencephalography, Blood Sugar - Low, High"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0387",
         "patientName": "Demo Patient 343",
         "gender": "Female",
@@ -4163,7 +4163,7 @@
         "investigations": "Blood report, Urin report, angiocardiography, angiography, cerebral angiography, Testing - Testing Para 2, Blood Sugar - Low"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -4172,7 +4172,7 @@
         "investigations": "Blood report, Blood report, Blood report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "gender": "Male",
@@ -4181,7 +4181,7 @@
         "investigations": "echoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4190,7 +4190,7 @@
         "investigations": "Infectious Diseases, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Infectious Diseases, Infectious Diseases, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0074",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4199,7 +4199,7 @@
         "investigations": "Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -4208,7 +4208,7 @@
         "investigations": "Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -4217,7 +4217,7 @@
         "investigations": "Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -4226,7 +4226,7 @@
         "investigations": "Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -4235,7 +4235,7 @@
         "investigations": "Blood Sugar - Low, High"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "gender": "Male",
@@ -4244,7 +4244,7 @@
         "investigations": "Infectious Diseases Infectious Diseases Infectious Diseases"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "gender": "Male",
@@ -4253,7 +4253,7 @@
         "investigations": "brain scanning, cerebral angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "gender": "Female",
@@ -4262,7 +4262,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "gender": "Male",
@@ -4271,7 +4271,7 @@
         "investigations": "Blood report, Urin report, angiocardiography, angiography, cerebral angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -4280,7 +4280,7 @@
         "investigations": "angiography, cholecystography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -4289,7 +4289,7 @@
         "investigations": "Blood report, Urin report, angiocardiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -4298,7 +4298,7 @@
         "investigations": "angiocardiography, cerebral angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "gender": "Male",
@@ -4307,7 +4307,7 @@
         "investigations": "angiography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -4316,7 +4316,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0397",
         "patientName": "Demo Patient 350",
         "gender": "Male",
@@ -4325,7 +4325,7 @@
         "investigations": "cholecystography, brain scanning, magnetoencephalography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -4334,7 +4334,7 @@
         "investigations": "Blood report, Urin report, angiocardiography, angiography, cerebral angiography, brain scanning, echoencephalography, lung ventilation/perfusion scan, echocardiography, cholecystography, pneumoencephalography, magnetoencephalography, mammography, mammography"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0402",
         "patientName": "Demo Patient 336",
         "gender": "Male",
@@ -4343,7 +4343,7 @@
         "investigations": "Urin report, Urin report, Urin report, Urin report, Urin report, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0404",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -4352,7 +4352,7 @@
         "investigations": "Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0404",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -4361,7 +4361,7 @@
         "investigations": "Blood report, Urin report, Blood report, Urin report, Blood report, Urin report, Blood report, Urin report"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "gender": "Male",
@@ -4370,7 +4370,7 @@
         "investigations": "Dengue - IgM, NAAT, Test AB, Testing, Beta HCG, TORCH"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0059",
         "patientName": "Demo Patient 54",
         "gender": "Female",
@@ -4379,7 +4379,7 @@
         "investigations": "Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "gender": "Male",
@@ -4388,7 +4388,7 @@
         "investigations": "Medical History, Medical History, Medical History, Medical History, Medical History"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "gender": "Male",
@@ -4397,7 +4397,7 @@
         "investigations": "Doctor Heading 1 - Doctor sub heading 1, Blood Sugar - Low, Doctor Heading 1 - Doctor sub heading 1, Blood Sugar - Low"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "gender": "Male",
@@ -4406,7 +4406,7 @@
         "investigations": "Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low, Blood Sugar - Low"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4415,7 +4415,7 @@
         "investigations": "Hemoglobin S Hemoglobin S Hemoglobin F"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0097",
         "patientName": "Demo Patient 77",
         "gender": "Male",
@@ -4424,7 +4424,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "gender": "Male",
@@ -4433,7 +4433,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "gender": "Male",
@@ -4442,7 +4442,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "gender": "Male",
@@ -4451,7 +4451,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -4460,7 +4460,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "gender": "Male",
@@ -4469,7 +4469,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -4478,7 +4478,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0083",
         "patientName": "Demo Patient 76",
         "gender": "Male",
@@ -4487,7 +4487,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0091",
         "patientName": "Demo Patient 84",
         "gender": "Male",
@@ -4496,7 +4496,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4505,7 +4505,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0429",
         "patientName": "Demo Patient 365",
         "gender": "Male",
@@ -4514,7 +4514,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0020",
         "patientName": "Demo Patient 19",
         "gender": "Male",
@@ -4523,7 +4523,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4532,7 +4532,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "gender": "Male",
@@ -4541,7 +4541,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -4550,7 +4550,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -4559,7 +4559,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4568,7 +4568,7 @@
         "investigations": "Doctor Heading 1 - Doctor sub heading 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -4577,7 +4577,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4586,7 +4586,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4595,7 +4595,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4604,7 +4604,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4613,7 +4613,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4622,7 +4622,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4631,7 +4631,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4640,7 +4640,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4649,7 +4649,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0017",
         "patientName": "Demo Patient 16",
         "gender": "Male",
@@ -4658,7 +4658,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -4667,7 +4667,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "gender": "Male",
@@ -4676,7 +4676,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, IgM, NAAT, RNA, IgM, NAAT, RNA, NAAT, RNA, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0449",
         "patientName": "Demo Patient 376",
         "gender": "Female",
@@ -4685,7 +4685,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0449",
         "patientName": "Demo Patient 376",
         "gender": "Female",
@@ -4694,7 +4694,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0449",
         "patientName": "Demo Patient 376",
         "gender": "Female",
@@ -4703,7 +4703,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -4712,7 +4712,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0016",
         "patientName": "Demo Patient 15",
         "gender": "Female",
@@ -4721,7 +4721,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0073",
         "patientName": "Demo Patient 68",
         "gender": "Male",
@@ -4730,7 +4730,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4739,7 +4739,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0020",
         "patientName": "Demo Patient 19",
         "gender": "Male",
@@ -4748,7 +4748,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4757,7 +4757,7 @@
         "investigations": "Blood Sugar Blood Blood Urea Nitrogen (BUN)"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4766,7 +4766,7 @@
         "investigations": "Blood Ketone (D3HB) Blood Blood Urea Nitrogen (BUN) Doctor Heading 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4775,7 +4775,7 @@
         "investigations": "Blood Sugar Blood Beta HCG"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4784,7 +4784,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "gender": "Female",
@@ -4793,7 +4793,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -4802,7 +4802,7 @@
         "investigations": "Doctor Heading 1 - Doctor sub heading 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0081",
         "patientName": "Demo Patient 74",
         "gender": "Male",
@@ -4811,7 +4811,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -4820,7 +4820,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4829,7 +4829,7 @@
         "investigations": "First complete course for duration mentioned above. Post that, start with medication at reduced dose for duration mentioned belowFirst complete course for duration mentioned above. Post that, start with medication at reduced dose for duration mentioned belowFirst complete course for duration mentioned above. Post that, start with medication at reduced dose for duration mentioned below"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4838,7 +4838,7 @@
         "investigations": "First complete course for duration mentioned above. Post that, start with medication at reduced dose for duration mentioned belowFirst complete course for duration mentioned above. Post that, start with medication at reduced dose for duration mentioned below"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0355",
         "patientName": "Demo Patient 4",
         "gender": "Male",
@@ -4847,7 +4847,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -4856,7 +4856,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -4865,7 +4865,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -4874,7 +4874,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4883,7 +4883,7 @@
         "investigations": "Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "gender": "Male",
@@ -4892,7 +4892,7 @@
         "investigations": "Doctor Heading 1 - Doctor sub heading 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "gender": "Male",
@@ -4901,7 +4901,7 @@
         "investigations": "Doctor Heading 1 - Doctor sub heading 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "gender": "Male",
@@ -4910,7 +4910,7 @@
         "investigations": ""
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "gender": "Male",
@@ -4919,7 +4919,7 @@
         "investigations": "Doctor Heading - Doctor Sub heading 1, Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4928,7 +4928,7 @@
         "investigations": "Test AB - Test AB - 03, Test AB - 02, Test AB - 01"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4937,7 +4937,7 @@
         "investigations": "Doctor Heading - Doctor Sub heading 1, Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0092",
         "patientName": "Demo Patient 85",
         "gender": "Male",
@@ -4946,7 +4946,7 @@
         "investigations": "Blood - Urea &amp; Urine"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -4955,7 +4955,7 @@
         "investigations": "Doctor Heading - Doctor Sub heading 1, Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "gender": "Male",
@@ -4964,7 +4964,7 @@
         "investigations": "Blood - Urea &amp; Urine, Test AB - Test AB - 03, Test AB - 02, Test AB - 01, Doctor Heading - Doctor Sub heading 1, Doctor Sub heading 1 - 1"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -4973,7 +4973,7 @@
         "investigations": "Testing para 3 Liver - Serum Globulin, Serum Alb/Globulin Ration Iron Deficiency - Ferritin, Iron, Total Iron Binding Capacity"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "gender": "Male",
@@ -4982,7 +4982,7 @@
         "investigations": "Blood - Urea & Urine"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "gender": "Female",
@@ -4991,7 +4991,7 @@
         "investigations": "when an unknown printer took a galley of type and scrambled it to make a type specimen book., Dengue - Dengue infections, IgM, NAAT, RNA, Dengue - Dengue infections, IgM, NAAT, RNA"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0443",
         "patientName": "Demo Patient 373",
         "gender": "Male",
@@ -5000,7 +5000,7 @@
         "investigations": "Urea & Urine"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "gender": "Male",
@@ -5009,7 +5009,7 @@
         "investigations": "Rheumatoid Factor, Anti CCP"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "gender": "Male",
@@ -5018,7 +5018,7 @@
         "investigations": "Testing Para 2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "gender": "Male",
@@ -5027,7 +5027,7 @@
         "investigations": "These issues not only made the samples similar, but also different in their composition. The researchers will conduct periodic studies to explore whether these value changes are permanent and continue into adulthood. We do not know what if any changes will take place in their values as they grow older, and we will continue to explore their values in our longitudinal studies of the impact of the 9/11 terrorist attacks."
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "gender": "Male",
@@ -5036,7 +5036,7 @@
         "investigations": "data that a summarisation of the investigation and the advisor the temple at wise"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0072",
         "patientName": "Demo Patient 67",
         "gender": "Male",

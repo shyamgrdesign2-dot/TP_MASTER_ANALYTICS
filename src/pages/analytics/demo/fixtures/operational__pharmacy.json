@@ -653,7 +653,7 @@
       {
         "medicine": "Vicks ",
         "batch": "43",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -1107,
         "units": 100,
         "value": 1000
@@ -661,7 +661,7 @@
       {
         "medicine": "Vicks ",
         "batch": "22",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -1107,
         "units": 144,
         "value": 1728
@@ -669,7 +669,7 @@
       {
         "medicine": "DOLO",
         "batch": "0008",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -1106,
         "units": 50,
         "value": 5000
@@ -677,7 +677,7 @@
       {
         "medicine": "Vicks ",
         "batch": "05-04-23",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -1097,
         "units": 64,
         "value": 6400
@@ -685,7 +685,7 @@
       {
         "medicine": "Vicks ",
         "batch": "05-04-23",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -1097,
         "units": 190,
         "value": 19000
@@ -693,7 +693,7 @@
       {
         "medicine": "Vicks ",
         "batch": "29-09-2023",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -924,
         "units": 200,
         "value": 20000
@@ -701,7 +701,7 @@
       {
         "medicine": "DOLLO",
         "batch": "22",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -917,
         "units": 45,
         "value": 900
@@ -709,7 +709,7 @@
       {
         "medicine": "DOLO",
         "batch": "1103",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -832,
         "units": 40,
         "value": 4000
@@ -717,7 +717,7 @@
       {
         "medicine": "Vicks ",
         "batch": "2022",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -801,
         "units": 492,
         "value": 49200
@@ -725,7 +725,7 @@
       {
         "medicine": "DOLO",
         "batch": "2022",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -801,
         "units": 1,
         "value": 100
@@ -733,7 +733,7 @@
       {
         "medicine": "DOLLO",
         "batch": "1103",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -467,
         "units": 350,
         "value": 3500
@@ -741,7 +741,7 @@
       {
         "medicine": "DOLO",
         "batch": "2022",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -314,
         "units": 1,
         "value": 100
@@ -749,7 +749,7 @@
       {
         "medicine": "DOLLO",
         "batch": "2052",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": -10,
         "units": 198,
         "value": 19800
@@ -757,7 +757,7 @@
       {
         "medicine": "COMBUFLAM",
         "batch": "COMBUFLAM",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": 624,
         "units": 149999930,
         "value": 4499997900
@@ -765,7 +765,7 @@
       {
         "medicine": "LTK-50",
         "batch": "unison",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": 628,
         "units": 149999938,
         "value": 8999996280
@@ -773,7 +773,7 @@
       {
         "medicine": "ecosprin",
         "batch": "ecosprin",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": 628,
         "units": 149999895,
         "value": 8249994225
@@ -781,7 +781,7 @@
       {
         "medicine": "abc",
         "batch": "DEMO",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": 628,
         "units": 200000,
         "value": 5000000
@@ -789,7 +789,7 @@
       {
         "medicine": "choco medicine",
         "batch": "545857",
-        "expiry": {},
+        "expiry": null,
         "daysLeft": 1306,
         "units": 450000,
         "value": 4500000

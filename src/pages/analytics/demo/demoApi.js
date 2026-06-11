@@ -42,6 +42,26 @@ const FIXTURES = {
   "ipd/clinical": require("./fixtures/ipd__clinical.json"),
 };
 
+// The capture step lost some date-like cell values: they were serialized as
+// empty objects ({}), which crash React when a table renders them ("Objects
+// are not valid as a React child"). Sanitize every block's rows on the way
+// out: any cell that is still an object/array becomes null, which the table
+// honestly renders as "—". Charts read named scalar keys, so a null is inert.
+function sanitizeCells(node) {
+  if (!node || typeof node !== "object") return node;
+  if (Array.isArray(node.rows) && Array.isArray(node.columns)) {
+    node.rows.forEach((row) => {
+      if (!row || typeof row !== "object") return;
+      Object.keys(row).forEach((k) => {
+        if (row[k] && typeof row[k] === "object") row[k] = null;
+      });
+    });
+    return node;
+  }
+  Object.values(node).forEach((v) => sanitizeCells(v));
+  return node;
+}
+
 /**
  * Resolve an analytics endpoint path (+ params) to its demo fixture.
  * careSetting variants resolve via "path?careSetting=x"; everything else by
@@ -57,7 +77,7 @@ export function getFixture(path, params = {}) {
   candidates.push(clean);
   candidates.push(`${clean}?careSetting=opd`);
   for (const key of candidates) {
-    if (FIXTURES[key]) return JSON.parse(JSON.stringify(FIXTURES[key]));
+    if (FIXTURES[key]) return sanitizeCells(JSON.parse(JSON.stringify(FIXTURES[key])));
   }
   throw new Error(`No demo fixture for "${clean}" — this endpoint isn't part of the demo dataset.`);
 }

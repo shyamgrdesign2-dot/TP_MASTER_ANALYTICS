@@ -84,6 +84,9 @@ const ApolloConsultations = React.lazy(() =>
 const AnalyticsWorkspace = React.lazy(() =>
   lazyRetry(() => import("./pages/analytics/AnalyticsWorkspace"))
 );
+const DemoLanding = React.lazy(() =>
+  lazyRetry(() => import("./pages/analytics/demo/DemoLanding"))
+);
 const GenRxPrescriptionPrintView = React.lazy(() =>
   lazyRetry(() => import("./pages/GenRxPrescriptionPrintView"))
 );
@@ -540,11 +543,9 @@ function App() {
 
   // Determine where to redirect on root path
   useEffect(() => {
-    // DEMO build: no login flow — the root path goes straight to analytics.
-    if (DEMO) {
-      if (isRootPath) navigate("/analytics", { replace: true });
-      return;
-    }
+    // DEMO build: no login flow — '/' renders the demo landing page (the
+    // OPD / IPD module picker); no auth-driven redirection applies.
+    if (DEMO) return;
     // Skip redirection for receptionist or non-relevant paths
     if (isReceptionist || (!isRootPath && !isLoginPage)) {
       return;
@@ -661,9 +662,15 @@ function App() {
 
         {/* Protected routes */}
         <Route element={<PrivateRoute />}>
-          {/* DEMO build: the analytics workspace IS the app — root redirects there. */}
-          {DEMO && <Route path="/" element={<Navigate to="/analytics" replace />} />}
-          <Route path="/*" element={<AppointmentList />} />
+          {/* DEMO build: '/' is the demo landing page (OPD / IPD picker) and
+              every unknown route falls back to it — the EMR home is not part
+              of the demo. Production keeps the appointment-list home. */}
+          {DEMO && <Route path="/" element={<DemoLanding />} />}
+          {DEMO ? (
+            <Route path="/*" element={<Navigate to="/" replace />} />
+          ) : (
+            <Route path="/*" element={<AppointmentList />} />
+          )}
           <Route
             path="create-campaign"
             element={<MessageCreateCampaign />}

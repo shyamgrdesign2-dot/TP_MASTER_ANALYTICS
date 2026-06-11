@@ -268,7 +268,7 @@
     ],
     "rows": [
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "age": 39,
@@ -279,7 +279,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "age": 14,
@@ -290,7 +290,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0245",
         "patientName": "Demo Patient 231",
         "age": 26,
@@ -301,7 +301,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0245",
         "patientName": "Demo Patient 231",
         "age": 26,
@@ -312,7 +312,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0245",
         "patientName": "Demo Patient 231",
         "age": 26,
@@ -323,7 +323,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0159",
         "patientName": "Demo Patient 148",
         "age": 35,
@@ -334,7 +334,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "age": 28,
@@ -345,7 +345,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "age": 32,
@@ -356,7 +356,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0334",
         "patientName": "Demo Patient 316",
         "age": 32,
@@ -367,7 +367,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0107",
         "patientName": "Demo Patient 25",
         "age": 26,
@@ -378,7 +378,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0107",
         "patientName": "Demo Patient 25",
         "age": 26,
@@ -389,7 +389,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "age": 42,
@@ -400,7 +400,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "age": 31,
@@ -411,7 +411,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "age": 42,
@@ -422,7 +422,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "age": 42,
@@ -433,7 +433,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "age": 31,
@@ -444,7 +444,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "age": 31,
@@ -455,7 +455,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "age": 31,
@@ -466,7 +466,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "age": 28,
@@ -477,7 +477,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "age": 28,
@@ -488,7 +488,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "age": 42,
@@ -499,7 +499,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "age": 42,
@@ -510,7 +510,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0340",
         "patientName": "Demo Patient 4",
         "age": 24,
@@ -521,7 +521,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0340",
         "patientName": "Demo Patient 4",
         "age": 24,
@@ -532,7 +532,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "age": 29,
@@ -543,7 +543,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "age": 29,
@@ -554,7 +554,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "age": 29,
@@ -565,7 +565,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "age": 3,
@@ -576,7 +576,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -587,7 +587,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -598,7 +598,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "age": 29,
@@ -609,7 +609,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "age": 29,
@@ -620,7 +620,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0060",
         "patientName": "Demo Patient 55",
         "age": 29,
@@ -631,7 +631,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "age": 28,
@@ -642,7 +642,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0372",
         "patientName": "Demo Patient 4",
         "age": 24,
@@ -653,7 +653,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0372",
         "patientName": "Demo Patient 4",
         "age": 24,
@@ -664,7 +664,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -675,7 +675,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -686,7 +686,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -697,7 +697,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -708,7 +708,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -719,7 +719,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "age": 3,
@@ -730,7 +730,7 @@
         "babyStatus": "Dead"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "age": 3,
@@ -741,7 +741,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "age": 3,
@@ -752,7 +752,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "age": 3,
@@ -763,7 +763,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -774,7 +774,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -785,7 +785,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "age": 56,
@@ -796,7 +796,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -807,7 +807,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -818,7 +818,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -829,7 +829,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0383",
         "patientName": "Demo Patient 77",
         "age": 23,
@@ -840,7 +840,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "age": 1,
@@ -851,7 +851,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "age": 1,
@@ -862,7 +862,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "age": 1,
@@ -873,7 +873,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "age": 26,
@@ -884,7 +884,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "age": 26,
@@ -895,7 +895,7 @@
         "babyStatus": "Live"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "age": 26,
@@ -906,7 +906,7 @@
         "babyStatus": null
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0441",
         "patientName": "Demo Patient 371",
         "age": 37,

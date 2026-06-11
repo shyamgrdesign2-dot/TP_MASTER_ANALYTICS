@@ -251,700 +251,700 @@
     ],
     "rows": [
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0069",
         "patientName": "Demo Patient 64",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0069",
         "patientName": "Demo Patient 64",
         "source": "Vitals",
         "recorded": "Temperature, RBS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0043",
         "patientName": "Demo Patient 40",
         "source": "Vitals",
         "recorded": "RBS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0043",
         "patientName": "Demo Patient 40",
         "source": "Vitals",
         "recorded": "Temperature, RBS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0043",
         "patientName": "Demo Patient 40",
         "source": "Vitals",
         "recorded": "RBS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0043",
         "patientName": "Demo Patient 40",
         "source": "Vitals",
         "recorded": "Temperature, RBS"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0070",
         "patientName": "Demo Patient 65",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0070",
         "patientName": "Demo Patient 65",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "source": "Body composition",
         "recorded": "Height"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0140",
         "patientName": "Demo Patient 129",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0138",
         "patientName": "Demo Patient 127",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0138",
         "patientName": "Demo Patient 127",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "source": "Body composition",
         "recorded": "Height"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0138",
         "patientName": "Demo Patient 127",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0134",
         "patientName": "Demo Patient 123",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0139",
         "patientName": "Demo Patient 128",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0140",
         "patientName": "Demo Patient 129",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0451",
         "patientName": "Demo Patient 378",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0134",
         "patientName": "Demo Patient 123",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "source": "Body composition",
         "recorded": "Height"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0139",
         "patientName": "Demo Patient 128",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0140",
         "patientName": "Demo Patient 129",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0142",
         "patientName": "Demo Patient 131",
         "source": "Vitals",
         "recorded": "Temperature, Pulse"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0141",
         "patientName": "Demo Patient 130",
         "source": "Vitals",
         "recorded": "Temperature, Pulse"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0141",
         "patientName": "Demo Patient 130",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Body composition",
         "recorded": "OFC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0145",
         "patientName": "Demo Patient 134",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0146",
         "patientName": "Demo Patient 135",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0145",
         "patientName": "Demo Patient 134",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0148",
         "patientName": "Demo Patient 137",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0151",
         "patientName": "Demo Patient 140",
         "source": "Vitals",
         "recorded": "Temperature, Pulse"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0153",
         "patientName": "Demo Patient 142",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0152",
         "patientName": "Demo Patient 141",
         "source": "Vitals",
         "recorded": "Temperature, Pulse"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0452",
         "patientName": "Demo Patient 379",
         "source": "Body composition",
         "recorded": "Weight"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "source": "Vitals",
         "recorded": "Temperature, Pulse"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0452",
         "patientName": "Demo Patient 379",
         "source": "Body composition",
         "recorded": "Weight"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0453",
         "patientName": "",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0162",
         "patientName": "Demo Patient 151",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0162",
         "patientName": "Demo Patient 151",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0454",
         "patientName": "Demo Patient 380",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0454",
         "patientName": "Demo Patient 380",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0168",
         "patientName": "Demo Patient 157",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0167",
         "patientName": "Demo Patient 156",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0172",
         "patientName": "Demo Patient 161",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0172",
         "patientName": "Demo Patient 161",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Body composition",
         "recorded": "Weight, OFC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Body composition",
         "recorded": "Weight, OFC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0185",
         "patientName": "Demo Patient 174",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0184",
         "patientName": "Demo Patient 173",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0189",
         "patientName": "Demo Patient 178",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0189",
         "patientName": "Demo Patient 178",
         "source": "Body composition",
         "recorded": "OFC"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0185",
         "patientName": "Demo Patient 174",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0185",
         "patientName": "Demo Patient 174",
         "source": "Body composition",
         "recorded": "Height, Weight, OFC, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "source": "Body composition",
         "recorded": "Height, Weight, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Resp. rate"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "source": "Vitals",
         "recorded": "Temperature"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "source": "Body composition",
         "recorded": "Height, Weight, BMI"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "source": "Vitals",
         "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
       },
       {
-        "date": {},
+        "date": null,
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "source": "Vitals",

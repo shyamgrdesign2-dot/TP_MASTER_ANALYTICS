@@ -271,4264 +271,4264 @@
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0103",
         "patientName": "Demo Patient 95",
         "mobile": "98XXXXXX55",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0141",
         "patientName": "Demo Patient 130",
         "mobile": "98XXXXXX97",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0142",
         "patientName": "Demo Patient 131",
         "mobile": "98XXXXXX98",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0145",
         "patientName": "Demo Patient 134",
         "mobile": "98XXXXXX06",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "mobile": "98XXXXXX38",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0123",
         "patientName": "Demo Patient 112",
         "mobile": "98XXXXXX83",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0124",
         "patientName": "Demo Patient 113",
         "mobile": "98XXXXXX84",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0132",
         "patientName": "Demo Patient 121",
         "mobile": "98XXXXXX67",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0056",
         "patientName": "Demo Patient 51",
         "mobile": "98XXXXXX26",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0134",
         "patientName": "Demo Patient 123",
         "mobile": "98XXXXXX91",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0139",
         "patientName": "Demo Patient 128",
         "mobile": "98XXXXXX95",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0141",
         "patientName": "Demo Patient 130",
         "mobile": "98XXXXXX97",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0152",
         "patientName": "Demo Patient 141",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0153",
         "patientName": "Demo Patient 142",
         "mobile": "98XXXXXX05",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "mobile": "98XXXXXX65",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "mobile": "98XXXXXX38",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0079",
         "patientName": "Demo Patient 72",
         "mobile": "98XXXXXX38",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0133",
         "patientName": "Demo Patient 122",
         "mobile": "98XXXXXX90",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0156",
         "patientName": "Demo Patient 145",
         "mobile": "98XXXXXX55",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0144",
         "patientName": "Demo Patient 133",
         "mobile": "98XXXXXX06",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "mobile": "98XXXXXX33",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0044",
         "patientName": "Demo Patient 41",
         "mobile": "98XXXXXX11",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "mobile": "98XXXXXX17",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0044",
         "patientName": "Demo Patient 41",
         "mobile": "98XXXXXX11",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "mobile": "98XXXXXX33",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "mobile": "98XXXXXX33",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0044",
         "patientName": "Demo Patient 41",
         "mobile": "98XXXXXX11",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0174",
         "patientName": "Demo Patient 163",
         "mobile": "98XXXXXX54",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0156",
         "patientName": "Demo Patient 145",
         "mobile": "98XXXXXX55",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0178",
         "patientName": "Demo Patient 167",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0085",
         "patientName": "Demo Patient 78",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0179",
         "patientName": "Demo Patient 168",
         "mobile": "98XXXXXX22",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0185",
         "patientName": "Demo Patient 174",
         "mobile": "98XXXXXX27",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0186",
         "patientName": "Demo Patient 175",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0193",
         "patientName": "Demo Patient 182",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0184",
         "patientName": "Demo Patient 173",
         "mobile": "98XXXXXX26",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0033",
         "patientName": "Demo Patient 31",
         "mobile": "98XXXXXX17",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0188",
         "patientName": "Demo Patient 177",
         "mobile": "98XXXXXX30",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0189",
         "patientName": "Demo Patient 178",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0198",
         "patientName": "Demo Patient 187",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0199",
         "patientName": "Demo Patient 188",
         "mobile": "98XXXXXX37",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0221",
         "patientName": "Demo Patient 208",
         "mobile": "98XXXXXX49",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0095",
         "patientName": "Demo Patient 88",
         "mobile": "98XXXXXX26",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0202",
         "patientName": "Demo Patient 191",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0202",
         "patientName": "Demo Patient 191",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "mobile": "98XXXXXX64",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "mobile": "98XXXXXX64",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0203",
         "patientName": "Demo Patient 192",
         "mobile": "98XXXXXX49",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0208",
         "patientName": "Demo Patient 197",
         "mobile": "98XXXXXX41",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0070",
         "patientName": "Demo Patient 65",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0203",
         "patientName": "Demo Patient 192",
         "mobile": "98XXXXXX49",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0121",
         "patientName": "Demo Patient 110",
         "mobile": "98XXXXXX38",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0208",
         "patientName": "Demo Patient 197",
         "mobile": "98XXXXXX41",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0210",
         "patientName": "Demo Patient 199",
         "mobile": "98XXXXXX79",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0070",
         "patientName": "Demo Patient 65",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0031",
         "patientName": "Demo Patient 29",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0049",
         "patientName": "Demo Patient 45",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0124",
         "patientName": "Demo Patient 113",
         "mobile": "98XXXXXX84",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0222",
         "patientName": "Demo Patient 209",
         "mobile": "98XXXXXX50",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0215",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0034",
         "patientName": "Demo Patient 32",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0215",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0226",
         "patientName": "Demo Patient 213",
         "mobile": "98XXXXXX52",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "mobile": "98XXXXXX06",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0083",
         "patientName": "Demo Patient 76",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0351",
         "patientName": "Demo Patient 324",
         "mobile": "98XXXXXX78",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0228",
         "patientName": "Demo Patient 215",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0231",
         "patientName": "Demo Patient 218",
         "mobile": "98XXXXXX55",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0068",
         "patientName": "Demo Patient 63",
         "mobile": "98XXXXXX33",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "mobile": "98XXXXXX08",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0237",
         "patientName": "Demo Patient 223",
         "mobile": "98XXXXXX58",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0156",
         "patientName": "Demo Patient 145",
         "mobile": "98XXXXXX55",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "mobile": "98XXXXXX08",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0036",
         "patientName": "Demo Patient 34",
         "mobile": "98XXXXXX19",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0019",
         "patientName": "Demo Patient 18",
         "mobile": "98XXXXXX13",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0027",
         "patientName": "Demo Patient 26",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0009",
         "patientName": "Demo Patient 8",
         "mobile": "98XXXXXX07",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0057",
         "patientName": "Demo Patient 52",
         "mobile": "98XXXXXX27",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0013",
         "patientName": "Demo Patient 12",
         "mobile": "98XXXXXX09",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0037",
         "patientName": "Demo Patient 35",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0240",
         "patientName": "Demo Patient 226",
         "mobile": "98XXXXXX77",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0002",
         "patientName": "Demo Patient 2",
         "mobile": "98XXXXXX02",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0050",
         "patientName": "Demo Patient 46",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0076",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX36",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0025",
         "patientName": "Demo Patient 24",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "mobile": "98XXXXXX62",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0244",
         "patientName": "Demo Patient 230",
         "mobile": "98XXXXXX62",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "mobile": "98XXXXXX08",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0250",
         "patientName": "Demo Patient 236",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0252",
         "patientName": "Demo Patient 238",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0253",
         "patientName": "Demo Patient 239",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0254",
         "patientName": "Demo Patient 240",
         "mobile": "98XXXXXX64",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "mobile": "98XXXXXX30",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0262",
         "patientName": "Demo Patient 248",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0297",
         "patientName": "Demo Patient 281",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "mobile": "98XXXXXX68",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "mobile": "98XXXXXX68",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "mobile": "98XXXXXX68",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "mobile": "98XXXXXX68",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0326",
         "patientName": "Demo Patient 309",
         "mobile": "98XXXXXX68",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "mobile": "98XXXXXX08",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0010",
         "patientName": "Demo Patient 9",
         "mobile": "98XXXXXX08",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "mobile": "98XXXXXX23",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0046",
         "patientName": "Demo Patient 42",
         "mobile": "98XXXXXX23",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "mobile": "98XXXXXX22",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0089",
         "patientName": "Demo Patient 82",
         "mobile": "98XXXXXX44",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0008",
         "patientName": "Demo Patient 7",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0336",
         "patientName": "Demo Patient 318",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0041",
         "patientName": "Demo Patient 38",
         "mobile": "98XXXXXX22",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0067",
         "patientName": "Demo Patient 62",
         "mobile": "98XXXXXX32",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "mobile": "98XXXXXX30",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0035",
         "patientName": "Demo Patient 33",
         "mobile": "98XXXXXX18",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0066",
         "patientName": "Demo Patient 61",
         "mobile": "98XXXXXX31",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0065",
         "patientName": "Demo Patient 60",
         "mobile": "98XXXXXX30",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0088",
         "patientName": "Demo Patient 81",
         "mobile": "98XXXXXX43",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0018",
         "patientName": "Demo Patient 17",
         "mobile": "98XXXXXX12",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0007",
         "patientName": "Demo Patient 6",
         "mobile": "98XXXXXX06",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "mobile": "98XXXXXX01",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "mobile": "98XXXXXX20",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0370",
         "patientName": "Demo Patient 104",
         "mobile": "98XXXXXX84",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0061",
         "patientName": "Demo Patient 56",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "mobile": "98XXXXXX01",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0040",
         "patientName": "Demo Patient 37",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0353",
         "patientName": "Demo Patient 326",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0012",
         "patientName": "Demo Patient 11",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "mobile": "98XXXXXX01",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0099",
         "patientName": "Demo Patient 91",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0087",
         "patientName": "Demo Patient 80",
         "mobile": "98XXXXXX42",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "mobile": "98XXXXXX01",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0054",
         "patientName": "Demo Patient 49",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0369",
         "patientName": "Demo Patient 337",
         "mobile": "98XXXXXX70",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0063",
         "patientName": "Demo Patient 58",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0038",
         "patientName": "Demo Patient 4",
         "mobile": "98XXXXXX05",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0001",
         "patientName": "Demo Patient 1",
         "mobile": "98XXXXXX01",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0379",
         "patientName": "Demo Patient 336",
         "mobile": "98XXXXXX83",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0086",
         "patientName": "Demo Patient 79",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0387",
         "patientName": "Demo Patient 343",
         "mobile": "98XXXXXX88",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0075",
         "patientName": "Demo Patient 69",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0082",
         "patientName": "Demo Patient 75",
         "mobile": "98XXXXXX40",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "mobile": "98XXXXXX41",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0032",
         "patientName": "Demo Patient 30",
         "mobile": "98XXXXXX16",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0394",
         "patientName": "Demo Patient 348",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0047",
         "patientName": "Demo Patient 43",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0328",
         "patientName": "Demo Patient 311",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0397",
         "patientName": "Demo Patient 350",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0030",
         "patientName": "Demo Patient 28",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0062",
         "patientName": "Demo Patient 57",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0099",
         "patientName": "Demo Patient 91",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0084",
         "patientName": "Demo Patient 77",
         "mobile": "98XXXXXX41",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0015",
         "patientName": "Demo Patient 14",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0099",
         "patientName": "Demo Patient 91",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0215",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0022",
         "patientName": "Demo Patient 21",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0005",
         "patientName": "Demo Patient 5",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0029",
         "patientName": "Demo Patient 27",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0048",
         "patientName": "Demo Patient 44",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0026",
         "patientName": "Demo Patient 25",
         "mobile": "98XXXXXX14",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0024",
         "patientName": "Demo Patient 23",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0097",
         "patientName": "Demo Patient 77",
         "mobile": "98XXXXXX51",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0023",
         "patientName": "Demo Patient 22",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0091",
         "patientName": "Demo Patient 84",
         "mobile": "98XXXXXX46",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0083",
         "patientName": "Demo Patient 76",
         "mobile": "98XXXXXX15",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0011",
         "patientName": "Demo Patient 10",
         "mobile": "98XXXXXX06",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0429",
         "patientName": "Demo Patient 365",
         "mobile": "98XXXXXX73",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0058",
         "patientName": "Demo Patient 53",
         "mobile": "98XXXXXX28",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0021",
         "patientName": "Demo Patient 20",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0052",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0447",
         "patientName": "",
         "mobile": null,
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0444",
         "patientName": "",
         "mobile": null,
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0444",
         "patientName": "",
         "mobile": null,
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0004",
         "patientName": "Demo Patient 4",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "mobile": "98XXXXXX66",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "mobile": "98XXXXXX66",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "mobile": "98XXXXXX66",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0433",
         "patientName": "Demo Patient 367",
         "mobile": "98XXXXXX66",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0448",
         "patientName": "Demo Patient 374",
         "mobile": "98XXXXXX04",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0042",
         "patientName": "Demo Patient 39",
         "mobile": "98XXXXXX21",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0003",
         "patientName": "Demo Patient 3",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0360",
         "patientName": "Demo Patient 331",
         "mobile": "98XXXXXX64",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0014",
         "patientName": "Demo Patient 13",
         "mobile": "98XXXXXX10",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0364",
         "patientName": "Demo Patient 335",
         "mobile": "98XXXXXX78",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0443",
         "patientName": "Demo Patient 373",
         "mobile": "98XXXXXX67",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0155",
         "patientName": "Demo Patient 144",
         "mobile": "98XXXXXX65",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0442",
         "patientName": "Demo Patient 372",
         "mobile": "98XXXXXX03",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Kept"
       },
       {
         "patientUHID": "DEMO-0039",
         "patientName": "Demo Patient 36",
         "mobile": "98XXXXXX20",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       },
       {
         "patientUHID": "DEMO-0043",
         "patientName": "Demo Patient 40",
         "mobile": "98XXXXXX17",
-        "visitDate": {},
-        "followUpDate": {},
+        "visitDate": null,
+        "followUpDate": null,
         "status": "Missed"
       }
     ]

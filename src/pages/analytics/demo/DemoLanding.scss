@@ -1,0 +1,144 @@
+/* DEMO landing page — standalone entry, styled with the TP analytics tokens
+ * (tpTokens.scss provides the --tp-* palette under the .tp-analytics scope). */
+
+.demo-landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  font-family: var(--tp-font-sans);
+  color: var(--tp-slate-900);
+  background:
+    radial-gradient(680px 340px at 18% -10%, rgba(75, 74, 213, 0.10), transparent 60%),
+    radial-gradient(560px 300px at 88% 6%, rgba(164, 97, 216, 0.08), transparent 60%),
+    var(--tp-slate-50);
+
+  &__panel {
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--tp-blue-100);
+    background: var(--tp-blue-50);
+    color: var(--tp-blue-600);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 16px 0 0;
+    font-family: var(--tp-font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--tp-slate-900);
+  }
+
+  &__sub {
+    margin: 10px 0 0;
+    font-size: 15.5px;
+    color: var(--tp-slate-500);
+  }
+
+  &__cards {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 22px 20px;
+    text-align: left;
+    border: 1px solid var(--tp-slate-200);
+    border-radius: 16px; /* rounded-2xl */
+    background: var(--tp-card);
+    box-shadow: var(--tp-shadow-sm);
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-3px);
+      border-color: var(--tp-blue-300);
+      box-shadow: var(--tp-shadow-md);
+
+      .demo-landing__go {
+        background: var(--tp-blue-500);
+        svg path { fill: #fff; stroke: #fff; }
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--tp-blue-500);
+      outline-offset: 2px;
+    }
+  }
+
+  &__glyph {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: var(--tp-blue-50);
+    border: 1px solid var(--tp-blue-100);
+  }
+
+  &__card-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--tp-slate-900);
+  }
+
+  &__card-sub {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--tp-slate-500);
+  }
+
+  &__go {
+    flex-shrink: 0;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--tp-blue-50);
+    transition: background 0.18s ease;
+  }
+
+  &__foot {
+    margin: 28px 0 0;
+    font-size: 12px;
+    color: var(--tp-slate-400);
+  }
+}

@@ -185,9 +185,9 @@ height="0" width="0" style="display:none;visibility:hidden" loading="lazy"></ifr
   };
 </script>
 
-<!-- Only load Beamer if NOT a receptionist -->
+<!-- Only load Beamer if NOT a receptionist (and never in the DEMO build) -->
 <script>
-    if (!isReceptionist) {
+    if (!TP_DEMO && !isReceptionist) {
         const loadBeamer = () => {
             const beamerScript = document.createElement('script');
             beamerScript.type = "text/javascript";
@@ -205,8 +205,8 @@ height="0" width="0" style="display:none;visibility:hidden" loading="lazy"></ifr
 </script>
 
 <script>
-    // Only load Razorpay script if NOT a receptionist
-    if (!isReceptionist) {
+    // Only load Razorpay script if NOT a receptionist (and never in the DEMO build)
+    if (!TP_DEMO && !isReceptionist) {
         const loadRazorpay = () => {
             const script = document.createElement('script');
             script.src = 'https://checkout.razorpay.com/v1/checkout.js';
