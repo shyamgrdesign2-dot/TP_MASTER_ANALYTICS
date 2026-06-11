@@ -1,0 +1,32 @@
+.tabVoiceRxButton {
+    display: flex;
+    width: 70px;
+    height: 42px;
+    padding: 0 10.667px;
+    justify-content: center;
+    align-items: center;
+    gap: 4.571px;
+    border-radius: 10px;
+    box-shadow: 0 0 6.095px 0 rgba(203, 122, 226, 0.40);
+    background: linear-gradient(90deg, #9A7DDA 0%, #2F2EA4 100%);
+    position: relative;
+    overflow: hidden;
+
+    .gradientBackground {
+        width: 70px;
+        height: 42px;
+        position: absolute;
+        box-shadow: 0 0 6.095px 0 rgba(203, 122, 226, 0.40);
+        filter: blur(1.523809552192688px);
+        border-radius: 10px;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .voiceRxButtonIcon {
+        width: 21.13px;
+        height: 18px;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+}

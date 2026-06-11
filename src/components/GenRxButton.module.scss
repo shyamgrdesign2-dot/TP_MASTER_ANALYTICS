@@ -1,0 +1,129 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 15px;
+  background: transparent;
+  border-radius: 10px; /* Button's rounded corners */
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  height: 41px;
+  overflow: hidden; /* Prevent pseudo-element overflow */
+  border: none; /* Remove default border */
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  inset: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  background: white;
+  // box-shadow: 0 4px 25px rgba(147, 51, 234, 0.2) !important;
+}
+
+
+  
+  .button:hover {
+    box-shadow: 0 4px 25px rgba(147, 51, 234, 0.2);
+  }
+  
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    color: white;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    background: linear-gradient(to right, #9333EA, #6366F1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.buttonVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.AiReceptionistButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 20px;
+  padding: 0px 15px;
+  background: white;
+  /* Button's inner background */
+  border-radius: 10px;
+  /* Button's rounded corners */
+  position: relative;
+  z-index: 1;
+  /* Ensure button content is above the pseudo-element */
+  cursor: pointer;
+  height: 41px;
+  overflow: hidden;
+  /* Prevent pseudo-element overflow */
+  border: none;
+  /* Remove default border */
+}
+
+.AiReceptionistButtonMobile{
+  gap: 0px !important;
+  padding: 0px 6px 0px 10px !important;
+  margin-right: 5px !important;
+}
+
+.AiReceptionistButton::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  z-index: 1;
+  border-radius: 8px;
+  background: white;
+}
+
+.AiReceptionistButton:hover {
+  box-shadow: 0 4px 25px rgba(147, 51, 234, 0.2);
+}
+
+.AiReceptionistButtonicon {
+  width: 24px;
+  height: 24px;
+}
+
+.receptionistText {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 21px !important;
+  color: #9333ea !important;
+}

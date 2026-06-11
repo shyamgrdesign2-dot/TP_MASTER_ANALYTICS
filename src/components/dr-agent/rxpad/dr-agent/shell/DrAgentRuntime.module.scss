@@ -1,0 +1,45 @@
+.activeBackdrop {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.copyBackdrop {
+  pointer-events: none;
+}
+
+.activeBackdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(139, 92, 246, 0.32);
+  box-shadow:
+    inset 0 0 0 1px rgba(139, 92, 246, 0.2),
+    inset 28px 0 44px rgba(79, 70, 229, 0.22),
+    inset -34px 0 58px rgba(168, 85, 247, 0.34),
+    inset 0 -34px 54px rgba(236, 72, 153, 0.32),
+    inset 0 26px 42px rgba(99, 102, 241, 0.16);
+}
+
+.activeBackdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(99, 102, 241, 0.08), transparent 16%, transparent 84%, rgba(168, 85, 247, 0.12)),
+    linear-gradient(0deg, rgba(236, 72, 153, 0.16), transparent 14%, transparent 100%);
+}
+
+.hiddenPanel {
+  pointer-events: none !important;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+}

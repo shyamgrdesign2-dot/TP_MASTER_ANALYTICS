@@ -1,0 +1,243 @@
+.health-records {
+  background-color: #fafafb;
+  min-height: 100vh;
+  padding: 0 0 40px;
+
+  &.appointment-wrap {
+    margin: -80px 0 0;
+    background: transparent;
+  }
+
+  &__layout {
+    width: 100%;
+  }
+
+  // Yellow Hero Section
+  &__hero {
+    background: linear-gradient(90deg, #fed15e 0%, #ffd04f 100%);
+    height: 200px;
+    padding: 32px 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+    margin: 0 -24px -90px;
+  }
+
+  &__hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  &__back-btn {
+    padding: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #454551;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    min-width: 32px;
+
+    &:hover,
+    &:focus {
+      color: #454551;
+      background: transparent;
+    }
+
+    i {
+      font-size: 24px;
+      transform: rotate(180deg); // Rotate icon-right to point left
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #454551;
+    transform: translateY(1px);
+  }
+
+  // Search Box Wrapper
+  &__search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  &__search-input {
+    width: 320px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #e2e2ea;
+    padding: 7px 13px;
+    background: #fff;
+
+    .ant-input-prefix {
+      color: #a2a2a8;
+      font-size: 18px;
+    }
+
+    input {
+      font-size: 12px;
+      color: #454551;
+
+      &::placeholder {
+        color: #a2a2a8;
+        opacity: 0.8;
+      }
+    }
+
+    &:hover {
+      border-color: #4b4ad5;
+    }
+
+    &:focus,
+    &.ant-input-focused {
+      border-color: #4b4ad5;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+    }
+  }
+
+  &__search-filler {
+    flex: 1;
+    height: 38px;
+  }
+
+  .ant-card.health-records__card {
+    width: 94%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid #e2e2ea;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+    background: #fff;
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    min-height: 903px;
+  }
+
+  &__table-wrapper {
+    flex: 1;
+
+    .ant-table {
+      table-layout: fixed;
+    }
+
+    .ant-table-container table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .ant-table-thead>tr>th {
+      background: #f1f1f5;
+      font-weight: 600;
+      font-size: 12px;
+      color: #454551;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      border-bottom: none;
+      padding: 12px;
+    }
+
+    .ant-table-tbody>tr>td {
+      padding: 18px 12px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #454551;
+      border-bottom: 1px solid #f1f1f5;
+    }
+
+    .ant-table-tbody>tr:hover>td {
+      background: #f9f9fb;
+    }
+
+    .ant-table-thead>tr>th:last-child,
+    .ant-table-tbody>tr>td:last-child {
+      text-align: center;
+    }
+  }
+
+  &__row-number {
+    font-size: 12px;
+    font-weight: 600;
+    color: #454551;
+    text-align: center;
+  }
+
+  &__column-header {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: #454551;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    .ant-table-tbody>tr {
+      height: 58px;
+    }
+  }
+
+  &__view-btn {
+    background: transparent !important;
+    border: 1px solid #4b4ad5 !important;
+    border-radius: 10px;
+    min-width: 156px;
+    height: 38px;
+    padding: 0;
+    font-weight: 600;
+    color: #4b4ad5 !important;
+
+    span {
+      color: #4b4ad5 !important;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba(75, 74, 213, 0.04) !important;
+      border-color: #4b4ad5 !important;
+      color: #4b4ad5 !important;
+
+      span {
+        color: #4b4ad5 !important;
+      }
+    }
+  }
+
+  &__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    font-size: 16px;
+    color: #5a6774;
+  }
+
+  .ant-table-thead>tr>th:first-child {
+    border-top-left-radius: 12px;
+  }
+
+  .ant-table-thead>tr>th:last-child {
+    border-top-right-radius: 12px;
+  }
+}

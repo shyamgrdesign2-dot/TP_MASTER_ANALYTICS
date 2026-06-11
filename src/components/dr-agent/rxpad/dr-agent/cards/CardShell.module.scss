@@ -1,0 +1,303 @@
+/* ─── Card wrapper ──────────────────────────────────────────────── */
+.card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      180deg,
+      rgba(75, 74, 213, 0.18) 0%,
+      rgba(75, 74, 213, 0.04) 25%,
+      rgba(23, 23, 37, 0.02) 50%,
+      rgba(75, 74, 213, 0.04) 75%,
+      rgba(75, 74, 213, 0.18) 100%
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* ─── Header ────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  gap: 7px;
+  padding: 12px 12px;
+  background: linear-gradient(180deg, rgba(75, 74, 213, 0.05) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--tp-slate-50, #f8fafc);
+}
+
+.headerAlignCenter {
+  align-items: center;
+}
+
+.headerAlignStart {
+  align-items: flex-start;
+}
+
+/* ─── Icon wrap ─────────────────────────────────────────────────── */
+.iconWrap {
+  display: flex;
+  height: 26px;
+  width: 26px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--tp-blue-50, rgba(75, 74, 213, 0.08));
+}
+
+.iconInner {
+  color: var(--tp-blue-500, #4b4ad5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medicalIconPlaceholder {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: var(--tp-blue-500, #4b4ad5);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* ─── Title group ───────────────────────────────────────────────── */
+.titleGroup {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  color: var(--tp-slate-800, #1e293b);
+}
+
+.titleWrap {
+  position: relative;
+  max-width: 200px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.titleTooltip {
+  pointer-events: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 4px;
+  display: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: var(--tp-slate-800, #1e293b);
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 400;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+
+.titleWrap:hover .titleTooltip {
+  display: block;
+}
+
+.dateText {
+  margin-top: 1px;
+  max-width: 200px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--tp-slate-400, #94a3b8);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Copy-all ──────────────────────────────────────────────────── */
+.copyAllWrap {
+  flex-shrink: 0;
+}
+
+.copyAllIcon {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.copyAllDefault {
+  color: var(--tp-slate-700, #334155);
+}
+
+.copyAllHovered {
+  color: var(--tp-slate-900, #0f172a);
+}
+
+/* ─── Spacer ────────────────────────────────────────────────────── */
+.spacer {
+  flex: 1;
+}
+
+/* ─── Badge ─────────────────────────────────────────────────────── */
+.badge {
+  position: relative;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.badgeTooltip {
+  pointer-events: none;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 4px;
+  display: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: var(--tp-slate-800, #1e293b);
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 400;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+
+.badge:hover .badgeTooltip {
+  display: block;
+}
+
+/* ─── Header extra ──────────────────────────────────────────────── */
+.headerExtra {
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+/* ─── Collapse button ───────────────────────────────────────────── */
+.collapseBtn {
+  display: flex;
+  height: 22px;
+  width: 22px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--tp-slate-100, #f1f5f9);
+  color: var(--tp-slate-600, #475569);
+  transition: background 0.15s;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.collapseBtn:hover {
+  background: var(--tp-slate-200, #e2e8f0);
+}
+
+/* ─── Body ──────────────────────────────────────────────────────── */
+.body {
+  padding: 10px 12px;
+}
+
+/* ─── Actions row ───────────────────────────────────────────────── */
+.actionsScroll {
+  overflow-x: auto;
+  padding: 2px 12px 10px;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+/* ─── Sidebar link wrap ─────────────────────────────────────────── */
+.sidebarLinkWrap {
+  padding: 8px 12px;
+  border-top: 0.5px solid var(--tp-slate-50, #f8fafc);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(75, 74, 213, 0.04) 100%);
+}
+
+/* ─── Source info icon ──────────────────────────────────────────── */
+.sourceInfoWrap {
+  position: relative;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+.sourceInfoBtn {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--tp-violet-400, #a78bfa);
+  transition: color 0.15s, background 0.15s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sourceInfoBtn:hover {
+  color: var(--tp-violet-600, #7c3aed);
+  background: var(--tp-violet-50, #f5f3ff);
+}
+
+.sourceInfoTooltip {
+  position: fixed;
+  transform: translateX(-100%);
+  z-index: 2147483647;
+  min-width: 160px;
+  max-width: 240px;
+  pointer-events: none;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.sourcesHeading {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: var(--tp-slate-400, #94a3b8);
+}
+
+.sourcesList {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sourceItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sourceDot {
+  height: 5px;
+  width: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--tp-violet-400, #a78bfa);
+}
+
+.sourceText {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--tp-slate-600, #475569);
+}

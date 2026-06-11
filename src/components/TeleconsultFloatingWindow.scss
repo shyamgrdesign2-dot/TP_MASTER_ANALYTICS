@@ -1,0 +1,221 @@
+.teleconsult-floating {
+  pointer-events: auto !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  &.dragging {
+    transition: none !important;
+    .teleconsult-header {
+      cursor: grabbing !important;
+    }
+    .teleconsult-meeting-wrap {
+      pointer-events: none !important;
+    }
+  }
+
+  .teleconsult-header {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #060527 0%, #1a1a3e 100%);
+    color: #ffffff !important;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    touch-action: none;
+    min-height: 48px;
+    flex-shrink: 0;
+
+    .teleconsult-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+      color: #fff;
+      img {
+        filter: brightness(0) invert(1);
+      }
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #ffffff !important;
+      }
+    }
+
+    .teleconsult-controls {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+      pointer-events: auto !important;
+    }
+
+    .teleconsult-btn-icon {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+
+  .teleconsult-meeting-wrap {
+    width: 100%;
+    height: calc(100% - 48px);
+    position: relative;
+    background: #000;
+    pointer-events: auto !important;
+    overflow: hidden;
+
+    > div {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+    }
+
+    rtk-meeting,
+    [data-rtk-meeting] {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+    }
+
+    &.teleconsult-meeting-hidden {
+      position: fixed;
+      left: -9999px;
+      top: 0;
+      width: 380px;
+      height: 732px;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  &.sidebar {
+    pointer-events: none;
+    cursor: default;
+    .teleconsult-sidebar-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 8px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .teleconsult-sidebar-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      color: #fff;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
+      cursor: pointer;
+      max-width: 100%;
+      min-width: 0;
+    }
+    .teleconsult-sidebar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      max-width: 50%;
+      min-width: 0;
+      &:first-child {
+        margin-left: 18px;
+      }
+      &:last-child {
+        margin-left: 8px;
+      }
+    }
+    .teleconsult-sidebar-icon {
+      filter: brightness(0) invert(1);
+    }
+    .teleconsult-sidebar-text {
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      word-break: break-word;
+      color: #ffffff !important;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+      text-orientation: mixed;
+    }
+    .teleconsult-audio-gradient-placeholder {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      .teleconsult-wave-bar {
+        width: 4px;
+        min-height: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 2px;
+        animation: teleconsult-wave-bar 0.8s ease-in-out infinite;
+        &:nth-child(1) { animation-delay: 0s; }
+        &:nth-child(2) { animation-delay: 0.1s; }
+        &:nth-child(3) { animation-delay: 0.2s; }
+        &:nth-child(4) { animation-delay: 0.3s; }
+        &:nth-child(5) { animation-delay: 0.15s; }
+        &:nth-child(6) { animation-delay: 0.05s; }
+        &:nth-child(7) { animation-delay: 0.25s; }
+        &:nth-child(8) { animation-delay: 0.35s; }
+        &:nth-child(9) { animation-delay: 0.2s; }
+        &:nth-child(10) { animation-delay: 0.1s; }
+      }
+    }
+    .teleconsult-sidebar-gradient {
+      flex-direction: column;
+      width: 6px;
+      height: auto;
+      min-height: 28px;
+      gap: 2px;
+      .teleconsult-wave-bar {
+        width: 3px;
+        min-height: 2px;
+        height: 3px;
+        border-radius: 1px;
+      }
+    }
+    .teleconsult-duration {
+      font-size: 12px;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: #ffffff !important;
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+@keyframes teleconsult-wave-bar {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

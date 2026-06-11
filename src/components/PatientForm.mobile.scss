@@ -1,0 +1,341 @@
+// Mobile-specific styles for Patient Form
+// Only applies when isMobile && !isTablet (mobile-patient-form class)
+
+.mobile-patient-form {
+  .mobile-patient-form-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 110px); // Account for header
+    background: #fafdff;
+  }
+
+  .mobile-patient-form-content {
+    flex: 1;
+    padding: 0 16px 140px;
+    overflow-y: auto;
+  }
+
+  // Upload Profile Section
+  .mobile-upload-profile-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    .text-center {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mobile-profile-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profilepic {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #e9e9fa;
+      border: none;
+      display: block;
+    }
+
+    // Hide the upload button text in mobile
+    .btn-input {
+      display: none;
+    }
+
+    // Custom upload button overlay
+    .mobile-profile-upload-overlay {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      background: #4b4ad5;
+      border-radius: 50%;
+      border: 1.533px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      i {
+        color: white;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .mobile-accordions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-patient-accordions {
+    background: transparent;
+    border: none;
+
+    .ant-collapse-item {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0px 0px 6px 0px rgba(242, 77, 182, 0.06);
+      margin-bottom: 16px;
+      border: none;
+      overflow: hidden;
+
+      &:last-child:not(.ant-collapse-item-active) {
+        margin-bottom: 0;
+      }
+
+      .ant-collapse-header {
+        padding: 14px !important;
+        align-items: center;
+        background: white;
+        border-radius: 16px !important;
+
+        .mobile-accordion-header {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          width: 100%;
+          flex: 1;
+
+          .mobile-accordion-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            &.personal-details-icon {
+              background: #f6effb;
+              
+              i {
+                font-size: 16.762px;
+                color: #a461d8;
+              }
+            }
+
+            &.secondary-details-icon {
+              background: #f6effb;
+              
+              i {
+                font-size: 16.762px;
+                color: #a461d8;
+              }
+            }
+
+            &.address-details-icon {
+              background: #f6effb;
+              
+              svg {
+                width: 16.762px;
+                height: 16.762px;
+              }
+            }
+          }
+
+          .mobile-accordion-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 22px;
+            color: #1f2933;
+            flex: 1;
+          }
+        }
+      }
+
+      .ant-collapse-content {
+        border-top: 0.5px solid rgba(226, 226, 234, 0.1);
+        background: white;
+
+      .ant-collapse-content-box {
+        padding: 16px 14px;
+      }
+      }
+
+      &:last-child.ant-collapse-item-active {
+        margin-bottom: 24px;
+      }
+
+      &.ant-collapse-item-active {
+        .ant-collapse-header {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    .ant-collapse-expand-icon {
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ant-collapse-arrow {
+        font-size: 0; // Hide default arrow
+        width: 12px;
+        height: 7px;
+        position: relative;
+        display: block;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 7px;
+          height: 7px;
+          border-right: 1.5px solid #454551;
+          border-bottom: 1.5px solid #454551;
+          transform: translate(-50%, -50%) rotate(45deg);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    .ant-collapse-item-active {
+      .ant-collapse-expand-icon {
+        .ant-collapse-arrow {
+          &::after {
+            transform: translate(-50%, -50%) rotate(225deg); // Up arrow (expanded state)
+          }
+        }
+      }
+    }
+  }
+
+  // Fixed Bottom Button
+  .mobile-patient-form-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+
+    .mobile-footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .mobile-button-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      align-items: start;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .mobile-add-patient-button {
+      height: 56px;
+      border-radius: 12px;
+      background: #4b4ad5;
+      border: 1px solid #4b4ad5;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.1px;
+      color: #ffffff;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+
+      &:hover,
+      &:focus {
+        background: #3a39c4;
+        border-color: #3a39c4;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+// Override form styles for mobile
+.mobile-patient-form {
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .ant-form-item-label {
+    padding-bottom: 4px;
+
+    label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #1f2933;
+    }
+  }
+
+  .ant-input,
+  .ant-select-selector,
+  .ant-picker {
+    border-radius: 10px;
+    border: 1px solid #e2e2ea;
+    height: 42px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #454551;
+
+    &:hover {
+      border-color: #4b4ad5;
+    }
+
+    &:focus,
+    &.ant-input-focused,
+    &.ant-picker-focused {
+      border-color: #4b4ad5;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+    }
+  }
+
+  .ant-input::placeholder {
+    color: #a2a2a8;
+  }
+
+  // Address Details - Add spacing between State and Street Address in mobile
+  .address-details-form {
+    .ant-row:nth-child(2) .ant-col:first-child .ant-form-item.mb-0 {
+      margin-bottom: 16px !important;
+    }
+  }
+}
+

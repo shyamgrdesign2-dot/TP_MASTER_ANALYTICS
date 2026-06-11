@@ -1,0 +1,34 @@
+/** Azure static assets root — keep in sync with TP_ASSETS_BASE in src/utils/constants.js */
+$tp-assets-base: "https://pmdoctorportal.blob.core.windows.net/tp-assets/assets";
+
+$grayColor: #a2a2a8;
+$white: #fff;
+$theme: #4b4ad5;
+$alerText: #fc5a5a;
+$main2: #44444f;
+$maincolor: #454551;
+$welcomecolor: #171725;
+$br-theme: 6px;
+$boxshadowtheme: 0px -1px 0px 0px #e2e2ea inset;
+$boxshadowsidebar: -1px 0px 0px 0px #e2e2ea inset;
+$bgbody: #fafafb;
+$drawerHeaderColor: #f1f1f5;
+$themelight: #f3fbfb;
+$boxBgLight: #4b4ad508;
+$themehover: #3030c2;
+$themesecondary: #a461d8;
+$themesecondarylight: #ba7de9;
+$darkthemesecondary: #f5d244;
+$bordercolor: #e2e2ea;
+$descpadcolor: #eddff7;
+$historytext: #475467;
+$colorFitness: #f6f0fc;
+$priceColor: #1b223c;
+$grayLight: #f1f1fc;
+$themeShade2: #6c6bdd;
+
+:export {
+  grayColor: $grayColor;
+  themeShade2: $themeShade2;
+  grayLight: $grayLight;
+}

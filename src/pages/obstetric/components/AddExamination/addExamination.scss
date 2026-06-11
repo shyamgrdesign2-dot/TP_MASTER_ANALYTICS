@@ -1,0 +1,177 @@
+.examination-wrapper {
+  display: flex;
+
+  .examination-wrap-body {
+    &:first-child {
+      .examination-head {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+
+    &:last-child {
+      .examination-head {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+
+    &.examination-parent-width {
+      div {
+        width: 250px !important;
+      }
+    }
+
+    &.examination-child-width {
+      div {
+        width: 200px;
+      }
+    }
+  }
+
+  .examination-row {
+    height: 70px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+
+    .ant-input-group-wrapper {
+      width: 160px;
+
+      .ant-input-group-addon {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+      }
+    }
+
+    i {
+      opacity: 0.8;
+      font-size: 20px;
+    }
+
+    &.examination-row-60 {
+      height: 60px;
+    }
+
+    &.examination-row-40 {
+      height: 40px;
+    }
+  }
+
+  .examination-head {
+    width: 100%;
+    background-color: #f1f1f5;
+    height: 40px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.vertical-dots {
+  transform: rotate(90deg); /* Rotate the icon 90 degrees */
+  font-size: 20px; /* Adjust the size as needed */
+  cursor: pointer;
+}
+
+.custom-tooltip .ant-tooltip-inner {
+  background-color: #fff !important; /* White background for the tooltip content */
+  color: #000; /* Text color */
+  border-radius: 10px; /* Adjust the value to make it more rounded */
+  cursor: pointer;
+}
+
+.custom-tooltip .ant-tooltip-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.custom-tooltip .ant-tooltip-arrow::before {
+  background-color: #fff !important;
+}
+
+.custom-tooltip .ant-tooltip-arrow::after {
+  border-color: #fff transparent transparent transparent !important;
+}
+
+.tooltip-content {
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding: 10px 16px 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  .delete-icon {
+    margin-right: 8px;
+    color: #4b4ad5 !important;
+    font-size: 16.65px;
+  }
+}
+
+.custom-select .ant-select-selector {
+  width: 170px !important;
+  height: 40px !important;
+  line-height: 40px; /* Vertically center the text */
+}
+
+.custom-select .ant-select-selector .ant-select-selection-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #a2a2a8 !important;
+}
+
+.custom-radio-button {
+  background-color: #fff; /* Default background */
+}
+
+.custom-radio-button.ant-radio-button-wrapper-checked {
+  background-color: #4b4ad51a; /* Selected background color */
+  color: #fff; /* Text color when selected */
+}
+
+.remarks {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.input-radio-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.inputheight41 {
+  height: 41px;
+  width: 50px;
+  flex-grow: 1; /* Allow the input to take up available space */
+  margin-right: 0px; /* Remove space between input and radio buttons */
+  border-top-right-radius: 0; /* Remove right side border radius */
+  border-bottom-right-radius: 0;
+}
+
+.radio-group .ant-radio-button-wrapper {
+  height: 41px;
+  line-height: 41px; /* Vertically center the text */
+  margin-left: -1px; /* Remove space between radio buttons */
+}
+
+.radio-button {
+  height: 41px;
+  line-height: 41px; /* Vertically center the text */
+}
+
+.radio-button.ant-radio-button-wrapper-checked {
+  background-color: #4b4ad51a; /* Selected background color */
+  color: #fff; /* Text color when selected */
+}
+
+.first-radio-button {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 1px solid #d9d9d9; /* Add a border to the left side */
+}

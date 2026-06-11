@@ -1,0 +1,234 @@
+$primary-purple: #4b4ad5;
+$light-gray: #f1f1f5;
+$dark-text: #454551;
+$muted-text: #454551;
+$border-color: #f1f1f5;
+$divider-color: #d0d5dd;
+
+.tab-rx-header-v2 {
+    background-color: white;
+    padding: 0 16px 0 0;
+    border-bottom: 0.5px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: 100%;
+
+        .back-btn-wrapper {
+            width: 75px;
+            // height: 100%;
+            // background-color: white;
+            border: none;
+            border-right: 0.5px solid $border-color;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // cursor: pointer;
+            // outline: none;
+
+            // i {
+            //     font-size: 18px;
+            //     color: #171725;
+            // }
+
+            // &:hover {
+            //     background-color: #f8f8fb;
+            // }
+        }
+
+        .user-info-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            .avatar-ring {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $light-gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                i {
+                    font-size: 20px;
+                    color: #92929d;
+                }
+            }
+
+            .user-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .user-name-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    cursor: pointer;
+                }
+
+                .user-name {
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: $dark-text;
+                    margin: 0;
+                    line-height: normal;
+                }
+
+                .user-meta {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: $muted-text;
+                    margin: 0;
+                    line-height: 18px;
+                    letter-spacing: 0.1px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    .separator {
+                        color: #d1d1d6;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 10.5px;
+            background-color: $light-gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 0;
+
+            &.bg-transparent {
+                background-color: transparent;
+
+                img {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            i {
+                font-size: 20px;
+                color: $dark-text;
+            }
+
+            &:hover:not(.bg-transparent) {
+                background-color: darken($light-gray, 5%);
+            }
+        }
+
+        .divider {
+            width: 1.05px;
+            height: 42px;
+            background: linear-gradient(180deg, rgba(208, 213, 221, 0.2) 0%, #d0d5dd 50%, rgba(208, 213, 221, 0.2) 100%);
+            opacity: 0.8;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pill-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 10.5px;
+            font-size: 14.7px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1.05px solid transparent;
+            outline: none;
+            line-height: normal;
+            background-color: transparent;
+
+            img,
+            i {
+                font-size: 18px;
+                width: 18px;
+                height: 18px;
+            }
+
+            &.preview {
+                background-color: $light-gray;
+                color: $dark-text;
+
+                &:hover {
+                    background-color: darken($light-gray, 5%);
+                }
+            }
+
+            &.draft {
+                border-color: $primary-purple;
+                color: $primary-purple;
+
+                &:hover {
+                    background-color: rgba(75, 74, 213, 0.05);
+                }
+            }
+
+            &.end-visit {
+                background-color: $primary-purple;
+                color: white;
+
+                &:hover {
+                    background-color: darken($primary-purple, 5%);
+                }
+
+                i {
+                    color: white;
+                }
+            }
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+// Ensure popovers/drawers override properly
+.modalWidth-563 {
+    .ant-drawer-content-wrapper {
+        width: 563px !important;
+    }
+}

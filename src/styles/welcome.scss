@@ -1,0 +1,43 @@
+.welcomesection {
+  background-color: #FED15E;
+  width: 100%;
+  height: max-content;
+  padding: 20px 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  // z-index: 0;
+  .welcomeig {
+    margin-bottom: -65px;
+    margin-top: -30px;
+    @media only screen and (max-width: 1400px) {
+      margin-top: -25px;
+      max-width: 180px;
+    }
+  }
+  h1 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    color: $welcomecolor;
+    margin-bottom: 0;
+        @media only screen and (max-width: 950px)  {
+      font-size: 20px;
+    }
+  }
+  p {
+    font-size: 12px;
+    font-weight: 600;
+    color: $welcomecolor !important;
+    @media only screen and (max-width: 1400px) {
+      margin-bottom: 5px;
+    }
+  }
+  .btn {
+    height: 41px;
+  }
+}
+
+.receptionist-welcome {
+  background-color: rgb(243, 245, 249);
+}

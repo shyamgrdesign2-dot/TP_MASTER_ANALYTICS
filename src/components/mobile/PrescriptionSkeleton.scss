@@ -1,0 +1,83 @@
+.prescription-skeleton {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fafafa;
+  overflow-y: auto;
+
+  .prescription-skeleton-large-block {
+    width: 100%;
+    height: 68px;
+    border-radius: 8px;
+    background: linear-gradient(
+      90deg,
+      #f3f4f6 0%,
+      #e5e7eb 50%,
+      #f3f4f6 100%
+    );
+    background-size: 200% 100%;
+    animation: prescription-skeleton-shimmer 1.5s infinite;
+  }
+
+  .prescription-skeleton-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .prescription-skeleton-header {
+    margin-top: 16px;
+    height: 16px;
+    width: 30%;
+    border-radius: 100px;
+    background: linear-gradient(
+      90deg,
+      #f3f4f6 0%,
+      #e5e7eb 50%,
+      #f3f4f6 100%
+    );
+    background-size: 200% 100%;
+    animation: prescription-skeleton-shimmer 1.5s infinite;
+  }
+
+  .prescription-skeleton-content {
+    height: 12px;
+    border-radius: 100px;
+    background: linear-gradient(
+      90deg,
+      #f3f4f6 0%,
+      #e5e7eb 50%,
+      #f3f4f6 100%
+    );
+    background-size: 200% 100%;
+    animation: prescription-skeleton-shimmer 1.5s infinite;
+
+    &.prescription-skeleton-line-full {
+      width: 100%;
+    }
+
+    &.prescription-skeleton-line-90 {
+      width: 90%;
+    }
+
+    &.prescription-skeleton-line-85 {
+      width: 85%;
+    }
+
+    &.prescription-skeleton-line-70 {
+      width: 70%;
+    }
+  }
+}
+
+@keyframes prescription-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

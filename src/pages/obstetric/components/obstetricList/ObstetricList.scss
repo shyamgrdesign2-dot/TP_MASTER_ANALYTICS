@@ -1,0 +1,14 @@
+.obstetricAccordian {
+  &.ant-collapse {
+    background-color: transparent;
+    .ant-collapse-item {
+      .ant-collapse-content {
+        padding-bottom: 0px !important;
+      }
+    }
+  }
+}
+
+.obstetricAccordianTitle {
+  background: #fafafb;
+}

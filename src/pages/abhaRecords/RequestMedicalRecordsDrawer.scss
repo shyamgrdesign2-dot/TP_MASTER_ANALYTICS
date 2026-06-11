@@ -1,0 +1,156 @@
+.request-medical-records-drawer {
+  .ant-drawer-body {
+    height: 980px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .request-medical-records-drawer-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 980px;
+  }
+
+  .modalCard-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    flex-shrink: 0;
+  }
+
+  .request-medical-records-form {
+    .ant-form-item-label>label {
+      font-weight: 500;
+    }
+
+    .text-red {
+      color: #ff4d4f;
+      margin-left: 2px;
+    }
+
+    .gap-2 {
+      gap: 8px;
+    }
+
+    .ant-select-multiple {
+      .ant-select-selector {
+        min-height: 45px;
+        padding: 8px 16px 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: flex-start;
+        border-radius: 24px;
+        height: auto !important;
+        border-width: 1px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      &.ant-select-focused .ant-select-selector,
+      &.ant-select-open .ant-select-selector {
+        border-color: #4b4ad5 !important;
+        box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.12);
+      }
+
+      .ant-select-selection-placeholder {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        line-height: 1.4;
+        color: #8c8c8c;
+        margin: 0;
+      }
+
+      .ant-select-selection-overflow {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: flex-start;
+      }
+
+      .ant-select-selection-search {
+        width: auto;
+        margin-inline-start: 0;
+      }
+    }
+
+    .medical-record-type-select {
+      &.ant-select-multiple {
+        .ant-select-selector {
+          padding: 8px 20px 6px;
+        }
+
+        .ant-select-selection-placeholder {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .medical-record-tag,
+    .ant-select-multiple .ant-select-selection-item {
+      background: rgba(75, 74, 213, 0.08);
+      color: #4b4ad5 !important;
+      border: 1px solid #4b4ad5;
+      border-radius: 999px;
+      padding: 2px 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .ant-tag-close-icon,
+      .ant-select-selection-item-remove {
+        color: #4b4ad5;
+        margin: 0;
+      }
+    }
+  }
+}
+
+:global(.medical-record-type-dropdown) {
+
+  .ant-select-item-option-active,
+  .ant-select-item-option-selected {
+    background-color: rgba(75, 74, 213, 0.08) !important;
+
+    .ant-select-item-option-content {
+      color: #4b4ad5 !important;
+      font-weight: 600;
+    }
+  }
+}
+
+:global(.ant-notification-notice.request-medical-records-toast) {
+  background: #000000 !important;
+  border-radius: 12px !important;
+  padding: 10px 15px 10px 15px !important;
+  min-width: 500px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.35);
+  border: none !important;
+}
+
+:global(.ant-notification-notice.request-medical-records-toast .ant-notification-notice-close) {
+  color: #fff;
+}
+
+:global(.ant-notification-notice.request-medical-records-toast .ant-notification-notice-description) {
+  margin: 0;
+}
+
+.request-medical-records-toast__content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-weight: 600;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}

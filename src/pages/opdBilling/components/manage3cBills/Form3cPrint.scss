@@ -1,0 +1,87 @@
+.form-3c-print-wrapper {
+  padding: 20px;
+  background-color: #fff;
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .form-title {
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 24px;
+    }
+
+    .form-rule {
+      font-size: 12px;
+      margin: 5px 0;
+      
+      a {
+        color: #4B4AD5;
+        text-decoration: underline;
+      }
+    }
+
+    .form-subtitle {
+      font-weight: 500;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .form-description {
+      font-size: 12px;
+      margin: 5px 0;
+      color: #454551;
+    }
+  }
+
+  .form3c-table {
+    // .ant-table {
+    // //   border: 1px solid #1a1a1a;
+    // }
+
+    .ant-table-thead > tr > th {
+      padding: 0 !important;
+      background-color: #fdf5e6;
+      border: 1px solid #1a1a1a;
+      
+      .header-cell {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        .header-text {
+          padding: 8px;
+          font-weight: medium;
+          min-height: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background-color: #f8dcbd;
+        }
+        
+        .header-number {
+          padding: 4px;
+          border-top: 1px solid #1a1a1a;
+          background-color: #f8dcbd;
+          font-size: 12px;
+          color: #666;
+          text-align: center;
+        }
+      }
+    }
+
+    .ant-table-tbody > tr {
+      td {
+        padding: 8px;
+        border: 1px solid #1a1a1a;
+        background-color: #faf6b4;
+      }
+
+      &:hover > td {
+        background-color: #faf6b4;
+      }
+    }
+  }
+}

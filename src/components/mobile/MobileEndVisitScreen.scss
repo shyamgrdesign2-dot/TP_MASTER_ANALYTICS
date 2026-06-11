@@ -1,0 +1,206 @@
+.mobile-end-visit-drawer {
+  .ant-drawer-body {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.mobile-end-visit-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #faf8fd;
+  position: relative;
+}
+
+.end-visit-header {
+  background: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+
+  .header-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #454551;
+    line-height: 26px;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+
+    .action-icon-btn {
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.end-visit-pdf-preview {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #faf8fd;
+
+  .pdf-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 400px;
+    color: #454551;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .pdf-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #dc3545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+
+  .pdf-container {
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 0 !important;
+    .pdf-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e5e7eb;
+
+      .pdf-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1f2937;
+      }
+    }
+
+    .pdf-content {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+      // React-PDF styles (same as web version)
+      .react-pdf__Document {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .react-pdf__Page {
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 12px;
+
+        &.pdf-page-loaded {
+          // Additional styles when loaded (can be extended if needed)
+          display: block;
+        }
+
+        canvas {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.end-visit-bottom-sheet {
+  background: white;
+  padding: 12px 14px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+
+  .go-home-button {
+    width: 100%;
+    height: 56px;
+    background: #4b4ad5;
+    border: 1px solid #4b4ad5;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #3d3cb3;
+      border-color: #3d3cb3;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+// Mobile specific adjustments
+@media (max-width: 480px) {
+  .end-visit-pdf-preview {
+    padding: 12px;
+  }
+
+  .end-visit-header {
+    padding: 18px;
+  }
+}

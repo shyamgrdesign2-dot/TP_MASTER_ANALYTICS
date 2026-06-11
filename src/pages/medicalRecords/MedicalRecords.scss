@@ -1,0 +1,97 @@
+.medical-records {
+  .category-btn {
+    height: 38px;
+    min-width: 80px;
+    border: 1px solid #e2e2ea;
+    border-radius: 10px;
+    padding: 6px 18px;
+
+    &:hover {
+      background-color: #eddff7 !important;
+      border-color: #ba7de9;
+    }
+  }
+  .active-category-btn {
+    background-color: #eddff7;
+    border-color: #ba7de9;
+  }
+
+  .category-label {
+    font-weight: 500;
+  }
+
+  .active-category-label {
+    color: #a461d8 !important;
+  }
+
+  .category-buttons-scrollable {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .category-btn {
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Medical Records Empty State (Mobile)
+.medical-records-empty-state-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 350px);
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.medical-records-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  .medical-records-empty-icon {
+    width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .medical-records-empty-message {
+    font-size: 14px;
+    color: #454551;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    max-width: 280px;
+    margin: 0;
+  }
+
+  .medical-records-empty-upload-btn {
+    border-radius: 12px;
+    height: 48px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .PatientDetailswrap {
+    .ant-card {
+      border: none !important;
+      background: none !important;
+
+      .ant-card-body {
+        padding: 0 !important;
+      }
+    }
+
+    .image-wrapper {
+      height: 153px !important;
+    }
+  }
+}

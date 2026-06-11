@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap");
+
+$text-100: #171725; // T-Text-100 (darkest - section headers)
+$text-80: #454551;  // T-Text-80 (table content, title)
+$text-40: #a2a2a8;  // T-Text-40 (lighter text)
+$bg-10: #f1f1f5;    // T-BG-10 (section header backgrounds, borders)
+$bg-100: #fafafb;   // T-BG-100 (table header rows)
+$white: #ffffff;    // White (page background)
+
+$editor-border: #e2e2ea;
+$editor-text: #171725;
+$editor-toolbar-bg: #f5f5f5;
+$editor-purple: #6243ce;
+
+.report-preview-drawer {
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    background-color: #222222;
+  }
+}
+
+
+// Document content styles come from HealthCheckupReportEditor.scss
+// This file only contains preview-specific UI styles
+
+.report-preview {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #222222;
+}
+
+// Header Bar
+.report-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background-color: transparent;
+  flex-shrink: 0;
+  gap: 20px;
+}
+
+.report-preview__header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.report-preview__back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.report-preview__header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.report-preview__title {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.report-preview__divider {
+  width: 0.5px;
+  height: 14px;
+  background-color: #e2e2ea;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.report-preview__date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #a2a2a8 !important;
+  white-space: nowrap;
+}
+
+.report-preview__header-right {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  flex-shrink: 0;
+}
+
+.report-preview__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &--danger {
+    color: #ffffff;
+  }
+}
+
+.report-preview__close-btn {
+  height: 39px;
+  padding: 0 21px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #4b4ad5;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+
+  &:hover:not(:disabled) {
+    background-color: #3d3ab8;
+    color: #ffffff;
+  }
+
+  &:focus {
+    background-color: #3d3ab8;
+    color: #ffffff;
+  }
+}
+
+// Document Content Area
+.report-preview__content {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 0;
+}
+
+.report-preview__document-container {
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+// Bottom Controls Bar
+.report-preview__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.report-preview__nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.report-preview__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background-color: #a2a2a8;
+  opacity: 0.2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .report-preview__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .report-preview__header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .report-preview__controls {
+    bottom: 20px;
+    gap: 15px;
+    padding: 6px 10px;
+  }
+
+}

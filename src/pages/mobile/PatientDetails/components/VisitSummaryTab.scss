@@ -1,0 +1,27 @@
+.visit-summary-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .summary-visit-details {
+    order: 1;
+  }
+
+  .summary-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    order: 2;
+  }
+
+  // Override card styles for mobile
+  :global(.appointment-wrap) {
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  :global(.PatientDetailswrap) {
+    margin: 0;
+  }
+}

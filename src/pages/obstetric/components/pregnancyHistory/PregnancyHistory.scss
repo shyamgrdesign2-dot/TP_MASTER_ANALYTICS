@@ -1,0 +1,78 @@
+.pregnancyHistoryContainer {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+
+  .theaderStyle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .pregnancyTcell {
+    padding: 6px 20px !important;
+  }
+
+  .tableTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+
+    .editIcon {
+      display: flex;
+      color: #4b4ad5 !important;
+      cursor: pointer;
+
+      .editText {
+        color: #4b4ad5 !important;
+        font-weight: 400;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.emptyDataContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
+  align-items: center;
+  margin: auto;
+  width: 450px;
+  height: 16rem;
+
+  .shortDescription {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a2a2a8 !important;
+    align-items: center;
+  }
+}
+
+.continueBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .continueText {
+    color: #4b4ad5 !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.obstetricTab {
+  &.ant-tabs > .ant-tabs-nav {
+    padding-left: 12px;
+  }
+}
+
+.pregnancyHistoryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 20px 40px 0px;
+}

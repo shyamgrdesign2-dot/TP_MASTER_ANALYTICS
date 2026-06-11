@@ -1,0 +1,794 @@
+{
+  "kpis": [
+    {
+      "key": "issued",
+      "label": "Certificates issued",
+      "value": 84,
+      "description": "Medical certificates issued to patients in this period."
+    },
+    {
+      "key": "topType",
+      "label": "Most-issued type",
+      "value": "Medical Fitness Certificate",
+      "description": "The certificate type issued most this period (38 issued)."
+    },
+    {
+      "key": "topDoctor",
+      "label": "Top issuing doctor",
+      "value": "Samir Vankhade",
+      "description": "The doctor who issued the most certificates this period (73). This is the issuing doctor, not the template author."
+    },
+    {
+      "key": "patients",
+      "label": "Patients certified",
+      "value": 28,
+      "description": "Distinct patients who received a certificate this period."
+    },
+    {
+      "key": "customTemplates",
+      "label": "Custom templates",
+      "value": 0,
+      "description": "Certificate templates this clinic built itself, beyond the 0 system templates available to everyone."
+    }
+  ],
+  "certTypeMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Certificate type"
+      },
+      {
+        "key": "count",
+        "label": "Issued"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Medical Fitness Certificate",
+        "count": 38
+      },
+      {
+        "k": "Medical Leave Certificate",
+        "count": 14
+      },
+      {
+        "k": "Medical Certificate For COVID",
+        "count": 9
+      },
+      {
+        "k": "Fitness  Certificate",
+        "count": 8
+      },
+      {
+        "k": "Travel Certificate",
+        "count": 8
+      },
+      {
+        "k": "Print configuration",
+        "count": 2
+      },
+      {
+        "k": "Medical Visa",
+        "count": 1
+      },
+      {
+        "k": "Test Sohil",
+        "count": 1
+      },
+      {
+        "k": "Test rohit",
+        "count": 1
+      },
+      {
+        "k": "test certificate setting",
+        "count": 1
+      },
+      {
+        "k": "Medical Fitness Certificate 67",
+        "count": 1
+      }
+    ]
+  },
+  "certTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Period"
+      },
+      {
+        "key": "count",
+        "label": "Certificates"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2023-06",
+        "count": 15
+      },
+      {
+        "k": "2023-07",
+        "count": 12
+      },
+      {
+        "k": "2023-08",
+        "count": 14
+      },
+      {
+        "k": "2023-09",
+        "count": 3
+      },
+      {
+        "k": "2023-10",
+        "count": 4
+      },
+      {
+        "k": "2024-01",
+        "count": 4
+      },
+      {
+        "k": "2024-02",
+        "count": 8
+      },
+      {
+        "k": "2024-03",
+        "count": 17
+      },
+      {
+        "k": "2024-04",
+        "count": 5
+      },
+      {
+        "k": "2024-06",
+        "count": 1
+      },
+      {
+        "k": "2025-03",
+        "count": 1
+      }
+    ]
+  },
+  "certByDoctor": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Doctor"
+      },
+      {
+        "key": "count",
+        "label": "Issued"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Samir Vankhade",
+        "count": 73
+      },
+      {
+        "k": "Ami",
+        "count": 8
+      },
+      {
+        "k": "rox(gynae)",
+        "count": 3
+      }
+    ]
+  },
+  "certificates": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "type",
+        "label": "Type"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "doctor",
+        "label": "Issued by"
+      },
+      {
+        "key": "source",
+        "label": "Template"
+      }
+    ],
+    "rows": [
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate 67",
+        "patient": "Demo Patient 40",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 2",
+        "doctor": "Samir Vankhade",
+        "source": "System template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 233",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 233",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 233",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 7",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 101",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 312",
+        "doctor": "rox(gynae)",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "rox(gynae)",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 42",
+        "doctor": "rox(gynae)",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 312",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 312",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 42",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 42",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 42",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Ami",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 9",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "test certificate setting",
+        "patient": "Demo Patient 250",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Test rohit",
+        "patient": "Demo Patient 250",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Test Sohil",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Print configuration",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Print configuration",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 62",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 44",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 44",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 44",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 44",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 6",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 6",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 14",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 102",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 25",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 23",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 80",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Visa",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 49",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 375",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 340",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 362",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 43",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Travel Certificate",
+        "patient": "Demo Patient 6",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 8",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 6",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 69",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 15",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Fitness Certificate",
+        "patient": "Demo Patient 102",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Leave Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 89",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Medical Certificate For COVID",
+        "patient": "Demo Patient 43",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 5",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 23",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 23",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      },
+      {
+        "date": {},
+        "type": "Fitness  Certificate",
+        "patient": "Demo Patient 23",
+        "doctor": "Samir Vankhade",
+        "source": "Custom template"
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 84
+  }
+}

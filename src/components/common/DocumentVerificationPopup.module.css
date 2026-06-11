@@ -1,0 +1,139 @@
+.container {
+  position: fixed;
+  top: -80px;
+  right: 25px;
+  margin: 76px 24px 0 0;
+  z-index: 10000;
+  color: white;
+  width: 400px;
+}
+
+.popup {
+  width: 428px;
+  /* height: 190px; */
+  display: inline-flex;
+  padding: 1.27313rem;
+  flex-direction: column;
+  align-items: flex-end;
+  /* gap: 1.27313rem; */
+  border-radius: 0.70731rem;
+  background: #171725;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contentContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.title {
+  color: #FFF !important;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 1.27313rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.839rem;
+}
+
+.daysLeft {
+  color: rgba(255, 255, 255, 0.60) !important;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 1.13169rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.839rem;
+}
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.70) !important;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Roboto;
+  font-size: 0.99025rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55606rem;
+  letter-spacing: 0.00706rem;
+  align-self: stretch;
+}
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 100%;
+}
+
+.laterButton {
+  width: 10.36194rem;
+  height: 2.7585rem;
+  flex-shrink: 0;
+  border-radius: 0.54213rem;
+  border: 0.74px solid #FFF;
+  background: transparent;
+  color: white !important;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 0.99025rem;
+}
+
+.laterButton:hover {
+  background: transparent !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+/* Override any Ant Design internal hover styles */
+.laterButton.ant-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.uploadButton {
+  width: 10.36194rem;
+  height: 2.7585rem;
+  flex-shrink: 0;
+  border-radius: 0.54213rem;
+  background: #FFF;
+  color: #171725 !important;
+  border: none;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 0.99025rem;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.contentWrapper {
+  width: 100%;
+} 
+
+.laterButtonText {
+  font-size: 0.99025rem;
+  font-weight: 600;
+  color: white !important;
+}
+
+/* Make sure the button text stays white even with Ant Design overrides */
+button.laterButton span,
+.laterButton * {
+  color: white !important;
+}

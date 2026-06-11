@@ -1,0 +1,66 @@
+
+.health-checkup-empty-state {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.health-checkup-empty-state__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.health-checkup-empty-state__icon-wrap {
+  line-height: 0;
+}
+
+.health-checkup-empty-state__icon {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.health-checkup-empty-state__message {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+
+.health-checkup-empty-state__cta {
+  min-height: 41px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #6243ce;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: #5337b8;
+    color: #ffffff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #6243ce;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

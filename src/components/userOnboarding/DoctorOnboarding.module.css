@@ -1,0 +1,905 @@
+.onboardingContainer {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.stepContainer {
+  margin-bottom: 30px;
+}
+
+.formContainer {
+  margin-top: 30px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: #5A6774;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.required::after {
+  content: '*';
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.inputField {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.requiredAsterisk {
+  color: #FC5A5A !important;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  margin-left: 2px;
+}
+
+.focusedInput:focus,
+.focusedInput:focus-within {
+  border-color: #4B4AD5 !important;
+  outline: none !important;
+}
+
+/* Input placeholder styles */
+.customInput::placeholder {
+  color: #98A2B3 !important;
+  font-family: Poppins !important;
+  font-size: 0.875rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1.5rem !important;
+}
+
+/* Select placeholder styles */
+.specialitySelect .ant-select-selection-placeholder {
+  color: #98A2B3 !important;
+  font-family: Poppins !important;
+  font-size: 0.875rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1.5rem !important;
+}
+
+.uploadContainer {
+  display: flex;
+  padding: 0.875rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 0.75rem; */
+  align-self: stretch;
+  border-radius: 0.625rem;
+  border: 1px dashed var(--P-CTA-100, #4B4AD5);
+  background: rgba(75, 74, 213, 0.04);
+  min-width: 600px;
+}
+
+.uploadIcon {
+  font-size: 36px;
+  color: #6366f1 !important;
+  margin-bottom: 12px;
+}
+
+.uploadText {
+  color: #4f46e5 !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.uploadDescription {
+  color: #222;
+  font-size: 0.75rem;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.uploadedFile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6ffed;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.fileIcon {
+  margin-right: 12px;
+}
+
+.fileName {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.fileSize {
+  color: #666;
+  font-size: 12px;
+}
+
+.fileActions {
+  display: flex;
+  gap: 8px;
+}
+
+.warningAlert {
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  display: flex;
+  width: 37.625rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 0.625rem;
+  background: rgba(252, 90, 90, 0.10);
+}
+
+.warningIcon {
+  color: #ff4d4f;
+  font-size: 18px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.warningText {
+  color: #FC5A5A !important;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.contactSupport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  color: #666;
+}
+
+.contactIcon {
+  margin-right: 8px;
+}
+
+.supportText {
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.supportLink {
+  color: #000;
+  text-decoration: underline;
+}
+
+.supportDivider {
+  margin: 0 8px;
+  color: #d9d9d9;
+}
+
+.detectLocationBtn {
+  display: flex;
+  align-items: center;
+  color: #4f46e5;
+  border: 1px dashed #4f46e5;
+  background: transparent;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.locationIcon {
+  margin-right: 4px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.skipButton {
+  color: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+}
+
+.skipButton span {
+  color: #4f46e5 !important;
+}
+
+.skipButton:hover {
+  color: #4338ca !important;
+  border-color: #4338ca !important;
+}
+
+.skipButton:hover span {
+  color: #4338ca !important;
+}
+
+/* Disabled button styles */
+.disabledButton {
+  background-color: #C7C5F8 !important;
+  border-color: #C7C5F8 !important;
+  color: white !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+.disabledButton:hover {
+  background-color: #C7C5F8 !important;
+  border-color: #C7C5F8 !important;
+  color: white !important;
+}
+
+/* Detect Location button styles */
+.detectLocationButton {
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.875rem;
+  align-items: center;
+  gap: 0.5625rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  border: 1px dashed #4B4AD5;
+  background: rgba(75, 74, 213, 0.08);
+  margin-right: 5px !important;
+}
+
+.detectLocationText {
+  color: #4B4AD5 !important;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+/* :global style are getting applied to the whole project style we need to wrap it inside the class and apply */
+/* Add styles for the blur effect and dark overlay */   
+/* :global(.drawer-open-blur) :not(.ant-drawer-content-wrapper) :not(.ant-drawer-content) :not(.ant-drawer-mask) {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+} */
+
+.darkOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.1);
+  pointer-events: all;
+}
+
+/* Override ant-drawer styles for a more immersive experience */
+/* :global(.ant-drawer-mask) {
+  backdrop-filter: blur(5px);
+} */
+
+@media (max-width: 768px) {
+  .onboardingContainer {
+    padding: 15px;
+  }
+  
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .buttonsContainer button {
+    width: 100%;
+  }
+}
+
+/* Loading spinner for initialization */
+.loadingSpinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(79, 70, 229, 0.2);
+  border-radius: 50%;
+  border-top-color: #4f46e5;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Make all text inputs have consistent styling */
+/* :global(.ant-input),
+:global(.ant-select-selector) {
+  height: 48px !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+} */
+
+/* :global(.ant-select-selector) {
+  display: flex;
+  align-items: center;
+} */
+
+/* :global(.ant-input-status-error) {
+  border-color: #ef4444 !important;
+}
+
+:global(.ant-select-status-error .ant-select-selector) {
+  border-color: #ef4444 !important;
+}
+
+:global(.ant-btn-primary) {
+  background-color: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+}
+
+:global(.ant-btn-primary:hover) {
+  background-color: #4338ca !important;
+  border-color: #4338ca !important;
+} */
+
+/* Steps container */
+.stepsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Background gray line */
+.stepsContainer::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+/* Blue progress line */
+.stepsContainer::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  height: 2px;
+  background-color: #4f46e5;
+  z-index: 1;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When on step 0 (first step) */
+.stepsContainer[style*="--current-step: 0"]::after {
+  width: 33.3%;
+}
+
+/* When on step 1 (second step), half-way */
+.stepsContainer[style*="--current-step: 1"]::after {
+  width: 66.6%;
+}
+
+/* When on step 2 (third step), full-width */
+.stepsContainer[style*="--current-step: 2"]::after {
+  width: 100%;
+}
+
+/* Steps styling */
+/* :global(.ant-steps-item-title) {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+}
+
+:global(.ant-steps-item-active .ant-steps-item-title) {
+  color: #111827 !important;
+  font-weight: 500 !important;
+}
+
+:global(.ant-steps-item-finish .ant-steps-item-title) {
+  color: #4f46e5 !important;
+}
+
+/* Additional step customizations */
+/* :global(.ant-steps) {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+:global(.ant-steps-item) {
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 1 !important;
+}
+
+:global(.ant-steps-item-container) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Hide the default ant design connector lines */
+/* :global(.ant-steps-item-tail) {
+  display: none !important;
+} */
+
+.uploadContainerSuccess {
+  border: 2px dashed #22c55e;
+  border-radius: 16px;
+  background: #f4fbf6;
+  padding: 36px 20px 24px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 120px;
+}
+
+.uploadedFilePreview {
+  display: flex;
+  align-items: center;
+  background: #e9f9ee;
+  border-radius: 18px;
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.fileThumb {
+  width: 2.75rem;
+  height: 3.20331rem;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #d1fae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #22c55e;
+}
+
+.fileInfoPreview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fileNamePreview {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.fileSizePreview {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.replaceBtn {
+  border: 2px solid #4B4AD5;
+  color: #4B4AD5;
+  background: #e9f9ee !important;
+  font-size: 0.75rem;
+  border-radius: 0.625rem;
+  padding: 8px 24px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.replaceBtn:hover {
+  background: #f0f3ff;
+}
+
+.deleteBtn {
+  cursor: pointer;
+}
+
+/* Speciality select dropdown styling */
+.specialitySelect .ant-select-selector .ant-select-selection-placeholder {
+  opacity: 1 !important;
+  color: #bfbfbf !important;
+}
+
+.specialitySelect .ant-select-selector {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.specialitySelect .ant-select-selection-search {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.specialitySelect .ant-select-selection-placeholder,
+.specialitySelect .ant-select-selection-item {
+  display: flex !important;
+  align-items: center !important;
+  line-height: normal !important;
+}
+
+.specialityDropdown {
+  border-radius: 8px !important;
+}
+
+/* Divider styles */
+.dividerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.dividerLine {
+  height: 1px;
+  background-color: #E2E2EA;
+  flex-grow: 1;
+}
+
+.dividerText {
+  padding: 0 1rem;
+  color: #A2A2A8 !important;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.015rem;
+}
+
+/* Mobile styles for the footer and buttons */
+.mobileFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  /* flex-direction: column; */
+  gap: 12px;
+  z-index: 1100;
+}
+
+.mobileActionButton {
+  height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+}
+
+/* Media queries for responsive layouts */
+@media (max-width: 768px) {
+  .uploadContainer {
+    min-width: unset !important;
+    width: 100% !important;
+  }
+  
+  .uploadContainerSuccess {
+    width: 100% !important;
+  }
+  
+  .stepperOuter {
+    padding: 0 !important;
+  }
+  
+  /* Add padding to bottom of content to account for fixed footer */
+  .onboardingContainer {
+    padding-bottom: 120px !important;
+  }
+  
+  /* Add bottom padding to all form steps to make space for the fixed footer */
+  .formContainer {
+    padding-bottom: 100px !important;
+  }
+  
+  .dividerContainer {
+    width: 100% !important;
+  }
+}
+
+/* Mobile styles for upload components */
+.mobileUploadContainer {
+  padding-bottom: 80px; /* Space for the footer buttons */
+}
+
+.mobileUploadBox {
+  border: 1px dashed #6366F1;
+  border-radius: 1rem;
+  background-color: rgba(75, 74, 213, 0.04);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mobileUploadInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.mobileUploadButton {
+  background-color: transparent;
+  color: #6366F1;
+  border: 1px solid #6366F1;
+  border-radius: 0.75rem;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mobileUploadedContainer {
+  display: flex;
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  align-self: stretch;
+  border-radius: 1rem;
+  border: 1px dashed #4B4AD5;
+}
+
+.mobileUploadedFilePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobileChangeDocument {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.mobileChangeButton {
+  color: #4B4AD5;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mobileDocFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.mobileSkipButton {
+  width: 48% !important;
+  height: 48px !important;
+  background-color: white !important;
+  border: 1px solid #4f46e5 !important;
+  border-radius: 8px !important;
+  color: #4f46e5 !important;
+  font-weight: 500 !important;
+}
+
+.mobileFinishButton {
+  width: 48% !important;
+  height: 48px !important;
+  background-color: #4f46e5 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+/* Attachment drawer styles */
+.attachmentOptions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75rem 1.5rem 1rem 1.5rem;
+}
+
+.attachOption {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.attachOption:last-child {
+  border-bottom: none;
+}
+
+.attachOptionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  background-color: #F6EFFB !important;
+}
+
+.attachOptionText {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #111827;
+}
+
+.attachOptionArrow {
+  color: #9ca3af;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.warningContainer {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 1.25rem 1.3125rem;
+  align-items: flex-start;
+  border-radius: 0.625rem;
+  background: rgba(237, 138, 0, 0.10) !important;
+}
+
+.warningIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  /* margin-right: 16px; */
+}
+
+.warningMessage {
+  color: #44444F;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.retryButton {
+  background-color: #4F46E5;
+  height: 48px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retryButton:hover {
+  background-color: #4338CA !important;
+}
+
+/* Custom attachment modal styles */
+.customAttachModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1300;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.customAttachModalContent {
+  background-color: white;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  animation: slideUp 0.3s ease-in-out;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.customAttachModalHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.customAttachModalTitle {
+  flex: 1;
+  margin-left: 30px;
+  margin-right: 24px;
+  color: #1F2933;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+.customAttachModalClose {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

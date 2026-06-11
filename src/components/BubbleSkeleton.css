@@ -1,0 +1,37 @@
+.bubble-skeleton-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the bubble to the right */
+    padding: 16px;
+  }
+  
+  .bubble-skeleton {
+    width: 70%; /* Adjust the width as per your design */
+    border-radius: 16px 0 16px 16px;
+    background: linear-gradient(90deg, 
+    #f1f1f8 25%, /* Light base color */
+    #eaeaf3 50%, /* Slightly darker shimmer color */
+    #f1f1f8 75% /* Back to light base color */
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1s infinite;
+    padding: 10px;
+  }
+
+  .bubble-skeleton-header {
+    height: 11px;
+    border-radius: 8px;
+    opacity: 0.4px;
+    background: #0000000A;
+    animation: shimmer 1.5s infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  

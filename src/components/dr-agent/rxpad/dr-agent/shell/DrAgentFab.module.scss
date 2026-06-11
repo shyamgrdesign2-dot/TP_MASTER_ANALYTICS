@@ -1,0 +1,311 @@
+/* Content flex container — fixed 430×115 canvas, always same layout */
+.fabContentFlex {
+  width: 430px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 60px 26px;
+}
+
+/* Label text on the FAB */
+.fabLabel {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Hover tooltip */
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+/* Show tooltip on parent hover — use group pattern in JS or :hover on parent */
+:global(.group):hover .tooltip {
+  opacity: 1;
+}
+
+.tooltipInner {
+  position: relative;
+  white-space: nowrap;
+  border-radius: 6px;
+  background: var(--tp-slate-800, #1e293b);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tooltipArrow {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 4px solid transparent;
+  border-left-color: var(--tp-slate-800, #1e293b);
+}
+
+.activeVoiceFab {
+  position: fixed;
+  bottom: 28px;
+  right: 0;
+  z-index: 1001;
+  width: 100px;
+  height: 346px;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: activeVoiceFabIn 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.activeVoiceFabPaused {
+  opacity: 0.96;
+}
+
+.activeVoiceInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 346px;
+  height: 100px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center center;
+}
+
+.activeVoiceSvg {
+  display: block;
+  overflow: visible;
+  width: 346px;
+  height: 100px;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  pointer-events: none;
+}
+
+.activeVoiceContentWrapper {
+  position: absolute;
+  left: -10px;
+  top: -16.25px;
+  width: 430px;
+  height: 115px;
+  transform: scale(0.8047);
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.activeVoiceContent {
+  width: 430px;
+  height: 115px;
+  padding: 16px 80px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.activeSurface {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  pointer-events: auto;
+  transition: transform 150ms ease;
+}
+
+.activeSurface:active {
+  transform: scale(0.92);
+}
+
+.activeMicButton {
+  color: #f59e0b;
+  background: #fff4e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 12px 20px rgba(22, 8, 32, 0.12);
+  cursor: pointer;
+}
+
+.activeMicButton[data-muted="true"] {
+  color: #ffffff;
+  background: #f59e0b;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 8px 18px rgba(245, 158, 11, 0.35);
+}
+
+.activeSubmitButton {
+  color: #10b981;
+  background: #ffffff;
+  opacity: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 12px 24px rgba(22, 8, 32, 0.2);
+}
+
+.activeIconUnrotate {
+  display: inline-flex;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.activeCenterStack {
+  min-width: 0;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.activeWaveRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  max-width: 100%;
+}
+
+.activeWaveBars {
+  width: 86px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.activeWaveBars span {
+  width: 3px;
+  height: 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  opacity: 0.58;
+  transform: scaleY(0.45);
+  transform-origin: center;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.activeVoiceFabAudioActive .activeWaveBars span {
+  opacity: calc(0.7 + var(--active-voice-level, 0) * 0.3);
+  animation: activeVoiceWave 950ms ease-in-out infinite;
+}
+
+.activeWaveBars span:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.activeWaveBars span:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.activeWaveBars span:nth-child(4) {
+  animation-delay: 360ms;
+}
+
+.activeWaveBars span:nth-child(5) {
+  animation-delay: 480ms;
+}
+
+.activeElapsedLabel {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+
+.activeLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.activeStatusLabel {
+  color: rgba(246, 237, 248, 0.78);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activeDotsRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.activeDotsRow span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  animation: activeVoiceDot 900ms ease-in-out infinite;
+}
+
+.activeDotsRow span:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.activeDotsRow span:nth-child(3) {
+  animation-delay: 360ms;
+}
+
+.activeVoiceFabPaused .activeWaveBars span,
+.activeVoiceFabPaused .activeDotsRow span {
+  animation-play-state: paused;
+  opacity: 0.6;
+}
+
+.activeVoiceFabPaused .activeWaveBars span {
+  transform: scaleY(0.55);
+}
+
+@keyframes activeVoiceFabIn {
+  from {
+    opacity: 0;
+    transform: translateX(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes activeVoiceWave {
+  0%, 100% {
+    transform: scaleY(0.45);
+    opacity: 0.66;
+  }
+  50% {
+    transform: scaleY(1.25);
+    opacity: 1;
+  }
+}
+
+@keyframes activeVoiceDot {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

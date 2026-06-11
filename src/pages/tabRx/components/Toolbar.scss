@@ -1,0 +1,496 @@
+.tab-rx-toolbar {
+  position: fixed;
+  // Must stay above the TemplateSidebar drawer (.tab-rx-template-drawer is z-index: 1000)
+  z-index: 1200;
+  touch-action: none;
+  transition: all 0.3s ease-out;
+
+  &.vertical {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.horizontal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toolbar-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    border-radius: 32px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    transition: all 0.3s ease-out;
+
+    &.vertical {
+      flex-direction: column;
+      width: 72px;
+    }
+
+    &.horizontal {
+      flex-direction: row;
+      height: 80px;
+    }
+  }
+
+  .drag-handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    cursor: grab;
+    padding: 4px;
+    border-radius: 16px;
+    transition: background-color 0.2s;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &.vertical {
+      width: 100%;
+      padding: 8px 4px;
+    }
+
+    &.horizontal {
+      height: 100%;
+      padding: 4px 8px;
+    }
+
+    .grid-dots {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      align-items: center;
+      justify-content: center;
+
+      .dot-row {
+        display: flex;
+        gap: 3px;
+
+        .dot {
+          width: 3px;
+          height: 3px;
+          background-color: #999;
+          border-radius: 50%;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .tool-button {
+    width: 36px;
+    height: 38px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s duration-200;
+    position: relative;
+    color: #666;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2;
+    }
+
+    img {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &.active {
+      background-color: #4B4AD5;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(75, 74, 213, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.3);
+      
+      svg {
+        color: #fff;
+        stroke-width: 2.5;
+      }
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .divider {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+
+    &.vertical {
+      width: 32px;
+      height: 1px;
+      margin: 4px 0;
+    }
+
+    &.horizontal {
+      width: 1px;
+      height: 32px;
+      margin: 0 4px;
+    }
+  }
+
+  .action-button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #666;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #333;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      color: rgba(156, 163, 175, 0.5);
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+  }
+
+  // Zoom percentage badge — sits as a plain sibling inside toolbar-container,
+  // same as every other button/divider. Fixed dimensions prevent any reflow
+  // when the percentage value changes (e.g. 10% → 100%).
+  .zoom-level {
+    width: 52px;        // wide enough for "100%"
+    height: 32px;
+    flex-shrink: 0;     // never compress
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    user-select: none;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .close-button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #999;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #333;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .settings-panel {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
+    animation: fadeInZoom 0.2s ease-out;
+    z-index: 1000;
+
+    &.vertical {
+      flex-direction: column;
+      min-width: 200px;
+      
+      &.right {
+        left: calc(100% + 8px);
+        top: 0;
+        transform-origin: left center;
+      }
+      
+      &.left {
+        right: calc(100% + 8px);
+        top: 0;
+        transform-origin: right center;
+      }
+    }
+
+    &.horizontal {
+      flex-direction: row;
+      align-items: stretch;
+      
+      &.bottom {
+        top: calc(100% + 8px);
+        left: 0;
+        transform-origin: top center;
+      }
+      
+      &.top {
+        bottom: calc(100% + 8px);
+        left: 0;
+        transform-origin: bottom center;
+      }
+    }
+
+    .color-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .section-title {
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #666;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+
+        &.horizontal {
+          display: flex;
+        }
+      }
+
+      .color-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          transform: scale(1.05);
+          border-color: #e0e0e0;
+        }
+
+        &.active {
+          border-color: #4B4AD5;
+          transform: scale(1.1);
+          box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.3);
+        }
+      }
+    }
+
+    .thickness-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 180px;
+
+      .thickness-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .section-title {
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: #666;
+        }
+
+        .thickness-value {
+          font-size: 12px;
+          font-weight: 700;
+          color: #4B4AD5;
+          background: rgba(75, 74, 213, 0.1);
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+      }
+
+      .ink-preview {
+        height: 96px;
+        width: 100%;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+
+        svg {
+          position: relative;
+          z-index: 10;
+        }
+      }
+
+      .thickness-slider {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+
+        .slider-label {
+          font-size: 10px;
+          font-weight: 700;
+          color: #999;
+          min-width: 24px;
+        }
+
+        input[type="range"] {
+          flex: 1;
+          height: 4px;
+          background: #e0e0e0;
+          border-radius: 2px;
+          outline: none;
+          appearance: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #4B4AD5;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+          }
+
+          &::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #4B4AD5;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s;
+          }
+
+          &:hover {
+            background: #d0d0d0;
+          }
+
+          &:hover::-webkit-slider-thumb {
+            transform: scale(1.1);
+          }
+
+          &:hover::-moz-range-thumb {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  &.minimized-button {
+    position: fixed;
+    // Keep minimized button above the drawer too
+    z-index: 50;
+    box-sizing: border-box;
+    border-radius: 9999px;
+    background-color: rgb(255 255 255 / 0.6);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgb(255 255 255 / 0.4);
+    outline: 1px solid rgb(255 255 255 / 0.5);
+    outline-offset: 0;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1rem;
+    touch-action: none;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--brand-purple);
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

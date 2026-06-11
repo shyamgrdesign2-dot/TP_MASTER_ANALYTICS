@@ -1,0 +1,3068 @@
+{
+  "kpis": [
+    {
+      "key": "admissions",
+      "label": "Admissions",
+      "value": 87,
+      "description": "Admissions started in the selected period."
+    },
+    {
+      "key": "discharges",
+      "label": "Discharges",
+      "value": 53,
+      "description": "Admissions closed in the selected period."
+    },
+    {
+      "key": "readmissions",
+      "label": "Readmissions",
+      "value": 54,
+      "description": "Admissions in the period flagged as readmissions."
+    },
+    {
+      "key": "mlcCases",
+      "label": "MLC cases",
+      "value": 85,
+      "description": "Medico-legal cases admitted in the period."
+    },
+    {
+      "key": "avgLos",
+      "label": "Avg length of stay",
+      "value": 55.6,
+      "unit": "days",
+      "description": "Average days from admission to discharge over discharges in the period."
+    },
+    {
+      "key": "queueSize",
+      "label": "Discharge queue",
+      "value": 4,
+      "description": "Active admissions flagged ready to discharge right now."
+    },
+    {
+      "key": "queueTime",
+      "label": "Avg time in queue",
+      "value": 22.3,
+      "unit": "days",
+      "prefix": "~",
+      "description": "Average time from the ready-to-discharge flag to the actual discharge, over discharges in the period."
+    },
+    {
+      "key": "longestStay",
+      "label": "Longest stay",
+      "value": 1540,
+      "unit": "days",
+      "description": "Longest stay among admissions in the period (current stays measured to today)."
+    }
+  ],
+  "admitTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Period"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2025-07",
+        "count": 0
+      },
+      {
+        "k": "2025-08",
+        "count": 0
+      },
+      {
+        "k": "2025-09",
+        "count": 0
+      },
+      {
+        "k": "2025-10",
+        "count": 0
+      },
+      {
+        "k": "2025-11",
+        "count": 0
+      },
+      {
+        "k": "2025-12",
+        "count": 0
+      },
+      {
+        "k": "2026-01",
+        "count": 0
+      },
+      {
+        "k": "2026-02",
+        "count": 0
+      },
+      {
+        "k": "2026-03",
+        "count": 0
+      },
+      {
+        "k": "2026-04",
+        "count": 0
+      },
+      {
+        "k": "2026-05",
+        "count": 0
+      },
+      {
+        "k": "2026-06",
+        "count": 0
+      }
+    ]
+  },
+  "byDepartment": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Department"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Oncology",
+        "count": 37
+      },
+      {
+        "k": "Psychiatry",
+        "count": 29
+      },
+      {
+        "k": "Orthopaedics",
+        "count": 12
+      },
+      {
+        "k": "Unassigned",
+        "count": 3
+      },
+      {
+        "k": "Gynaecology",
+        "count": 3
+      },
+      {
+        "k": "Paediatrics",
+        "count": 2
+      },
+      {
+        "k": "Neurology",
+        "count": 1
+      }
+    ]
+  },
+  "byWard": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "General Ward",
+        "count": 34
+      },
+      {
+        "k": "ICU Ward",
+        "count": 31
+      },
+      {
+        "k": "Special",
+        "count": 13
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "count": 7
+      },
+      {
+        "k": "Apollo Hospital - ICU ward",
+        "count": 1
+      },
+      {
+        "k": "Unassigned",
+        "count": 1
+      }
+    ]
+  },
+  "byAdmittingDoctor": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Admitting doctor"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Samir Vankhade",
+        "count": 45
+      },
+      {
+        "k": "Avinash Sharma",
+        "count": 14
+      },
+      {
+        "k": "kartik",
+        "count": 8
+      },
+      {
+        "k": "Rushabh shah",
+        "count": 5
+      },
+      {
+        "k": "Anuj",
+        "count": 5
+      },
+      {
+        "k": "Virat  Mehta",
+        "count": 2
+      },
+      {
+        "k": "Brijesh",
+        "count": 2
+      },
+      {
+        "k": "Piyush sharma (peadia)",
+        "count": 2
+      },
+      {
+        "k": "richa(gyna)",
+        "count": 2
+      },
+      {
+        "k": "avnish",
+        "count": 1
+      },
+      {
+        "k": "prachi patel(pedia)",
+        "count": 1
+      }
+    ]
+  },
+  "categoryMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Category"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Self-pay",
+        "count": 54
+      },
+      {
+        "k": "Insurance / TPA",
+        "count": 33
+      }
+    ]
+  },
+  "dischargeTypeMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Discharge type"
+      },
+      {
+        "key": "count",
+        "label": "Discharges"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Medical",
+        "count": 18
+      },
+      {
+        "k": "DAMA",
+        "count": 16
+      },
+      {
+        "k": "Transfer Out",
+        "count": 10
+      },
+      {
+        "k": "Death",
+        "count": 8
+      },
+      {
+        "k": "Not recorded",
+        "count": 1
+      }
+    ]
+  },
+  "losDistribution": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Length of stay"
+      },
+      {
+        "key": "count",
+        "label": "Discharges"
+      }
+    ],
+    "rows": [
+      {
+        "k": "0-1 days",
+        "count": 21
+      },
+      {
+        "k": "2-3 days",
+        "count": 3
+      },
+      {
+        "k": "4-7 days",
+        "count": 4
+      },
+      {
+        "k": "8-14 days",
+        "count": 1
+      },
+      {
+        "k": "15+ days",
+        "count": 24
+      }
+    ]
+  },
+  "admissionRegister": {
+    "columns": [
+      {
+        "key": "admittedOn",
+        "label": "Admitted on"
+      },
+      {
+        "key": "ipNo",
+        "label": "IP no"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "uhid",
+        "label": "UHID"
+      },
+      {
+        "key": "age",
+        "label": "Age"
+      },
+      {
+        "key": "gender",
+        "label": "Gender"
+      },
+      {
+        "key": "department",
+        "label": "Department"
+      },
+      {
+        "key": "ward",
+        "label": "Ward"
+      },
+      {
+        "key": "room",
+        "label": "Room / bed"
+      },
+      {
+        "key": "admittingDoctor",
+        "label": "Admitting doctor"
+      },
+      {
+        "key": "payer",
+        "label": "Payer"
+      },
+      {
+        "key": "status",
+        "label": "Status"
+      },
+      {
+        "key": "dischargeType",
+        "label": "Discharge type"
+      },
+      {
+        "key": "los",
+        "label": "LOS (days)"
+      }
+    ],
+    "rows": [
+      {
+        "ipNo": "53026",
+        "admittedOn": "2024-04-12 18:58:00",
+        "patient": "Demo Patient 391",
+        "uhid": "DEMO-0010",
+        "age": 30,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 790
+      },
+      {
+        "ipNo": "71826",
+        "admittedOn": "2024-04-11 11:49:00",
+        "patient": "Demo Patient 392",
+        "uhid": "DEMO-0257",
+        "age": 26,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed5",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 791
+      },
+      {
+        "ipNo": "83409",
+        "admittedOn": "2024-04-10 17:54:00",
+        "patient": "Demo Patient 393",
+        "uhid": "DEMO-0455",
+        "age": 26,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "27806",
+        "admittedOn": "2024-03-05 17:12:00",
+        "patient": "Demo Patient 42",
+        "uhid": "DEMO-0046",
+        "age": 28,
+        "gender": "Female",
+        "department": "Paediatrics",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "prachi patel(pedia)",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 37
+      },
+      {
+        "ipNo": "36047",
+        "admittedOn": "2024-02-09 17:08:00",
+        "patient": "Demo Patient 394",
+        "uhid": "DEMO-0336",
+        "age": 13,
+        "gender": "Male",
+        "department": "Paediatrics",
+        "ward": "Special",
+        "room": "Special Room 1",
+        "admittingDoctor": "Piyush sharma (peadia)",
+        "payer": "Self-pay",
+        "status": "In discharge queue",
+        "dischargeType": "-",
+        "los": 853
+      },
+      {
+        "ipNo": "46905",
+        "admittedOn": "2024-02-09 17:04:00",
+        "patient": "Demo Patient 395",
+        "uhid": "DEMO-0005",
+        "age": 31,
+        "gender": "Male",
+        "department": "Gynaecology",
+        "ward": "General Ward",
+        "room": "rox bed",
+        "admittingDoctor": "richa(gyna)",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 74
+      },
+      {
+        "ipNo": "54106",
+        "admittedOn": "2024-01-18 15:57:00",
+        "patient": "Demo Patient 396",
+        "uhid": "DEMO-0029",
+        "age": 13,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "hdfc ergo",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 875
+      },
+      {
+        "ipNo": "59270",
+        "admittedOn": "2023-09-27 09:34:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0346",
+        "age": 28,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "-",
+        "room": "Special bed 3",
+        "admittingDoctor": "avnish",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 988
+      },
+      {
+        "ipNo": "12846",
+        "admittedOn": "2023-09-27 09:28:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0346",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "10894",
+        "admittedOn": "2023-09-26 09:31:00",
+        "patient": "Demo Patient 398",
+        "uhid": "DEMO-0347",
+        "age": 24,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "90482",
+        "admittedOn": "2023-09-26 09:23:00",
+        "patient": "Demo Patient 398",
+        "uhid": "DEMO-0084",
+        "age": 24,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "61947",
+        "admittedOn": "2023-09-26 09:23:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0368",
+        "age": 26,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "67034",
+        "admittedOn": "2023-09-26 09:23:00",
+        "patient": "Demo Patient 400",
+        "uhid": "DEMO-0001",
+        "age": 3,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "87632",
+        "admittedOn": "2023-09-26 09:22:00",
+        "patient": "Demo Patient 401",
+        "uhid": "DEMO-0431",
+        "age": 25,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "18236",
+        "admittedOn": "2023-09-26 15:14:00",
+        "patient": "Demo Patient 402",
+        "uhid": "DEMO-0458",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed5",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Life Insurance Corporation of India",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 989
+      },
+      {
+        "ipNo": "07421",
+        "admittedOn": "2023-09-22 14:16:00",
+        "patient": "Demo Patient 403",
+        "uhid": "DEMO-0024",
+        "age": 29,
+        "gender": "Male",
+        "department": "-",
+        "ward": "Special",
+        "room": "Special bed 3",
+        "admittingDoctor": "Piyush sharma (peadia)",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "23840",
+        "admittedOn": "2023-09-14 14:10:00",
+        "patient": "Demo Patient 404",
+        "uhid": "DEMO-0062",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1001
+      },
+      {
+        "ipNo": "06542",
+        "admittedOn": "2023-09-12 15:44:00",
+        "patient": "Demo Patient 403",
+        "uhid": "DEMO-0024",
+        "age": 29,
+        "gender": "Male",
+        "department": "Gynaecology",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "richa(gyna)",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1003
+      },
+      {
+        "ipNo": "89173",
+        "admittedOn": "2023-09-11 09:06:00",
+        "patient": "Demo Patient 4",
+        "uhid": "DEMO-0355",
+        "age": 24,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 2",
+        "admittingDoctor": "Anuj",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1004
+      },
+      {
+        "ipNo": "67289",
+        "admittedOn": "2023-08-31 15:37:00",
+        "patient": "Demo Patient 405",
+        "uhid": "DEMO-0021",
+        "age": 32,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "ICU Ward",
+        "room": "Bed5",
+        "admittingDoctor": "kartik",
+        "payer": "Self-pay",
+        "status": "In discharge queue",
+        "dischargeType": "-",
+        "los": 1015
+      },
+      {
+        "ipNo": "71450",
+        "admittedOn": "2023-08-31 14:12:00",
+        "patient": "Demo Patient 4",
+        "uhid": "DEMO-0004",
+        "age": 56,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "Anuj",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1015
+      },
+      {
+        "ipNo": "25834",
+        "admittedOn": "2023-08-28 17:57:00",
+        "patient": "Demo Patient 406",
+        "uhid": "DEMO-0047",
+        "age": 25,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "Apollo Hospital - ICU ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Anuj",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1018
+      },
+      {
+        "ipNo": "89023",
+        "admittedOn": "2023-08-22 10:44:00",
+        "patient": "Demo Patient 407",
+        "uhid": "DEMO-0054",
+        "age": 23,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "Rushabh shah",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 2
+      },
+      {
+        "ipNo": "51273",
+        "admittedOn": "2023-08-13 19:26:00",
+        "patient": "Demo Patient 112",
+        "uhid": "DEMO-0014",
+        "age": 29,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special Room 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "12380",
+        "admittedOn": "2023-08-04 16:33:00",
+        "patient": "Demo Patient 408",
+        "uhid": "DEMO-0365",
+        "age": 27,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room",
+        "admittingDoctor": "Anuj",
+        "payer": "Self-pay",
+        "status": "In discharge queue",
+        "dischargeType": "-",
+        "los": 1042
+      },
+      {
+        "ipNo": "87532",
+        "admittedOn": "2023-08-04 16:33:00",
+        "patient": "Demo Patient 408",
+        "uhid": "DEMO-0402",
+        "age": 27,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Test bed",
+        "admittingDoctor": "Anuj",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1042
+      },
+      {
+        "ipNo": "71983",
+        "admittedOn": "2023-08-04 16:33:00",
+        "patient": "Demo Patient 408",
+        "uhid": "DEMO-0379",
+        "age": 27,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "kartik",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1042
+      },
+      {
+        "ipNo": "15236",
+        "admittedOn": "2023-06-30 10:50:00",
+        "patient": "Demo Patient 398",
+        "uhid": "DEMO-0457",
+        "age": 23,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 35
+      },
+      {
+        "ipNo": "05672",
+        "admittedOn": "2023-06-30 10:47:00",
+        "patient": "Demo Patient 400",
+        "uhid": "DEMO-0001",
+        "age": 3,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 88
+      },
+      {
+        "ipNo": "60593",
+        "admittedOn": "2023-06-30 15:13:00",
+        "patient": "Demo Patient 408",
+        "uhid": "DEMO-0402",
+        "age": 27,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Life Insurance Corporation of India",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 35
+      },
+      {
+        "ipNo": "98563",
+        "admittedOn": "2023-06-26 11:46:00",
+        "patient": "Demo Patient 395",
+        "uhid": "DEMO-0005",
+        "age": 31,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room",
+        "admittingDoctor": "kartik",
+        "payer": "1251541",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 23
+      },
+      {
+        "ipNo": "42370",
+        "admittedOn": "2023-06-16 12:06:00",
+        "patient": "Demo Patient 406",
+        "uhid": "DEMO-0047",
+        "age": 25,
+        "gender": "Male",
+        "department": "Neurology",
+        "ward": "Special",
+        "room": "Special bed 2",
+        "admittingDoctor": "Brijesh",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "69517",
+        "admittedOn": "2023-06-14 14:47:00",
+        "patient": "Demo Patient 409",
+        "uhid": "DEMO-0376",
+        "age": 25,
+        "gender": "Male",
+        "department": "Gynaecology",
+        "ward": "General Ward",
+        "room": "Room",
+        "admittingDoctor": "Brijesh",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "76983",
+        "admittedOn": "2023-06-14 14:46:00",
+        "patient": "Demo Patient 410",
+        "uhid": "DEMO-0011",
+        "age": 25,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room No. 123",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 6
+      },
+      {
+        "ipNo": "85932",
+        "admittedOn": "2023-06-12 15:17:00",
+        "patient": "Demo Patient 401",
+        "uhid": "DEMO-0431",
+        "age": 25,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 106
+      },
+      {
+        "ipNo": "68413",
+        "admittedOn": "2023-06-12 15:16:00",
+        "patient": "Demo Patient 400",
+        "uhid": "DEMO-0001",
+        "age": 3,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 18
+      },
+      {
+        "ipNo": "50834",
+        "admittedOn": "2023-06-12 15:12:00",
+        "patient": "Demo Patient 400",
+        "uhid": "DEMO-0001",
+        "age": 3,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "85431",
+        "admittedOn": "2023-06-12 15:08:00",
+        "patient": "Demo Patient 398",
+        "uhid": "DEMO-0456",
+        "age": 23,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Not recorded",
+        "los": 848
+      },
+      {
+        "ipNo": "30476",
+        "admittedOn": "2023-06-07 12:29:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0459",
+        "age": 27,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 112
+      },
+      {
+        "ipNo": "86401",
+        "admittedOn": "2023-06-07 15:43:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0460",
+        "age": 27,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "Special",
+        "room": "Special bed 2",
+        "admittingDoctor": "Rushabh shah",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 112
+      },
+      {
+        "ipNo": "45926",
+        "admittedOn": "2023-06-07 13:44:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0461",
+        "age": 28,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Rushabh shah",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1100
+      },
+      {
+        "ipNo": "74586",
+        "admittedOn": "2023-06-07 13:42:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0462",
+        "age": 28,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "Room No. 123",
+        "admittingDoctor": "Rushabh shah",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1100
+      },
+      {
+        "ipNo": "43906",
+        "admittedOn": "2023-06-07 13:39:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0463",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "General Ward",
+        "room": "bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1100
+      },
+      {
+        "ipNo": "67548",
+        "admittedOn": "2023-06-07 13:32:00",
+        "patient": "Demo Patient 411",
+        "uhid": "DEMO-0048",
+        "age": 13,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "bed1",
+        "admittingDoctor": "Rushabh shah",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1100
+      },
+      {
+        "ipNo": "72346",
+        "admittedOn": "2023-06-07 11:38:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0368",
+        "age": 26,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed5",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 24
+      },
+      {
+        "ipNo": "91234",
+        "admittedOn": "2023-06-07 11:38:00",
+        "patient": "Demo Patient 401",
+        "uhid": "DEMO-0431",
+        "age": 25,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 5
+      },
+      {
+        "ipNo": "39854",
+        "admittedOn": "2023-06-07 11:38:00",
+        "patient": "Demo Patient 400",
+        "uhid": "DEMO-0001",
+        "age": 3,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 5
+      },
+      {
+        "ipNo": "62103",
+        "admittedOn": "2023-06-07 09:18:00",
+        "patient": "Demo Patient 412",
+        "uhid": "DEMO-0026",
+        "age": 27,
+        "gender": "Female",
+        "department": "Oncology",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "12512514232",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 2
+      },
+      {
+        "ipNo": "93784",
+        "admittedOn": "2023-06-06 14:15:00",
+        "patient": "Demo Patient 413",
+        "uhid": "DEMO-0022",
+        "age": 36,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "ICU-002",
+        "admittingDoctor": "kartik",
+        "payer": "Self-pay",
+        "status": "In discharge queue",
+        "dischargeType": "-",
+        "los": 1101
+      },
+      {
+        "ipNo": "74261",
+        "admittedOn": "2023-05-26 10:41:00",
+        "patient": "Demo Patient 397",
+        "uhid": "DEMO-0345",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special bed 2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 11
+      },
+      {
+        "ipNo": "59267",
+        "admittedOn": "2023-05-26 10:04:00",
+        "patient": "Demo Patient 413",
+        "uhid": "DEMO-0022",
+        "age": 36,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "Special",
+        "room": "Special Room 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "91625",
+        "admittedOn": "2023-05-17 15:18:00",
+        "patient": "Demo Patient 414",
+        "uhid": "DEMO-0464",
+        "age": 30,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed5",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 20
+      },
+      {
+        "ipNo": "37294",
+        "admittedOn": "2023-05-17 15:17:00",
+        "patient": "Demo Patient 415",
+        "uhid": "DEMO-0465",
+        "age": 30,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed4",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 79
+      },
+      {
+        "ipNo": "27036",
+        "admittedOn": "2023-05-17 15:16:00",
+        "patient": "Demo Patient 416",
+        "uhid": "DEMO-0466",
+        "age": 28,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1121
+      },
+      {
+        "ipNo": "95743",
+        "admittedOn": "2023-05-17 15:15:00",
+        "patient": "Demo Patient 417",
+        "uhid": "DEMO-0467",
+        "age": 30,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 23
+      },
+      {
+        "ipNo": "68109",
+        "admittedOn": "2023-05-17 15:15:00",
+        "patient": "Demo Patient 418",
+        "uhid": "DEMO-0468",
+        "age": 27,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1121
+      },
+      {
+        "ipNo": "53679",
+        "admittedOn": "2023-05-17 15:12:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0398",
+        "age": 26,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed3",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 1
+      },
+      {
+        "ipNo": "97831",
+        "admittedOn": "2023-05-17 15:11:00",
+        "patient": "Demo Patient 401",
+        "uhid": "DEMO-0469",
+        "age": 25,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed2",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 1
+      },
+      {
+        "ipNo": "04851",
+        "admittedOn": "2023-05-17 15:10:00",
+        "patient": "Demo Patient 398",
+        "uhid": "DEMO-0097",
+        "age": 24,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "ICU Ward",
+        "room": "Bed1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "102030",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1121
+      },
+      {
+        "ipNo": "14729",
+        "admittedOn": "2023-05-16 14:01:00",
+        "patient": "Demo Patient 419",
+        "uhid": "DEMO-0023",
+        "age": 24,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "ICU-001",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1122
+      },
+      {
+        "ipNo": "28951",
+        "admittedOn": "2023-05-12 10:26:00",
+        "patient": "Demo Patient 420",
+        "uhid": "DEMO-0007",
+        "age": 3,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "df",
+        "admittingDoctor": "kartik",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1126
+      },
+      {
+        "ipNo": "30891",
+        "admittedOn": "2023-05-04 08:37:00",
+        "patient": "Demo Patient 421",
+        "uhid": "DEMO-0020",
+        "age": 26,
+        "gender": "Male",
+        "department": "Oncology",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "82753",
+        "admittedOn": "2023-04-25 09:31:00",
+        "patient": "Demo Patient 422",
+        "uhid": "DEMO-0094",
+        "age": 37,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "45027",
+        "admittedOn": "2023-04-25 09:30:00",
+        "patient": "Demo Patient 410",
+        "uhid": "DEMO-0011",
+        "age": 25,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 2",
+        "admittingDoctor": "Virat  Mehta",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "10823",
+        "admittedOn": "2023-04-25 09:14:00",
+        "patient": "Demo Patient 75",
+        "uhid": "DEMO-0082",
+        "age": 4,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 2",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "07942",
+        "admittedOn": "2023-04-25 09:13:00",
+        "patient": "Demo Patient 420",
+        "uhid": "DEMO-0007",
+        "age": 3,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "80945",
+        "admittedOn": "2023-03-29 13:26:00",
+        "patient": "Demo Patient 75",
+        "uhid": "DEMO-0082",
+        "age": 4,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "Special",
+        "room": "Special bed 2",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 0
+      },
+      {
+        "ipNo": "38960",
+        "admittedOn": "2023-03-14 09:24:00",
+        "patient": "Demo Patient 410",
+        "uhid": "DEMO-0011",
+        "age": 25,
+        "gender": "Male",
+        "department": "-",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "1234567890",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 42
+      },
+      {
+        "ipNo": "40621",
+        "admittedOn": "2023-03-13 12:06:00",
+        "patient": "Demo Patient 423",
+        "uhid": "DEMO-0470",
+        "age": 26,
+        "gender": "Male",
+        "department": "-",
+        "ward": "General Ward",
+        "room": "ICU-002",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "1234567890",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 43
+      },
+      {
+        "ipNo": "15689",
+        "admittedOn": "2023-03-13 11:43:00",
+        "patient": "Demo Patient 424",
+        "uhid": "DEMO-0471",
+        "age": 33,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "ICU-001",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 43
+      },
+      {
+        "ipNo": "17209",
+        "admittedOn": "2023-03-11 12:16:00",
+        "patient": "Demo Patient 425",
+        "uhid": "DEMO-0449",
+        "age": 36,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "kartik",
+        "payer": "1234567890",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1188
+      },
+      {
+        "ipNo": "20165",
+        "admittedOn": "2023-03-11 09:32:00",
+        "patient": "Demo Patient 426",
+        "uhid": "DEMO-0016",
+        "age": 56,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "bed2",
+        "admittingDoctor": "kartik",
+        "payer": "1234567890",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1188
+      },
+      {
+        "ipNo": "12574",
+        "admittedOn": "2023-03-10 10:31:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0052",
+        "age": 25,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room 2",
+        "admittingDoctor": "kartik",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1189
+      },
+      {
+        "ipNo": "73582",
+        "admittedOn": "2022-12-20 16:10:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0003",
+        "age": 4,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "1234567890",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "87591",
+        "admittedOn": "2022-11-09 15:19:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0003",
+        "age": 4,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "23849",
+        "admittedOn": "2022-11-05 14:21:00",
+        "patient": "Demo Patient 427",
+        "uhid": "DEMO-0472",
+        "age": null,
+        "gender": "-",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "13607",
+        "admittedOn": "2022-10-07 14:31:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0003",
+        "age": 4,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 0
+      },
+      {
+        "ipNo": "84965",
+        "admittedOn": "2022-08-30 16:50:00",
+        "patient": "Demo Patient 412",
+        "uhid": "DEMO-0400",
+        "age": 27,
+        "gender": "Female",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room No. 123",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "DAMA",
+        "los": 67
+      },
+      {
+        "ipNo": "51976",
+        "admittedOn": "2022-08-30 11:39:00",
+        "patient": "Demo Patient 399",
+        "uhid": "DEMO-0003",
+        "age": 4,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Death",
+        "los": 38
+      },
+      {
+        "ipNo": "76390",
+        "admittedOn": "2022-06-09 17:25:00",
+        "patient": "Demo Patient 420",
+        "uhid": "DEMO-0007",
+        "age": 3,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Room No. 123",
+        "admittingDoctor": "Virat  Mehta",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 6
+      },
+      {
+        "ipNo": "97418",
+        "admittedOn": "2022-03-24 09:12:00",
+        "patient": "Demo Patient 375",
+        "uhid": "DEMO-0473",
+        "age": 26,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "test ward",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Admitted",
+        "dischargeType": "-",
+        "los": 1540
+      },
+      {
+        "ipNo": "02964",
+        "admittedOn": "2022-03-22 09:52:00",
+        "patient": "Demo Patient 428",
+        "uhid": "DEMO-0044",
+        "age": 16,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 161
+      },
+      {
+        "ipNo": "57962",
+        "admittedOn": "2022-02-14 11:25:00",
+        "patient": "Demo Patient 429",
+        "uhid": "DEMO-0057",
+        "age": 4,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "Test bed",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "1231564684",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 238
+      },
+      {
+        "ipNo": "38609",
+        "admittedOn": "2022-02-14 11:25:00",
+        "patient": "Demo Patient 420",
+        "uhid": "DEMO-0007",
+        "age": 3,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "test ward",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "91367",
+        "admittedOn": "2022-02-11 12:11:00",
+        "patient": "Demo Patient 420",
+        "uhid": "DEMO-0007",
+        "age": 3,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "test ward",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 3
+      },
+      {
+        "ipNo": "82015",
+        "admittedOn": "2022-02-03 12:15:00",
+        "patient": "Demo Patient 85",
+        "uhid": "DEMO-0092",
+        "age": 29,
+        "gender": "Male",
+        "department": "Psychiatry",
+        "ward": "General Ward",
+        "room": "Bed 1",
+        "admittingDoctor": "Avinash Sharma",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Transfer Out",
+        "los": 494
+      },
+      {
+        "ipNo": "61029",
+        "admittedOn": "2021-11-01 16:00:00",
+        "patient": "Demo Patient 373",
+        "uhid": "DEMO-0443",
+        "age": 13,
+        "gender": "Male",
+        "department": "Orthopaedics",
+        "ward": "General Ward",
+        "room": "Room No. 123",
+        "admittingDoctor": "Samir Vankhade",
+        "payer": "Self-pay",
+        "status": "Discharged",
+        "dischargeType": "Medical",
+        "los": 147
+      }
+    ]
+  },
+  "dischargeRegister": {
+    "columns": [
+      {
+        "key": "dischargedOn",
+        "label": "Discharged on"
+      },
+      {
+        "key": "ipNo",
+        "label": "IP no"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "ward",
+        "label": "Ward"
+      },
+      {
+        "key": "department",
+        "label": "Department"
+      },
+      {
+        "key": "doctor",
+        "label": "Doctor"
+      },
+      {
+        "key": "dischargeType",
+        "label": "Discharge type"
+      },
+      {
+        "key": "los",
+        "label": "LOS (days)"
+      }
+    ],
+    "rows": [
+      {
+        "ipNo": "85431",
+        "dischargedOn": "2025-10-07 15:08",
+        "patient": "Demo Patient 398",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Not recorded",
+        "los": 848
+      },
+      {
+        "ipNo": "46905",
+        "dischargedOn": "2024-04-23 13:45",
+        "patient": "Demo Patient 395",
+        "ward": "General Ward",
+        "department": "Gynaecology",
+        "doctor": "richa(gyna)",
+        "dischargeType": "Medical",
+        "los": 74
+      },
+      {
+        "ipNo": "27806",
+        "dischargedOn": "2024-04-11 14:38",
+        "patient": "Demo Patient 42",
+        "ward": "ICU Ward",
+        "department": "Paediatrics",
+        "doctor": "prachi patel(pedia)",
+        "dischargeType": "DAMA",
+        "los": 37
+      },
+      {
+        "ipNo": "83409",
+        "dischargedOn": "2024-04-10 18:03",
+        "patient": "Demo Patient 393",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "30476",
+        "dischargedOn": "2023-09-27 09:32",
+        "patient": "Demo Patient 397",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 112
+      },
+      {
+        "ipNo": "86401",
+        "dischargedOn": "2023-09-27 09:32",
+        "patient": "Demo Patient 397",
+        "ward": "Special",
+        "department": "Orthopaedics",
+        "doctor": "Rushabh shah",
+        "dischargeType": "DAMA",
+        "los": 112
+      },
+      {
+        "ipNo": "12846",
+        "dischargedOn": "2023-09-27 09:31",
+        "patient": "Demo Patient 397",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "85932",
+        "dischargedOn": "2023-09-26 09:21",
+        "patient": "Demo Patient 401",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 106
+      },
+      {
+        "ipNo": "05672",
+        "dischargedOn": "2023-09-26 09:20",
+        "patient": "Demo Patient 400",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 88
+      },
+      {
+        "ipNo": "07421",
+        "dischargedOn": "2023-09-04 14:19",
+        "patient": "Demo Patient 403",
+        "ward": "Special",
+        "department": "-",
+        "doctor": "Piyush sharma (peadia)",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "89023",
+        "dischargedOn": "2023-08-24 15:08",
+        "patient": "Demo Patient 407",
+        "ward": "ICU Ward",
+        "department": "Orthopaedics",
+        "doctor": "Rushabh shah",
+        "dischargeType": "DAMA",
+        "los": 2
+      },
+      {
+        "ipNo": "51273",
+        "dischargedOn": "2023-08-13 19:33",
+        "patient": "Demo Patient 112",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "60593",
+        "dischargedOn": "2023-08-04 16:32",
+        "patient": "Demo Patient 408",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "los": 35
+      },
+      {
+        "ipNo": "15236",
+        "dischargedOn": "2023-08-04 11:34",
+        "patient": "Demo Patient 398",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 35
+      },
+      {
+        "ipNo": "37294",
+        "dischargedOn": "2023-08-04 11:08",
+        "patient": "Demo Patient 415",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 79
+      },
+      {
+        "ipNo": "98563",
+        "dischargedOn": "2023-07-19 17:22",
+        "patient": "Demo Patient 395",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "kartik",
+        "dischargeType": "Medical",
+        "los": 23
+      },
+      {
+        "ipNo": "72346",
+        "dischargedOn": "2023-07-01 09:20",
+        "patient": "Demo Patient 399",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 24
+      },
+      {
+        "ipNo": "68413",
+        "dischargedOn": "2023-06-30 10:47",
+        "patient": "Demo Patient 400",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "los": 18
+      },
+      {
+        "ipNo": "76983",
+        "dischargedOn": "2023-06-20 10:34",
+        "patient": "Demo Patient 410",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "los": 6
+      },
+      {
+        "ipNo": "42370",
+        "dischargedOn": "2023-06-16 12:16",
+        "patient": "Demo Patient 406",
+        "ward": "Special",
+        "department": "Neurology",
+        "doctor": "Brijesh",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "69517",
+        "dischargedOn": "2023-06-14 14:50",
+        "patient": "Demo Patient 409",
+        "ward": "General Ward",
+        "department": "Gynaecology",
+        "doctor": "Brijesh",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "91234",
+        "dischargedOn": "2023-06-12 15:14",
+        "patient": "Demo Patient 401",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 5
+      },
+      {
+        "ipNo": "50834",
+        "dischargedOn": "2023-06-12 15:13",
+        "patient": "Demo Patient 400",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "39854",
+        "dischargedOn": "2023-06-12 15:11",
+        "patient": "Demo Patient 400",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 5
+      },
+      {
+        "ipNo": "82015",
+        "dischargedOn": "2023-06-12 11:49",
+        "patient": "Demo Patient 85",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "los": 494
+      },
+      {
+        "ipNo": "95743",
+        "dischargedOn": "2023-06-09 09:59",
+        "patient": "Demo Patient 417",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "los": 23
+      },
+      {
+        "ipNo": "62103",
+        "dischargedOn": "2023-06-09 09:52",
+        "patient": "Demo Patient 412",
+        "ward": "General Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "los": 2
+      },
+      {
+        "ipNo": "91625",
+        "dischargedOn": "2023-06-06 11:38",
+        "patient": "Demo Patient 414",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "los": 20
+      },
+      {
+        "ipNo": "74261",
+        "dischargedOn": "2023-06-06 11:37",
+        "patient": "Demo Patient 397",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "los": 11
+      },
+      {
+        "ipNo": "59267",
+        "dischargedOn": "2023-05-26 17:13",
+        "patient": "Demo Patient 413",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "53679",
+        "dischargedOn": "2023-05-18 10:33",
+        "patient": "Demo Patient 399",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 1
+      },
+      {
+        "ipNo": "97831",
+        "dischargedOn": "2023-05-18 09:50",
+        "patient": "Demo Patient 401",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "los": 1
+      },
+      {
+        "ipNo": "30891",
+        "dischargedOn": "2023-05-04 08:39",
+        "patient": "Demo Patient 421",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "45027",
+        "dischargedOn": "2023-04-25 09:35",
+        "patient": "Demo Patient 410",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Virat  Mehta",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "82753",
+        "dischargedOn": "2023-04-25 09:33",
+        "patient": "Demo Patient 422",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "40621",
+        "dischargedOn": "2023-04-25 09:20",
+        "patient": "Demo Patient 423",
+        "ward": "General Ward",
+        "department": "-",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 43
+      },
+      {
+        "ipNo": "38960",
+        "dischargedOn": "2023-04-25 09:20",
+        "patient": "Demo Patient 410",
+        "ward": "General Ward",
+        "department": "-",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "los": 42
+      },
+      {
+        "ipNo": "10823",
+        "dischargedOn": "2023-04-25 09:15",
+        "patient": "Demo Patient 75",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "DAMA",
+        "los": 0
+      },
+      {
+        "ipNo": "07942",
+        "dischargedOn": "2023-04-25 09:15",
+        "patient": "Demo Patient 420",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "15689",
+        "dischargedOn": "2023-04-25 09:09",
+        "patient": "Demo Patient 424",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "los": 43
+      },
+      {
+        "ipNo": "80945",
+        "dischargedOn": "2023-03-29 13:41",
+        "patient": "Demo Patient 75",
+        "ward": "Special",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "los": 0
+      },
+      {
+        "ipNo": "73582",
+        "dischargedOn": "2022-12-20 16:35",
+        "patient": "Demo Patient 399",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "87591",
+        "dischargedOn": "2022-11-09 16:12",
+        "patient": "Demo Patient 399",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "84965",
+        "dischargedOn": "2022-11-05 14:47",
+        "patient": "Demo Patient 412",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "DAMA",
+        "los": 67
+      },
+      {
+        "ipNo": "23849",
+        "dischargedOn": "2022-11-05 14:33",
+        "patient": "Demo Patient 427",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "los": 0
+      },
+      {
+        "ipNo": "57962",
+        "dischargedOn": "2022-10-10 17:05",
+        "patient": "Demo Patient 429",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "los": 238
+      },
+      {
+        "ipNo": "13607",
+        "dischargedOn": "2022-10-07 17:02",
+        "patient": "Demo Patient 399",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "los": 0
+      },
+      {
+        "ipNo": "51976",
+        "dischargedOn": "2022-10-07 14:11",
+        "patient": "Demo Patient 399",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "los": 38
+      },
+      {
+        "ipNo": "02964",
+        "dischargedOn": "2022-08-30 11:26",
+        "patient": "Demo Patient 428",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "los": 161
+      },
+      {
+        "ipNo": "76390",
+        "dischargedOn": "2022-06-15 08:48",
+        "patient": "Demo Patient 420",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Virat  Mehta",
+        "dischargeType": "Transfer Out",
+        "los": 6
+      },
+      {
+        "ipNo": "61029",
+        "dischargedOn": "2022-03-28 16:29",
+        "patient": "Demo Patient 373",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 147
+      },
+      {
+        "ipNo": "38609",
+        "dischargedOn": "2022-02-14 11:24",
+        "patient": "Demo Patient 420",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "los": 0
+      },
+      {
+        "ipNo": "91367",
+        "dischargedOn": "2022-02-14 11:16",
+        "patient": "Demo Patient 420",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "los": 3
+      }
+    ]
+  },
+  "queueRegister": {
+    "columns": [
+      {
+        "key": "queuedOn",
+        "label": "Queued on"
+      },
+      {
+        "key": "ipNo",
+        "label": "IP no"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "ward",
+        "label": "Ward"
+      },
+      {
+        "key": "department",
+        "label": "Department"
+      },
+      {
+        "key": "doctor",
+        "label": "Doctor"
+      },
+      {
+        "key": "daysInQueue",
+        "label": "Days in queue"
+      }
+    ],
+    "rows": [
+      {
+        "ipNo": "93784",
+        "queuedOn": "2023-08-04 11:03",
+        "patient": "Demo Patient 413",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "kartik",
+        "daysInQueue": 1042
+      },
+      {
+        "ipNo": "12380",
+        "queuedOn": "2023-08-09 16:57",
+        "patient": "Demo Patient 408",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Anuj",
+        "daysInQueue": 1037
+      },
+      {
+        "ipNo": "67289",
+        "queuedOn": "2023-09-05 12:03",
+        "patient": "Demo Patient 405",
+        "ward": "ICU Ward",
+        "department": "Psychiatry",
+        "doctor": "kartik",
+        "daysInQueue": 1010
+      },
+      {
+        "ipNo": "36047",
+        "queuedOn": "2024-02-28 16:56",
+        "patient": "Demo Patient 394",
+        "ward": "Special",
+        "department": "Paediatrics",
+        "doctor": "Piyush sharma (peadia)",
+        "daysInQueue": 834
+      }
+    ]
+  },
+  "losRegister": {
+    "columns": [
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "ipNo",
+        "label": "IP no"
+      },
+      {
+        "key": "admittedOn",
+        "label": "Admitted on"
+      },
+      {
+        "key": "dischargedOn",
+        "label": "Discharged on"
+      },
+      {
+        "key": "ward",
+        "label": "Ward"
+      },
+      {
+        "key": "department",
+        "label": "Department"
+      },
+      {
+        "key": "doctor",
+        "label": "Doctor"
+      },
+      {
+        "key": "dischargeType",
+        "label": "Discharge type"
+      },
+      {
+        "key": "losDays",
+        "label": "LOS (days)"
+      }
+    ],
+    "rows": [
+      {
+        "patient": "Demo Patient 398",
+        "ipNo": "85431",
+        "admittedOn": "2023-06-12 15:08:00",
+        "dischargedOn": "2025-10-07 15:08",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Not recorded",
+        "losDays": 848
+      },
+      {
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "admittedOn": "2022-02-03 12:15:00",
+        "dischargedOn": "2023-06-12 11:49",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "losDays": 494
+      },
+      {
+        "patient": "Demo Patient 429",
+        "ipNo": "57962",
+        "admittedOn": "2022-02-14 11:25:00",
+        "dischargedOn": "2022-10-10 17:05",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "losDays": 238
+      },
+      {
+        "patient": "Demo Patient 428",
+        "ipNo": "02964",
+        "admittedOn": "2022-03-22 09:52:00",
+        "dischargedOn": "2022-08-30 11:26",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "losDays": 161
+      },
+      {
+        "patient": "Demo Patient 373",
+        "ipNo": "61029",
+        "admittedOn": "2021-11-01 16:00:00",
+        "dischargedOn": "2022-03-28 16:29",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 147
+      },
+      {
+        "patient": "Demo Patient 397",
+        "ipNo": "30476",
+        "admittedOn": "2023-06-07 12:29:00",
+        "dischargedOn": "2023-09-27 09:32",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 112
+      },
+      {
+        "patient": "Demo Patient 397",
+        "ipNo": "86401",
+        "admittedOn": "2023-06-07 15:43:00",
+        "dischargedOn": "2023-09-27 09:32",
+        "ward": "Special",
+        "department": "Orthopaedics",
+        "doctor": "Rushabh shah",
+        "dischargeType": "DAMA",
+        "losDays": 112
+      },
+      {
+        "patient": "Demo Patient 401",
+        "ipNo": "85932",
+        "admittedOn": "2023-06-12 15:17:00",
+        "dischargedOn": "2023-09-26 09:21",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 106
+      },
+      {
+        "patient": "Demo Patient 400",
+        "ipNo": "05672",
+        "admittedOn": "2023-06-30 10:47:00",
+        "dischargedOn": "2023-09-26 09:20",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 88
+      },
+      {
+        "patient": "Demo Patient 415",
+        "ipNo": "37294",
+        "admittedOn": "2023-05-17 15:17:00",
+        "dischargedOn": "2023-08-04 11:08",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 79
+      },
+      {
+        "patient": "Demo Patient 395",
+        "ipNo": "46905",
+        "admittedOn": "2024-02-09 17:04:00",
+        "dischargedOn": "2024-04-23 13:45",
+        "ward": "General Ward",
+        "department": "Gynaecology",
+        "doctor": "richa(gyna)",
+        "dischargeType": "Medical",
+        "losDays": 74
+      },
+      {
+        "patient": "Demo Patient 412",
+        "ipNo": "84965",
+        "admittedOn": "2022-08-30 16:50:00",
+        "dischargedOn": "2022-11-05 14:47",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "DAMA",
+        "losDays": 67
+      },
+      {
+        "patient": "Demo Patient 424",
+        "ipNo": "15689",
+        "admittedOn": "2023-03-13 11:43:00",
+        "dischargedOn": "2023-04-25 09:09",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "losDays": 43
+      },
+      {
+        "patient": "Demo Patient 423",
+        "ipNo": "40621",
+        "admittedOn": "2023-03-13 12:06:00",
+        "dischargedOn": "2023-04-25 09:20",
+        "ward": "General Ward",
+        "department": "-",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 43
+      },
+      {
+        "patient": "Demo Patient 410",
+        "ipNo": "38960",
+        "admittedOn": "2023-03-14 09:24:00",
+        "dischargedOn": "2023-04-25 09:20",
+        "ward": "General Ward",
+        "department": "-",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "losDays": 42
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "51976",
+        "admittedOn": "2022-08-30 11:39:00",
+        "dischargedOn": "2022-10-07 14:11",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "losDays": 38
+      },
+      {
+        "patient": "Demo Patient 42",
+        "ipNo": "27806",
+        "admittedOn": "2024-03-05 17:12:00",
+        "dischargedOn": "2024-04-11 14:38",
+        "ward": "ICU Ward",
+        "department": "Paediatrics",
+        "doctor": "prachi patel(pedia)",
+        "dischargeType": "DAMA",
+        "losDays": 37
+      },
+      {
+        "patient": "Demo Patient 398",
+        "ipNo": "15236",
+        "admittedOn": "2023-06-30 10:50:00",
+        "dischargedOn": "2023-08-04 11:34",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 35
+      },
+      {
+        "patient": "Demo Patient 408",
+        "ipNo": "60593",
+        "admittedOn": "2023-06-30 15:13:00",
+        "dischargedOn": "2023-08-04 16:32",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "losDays": 35
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "72346",
+        "admittedOn": "2023-06-07 11:38:00",
+        "dischargedOn": "2023-07-01 09:20",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 24
+      },
+      {
+        "patient": "Demo Patient 395",
+        "ipNo": "98563",
+        "admittedOn": "2023-06-26 11:46:00",
+        "dischargedOn": "2023-07-19 17:22",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "kartik",
+        "dischargeType": "Medical",
+        "losDays": 23
+      },
+      {
+        "patient": "Demo Patient 417",
+        "ipNo": "95743",
+        "admittedOn": "2023-05-17 15:15:00",
+        "dischargedOn": "2023-06-09 09:59",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "losDays": 23
+      },
+      {
+        "patient": "Demo Patient 414",
+        "ipNo": "91625",
+        "admittedOn": "2023-05-17 15:18:00",
+        "dischargedOn": "2023-06-06 11:38",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "losDays": 20
+      },
+      {
+        "patient": "Demo Patient 400",
+        "ipNo": "68413",
+        "admittedOn": "2023-06-12 15:16:00",
+        "dischargedOn": "2023-06-30 10:47",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "losDays": 18
+      },
+      {
+        "patient": "Demo Patient 397",
+        "ipNo": "74261",
+        "admittedOn": "2023-05-26 10:41:00",
+        "dischargedOn": "2023-06-06 11:37",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "losDays": 11
+      },
+      {
+        "patient": "Demo Patient 410",
+        "ipNo": "76983",
+        "admittedOn": "2023-06-14 14:46:00",
+        "dischargedOn": "2023-06-20 10:34",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "losDays": 6
+      },
+      {
+        "patient": "Demo Patient 420",
+        "ipNo": "76390",
+        "admittedOn": "2022-06-09 17:25:00",
+        "dischargedOn": "2022-06-15 08:48",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Virat  Mehta",
+        "dischargeType": "Transfer Out",
+        "losDays": 6
+      },
+      {
+        "patient": "Demo Patient 401",
+        "ipNo": "91234",
+        "admittedOn": "2023-06-07 11:38:00",
+        "dischargedOn": "2023-06-12 15:14",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 5
+      },
+      {
+        "patient": "Demo Patient 400",
+        "ipNo": "39854",
+        "admittedOn": "2023-06-07 11:38:00",
+        "dischargedOn": "2023-06-12 15:11",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 5
+      },
+      {
+        "patient": "Demo Patient 420",
+        "ipNo": "91367",
+        "admittedOn": "2022-02-11 12:11:00",
+        "dischargedOn": "2022-02-14 11:16",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 3
+      },
+      {
+        "patient": "Demo Patient 407",
+        "ipNo": "89023",
+        "admittedOn": "2023-08-22 10:44:00",
+        "dischargedOn": "2023-08-24 15:08",
+        "ward": "ICU Ward",
+        "department": "Orthopaedics",
+        "doctor": "Rushabh shah",
+        "dischargeType": "DAMA",
+        "losDays": 2
+      },
+      {
+        "patient": "Demo Patient 412",
+        "ipNo": "62103",
+        "admittedOn": "2023-06-07 09:18:00",
+        "dischargedOn": "2023-06-09 09:52",
+        "ward": "General Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Death",
+        "losDays": 2
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "53679",
+        "admittedOn": "2023-05-17 15:12:00",
+        "dischargedOn": "2023-05-18 10:33",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 1
+      },
+      {
+        "patient": "Demo Patient 401",
+        "ipNo": "97831",
+        "admittedOn": "2023-05-17 15:11:00",
+        "dischargedOn": "2023-05-18 09:50",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 1
+      },
+      {
+        "patient": "Demo Patient 420",
+        "ipNo": "07942",
+        "admittedOn": "2023-04-25 09:13:00",
+        "dischargedOn": "2023-04-25 09:15",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 393",
+        "ipNo": "83409",
+        "admittedOn": "2024-04-10 17:54:00",
+        "dischargedOn": "2024-04-10 18:03",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 420",
+        "ipNo": "38609",
+        "admittedOn": "2022-02-14 11:25:00",
+        "dischargedOn": "2022-02-14 11:24",
+        "ward": "General Ward",
+        "department": "Orthopaedics",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Transfer Out",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "13607",
+        "admittedOn": "2022-10-07 14:31:00",
+        "dischargedOn": "2022-10-07 17:02",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 397",
+        "ipNo": "12846",
+        "admittedOn": "2023-09-27 09:28:00",
+        "dischargedOn": "2023-09-27 09:31",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 403",
+        "ipNo": "07421",
+        "admittedOn": "2023-09-22 14:16:00",
+        "dischargedOn": "2023-09-04 14:19",
+        "ward": "Special",
+        "department": "-",
+        "doctor": "Piyush sharma (peadia)",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 112",
+        "ipNo": "51273",
+        "admittedOn": "2023-08-13 19:26:00",
+        "dischargedOn": "2023-08-13 19:33",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 427",
+        "ipNo": "23849",
+        "admittedOn": "2022-11-05 14:21:00",
+        "dischargedOn": "2022-11-05 14:33",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "87591",
+        "admittedOn": "2022-11-09 15:19:00",
+        "dischargedOn": "2022-11-09 16:12",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 399",
+        "ipNo": "73582",
+        "admittedOn": "2022-12-20 16:10:00",
+        "dischargedOn": "2022-12-20 16:35",
+        "ward": "General Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 75",
+        "ipNo": "80945",
+        "admittedOn": "2023-03-29 13:26:00",
+        "dischargedOn": "2023-03-29 13:41",
+        "ward": "Special",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Death",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 406",
+        "ipNo": "42370",
+        "admittedOn": "2023-06-16 12:06:00",
+        "dischargedOn": "2023-06-16 12:16",
+        "ward": "Special",
+        "department": "Neurology",
+        "doctor": "Brijesh",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 409",
+        "ipNo": "69517",
+        "admittedOn": "2023-06-14 14:47:00",
+        "dischargedOn": "2023-06-14 14:50",
+        "ward": "General Ward",
+        "department": "Gynaecology",
+        "doctor": "Brijesh",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 75",
+        "ipNo": "10823",
+        "admittedOn": "2023-04-25 09:14:00",
+        "dischargedOn": "2023-04-25 09:15",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 410",
+        "ipNo": "45027",
+        "admittedOn": "2023-04-25 09:30:00",
+        "dischargedOn": "2023-04-25 09:35",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Virat  Mehta",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 422",
+        "ipNo": "82753",
+        "admittedOn": "2023-04-25 09:31:00",
+        "dischargedOn": "2023-04-25 09:33",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Psychiatry",
+        "doctor": "Avinash Sharma",
+        "dischargeType": "Transfer Out",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 400",
+        "ipNo": "50834",
+        "admittedOn": "2023-06-12 15:12:00",
+        "dischargedOn": "2023-06-12 15:13",
+        "ward": "ICU Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 421",
+        "ipNo": "30891",
+        "admittedOn": "2023-05-04 08:37:00",
+        "dischargedOn": "2023-05-04 08:39",
+        "ward": "SVVP Hosptial - Normal Ward",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "Medical",
+        "losDays": 0
+      },
+      {
+        "patient": "Demo Patient 413",
+        "ipNo": "59267",
+        "admittedOn": "2023-05-26 10:04:00",
+        "dischargedOn": "2023-05-26 17:13",
+        "ward": "Special",
+        "department": "Oncology",
+        "doctor": "Samir Vankhade",
+        "dischargeType": "DAMA",
+        "losDays": 0
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 87,
+    "note": "Source: legacy clinic replica. Hospitals on the modern pm-ipd microservice need that feed wired in before their data appears here."
+  }
+}

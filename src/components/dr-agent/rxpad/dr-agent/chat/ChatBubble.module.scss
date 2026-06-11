@@ -1,0 +1,466 @@
+// ─── User bubble root ───────────────────────────────────────────────────────
+
+.userMsgRoot {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.userMsgOuter {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.userMsgInner {
+  display: flex;
+  max-width: 85%;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.attachmentWrapper {
+  width: 100%;
+  max-width: 220px;
+}
+
+.voiceTranscriptCard {
+  width: 100%;
+  max-width: 380px;
+}
+
+.userTextBubble {
+  border-radius: 12px 12px 0 12px;
+  background: var(--tp-slate-100, #f1f5f9);
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--tp-slate-700, #334155);
+}
+
+.userTextContent {
+  white-space: pre-wrap;
+}
+
+// ─── Hover actions (user bubble) ────────────────────────────────────────────
+
+.userHoverActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: opacity 150ms ease;
+}
+
+.userHoverActionsTouch {
+  opacity: 0.7;
+}
+
+.userHoverActionsHover {
+  opacity: 0;
+
+  .userMsgRoot:hover & {
+    opacity: 1;
+  }
+}
+
+.copyIconUser {
+  color: var(--tp-slate-400) !important;
+
+  &:hover {
+    color: var(--tp-slate-600) !important;
+  }
+}
+
+.editIconBtn {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  align-items: center;
+  justify-content: center;
+  color: var(--tp-slate-400, #94a3b8);
+  transition: color 150ms ease;
+
+  &:hover {
+    color: var(--tp-slate-600, #475569);
+  }
+}
+
+// ─── Edit mode ───────────────────────────────────────────────────────────────
+
+.editContainer {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--tp-blue-200, #bfdbfe);
+  background: #fff;
+  padding: 10px 12px;
+  box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.08);
+}
+
+.editTextarea {
+  width: 100%;
+  resize: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--tp-slate-700, #334155);
+  outline: none;
+  border: none;
+}
+
+.editActions {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.editActionBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.editCancelBtn {
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--tp-slate-500, #64748b);
+  transition: background 150ms ease;
+
+  &:hover {
+    background: var(--tp-slate-50, #f8fafc);
+  }
+}
+
+.editSendBtn {
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--tp-blue-500, #4b4ad5);
+  transition: opacity 150ms ease;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+// ─── Assistant bubble root ───────────────────────────────────────────────────
+
+.assistantMsgRoot {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.assistantMsgInner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.assistantTextRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.assistantSparkIcon {
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.assistantText {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--tp-slate-700, #334155);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+// ─── Streaming cursor ────────────────────────────────────────────────────────
+
+.streamCursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--tp-violet-400, #a78bfa);
+  margin-left: 1px;
+  vertical-align: middle;
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+}
+
+// ─── Card wrapper (phased reveal) ────────────────────────────────────────────
+
+.cardWrapper {
+  margin-left: 30px;
+  margin-top: 12px;
+  width: calc(100% - 30px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out, max-height 600ms ease-out;
+  overflow: hidden;
+}
+
+.cardRevealed {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 2000px;
+}
+
+.cardHidden {
+  opacity: 0;
+  transform: translateY(8px);
+  max-height: 0;
+}
+
+// ─── Feedback row ────────────────────────────────────────────────────────────
+
+.feedbackRow {
+  margin-left: 30px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.feedbackRevealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedbackHidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.dividerLine {
+  height: 12px;
+  width: 1px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(148, 163, 184, 0.25) 50%, transparent 100%);
+}
+
+// ─── Source dropdown button ──────────────────────────────────────────────────
+
+.sourceBtn {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: 4px;
+  padding: 2px 5px;
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.sourceBtnOpen {
+  color: var(--tp-violet-600, #7c3aed);
+  background: var(--tp-violet-50, #f5f3ff);
+}
+
+.sourceBtnClosed {
+  color: var(--tp-slate-400, #94a3b8);
+
+  &:hover {
+    color: var(--tp-slate-500, #64748b);
+    background: var(--tp-slate-50, #f8fafc);
+  }
+}
+
+.sourceBtnLabel {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+// ─── Source dropdown portal ──────────────────────────────────────────────────
+
+.sourceDropdown {
+  position: fixed;
+  z-index: 9999;
+  width: 280px;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(148, 163, 184, 0.12);
+}
+
+.sourceDropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.sourceDropdownHeaderIcon {
+  color: var(--tp-slate-400, #94a3b8);
+}
+
+.sourceDropdownHeaderText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-slate-500, #64748b);
+}
+
+.sourceDropdownBody {
+  padding: 6px 10px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.sourceEntry {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 4px 0;
+}
+
+.sourceDot {
+  margin-top: 4px;
+  flex-shrink: 0;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
+.sourceEntryContent {
+  min-width: 0;
+  flex: 1;
+}
+
+.sourceEntryText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--tp-slate-700, #334155);
+}
+
+.sourceEntryLabel {
+  font-weight: 600;
+}
+
+.sourceEntryMiddot {
+  color: var(--tp-slate-400, #94a3b8);
+  margin: 0 4px;
+}
+
+.sourceEntryDesc {
+  color: var(--tp-slate-500, #64748b);
+}
+
+// ─── Portal tooltip ──────────────────────────────────────────────────────────
+
+.portalTooltip {
+  position: fixed;
+  z-index: 9999;
+}
+
+.tooltipCard {
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.tooltipArrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+}
+
+// ─── Markdown rendering ──────────────────────────────────────────────────────
+
+.mdBold {
+  font-weight: 600;
+  color: var(--tp-slate-900, #0f172a);
+}
+
+.mdLink {
+  font-weight: 500;
+  color: var(--tp-blue-600, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 150ms ease;
+
+  &:hover {
+    color: var(--tp-blue-700, #1d4ed8);
+  }
+}
+
+.mdActionLink {
+  font-weight: 500;
+  color: var(--tp-blue-600, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 150ms ease;
+
+  &:hover {
+    color: var(--tp-blue-700, #1d4ed8);
+  }
+}
+
+// ─── Suggestion pills ────────────────────────────────────────────────────────
+
+.suggestionsWrapper {
+  margin-left: 30px;
+  margin-top: 8px;
+  width: calc(100% - 30px);
+}
+
+.suggestionScroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.suggestionPill {
+  flex-shrink: 0;
+  border-radius: 9999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 150ms ease;
+  background: linear-gradient(
+    135deg,
+    rgba(213, 101, 234, 0.08) 0%,
+    rgba(103, 58, 172, 0.08) 50%,
+    rgba(26, 25, 148, 0.08) 100%
+  );
+  border: 1px solid rgba(103, 58, 172, 0.15);
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.suggestionPillText {
+  background: linear-gradient(91deg, #d565ea 3%, #673aac 67%, #1a1994 130%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dynamic animation delay set via --da-delay CSS custom property */
+:global(.da-shimmer-word) {
+  animation-delay: var(--da-delay, 0ms);
+}
+
+.sourceInfoTooltip {
+  position: fixed;
+  transform: translateX(-100%);
+  z-index: 2147483647;
+  min-width: 160px;
+  max-width: 240px;
+  pointer-events: none;
+}

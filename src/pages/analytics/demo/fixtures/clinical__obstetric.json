@@ -1,0 +1,926 @@
+{
+  "kpis": [
+    {
+      "key": "patients",
+      "label": "Patients with obstetric record",
+      "value": 21,
+      "description": "Distinct patients with at least one obstetric history record in this database."
+    },
+    {
+      "key": "records",
+      "label": "Obstetric records",
+      "value": 59,
+      "description": "Total obstetric history entries (pregnancies, abortions, ectopics)."
+    },
+    {
+      "key": "pregnancies",
+      "label": "Pregnancy / delivery events",
+      "value": 25,
+      "description": "Recorded pregnancy or delivery events. This is an event count, not the G/P counters (those are not stored in this database)."
+    },
+    {
+      "key": "abortions",
+      "label": "Abortion events",
+      "value": 22,
+      "description": "Recorded abortion / miscarriage events (the nearest available proxy for the A counter, which is not stored here)."
+    },
+    {
+      "key": "ectopic",
+      "label": "Ectopic events",
+      "value": 12,
+      "description": "Recorded ectopic pregnancy events."
+    },
+    {
+      "key": "currentlyPregnant",
+      "label": "Marked currently pregnant",
+      "value": 20,
+      "description": "Patients whose legacy pregnancy record is flagged as currently pregnant. Frozen data: treat as historical."
+    }
+  ],
+  "outcomeMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Event type"
+      },
+      {
+        "key": "count",
+        "label": "Records"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Pregnancy / delivery",
+        "count": 25
+      },
+      {
+        "k": "Abortion",
+        "count": 22
+      },
+      {
+        "k": "Ectopic",
+        "count": 12
+      }
+    ]
+  },
+  "deliveryModeMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Delivery mode"
+      },
+      {
+        "key": "count",
+        "label": "Deliveries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Not recorded",
+        "count": 9
+      },
+      {
+        "k": "NVD",
+        "count": 7
+      },
+      {
+        "k": "Normal/Assisted",
+        "count": 5
+      },
+      {
+        "k": "Assisted/Forcep/Vacuum",
+        "count": 3
+      },
+      {
+        "k": "LSCS",
+        "count": 1
+      }
+    ]
+  },
+  "gestationMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Gestation at delivery"
+      },
+      {
+        "key": "count",
+        "label": "Pregnancies"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Under 28 wks",
+        "count": 12
+      },
+      {
+        "k": "28 to 36 wks (preterm)",
+        "count": 4
+      },
+      {
+        "k": "37 to 42 wks (term)",
+        "count": 0
+      },
+      {
+        "k": "Over 42 wks",
+        "count": 0
+      },
+      {
+        "k": "Not recorded",
+        "count": 9
+      }
+    ]
+  },
+  "eddPipeline": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Month"
+      },
+      {
+        "key": "count",
+        "label": "Expected deliveries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2022-12",
+        "count": 1
+      },
+      {
+        "k": "2023-05",
+        "count": 1
+      },
+      {
+        "k": "2023-07",
+        "count": 1
+      },
+      {
+        "k": "2023-08",
+        "count": 2
+      },
+      {
+        "k": "2023-11",
+        "count": 2
+      },
+      {
+        "k": "2024-01",
+        "count": 3
+      },
+      {
+        "k": "2024-02",
+        "count": 1
+      },
+      {
+        "k": "2024-03",
+        "count": 2
+      },
+      {
+        "k": "2024-04",
+        "count": 5
+      },
+      {
+        "k": "2024-05",
+        "count": 2
+      },
+      {
+        "k": "2024-07",
+        "count": 1
+      },
+      {
+        "k": "2024-08",
+        "count": 1
+      },
+      {
+        "k": "2024-09",
+        "count": 1
+      },
+      {
+        "k": "2024-10",
+        "count": 2
+      },
+      {
+        "k": "2025-02",
+        "count": 1
+      }
+    ]
+  },
+  "ancStatusMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "ANC status"
+      },
+      {
+        "key": "count",
+        "label": "Scheduled items"
+      }
+    ],
+    "rows": [
+      {
+        "k": "0",
+        "count": 95
+      },
+      {
+        "k": "1",
+        "count": 89
+      }
+    ]
+  },
+  "patients": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "patientUHID",
+        "label": "Patient UHID"
+      },
+      {
+        "key": "patientName",
+        "label": "Patient"
+      },
+      {
+        "key": "age",
+        "label": "Age"
+      },
+      {
+        "key": "outcome",
+        "label": "Event"
+      },
+      {
+        "key": "delivery",
+        "label": "Delivery mode"
+      },
+      {
+        "key": "gestationWeeks",
+        "label": "Weeks"
+      },
+      {
+        "key": "babyGender",
+        "label": "Baby gender"
+      },
+      {
+        "key": "babyStatus",
+        "label": "Outcome"
+      }
+    ],
+    "rows": [
+      {
+        "date": {},
+        "patientUHID": "DEMO-0035",
+        "patientName": "Demo Patient 33",
+        "age": 39,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0034",
+        "patientName": "Demo Patient 32",
+        "age": 14,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "36",
+        "babyGender": "Female",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0245",
+        "patientName": "Demo Patient 231",
+        "age": 26,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0245",
+        "patientName": "Demo Patient 231",
+        "age": 26,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0245",
+        "patientName": "Demo Patient 231",
+        "age": 26,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": "36",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0159",
+        "patientName": "Demo Patient 148",
+        "age": 35,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0046",
+        "patientName": "Demo Patient 42",
+        "age": 28,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0334",
+        "patientName": "Demo Patient 316",
+        "age": 32,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0334",
+        "patientName": "Demo Patient 316",
+        "age": 32,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0107",
+        "patientName": "Demo Patient 25",
+        "age": 26,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0107",
+        "patientName": "Demo Patient 25",
+        "age": 26,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0041",
+        "patientName": "Demo Patient 38",
+        "age": 42,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": "Female",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0061",
+        "patientName": "Demo Patient 56",
+        "age": 31,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Normal/Assisted",
+        "gestationWeeks": "1",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0041",
+        "patientName": "Demo Patient 38",
+        "age": 42,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0041",
+        "patientName": "Demo Patient 38",
+        "age": 42,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0005",
+        "patientName": "Demo Patient 5",
+        "age": 31,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0005",
+        "patientName": "Demo Patient 5",
+        "age": 31,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0005",
+        "patientName": "Demo Patient 5",
+        "age": 31,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "1",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0062",
+        "patientName": "Demo Patient 57",
+        "age": 28,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0062",
+        "patientName": "Demo Patient 57",
+        "age": 28,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "1",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0041",
+        "patientName": "Demo Patient 38",
+        "age": 42,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0041",
+        "patientName": "Demo Patient 38",
+        "age": 42,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Normal/Assisted",
+        "gestationWeeks": "7",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0340",
+        "patientName": "Demo Patient 4",
+        "age": 24,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0340",
+        "patientName": "Demo Patient 4",
+        "age": 24,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "4",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0024",
+        "patientName": "Demo Patient 23",
+        "age": 29,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0024",
+        "patientName": "Demo Patient 23",
+        "age": 29,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0024",
+        "patientName": "Demo Patient 23",
+        "age": 29,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Assisted/Forcep/Vacuum",
+        "gestationWeeks": "1",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0001",
+        "patientName": "Demo Patient 1",
+        "age": 3,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Assisted/Forcep/Vacuum",
+        "gestationWeeks": "36",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0060",
+        "patientName": "Demo Patient 55",
+        "age": 29,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "1",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0060",
+        "patientName": "Demo Patient 55",
+        "age": 29,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0060",
+        "patientName": "Demo Patient 55",
+        "age": 29,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0062",
+        "patientName": "Demo Patient 57",
+        "age": 28,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0372",
+        "patientName": "Demo Patient 4",
+        "age": 24,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0372",
+        "patientName": "Demo Patient 4",
+        "age": 24,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Assisted/Forcep/Vacuum",
+        "gestationWeeks": null,
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0001",
+        "patientName": "Demo Patient 1",
+        "age": 3,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Normal/Assisted",
+        "gestationWeeks": "21",
+        "babyGender": "Male",
+        "babyStatus": "Dead"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0001",
+        "patientName": "Demo Patient 1",
+        "age": 3,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0001",
+        "patientName": "Demo Patient 1",
+        "age": 3,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0001",
+        "patientName": "Demo Patient 1",
+        "age": 3,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "32",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0004",
+        "patientName": "Demo Patient 4",
+        "age": 56,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Normal/Assisted",
+        "gestationWeeks": "8",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "NVD",
+        "gestationWeeks": "3",
+        "babyGender": "Female",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "LSCS",
+        "gestationWeeks": "5",
+        "babyGender": "Female",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0383",
+        "patientName": "Demo Patient 77",
+        "age": 23,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0015",
+        "patientName": "Demo Patient 14",
+        "age": 1,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0015",
+        "patientName": "Demo Patient 14",
+        "age": 1,
+        "outcome": "Abortion",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0015",
+        "patientName": "Demo Patient 14",
+        "age": 1,
+        "outcome": "Pregnancy / delivery",
+        "delivery": "Normal/Assisted",
+        "gestationWeeks": "2",
+        "babyGender": "Male",
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0364",
+        "patientName": "Demo Patient 335",
+        "age": 26,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0364",
+        "patientName": "Demo Patient 335",
+        "age": 26,
+        "outcome": "Pregnancy / delivery",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": "Live"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0364",
+        "patientName": "Demo Patient 335",
+        "age": 26,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0441",
+        "patientName": "Demo Patient 371",
+        "age": 37,
+        "outcome": "Ectopic",
+        "delivery": null,
+        "gestationWeeks": null,
+        "babyGender": null,
+        "babyStatus": null
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 59,
+    "note": "Covers the legacy obstetric records in this database (entries up to mid-2024). Newer obstetric entries are saved in the gynec service and are not available to analytics yet (a data feed is pending). G, P, L, A, E counters are not stored here; the event mix counts recorded events instead."
+  }
+}

@@ -1,0 +1,36 @@
+.shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: var(--border-width, 1.5px);
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      var(--base-color, rgba(226,226,234,0.95)) 0%,
+      var(--shine-color, #D565EA, #673AAC, #1A1994) 33%,
+      var(--base-color, rgba(226,226,234,0.95)) 66%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: shineSpin var(--duration, 14s) linear infinite;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes shineSpin {
+  from { --angle: 0deg; }
+  to   { --angle: 360deg; }
+}

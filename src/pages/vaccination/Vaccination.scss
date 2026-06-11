@@ -1,0 +1,112 @@
+.vaccinationWrapper {
+  width: 100%;
+  .vaccinationContainer {
+    overflow-y: auto;
+    padding: 40px;
+    height: calc(100vh - 60px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 0;
+    .vaccinationTitle {
+      height: 122px;
+      background-color: rgba(252, 218, 218, 0.3);
+      padding: 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      .vaccineImg {
+        margin-bottom: 24px;
+        padding-right: 50px;
+      }
+    }
+    .fixFilter {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      margin: 20px 0px;
+      padding: 0 35px;
+      background-color: #fafafb;
+      box-shadow: 0px -1px 2px 0px #e2e2ea inset;
+    }
+
+    .selectAllContainer {
+      margin: 10px 10px 28px;
+      .vaccine-custom-checkbox {
+        .ant-checkbox .ant-checkbox-inner {
+          border-color: #4b4ad5;
+        }
+      }
+      .selectAll {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.customWarningDrawer {
+  position: fixed;
+  bottom: -44px; /* Start the drawer off-screen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 513px;
+  background-color: white;
+  border-radius: 10px;
+  transition: bottom 0.3s ease; /* Use 'bottom' property for the transition */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customWarningDrawer.open {
+  bottom: 110px; /* Bring the drawer up to the desired position */
+}
+
+.warningStyle {
+  width: 513px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: rgba(252, 218, 218, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+
+  .closeImg {
+    cursor: pointer;
+  }
+}
+
+.closeImg {
+  cursor: pointer;
+}
+
+.vaccine-tab-filter {
+  display: inline-flex;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+
+  .vaccine-tab-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+
+    &:hover {
+      color: #4b4ad5;
+    }
+
+    &.active {
+      background-color: #ffffff;
+      color: #4b4ad5;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

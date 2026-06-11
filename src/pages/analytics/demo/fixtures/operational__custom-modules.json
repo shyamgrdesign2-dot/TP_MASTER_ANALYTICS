@@ -1,0 +1,205 @@
+{
+  "kpis": [
+    {
+      "key": "totalModules",
+      "label": "Custom modules",
+      "value": 15,
+      "description": "Reusable RxPad modules built by this hospital's doctors (the 15/15 the Rx screen shows)."
+    },
+    {
+      "key": "createdPeriod",
+      "label": "Created this period",
+      "value": 3,
+      "description": "New custom modules built in the selected period."
+    },
+    {
+      "key": "creatingDoctors",
+      "label": "Creating doctors",
+      "value": 4,
+      "description": "Doctors who have built at least one module."
+    },
+    {
+      "key": "reuseRate",
+      "label": "Reuse rate",
+      "value": 38.5,
+      "unit": "%",
+      "description": "Share of module uses where the user is NOT the module's creator: the cross-doctor sharing signal."
+    }
+  ],
+  "moduleMostUsed": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Module"
+      },
+      {
+        "key": "count",
+        "label": "Times used"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Diet v2",
+        "count": 22
+      },
+      {
+        "k": "Bed Rest 2",
+        "count": 17
+      },
+      {
+        "k": "Gynec",
+        "count": 12
+      },
+      {
+        "k": "Liquid Diet",
+        "count": 9
+      },
+      {
+        "k": "NewCustom",
+        "count": 6
+      },
+      {
+        "k": "Dummy module V2",
+        "count": 4
+      }
+    ]
+  },
+  "moduleByCreator": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Doctor"
+      },
+      {
+        "key": "count",
+        "label": "Modules created"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Dr Sheela BR",
+        "count": 8
+      },
+      {
+        "k": "Dr Janavi",
+        "count": 4
+      },
+      {
+        "k": "Dr Ashish",
+        "count": 2
+      },
+      {
+        "k": "Dr Ram",
+        "count": 1
+      }
+    ]
+  },
+  "moduleCreatedVsReused": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Usage"
+      },
+      {
+        "key": "count",
+        "label": "Uses"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Used by the creator",
+        "count": 43
+      },
+      {
+        "k": "Reused by another doctor",
+        "count": 27
+      }
+    ]
+  },
+  "moduleRegister": {
+    "columns": [
+      {
+        "key": "module",
+        "label": "Module"
+      },
+      {
+        "key": "creator",
+        "label": "Created by"
+      },
+      {
+        "key": "columns",
+        "label": "Columns",
+        "type": "number"
+      },
+      {
+        "key": "created",
+        "label": "Created"
+      },
+      {
+        "key": "uses",
+        "label": "Times used",
+        "type": "number"
+      },
+      {
+        "key": "reusedBy",
+        "label": "Reused by (doctors)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "module": "Diet v2",
+        "creator": "Dr Sheela BR",
+        "columns": 4,
+        "created": "2026-02-11",
+        "uses": 22,
+        "reusedBy": 3
+      },
+      {
+        "module": "Bed Rest 2",
+        "creator": "Dr Sheela BR",
+        "columns": 2,
+        "created": "2026-01-08",
+        "uses": 17,
+        "reusedBy": 2
+      },
+      {
+        "module": "Gynec",
+        "creator": "Dr Janavi",
+        "columns": 4,
+        "created": "2026-03-02",
+        "uses": 12,
+        "reusedBy": 2
+      },
+      {
+        "module": "Liquid Diet",
+        "creator": "Dr Sheela BR",
+        "columns": 1,
+        "created": "2026-03-20",
+        "uses": 9,
+        "reusedBy": 1
+      },
+      {
+        "module": "NewCustom",
+        "creator": "Dr Ashish",
+        "columns": 4,
+        "created": "2026-04-15",
+        "uses": 6,
+        "reusedBy": 1
+      },
+      {
+        "module": "Dummy module V2",
+        "creator": "Dr Ram",
+        "columns": 3,
+        "created": "2026-05-05",
+        "uses": 4,
+        "reusedBy": 0
+      }
+    ]
+  },
+  "meta": {
+    "live": false,
+    "rowCount": 6,
+    "note": "SAMPLE DATA: this module's source lives in the dynamic-modules service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+  }
+}

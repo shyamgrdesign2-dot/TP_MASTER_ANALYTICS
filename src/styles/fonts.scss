@@ -1,0 +1,200 @@
+@import 'poppins-woff2-data';
+
+// Poppins (inlined woff2) — same Azure blob @font-face + CORS issue as IcoMoon; keeps UI typography correct.
+@font-face {
+  font-family: 'Poppins';
+  src: url('data:font/woff2;base64,#{$poppins-regular-woff2-base64}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('data:font/woff2;base64,#{$poppins-medium-woff2-base64}') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Alias legacy Roboto declarations to Poppins to keep UI consistent */
+@font-face {
+  font-family: 'Roboto';
+  src: url('data:font/woff2;base64,#{$poppins-regular-woff2-base64}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('data:font/woff2;base64,#{$poppins-medium-woff2-base64}') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Print setting Fonts
+
+@font-face {
+  font-family: 'Arial';
+  src: url('#{$tp-assets-base}/fonts/print-fonts/Arimo-Regular.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Arimo-Medium.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Arimo-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Times-Roman';
+  src: url('#{$tp-assets-base}/fonts/print-fonts/EBGaramond-Regular.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/EBGaramond-Medium.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/EBGaramond-Bold.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('#{$tp-assets-base}/fonts/print-fonts/Jost-Regular.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Jost-Medium.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Jost-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('#{$tp-assets-base}/fonts/print-fonts/OpenSans-Regular.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/OpenSans-Medium.ttf') format('truetype'),
+    url('#{$tp-assets-base}/fonts/print-fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('#{$tp-assets-base}/fonts/print-fonts/Vazirmatn-Regular.ttf') format('ttf'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Vazirmatn-Medium.ttf') format('ttf'),
+    url('#{$tp-assets-base}/fonts/print-fonts/Vazirmatn-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+// Iconmoon — icomoon.woff is inlined via _icomoon-woff-data.scss. Loading the font from the Azure
+// blob URL in @font-face fails in the browser without CORS headers on the blob (fonts use CORS).
+
+@import 'icomoon-woff-data';
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('data:application/font-woff;base64,#{$icomoon-woff-base64}') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  text-transform: none;
+  font-size: 23px;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Explicit glyph mappings (IcoMoon selection.json) */
+.icon-Calendar:before,
+.icon-calendar:before { content: "\e900"; }
+.icon-Patients:before, .icon-patients:before { content: "\e901"; }
+.icon-Analytics:before, .icon-analytics:before { content: "\e902"; }
+.icon-Billings:before, .icon-billings:before { content: "\e903"; }
+.icon-Cancelled:before { content: "\e904"; }
+.icon-Settings:before, .icon-setting:before, .icon-settings:before { content: "\e905"; }
+.icon-Notification:before, .icon-notification:before { content: "\e906"; }
+.icon-Finished:before { content: "\e907"; }
+.icon-Queue:before, .icon-queue:before { content: "\e908"; }
+.icon-List:before { content: "\e909"; }
+.icon-More:before, .icon-more:before { content: "\e90a"; }
+.icon-Add:before { content: "\e90b"; }
+.icon-Contract:before, .icon-contract:before { content: "\e90c"; }
+.icon-Expand:before { content: "\e90d"; }
+.icon-Print:before, .icon-print:before { content: "\e90e"; }
+.icon-Visit-Summary-with-unfilled:before { content: "\e90f"; }
+.icon-Visit-Summary:before {
+  content: "\e90f";
+}
+.icon-Medical-Certificate:before, .icon-medical-certificate:before { content: "\e910"; }
+.icon-Discharge-Summary:before, .icon-discharge-summary:before { content: "\e911"; }
+.icon-Report:before { content: "\e912"; }
+.icon-Edit:before, .icon-edit:before { content: "\e913"; }
+.icon-ArrowLeft:before,
+.icon-right:before,
+.icon-Right:before { content: "\e914"; } /* arrow---left glyph; rotate with helper classes */
+.icon-reload:before { content: "\e915"; }
+.icon-Search:before,
+.icon-search:before { content: "\e916"; }
+.icon-Preview:before, .icon-preview:before { content: "\e917"; }
+.icon-Consult:before, .icon-consult:before { content: "\e918"; }
+.icon-Cross:before { content: "\e919"; }
+.icon-phone:before, .icon-Phone:before { content: "\e91a"; }
+.icon-id:before, .icon-Id:before { content: "\e91b"; }
+.icon-save:before,
+.icon-Save:before { content: "\e91c"; }
+.icon-template:before,
+.icon-Template:before { content: "\e91d"; }
+.icon-Camera:before, .icon-camera:before { content: "\e91e"; }
+.icon-minus:before { content: "\e91f"; }
+.icon-Delete:before,
+.icon-delete:before { content: "\e920"; }
+.icon-Download:before,
+.icon-download:before { content: "\e921"; }
+.icon-Exit:before, .icon-exit:before { content: "\e922"; }
+.icon-language:before { content: "\e923"; }
+.icon-check:before { content: "\e924"; }
+.icon-Info:before,
+.icon-info:before { content: "\e925"; }
+.icon-appointment:before,
+.icon-appointment:before { content: "\e926"; }
+.icon-sorting:before,
+.icon-sorting:before { content: "\e927"; }
+.icon-Filter:before,
+.icon-filter:before { content: "\e928"; }
+.icon-Visit-Summary-Fill:before,
+.icon-Visit-Summary-Fill:before { content: "\e929"; }
+.icon-Switch:before,
+.icon-switch:before { content: "\e92a"; }
+.icon-Upload:before,
+.icon-upload:before { content: "\e92b"; }
+.icon-Announcement:before { content: "\e92c"; }
+.icon-help:before { content: "\e92d"; }
+.icon-upgrade:before { content: "\e92e"; }
+.icon-group:before { content: "\e92f"; }
+.icon-profile:before { content: "\e930"; }
+.icon-certificate-profile:before { content: "\e931"; }
+.icon-New-Window:before { content: "\e932"; }
+.icon-eraser1:before { content: "\e933"; }
+.icon-copy-icon:before { content: "\e934"; }
+
+.iconrotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+.iconrotatehistory90 {
+  transform: rotate(90deg);
+  margin-left: -1px;
+  margin-top: -4px;
+}
+.iconrotate270 {
+  transform: rotate(270deg);
+  display: inline-block;
+}

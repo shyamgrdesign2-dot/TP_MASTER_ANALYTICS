@@ -1,0 +1,24 @@
+@import 'variables.scss';
+@import 'buttons.scss';
+@import 'header.scss';
+@import 'sidebar.scss';
+@import 'fonts.scss';
+@import 'welcome.scss';
+@import 'common.scss';
+@import 'table.scss';
+@import 'cards.scss';
+@import 'allComponent.scss';
+@import 'modal.scss';
+@import 'form.scss';
+@import 'popover.scss';
+@import 'segmented.scss';
+@import 'editor.scss';
+@import 'doctorProfile&Website.scss';
+@import 'shimmerLoader.scss';
+
+// Icon rotation classes
+.icon-right.iconrotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+

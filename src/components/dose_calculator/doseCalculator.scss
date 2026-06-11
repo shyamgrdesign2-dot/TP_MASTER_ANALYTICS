@@ -1,0 +1,163 @@
+@import '../../styles/variables';
+
+.dose-tab {
+    .ant-tabs-tab {
+        padding: 12px 15px;
+        .ant-tabs-tab-btn {
+            font-weight: 400;
+            font-size: 18px;
+            color: #3D4854 !important;
+        }
+        &.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+                color: $theme !important;
+                font-weight: 500;
+            }
+        }
+    }
+    .ant-tabs-ink-bar {
+        height: 3px;
+    }
+    .ant-tabs-nav {
+        margin: 0;
+    }
+}
+
+.dose-calc-tooltip {
+    &.ant-tooltip .ant-tooltip-inner {
+        background-color: #ffffff !important;
+        min-width: 520px;
+        border-radius: 16px;
+        padding: 18px;
+        color: black;
+
+        div {
+            max-width: 520px !important;
+        }
+    }
+    &.ant-tooltip .ant-tooltip-arrow {
+        --antd-arrow-background-color: #ffffff !important;
+    }
+}
+
+.dose-table {
+    .ant-table {
+        .ant-table-container {
+            .ant-table-body {
+                overflow-y: auto !important;
+                scrollbar-width: thin;
+            }
+        }
+    }
+    .ant-table-thead tr th {
+        color: $welcomecolor !important;
+        font-weight: 700;
+        font-family: 'roboto' !important;
+        &:first-child {
+            border-bottom-left-radius: 0 !important;
+        }
+        &:last-child {
+            border-bottom-right-radius: 0 !important;
+        }
+    }
+    .ant-table-tbody {
+        background-color: $bgbody;
+        tr {
+            &.edited-row {
+                background-color: #F4F4F4;
+                &:hover {
+                    td {
+                    background-color: #F4F4F4;
+                    
+                    }
+                }
+            }
+            &:first-child {
+                td {
+                    padding: 0 !important;
+                }
+            }
+            td {
+                padding: 16px 12px !important;
+                .ant-btn {
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+                div {
+                    font-size: 14px;
+                    font-weight: 500;
+                    &.dose-generic {
+                        font-weight: 400;
+                    }
+                }
+                &:first-child {
+                    max-width: 280px; width: 280px; min-width: 280px;
+                }
+                &:last-child {
+                    max-width: 80px; width: 80px; min-width: 80px;
+                }
+                .ant-input-wrapper {
+                    .ant-input-group-addon {
+                        font-size: 12px;
+                    }
+                    .ant-input-disabled {
+                        color: #9BB1C8;
+                        ~.ant-input-group-addon {
+                            color: #9BB1C8 !important;
+                        }
+                        &:hover,
+                        &:focus,
+                        &:focus-visible {
+                            border-color: $bordercolor;
+                            ~.ant-input-group-addon {
+                                color: #9BB1C8 !important;
+                                background-color: rgba(0, 0, 0, 0.04);
+                                border-color: #d9d9d9;
+                                box-shadow: none;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                &.existing-doses-line {
+                    position: relative;
+                    background-color: #f9f9f9;
+                    padding-top: 5px !important;
+                    padding-bottom: 5px !important;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 17px;
+                        left: 13px;
+                        width: 96%;
+                        height: 1px;
+                        border: 1px dashed $bordercolor;
+                    }
+                    span {
+                        color: $grayColor !important;
+                        left: 0;
+                        top: 0;
+                        position: relative;
+                        font-size: 14px !important;
+                        padding: 2px 13px;
+                        font-weight: 400;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .check-icon {
+        color: #3D8C40 !important;
+    }
+    .close-icon {
+        color: #B73A3A !important;
+    }
+}
+.circle-outlined-custom {
+    margin-top: -3px;
+    svg {
+        fill : #E54848
+    }
+}

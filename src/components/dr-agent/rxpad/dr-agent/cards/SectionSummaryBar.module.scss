@@ -1,0 +1,64 @@
+.bar {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  min-width: 0;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+.marginBottom {
+  margin-bottom: 4px;
+}
+
+.bgDefault {
+  background: rgba(241, 245, 249, 0.70); /* tp-slate-100 / 70% */
+}
+
+.bgSpecialty {
+  background: var(--tp-violet-50, #f5f3ff);
+}
+
+.label {
+  display: flex;
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.labelDefault {
+  color: var(--tp-slate-500, #64748b);
+}
+
+.labelSpecialty {
+  color: var(--tp-violet-600, #7c3aed);
+}
+
+.iconSlot {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconImg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: grayscale(1) saturate(0) brightness(0.72) opacity(0.9);
+}
+
+.medicalIcon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}

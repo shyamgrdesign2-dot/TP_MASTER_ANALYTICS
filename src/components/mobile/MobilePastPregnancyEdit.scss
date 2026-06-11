@@ -1,0 +1,652 @@
+.mobile-past-pregnancy-edit {
+  .ant-drawer-content-wrapper {
+    border-radius: 16px 16px 0 0;
+    max-height: 90vh !important;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.mobile-pregnancy-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 90vh;
+  background: #F9FAFB;
+  overflow: hidden;
+}
+
+.mobile-pregnancy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  flex-shrink: 0;
+
+  .mobile-pregnancy-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #454551;
+    margin: 0;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #EF4444;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    &:active {
+      background: #FEE2E2;
+    }
+  }
+
+  .mobile-pregnancy-close {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.mobile-pregnancy-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 16px;
+  background-color: #FAF8FD;
+}
+
+// Form sections
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #FFFFFF;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+
+  .section-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+}
+
+// Form grid
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+
+  &.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6B7280;
+
+    .required {
+      color: #EF4444;
+    }
+  }
+}
+
+.form-select {
+  &.ant-select {
+    width: 100%;
+    .ant-select-selector {
+      height: 44px !important;
+      border-radius: 8px !important;
+      border: 1px solid #E5E7EB !important;
+      padding: 0 12px !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+
+      .ant-select-selection-item {
+        line-height: 42px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #111827;
+      }
+
+      .ant-select-selection-placeholder {
+        line-height: 42px;
+        color: #9CA3AF;
+      }
+    }
+
+    &:hover .ant-select-selector {
+      border-color: #4b4ad5 !important;
+    }
+
+    &.ant-select-focused .ant-select-selector {
+      border-color: #4b4ad5 !important;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1) !important;
+    }
+
+    .ant-select-arrow {
+      color: #6B7280;
+    }
+  }
+}
+
+// Form Input
+.form-input {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  padding: 0 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+  &:focus {
+    border-color: #4b4ad5;
+    box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+  }
+
+  .ant-input-suffix {
+    color: #9CA3AF;
+    font-size: 12px;
+  }
+}
+
+.gestation-period-field {
+  .gestation-period-input.ant-input-affix-wrapper {
+    width: auto;
+    max-width: 150px;
+    height: 36px;
+
+    .ant-input {
+      height: 34px;
+      padding: 0 8px;
+      font-size: 13px;
+    }
+
+    .ant-input-suffix {
+      font-size: 12px;
+    }
+  }
+}
+
+// Form Date Picker
+.form-date-picker {
+  &.ant-picker {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    padding: 0 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    &:hover {
+      border-color: #4b4ad5;
+    }
+
+    &.ant-picker-focused {
+      border-color: #4b4ad5;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+    }
+  }
+}
+
+// Form Radio Group
+.form-radio-group {
+  display: flex;
+  gap: 0;
+  width: 100%;
+
+  .ant-radio-button-wrapper {
+    flex: 1;
+    height: 44px;
+    line-height: 42px;
+    padding: 0 16px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-color: #E5E7EB;
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &.ant-radio-button-wrapper-checked {
+      background: #4b4ad5 !important;
+      border-color: #4b4ad5 !important;
+      color: #FFFFFF !important;
+
+      &,
+      span {
+        color: #FFFFFF !important;
+      }
+
+      &:hover {
+        background: #5D5CE8 !important;
+        border-color: #5D5CE8 !important;
+        color: #FFFFFF !important;
+
+        &,
+        span {
+          color: #FFFFFF !important;
+        }
+      }
+    }
+  }
+}
+
+// Form Textarea
+.form-textarea {
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: none;
+
+  &::placeholder {
+    color: #9CA3AF;
+  }
+
+  &:focus {
+    border-color: #4b4ad5;
+    box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+  }
+}
+
+// Footer
+.mobile-pregnancy-footer {
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+  flex-shrink: 0;
+
+  .save-btn {
+    height: 48px;
+    border-radius: 12px;
+    background: #4b4ad5;
+    border-color: #4b4ad5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+    &:disabled {
+      background: #D1D5DB;
+      border-color: #D1D5DB;
+    }
+
+    &:not(:disabled):hover {
+      background: #5D5CE8;
+      border-color: #5D5CE8;
+    }
+  }
+}
+
+// Delete Modal
+.delete-pregnancy-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.delete-modal-content {
+  .delete-modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E5E7EB;
+
+    h3 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+  }
+
+  .delete-modal-body {
+    padding: 20px;
+
+    .alert-warning-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #FEF3C7;
+      border-radius: 10px;
+      padding: 12px 16px;
+
+      .alert-icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #92400E;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .delete-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-top: 1px solid #E5E7EB;
+
+    .yes-delete-btn {
+      background: none;
+      border: none;
+      color: #4b4ad5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 8px 4px;
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    .no-keep-btn {
+      height: 40px;
+      border-radius: 8px;
+      background: #4b4ad5;
+      border-color: #4b4ad5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 20px;
+
+      &:hover {
+        background: #5D5CE8;
+        border-color: #5D5CE8;
+      }
+    }
+  }
+}
+
+// Pregnancy History List (for display in parent component)
+.pregnancy-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .pregnancy-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+
+    .pregnancy-card-content {
+      flex: 1;
+      min-width: 0;
+
+      .pregnancy-card-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 14px;
+
+        .gravida-badge {
+          background: #F0F0FF;
+          border: 1px solid #4b4ad5;
+          border-radius: 4px;
+          padding: 4px 8px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 600;
+          color: #4b4ad5;
+        }
+
+        .outcome-badge {
+          border-radius: 4px;
+          padding: 6px 8px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+
+          &.live {
+            background: #DCFCE7;
+            color: #16A34A;
+          }
+
+          &.stillbirth {
+            background: #FEE2E2;
+            color: #DC2626;
+          }
+
+          &.ectopic {
+            background: #FEF3C7;
+            color: #D97706;
+          }
+
+          &.miscarriage {
+            background: #FFE4E6;
+            color: #E11D48;
+          }
+        }
+      }
+
+      .pregnancy-card-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .detail-item {
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          color: #374151;
+          background: #F3F4F6;
+          padding: 6px 8px;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .pregnancy-card-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .action-btn {
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 8px;
+
+        &:active {
+          background: #F3F4F6;
+        }
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .view-history-btn {
+        background: #F0F0FF;
+        border: 1px solid #4b4ad5;
+        padding: 6px 12px;
+
+        span {
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          color: #4b4ad5;
+        }
+
+        &:active {
+          background: #E5E5FF;
+        }
+      }
+    }
+  }
+
+  .add-pregnancy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    background: #F0F0FF;
+    border: 1px dashed #4b4ad5;
+    border-radius: 12px;
+    color: #4b4ad5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:active {
+      background: #E5E5FF;
+    }
+
+    .add-icon {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Complete Pregnancy Button Style
+.mobile-pregnancy-footer {
+  .complete-pregnancy-btn {
+    background: #FC5A5A !important;
+    border-color: #FC5A5A !important;
+    color: #FFFFFF !important;
+
+    &:hover {
+      background: #E54A4A !important;
+      border-color: #E54A4A !important;
+    }
+  }
+}
+
+// Complete Pregnancy Modal
+.complete-pregnancy-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+  }
+
+  .delete-modal-footer {
+    .cancel-btn {
+      background: none;
+      border: none;
+      color: #4b4ad5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 8px 4px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .confirm-btn {
+      height: 40px;
+      border-radius: 8px;
+      background: #FC5A5A;
+      border-color: #FC5A5A;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 20px;
+
+      &:hover {
+        background: #E54A4A;
+        border-color: #E54A4A;
+      }
+    }
+  }
+}

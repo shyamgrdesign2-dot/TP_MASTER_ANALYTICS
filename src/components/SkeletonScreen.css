@@ -1,0 +1,60 @@
+.skeleton-container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100% !important; /* Adjust as per container */
+    height: 100% !important; /* Adjust height as per design */
+    border-radius: 16px; /* Matches the rounded corners */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton-header {
+    height: 29px;
+    width: 30%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background: #f3f4f7;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .skeleton-card {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: #f3f4f6;
+    height: 235px;
+    border-radius: 8px;
+  }
+  
+  .skeleton-title {
+    height: 16px;
+    width: 30%;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background: #f3f4f7;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .skeleton-content {
+    height: 12px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: #f3f4f7;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  

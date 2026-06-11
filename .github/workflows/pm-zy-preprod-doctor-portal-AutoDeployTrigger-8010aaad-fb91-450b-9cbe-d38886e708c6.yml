@@ -1,0 +1,52 @@
+name: Trigger auto deployment for pm-preprod-doctor-portal
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches:
+      [ prod ]
+    paths:
+      - '**'
+      - '.github/workflows/pm-zy-preprod-doctor-portal-AutoDeployTrigger-8010aaad-fb91-450b-9cbe-d38886e708c6.yml'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      REACT_APP_ENV: zy-preprod
+
+    permissions:
+      id-token: write # This is required for requesting the OIDC JWT Token
+      contents: read # Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.PMPREPRODDOCTORPORTAL_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.PMPREPRODDOCTORPORTAL_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.PMPREPRODDOCTORPORTAL_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }}
+          registryUrl: zypractice02.azurecr.io
+          registryUsername: ${{ secrets.PMPREPRODDOCTORPORTAL_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.PMPREPRODDOCTORPORTAL_REGISTRY_PASSWORD }}
+          containerAppName: pm-preprod-doctor-portal
+          resourceGroup: practice-preprod
+          imageToBuild: zypractice02.azurecr.io/pm-preprod-doctor-portal:${{ github.sha }}
+
+          buildArguments: |
+            REACT_APP_ENV=zy-preprod
+            GENERATE_SOURCEMAP=false
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}

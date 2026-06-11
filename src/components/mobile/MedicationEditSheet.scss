@@ -1,0 +1,169 @@
+@import '../../styles/variables.scss';
+
+/* UX matches LabInvestigationEditSheet: radius, close, header, body, actions */
+.medication-edit-sheet {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+.medication-edit-sheet-content {
+  background: #FAF8FD;
+  padding-bottom: env(safe-area-inset-bottom, 24px);
+}
+
+.medication-edit-sheet-header {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.medication-edit-sheet-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #1f2933;
+  margin: 0;
+}
+
+.medication-edit-sheet-close {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.medication-edit-sheet-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.medication-edit-sheet-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &.medication-edit-sheet-field-half {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.medication-edit-sheet-row {
+  display: flex;
+  gap: 12px;
+}
+
+.medication-edit-sheet-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f2933;
+
+  .required {
+    color: #e74c3c;
+  }
+}
+
+.medication-edit-sheet-autocomplete {
+  width: 100%;
+
+  .ant-select-selector,
+  .ant-input {
+    border-radius: 8px;
+  }
+}
+
+.medication-edit-sheet-search-icon {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.medication-edit-sheet-input,
+.medication-edit-sheet-textarea,
+.medication-edit-sheet-select {
+  font-size: 14px;
+
+  &.ant-input,
+  &.ant-input-outlined,
+  .ant-select-selector {
+    border-radius: 8px;
+  }
+}
+
+.medication-edit-sheet-select {
+  width: 100%;
+}
+
+.medication-edit-sheet-textarea.ant-input {
+  resize: vertical;
+  min-height: 56px;
+}
+
+.medication-edit-sheet-error {
+  font-size: 12px;
+  color: #e74c3c;
+}
+
+.medication-edit-sheet-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  .ant-btn {
+    flex: 1;
+    height: 44px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+}
+
+.medication-edit-sheet-btn-save {
+  background: #4B4AD5;
+  border-color: #4B4AD5;
+  color: #fff;
+  width: 100%;
+
+  &:disabled {
+    background: #d1d5db;
+    border-color: #d1d5db;
+    color: #9ca3af;
+  }
+}

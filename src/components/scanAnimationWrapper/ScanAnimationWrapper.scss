@@ -1,0 +1,14 @@
+.scan-animation-wrapper {
+    display: block;
+    position: relative;
+    width: fit-content;
+    .lottie-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .child-content {
+        width: fit-content;
+    }
+}

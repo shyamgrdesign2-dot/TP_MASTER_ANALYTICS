@@ -1,0 +1,39 @@
+.snap-rx-container {
+  min-height: 100vh;
+  background: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+
+  .snap-rx-content {
+    flex: 1;
+    background: #F8F9FA;
+    padding: 0;
+    position: relative;
+  }
+}
+
+// Ensure proper spacing and layout for components
+.snap-rx-content {
+  margin-top: 60px;
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Additional responsive adjustments
+@media (max-width: 768px) {
+  .snap-rx-container {
+    .snap-rx-content {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .snap-rx-container {
+    .snap-rx-content {
+      padding: 0;
+    }
+  }
+} 

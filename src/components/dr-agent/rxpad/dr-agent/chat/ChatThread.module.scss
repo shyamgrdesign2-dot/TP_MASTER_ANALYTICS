@@ -1,0 +1,23 @@
+.threadRoot {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 8px 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(213, 101, 234, 0.02),
+    #fff,
+    rgba(26, 25, 148, 0.02)
+  );
+}
+
+.spacingSame {
+  margin-top: 24px;
+}
+
+.spacingDiff {
+  margin-top: 28px;
+}
+
+.typingWrap {
+  margin-top: 10px;
+}

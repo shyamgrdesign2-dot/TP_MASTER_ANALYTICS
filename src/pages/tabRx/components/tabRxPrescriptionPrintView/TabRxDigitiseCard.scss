@@ -1,0 +1,160 @@
+.tabrx-digitise-card-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  border-radius: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 24px;
+    background: conic-gradient(
+    #9C68C4,
+    #F24DB6,
+    #F9DFDB,
+    #6DFAFB,
+    #F7F8D0,
+    #FDA175,
+    #56DFE3,
+    #095F97,
+    #9C68C4
+  );
+    filter: blur(8px);
+    opacity: 0.7;
+    z-index: 0;
+  }
+}
+
+.tabrx-digitise-card {
+  position: relative;
+  z-index: 1;
+  padding: 4px; // this size becomes border width
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 21px;
+    padding: 4px; /* thickness of the border */
+    background: conic-gradient(
+      #9C68C4,
+      #F24DB6,
+      #F9DFDB,
+      #6DFAFB,
+      #F7F8D0,
+      #FDA175,
+      #56DFE3,
+      #095F97,
+      #9C68C4
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+}
+
+.tabrx-digitise-card-inner {
+  background: #222222;
+  border-radius: 17px; // slightly less than the parent to fit inside the border
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabrx-digitise-card-content {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tabrx-digitise-card-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  /* if we have successIcon passed, we style the img */
+  object-fit: contain;
+}
+
+.tabrx-digitise-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.tabrx-digitise-card-title {
+  color: #FFF !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+}
+
+.tabrx-digitise-card-desc {
+  color: rgba(255, 255, 255, 0.80) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+}
+
+.tabrx-digitise-card-know-more {
+  color: rgba(255, 255, 255, 0.80);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 4px;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+.tabrx-digitise-card-btn {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #FFF;
+  color: #171725;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

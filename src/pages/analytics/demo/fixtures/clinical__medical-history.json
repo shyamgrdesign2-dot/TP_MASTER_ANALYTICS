@@ -1,0 +1,500 @@
+{
+  "kpis": [
+    {
+      "key": "patientsWithHistory",
+      "label": "Patients with history",
+      "value": 16,
+      "description": "Distinct patients whose latest saved history record carries at least one confirmed item in any section (lifestyle, medical, family, allergy, surgical). Based on each patient's latest record, all time."
+    },
+    {
+      "key": "topCondition",
+      "label": "Top condition",
+      "value": "IBS (Irritable Bowel Syndrome)",
+      "description": "Most common medical condition: the condition confirmed for the largest number of distinct patients on their latest history record."
+    },
+    {
+      "key": "topAllergy",
+      "label": "Top allergy",
+      "value": "Mustard",
+      "description": "Most common allergy, by distinct patients with it confirmed on their latest history record."
+    },
+    {
+      "key": "topFamilyHistory",
+      "label": "Top family history",
+      "value": "Asthma",
+      "description": "Most common family history item, by distinct patients with it confirmed on their latest history record."
+    },
+    {
+      "key": "topLifestyle",
+      "label": "Top lifestyle factor",
+      "value": "Allergies",
+      "description": "Most common lifestyle factor (habit), by distinct patients with it confirmed on their latest history record."
+    },
+    {
+      "key": "topSurgical",
+      "label": "Top past surgery",
+      "value": "—",
+      "description": "Most common past surgery, by distinct patients with it confirmed on their latest history record."
+    }
+  ],
+  "conditionDist": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Condition"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "IBS (Irritable Bowel Syndrome)",
+        "count": 7
+      },
+      {
+        "k": "Diabetes",
+        "count": 2
+      },
+      {
+        "k": "Hypertension",
+        "count": 2
+      },
+      {
+        "k": "GERD (Gastroesophageal Reflux Disease)",
+        "count": 1
+      },
+      {
+        "k": "Hyperthyroidism",
+        "count": 1
+      },
+      {
+        "k": "Hypothyroidism",
+        "count": 1
+      },
+      {
+        "k": "Paradiabetes",
+        "count": 1
+      },
+      {
+        "k": "Ulcers",
+        "count": 1
+      }
+    ]
+  },
+  "allergyDist": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Allergy"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Mustard",
+        "count": 6
+      },
+      {
+        "k": "Nuts",
+        "count": 4
+      },
+      {
+        "k": "Fish",
+        "count": 2
+      },
+      {
+        "k": "Dust",
+        "count": 1
+      },
+      {
+        "k": "Gluten",
+        "count": 1
+      },
+      {
+        "k": "Milk",
+        "count": 1
+      }
+    ]
+  },
+  "familyDist": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Family history"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Asthma",
+        "count": 3
+      },
+      {
+        "k": "Food intolerance",
+        "count": 2
+      },
+      {
+        "k": "Hypothyroidism",
+        "count": 2
+      },
+      {
+        "k": "Cancer",
+        "count": 1
+      },
+      {
+        "k": "CKD",
+        "count": 1
+      },
+      {
+        "k": "Diabetes",
+        "count": 1
+      },
+      {
+        "k": "Hypertension",
+        "count": 1
+      }
+    ]
+  },
+  "lifestyleDist": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Lifestyle factor"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Allergies",
+        "count": 2
+      },
+      {
+        "k": "Drinking",
+        "count": 2
+      },
+      {
+        "k": "Diet",
+        "count": 1
+      },
+      {
+        "k": "Drinks",
+        "count": 1
+      },
+      {
+        "k": "Exercise",
+        "count": 1
+      },
+      {
+        "k": "Tobacco",
+        "count": 1
+      }
+    ]
+  },
+  "surgicalDist": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Surgery"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": []
+  },
+  "additionalHistory": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Additional history"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "With additional history",
+        "count": 5
+      },
+      {
+        "k": "Without",
+        "count": 14
+      }
+    ]
+  },
+  "captureTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Month"
+      },
+      {
+        "key": "entries",
+        "label": "History entries",
+        "type": "number"
+      },
+      {
+        "key": "patients",
+        "label": "Patients",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2024-06",
+        "entries": 8,
+        "patients": 3
+      },
+      {
+        "k": "2024-07",
+        "entries": 10,
+        "patients": 7
+      },
+      {
+        "k": "2024-08",
+        "entries": 7,
+        "patients": 2
+      },
+      {
+        "k": "2024-09",
+        "entries": 4,
+        "patients": 1
+      },
+      {
+        "k": "2024-10",
+        "entries": 6,
+        "patients": 3
+      },
+      {
+        "k": "2024-11",
+        "entries": 2,
+        "patients": 2
+      },
+      {
+        "k": "2024-12",
+        "entries": 14,
+        "patients": 7
+      },
+      {
+        "k": "2025-01",
+        "entries": 6,
+        "patients": 1
+      },
+      {
+        "k": "2025-02",
+        "entries": 1,
+        "patients": 1
+      },
+      {
+        "k": "2025-03",
+        "entries": 3,
+        "patients": 1
+      }
+    ]
+  },
+  "historyRegister": {
+    "columns": [
+      {
+        "key": "section",
+        "label": "Section"
+      },
+      {
+        "key": "item",
+        "label": "Item"
+      },
+      {
+        "key": "patients",
+        "label": "Patients",
+        "type": "number"
+      },
+      {
+        "key": "lastRecorded",
+        "label": "Last recorded"
+      }
+    ],
+    "rows": [
+      {
+        "section": "Medical condition",
+        "item": "IBS (Irritable Bowel Syndrome)",
+        "patients": 7,
+        "lastRecorded": "2024-12-09"
+      },
+      {
+        "section": "Allergies",
+        "item": "Mustard",
+        "patients": 6,
+        "lastRecorded": "2025-03-18"
+      },
+      {
+        "section": "Allergies",
+        "item": "Nuts",
+        "patients": 4,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Family history",
+        "item": "Asthma",
+        "patients": 3,
+        "lastRecorded": "2024-11-19"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Allergies",
+        "patients": 2,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Diabetes",
+        "patients": 2,
+        "lastRecorded": "2024-10-28"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Drinking",
+        "patients": 2,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Allergies",
+        "item": "Fish",
+        "patients": 2,
+        "lastRecorded": "2024-11-11"
+      },
+      {
+        "section": "Family history",
+        "item": "Food intolerance",
+        "patients": 2,
+        "lastRecorded": "2024-07-25"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Hypertension",
+        "patients": 2,
+        "lastRecorded": "2025-03-18"
+      },
+      {
+        "section": "Family history",
+        "item": "Hypothyroidism",
+        "patients": 2,
+        "lastRecorded": "2024-11-11"
+      },
+      {
+        "section": "Family history",
+        "item": "Cancer",
+        "patients": 1,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Family history",
+        "item": "CKD",
+        "patients": 1,
+        "lastRecorded": "2024-08-29"
+      },
+      {
+        "section": "Family history",
+        "item": "Diabetes",
+        "patients": 1,
+        "lastRecorded": "2024-07-25"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Diet",
+        "patients": 1,
+        "lastRecorded": "2024-08-29"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Drinks",
+        "patients": 1,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Allergies",
+        "item": "Dust",
+        "patients": 1,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Exercise",
+        "patients": 1,
+        "lastRecorded": "2024-07-09"
+      },
+      {
+        "section": "Medical condition",
+        "item": "GERD (Gastroesophageal Reflux Disease)",
+        "patients": 1,
+        "lastRecorded": "2024-07-10"
+      },
+      {
+        "section": "Allergies",
+        "item": "Gluten",
+        "patients": 1,
+        "lastRecorded": "2024-07-10"
+      },
+      {
+        "section": "Family history",
+        "item": "Hypertension",
+        "patients": 1,
+        "lastRecorded": "2024-07-25"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Hyperthyroidism",
+        "patients": 1,
+        "lastRecorded": "2025-03-18"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Hypothyroidism",
+        "patients": 1,
+        "lastRecorded": "2024-10-28"
+      },
+      {
+        "section": "Allergies",
+        "item": "Milk",
+        "patients": 1,
+        "lastRecorded": "2024-07-09"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Paradiabetes",
+        "patients": 1,
+        "lastRecorded": "2024-10-19"
+      },
+      {
+        "section": "Lifestyle",
+        "item": "Tobacco",
+        "patients": 1,
+        "lastRecorded": "2024-11-11"
+      },
+      {
+        "section": "Medical condition",
+        "item": "Ulcers",
+        "patients": 1,
+        "lastRecorded": "2024-08-29"
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 27,
+    "parseFails": 0,
+    "note": "History is a registry, not an event stream: prevalence reflects each patient's latest saved history record over all time, so the selected date range applies only to the captures trend. Items unticked by the doctor (enable = N) are documented denials and are excluded from all counts. Doctor filter is not supported on this page (the history table records no doctor)."
+  }
+}

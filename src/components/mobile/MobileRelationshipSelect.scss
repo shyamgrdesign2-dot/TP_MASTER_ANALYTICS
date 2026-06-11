@@ -1,0 +1,91 @@
+.mobile-relationship-select {
+  .ant-drawer-content-wrapper {
+    border-radius: 16px 16px 0 0;
+    max-height: 65vh !important;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    max-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.mobile-relationship-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-relationship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #E8E8E8;
+  flex-shrink: 0;
+}
+
+.mobile-relationship-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #454551;
+  margin: 0;
+}
+
+.mobile-relationship-close {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.relationship-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.mobile-relationship-footer {
+  padding: 16px 20px;
+  flex-shrink: 0;
+  border-top: 1px solid #E8E8E8;
+
+  .ant-btn {
+    font-weight: 500;
+  }
+}
+
+.relationship-item {
+  padding: 14px 20px;
+  cursor: pointer;
+  user-select: none;
+
+  &:active {
+    background: #F5F5F5;
+  }
+
+  .ant-checkbox-wrapper {
+    width: 100%;
+    font-size: 14px;
+    color: #1A1A1A;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #5B47FB;
+    border-color: #5B47FB;
+  }
+}

@@ -1,0 +1,231 @@
+body {
+    table tbody tr {
+        th {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        td {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+    }
+    .ant-table-filter-column, .ant-table-column-sorters {
+        float: left;
+    } 
+    .ant-table {
+        .btn.btn-more {
+            font-size: 20px;
+            padding: 0;
+            line-height: 0;
+        }
+
+        thead.ant-table-thead {
+            th, td {
+                padding: 7.5px 16px;
+                border-bottom: 0;
+                background-color: #F1F1F5;
+                font-size: 12px;
+                text-transform: uppercase;
+
+                &:first-child {
+                    border-bottom-left-radius: 8px;
+                }
+
+                &:last-child {
+                    border-bottom-right-radius: 8px;
+                }
+            }
+        }
+
+        tbody.ant-table-tbody {
+            td {
+                padding: 9px 16px;
+                border-bottom: 0;
+                // Sorting Color change issue solved
+                &.ant-table-column-sort {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .customize-table {
+        .ant-table {
+            thead.ant-table-thead {
+                th, td {
+                    font-family: 'Roboto' !important;
+                    color: $welcomecolor !important;
+                    border-bottom: 1px solid $bordercolor;
+                    border-top: 1px solid $bordercolor;
+                    &:first-child {
+                        border-radius: 0;
+                        border-left: 1px solid $bordercolor;
+                    }
+                    &:last-child {
+                        border-radius: 0;
+                        border-right: 1px solid $bordercolor;
+                    }
+                }
+                th {
+                    font-weight: 500;
+                }
+            }
+            tbody {
+                td {
+                    padding: 11.5px 12px;
+                    font-size: 14px;
+                    font-family: 'Roboto' !important;
+                    font-weight: 500;
+                    border-bottom: 1px solid $bordercolor;
+                    &:first-child {
+                        border-left: 1px solid $bordercolor;
+                    }
+                    &:last-child {
+                        border-right: 1px solid $bordercolor;
+                        text-align: center;
+                    }
+                    .text-left {
+                        text-align: left !important;
+                    }
+                }
+            }
+        }
+        &.table-display-patient .ant-table {
+            tbody {
+                tr {
+                    &:first-child {
+                        td {
+                            border-top: 1px solid $bordercolor;
+                        }
+                    }
+                }
+            }
+        }
+        &.customize-table-format {
+            .ant-table {
+                tbody {
+                    td {
+                        &:first-child {
+                            border-left: 0;
+                            padding-left: 0px;
+                            padding-right: 5px;
+                        }
+                        &:last-child {
+                            border-right: 0;
+                            padding-right: 0px;
+                            padding-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .radio-width-static {
+        .ant-form-item-control-input {
+            width: 209px;
+            float: right;
+        }
+    }
+    .radio-width-static-web {
+        .ant-form-item-control-input {
+            width: 260px;
+            float: right;
+        }
+    }
+    .patient-medication .ant-table {
+        .ant-table-thead {
+            th {
+                padding: 5px 9px;
+            }
+        }
+        .ant-table-tbody {
+            td {
+                padding: 8px 9px;
+               div {
+                font-size: 13px;
+                font-family: 'roboto' !important;
+               }
+               small {
+                font-size: 11.5px;
+               }
+            }
+        }
+    }
+    .table-border {
+        .ant-table {
+            tbody.ant-table-tbody {
+                tr {
+                    td {
+                        border-bottom: 1px solid $bordercolor !important;
+                    }
+
+                    &:last-child {
+                        td {
+                            border-bottom: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .table-billing {
+        .ant-table {
+            thead {
+                th {
+                    font-size: 13px;
+                    padding: 14px 12px;
+                    color: #1F2933 !important;
+                    &:first-child {
+                        border-bottom-left-radius: 0px;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+            }
+            tbody.ant-table-tbody {
+                tr {
+                    td {
+                        border-bottom: 0.5px solid rgba($bordercolor, (50%)) !important;
+                        font-size: 13.5px;
+                        font-weight: 400;
+                        color: $welcomecolor !important;
+                        button {
+                            font-weight: 500;
+                            font-size: 13px;
+                        }
+                        &:last-child {
+                            div {
+                                border-radius: 20px;
+                                padding: 2px 6px;
+                                font-size: 12.5px;
+                                text-align: center;
+                                font-weight: 500;
+                                &.active {
+                                    background: #EDF7ED;
+                                    color: #3D8C40 !important;
+                                }  
+                                &.expired {
+                                    background: #FCEDED;
+                                    color: #FC5A5A !important;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.custom-table-scroll .ant-table-body {
+    overflow-y: auto; /* Always show vertical scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    scroll-behavior: smooth; /* Smooth scrolling for modern browsers */
+  }
+  

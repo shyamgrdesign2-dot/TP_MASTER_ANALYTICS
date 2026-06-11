@@ -1,0 +1,34 @@
+.footerRoot {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.footerNormal {
+  border-top: 1px solid var(--tp-slate-300);
+  box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.footerRecording {
+  border-top: none;
+  box-shadow: none;
+}
+
+.fadeGradient {
+  pointer-events: none;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.pillBarWrap {
+  padding: 8px 4px 6px;
+}
+
+.ctaWrap {
+  padding: 10px 14px 14px;
+}

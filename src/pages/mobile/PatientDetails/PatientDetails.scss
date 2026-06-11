@@ -1,0 +1,62 @@
+@import '../../../styles/variables.scss';
+
+.mobile-patient-details {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FAFDFF;
+  overflow: hidden;
+  position: relative;
+  animation: slideInFromRight 0.3s ease-out;
+
+  .patient-header-wrapper {
+    background: 
+      url('#{$tp-assets-base}/mobile/Right%20Vector.svg') left top no-repeat,
+      url('#{$tp-assets-base}/mobile/Left%20Vector.svg') right top no-repeat,
+      linear-gradient(135deg, #603795 0%, #3A225D 15%, #2F1D58 30%, #241852 45%, #131038 60%, #121229 75%, #10101E 100%);
+    background-size: auto, auto, 100% 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .patient-content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    // background: #FFFFFF;
+    background: #FAF8FD !important;
+    padding: 14px;
+    padding-bottom: 100px; // Space for fixed bottom action buttons (80px buttons + 20px margin)
+
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+  }
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

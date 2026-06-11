@@ -1,0 +1,179 @@
+.add-custom-module-drawer {
+  .ant-drawer-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e2ea;
+    background: #ffffff;
+    flex-shrink: 0;
+    height: 60px;
+    z-index: 1200 !important; // Highest - drawer header stays on top
+  }
+
+  &__create-button {
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    background: #a461d8;
+    border-color: #a461d8;
+    color: #ffffff;
+
+    &:hover:not(:disabled) {
+      background: #4b4ad5;
+      border-color: #4b4ad5;
+    }
+
+    &:disabled {
+      background: #4b4ad5;
+      color: #000000;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__back-icon {
+    font-size: 20px;
+    color: #454551;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #4b4ad5;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #454551;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 26px;
+  }
+
+  &__tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+
+    &-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+
+      .ant-tabs-nav {
+        margin: 0;
+        padding: 0 24px;
+        border-bottom: 1px solid #e2e2ea;
+        background: #ffffff !important;
+        flex-shrink: 0;
+        z-index: 1150; // Below header but above dropdown
+
+        &::before {
+          display: none;
+        }
+
+        .ant-tabs-nav-wrap {
+          background: #ffffff !important;
+          
+          .ant-tabs-nav-list {
+            display: flex;
+            width: 100%;
+            
+            .ant-tabs-tab {
+              flex: 1;
+              width: 50%;
+              padding: 16px 0;
+              margin: 0;
+              font-size: 16px;
+              font-weight: 500;
+              font-family: "Poppins", sans-serif;
+              color: #a2a2a8;
+              border: none;
+              transition: all 0.2s ease-in-out;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .ant-tabs-tab-btn {
+                text-align: center;
+                width: 100%;
+              }
+
+              &:hover {
+                color: #4b4ad5;
+              }
+            }
+
+            .ant-tabs-tab-active {
+              .ant-tabs-tab-btn {
+                color: #4b4ad5 !important;
+                font-weight: 600;
+              }
+            }
+
+            .ant-tabs-ink-bar {
+              background: #4b4ad5;
+              height: 3px;
+              border-radius: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+      .ant-tabs-content-holder {
+        flex: 1;
+        overflow: hidden;
+        min-height: 0;
+
+        .ant-tabs-content {
+          height: 100%;
+
+          .ant-tabs-tabpane {
+            height: 100%;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  &__tab-pane {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__placeholder {
+    padding: 24px;
+    text-align: center;
+    color: #a0aec0;
+    font-size: 14px;
+  }
+}

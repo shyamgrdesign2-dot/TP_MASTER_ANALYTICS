@@ -1,0 +1,527 @@
+body {
+    .SidebarDoctor {
+        box-shadow: $boxshadowsidebar;
+        width: 100%;
+        max-width: 110px;
+        height: calc(100vh - 56px);
+        max-height: calc(100vh - 56px);
+        padding: 20px 0 0 0 !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        /* Shadow effect at the bottom to indicate more content with fade */
+        &::after {
+            content: "";
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px !important;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.81) 31%, rgb(164 164 164 / 80%) 92%);
+            pointer-events: none;
+            z-index: 10;
+            margin-top: auto;
+            flex-shrink: 0;
+            @media only screen and (max-width: 1400px) {
+                height: 50px;
+            }
+        }
+        .sidebar-message {
+            width: 35px;
+            @media only screen and (max-width: 1400px) {
+                width: 26px;
+            }
+        }
+        .scrollable-content::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollable-content{
+            height: 75.5%;
+            overflow-y:"auto";
+            margin: top -0.8rem;
+            overflow-x: hidden;
+            box-shadow: rgb(201 201 201 / 90%) -1.2px 1px 0px;
+        }
+        /* Create a fade effect at the bottom */
+        .scrollable-content::after {
+            content: "";
+            position: absolute;
+            top:calc(75% - 80px);
+            left: 0;
+            width: 99px;
+            height: 84px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+            pointer-events: none; /* Allows interaction with the content below */
+            z-index: 1;
+
+            @media only screen and (max-width: 1100px) {
+                max-width: 79px;
+            }
+        }
+        .fixedSidebar{
+            width: 100%;
+            max-width: 110px;
+            padding: 15px 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+            .hoveredColor{
+                color: $theme !important;
+            }
+
+            div{
+                @media only screen and (max-width: 1100px) {
+                    max-width: 80px;
+                }
+            }
+
+        }
+        @media only screen and (max-width: 1400px) {
+            max-width: 85px;
+        }
+        a {
+            display: block;
+            padding: 8px 0;
+            margin: 0 0 12px 0;
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            position: relative;
+            i {
+                font-size: 25px;
+                color: $grayColor;
+            }
+            &:after{
+                height: 110%;
+                width: 4px;
+                position: absolute;
+                left: 0;
+                top: -5%;
+                content: "";
+                background-color: transparent;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                color: $theme;
+                background-color: rgba(75, 74, 213, 0.08);
+                &:after{
+                    background-color: $theme;
+                }
+                div {
+                    color: $theme !important;
+                }
+                i {
+                    &:before{
+                        color: $theme !important;
+                    }   
+                }
+            }
+        }
+        svg,
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .ant-layout-sider {
+        box-shadow: $boxshadowsidebar;
+        flex: 0 0 253px !important;
+        max-width: 253px !important;
+        min-width: 253px !important;
+        width: 253px !important;
+        background: $white !important;
+        padding: 10px 0;
+        &.tabsider {
+            flex: 0 0 230px !important;
+            max-width: 230px !important;
+            min-width: 230px !important;
+            width: 230px !important;
+            background-color: $white !important;
+            padding: 0;
+            box-shadow: none;
+        }
+        &.tabsider1 {
+            flex: 0 !important;
+            max-width: 0 !important;
+            min-width: 0 !important;
+            width: 0 !important;
+            background-color: transparent !important;
+            padding: 0;
+            display: none;
+        }
+        .nav-item {
+            padding: 0;
+            a {
+                padding: 14px 17px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 0.1px;
+                font-size: 14px;
+                position: relative;
+                width: 252px;
+                i {
+                    &:before{
+                        font-size: 24px;
+                        color: #A2A2A8 !important;
+                    }   
+                }
+                &:after{
+                    height: 100%;
+                    width: 4px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    background-color: transparent;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                }
+                &:hover, &:focus, &:active, &.active {
+                    background-color: $bgbody;
+                    &:after{
+                        background-color: $theme;
+                    }
+                    div {
+                        color: $theme !important;
+                    }
+                    i {
+                        &:before{
+                            color: $theme !important;
+                        }   
+                    }
+                }
+            }
+        }
+        hr {
+            border-color: $bordercolor;
+            opacity: 1;
+        }
+        p {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+    }
+    .ant-layout-sider1 {
+        box-shadow: $boxshadowsidebar;
+        padding: 10px 0;
+        flex: 0 0 80px !important;
+        max-width: 80px !important;
+        min-width: 80px !important;
+        width: 80px !important;
+        background: $white !important;
+        .nav-item {
+            padding: 0;
+            a {
+                padding: 14px 7px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.1px;
+                font-size: 12px;
+                position: relative;
+                width: 79px;
+                i {
+                    &:before{
+                        font-size: 24px;
+                        color: #A2A2A8 !important;
+                    }   
+                }
+                &:after{
+                    height: 100%;
+                    width: 4px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "";
+                    background-color: transparent;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                }
+                &:hover, &:focus, &:active, &.active {
+                    background-color: $bgbody;
+                    &:after{
+                        background-color: $theme;
+                    }
+                    div {
+                        color: $theme !important;
+                    }
+                    i {
+                        &:before{
+                            color: $theme !important;
+                        }   
+                    }
+                }
+            }
+        }
+        hr {
+            border-color: $bordercolor;
+            opacity: 1;
+        }
+        p {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.1px;
+        }
+    }
+    .collapseborder {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            height: 40px;
+            width: 19px;
+            background-color: #fff;
+            left: -1px;
+            top: -1px;
+            z-index: -1;
+        } 
+    }
+    .patientProfile {
+        background-color: #A2A2A8;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        color: $white !important;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        &.patientProfile90 {
+            width: 90px;
+            min-width: 90px;
+            height: 90px;
+            min-height: 90px;
+            font-size: 38px;
+            font-weight: 500;
+        }
+        &.patientProfile52 {
+            width: 52px;
+            min-width: 52px;
+            height: 52px;
+            min-height: 52px;
+            font-size: 21px;
+            font-weight: 500;
+        }
+    }
+    .patientName {
+        color: $welcomecolor !important;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+
+        @media only screen and (max-width: 1100px) {
+            max-width: 230px;
+        }
+    }
+    .prescription-sidebar {
+        height: calc(100vh - 60px);
+        max-height: calc(100vh - 60px);
+        background-color: $themesecondary;
+        width: 64px;
+        min-width: 64px;
+        padding: 10px 0;
+        text-align: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For IE and Edge */
+        .prescription-tab-button {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            background-color: $themesecondarylight;
+            box-shadow: 1px 2px 5px 0px rgba(74, 46, 96, 0.12);
+            &:active, &.active, &:hover, &:focus {
+                background-color: $white;
+            }
+            // .sider-white {
+            //     display: block;
+            // }
+            // .sider-normal {
+            //     display: none;
+            // }
+            // &:active, .active, &:hover, &:focus {
+            //     background-color: $white;
+            //     .sider-white {
+            //         display: none;
+            //     }
+            //     .sider-normal {
+            //         display: block;
+            //     }
+            // }
+        }
+        label {
+            font-family: 'Roboto';
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.1px;
+        }
+    }
+    .prescription-sidebar::-webkit-scrollbar {
+        display: none;
+    }
+    .prescription-sidebar-ai {
+        background-color: #22003C;
+        position: relative;
+
+        .prescription-sidebar-ai-vector {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .prescription-sidebar-ai-vector-reverse {
+            position: absolute;
+            bottom: 130px;
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+    }
+    .text-history {
+        color: $historytext;
+    }
+
+    .know-more-txt {
+        color: #A461D8 !important;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .disclaimer-txt {
+        color: #A2A2A8 !important;
+    }
+    .trial-sidebar {
+        background: linear-gradient(262.87deg, #F15223 0%, #FF987A 47.22%, #F15223 94.44%);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+        right: 0;
+        top: 6px;
+        span {
+            margin: 4px 7px;
+            display: block;
+            color: $white !important;
+            font-size: 10px;
+            line-height: 10px;
+        }
+        img {
+            margin: 5px 6px;
+            width: 10px;
+            display: block;
+        }
+        @media only screen and (max-width: 1400px) {
+            span {
+                margin: 3px;
+                color: $white !important;
+                font-size: 9px;
+                line-height: 8px;
+            }
+        }
+    }
+
+    .sidebar_abha_link_container {
+        padding: 0px 6px !important;
+    }
+
+    .sidebar-abha-link {
+        padding: 10px 15px !important;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: #4B4AD51A;
+        border: 1px dashed #4B4AD5;
+        width: auto !important;
+
+        &:hover {
+            background: #f5f6f7; // same hover used in menu
+            color: #000;
+        }
+    }
+
+    .sidebar_abha_text_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar_abha_text {
+        color: #4B4AD5 !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .sidebar_abha_text_collapsed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar_abha_text_line {
+        color: #4B4AD5 !important;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .sidebar-icon-wrapper {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-abha-icon {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+}
+
+@supports (height: 100dvh) {
+    body {
+        .SidebarDoctor {
+            height: calc(100dvh - 56px);
+            max-height: calc(100dvh - 56px);
+        }
+
+        .prescription-sidebar {
+            height: calc(100dvh - 60px);
+            max-height: calc(100dvh - 60px);
+        }
+    }
+}

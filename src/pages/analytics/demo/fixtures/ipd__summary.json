@@ -1,0 +1,270 @@
+{
+  "kpis": [
+    {
+      "key": "census",
+      "label": "Current census",
+      "value": 34,
+      "description": "Patients admitted right now (admissions not yet discharged)."
+    },
+    {
+      "key": "admitted",
+      "label": "Admitted",
+      "value": 87,
+      "description": "Admissions that started in the selected period."
+    },
+    {
+      "key": "discharged",
+      "label": "Discharged",
+      "value": 53,
+      "description": "Admissions closed in the selected period. Discharge time uses the ready-to-discharge log, then the discharge summary date, then the last record update."
+    },
+    {
+      "key": "inQueue",
+      "label": "In discharge queue",
+      "value": 4,
+      "description": "Active admissions flagged ready to discharge but not yet discharged."
+    },
+    {
+      "key": "avgLos",
+      "label": "Avg length of stay",
+      "value": 55.6,
+      "unit": "days",
+      "description": "Average days from admission to discharge over discharges in the period."
+    },
+    {
+      "key": "occupancy",
+      "label": "Bed occupancy",
+      "value": 97.1,
+      "unit": "%",
+      "sub": "34 of 35 active beds",
+      "description": "Current census over active (unblocked) bed capacity."
+    }
+  ],
+  "ipdFlowTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Period"
+      },
+      {
+        "key": "admitted",
+        "label": "Admitted"
+      },
+      {
+        "key": "discharged",
+        "label": "Discharged"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2025-07",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2025-08",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2025-09",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2025-10",
+        "admitted": 0,
+        "discharged": 1
+      },
+      {
+        "k": "2025-11",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2025-12",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-01",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-02",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-03",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-04",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-05",
+        "admitted": 0,
+        "discharged": 0
+      },
+      {
+        "k": "2026-06",
+        "admitted": 0,
+        "discharged": 0
+      }
+    ]
+  },
+  "censusTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Period"
+      },
+      {
+        "key": "count",
+        "label": "Patients in house"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2025-07",
+        "count": 35
+      },
+      {
+        "k": "2025-08",
+        "count": 35
+      },
+      {
+        "k": "2025-09",
+        "count": 35
+      },
+      {
+        "k": "2025-10",
+        "count": 34
+      },
+      {
+        "k": "2025-11",
+        "count": 34
+      },
+      {
+        "k": "2025-12",
+        "count": 34
+      },
+      {
+        "k": "2026-01",
+        "count": 34
+      },
+      {
+        "k": "2026-02",
+        "count": 34
+      },
+      {
+        "k": "2026-03",
+        "count": 34
+      },
+      {
+        "k": "2026-04",
+        "count": 34
+      },
+      {
+        "k": "2026-05",
+        "count": 34
+      },
+      {
+        "k": "2026-06",
+        "count": 34
+      }
+    ]
+  },
+  "wardOccupancy": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "occupied",
+        "label": "Occupied"
+      },
+      {
+        "key": "available",
+        "label": "Available"
+      }
+    ],
+    "rows": [
+      {
+        "k": "ICU Ward",
+        "occupied": 14,
+        "available": 1
+      },
+      {
+        "k": "General Ward",
+        "occupied": 13,
+        "available": 0
+      },
+      {
+        "k": "Special",
+        "occupied": 3,
+        "available": 1
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "occupied": 2,
+        "available": 0
+      },
+      {
+        "k": "Apollo Hospital - ICU ward",
+        "occupied": 1,
+        "available": 0
+      },
+      {
+        "k": "Unassigned",
+        "occupied": 1,
+        "available": 0
+      }
+    ]
+  },
+  "dischargeTypeMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Discharge type"
+      },
+      {
+        "key": "count",
+        "label": "Discharges"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Medical",
+        "count": 18
+      },
+      {
+        "k": "DAMA",
+        "count": 16
+      },
+      {
+        "k": "Transfer Out",
+        "count": 10
+      },
+      {
+        "k": "Death",
+        "count": 8
+      },
+      {
+        "k": "Not recorded",
+        "count": 1
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 87,
+    "note": "Source: legacy clinic replica. Hospitals on the modern pm-ipd microservice need that feed wired in before their data appears here."
+  }
+}

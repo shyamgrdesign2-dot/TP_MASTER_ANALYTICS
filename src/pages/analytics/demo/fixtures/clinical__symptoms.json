@@ -1,0 +1,1885 @@
+{
+  "kpis": [
+    {
+      "key": "topSymptom",
+      "label": "Top symptom",
+      "value": "MildFever",
+      "description": "The symptom mentioned most often on prescriptions this period (72 mentions). Case and spacing variants are counted together."
+    },
+    {
+      "key": "symptomEntries",
+      "label": "Symptom entries",
+      "value": 283,
+      "description": "Total structured symptom entries parsed from prescriptions in this period (one prescription can list several symptoms)."
+    },
+    {
+      "key": "distinctSymptoms",
+      "label": "Distinct symptoms",
+      "value": 45,
+      "description": "Unique symptom names as typed (case and spacing normalized); not a medical taxonomy, spelling variants count separately."
+    },
+    {
+      "key": "patientsWithSymptom",
+      "label": "Patients with symptoms",
+      "value": 67,
+      "description": "Distinct patients with at least one structured symptom entry on a prescription in this period."
+    }
+  ],
+  "severityMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Severity"
+      },
+      {
+        "key": "count",
+        "label": "Entries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Mild",
+        "count": 30
+      },
+      {
+        "k": "Moderate",
+        "count": 40
+      },
+      {
+        "k": "Severe",
+        "count": 20
+      },
+      {
+        "k": "Not recorded",
+        "count": 193
+      }
+    ]
+  },
+  "topSymptoms": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Symptom"
+      },
+      {
+        "key": "count",
+        "label": "Mentions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "MildFever",
+        "count": 72
+      },
+      {
+        "k": "General Examination",
+        "count": 31
+      },
+      {
+        "k": "Cold",
+        "count": 29
+      },
+      {
+        "k": "Quisque ultricies",
+        "count": 25
+      },
+      {
+        "k": "Dengue",
+        "count": 22
+      },
+      {
+        "k": "AN Sub Title 3-3456",
+        "count": 15
+      },
+      {
+        "k": "CC Sub Title 2-666",
+        "count": 14
+      },
+      {
+        "k": "Mayanak 678",
+        "count": 12
+      },
+      {
+        "k": "Fever",
+        "count": 11
+      },
+      {
+        "k": "Medium",
+        "count": 6
+      },
+      {
+        "k": "Itchy Eyes",
+        "count": 4
+      },
+      {
+        "k": "Watery Eyes",
+        "count": 4
+      },
+      {
+        "k": "Chest Pain",
+        "count": 3
+      },
+      {
+        "k": "ಜ್ವರ",
+        "count": 2
+      },
+      {
+        "k": "Examination For FeverDengue",
+        "count": 2
+      }
+    ]
+  },
+  "symptomTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Month"
+      },
+      {
+        "key": "entries",
+        "label": "Symptom entries"
+      },
+      {
+        "key": "patients",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2023-08",
+        "entries": 3,
+        "patients": 1
+      },
+      {
+        "k": "2023-09",
+        "entries": 8,
+        "patients": 3
+      },
+      {
+        "k": "2023-10",
+        "entries": 0,
+        "patients": 0
+      },
+      {
+        "k": "2023-11",
+        "entries": 0,
+        "patients": 0
+      },
+      {
+        "k": "2023-12",
+        "entries": 0,
+        "patients": 0
+      },
+      {
+        "k": "2024-01",
+        "entries": 14,
+        "patients": 6
+      },
+      {
+        "k": "2024-02",
+        "entries": 12,
+        "patients": 5
+      },
+      {
+        "k": "2024-03",
+        "entries": 40,
+        "patients": 8
+      },
+      {
+        "k": "2024-04",
+        "entries": 23,
+        "patients": 9
+      },
+      {
+        "k": "2024-05",
+        "entries": 9,
+        "patients": 6
+      },
+      {
+        "k": "2024-06",
+        "entries": 25,
+        "patients": 10
+      },
+      {
+        "k": "2024-07",
+        "entries": 21,
+        "patients": 8
+      },
+      {
+        "k": "2024-08",
+        "entries": 15,
+        "patients": 10
+      },
+      {
+        "k": "2024-09",
+        "entries": 10,
+        "patients": 4
+      },
+      {
+        "k": "2024-10",
+        "entries": 10,
+        "patients": 4
+      },
+      {
+        "k": "2024-11",
+        "entries": 31,
+        "patients": 13
+      },
+      {
+        "k": "2024-12",
+        "entries": 13,
+        "patients": 10
+      },
+      {
+        "k": "2025-01",
+        "entries": 44,
+        "patients": 3
+      },
+      {
+        "k": "2025-02",
+        "entries": 1,
+        "patients": 1
+      },
+      {
+        "k": "2025-03",
+        "entries": 4,
+        "patients": 1
+      }
+    ]
+  },
+  "register": {
+    "columns": [
+      {
+        "key": "patientName",
+        "label": "Patient"
+      },
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "symptom",
+        "label": "Symptom"
+      },
+      {
+        "key": "severity",
+        "label": "Severity"
+      },
+      {
+        "key": "since",
+        "label": "Since"
+      },
+      {
+        "key": "note",
+        "label": "Note"
+      }
+    ],
+    "rows": [
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-03-06",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-03-06",
+        "symptom": "జ్వరం",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "జ్వరం"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-03-06",
+        "symptom": "ಜ್ವರ",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "ಜ್ವರ"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-03-06",
+        "symptom": "പനി",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "പനി"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2025-02-22",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "ঔষধ বা ড্রাগ হলো এমন রাসায়নিক দ্রব্য যা প্রয়োগে প্রাণিদেহের"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2025-01-14",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 11",
+        "date": "2025-01-03",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2025-01-03",
+        "symptom": "Itchy Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2025-01-03",
+        "symptom": "Watery Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 39",
+        "date": "2025-01-02",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 39",
+        "date": "2025-01-02",
+        "symptom": "Medium",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 116",
+        "date": "2024-12-13",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 114",
+        "date": "2024-12-13",
+        "symptom": "Fever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 28",
+        "date": "2024-12-13",
+        "symptom": "Fever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 31",
+        "date": "2024-12-13",
+        "symptom": "Fever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 31",
+        "date": "2024-12-13",
+        "symptom": "Chest Pain",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 51",
+        "date": "2024-12-11",
+        "symptom": "Chest Pain",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 51",
+        "date": "2024-12-10",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-12-09",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 140",
+        "date": "2024-12-05",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 140",
+        "date": "2024-12-05",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 139",
+        "date": "2024-12-05",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 138",
+        "date": "2024-12-05",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 137",
+        "date": "2024-12-05",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 72",
+        "date": "2024-11-29",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 72",
+        "date": "2024-11-28",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 72",
+        "date": "2024-11-28",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 145",
+        "date": "2024-11-27",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 63",
+        "date": "2024-11-26",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 63",
+        "date": "2024-11-26",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 152",
+        "date": "2024-11-23",
+        "symptom": "Blurry vision",
+        "severity": "Severe",
+        "since": "3 Month(s)",
+        "note": "Aggrevated since 1 month"
+      },
+      {
+        "patientName": "Demo Patient 152",
+        "date": "2024-11-23",
+        "symptom": "Cloudy vision",
+        "severity": "Severe",
+        "since": "3 Month(s)",
+        "note": "Aggrevated since 1 month"
+      },
+      {
+        "patientName": "Demo Patient 63",
+        "date": "2024-11-23",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-22",
+        "symptom": "Watery Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-22",
+        "symptom": "Itchy Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 151",
+        "date": "2024-11-22",
+        "symptom": "Watery Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 151",
+        "date": "2024-11-22",
+        "symptom": "Itchy Eyes",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 150",
+        "date": "2024-11-22",
+        "symptom": "Watery Eyes",
+        "severity": "Moderate",
+        "since": "3 Month(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 150",
+        "date": "2024-11-22",
+        "symptom": "Itchy Eyes",
+        "severity": "Severe",
+        "since": "4 Week(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 149",
+        "date": "2024-11-22",
+        "symptom": "Chest Pain",
+        "severity": "Moderate",
+        "since": "3 Month(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 63",
+        "date": "2024-11-22",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-21",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-21",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-21",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-11-21",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 154",
+        "date": "2024-11-19",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 154",
+        "date": "2024-11-19",
+        "symptom": "headache",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 154",
+        "date": "2024-11-19",
+        "symptom": "bleeding ear",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 154",
+        "date": "2024-11-19",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 26",
+        "date": "2024-11-13",
+        "symptom": "Fever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 26",
+        "date": "2024-11-13",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 163",
+        "date": "2024-11-12",
+        "symptom": "Cold",
+        "severity": "Moderate",
+        "since": "5 Day(s)",
+        "note": "Watery eyes"
+      },
+      {
+        "patientName": "Demo Patient 26",
+        "date": "2024-11-12",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "2 Day(s)",
+        "note": "Only during night"
+      },
+      {
+        "patientName": "Demo Patient 158",
+        "date": "2024-11-12",
+        "symptom": "Cold",
+        "severity": "Mild",
+        "since": "3 Day(s)",
+        "note": "Running nose"
+      },
+      {
+        "patientName": "Demo Patient 41",
+        "date": "2024-11-12",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 170",
+        "date": "2024-10-28",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-10-24",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-10-18",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 66",
+        "date": "2024-10-14",
+        "symptom": "General Examination",
+        "severity": "Mild",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 45",
+        "date": "2024-10-11",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 66",
+        "date": "2024-10-11",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 66",
+        "date": "2024-10-11",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 66",
+        "date": "2024-10-11",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 66",
+        "date": "2024-10-11",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-10-01",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 32",
+        "date": "2024-09-25",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 32",
+        "date": "2024-09-25",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-09-13",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-09-13",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-09-13",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-09-13",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-09-13",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 12",
+        "date": "2024-09-03",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-09-03",
+        "symptom": "General Examination",
+        "severity": "Moderate",
+        "since": "2 Week(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-09-03",
+        "symptom": "Urea & Urine,",
+        "severity": "Mild",
+        "since": "1 Month",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-08-29",
+        "symptom": "fever;",
+        "severity": "Severe",
+        "since": "2 Hour(s)",
+        "note": "Ok"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-08-29",
+        "symptom": "MildFever;",
+        "severity": "Severe",
+        "since": "2 Hour(s)",
+        "note": "Ok"
+      },
+      {
+        "patientName": "Demo Patient 13",
+        "date": "2024-08-29",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-08-29",
+        "symptom": "MildFever",
+        "severity": "Mild",
+        "since": "3 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-08-29",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 32",
+        "date": "2024-08-29",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-08-27",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 207",
+        "date": "2024-08-20",
+        "symptom": "Minor Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 116",
+        "date": "2024-08-20",
+        "symptom": "New Heading 1 For Test",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-08-20",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 77",
+        "date": "2024-08-14",
+        "symptom": "Examination For FeverDengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 77",
+        "date": "2024-08-14",
+        "symptom": "Examination For FeverDengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 217",
+        "date": "2024-08-05",
+        "symptom": "ಜ್ವರ",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 217",
+        "date": "2024-08-05",
+        "symptom": "ಹುಷಾರಿಲ್ಲ",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 3",
+        "date": "2024-08-02",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 218",
+        "date": "2024-07-30",
+        "symptom": "MildFever",
+        "severity": "Severe",
+        "since": "3 Week(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-07-23",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "2 Hour(s)",
+        "note": "Ok"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-07-23",
+        "symptom": "montar symptoms UAT",
+        "severity": "Severe",
+        "since": "3 Hour(s)",
+        "note": "Ok"
+      },
+      {
+        "patientName": "Demo Patient 53",
+        "date": "2024-07-22",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 53",
+        "date": "2024-07-22",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 53",
+        "date": "2024-07-22",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 53",
+        "date": "2024-07-22",
+        "symptom": "Quisque ultricies",
+        "severity": "Mild",
+        "since": "2 Hour(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-07-22",
+        "symptom": "Quisque ultricies",
+        "severity": "Moderate",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-07-22",
+        "symptom": "General Examination",
+        "severity": "Mild",
+        "since": "2 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-07-18",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-07-18",
+        "symptom": "Quisque ultricies",
+        "severity": "Mild",
+        "since": "2 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-07-16",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 9",
+        "date": "2024-07-10",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 12",
+        "date": "2024-07-09",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-07-05",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-07-05",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 7",
+        "date": "2024-07-05",
+        "symptom": "Mayanak 678",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-07-04",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "5 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-07-04",
+        "symptom": "Cold",
+        "severity": "Mild",
+        "since": "85 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 12",
+        "date": "2024-07-02",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 12",
+        "date": "2024-07-02",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 220",
+        "date": "2024-06-28",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 220",
+        "date": "2024-06-28",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "2 Day(s)",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-06-28",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 9",
+        "date": "2024-06-26",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-24",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 12",
+        "date": "2024-06-24",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 223",
+        "date": "2024-06-21",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 223",
+        "date": "2024-06-21",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 13",
+        "date": "2024-06-21",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-21",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-06-21",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 145",
+        "date": "2024-06-18",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-06-15",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-06-15",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-06-15",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-06-07",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 2",
+        "date": "2024-06-05",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 46",
+        "date": "2024-06-04",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 46",
+        "date": "2024-06-03",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 46",
+        "date": "2024-06-03",
+        "symptom": "Cold",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 26",
+        "date": "2024-05-31",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-05-31",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 76",
+        "date": "2024-05-31",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 46",
+        "date": "2024-05-31",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-05-31",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 39",
+        "date": "2024-05-28",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 8",
+        "date": "2024-05-27",
+        "symptom": "General Examination",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-05-17",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-05-17",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "2 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 240",
+        "date": "2024-04-26",
+        "symptom": "Dengue",
+        "severity": "Not recorded",
+        "since": "1 Hour",
+        "note": "Dssd"
+      },
+      {
+        "patientName": "Demo Patient 239",
+        "date": "2024-04-26",
+        "symptom": "Dengue",
+        "severity": "Moderate",
+        "since": "2 Hour(s)",
+        "note": "Dsds"
+      },
+      {
+        "patientName": "Demo Patient 238",
+        "date": "2024-04-26",
+        "symptom": "Dengue",
+        "severity": "Moderate",
+        "since": "3 Hour(s)",
+        "note": "Fdf"
+      },
+      {
+        "patientName": "Demo Patient 236",
+        "date": "2024-04-26",
+        "symptom": "Dengue",
+        "severity": "Severe",
+        "since": "1 Hour",
+        "note": "Gf"
+      },
+      {
+        "patientName": "Demo Patient 83",
+        "date": "2024-04-26",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 281",
+        "date": "2024-04-10",
+        "symptom": "MildFever",
+        "severity": "Severe",
+        "since": "1 day(s)",
+        "note": "fgfg"
+      },
+      {
+        "patientName": "Demo Patient 101",
+        "date": "2024-04-10",
+        "symptom": "Benign",
+        "severity": "Severe",
+        "since": "1 day(s)",
+        "note": "gfgf"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-06",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "2 Day",
+        "note": "Please take rest"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-06",
+        "symptom": "Quisque ultricies",
+        "severity": "Mild",
+        "since": "2 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-06",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "1 Day",
+        "note": "Please take rest"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-06",
+        "symptom": "Quisque ultricies",
+        "severity": "Mild",
+        "since": "2 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-05",
+        "symptom": "MildFever",
+        "severity": "Moderate",
+        "since": "1 Hour",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-05",
+        "symptom": "Quisque ultricies",
+        "severity": "Mild",
+        "since": "2 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-04-05",
+        "symptom": "AN Sub Title 3-3456",
+        "severity": "Not recorded",
+        "since": "1 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 17",
+        "date": "2024-04-05",
+        "symptom": "CC Sub Title 2-666",
+        "severity": "Not recorded",
+        "since": "2 Day",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-05",
+        "symptom": "MildFever",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      },
+      {
+        "patientName": "Demo Patient 37",
+        "date": "2024-04-05",
+        "symptom": "Quisque ultricies",
+        "severity": "Not recorded",
+        "since": "—",
+        "note": "—"
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 200,
+    "note": "Per-Rx symptoms parsed from the prescription's symptom box (structured entries only; legacy free-text rows excluded). Severity is folded onto a 3-level scale: high counts as Severe, medium as Moderate, low as Mild; anything else shows as Not recorded."
+  }
+}

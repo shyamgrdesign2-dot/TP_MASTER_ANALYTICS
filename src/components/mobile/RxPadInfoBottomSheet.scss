@@ -1,0 +1,114 @@
+@import '../../styles/variables.scss';
+
+.rx-pad-info-bottom-sheet {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+}
+
+.rx-pad-info-bottom-sheet-content {
+  background: #FFFFFF;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.rx-pad-info-bottom-sheet-header {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rx-pad-info-bottom-sheet-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #1f2933;
+  margin: 0;
+}
+
+.rx-pad-info-bottom-sheet-close {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.rx-pad-info-bottom-sheet-body {
+  padding: 20px 16px;
+}
+
+.rx-pad-info-bottom-sheet-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #52525B;
+  margin: 0;
+}
+
+.rx-pad-info-bottom-sheet-actions {
+  padding: 8px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rx-pad-info-bottom-sheet-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background: #4B4AD5;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+
+  &:active {
+    opacity: 0.85;
+    background: #3d3ab0;
+  }
+}
+
+.rx-pad-info-bottom-sheet-home-indicator {
+  width: 139px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  margin: 8px auto 0;
+}

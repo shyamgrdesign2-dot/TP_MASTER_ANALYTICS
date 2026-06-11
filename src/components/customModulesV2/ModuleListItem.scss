@@ -1,0 +1,429 @@
+.module-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e2ea;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #4b4ad5;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #454551;
+    margin: 0;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    font-family: "Poppins", sans-serif;
+
+    span {
+      color: #a461d8 !important;
+    }
+
+    &--creator {
+      background: #f3e8ff;
+      color: #a461d8 !important;
+    }
+
+    &--columns {
+      background: #f3e8ff;
+      color: #a461d8 !important;
+    }
+
+    &-icon {
+      font-size: 12px;
+      color: #a461d8 !important;
+    }
+  }
+
+  &__view-more {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a461d8 !important;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+    user-select: none;
+
+    &:hover {
+      color: #4b4ad5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: 16px;
+    align-self: flex-start;
+    padding-top: 4px;
+  }
+
+  &__add-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    height: 36px;
+    border: 1px solid #4B4AD5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #4b4ad5 !important;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s ease-in-out;
+
+    span {
+      color: #4b4ad5 !important;
+    }
+
+    .anticon {
+      font-size: 14px;
+      color: #4b4ad5;
+    }
+
+    &:hover {
+      background: #f3e8ff;
+      border-color: #4b4ad5;
+      color: #4b4ad5;
+    }
+
+    &:active {
+      background: #e9d5ff;
+    }
+  }
+
+  &__more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #454551;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+
+    .anticon {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background: #f5f5f5;
+      color: #4b4ad5;
+    }
+  }
+
+  &__preview {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  &__preview-table {
+    background: #ffffff;
+    border: 1px solid #e2e2ea;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__preview-row {
+    display: flex;
+    width: 100%;
+
+    &--header {
+      .module-list-item__preview-cell {
+        background: #fafafb;
+      }
+    }
+
+    &:last-child {
+      .module-list-item__preview-cell {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__preview-cell {
+    padding: 12px 16px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-right: 1px solid #e2e2ea;
+    border-bottom: 1px solid #e2e2ea;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--header {
+      font-size: 14px;
+      font-weight: 600;
+      color: #454551;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      line-height: 20px;
+    }
+
+    &--input {
+      font-size: 14px;
+      font-weight: 400;
+      color: #a2a2a8;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  &__preview-placeholder {
+    color: #a2a2a8 !important;
+  }
+
+  // Edit module name styles
+  &__edit-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  &__edit-input {
+    flex: 1;
+    font-size: 16px;
+    color: #4a4a4a;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "Poppins", sans-serif;
+    
+    &:focus {
+      border-color: #4B4AD5 !important;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+    }
+
+    &:hover {
+      border-color: #4B4AD5;
+    }
+  }
+
+  &__edit-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__edit-icon {
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+    &--check {
+      color: #3D8C40;
+      
+      &:hover {
+        color: #2d6b2f;
+        transform: scale(1.1);
+      }
+    }
+    
+    &--close {
+      color: #B73A3A;
+      
+      &:hover {
+        color: #8b2c2c;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+}
+.module-list-item-dropdown {
+  // High z-index to be visible, but can still be covered by sticky headers if needed
+  z-index: 1050 !important;
+
+  .ant-dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    font-family: "Poppins", sans-serif;
+
+    .ant-dropdown-menu-item {
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #454551;
+      transition: all 0.2s ease-in-out;
+
+      &:hover:not(.ant-dropdown-menu-item-disabled) {
+        background: #f5f5f5;
+        color: #4b4ad5;
+      }
+
+      // Disabled state styling (like in the second image)
+      &.ant-dropdown-menu-item-disabled {
+        color: #d1d1d6 !important;
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+          background: transparent;
+        }
+
+        .anticon {
+          color: #d1d1d6 !important;
+        }
+      }
+
+      // Danger item (delete)
+      &.ant-dropdown-menu-item-danger {
+        color: #ff4d4f;
+
+        &:hover:not(.ant-dropdown-menu-item-disabled) {
+          background: #fff1f0;
+          color: #ff4d4f;
+        }
+        
+        &.ant-dropdown-menu-item-disabled {
+          color: #d1d1d6 !important;
+          
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        
+        .anticon {
+          font-size: 16px;
+          margin-right: 0 !important; // Override inline style
+        }
+      }
+    }
+  }
+}
+
+.ant-tooltip {
+  &.module-list-item-disabled-tooltip {
+    .ant-tooltip-inner {
+      background-color: #ffffff;
+      color: #171725;
+      padding: 18px 20px ; // will be overridden below if needed
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+      font-family: "Poppins", sans-serif;
+      max-width: 420px;
+    }
+
+    .module-disabled-tooltip__header {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 14px;
+
+      &-label {
+        color: #4a4a4a;
+      }
+
+      &-name {
+        color: #111827;
+      }
+    }
+
+    .module-disabled-tooltip__note {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fff6e8;
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+
+    .module-disabled-tooltip__note-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .module-disabled-tooltip__note-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4a4a4a;
+    }
+
+    .module-disabled-tooltip__note-title {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .module-disabled-tooltip__note-strong {
+      font-weight: 600;
+    }
+
+    .ant-tooltip-arrow {
+      &::before {
+        background-color: #ffffff;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+      }
+    }
+  }
+}
+

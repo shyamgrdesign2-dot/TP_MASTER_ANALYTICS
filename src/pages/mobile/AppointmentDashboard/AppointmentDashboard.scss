@@ -1,0 +1,335 @@
+@import '../../../styles/variables.scss';
+
+.mobile-appointment-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FAFDFF;
+  overflow: hidden;
+  position: relative;
+
+  .dashboard-header-wrapper {
+    background: 
+      url('#{$tp-assets-base}/mobile/Right%20Vector.svg') left top no-repeat,
+      url('#{$tp-assets-base}/mobile/Left%20Vector.svg') right top no-repeat,
+      linear-gradient(135deg, #603795 0%, #3A225D 15%, #2F1D58 30%, #241852 45%, #131038 60%, #121229 75%, #10101E 100%);
+    background-size: auto, auto, 100% 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .appointment-content {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #FAF8FD !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .search-container {
+    padding: 14px;
+    padding-bottom: 0;
+
+    .search-input {
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid #e2e2ea;
+      background: white;
+
+      .ant-input {
+        font-size: 14px;
+        color: #454551;
+        
+        &::placeholder {
+          color: rgba(162, 162, 168, 0.6);
+        }
+      }
+
+      .ant-input-prefix {
+        margin-right: 12px;
+        color: #a2a2a8;
+        font-size: 18px;
+      }
+
+      .ant-input-suffix {
+        margin-left: 12px;
+        color: #a2a2a8;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .date-filter-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: center;
+
+    .date-navigation {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #e2e2ea;
+      overflow: hidden;
+
+      .date-nav-btn {
+        border: none;
+        background: transparent;
+        padding: 8px 12px;
+        cursor: pointer;
+        color: #4b4ad5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+
+      .date-picker-input {
+        border: none;
+        border-left: 1px solid #e2e2ea;
+        border-right: 1px solid #e2e2ea;
+        border-radius: 0;
+        height: 38px;
+
+        .ant-picker-input {
+          input {
+            text-align: center;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .period-select {
+      flex: 1;
+      height: 42px;
+      border-radius: 10px;
+
+      .ant-select-selector {
+        height: 42px;
+        border: 1px solid #e2e2ea !important;
+        border-radius: 10px;
+
+        .ant-select-selection-item {
+          line-height: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
+    padding-bottom: 120px; // Extra space for bottom nav + floating button
+  }
+
+  .search-shimmer {
+    padding-bottom: 0;
+
+    .shimmer-search-bar {
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid #e2e2ea;
+      background: white;
+      display: flex;
+      align-items: center;
+      padding: 4px 11px;
+      gap: 12px;
+      width: 100%;
+      box-sizing: border-box;
+
+      .shimmer-search-icon {
+        color: #a2a2a8;
+        font-size: 18px;
+        flex-shrink: 0;
+        opacity: 0.6;
+      }
+
+      .shimmer-search-input {
+        flex: 1;
+        height: 20px;
+        border-radius: 240px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+        background-size: 1000px 100%;
+        animation: shimmer 2s infinite linear;
+      }
+    }
+  }
+
+  .appointments-shimmer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
+    padding-bottom: 120px;
+
+    .appointment-card-shimmer {
+      background: white;
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      .shimmer-card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+
+        .shimmer-avatar-section {
+          display: flex;
+          gap: 12px;
+          flex: 1;
+          min-width: 0;
+
+          .shimmer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
+          }
+
+          .shimmer-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .shimmer-name {
+              height: 24px;
+              width: 100%;
+              border-radius: 240px;
+              background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+              background-size: 1000px 100%;
+              animation: shimmer 2s infinite linear;
+            }
+
+            .shimmer-meta {
+              height: 14px;
+              width: 80%;
+              border-radius: 240px;
+              background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+              background-size: 1000px 100%;
+              animation: shimmer 2s infinite linear;
+            }
+          }
+        }
+      }
+
+      .shimmer-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+
+        .shimmer-chip {
+          height: 26px;
+          width: 80px;
+          border-radius: 240px;
+          background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+          background-size: 1000px 100%;
+          animation: shimmer 2s infinite linear;
+        }
+      }
+
+      .shimmer-divider {
+        height: 1px;
+        width: 100%;
+        background: #EAECF0;
+      }
+
+      .shimmer-actions {
+        display: flex;
+        gap: 10px;
+
+        .shimmer-button {
+          flex: 1;
+          height: 42px;
+          border-radius: 10px;
+          background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 4%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.03) 36%);
+          background-size: 1000px 100%;
+          animation: shimmer 2s infinite linear;
+        }
+      }
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .infinite-scroll-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .walk-in-button {
+    position: fixed;
+    bottom: 100px; // Above bottom navigation
+    right: 16px;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(88deg, rgba(251, 255, 251, 0.80) 0%, rgba(255, 255, 255, 0.80) 50%, rgba(255, 255, 255, 0.80) 100%);
+    color: #292D32;
+    border: 1.29px solid #ffffff;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(12.92px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.2s ease;
+    border: none;
+    padding: 0;
+
+    .walk-in-button-icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      object-fit: contain;
+    }
+
+    &:active {
+      transform: scale(0.92);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+

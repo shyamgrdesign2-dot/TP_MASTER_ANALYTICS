@@ -1,0 +1,175 @@
+.sc-shimmer-container {
+  margin-top: 16px;
+
+  .shimmer-box {
+    border: 1px solid #e5d8f6;
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
+  }
+
+  .shimmer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .shimmer-title {
+    width: 120px;
+    height: 20px;
+    background: #f3f4f6;
+    border-radius: 4px;
+  }
+
+  .shimmer-edit {
+    width: 40px;
+    height: 20px;
+    background: #f3f4f6;
+    border-radius: 4px;
+  }
+
+  .shimmer-line {
+    height: 16px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .shimmer-line:nth-child(1) {
+    width: 40%;
+  }
+
+  .shimmer-line:nth-child(2) {
+    width: 85%;
+  }
+
+  .shimmer-line:nth-child(3) {
+    width: 70%;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer-box .shimmer-title,
+  .shimmer-box .shimmer-edit,
+  .shimmer-box .shimmer-line {
+    background: linear-gradient(to right, #f3f4f6 4%, #e5e7eb 25%, #f3f4f6 36%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+}
+
+.sc-shimmer-container-table {
+  margin-top: 16px;
+  overflow: hidden;
+
+  .shimmer-row {
+    display: grid;
+    grid-template-columns: 25% 20% 20% 35%;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .shimmer-cell {
+    height: 20px;
+    background: #f3f4f6;
+    border-radius: 4px;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer-cell {
+    background: linear-gradient(to right, #f3f4f6 4%, #e5e7eb 25%, #f3f4f6 36%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+}
+
+.medical-history-shimmer {
+  background: white;
+  border: 1px solid #e5d8f6;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.section-shimmer {
+  margin-bottom: 24px;
+}
+
+.section-title-shimmer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title-bar-shimmer {
+  height: 24px;
+  width: 180px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.icon-shimmer {
+  height: 24px;
+  width: 24px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.content-line-shimmer {
+  height: 20px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.content-line-shimmer.short {
+  width: 40%;
+}
+
+.content-line-shimmer.medium {
+  width: 60%;
+}
+
+.content-line-shimmer.long {
+  width: 80%;
+}
+
+.divider-shimmer {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 16px 0;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.title-bar-shimmer,
+.icon-shimmer,
+.content-line-shimmer {
+  background: linear-gradient(to right, #f3f4f6 4%, #e5e7eb 25%, #f3f4f6 36%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}

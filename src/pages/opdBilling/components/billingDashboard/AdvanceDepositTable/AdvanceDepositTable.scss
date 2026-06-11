@@ -1,0 +1,130 @@
+.advance-table-wrapper {
+  .card-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: 25%;
+    padding: 15px;
+    border: 0.2px solid var(--T-Text-10, #E2E2EA) !important;
+    border-radius: 16px !important;
+    text-align: center;
+    transition: 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    &.selected {
+      border-radius: 16px;
+      border: 2.5px solid var(--P-CTA-100, #4B4AD5) !important;
+      background: var(--T-White-100, #FFF);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06),
+        0px 2px 12px 0px rgba(0, 0, 0, 0.04);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #4B4AD5;
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+        z-index: 1;
+        animation: fadeInArrow 0.3s ease forwards;
+      }
+    }
+  }
+
+  @keyframes fadeInArrow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -5px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--dynamic-color) !important;
+  }
+
+  .theme-color{
+    color: #4B4AD5;
+  }
+
+  .card-amount {
+    color: var(--T-Text-80, #454551);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.1px;
+  }
+
+  .billing-download {
+    padding: 6px;
+    border-radius: 10px;
+    background: rgba(75, 74, 213, 0.08);
+  }
+
+  .inputheight38 {
+    width: 20rem;
+  }
+
+  .card.selected .card-title {
+    color: #4a50e0;
+    /* Customize the title color when selected */
+  }
+
+  .card.selected .card-amount {
+    color: #4a50e0;
+    /* Customize the amount color when selected */
+  }
+
+  .status-advance {
+    display: inline-flex;
+    padding: 4px 10px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 30px;
+    background: rgba(237, 223, 247, 0.50);
+    color: #A461D8 !important;
+  }
+
+  .status-refunded {
+    display: inline-flex;
+    padding: 4px 10px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 30px;
+    background: var(--Colour-Red-Red---10, #FCEDED);
+    color: #B73A3A !important;
+  }
+
+  .status-debited {
+    display: inline-flex;
+    padding: 4px 10px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 30px;
+    background: var(--Colour-Orange-Orange---10, #FEEEE9);
+    color: #ED8A00 !important;
+}
+}

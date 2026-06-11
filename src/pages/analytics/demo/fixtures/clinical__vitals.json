@@ -1,0 +1,960 @@
+{
+  "hero": {
+    "label": "Vitals records",
+    "value": 283004
+  },
+  "kpis": [
+    {
+      "key": "avgVitalsPerPatient",
+      "label": "Avg vitals per patient",
+      "value": 1695,
+      "prefix": "~",
+      "description": "Approximate: average number of vitals and body-composition entries recorded per patient in this period (both capture tables combined)."
+    },
+    {
+      "key": "topVital",
+      "label": "Most captured vital",
+      "value": "Height",
+      "description": "The vital sign filled in most often across this period's entries. A quick read on what the team actually measures at the desk."
+    },
+    {
+      "key": "patientsWithVitals",
+      "label": "Patients with vitals",
+      "value": 167,
+      "description": "Distinct patients with at least one vitals or body-composition record in this period."
+    }
+  ],
+  "vitalsCaptured": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Vital sign"
+      },
+      {
+        "key": "count",
+        "label": "Entries recorded"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Temperature",
+        "count": 141085
+      },
+      {
+        "k": "Pulse",
+        "count": 140949
+      },
+      {
+        "k": "Blood pressure",
+        "count": 140930
+      },
+      {
+        "k": "Resp. rate",
+        "count": 140934
+      },
+      {
+        "k": "SpO2",
+        "count": 140893
+      },
+      {
+        "k": "RBS",
+        "count": 5
+      },
+      {
+        "k": "FIB-4",
+        "count": 0
+      },
+      {
+        "k": "Waist",
+        "count": 0
+      },
+      {
+        "k": "Height",
+        "count": 141857
+      },
+      {
+        "k": "Weight",
+        "count": 141855
+      },
+      {
+        "k": "OFC",
+        "count": 85
+      },
+      {
+        "k": "BMI (derived)",
+        "count": 141831
+      }
+    ],
+    "note": "An entry counts when the field is filled in. Values are free text at source, so this measures capture, not clinical validity."
+  },
+  "bpMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "BP stage"
+      },
+      {
+        "key": "count",
+        "label": "Readings"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Normal (<120/80)",
+        "count": 38
+      },
+      {
+        "k": "Elevated (120-129)",
+        "count": 21060
+      },
+      {
+        "k": "Stage 1 (130-139 or 80-89)",
+        "count": 40155
+      },
+      {
+        "k": "Stage 2 (140-179 or 90-119)",
+        "count": 32646
+      },
+      {
+        "k": "Crisis (180+ or 120+)",
+        "count": 72
+      }
+    ],
+    "note": "Stages use both systolic and diastolic; the higher stage wins. Excluded: 46959 readings not in a parseable systolic/diastolic form and 174 vitals entries with no BP recorded."
+  },
+  "bmiMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "BMI band"
+      },
+      {
+        "key": "count",
+        "label": "Measurements"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Underweight (<18.5)",
+        "count": 4
+      },
+      {
+        "k": "Normal (18.5-24.9)",
+        "count": 57
+      },
+      {
+        "k": "Overweight (25-29.9)",
+        "count": 4020
+      },
+      {
+        "k": "Obese (30+)",
+        "count": 70893
+      }
+    ],
+    "note": "BMI is stored as free text; values are parsed with sanity bounds 10 to 60. 66857 non-numeric or out-of-range values were discarded."
+  },
+  "bmiCoverage": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "BMI coverage"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "With BMI",
+        "count": 54
+      },
+      {
+        "k": "Without BMI",
+        "count": 113
+      }
+    ],
+    "note": "Of the patients with any vitals record this period, how many have at least one usable BMI measurement."
+  },
+  "rbsMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "RBS band"
+      },
+      {
+        "key": "count",
+        "label": "Readings"
+      }
+    ],
+    "rows": [
+      {
+        "k": "<140 mg/dl",
+        "count": 4
+      },
+      {
+        "k": "140-199 mg/dl",
+        "count": 0
+      },
+      {
+        "k": "200+ mg/dl",
+        "count": 1
+      }
+    ],
+    "note": "RBS fill is low: captured on 5 of 141104 vitals entries. Bands cover parseable values between 20 and 1000 mg/dl; 0 values were discarded."
+  },
+  "monitoredShare": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Monitoring"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Monitored (2+ entries)",
+        "count": 137
+      },
+      {
+        "k": "Single entry",
+        "count": 30
+      }
+    ],
+    "note": "Patients with repeat vitals entries in the period (trackable trend) versus a single one-off capture."
+  },
+  "patients": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "patientUHID",
+        "label": "Patient UHID"
+      },
+      {
+        "key": "patientName",
+        "label": "Patient"
+      },
+      {
+        "key": "source",
+        "label": "Source"
+      },
+      {
+        "key": "recorded",
+        "label": "Fields recorded"
+      }
+    ],
+    "rows": [
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0069",
+        "patientName": "Demo Patient 64",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0069",
+        "patientName": "Demo Patient 64",
+        "source": "Vitals",
+        "recorded": "Temperature, RBS"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0043",
+        "patientName": "Demo Patient 40",
+        "source": "Vitals",
+        "recorded": "RBS"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0043",
+        "patientName": "Demo Patient 40",
+        "source": "Vitals",
+        "recorded": "Temperature, RBS"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0043",
+        "patientName": "Demo Patient 40",
+        "source": "Vitals",
+        "recorded": "RBS"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0043",
+        "patientName": "Demo Patient 40",
+        "source": "Vitals",
+        "recorded": "Temperature, RBS"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0070",
+        "patientName": "Demo Patient 65",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0070",
+        "patientName": "Demo Patient 65",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0042",
+        "patientName": "Demo Patient 39",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0033",
+        "patientName": "Demo Patient 31",
+        "source": "Body composition",
+        "recorded": "Height"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0132",
+        "patientName": "Demo Patient 121",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0140",
+        "patientName": "Demo Patient 129",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0138",
+        "patientName": "Demo Patient 127",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0138",
+        "patientName": "Demo Patient 127",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0057",
+        "patientName": "Demo Patient 52",
+        "source": "Body composition",
+        "recorded": "Height"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0138",
+        "patientName": "Demo Patient 127",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0134",
+        "patientName": "Demo Patient 123",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0132",
+        "patientName": "Demo Patient 121",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0139",
+        "patientName": "Demo Patient 128",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0140",
+        "patientName": "Demo Patient 129",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0451",
+        "patientName": "Demo Patient 378",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0134",
+        "patientName": "Demo Patient 123",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0012",
+        "patientName": "Demo Patient 11",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0014",
+        "patientName": "Demo Patient 13",
+        "source": "Body composition",
+        "recorded": "Height"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0139",
+        "patientName": "Demo Patient 128",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0140",
+        "patientName": "Demo Patient 129",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0012",
+        "patientName": "Demo Patient 11",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0142",
+        "patientName": "Demo Patient 131",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0141",
+        "patientName": "Demo Patient 130",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0141",
+        "patientName": "Demo Patient 130",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Body composition",
+        "recorded": "OFC"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0145",
+        "patientName": "Demo Patient 134",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0146",
+        "patientName": "Demo Patient 135",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0145",
+        "patientName": "Demo Patient 134",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0148",
+        "patientName": "Demo Patient 137",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0151",
+        "patientName": "Demo Patient 140",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0153",
+        "patientName": "Demo Patient 142",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0152",
+        "patientName": "Demo Patient 141",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0452",
+        "patientName": "Demo Patient 379",
+        "source": "Body composition",
+        "recorded": "Weight"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0079",
+        "patientName": "Demo Patient 72",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0155",
+        "patientName": "Demo Patient 144",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0452",
+        "patientName": "Demo Patient 379",
+        "source": "Body composition",
+        "recorded": "Weight"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0453",
+        "patientName": "",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0162",
+        "patientName": "Demo Patient 151",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0162",
+        "patientName": "Demo Patient 151",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0454",
+        "patientName": "Demo Patient 380",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0454",
+        "patientName": "Demo Patient 380",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0168",
+        "patientName": "Demo Patient 157",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0168",
+        "patientName": "Demo Patient 157",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0167",
+        "patientName": "Demo Patient 156",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0167",
+        "patientName": "Demo Patient 156",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0027",
+        "patientName": "Demo Patient 26",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0027",
+        "patientName": "Demo Patient 26",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0172",
+        "patientName": "Demo Patient 161",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0174",
+        "patientName": "Demo Patient 163",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0174",
+        "patientName": "Demo Patient 163",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0172",
+        "patientName": "Demo Patient 161",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Body composition",
+        "recorded": "Weight, OFC"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Body composition",
+        "recorded": "Weight, OFC"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0036",
+        "patientName": "Demo Patient 34",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0185",
+        "patientName": "Demo Patient 174",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0184",
+        "patientName": "Demo Patient 173",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0189",
+        "patientName": "Demo Patient 178",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0189",
+        "patientName": "Demo Patient 178",
+        "source": "Body composition",
+        "recorded": "OFC"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0033",
+        "patientName": "Demo Patient 31",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0185",
+        "patientName": "Demo Patient 174",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0185",
+        "patientName": "Demo Patient 174",
+        "source": "Body composition",
+        "recorded": "Height, Weight, OFC, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0033",
+        "patientName": "Demo Patient 31",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0019",
+        "patientName": "Demo Patient 18",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0031",
+        "patientName": "Demo Patient 29",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0049",
+        "patientName": "Demo Patient 45",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0037",
+        "patientName": "Demo Patient 35",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0019",
+        "patientName": "Demo Patient 18",
+        "source": "Body composition",
+        "recorded": "Height, Weight, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0019",
+        "patientName": "Demo Patient 18",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0034",
+        "patientName": "Demo Patient 32",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Resp. rate"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0049",
+        "patientName": "Demo Patient 45",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0031",
+        "patientName": "Demo Patient 29",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0002",
+        "patientName": "Demo Patient 2",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0034",
+        "patientName": "Demo Patient 32",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0009",
+        "patientName": "Demo Patient 8",
+        "source": "Body composition",
+        "recorded": "Height, Weight, BMI"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0009",
+        "patientName": "Demo Patient 8",
+        "source": "Vitals",
+        "recorded": "Temperature, Pulse, Blood pressure, Resp. rate, SpO2"
+      },
+      {
+        "date": {},
+        "patientUHID": "DEMO-0019",
+        "patientName": "Demo Patient 18",
+        "source": "Vitals",
+        "recorded": "Temperature"
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 100,
+    "note": "Vitals values are stored as free text at source; charts parse them defensively with sanity bounds and each chart notes how many values were discarded."
+  }
+}

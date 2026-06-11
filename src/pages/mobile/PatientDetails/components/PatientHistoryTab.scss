@@ -1,0 +1,171 @@
+@import '../../../../styles/variables.scss';
+
+.patient-history-tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // Temporarily commented out - will be implemented in next phase
+  // .history-accordions {
+  //   display: flex;
+  //   flex-direction: column;
+  //   background: #FFFFFF;
+  //   border-radius: 12px;
+  //   overflow: hidden;
+  //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  //
+  //   .history-accordion-item {
+  //     // ... accordion styles
+  //   }
+  // }
+  //
+  // .empty-state {
+  //   padding: 40px 16px;
+  //   text-align: center;
+  //   color: #999;
+  //   font-size: 14px;
+  //   font-family: 'Poppins', sans-serif;
+  // }
+  //
+  // @keyframes slideDown {
+  //   // ... animation styles
+  // }
+
+  // Coming Soon styling (matching BillingTab)
+  .billing-tab {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .billing-tab-greyed-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border: 1px solid rgba($theme, 0.1);
+    filter: grayscale(20%) opacity(0.85);
+    box-sizing: border-box;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($theme, 0.03) 0%, rgba($theme, 0.06) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0px 1px 4px rgba($theme, 0.15);
+    }
+
+    &:hover {
+      filter: grayscale(15%) opacity(0.9);
+      border-color: rgba($theme, 0.2);
+    }
+  }
+
+  .billing-tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .billing-tab-icon-wrapper {
+    position: relative;
+  }
+
+  .billing-tab-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba($theme, 0.08) 0%, rgba($theme, 0.12) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba($theme, 0.1);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    i {
+      font-size: 36px;
+      color: rgba($theme, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .billing-tab-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .billing-tab-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba($theme, 0.8);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+
+  .billing-tab-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9ca3af;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .billing-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    background: linear-gradient(135deg, rgba($theme, 0.1) 0%, rgba($theme, 0.15) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba($theme, 0.2);
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba($theme, 0.8);
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.profile-section {
+  padding: 24px 14px;
+  transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+  // border-bottom: 1px solid rgba(226, 226, 234, 0.5);
+  transform-origin: top;
+  overflow: hidden;
+
+  .profile-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .profile-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      // background: rgba(255, 255, 255, 0.20);
+      // border: 2px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .avatar-initials {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 0;
+
+      .doctor-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff !important;
+        line-height: 26px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 2px;
+      }
+
+      .doctor-specialty {
+        font-size: 14px;
+        color: #ffffff !important;
+        opacity: 0.9;
+        line-height: 20px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 2px;
+      }
+
+      .clinic-name {
+        font-size: 12px;
+        color: #ffffff !important;
+        opacity: 0.8;
+        line-height: 18px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .clinic-selector-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 4px;
+        max-width: 158px;
+        width: auto;
+        cursor: pointer;
+
+        .mobile-clinic-selector {
+          width: auto;
+          max-width: calc(158px - 20px);
+          flex: 1;
+          min-width: 0;
+
+          .ant-select-selector {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            height: auto !important;
+            min-height: auto !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            max-width: 100%;
+
+            .ant-select-selection-item {
+              color: #ffffff !important;
+              font-size: 14px !important;
+              line-height: 18px !important;
+              font-family: 'Poppins', sans-serif !important;
+              opacity: 0.8;
+              padding: 0 !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+              white-space: nowrap !important;
+            }
+
+            .ant-select-selection-placeholder {
+              color: rgba(255, 255, 255, 0.6) !important;
+              font-size: 14px !important;
+              line-height: 18px !important;
+              font-family: 'Poppins', sans-serif !important;
+              padding: 0 !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+              white-space: nowrap !important;
+            }
+
+            .ant-select-selection-search {
+              margin: 0 !important;
+              padding: 0 !important;
+            }
+
+            .ant-select-selection-search-input {
+              margin: 0 !important;
+              padding: 0 !important;
+            }
+          }
+
+          .ant-select-selection__rendered {
+            margin: 0 !important;
+            overflow: hidden !important;
+          }
+
+          &.ant-select-focused .ant-select-selector {
+            box-shadow: none !important;
+          }
+
+          .ant-select-arrow {
+            display: none !important;
+          }
+        }
+
+        .clinic-dropdown-icon {
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+          opacity: 0.8;
+          transition: transform 0.2s ease;
+          flex-shrink: 0;
+        }
+
+        .mobile-clinic-selector.ant-select-open ~ .clinic-dropdown-icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      // Dropdown styles for mobile clinic selector (global styles for portal-rendered dropdown)
+      // Scoped ONLY to this mobile dropdown - will not affect other dropdowns
+      :global(.mobile-clinic-selector-dropdown) {
+        min-width: 158px !important;
+        max-width: 158px !important;
+        width: 158px !important;
+        .ant-select-item {
+          font-size: 14px;
+          font-family: 'Poppins', sans-serif;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+
+          .ant-select-item-option-content {
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+          }
+        }
+      }
+
+      .wavy-icon {
+        display: inline-block;
+        animation: wave 1s ease-in-out infinite;
+        transform-origin: 70% 70%;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,290 @@
+.custom-canvas-selector {
+  // Override any Ant Design default styles
+  .ant-select-dropdown {
+    background: white !important;
+    
+    .ant-select-item {
+      display: none !important;
+    }
+  }
+
+  // Ensure dropdown content is properly styled
+  .ant-select-dropdown .dropdown-content {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding: 16px !important;
+  }
+
+  .no-templates-container {
+    .header-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left-section {
+        display: flex;
+        align-items: center;
+
+        .rx-pad-icon {
+          margin-right: 8px;
+          width: 18px;
+        }
+
+        .title-text {
+          color: #374151;
+          font-weight: 400;
+          font-size: 14px;
+          margin-right: 8px;
+        }
+
+        .know-more-btn {
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: underline;
+          border: none;
+          background: none;
+          margin-right: 8px;
+          padding: 0;
+        }
+
+        .new-badge {
+          font-size: 12px;
+          font-weight: 600;
+          width: 40px;
+          height: 16px;
+          border-radius: 4px;
+          background: linear-gradient(101.91deg, #A461D8 9.72%, #B85DFF 47.18%, #7700D4 100%);
+          padding: 4px 6px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+          color: white;
+        }
+      }
+
+      .add-rx-btn {
+        background: white;
+        border: 1px solid var(--P-CTA-100, #4B4AD5);
+        font-size: 14px;
+        gap: 4px;
+        color: #4B4AD5;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .templates-container {
+    .header-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left-section {
+        display: flex;
+        align-items: center;
+
+        .rx-pad-icon {
+          margin-right: 8px;
+          width: 18px;
+        }
+
+        .title-text {
+          color: #374151;
+          font-weight: 400;
+          font-size: 14px;
+          margin-right: 8px;
+        }
+
+        .know-more-btn {
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: underline;
+          border: none;
+          background: none;
+        }
+      }
+
+      .dropdown-container {
+        min-width: 250px;
+
+        .ant-select {
+          width: 100% !important;
+
+          .ant-select-dropdown {
+            border-radius: 8px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+            padding: 8px !important;
+
+            .dropdown-content {
+              padding: 16px !important;
+
+              .dropdown-header {
+                font-size: 14px !important;
+                font-weight: 600 !important;
+                color: #374151 !important;
+                margin-bottom: 12px !important;
+                padding: 0 !important;
+              }
+
+              .radio-options {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 8px !important;
+                width: 100% !important;
+
+                .radio-option {
+                  display: flex !important;
+                  align-items: center !important;
+                  gap: 12px !important;
+                  padding: 10px 12px !important;
+                  cursor: pointer !important;
+                  border-radius: 8px !important;
+                  background-color: transparent !important;
+                  border: 1px solid transparent !important;
+                  transition: all 0.2s ease !important;
+
+                  &:hover {
+                    background-color: #f9fafb !important;
+                  }
+
+                  &.selected {
+                    background-color: #e3f2fd !important;
+                    border: 1px solid #1976d2 !important;
+
+                    .radio-button {
+                      border: 2px solid #1976d2 !important;
+                      background-color: #1976d2 !important;
+                      position: relative !important;
+                      
+                      &::after {
+                        content: '' !important;
+                        position: absolute !important;
+                        top: 50% !important;
+                        left: 50% !important;
+                        transform: translate(-50%, -50%) !important;
+                        width: 6px !important;
+                        height: 6px !important;
+                        background-color: white !important;
+                        border-radius: 50% !important;
+                      }
+                    }
+
+                    .option-label {
+                      color: #1976d2 !important;
+                      font-weight: 600 !important;
+                    }
+                  }
+
+                  .radio-button {
+                    width: 18px !important;
+                    height: 18px !important;
+                    border-radius: 50% !important;
+                    border: 2px solid #d1d5db !important;
+                    background-color: white !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    flex-shrink: 0 !important;
+                    position: relative !important;
+                    min-width: 18px !important;
+                    min-height: 18px !important;
+                  }
+
+                  .option-label {
+                    color: #374151 !important;
+                    font-weight: 400 !important;
+                    font-size: 14px !important;
+                  }
+                }
+              }
+
+              .separator {
+                position: relative !important;
+                margin-top: 12px !important;
+                margin-bottom: 12px !important;
+
+                .separator-line {
+                  height: 1px !important;
+                  background-color: #e5e7eb !important;
+                  width: 100% !important;
+                }
+
+                .separator-text {
+                  position: absolute !important;
+                  top: 50% !important;
+                  left: 50% !important;
+                  transform: translate(-50%, -50%) !important;
+                  background-color: white !important;
+                  padding: 0 12px !important;
+                  color: #9ca3af !important;
+                  font-size: 12px !important;
+                  font-weight: 400 !important;
+                }
+              }
+
+              .add-edit-btn {
+                color: #1976d2 !important;
+                font-weight: 500 !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                padding: 12px !important;
+                cursor: pointer !important;
+                border-radius: 8px !important;
+                border: 1px dashed #1976d2 !important;
+                background-color: #f8f9ff !important;
+                font-size: 14px !important;
+                transition: all 0.2s ease !important;
+
+                &:hover {
+                  background-color: #e3f2fd !important;
+                }
+
+                .add-icon {
+                  font-size: 14px !important;
+                  color: #1976d2 !important;
+                  font-weight: bold !important;
+                }
+
+                .btn-text {
+                  font-size: 14px !important;
+                  color: #1976d2 !important;
+                  font-weight: 500 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .page-info {
+      background-color: #f8f9fa;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #e9ecef;
+      font-size: 12px;
+      margin-top: 12px;
+
+      .page-details {
+        color: #6b7280;
+
+        .selected-badge {
+          margin-left: 8px;
+          background-color: #e3f2fd;
+          color: #1976d2;
+          padding: 2px 6px;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+      }
+
+      .page-count {
+        color: #9ca3af;
+      }
+    }
+  }
+} 

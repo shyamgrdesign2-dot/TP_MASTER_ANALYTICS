@@ -1,0 +1,571 @@
+// Print-specific styles first
+@media print {
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+
+
+  .bill-table {
+
+    thead {
+      display: table-header-group;
+    }
+
+    tbody {
+      display: table-row-group;
+    }
+
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+
+  /* Inline styles handle padding for new page content */
+
+  /* Ensure proper spacing between sections */
+  .service-section + .service-section,
+  .service-section + .discount-section,
+  .discount-section + .payment-summary-section {
+    margin-top: 40px;
+  }
+
+  /* Remove any forced page breaks that might cause empty pages */
+  * {
+    page-break-after: avoid;
+  }
+
+  /* Allow natural page breaks only when necessary */
+  .service-section,
+  .discount-section,
+  .payment-summary-section {
+    page-break-after: auto;
+  }
+
+  /* Ensure no empty pages at the end */
+  .itemized-bill-chart {
+    page-break-after: avoid !important;
+  }
+
+  /* Prevent empty pages from any element */
+  body,
+  html {
+    page-break-after: avoid !important;
+  }
+
+  /* Additional rule to prevent empty pages */
+  .itemized-bill-chart > *:last-child {
+    page-break-after: avoid !important;
+  }
+}
+
+/* Remove print-template class to prevent empty pages */
+
+.itemized-bill-chart {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  font-family: "Arial", sans-serif;
+  background: white;
+  color: #000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+
+  .report-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .clinic-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .clinic-location {
+      font-size: 14px;
+      color: #000;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .report-details {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #000;
+
+      .report-period {
+        margin-bottom: 5px;
+        font-weight: normal;
+      }
+
+      .report-date {
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+  }
+
+  .service-section {
+    margin-bottom: 30px;
+
+    .service-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: #000;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .bills-table {
+      margin-bottom: 10px;
+
+      .bill-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 12px;
+
+        thead {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          display: table-header-group;
+
+          th {
+            padding: 8px 6px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            color: black;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            vertical-align: top;
+            height: auto;
+          }
+        }
+
+        tbody {
+          display: table-row-group;
+
+          tr {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            &:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+
+          td {
+            padding: 6px 6px;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            vertical-align: top;
+            height: auto;
+
+            &:nth-child(9) {
+              // Paid Amount column
+              text-align: right;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    .service-subtotal {
+      text-align: right;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #000;
+    }
+  }
+
+  .discount-section {
+    margin: 30px 0;
+    // border-top: 1px solid black;
+    padding-top: 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: black;
+    }
+
+    .discount-table {
+      .bill-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 12px;
+        table-layout: fixed;
+
+        thead {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          display: table-header-group;
+
+          th {
+            padding: 8px 6px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            color: black;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            vertical-align: top;
+            height: auto;
+          }
+        }
+
+        tbody {
+          display: table-row-group;
+
+          tr {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            &:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+
+          td {
+            padding: 6px 6px;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            vertical-align: top;
+            height: auto;
+
+            &.discount-amount {
+              color: red;
+              font-weight: 600;
+            }
+          }
+        }
+
+        tfoot {
+          tr {
+            background-color: #f9f9f9;
+          }
+
+          td {
+            padding: 8px 6px;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            font-weight: 600;
+
+            &.discount-total-label {
+              text-align: right;
+              color: black;
+            }
+
+            &.discount-total-amount {
+              text-align: right;
+              color: red;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .payment-summary-section {
+    margin: 30px 0;
+    border-top: 1px solid black;
+    padding-top: 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 15px 0;
+      color: black;
+    }
+
+    .payment-table {
+      .bill-table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        thead {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          display: table-header-group;
+
+          th {
+            padding: 8px 12px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 12px;
+            color: black;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+        }
+
+        tbody {
+          td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+
+            &:last-child {
+              text-align: right;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .grand-total {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 3px solid black;
+    page-break-after: avoid !important;
+    page-break-inside: avoid;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      color: black;
+    }
+  }
+
+  // Print-specific styles
+  @media print {
+    .itemized-bill-chart {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 10px;
+      font-size: 12px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      .report-header {
+        border-bottom: 1px solid #ddd;
+
+        h1 {
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .clinic-info {
+          margin: 15px 0;
+
+          .clinic-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #000;
+          }
+
+          .clinic-location {
+            font-size: 14px;
+            color: #000;
+            font-weight: normal;
+          }
+        }
+
+        .report-details {
+          font-size: 10px;
+          font-weight: normal;
+        }
+      }
+
+      .service-section {
+        margin-bottom: 20px;
+
+        .service-title {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          text-align: left;
+        }
+
+        .service-subtotal {
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+
+      .discount-section {
+        margin: 20px 0;
+        border-top: 1px solid black;
+
+        .section-title {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .discount-table {
+          .bill-table {
+            font-size: 10px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed;
+            page-break-inside: avoid;
+
+            thead {
+              th {
+                padding: 4px 3px;
+                font-size: 9px;
+                font-weight: 600;
+                color: black;
+                border: 1px solid #ddd;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+              }
+            }
+
+            tbody {
+              td {
+                padding: 3px 3px;
+                font-size: 9px;
+                border: 1px solid #ddd;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &.discount-amount {
+                  color: red;
+                  font-weight: 600;
+                }
+              }
+            }
+
+            tfoot {
+              td {
+                padding: 4px 3px;
+                font-size: 9px;
+                border: 1px solid #ddd;
+                font-weight: 600;
+
+                &.discount-total-label {
+                  text-align: right;
+                  color: black;
+                }
+
+                &.discount-total-amount {
+                  text-align: right;
+                  color: red;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .payment-summary-section {
+        margin: 20px 0;
+
+        h2 {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .payment-table {
+          .bill-table {
+            width: 100%;
+            font-size: 10px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed;
+            page-break-inside: avoid;
+
+            thead {
+              -webkit-print-color-adjust: exact;
+              print-color-adjust: exact;
+
+              th {
+                padding: 4px 8px;
+                font-size: 10px;
+                font-weight: 600;
+                color: black;
+                border: 1px solid #ddd;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+              }
+            }
+
+            tbody {
+              td {
+                padding: 4px 8px;
+                font-size: 10px;
+                border: 1px solid #ddd;
+              }
+            }
+          }
+        }
+      }
+
+      .grand-total {
+        margin-top: 20px;
+        page-break-after: avoid !important;
+        page-break-inside: avoid;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.ancTooltip {
+  &.ant-tooltip .ant-tooltip-inner {
+    background-color: #ffffff;
+    width: 216px;
+    height: 76px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  &.ant-tooltip .ant-tooltip-arrow {
+    --antd-arrow-background-color: #ffffff;
+  }
+}
+
+.ancSchedulerBox {
+  width: 120px;
+  height: 41px;
+  @media only screen and (min-width: 1200px) {
+    width: 136px;
+  }
+}
+
+
+.groundingTooltip {
+  &.ant-tooltip .ant-tooltip-inner {
+    background-color: #ffffff;
+    width: 551px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  &.ant-tooltip .ant-tooltip-arrow {
+    --antd-arrow-background-color: #ffffff;
+  }
+}

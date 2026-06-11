@@ -1,0 +1,24 @@
+.upload-more-btn {
+  border-radius: 0.625rem;
+  border: 1px solid #4b4ad5;
+  display: flex;
+  height: 2.5625rem;
+  padding: 0.625rem 0.6875rem;
+  align-items: center;
+  gap: 0.625rem;
+
+  span {
+    color: #4b4ad5 !important;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+  }
+}
+.snap-rx-header {
+  position: fixed !important;
+  width: 100%;
+  inset: 0;
+  z-index: 2;
+  background: white;
+}

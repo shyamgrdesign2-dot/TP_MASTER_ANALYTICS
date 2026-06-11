@@ -1,0 +1,456 @@
+.patientSummaryContainer {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.allModulesWrapper {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 0px 12px 0px #A461D80A;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.patientSummaryCard {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  padding: 12px 0;
+  min-height: 48px;
+}
+
+.headerSeparator {
+  width: 100%;
+  height: 1px;
+  background: #E2E2EA;
+  opacity: 0.2;
+  margin-bottom: 10px;
+}
+
+.headerIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  color: #454551;
+  margin: 0;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.cardHeaderWithAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: none;
+}
+
+.viewAllLink {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4B4AD5;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.repeatRxLink {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4B4AD5 !important;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  
+  i {
+    font-size: 14px;
+  }
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summarySection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454551;
+  line-height: 24px;
+  margin-bottom: 4px;
+  
+  strong {
+    font-weight: 600;
+  }
+}
+
+.sectionContentInline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  display: inline;
+}
+
+.sectionTitleInline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454551;
+  line-height: 24px;
+  margin-right: 4px;
+}
+
+.inlineItem {
+  display: inline;
+  
+  strong {
+    font-weight: 600;
+  }
+}
+
+.separator {
+  color: #454551;
+  margin: 0 4px;
+  font-weight: 400;
+}
+
+.viewDetailedButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 0;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4B4AD5 !important;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  span {
+    color: #4B4AD5 !important;
+  }
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.detailedSummaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detailedCard {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.detailedCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  width: 100%;
+}
+
+.detailedSection {
+  margin-bottom: 8px;
+  
+  strong {
+    font-weight: 600;
+    color: #454551;
+  }
+}
+
+.lastVisitList {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+}
+
+.lastVisitListItem {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #454551;
+    font-weight: 600;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.vitalsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vitalRow {
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+  
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #454551;
+    font-weight: 600;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  strong {
+    font-weight: 600;
+    color: #454551;
+  }
+}
+
+.labResultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.labRow {
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+  
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #454551;
+    font-weight: 600;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  strong {
+    font-weight: 600;
+    color: #454551;
+  }
+}
+
+
+.medicalHistorySection {
+  margin-bottom: 12px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.medicalHistoryTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #454551;
+  margin-bottom: 8px;
+  line-height: 24px;
+  
+  strong {
+    font-weight: 500;
+  }
+}
+
+.medicalHistoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.medicalHistoryListItem {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+  
+  &::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #454551;
+    font-weight: 600;
+  }
+  
+  strong {
+    font-weight: 400;
+  }
+}
+
+.noKnownHistory {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  margin-left: 16px;
+}
+
+.medicalHistoryRemarks {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #454551;
+  line-height: 24px;
+  margin-left: 16px;
+}
+
+.viewLessButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4B4AD5 !important;
+  transition: all 0.2s ease;
+  width: 100%;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  span {
+    color: #4B4AD5 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .patientSummaryContainer {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
+  .allModulesWrapper {
+    padding: 8px;
+  }
+  
+  .patientSummaryCard,
+  .detailedCard {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .cardTitle {
+    font-size: 12px;
+  }
+  
+  .sectionContent,
+  .detailedCardContent {
+    font-size: 12px;
+  }
+  
+  .sectionTitle {
+    font-size: 12px;
+  }
+}
+

@@ -1,0 +1,667 @@
+.mobile-rx-pad-content-wrapper {
+  width: 100%;
+  padding: 16px;
+  background: #F9F2FF80;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 100px; // Space for bottom buttons
+
+  // Rx Section Card - Base styling
+  .rx-section-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0px 0px 6px 0px rgba(242, 77, 182, 0.05);
+    border: 1px solid rgba(242, 77, 182, 0.08);
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      padding: 0 0 12px 0;
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+
+        .section-icon {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          object-fit: contain;
+        }
+
+        .section-title {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+          color: #454551 !important;
+          margin: 0;
+        }
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .header-add-edit-btn {
+          background: transparent;
+          border: 1px solid #7742FE;
+          color: #7742FE;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:active {
+            background: #7742FE;
+            color: white;
+          }
+        }
+
+        .add-edit-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          background: transparent;
+          border: none;
+          color: #4b4ad5;
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: underline;
+          cursor: pointer;
+          padding: 4px 6px;
+          transition: color 0.2s ease;
+
+          .add-edit-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+          }
+
+          span {
+            color: #4B4AD5 !important;
+          }
+
+          &:hover {
+            color: #3b3ac4;
+          }
+
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .section-content {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      line-height: 22px;
+      color: #454551;
+      // padding-bottom: 12px;
+      border-radius: 10px;
+      border: var(--stroke-weight-1, 1px) solid var(--T-BG-10, #F1F1F5);
+      background: var(--T-BG-100, #FAFAFB);
+      padding: 12px;
+    }
+  }
+
+  // List Items - Bullet Points
+  .section-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .list-item {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #454551;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        // color: #7742FE;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .item-text {
+        display: block;
+      }
+    }
+
+    .list-item-with-actions {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #454551;
+      padding-left: 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        // color: #7742FE;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .item-text {
+        flex: 1;
+      }
+
+      .item-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+    }
+  }
+
+  // Vitals - Single Line Format
+  .vitals-single-line {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #454551;
+    padding: 12px;
+    background: #F9FAFB;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+  }
+
+  // Medications - Card Style with Actions
+  .medications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .medication-card {
+      padding: 12px;
+      background: #F9FAFB;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+
+      .med-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .med-name {
+          font-family: 'Poppins', sans-serif;
+          font-size: 15px;
+          font-weight: 600;
+          color: #1F2937;
+          line-height: 22px;
+        }
+
+        .med-details {
+          font-family: 'Poppins', sans-serif;
+          font-size: 13px;
+          font-weight: 400;
+          color: #6B7280;
+          line-height: 18px;
+        }
+
+        .med-instructions {
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: #9CA3AF;
+          line-height: 16px;
+          font-style: italic;
+          margin-top: 4px;
+        }
+      }
+
+      .med-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-shrink: 0;
+      }
+    }
+
+    .search-input {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      
+      .ant-input {
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+  }
+
+  // Lab Investigation - Card Style with Actions
+  .lab-investigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .lab-investigation-card {
+      padding: 12px;
+      background: #F1F1F5;
+      border-radius: 10px;
+      border: 1px solid #F1F1F5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+
+      .lab-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .lab-name {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #454551;
+          line-height: 20px;
+          opacity: 0.9;
+        }
+
+        .lab-notes {
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: #6B7280;
+          line-height: 16px;
+        }
+      }
+
+      .lab-actions-divider {
+        width: 1px;
+        height: 20px;
+        flex-shrink: 0;
+        opacity: 0.3;
+        background: linear-gradient(90deg, rgba(69, 69, 81, 0.00) 0%, #454551 50%, rgba(69, 69, 81, 0.00) 100%);
+      }
+
+      .lab-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-shrink: 0;
+      }
+    }
+
+    .search-input {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      width: 100%;
+
+      .ant-input {
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+
+    .lab-search-icon {
+      color: #9ca3af;
+      font-size: 16px;
+    }
+  }
+
+  // Action Buttons (Edit/Delete)
+  .action-btn {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.edit-btn {
+      &:active {
+        background: #EFF6FF;
+      }
+    }
+
+    &.delete-btn {
+      &:active {
+        background: #FEF2F2;
+      }
+    }
+  }
+
+  // Medical History - Grouped & Collapsible
+  .medical-history-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .history-group {
+      .group-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        cursor: pointer;
+        user-select: none;
+
+        .group-title {
+          font-family: 'Poppins', sans-serif;
+          font-size: 13px;
+          font-weight: 600;
+          color: #6B7280;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        i {
+          font-size: 14px;
+          color: #6B7280;
+        }
+      }
+
+      .group-items {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 12px;
+
+        .history-item {
+          padding: 10px 12px;
+          background: #F9FAFB;
+          border-radius: 8px;
+          border: 1px solid #E5E7EB;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 12px;
+
+          .history-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+
+            .history-text {
+              font-family: 'Poppins', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              color: #1F2937;
+              line-height: 20px;
+            }
+
+            .history-meta {
+              font-family: 'Poppins', sans-serif;
+              font-size: 12px;
+              font-weight: 400;
+              color: #6B7280;
+              line-height: 16px;
+            }
+          }
+
+          .item-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+
+    // Add/Edit button for content area (not in header)
+    .add-edit-button {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: transparent;
+      border: 1px solid #7742FE;
+      color: #7742FE;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      align-self: flex-start;
+
+      .add-edit-icon {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+      }
+
+      &:active {
+        background: #7742FE;
+        color: white;
+      }
+
+      &:hover {
+        background: rgba(119, 66, 254, 0.05);
+      }
+    }
+  }
+
+  // Gynae History
+  .gynae-history-list {
+    .gynae-history-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .gynae-item {
+        display: flex;
+        gap: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+
+        .gynae-label {
+          font-weight: 600;
+          color: #6B7280;
+        }
+
+        .gynae-value {
+          font-weight: 400;
+          color: #454551;
+        }
+      }
+    }
+  }
+
+  // Lab Results
+  .lab-results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .lab-result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: #F9FAFB;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      gap: 12px;
+
+      .result-test {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1F2937;
+        line-height: 20px;
+        flex: 1;
+      }
+
+      .result-value {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #7742FE;
+        line-height: 20px;
+        text-align: right;
+      }
+    }
+  }
+
+  // Section Text (for Follow Up, etc.)
+  .section-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #454551;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  // Bottom Action Buttons
+  .bottom-action-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: #FFFFFF;
+    border-top: 1px solid #E5E7EB;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    border-radius: 24px 24px 0 0;
+    button {
+      flex: 1;
+      height: 48px;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+
+      .btn-icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      &.quick-edit-btn {
+        background: #FFFFFF;
+        color: #4B4AD5 !important;
+        border: 1px solid #4B4AD5;
+
+        span {
+          color: #4B4AD5 !important;
+          font-weight: none !important;
+        }
+
+        &:active {
+          background: #F9F2FF !important;
+          opacity: 0.9;
+        }
+      }
+
+      &.end-visit-btn {
+        background:#4B4AD5;
+        color: #FFFFFF;
+        border: none;
+        box-shadow: 0px 4px 12px rgba(119, 66, 254, 0.3);
+
+        &:active {
+          background: #4B4AD5;
+          transform: scale(0.98);
+        }
+
+        span {
+          color: #FFFFFF !important;
+          font-weight: none !important;
+        }
+
+        .ant-spin-dot-item {
+          background-color: #FFFFFF !important;
+        }
+      }
+    }
+  }
+
+  // Empty State
+  .empty-state {
+    text-align: center;
+    padding: 20px;
+    color: #9CA3AF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 375px) {
+  .mobile-rx-pad-content-wrapper {
+    padding: 12px;
+    gap: 10px;
+    padding-bottom: 100px;
+
+    .rx-section-card {
+      padding: 12px;
+
+      .section-header {
+        .header-left {
+          .section-title {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+

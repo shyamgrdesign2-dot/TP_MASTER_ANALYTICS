@@ -1,0 +1,175 @@
+body {
+    .ant-popover {
+        &.poover-13 {
+            width: 13%;
+        }
+
+        &.poover-34 {
+            width: 34%;
+        }
+
+        &.pop-260 {
+            max-width: 260px;
+            width: 100%;
+        }
+
+        &.pop-300 {
+            max-width: 300px;
+            width: 100%;
+        }
+
+        &.pop-350 {
+            max-width: 350px;
+            width: 100%;
+        }
+
+        &.pop-370 {
+            max-width: 370px;
+            width: 100%;
+        }
+
+        &.pop-400 {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        &.pop-450 {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        &.pop-430 {
+            max-width: 430px;
+            width: 100%;
+        }
+
+        &.pop-500 {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        &.pop-550 {
+            max-width: 550px;
+            width: 100%;
+        }
+
+        &.pp-0 {
+            .ant-popover-inner {
+                padding: 0;
+            }
+        }
+
+        &.pp-20 {
+            .ant-popover-inner {
+                padding: 20px;
+            }
+        }
+
+        .ant-popover-arrow {
+            &:before {
+                background-color: $maincolor;
+            }
+        }
+
+        .ant-popover-inner {
+            border-radius: 20px;
+        }
+
+        .pop-header {
+            padding: 20px;
+            padding-bottom: 15px;
+        }
+
+        .pop-body {
+            max-height: 200px;
+            overflow-y: auto;
+
+            &.pop-h-none {
+                max-height: none;
+            }
+        }
+
+        .tab-template-height {
+            max-height: min(360px, calc(100dvh - 190px));
+            overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        .video-contant {
+            background-color: $white;
+        }
+    }
+
+    .videoTutorial {
+        z-index: 1;
+    }
+
+    .videoTutorial {
+        .ant-popover-arrow {
+            width: 46px;
+            height: 32px;
+
+            &:after {
+                display: none;
+            }
+
+            &:before {
+                width: 34px;
+                height: 15px;
+                background: #fff;
+                content: "";
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+
+    .tutorial-play {
+        position: relative;
+
+        button {
+            border: 0px;
+            background: transparent;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            outline: none;
+
+            img {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .use-prescription {
+        background: #EDDFF7;
+        padding: 20px 0 20px 25px;
+
+        a {
+            border: 0px;
+            border-radius: 0;
+            margin-right: 75px;
+            background: transparent;
+            padding: 0px;
+            display: flex;
+            padding-top: 3px;
+            &:focus-visible {
+                box-shadow: none;
+                outline: none !important;
+            }
+
+            // Button:focus-visible{box-shadow: none; outline: none;}
+        }
+    }
+
+    .modalCard-header {
+        .tutorial {
+            span {
+                height: 42px;
+                color: $welcomecolor !important
+            }
+        }
+    }
+}

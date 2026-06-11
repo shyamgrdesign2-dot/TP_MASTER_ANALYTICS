@@ -1,0 +1,27 @@
+.formItem {
+    padding: 20px 0px;
+    max-width: 500px;
+  }
+  
+  .inputWithIcon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .inputWithIcon input {
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  
+  .infoIcon {
+    color: #a0a0a0;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .drawerTitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }

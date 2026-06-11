@@ -1,0 +1,112 @@
+.mobile-rx-pad-drawer {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-rx-pad-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #FFFFFF;
+  }
+
+  .mobile-rx-pad-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    .rx-pad-title-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+
+      .rx-pad-icon {
+        width: 24px;
+        height: 24px;
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .rx-pad-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+        color: #454551;
+        margin: 0;
+      }
+
+      .rx-pad-info-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
+
+      .rx-pad-info-icon {
+        width: 16px;
+        height: 16px;
+        display: block;
+        flex-shrink: 0;
+      }
+    }
+
+    .rx-pad-close-button {
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      .rx-pad-close-icon {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .mobile-rx-pad-content {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+  }
+}

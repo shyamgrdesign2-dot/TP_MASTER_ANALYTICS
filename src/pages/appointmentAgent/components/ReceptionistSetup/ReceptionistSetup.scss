@@ -1,0 +1,246 @@
+.receptionist-setup-container {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem;
+  // overflow-y: auto;
+
+  .setup-form {
+    border-radius: 1.5rem;
+    border: 1px solid #E2E2EA;
+    background: #FFF;
+    padding: 2rem;
+    width: 65% !important;
+    height: 80vh !important;
+    overflow-y: auto;
+    
+    .form-section {
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #E2E2EA !important;
+
+      label {
+        color: #454551;
+        font-family: Poppins;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+
+        .required {
+          color: #ff4d4f !important;
+        }
+      }
+
+      .name-input {
+        padding: 1rem;
+        font-size: 1rem;
+
+        &.error-input {
+          border-color: #ff4d4f !important;
+          box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2) !important;
+
+          &:focus {
+            border-color: #ff4d4f !important;
+            box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2) !important;
+          }
+        }
+      }
+
+      .error-message {
+        color: #ff4d4f !important;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        font-family: Poppins;
+      }
+
+      .char-count {
+        position: absolute;
+        right: 1.5%;
+        bottom: 8%;
+        color: #A2A2A8 !important;
+        font-size: 12px;
+      }
+    }
+
+    .gender-selection {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+
+      .ant-radio-wrapper {
+        flex: 1;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border: 1px solid #E2E2EA;
+        
+        .ant-radio {
+          .ant-radio-inner {
+            border: 2px solid #E2E2EA;
+            width: 20px;
+            height: 20px;
+            
+            &:after {
+              border-radius: 50%;
+              border: none;
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E") center/14px no-repeat;
+              transform: scale(1);
+              opacity: 0;
+              transition: all 0.3s;
+            }
+          }
+
+          &.ant-radio-checked .ant-radio-inner:after {
+            opacity: 1;
+          }
+        }
+
+        &-checked {
+          background: #F0F0FF;
+          border-color: #6B46C1;
+        }
+
+        &:hover {
+          border-color: #6B46C1;
+        }
+      }
+    }
+
+    .looks-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      &.error-grid {
+        border: 1px solid #ff4d4f;
+        border-radius: 0.7rem;
+        padding: 0.5rem;
+        background: rgba(255, 77, 79, 0.05);
+      }
+
+      .look-option {
+        position: relative;
+        // border-radius: 0.8rem;
+        cursor: pointer;
+        // border: 2.157px solid #4B4AD5;
+
+        border-radius: 2.3rem;
+        border: 1.072px solid  #E2E2EA;
+        background: #FAFAFB;
+        box-shadow: 0px 0px 12.866px 0px rgba(0, 0, 0, 0.06);
+
+
+        &.selected {
+          border: 2.5px solid #E2E2EA;
+          border-color: #4B4AD5;
+          // background: #f0f0ff;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 2.2rem;
+        }
+
+        .selected-check {
+          position: absolute;
+          top: -7px;
+          right: -9px;
+          width: 39px;
+          height: 38px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .preview-section {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid #E2E2EA;
+    background: #f1f1f1a3;;
+    min-height: 595px;
+    height: 70vh;
+    
+    h2 {
+      color: #999;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .phone-preview {
+      max-width: 375px;
+      margin: 0 auto;
+
+      .phone-frame {
+        background: #fff;
+        border-radius: 40px;
+        padding: 20px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+
+        .preview-content {
+          background: #faf5ff;
+          border-radius: 30px;
+          padding: 2rem;
+          text-align: center;
+
+          .hospital-header {
+            font-weight: 500;
+            margin-bottom: 2rem;
+          }
+
+          .preview-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .preview-text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+
+            span {
+              color: #6b46c1;
+            }
+          }
+
+          .book-appointment-btn {
+            background: #6b46c1;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+              background: #553c9a;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+  color: #666;
+  font-size: 14px;
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+} 

@@ -1,0 +1,208 @@
+{
+  "kpis": [
+    {
+      "key": "topProcedure",
+      "label": "Top procedure",
+      "value": "Suturing",
+      "description": "The most performed procedure this period."
+    },
+    {
+      "key": "performed",
+      "label": "Procedures performed",
+      "value": 42,
+      "description": "Total procedures and minor surgeries recorded on prescriptions this period."
+    },
+    {
+      "key": "distinctProcedures",
+      "label": "Distinct procedures",
+      "value": 11,
+      "description": "Unique procedure names performed this period."
+    },
+    {
+      "key": "patientsWithProcedure",
+      "label": "Patients with a procedure",
+      "value": 35,
+      "description": "Distinct patients who underwent at least one procedure."
+    }
+  ],
+  "procTopList": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Procedure"
+      },
+      {
+        "key": "count",
+        "label": "Performed"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Suturing",
+        "count": 11
+      },
+      {
+        "k": "Wound dressing",
+        "count": 8
+      },
+      {
+        "k": "Incision and drainage",
+        "count": 6
+      },
+      {
+        "k": "Foreign body removal",
+        "count": 5
+      },
+      {
+        "k": "Nail excision",
+        "count": 4
+      },
+      {
+        "k": "Ear syringing",
+        "count": 3
+      },
+      {
+        "k": "Nebulisation",
+        "count": 3
+      },
+      {
+        "k": "Cryotherapy",
+        "count": 2
+      }
+    ]
+  },
+  "procTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Month"
+      },
+      {
+        "key": "count",
+        "label": "Procedures"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2026-01",
+        "count": 5
+      },
+      {
+        "k": "2026-02",
+        "count": 7
+      },
+      {
+        "k": "2026-03",
+        "count": 6
+      },
+      {
+        "k": "2026-04",
+        "count": 9
+      },
+      {
+        "k": "2026-05",
+        "count": 8
+      },
+      {
+        "k": "2026-06",
+        "count": 7
+      }
+    ]
+  },
+  "procByDoctor": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Doctor"
+      },
+      {
+        "key": "count",
+        "label": "Procedures"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Dr Sheela BR",
+        "count": 19
+      },
+      {
+        "k": "Dr Janavi",
+        "count": 12
+      },
+      {
+        "k": "Dr Ashish",
+        "count": 7
+      },
+      {
+        "k": "Dr Ram",
+        "count": 4
+      }
+    ]
+  },
+  "procRegister": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "procedure",
+        "label": "Procedure"
+      },
+      {
+        "key": "doctor",
+        "label": "Doctor"
+      },
+      {
+        "key": "notes",
+        "label": "Notes"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2026-06-09",
+        "patient": "Demo Patient 386",
+        "procedure": "Suturing",
+        "doctor": "Dr Sheela BR",
+        "notes": "3 sutures, forearm"
+      },
+      {
+        "date": "2026-06-07",
+        "patient": "Demo Patient 387",
+        "procedure": "Wound dressing",
+        "doctor": "Dr Janavi",
+        "notes": ""
+      },
+      {
+        "date": "2026-06-04",
+        "patient": "Demo Patient 388",
+        "procedure": "Incision and drainage",
+        "doctor": "Dr Sheela BR",
+        "notes": "abscess, left thigh"
+      },
+      {
+        "date": "2026-05-30",
+        "patient": "Demo Patient 389",
+        "procedure": "Ear syringing",
+        "doctor": "Dr Ashish",
+        "notes": ""
+      },
+      {
+        "date": "2026-05-27",
+        "patient": "Demo Patient 390",
+        "procedure": "Foreign body removal",
+        "doctor": "Dr Ram",
+        "notes": "splinter, palm"
+      }
+    ]
+  },
+  "meta": {
+    "live": false,
+    "rowCount": 5,
+    "note": "SAMPLE DATA: this module's source lives in the pm-patient-docs surgeries service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+  }
+}

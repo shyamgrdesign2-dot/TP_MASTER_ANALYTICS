@@ -1,0 +1,368 @@
+.voiceButton {
+  position: relative;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #673aac;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 150ms, color 150ms, transform 150ms;
+
+  // &:hover {
+  //   background: rgba(103, 58, 172, 0.06);
+  // }
+
+  // &:active {
+  //   transform: scale(0.95);
+  // }
+}
+
+.voiceButtonActive {
+  // background: rgba(103, 58, 172, 0.08);
+}
+
+.voiceButtonRecording {
+  color: #e53935;
+}
+
+.voiceButtonTranscribing {
+  color: #673aac;
+}
+
+.voiceButtonPulse {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #e53935;
+  animation: moduleVoicePulse 1s infinite;
+}
+
+.voiceButtonDisabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.moduleActionButton {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  background: #f1f1f5;
+  color: #4c4e5c;
+  cursor: pointer;
+  margin-left: 14px;
+  padding: 0;
+  transition: background 150ms ease, opacity 150ms ease, transform 150ms ease;
+
+  &:hover:not(:disabled) {
+    background: #e8e8ee;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.94);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.headerActionGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  .moduleActionButton {
+    margin-left: 0;
+  }
+}
+
+.headerActionDivider {
+  width: 1px;
+  height: 28px;
+  margin: 0;
+  background: #e5e7ef;
+}
+
+.captureRoot {
+  width: 100%;
+  min-width: 0;
+  scroll-margin-top: 76px;
+  scroll-margin-bottom: 32px;
+}
+
+.confirmLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.recorderShell {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.processingShell {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.processingCard {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 168px;
+  overflow: hidden;
+  clip-path: inset(0 round 16px);
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.68);
+  isolation: isolate;
+}
+
+.processingTranscript {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 188px;
+  min-height: 168px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px 22px;
+  contain: paint;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  :global(.vrx-chat-turn) {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.processingPlaceholder {
+  display: flex;
+  min-height: 132px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #6a6877;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.progressTrack {
+  display: block;
+  width: 210px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(103, 58, 172, 0.12);
+}
+
+.progressBar {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d565ea 0%, #673aac 70%, #1a1994 100%);
+  animation: moduleVoiceProgress 1.1s ease-in-out infinite;
+}
+
+.moduleRoot,
+.symptomsRoot {
+  position: relative;
+  border-radius: 20px;
+}
+
+.moduleCaptureLocked::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 8990;
+  background: transparent;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.moduleCaptureActiveSlot {
+  position: relative;
+  z-index: 8991;
+}
+
+.moduleUpdated,
+.symptomsUpdated {
+  outline: 1.5px solid rgba(103, 58, 172, 0.92);
+  box-shadow:
+    0 0 0 7px rgba(103, 58, 172, 0.08),
+    0 0 22px rgba(213, 101, 234, 0.28);
+  animation: moduleVoiceUpdated 2.4s ease-out both;
+}
+
+.moduleSlot {
+  padding: 14px;
+}
+
+.medicationWideDropdown {
+  width: max-content !important;
+  min-width: 220px !important;
+  max-width: min(560px, calc(100vw - 32px));
+
+  :global(.ant-select-item-option-content) {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+}
+
+.medicationScrollWrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+.medicationTableRow {
+  width: max-content;
+  min-width: 100%;
+  flex-wrap: nowrap !important;
+}
+
+.medicationInnerRow {
+  width: max-content;
+  min-width: 784px;
+  flex-wrap: nowrap !important;
+}
+
+.medicationDragCell {
+  flex: 0 0 48px !important;
+  max-width: 48px !important;
+  min-width: 48px;
+}
+
+.medicationNameCell {
+  flex: 0 0 320px !important;
+  max-width: 320px !important;
+  min-width: 320px;
+}
+
+.medicationDetailsCell {
+  flex: 0 0 auto !important;
+  max-width: none !important;
+  min-width: 784px;
+}
+
+.medicationUnitCell {
+  flex: 0 0 130px !important;
+  max-width: 130px !important;
+  min-width: 130px;
+}
+
+.medicationFrequencyCell {
+  flex: 0 0 140px !important;
+  max-width: 140px !important;
+  min-width: 140px;
+}
+.medicationWhenCell,
+.medicationDurationCell {
+  flex: 0 0 120px !important;
+  max-width: 120px !important;
+  min-width: 120px;
+}
+
+.medicationNoteCell {
+  flex: 0 0 240px !important;
+  max-width: 240px !important;
+  min-width: 240px;
+}
+
+.medicationActionCell {
+  position: sticky !important;
+  right: 0;
+  z-index: 5;
+  background: #fff;
+  box-shadow: -18px 0 22px -18px rgba(35, 35, 45, 0.48);
+}
+
+@keyframes moduleVoiceProgress {
+  0% { transform: translateX(-110%); }
+  55% { transform: translateX(110%); }
+  100% { transform: translateX(260%); }
+}
+
+@keyframes moduleVoicePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(229, 57, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
+}
+
+@keyframes moduleVoiceUpdated {
+  0% {
+    outline-color: rgba(213, 101, 234, 0.95);
+    box-shadow:
+      0 0 0 10px rgba(213, 101, 234, 0.14),
+      0 0 30px rgba(103, 58, 172, 0.34);
+  }
+  70% {
+    outline-color: rgba(103, 58, 172, 0.85);
+    box-shadow:
+      0 0 0 5px rgba(103, 58, 172, 0.08),
+      0 0 18px rgba(213, 101, 234, 0.22);
+  }
+  100% {
+    outline-color: transparent;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,15 @@
+.upload-more-drawer {
+  // Override ant-drawer styles to prevent movement
+  &.ant-drawer {
+    position: fixed !important;
+    
+    .ant-drawer-mask {
+      background-color: transparent !important;
+      pointer-events: none !important;
+    }
+    
+    .ant-drawer-content-wrapper {
+      box-shadow: none !important;
+    }
+  }
+} 

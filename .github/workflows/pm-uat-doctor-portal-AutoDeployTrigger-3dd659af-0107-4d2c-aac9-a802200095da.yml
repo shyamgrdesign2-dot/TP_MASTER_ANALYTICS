@@ -1,0 +1,50 @@
+name: Trigger auto deployment for pm-uat-doctor-portal
+
+on:
+  push:
+    branches: 
+      - uat
+    paths:
+      - '**'
+      - '.github/workflows/pm-uat-doctor-portal-AutoDeployTrigger-3dd659af-0107-4d2c-aac9-a802200095da.yml'
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      REACT_APP_ENV: uat
+
+    permissions: 
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.PMUATDOCTORPORTAL_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.PMUATDOCTORPORTAL_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.PMUATDOCTORPORTAL_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: acinacr.azurecr.io
+          registryUsername: ${{ secrets.PMUATDOCTORPORTAL_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.PMUATDOCTORPORTAL_REGISTRY_PASSWORD }}
+          containerAppName: pm-uat-doctor-portal
+          resourceGroup: tatva-uat
+          imageToBuild: acinacr.azurecr.io/pm-uat-doctor-portal:${{ github.sha }}
+          buildArguments: |
+            REACT_APP_ENV=uat
+            REACT_APP_CLARITY_ID_UAT=n93vwh8yqg
+            REACT_APP_MOENGAGE_LOGS_UAT=1
+            GENERATE_SOURCEMAP=true
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}

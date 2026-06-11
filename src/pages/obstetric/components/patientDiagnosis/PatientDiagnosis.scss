@@ -1,0 +1,380 @@
+@import '../../../../styles/variables.scss';
+
+.patientDiagnosisContainer {
+  padding: 24px 10px;
+  background: url("#{$tp-assets-base}/images/obstetric-bg.svg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @media only screen and (min-width: 1100px) {
+    padding: 24px 40px;
+  }
+
+  .patientDiagnosisAccordian {
+    &.ant-collapse {
+      background-color: transparent;
+      .ant-collapse-item {
+        &.ant-collapse-item-active {
+          border: 0 !important;
+          padding-bottom: 0;
+        }
+        .ant-collapse-header {
+          background: transparent !important;
+          padding: 0px;
+          line-height: 24px;
+          width: 175px;
+
+          .ant-collapse-expand-icon:after {
+            width: 22px;
+            height: 22px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-color: #a2a2a8;
+          }
+        }
+        .ant-collapse-content {
+          background: transparent !important;
+          border-top: 0;
+          border-radius: 0 !important;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .diagnosisTitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+  .diagnosisItems {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+
+    .rowContainer {
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (min-width: 1200px) {
+        justify-content: flex-start;
+        column-gap: 18px;
+      }
+
+      @media only screen and (min-width: 1300px) {
+        justify-content: flex-start;
+        column-gap: 24px;
+      }
+
+      .history-badge {
+        border: 1px solid #e2e2ea;
+        background-color: white;
+        border-radius: 10px;
+        height: 38px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+
+        .spanStyle {
+          padding: 8px 10px 8px 0;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .datePickerStyle {
+          &.ant-picker-outlined:focus-within {
+            box-shadow: none !important;
+          }
+          .ant-picker-input > input {
+            width: 82px !important;
+          }
+        }
+
+        .diagnosisSelect {
+          color: transparent;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+
+          .dropdown-toggle {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            color: #000 !important;
+            padding: 4px;
+          }
+
+          .dropdown-toggle::after {
+            display: none;
+          }
+
+          .dropdown-menu {
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0px;
+          }
+
+          .dropdown-item {
+            padding: 10px 5px 10px 12px;
+          }
+
+          .dropdown-menu .dropdown-item:active,
+          .dropdown-menu .dropdown-item:hover {
+            background-color: #e9ecef !important; /* Light gray background on hover */
+            color: #000 !important;
+          }
+
+          .iconStyle {
+            display: inline-block;
+            transform: rotate(270deg);
+            margin-left: 5px;
+          }
+        }
+
+        .maritalStatusSelect {
+          span {
+            padding-right: 0px !important;
+          }
+          .ant-select-arrow {
+            left: 85px;
+          }
+
+          .ant-select-clear {
+            left: 105px;
+          }
+        }
+
+        .timeInterval {
+          background-color: #fafafb;
+          margin-left: 0px;
+          padding-left: 5px;
+          height: 36px;
+        }
+        .timeIntervalValue {
+          border: solid 1px #eaecf0;
+          border-top: none;
+          border-bottom: none;
+          padding: 8px 4px;
+          margin-left: 0px;
+          height: 36px;
+          width: 44px;
+          text-align: center;
+          border-radius: 0 !important;
+        }
+        .timeIntervalValueForPreviousPregnancy {
+          width: 35px;
+        }
+      }
+    }
+  }
+}
+.fixPastPregnancy {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fafafb;
+  box-shadow: 0px -1px 2px 0px #e2e2ea inset;
+}
+.pastPregnancyContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 20px 40px;
+
+  .pastPregnancyItem {
+    &.ant-form-item {
+      margin-bottom: 0px;
+    }
+  }
+
+  .diagnosisNotesStyle {
+    width: 50%;
+    display: flex;
+    padding-right: 40px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: 14px;
+
+    .editStyle {
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
+      cursor: pointer;
+      .iconStyle {
+        color: #4b4ad5;
+        font-size: 18px;
+      }
+      .editText {
+        color: #4b4ad5 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.husbandBloodStyleContainer {
+  width: 220px !important;
+  @media only screen and (min-width: 1200px) {
+    width: 260px !important;
+  }
+
+  .husbandBlood {
+    width: 40%;
+
+    @media only screen and (min-width: 1200px) {
+      width: 20%;
+    }
+    .dropdown-menu {
+      margin-left: -135px !important;
+      margin-top: 3px;
+      width: 220px !important;
+
+      @media only screen and (min-width: 1200px) {
+        margin-left: -180px !important;
+        width: 260px !important;
+      }
+    }
+  }
+}
+
+.husbandBloodForPreviousPregnancy {
+  width: 150px !important;
+}
+
+.patientBloodStyleContainer {
+  width: 160px !important;
+  position: relative;
+  @media only screen and (min-width: 1200px) {
+    width: 235px !important;
+  }
+
+  .bloodGroupText {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    width: 94px;
+
+    @media only screen and (min-width: 1200px) {
+      width: 70px;
+    }
+  }
+
+  .bloodGroup {
+    width: 40%;
+
+    @media only screen and (min-width: 1200px) {
+      width: 15%;
+    }
+    .dropdown-menu {
+      margin-top: 3px;
+      width: 80px !important;
+
+      @media only screen and (min-width: 1200px) {
+        width: 234px !important;
+      }
+      @media only screen and (min-width: 1300px) {
+        margin-left: -155px !important;
+      }
+    }
+  }
+}
+
+.bloodContainerForPreviousPregnancy {
+  width: 115px !important;
+}
+
+.consangStyleContainer {
+  width: 160px !important;
+  position: relative;
+  @media only screen and (min-width: 1200px) {
+    width: 215px !important;
+  }
+
+  .consang {
+    width: 40%;
+
+    @media only screen and (min-width: 1200px) {
+      width: 15%;
+    }
+    .dropdown-menu {
+      margin-top: 3px;
+      width: 60px !important;
+
+      @media only screen and (min-width: 1200px) {
+        width: 215px !important;
+      }
+      @media only screen and (min-width: 1300px) {
+        margin-left: -136px !important;
+      }
+    }
+  }
+}
+
+.marritalStatus .dropdown-menu {
+  margin-left: -112px !important;
+  margin-top: 3px;
+  width: 212px !important;
+}
+
+.dropdown-item-custom {
+  position: relative;
+  padding: 10px 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #eaecf0;
+    margin: 0 auto;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.lmpStyle {
+  &.ant-picker-dropdown .ant-picker-panel-container {
+    margin-left: -42px !important;
+  }
+}
+
+.ceddStyle {
+  &.ant-picker-dropdown .ant-picker-panel-container {
+    margin-left: -62px !important;
+  }
+}
+
+.marrital {
+  margin-right: -42px !important;
+}
+
+.primigravida {
+  width: 137px;
+  height: 34px;
+  padding: 5px 16px 5px 16px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background: #a461d81a;
+  color: #a461d8 !important;
+}

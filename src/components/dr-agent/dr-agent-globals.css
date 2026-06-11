@@ -1,0 +1,872 @@
+/* ─── Google Fonts — Mulish (heading) + Inter (body) ─────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap');
+
+/* ─── Dr Agent + VoiceRx Global CSS ──────────────────────────────────────────
+   These global classes are scoped to the Dr. Agent panel feature only.
+   All vrx-* and da-* classes match the VoiceRx source exactly.
+   TP color tokens are defined here as CSS custom properties.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+/* ── TP Color Tokens ─────────────────────────────────────────────────────── */
+:root {
+  --tp-slate-50: #f8fafc;
+  --tp-slate-100: #f1f5f9;
+  --tp-slate-200: #e2e8f0;
+  --tp-slate-300: #cbd5e1;
+  --tp-slate-400: #94a3b8;
+  --tp-slate-500: #64748b;
+  --tp-slate-600: #475569;
+  --tp-slate-700: #334155;
+  --tp-slate-800: #1e293b;
+  --tp-slate-900: #0f172a;
+  --tp-blue-50: #eff6ff;
+  --tp-blue-100: #dbeafe;
+  --tp-blue-300: #93c5fd;
+  --tp-blue-500: #3b82f6;
+  --tp-blue-600: #2563eb;
+  --tp-blue-700: #1d4ed8;
+  --tp-violet-50: #f5f3ff;
+  --tp-violet-600: #7c3aed;
+  --tp-violet-700: #6d28d9;
+  --tp-success-500: #22c55e;
+  --tp-error-500: #ef4444;
+  --ai-pink: #D565EA;
+  --ai-violet: #673AAC;
+  --ai-indigo: #1A1994;
+  /* typography tokens matching VoiceRx Next.js font injection */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Mulish', 'Inter', system-ui, sans-serif;
+  /* full TP slate scale (VoiceRx-accurate values) */
+  --tp-slate-0: #FFFFFF;
+  --tp-slate-50: #FAFAFB;
+  --tp-slate-100: #F1F1F5;
+  --tp-slate-200: #E2E2EA;
+  --tp-slate-300: #D0D5DD;
+  --tp-slate-400: #A2A2A8;
+  --tp-slate-500: #717179;
+  --tp-slate-600: #545460;
+  --tp-slate-700: #454551;
+  --tp-slate-800: #2C2C35;
+  --tp-slate-900: #171725;
+  /* full TP blue scale */
+  --tp-blue-50: #EEEEFF;
+  --tp-blue-100: #D8D8FA;
+  --tp-blue-200: #B5B4F2;
+  --tp-blue-300: #8E8DE8;
+  --tp-blue-400: #6C6BDE;
+  --tp-blue-500: #4B4AD5;
+  --tp-blue-600: #3C3BB5;
+  --tp-blue-700: #2E2D96;
+  --tp-blue-800: #212077;
+  --tp-blue-900: #161558;
+  /* full TP violet scale */
+  --tp-violet-50: #FAF5FE;
+  --tp-violet-100: #EDDFF7;
+  --tp-violet-200: #DBBFEF;
+  --tp-violet-300: #C89FE7;
+  --tp-violet-400: #BA7DE9;
+  --tp-violet-500: #A461D8;
+  --tp-violet-600: #8A4DBB;
+  --tp-violet-700: #703A9E;
+  /* semantic tokens */
+  --foreground: #171725;
+  --card: #FFFFFF;
+  --card-foreground: #171725;
+  --muted: #F1F1F5;
+  --muted-foreground: #717179;
+}
+
+/* ── Dr Agent typography — scope font-family to panel so portal default doesn't bleed in ── */
+.vrx-canvas, .vrx-canvas *,
+.vrx-agent-brand-tag, .vrx-agent-brand-tag *,
+.vrx-ai-cta, .vrx-ai-cta *,
+.vrx-status-card, .vrx-status-card *,
+.da-chat-scroll, .da-chat-scroll *,
+[data-voice-allow], [data-voice-allow] *,
+[data-dr-agent], [data-dr-agent] * {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── VoiceRx liquid-glass button components ─────────────────────────────── */
+.vrx-squircle { border-radius: 18px; }
+.vrx-lg-btn { isolation: isolate; position: relative; cursor: pointer; }
+.vrx-lg-surface {
+  position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.60) 100%);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 10px 28px -10px rgba(31,38,135,0.18), 0 4px 12px -4px rgba(15,23,42,0.08),
+    inset 0 1.5px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(255,255,255,0.55),
+    inset 1px 0 0 rgba(255,255,255,0.5), inset -1px 0 0 rgba(255,255,255,0.5);
+  transition: background 220ms ease, box-shadow 220ms ease;
+}
+.vrx-lg-btn:hover .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.75) 100%);
+  box-shadow: 0 14px 34px -10px rgba(31,38,135,0.22), 0 6px 16px -4px rgba(15,23,42,0.10),
+    inset 0 1.5px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(255,255,255,0.6),
+    inset 1px 0 0 rgba(255,255,255,0.55), inset -1px 0 0 rgba(255,255,255,0.55);
+}
+.vrx-lg-sheen {
+  pointer-events: none; position: absolute; left: 12%; right: 12%; top: 1px; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
+  border-radius: 999px; z-index: 1;
+}
+.vrx-lg-divider {
+  width: 1px; margin: 14px 0;
+  background: linear-gradient(180deg, transparent, rgba(15,23,42,0.14) 30%, rgba(15,23,42,0.14) 70%, transparent);
+  position: relative; z-index: 1;
+}
+.vrx-close-btn .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(252,195,195,0.95) 0%, rgba(249,168,168,0.85) 100%);
+  border: 1px solid rgba(220,38,38,0.18);
+  box-shadow: 0 6px 16px -6px rgba(220,38,38,0.18), 0 2px 6px -2px rgba(220,38,38,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.85), inset 0 -1px 0 rgba(220,38,38,0.08);
+}
+.vrx-close-btn:hover .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(250,180,180,1) 0%, rgba(248,150,150,0.9) 100%);
+  border: 1px solid rgba(220,38,38,0.24);
+}
+.vrx-lg-btn:not(.vrx-close-btn):not(.vrx-mic-muted) .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(241,245,249,0.82) 100%);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 6px 16px -6px rgba(15,23,42,0.16), 0 2px 6px -2px rgba(15,23,42,0.10),
+    inset 0 1px 0 rgba(255,255,255,1), inset 0 -1px 0 rgba(15,23,42,0.05);
+}
+.vrx-lg-btn:not(.vrx-close-btn):not(.vrx-mic-muted):hover .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,0.92) 100%);
+  border: 1px solid rgba(15,23,42,0.12);
+}
+.vrx-mic-muted .vrx-lg-surface {
+  background: linear-gradient(180deg, rgba(253,230,178,0.75) 0%, rgba(250,209,143,0.55) 100%);
+  border: 1px solid rgba(245,158,11,0.35);
+  box-shadow: 0 10px 28px -10px rgba(217,119,6,0.32), 0 4px 12px -4px rgba(217,119,6,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.85), inset 0 -1px 0 rgba(217,119,6,0.12);
+}
+.vrx-submit-dim { opacity: 0.5; filter: saturate(0.85); }
+.vrx-submit-hero {
+  box-shadow: 0 6px 16px -6px rgba(103,58,172,0.38), 0 2px 6px -2px rgba(103,58,172,0.24),
+    inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(15,23,42,0.14);
+}
+.vrx-submit-hero:hover {
+  box-shadow: 0 8px 20px -6px rgba(103,58,172,0.46), 0 3px 8px -2px rgba(103,58,172,0.30),
+    inset 0 1px 0 rgba(255,255,255,0.62), inset 0 -1px 0 rgba(15,23,42,0.16);
+}
+.vrx-submit-gradient {
+  background: linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%);
+  background-size: 200% 100%;
+  animation: vrxSubmitShift 6s ease-in-out infinite;
+  border-radius: inherit;
+}
+@keyframes vrxSubmitShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+.tp-ai-gradient-static {
+  background: linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%);
+  border-radius: inherit;
+}
+
+/* ── Word reveal animations ──────────────────────────────────────────────── */
+@keyframes vrxWordReveal {
+  from { opacity: 0; color: rgba(148,163,184,0.3); transform: translateY(4px); filter: blur(1.5px); }
+  60%  { opacity: 1; color: rgba(148,163,184,0.55); transform: translateY(0); filter: blur(0); }
+  to   { opacity: 1; color: inherit; transform: translateY(0); filter: blur(0); }
+}
+.vrx-word { display: inline; }
+.vrx-word[data-word-new="true"] {
+  animation: vrxWordReveal 420ms cubic-bezier(0.22, 1, 0.36, 1) var(--vrx-stagger, 0ms) both;
+}
+.vrx-caret {
+  display: inline-block; width: 2px; height: 0.85em;
+  background: currentColor; margin-left: 3px; vertical-align: -2px;
+  animation: vrxCaret 1s steps(1) infinite; opacity: 0.4;
+}
+@keyframes vrxCaret { 50% { opacity: 0; } }
+.vrx-scroll::-webkit-scrollbar { width: 0; height: 0; }
+
+/* ── VoiceRx agent chip styles ───────────────────────────────────────────── */
+.vrx-agent-collapse-tag {
+  background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.22) 100%),
+    linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(75,74,213,0.08) 100%);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), inset 0 0 0 1px rgba(15,23,42,0.08),
+    0 4px 12px -4px rgba(15,23,42,0.08);
+  transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 120ms ease;
+}
+.vrx-agent-collapse-tag:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.68) 0%, rgba(255,255,255,0.38) 100%),
+    linear-gradient(135deg, rgba(139,92,246,0.10) 0%, rgba(75,74,213,0.10) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 0 0 1px rgba(15,23,42,0.12),
+    0 6px 16px -4px rgba(15,23,42,0.12);
+}
+.vrx-mode-heading {
+  background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.20) 100%),
+    linear-gradient(135deg, rgba(213,101,234,0.16) 0%, rgba(103,58,172,0.12) 55%, rgba(75,74,213,0.12) 100%);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), inset 0 0 0 1px rgba(103,58,172,0.14),
+    0 4px 12px -4px rgba(103,58,172,0.12);
+}
+.vrx-mic-chip {
+  background: #ffffff; border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 4px 10px -6px rgba(15,23,42,0.10);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+.vrx-mic-chip:hover { background: #fafbfc; border-color: rgba(15,23,42,0.16); }
+.vrx-status-card {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 10px 10px 0 0;
+  background: rgba(255,255,255,0.60);
+  padding: 4px 12px 5px 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 200ms;
+  filter: drop-shadow(0 0 calc(3px + var(--vrx-live-level, 0) * 16px) rgba(139,92,246,calc(0.05 + var(--vrx-live-level, 0) * 0.22)));
+}
+.vrx-status-card--paused { background: rgba(254,243,199,0.55) !important; }
+.vrx-status-card--error  { background: rgba(254,226,226,0.72) !important; }
+
+/* ── Recording animation ─────────────────────────────────────────────────── */
+@keyframes vrxRec { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.78); } }
+@keyframes vrxChipIn { from { opacity: 0; transform: translateY(-6px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes vrxTextIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes vrxRecRing { 0% { transform: scale(1); opacity: 0.75; } 70%, 100% { transform: scale(2.2); opacity: 0; } }
+@keyframes vrxDotBounce { 0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; } 40% { transform: scale(1.1); opacity: 1; } }
+.vrx-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(255,255,255,0.98); box-shadow: 0 0 6px rgba(255,255,255,0.62);
+  animation: vrxDotBounce 1.2s ease-in-out infinite;
+}
+
+/* ── Submit sheen ────────────────────────────────────────────────────────── */
+@keyframes vrxSubmitSheen {
+  0%   { transform: translateX(-120%); opacity: 0; }
+  18%  { opacity: 0.65; }
+  55%  { opacity: 0.65; }
+  100% { transform: translateX(320%); opacity: 0; }
+}
+.vrx-submit-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+  animation: vrxSubmitSheen 3s ease-in-out infinite;
+}
+
+/* ── AI CTA sheen ────────────────────────────────────────────────────────── */
+@keyframes vrxAiCtaSheen {
+  0%   { transform: translateX(-120%); opacity: 0; }
+  18%  { opacity: 0.55; }
+  55%  { opacity: 0.55; }
+  100% { transform: translateX(320%); opacity: 0; }
+}
+.vrx-ai-cta-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
+  animation: vrxAiCtaSheen 3.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) { .vrx-ai-cta-sheen { animation: none; opacity: 0; } }
+
+/* ── VoiceRxBottomSheet option cards ─────────────────────────────────────── */
+.vrx-option-card--idle { background: transparent; }
+.vrx-option-card--idle:hover { background: rgba(248,250,252,0.65); }
+.vrx-option-card--selected,
+.vrx-option-card--selected:hover {
+  background: linear-gradient(180deg, #FBFCFF 0%, #F3F5FF 100%);
+  padding-top: 6px; padding-bottom: 6px;
+  box-shadow: inset 0 0 0 1px rgba(75,74,213,0.14), 0 1px 2px rgba(75,74,213,0.04);
+}
+.vrx-consent-pill { background: rgba(75,74,213,0.06); box-shadow: none; }
+.vrx-option-tile {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; flex-shrink: 0; border-radius: 303.03px;
+  background: #fff; isolation: isolate; --vrx-tile-halo: #ffffff;
+}
+.vrx-option-tile::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, rgba(213,101,234,0.26) 0%, rgba(180,110,220,0.20) 28%,
+    rgba(167,139,250,0.14) 52%, rgba(167,139,250,0) 88%);
+  z-index: 0;
+}
+.vrx-option-tile::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: 0 0 7.5px 6.75px var(--vrx-tile-halo) inset; z-index: 1;
+}
+.vrx-option-tile > svg { position: relative; z-index: 2; }
+.vrx-option-tile--selected { background: #F7F8FF; --vrx-tile-halo: #F7F8FF; }
+
+/* ── Agent brand tag (liquid-glass) ─────────────────────────────────────── */
+.vrx-agent-brand-tag {
+  background: linear-gradient(180deg, rgba(255,255,255,0.52) 0%, rgba(255,255,255,0.22) 100%),
+    linear-gradient(135deg, rgba(213,101,234,0.10) 0%, rgba(103,58,172,0.08) 55%, rgba(75,74,213,0.08) 100%);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.88), inset 0 0 0 1px rgba(103,58,172,0.12),
+    0 4px 14px -4px rgba(103,58,172,0.14);
+}
+.vrx-agent-glossy-chip {
+  background: linear-gradient(180deg, rgba(255,255,255,0.52) 0%, rgba(255,255,255,0.22) 100%);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), inset 0 0 0 1px rgba(15,23,42,0.08),
+    0 2px 8px -2px rgba(15,23,42,0.08);
+}
+
+/* ── FAB animations ──────────────────────────────────────────────────────── */
+@keyframes vrxFabIn { from { opacity: 0; transform: translateY(12px) scale(0.92); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.vrx-fab-surface { display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.vrx-fab-dot { width: 3px; height: 3px; border-radius: 9999px; background: rgba(255,255,255,0.62); animation: vrxFabDot 1.4s ease-in-out infinite; }
+@keyframes vrxFabDot { 0%, 100% { opacity: 0.25; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-1px); } }
+@keyframes vrxFabSheen {
+  0%   { transform: translateX(-120%); opacity: 0; }
+  18%  { opacity: 0.85; }
+  55%  { opacity: 0.85; }
+  100% { transform: translateX(320%); opacity: 0; }
+}
+.vrx-fab-sheen {
+  pointer-events: none;
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: vrxFabSheen 2.8s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+@keyframes vrxFabSparkPulse { 0%, 100% { opacity: 0.82; transform: scale(1); } 50% { opacity: 1; transform: scale(1.18); } }
+.vrx-fab-spark-pulse { display: inline-flex; animation: vrxFabSparkPulse 2.4s ease-in-out infinite; }
+@keyframes vrxFabSparkSpin {
+  0%   { transform: rotate(-8deg) scale(1); }
+  25%  { transform: rotate(8deg) scale(1.08); }
+  50%  { transform: rotate(-5deg) scale(1); }
+  75%  { transform: rotate(6deg) scale(1.05); }
+  100% { transform: rotate(-8deg) scale(1); }
+}
+.vrx-fab-spark-icon { animation: vrxFabSparkSpin 3s ease-in-out infinite; transform-origin: center; }
+
+/* ── Blob (voice-reactive background) ───────────────────────────────────── */
+@keyframes tpVoiceBlobDrift { 0%, 100% { transform: translate(-6px, 0) scale(1); opacity: 0.9; } 50% { transform: translate(6px, -4px) scale(1.08); opacity: 1; } }
+.tp-voice-blob {
+  background-image: radial-gradient(60% 75% at 50% 78%, rgba(213,101,234,0.55) 0%, rgba(213,101,234,0) 72%),
+    radial-gradient(42% 58% at 32% 80%, rgba(139,92,246,0.48) 0%, rgba(139,92,246,0) 72%),
+    radial-gradient(42% 58% at 68% 80%, rgba(79,70,229,0.42) 0%, rgba(79,70,229,0) 72%);
+  background-repeat: no-repeat;
+  animation: tpVoiceBlobDrift 3.2s ease-in-out infinite;
+  pointer-events: none; will-change: transform, opacity, scale, filter; filter: blur(2px);
+}
+.tp-voice-blob--reactive {
+  --vrx-blob-level: 0;
+  opacity: calc(0.55 + var(--vrx-blob-level) * 0.55);
+  transform-origin: 50% 100%;
+  scale: calc(1 + var(--vrx-blob-level) * 0.4);
+  filter: blur(calc(1.5px + var(--vrx-blob-level) * 3px))
+    drop-shadow(0 0 calc(2px + var(--vrx-blob-level) * 26px) rgba(139,92,246,calc(0.22 + var(--vrx-blob-level) * 0.65)));
+  transition: scale 70ms ease-out, opacity 70ms ease-out;
+}
+@keyframes vrxFooterBlobDrift {
+  0%, 100% { transform: translateY(0px) scale(1) translateX(calc(var(--vrx-live-level, 0) * -4px)); }
+  50% { transform: translateY(calc(-3px - var(--vrx-live-level, 0) * 6px)) scale(calc(1.02 + var(--vrx-live-level, 0) * 0.08)) translateX(calc(var(--vrx-live-level, 0) * 4px)); }
+}
+.vrx-footer-blob { opacity: calc(0.7 + var(--vrx-live-level, 0) * 0.9); animation: vrxFooterBlobDrift 4.6s ease-in-out infinite; will-change: transform, opacity; }
+
+/* ── Process / shiner card animations ───────────────────────────────────── */
+@keyframes vrxShinerEnter { from { opacity: 0; transform: translateY(10px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.vrx-shiner-enter { animation: vrxShinerEnter 420ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.vrx-bottom-loader { animation: vrxBottomLoaderIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes vrxBottomLoaderIn { 0% { opacity: 0; transform: translateY(22px); } 100% { opacity: 1; transform: translateY(0); } }
+.vrx-bottom-block--exit { animation: vrxBottomBlockExit 320ms cubic-bezier(0.4, 0, 1, 1) both; pointer-events: none; }
+@keyframes vrxBottomBlockExit { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(28px); } }
+.vrx-transcript-zone--exit { animation: vrxTranscriptZoneExit 320ms cubic-bezier(0.4, 0, 1, 1) both; }
+@keyframes vrxTranscriptZoneExit { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-10px) scale(0.985); } }
+.vrx-transcript-zone-in { animation: vrxTranscriptZoneIn 460ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes vrxTranscriptZoneIn { 0% { opacity: 0; transform: translateY(18px) scale(0.985); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+.vrx-shiner-handoff-exit { animation: vrxShinerHandoffExit 320ms cubic-bezier(0.4, 0, 1, 1) both; pointer-events: none; }
+@keyframes vrxShinerHandoffExit { 0% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-22px) scale(0.985); } }
+.vrx-progress-fill { transform-origin: left center; animation: vrxProgressFill 11s linear forwards; }
+@keyframes vrxProgressFill { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+.vrx-progress-sheen {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+  animation: vrxLoaderSheen 1.8s linear infinite;
+}
+@keyframes vrxLoaderSheen { 0% { transform: translateX(-120%); } 100% { transform: translateX(360%); } }
+@keyframes vrxFilledFlash { 0% { opacity: 0; transform: scale(0.85); } 35% { opacity: 1; transform: scale(1.06); } 100% { opacity: 1; transform: scale(1); } }
+.vrx-filled-flash { animation: vrxFilledFlash 280ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ── Dictation transcript word animation ─────────────────────────────────── */
+@keyframes vrxDtWordIn { 0% { opacity: 0; transform: translateY(3px); filter: blur(1px); } 100% { opacity: 1; transform: none; filter: none; } }
+.vrx-dt-word { display: inline; animation: vrxDtWordIn 380ms cubic-bezier(0.22, 1, 0.36, 1) var(--vrx-stagger, 0ms) both; }
+.vrx-dt-word--quote { font-style: italic; }
+@keyframes vrxCaptionSlide { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.vrx-caption-slide { animation: vrxCaptionSlide 280ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes vrxCaptionShine {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+.vrx-process-caption { animation: vrxCaptionShine 2.4s linear infinite; }
+
+/* ── Chat stream animations ──────────────────────────────────────────────── */
+.vrx-chat-turn {
+  opacity: 0; transform: translateY(8px) translateX(var(--vrx-turn-from, 0));
+}
+.vrx-chat-turn--doctor  { --vrx-turn-from: -10px; }
+.vrx-chat-turn--patient { --vrx-turn-from:  10px; }
+.vrx-chat-turn--in { animation: vrxChatTurnIn 360ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@keyframes vrxChatTurnIn {
+  0%   { opacity: 0; transform: translateY(8px) translateX(var(--vrx-turn-from, 0)); }
+  100% { opacity: 1; transform: translateY(0) translateX(0); }
+}
+
+/* ── VoiceRx empty state ─────────────────────────────────────────────────── */
+.vrx-empty-state { animation: vrxEmptyStateIn 420ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both; }
+@keyframes vrxEmptyStateIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes vrxEmptySparkRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.vrx-empty-spark-rotate { animation: vrxEmptySparkRotate 16s linear infinite; }
+
+/* ── Result tabs ─────────────────────────────────────────────────────────── */
+.vrx-rt-back { background: rgba(255,255,255,0.42); transition: background 160ms ease; }
+.vrx-rt-back:hover { background: rgba(255,255,255,0.72); }
+.vrx-rt-primary {
+  background: var(--tp-blue-500, #4B4AD5);
+  color: #fff;
+  box-shadow: 0 4px 10px -4px rgba(75,74,213,0.40), inset 0 1px 0 rgba(255,255,255,0.30);
+  transition: background 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+.vrx-rt-primary:hover:not(:disabled) {
+  background: var(--tp-blue-600, #3A39C0);
+  box-shadow: 0 6px 14px -4px rgba(75,74,213,0.50), inset 0 1px 0 rgba(255,255,255,0.32);
+}
+.vrx-rt-secondary-blue {
+  background: #ffffff;
+  color: var(--tp-blue-600, #3A39C0);
+  border: 1px solid var(--tp-blue-500, #4B4AD5);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.vrx-rt-secondary-blue:hover:not(:disabled) { background: #eff6ff; border-color: var(--tp-blue-600, #3A39C0); }
+.vrx-rt-voice-cta-outline {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%) border-box !important;
+  border: 1px solid transparent !important;
+  transition: background 160ms ease;
+}
+.vrx-rt-voice-cta-outline:hover:not(:disabled) {
+  background:
+    linear-gradient(#FAF5FF, #FAF5FF) padding-box,
+    linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%) border-box !important;
+}
+.vrx-rt-voice-cta-outline__label {
+  background: linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+/* vrx-cn-* = ClinicalNotes canvas buttons (same design language as vrx-rt-* but separate namespace) */
+.vrx-cn-secondary-blue {
+  background: #ffffff;
+  color: var(--tp-blue-600, #3A39C0);
+  border: 1px solid var(--tp-blue-500, #4B4AD5);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.vrx-cn-secondary-blue:hover:not(:disabled) { background: #eff6ff; border-color: var(--tp-blue-600, #3A39C0); }
+
+/* ── Patient chip ────────────────────────────────────────────────────────── */
+@keyframes vrxChipSheen { 0% { transform: translateX(-100%) skewX(-18deg); } 100% { transform: translateX(300%) skewX(-18deg); } }
+.vrx-patient-chip-sheen { animation: vrxChipSheen 2.8s ease-in-out infinite; }
+.vrx-patient-chip { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.vrx-patient-chip:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(103,58,172,0.18); }
+.vrx-patient-chip:active { transform: translateY(0) scale(0.98); }
+
+/* ── Dr. Agent chat scroll ───────────────────────────────────────────────── */
+.da-chat-scroll::-webkit-scrollbar { width: 3px; }
+.da-chat-scroll::-webkit-scrollbar-track { background: transparent; }
+.da-chat-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 3px; }
+.da-chat-scroll { scroll-behavior: smooth; overscroll-behavior: contain; }
+
+/* ── DA shimmer word reveal ──────────────────────────────────────────────── */
+@keyframes daShimmerWordIn { 0% { opacity: 0; transform: translateY(8px); filter: blur(5px); } 100% { opacity: 1; transform: none; filter: none; } }
+.da-shimmer-word { opacity: 0; transform: translateY(8px); filter: blur(5px); animation: daShimmerWordIn 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: var(--da-delay, 0ms); }
+.da-suggestion-scroll::-webkit-scrollbar { height: 0; display: none; }
+.da-suggestion-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* ── DA spark loader (typing indicator) ─────────────────────────────────── */
+.da-spark-loader { width: 26px; height: 26px; perspective: 500px; }
+.da-spark-flip {
+  width: 100%; height: 100%; animation: daSparkFlip 1.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-style: preserve-3d;
+}
+@keyframes daSparkFlip { 0%, 100% { transform: rotateY(0deg); } 50% { transform: rotateY(180deg); } }
+.da-spark-halo { animation: daSparkHalo 1.8s ease-in-out infinite; }
+@keyframes daSparkHalo { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.25); } }
+
+/* ── DA chip shake ───────────────────────────────────────────────────────── */
+.da-floating-chip { cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.da-floating-chip:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,23,42,0.12); }
+.da-floating-chip:active { transform: scale(0.97); }
+@keyframes daChipShake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-5px) rotate(-1.5deg); }
+  30% { transform: translateX(5px) rotate(1.5deg); }
+  45% { transform: translateX(-4px) rotate(-1deg); }
+  60% { transform: translateX(4px) rotate(1deg); }
+  75% { transform: translateX(-2px); }
+  90% { transform: translateX(2px); }
+}
+.da-chip-shake { animation: daChipShake 0.5s ease-in-out; }
+
+/* ── Typing indicator ────────────────────────────────────────────────────── */
+@keyframes typingSlideIn  { 0% { transform: translateY(10px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes typingSlideOut { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-10px); opacity: 0; } }
+@keyframes ellipsisFade { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+
+/* ── DA gradient wash (AI ambient gradient across the panel) ─────────────── */
+.vrx-da-gradient-wash {
+  background: linear-gradient(135deg, rgba(213,101,234,0.04) 0%, rgba(103,58,172,0.03) 50%, rgba(75,74,213,0.04) 100%);
+  pointer-events: none;
+}
+
+/* ── Chat stream in ──────────────────────────────────────────────────────── */
+@keyframes chatStreamIn {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes chatVoiceIn {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Module just-filled aura ─────────────────────────────────────────────── */
+.tp-module-just-filled { position: relative; isolation: isolate; }
+.tp-module-just-filled > div:first-child { animation: tpModuleJustFilledPulse 2000ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes tpModuleJustFilledPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(103,58,172,0.0); }
+  20%  { box-shadow: 0 0 0 8px rgba(103,58,172,0.14); }
+  60%  { box-shadow: 0 0 0 6px rgba(103,58,172,0.10); }
+  100% { box-shadow: 0 0 0 0 rgba(103,58,172,0.0); }
+}
+
+/* ── Shine animation (for ShineBorder component) ─────────────────────────── */
+@keyframes shine {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+.animate-shine { animation: shine var(--duration, 14s) linear infinite; }
+
+/* ── Section slide ───────────────────────────────────────────────────────── */
+@keyframes rxSectionSlideUp { 0% { transform: translateY(16%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes rxSectionSlideDown { 0% { transform: translateY(-16%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+.rx-section-slide-up   { animation: rxSectionSlideUp   280ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rx-section-slide-down { animation: rxSectionSlideDown 280ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ── Welcome screen spark ────────────────────────────────────────────────── */
+@keyframes welcomeSparkRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* ── Bottom sheet animations ─────────────────────────────────────────────── */
+@keyframes psFadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes psSlideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes fbFadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fbSlideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+/* ── AI spark thinking animation ─────────────────────────────────────────── */
+@keyframes aiSparkThink {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(90deg) scale(1.15); }
+  50%  { transform: rotate(180deg) scale(1); }
+  75%  { transform: rotate(270deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.ai-spark-thinking { animation: aiSparkThink 1.6s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vrx-fab-dot, .vrx-submit-sheen, .vrx-ai-cta-sheen, .vrx-fab-sheen,
+  .vrx-fab-spark-pulse, .vrx-fab-spark-icon, .vrx-progress-fill,
+  .vrx-progress-sheen, .vrx-bottom-loader, .vrx-shiner-enter,
+  .vrx-empty-spark-rotate, .vrx-patient-chip-sheen, .tp-voice-blob,
+  .da-spark-flip, .da-spark-halo, .ai-spark-thinking,
+  .da-shimmer-word, .vrx-caption-slide, .vrx-process-caption {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Portal common.scss override layer — fights `table, p, div, span, tr, th, td
+   { font-family: 'Poppins' !important; color: $maincolor !important; }`
+   that bleeds into the dr-agent panel.
+   All rules scoped to [data-dr-agent="true"] so the rest of the app is unaffected.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Font: Inter for body, Mulish for headings — override Poppins everywhere inside the panel */
+[data-dr-agent="true"],
+[data-dr-agent="true"] *,
+[data-dr-agent="true"] *::before,
+[data-dr-agent="true"] *::after {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default text color: VoiceRx slate-900 (#171725 — happens to match $maincolor, fine) */
+[data-dr-agent="true"] {
+  color: #171725 !important;
+}
+
+/* ── White-text buttons (primary CTAs) ─────────────────────────────────── */
+[data-dr-agent="true"] .vrx-ai-cta,
+[data-dr-agent="true"] .vrx-ai-cta *,
+[data-dr-agent="true"] .vrx-rt-primary,
+[data-dr-agent="true"] .vrx-rt-primary *,
+[data-dr-agent="true"] .vrx-submit-hero,
+[data-dr-agent="true"] .vrx-submit-hero *,
+[data-dr-agent="true"] .vrx-fab,
+[data-dr-agent="true"] .vrx-fab *,
+[data-dr-agent="true"] .vrx-cn-tab-active,
+[data-dr-agent="true"] [data-vrx-white="true"],
+[data-dr-agent="true"] [data-vrx-white="true"] * {
+  color: #ffffff !important;
+}
+
+/* ── Blue secondary buttons ───────────────────────────────────────────── */
+[data-dr-agent="true"] .vrx-cn-secondary-blue,
+[data-dr-agent="true"] .vrx-cn-secondary-blue *,
+[data-dr-agent="true"] .vrx-rt-secondary-blue,
+[data-dr-agent="true"] .vrx-rt-secondary-blue * {
+  color: var(--tp-blue-600, #3A39C0) !important;
+}
+
+/* ── Gradient-text labels (voice CTA outline) ─────────────────────────── */
+[data-dr-agent="true"] .vrx-rt-voice-cta-outline__label {
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* ── Close X (red) ────────────────────────────────────────────────────── */
+[data-dr-agent="true"] .vrx-close-btn,
+[data-dr-agent="true"] .vrx-close-btn * {
+  color: #DC2626 !important;
+}
+
+/* ── Mic state colors ─────────────────────────────────────────────────── */
+[data-dr-agent="true"] .vrx-mic-muted,
+[data-dr-agent="true"] .vrx-mic-muted * {
+  color: #d97706 !important;
+}
+
+/* ── Status pill listening dot (rose) ─────────────────────────────────── */
+[data-dr-agent="true"] [class*="bg-rose-400"] {
+  background-color: #fb7185 !important;
+}
+
+/* ── Tailwind utility shim — only the classes used inside dr-agent ────── */
+[data-dr-agent="true"] .text-white { color: #ffffff !important; }
+[data-dr-agent="true"] .bg-white { background-color: #ffffff !important; }
+[data-dr-agent="true"] .text-center { text-align: center !important; }
+[data-dr-agent="true"] .font-semibold { font-weight: 600 !important; }
+[data-dr-agent="true"] .font-bold { font-weight: 700 !important; }
+[data-dr-agent="true"] .font-medium { font-weight: 500 !important; }
+[data-dr-agent="true"] .pointer-events-none { pointer-events: none !important; }
+[data-dr-agent="true"] .pointer-events-auto { pointer-events: auto !important; }
+[data-dr-agent="true"] .cursor-pointer { cursor: pointer !important; }
+[data-dr-agent="true"] .cursor-not-allowed { cursor: not-allowed !important; }
+[data-dr-agent="true"] .relative { position: relative !important; }
+[data-dr-agent="true"] .absolute { position: absolute !important; }
+[data-dr-agent="true"] .sticky { position: sticky !important; }
+[data-dr-agent="true"] .fixed { position: fixed !important; }
+[data-dr-agent="true"] .inset-0 { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
+[data-dr-agent="true"] .inset-x-0 { left: 0 !important; right: 0 !important; }
+[data-dr-agent="true"] .inset-y-0 { top: 0 !important; bottom: 0 !important; }
+[data-dr-agent="true"] .top-0 { top: 0 !important; }
+[data-dr-agent="true"] .bottom-0 { bottom: 0 !important; }
+[data-dr-agent="true"] .left-0 { left: 0 !important; }
+[data-dr-agent="true"] .right-0 { right: 0 !important; }
+[data-dr-agent="true"] .flex { display: flex !important; }
+[data-dr-agent="true"] .inline-flex { display: inline-flex !important; }
+[data-dr-agent="true"] .grid { display: grid !important; }
+[data-dr-agent="true"] .hidden { display: none !important; }
+[data-dr-agent="true"] .block { display: block !important; }
+[data-dr-agent="true"] .inline-block { display: inline-block !important; }
+[data-dr-agent="true"] .flex-1 { flex: 1 1 0% !important; }
+[data-dr-agent="true"] .flex-col { flex-direction: column !important; }
+[data-dr-agent="true"] .flex-row { flex-direction: row !important; }
+[data-dr-agent="true"] .items-center { align-items: center !important; }
+[data-dr-agent="true"] .items-start { align-items: flex-start !important; }
+[data-dr-agent="true"] .items-end { align-items: flex-end !important; }
+[data-dr-agent="true"] .items-stretch { align-items: stretch !important; }
+[data-dr-agent="true"] .justify-center { justify-content: center !important; }
+[data-dr-agent="true"] .justify-between { justify-content: space-between !important; }
+[data-dr-agent="true"] .justify-end { justify-content: flex-end !important; }
+[data-dr-agent="true"] .justify-start { justify-content: flex-start !important; }
+[data-dr-agent="true"] .shrink-0 { flex-shrink: 0 !important; }
+[data-dr-agent="true"] .grow { flex-grow: 1 !important; }
+[data-dr-agent="true"] .w-full { width: 100% !important; }
+[data-dr-agent="true"] .h-full { height: 100% !important; }
+[data-dr-agent="true"] .w-fit { width: fit-content !important; }
+[data-dr-agent="true"] .h-0 { height: 0 !important; }
+[data-dr-agent="true"] .min-w-0 { min-width: 0 !important; }
+[data-dr-agent="true"] .min-h-0 { min-height: 0 !important; }
+[data-dr-agent="true"] .overflow-hidden { overflow: hidden !important; }
+[data-dr-agent="true"] .overflow-visible { overflow: visible !important; }
+[data-dr-agent="true"] .overflow-auto { overflow: auto !important; }
+[data-dr-agent="true"] .rounded-full { border-radius: 9999px !important; }
+[data-dr-agent="true"] .rounded-none { border-radius: 0 !important; }
+[data-dr-agent="true"] .opacity-40 { opacity: 0.4 !important; }
+[data-dr-agent="true"] .opacity-50 { opacity: 0.5 !important; }
+[data-dr-agent="true"] .opacity-60 { opacity: 0.6 !important; }
+[data-dr-agent="true"] .opacity-80 { opacity: 0.8 !important; }
+[data-dr-agent="true"] .opacity-100 { opacity: 1 !important; }
+[data-dr-agent="true"] .invisible { visibility: hidden !important; }
+[data-dr-agent="true"] .visible { visibility: visible !important; }
+[data-dr-agent="true"] .truncate { overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; }
+[data-dr-agent="true"] .whitespace-nowrap { white-space: nowrap !important; }
+[data-dr-agent="true"] .whitespace-pre-wrap { white-space: pre-wrap !important; }
+[data-dr-agent="true"] .select-none { user-select: none !important; }
+
+/* Arbitrary-value Tailwind classes used inside the panel — explicit overrides */
+[data-dr-agent="true"] .text-\[\#DC2626\] { color: #DC2626 !important; }
+[data-dr-agent="true"] .text-red-500 { color: #ef4444 !important; }
+[data-dr-agent="true"] .text-amber-500\/80 { color: rgba(245, 158, 11, 0.8) !important; }
+[data-dr-agent="true"] .bg-rose-400 { background-color: #fb7185 !important; }
+[data-dr-agent="true"] .bg-rose-400\/55 { background-color: rgba(251, 113, 133, 0.55) !important; }
+[data-dr-agent="true"] .tracking-\[0\.2px\] { letter-spacing: 0.2px !important; }
+[data-dr-agent="true"] .gap-\[6px\] { gap: 6px !important; }
+[data-dr-agent="true"] .gap-\[8px\] { gap: 8px !important; }
+[data-dr-agent="true"] .gap-\[10px\] { gap: 10px !important; }
+[data-dr-agent="true"] .rounded-\[10px\] { border-radius: 10px !important; }
+[data-dr-agent="true"] .rounded-\[12px\] { border-radius: 12px !important; }
+[data-dr-agent="true"] .rounded-\[14px\] { border-radius: 14px !important; }
+[data-dr-agent="true"] .rounded-\[16px\] { border-radius: 16px !important; }
+[data-dr-agent="true"] .rounded-\[inherit\] { border-radius: inherit !important; }
+[data-dr-agent="true"] .rounded-t-\[10px\] { border-top-left-radius: 10px !important; border-top-right-radius: 10px !important; }
+[data-dr-agent="true"] .rounded-b-none { border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+[data-dr-agent="true"] .pl-\[10px\] { padding-left: 10px !important; }
+[data-dr-agent="true"] .pr-\[12px\] { padding-right: 12px !important; }
+[data-dr-agent="true"] .pt-\[4px\] { padding-top: 4px !important; }
+[data-dr-agent="true"] .pb-\[5px\] { padding-bottom: 5px !important; }
+[data-dr-agent="true"] .bg-white\/60 { background-color: rgba(255, 255, 255, 0.6) !important; }
+[data-dr-agent="true"] .backdrop-blur-\[10px\] { backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important; }
+[data-dr-agent="true"] .transition-all { transition-property: all !important; }
+[data-dr-agent="true"] .transition-transform { transition-property: transform !important; }
+[data-dr-agent="true"] .transition-colors { transition-property: color, background-color, border-color !important; }
+[data-dr-agent="true"] .transition-opacity { transition-property: opacity !important; }
+[data-dr-agent="true"] .duration-200 { transition-duration: 200ms !important; }
+[data-dr-agent="true"] .h-\[10px\] { height: 10px !important; }
+[data-dr-agent="true"] .h-\[14px\] { height: 14px !important; }
+[data-dr-agent="true"] .h-\[42px\] { height: 42px !important; }
+[data-dr-agent="true"] .h-\[55\%\] { height: 55% !important; }
+[data-dr-agent="true"] .h-\[88px\] { height: 88px !important; }
+[data-dr-agent="true"] .h-\[104px\] { height: 104px !important; }
+[data-dr-agent="true"] .h-\[120px\] { height: 120px !important; }
+[data-dr-agent="true"] .w-\[10px\] { width: 10px !important; }
+[data-dr-agent="true"] .w-\[14px\] { width: 14px !important; }
+[data-dr-agent="true"] .w-\[40\%\] { width: 40% !important; }
+[data-dr-agent="true"] .w-\[42px\] { width: 42px !important; }
+[data-dr-agent="true"] .w-\[200px\] { width: 200px !important; }
+[data-dr-agent="true"] .w-\[240px\] { width: 240px !important; }
+[data-dr-agent="true"] .w-\[280px\] { width: 280px !important; }
+[data-dr-agent="true"] .z-0 { z-index: 0 !important; }
+[data-dr-agent="true"] .z-10 { z-index: 10 !important; }
+[data-dr-agent="true"] .z-20 { z-index: 20 !important; }
+
+/* Group-* utilities — Tailwind's group-hover/active state — fall back to no-op */
+[data-dr-agent="true"] .group { /* marker only */ }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Button reset — kill portal/browser default borders + outlines on every
+   button inside the dr-agent panel. Buttons style themselves via class.
+   NOTE: don't reset `background` here — it kills gradient buttons. Modules
+   that need transparent bg set it themselves.
+   ───────────────────────────────────────────────────────────────────────── */
+[data-dr-agent="true"] button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.vrx-fab-wrapper {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+[data-dr-agent="true"] button:focus,
+[data-dr-agent="true"] button:focus-visible,
+[data-dr-agent="true"] button:active {
+  outline: none;
+  box-shadow: none;
+}
+/* Restore borders ONLY on buttons that explicitly set one via class */
+[data-dr-agent="true"] .vrx-cn-secondary-blue,
+[data-dr-agent="true"] .vrx-rt-secondary-blue {
+  border: 1px solid var(--tp-blue-500, #4B4AD5) !important;
+}
+[data-dr-agent="true"] .vrx-rt-voice-cta-outline {
+  border: 1px solid transparent !important;
+}
+[data-dr-agent="true"] .tp-dr-agent-tooltip,
+.tp-dr-agent-tooltip,
+.tp-dr-agent-tooltip * {
+  color: #ffffff !important;
+}
+[data-dr-agent="true"] .vrx-mic-chip {
+  border: 1px solid rgba(15,23,42,0.10) !important;
+}
+
+/* Source chip — no border */
+[data-dr-agent="true"] [class*="sourceBtn"],
+[data-dr-agent="true"] [class*="sourceBtn"] *,
+[data-dr-agent="true"] [aria-label="View data sources"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Hide FeedbackRow thumbs everywhere inside the panel — user requested removal */
+[data-dr-agent="true"] [class*="feedbackRow" i],
+[data-dr-agent="true"] [class*="FeedbackRow" i],
+[data-dr-agent="true"] [aria-label="Helpful"],
+[data-dr-agent="true"] [aria-label="Not helpful"],
+[data-dr-agent="true"] [aria-label="Like"],
+[data-dr-agent="true"] [aria-label="Dislike"],
+[data-dr-agent="true"] [aria-label*="thumb" i] {
+  display: none !important;
+}
+
+/* Status pill listening rose dot — Tailwind bg-rose-400 fallback */
+[data-dr-agent="true"] .vrx-rec-dot,
+[data-dr-agent="true"] [class*="statusIconListening"] > span:first-child {
+  background-color: #fb7185 !important;
+}
+
+/* Stronger color overrides — high specificity to beat portal's `body span !important` */
+html [data-dr-agent="true"] .vrx-ai-cta,
+html [data-dr-agent="true"] .vrx-ai-cta span,
+html [data-dr-agent="true"] .vrx-ai-cta div,
+html [data-dr-agent="true"] [class*="ctaEnabled"],
+html [data-dr-agent="true"] [class*="ctaEnabled"] span,
+html [data-dr-agent="true"] [class*="ctaLabel"],
+html [data-dr-agent="true"] [class*="ctaIcon"],
+html [data-dr-agent="true"] [class*="ctaIcon"] svg,
+html [data-dr-agent="true"] [class*="ctaIcon"] path,
+html [data-dr-agent="true"] .vrx-fab-wrapper,
+html [data-dr-agent="true"] .vrx-fab-wrapper span,
+html [data-dr-agent="true"] .vrx-fab-wrapper div,
+html [data-dr-agent="true"] [class*="fabLabel"] {
+  color: #ffffff !important;
+}
+html [data-dr-agent="true"] [class*="ctaIcon"] path[fill] {
+  fill: #ffffff !important;
+}
+.vrx-fab-wrapper,
+.vrx-fab-wrapper span,
+.vrx-fab-wrapper div,
+.vrx-fab-wrapper [class*="fabLabel"] {
+  color: #ffffff !important;
+}

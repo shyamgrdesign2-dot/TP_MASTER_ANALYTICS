@@ -1,0 +1,101 @@
+.printable-content {
+  width: 100%;
+  overflow: hidden;
+
+  &.ant-table {
+    border: 1px solid #d9d9d9;
+  }
+
+  &.ant-table-thead > tr > th {
+    background-color: #fafafa !important;
+    color: #000 !important;
+  }
+
+  &.ant-table-tbody > tr > td {
+    color: #000 !important;
+  }
+
+
+  .pagebreak {
+    page-break-inside: avoid;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-weight: bold;
+    color: #4b4ad5;
+    font-size: 24px;
+  }
+
+  .header p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .patient-plank {
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+
+  .vaccine-table-wrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &.ant-table {
+    page-break-inside: avoid;
+    width: 100%;
+  }
+
+  &.ant-table-thead > tr > th {
+    background-color: #fafafa !important;
+    font-weight: 600;
+    border: 1px solid #d9d9d9;
+    padding: 6px 8px;
+    font-size: 12px;
+    text-align: center;
+    height: 20px !important;
+    line-height: 20px !important;
+  }
+
+  &.ant-table-tbody > tr > td {
+    border: 1px solid #d9d9d9;
+    padding: 6px 8px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px !important;
+  }
+
+  &.ant-table-tbody > tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    height: 20px !important;
+  }
+
+  /* Print-specific overrides */
+  @media print {
+    @page {
+      size: A4;
+      margin: 0;
+      width: 100%;
+    }
+
+    body {
+      font-size: 12pt;
+      color: #000;
+    }
+  }
+}
+
+.print-bill-table {
+  .ant-table-row {
+    height: 75px !important;
+  }
+}

@@ -1,0 +1,34 @@
+.add-page-break {
+  color: #4B4AD5 !important;
+}
+
+.new-btn {
+  padding: 0.1rem 0.48rem;
+  font-size: 10px;
+  color: #fff !important;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(
+    102deg,
+    #a461d8 9.72%,
+    #b85dff 47.18%,
+    #7700d4 100%
+  );
+}
+
+.page-break-tooltip {
+  .ant-tooltip-inner {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+  
+  .ant-tooltip-arrow::before {
+    background-color: #1f2937 !important;
+  }
+  
+  .ant-tooltip-inner div {
+    color: white !important;
+  }
+}

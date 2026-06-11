@@ -1,0 +1,31 @@
+.patient-info-card {
+  padding: 15px 16px;
+  margin-bottom: 13px;
+  border-radius: 12px;
+  &.ant-card .ant-card-body {
+    padding: 0px;
+  }
+  .ai-agent {
+    width: 28px;
+    height: 28px;
+  }
+  .rounded-circle {
+    width: 40px;
+    height: 40px;
+  }
+  .sun-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  .know-more-link {
+    color: #4b4ad5;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.p-12 {
+  padding: 12px;
+}

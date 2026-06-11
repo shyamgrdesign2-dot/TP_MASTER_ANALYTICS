@@ -1,0 +1,502 @@
+// Profile Dropdown
+.prfile-dropdown {
+    .ant-dropdown-menu {
+        padding: 12px 0 4px;
+        border-radius: 16px;
+        .ant-dropdown-menu-item {
+            padding: 10px 12px;
+            margin: 5px 0px;
+            span a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &:first-child {
+                padding: 0;
+                margin-bottom: 10px;
+                cursor: context-menu;
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                .title-common {
+                    color: #999 !important;
+                }
+                &:hover {
+                    background-color: $white;
+                }
+            }
+            // &:last-child {
+            //     padding-bottom: 0;
+            //     span {
+            //         color: $alerText !important;
+            //         font-size: 16px;
+            //         justify-content: flex-start;
+            //     }
+            //     &:hover {
+            //         background-color: $white;
+            //     }
+            // }
+            &.freeTrialMenu {
+                background: linear-gradient(180deg, #F15223 0%, #BE431E 117.41%);
+                cursor: context-menu;
+                span {
+                    color: $white !important;
+                }
+            }
+        }
+        .ant-dropdown-menu-item-divider {
+            background-color: rgba($grayColor, (40%))
+        }
+    }
+}
+
+.prfile-dropdown.logout-only-dropdown {
+    .ant-dropdown-menu {
+        padding: 0; 
+        min-width: 130px;
+        cursor: pointer !important;
+        border-radius: 10px !important;
+    }
+
+    .ant-dropdown-menu-item {
+        margin: 6px 0 0 0;
+        padding: 6px !important;
+        border-radius: 10px;
+        &:hover {
+            background-color: rgba($grayColor, (40%));
+        }
+
+        .ant-dropdown-menu-title-content {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.settings-dropdown {
+    .ant-dropdown-menu {
+        border-radius: 12px;
+        .ant-dropdown-menu-item {
+            padding: 4px 14px;
+            margin: 5px 0;
+            span a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+// Progress bar
+.web-progress-custom {
+    .ant-progress {
+        .ant-progress-outer {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .ant-progress-inner {
+            // background-color: rgba(252, 90, 90, 0.2);
+            // For Round Circle progress bar
+            // .ant-progress-circle-trail {
+            //     stroke: rgba(252, 90, 90, 0.2);
+            // }
+            // .ant-progress-circle-path {
+            //     stroke: $alerText !important;
+            // }
+            // For Vertical progress bar
+            .ant-progress-bg {
+                background-color: $alerText !important;
+            }
+            .ant-progress-text {
+                color: $alerText !important;
+                font-size: 12;
+                font-weight: 600;
+            }
+        }
+        &.profile-progress-setting {
+            .ant-progress-text {
+                color: #FC5A5A !important;
+                text-align: center;
+            }
+            &.profile-progress-setting-yellow {
+                .ant-progress-text {
+                    color: #FF9431 !important;
+                }
+            }
+            &.profile-progress-setting-green {
+                .ant-progress-text {
+                    color: #19BB7A !important;
+                }
+            }
+        }
+        &.profile-website-setting {
+            .ant-progress-text {
+                background-color: #FC5A5A !important;
+                color: $white !important;
+                position: absolute;
+                padding: 3px 5px;
+                left: -5px;
+                top: -20px;
+                border-radius: 6px;
+                width: auto;
+                text-align: center;
+            }
+            &.profile-website-setting-yellow {
+                .ant-progress-text {
+                    background-color: #FF9431 !important;
+                }
+            }
+            &.profile-website-setting-green {
+                .ant-progress-text {
+                    background-color: #19BB7A !important;
+                }
+            }
+        }
+    } 
+}
+
+.web-publish {
+    .ant-progress {
+        .ant-progress-inner {
+            .ant-progress-circle-path {
+                stroke: $theme;
+            }
+            .ant-progress-circle-trail {
+                stroke: rgba(75, 74, 213, 0.2);
+            }
+        }
+    }
+}
+
+// Profile's cards header
+.profile-head-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #F6EFFB;
+    border-radius: 12px;
+    font-size: 20px;
+    color: $themesecondary;
+}
+
+// Doctor Website
+.handle-personal-details {
+    left: 0;
+    top: 0;
+    right: 8px;
+    bottom: 0;
+    z-index: 9;
+    position: absolute;
+    .show-count-textarea {
+        .ant-input-data-count {
+            bottom: -30px;
+        }
+        textarea {
+            font-family: 'roboto';
+        }
+    }
+}
+
+.language-chips {
+    border-color: $theme !important;
+    background-color: $theme !important;
+    div {
+        color: $white !important;
+    }
+}
+
+.days-width {
+    width: 40px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active-days {
+        color: $theme !important;
+        border-color: $theme !important;
+        background-color: rgba(75, 74, 213, 0.05);
+    }
+    &.sunday-color {
+        color: $alerText !important;
+    }
+}
+.ant-picker-now-btn {
+    color: $theme;
+}
+
+// Santosh bhai
+.social {
+    span.ant-input-prefix {
+        width: 36px;
+        border-right: solid #E2E2EA 1px;
+        justify-content: center;
+        align-items: center;
+    }
+    .ant-input-affix-wrapper {
+        padding: 0px;
+        border: solid #E2E2EA 1px;
+        input {
+            padding:0px 10px 0 11px;
+        }
+        input::placeholder{color:#a2a2a8; font-size: 14px; opacity:1; font-weight:400;}
+    }
+}
+.clinic-photo-setting-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    .clinic-photo-setting {
+        overflow: hidden;
+        border-radius: 14px;
+        height: 100%;
+        width: 100%;
+    }
+    .close-clinic-img {
+        position: absolute;
+        font-size: 18px;
+        z-index: 9;
+        right: -6px;
+        top: -6px;
+        cursor: pointer;
+    }
+}
+
+.website-publish-modal {
+    .ant-modal-close {
+        display: none;
+    }
+}
+
+.bdg-primary {
+    color: #19BB7A !important;
+}
+.bdg-danger {
+    color: #FC5A5A !important;
+}
+
+.react-website-wrapper {
+    @media only screen and (max-width: 1200px)  {
+        .website-wrapper {
+            .website-header {
+                padding: 0 !important;
+                ul li a {
+                    font-size: 10px;
+                    padding: 4px;
+                    margin: 0 5px;
+                }
+                .ant-btn {
+                    margin: 0 !important;
+                    padding: 5px 8px;
+                    height: 40px !important;
+                    border-radius: 10px !important;
+                    span {
+                        font-size: 11px;
+                    }
+                }
+                .logo {
+                    min-width: 130px;
+                    img {
+                        height: 22px;
+                        width: 107px;
+                    }
+                }
+            }
+            .website-section {
+                padding: 35px 0;
+                &.website-footer {
+                    padding: 0;
+                    .clinic-box {
+                        border-radius: 25px;
+                    }
+                }
+                .hi {
+                    font-size: 20px;
+                }
+                h1.web-h1, .h1.web-h1 {
+                    font-size: 28px !important;
+                }
+                .education-speciality {
+                    font-size: 17px;
+                }
+                &.website-banner {
+                    h1.web-h1, .h1.web-h1 {
+                        margin-top: 8px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .gmaildiv-wrap {
+                    margin-bottom: 30px !important;
+                }
+                .location-contact {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+                .round-pink {
+                    width: 90.526px;
+                    height: 90.526px;
+                    right: 0;
+                }
+                .doctor-photo {
+                    width: 290px;
+                    height: 313px;
+                    mask-image: url('#{$tp-assets-base}/images/website-images/hero-doctor-mobile2.svg');
+                }
+                .square-yellow {
+                    width: 90.526px;
+                    height: 90.526px;
+                    right: 270px;
+                }
+                .slick-slide {
+                    padding: 0 10px !important;
+                }
+                &.website-clinic {
+                    .slick-list {
+                        // padding: 0 !important;
+                        .clinic-box {
+                            padding: 20px;
+                            .timingshape {
+                                width: 287px;
+                                height: 343px;
+                                background-repeat: no-repeat;
+                                background-image: url('#{$tp-assets-base}/images/website-images/clinic-timing2.svg');
+                            }
+                        }
+                    }   
+                    .clinic-slider {
+                        .title-hypertension {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                &.website-experience {
+                    .ant-col-lg-8 {
+                        flex: 0 0 29.166666666666668%;
+                        max-width: 29.166666666666668%;
+                    }
+                    .ant-col-lg-16 {
+                        flex: 0 0 70.83333333333334%;
+                        max-width: 70.83333333333334%;
+                    }
+                    .slick-arrow {
+                        left: -155px !important;
+                        top: 200px !important;
+                        &.slick-prev {
+                            left: -210px !important;
+                        }
+                    }
+                    .slide-count {
+                        left: 110px;
+                        top: 203px;
+                    }
+                    .bg-icon-common {
+                        min-width: 40px !important;
+                        min-height: 40px !important;
+                        width: 40px !important;
+                        height: 40px !important;
+                    }
+                    .timingshape {
+                        .p-30 {
+                            padding: 20px;
+                        }
+                        height: 300px;
+                    }
+                    .fs-16 {
+                        font-size: 13px !important;
+                        padding: 5px 0;
+                    }
+                }
+                &.website-education {
+                    .clinic-box {
+                        padding: 0 10px 50px;
+                        .py-lg-5 {
+                            padding-top: 2rem !important;
+                            padding-bottom: 1.5rem !important;
+                        }
+                        .timingshape {
+                            width: 100% !important;
+                            height: 270px;
+                            .p-30 {
+                                padding: 20px;
+                            }
+                            .titleprint {
+                                margin: 10px 0 5px;
+                                font-size: 15px;
+                                line-height: 1.4;
+                            }
+                        }
+                        .slide-count {
+                            top: 505px;
+                            left: 60px;
+                        }
+                        .slick-arrow {
+                            right: 90px !important;
+                            top: 330px;
+                            &.slick-prev {
+                                right: 156px !important;
+                            }
+                        }
+                    }
+                }
+                &.website-membership {
+                    .membership-slide {
+                        width: 70px;
+                        height: 70px;
+                        min-width: 70px;
+                        min-height: 70px;
+                    }
+                    .slick-slide {
+                        .title-common {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &.profile-socialmedia {
+                    .bg-icon-common {
+                        &.bg-icon-xl {
+                            min-width: 95px !important;
+                            min-height: 95px !important;
+                            width: 95px !important;
+                            height: 95px !important;
+                            border-radius: 30px;
+                            img {
+                                height: 60px;
+                            }
+                        }
+                        &.bg-icon-sm2 {
+                            min-width: 36px;
+                            min-height: 36px;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 8px;
+                        }
+                    }
+                    .ant-btn {
+                        &.mb-lg-5 {
+                            margin-bottom: 20px !important;
+                        }
+                    }
+                    .mt-lg-5 {
+                        margin-top: 20px !important;
+                        border-radius: 10px;
+                    }
+                    .fs-18 {
+                        font-size: 15px !important;
+                    }
+                    .emailres-doc {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

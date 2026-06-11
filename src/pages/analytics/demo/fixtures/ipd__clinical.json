@@ -1,0 +1,1436 @@
+{
+  "kpis": [
+    {
+      "key": "assessmentCoverage",
+      "label": "Assessment coverage",
+      "value": 21.8,
+      "unit": "%",
+      "sub": "19 of 87 admissions",
+      "description": "Share of admissions in the period with an admission assessment, the once-per-admission intake artifact."
+    },
+    {
+      "key": "progressPerDay",
+      "label": "Progress notes / day",
+      "value": 0,
+      "prefix": "~",
+      "description": "Nurse progress notes recorded in the period per patient-day in house. Nurses chart these several times on every stay day."
+    },
+    {
+      "key": "consultantPerDay",
+      "label": "Consultant notes / day",
+      "value": 0,
+      "prefix": "~",
+      "description": "Doctor consultant notes recorded in the period per patient-day in house."
+    },
+    {
+      "key": "noteInterval",
+      "label": "Nurse note interval",
+      "value": 0,
+      "unit": "hrs",
+      "prefix": "~",
+      "sub": "3 gaps measured",
+      "description": "Average hours between consecutive nurse progress notes within the same admission, over every gap in the period. The real pulse of ward documentation, an interval hides in an average per-day count."
+    },
+    {
+      "key": "otNoteCoverage",
+      "label": "OT note coverage",
+      "value": 7.8,
+      "unit": "%",
+      "sub": "7 of 90 OT events",
+      "description": "Share of operation-theatre events in the period with the per-operation OT note recorded."
+    },
+    {
+      "key": "labResults",
+      "label": "Lab results",
+      "value": 27,
+      "description": "Lab values plus radiology reports recorded in the period."
+    },
+    {
+      "key": "crossReferrals",
+      "label": "Cross referrals",
+      "value": "-",
+      "description": "Cross referrals (one doctor requests, the receiving doctor answers with a consultant note) are captured only in the pm-ipd microservice; medical-records file uploads live in pm-patient-docs. Neither feed reaches this legacy replica yet."
+    }
+  ],
+  "docFunnel": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Stage"
+      },
+      {
+        "key": "count",
+        "label": "Admissions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Admissions",
+        "count": 87
+      },
+      {
+        "k": "With admission assessment",
+        "count": 19
+      },
+      {
+        "k": "With progress notes",
+        "count": 4
+      },
+      {
+        "k": "With consultant notes",
+        "count": 9
+      },
+      {
+        "k": "With discharge summary",
+        "count": 40
+      }
+    ]
+  },
+  "notesByType": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Documentation type"
+      },
+      {
+        "key": "count",
+        "label": "Entries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Admission assessments",
+        "count": 20
+      },
+      {
+        "k": "Progress notes (nurse)",
+        "count": 7
+      },
+      {
+        "k": "Consultant notes (doctor)",
+        "count": 16
+      },
+      {
+        "k": "Vitals entries",
+        "count": 24
+      },
+      {
+        "k": "Medication lines",
+        "count": 34
+      },
+      {
+        "k": "Investigations",
+        "count": 8
+      },
+      {
+        "k": "Lab values",
+        "count": 15
+      },
+      {
+        "k": "Radiology reports",
+        "count": 12
+      }
+    ]
+  },
+  "notesByStayDay": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Stay day"
+      },
+      {
+        "key": "count",
+        "label": "Progress + consultant notes"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Day 1",
+        "count": 12
+      },
+      {
+        "k": "Day 2",
+        "count": 0
+      },
+      {
+        "k": "Day 3",
+        "count": 1
+      },
+      {
+        "k": "Day 4",
+        "count": 0
+      },
+      {
+        "k": "Day 5",
+        "count": 1
+      },
+      {
+        "k": "Day 6",
+        "count": 0
+      },
+      {
+        "k": "Day 7",
+        "count": 0
+      },
+      {
+        "k": "Day 8+",
+        "count": 9
+      }
+    ]
+  },
+  "noteIntervalByDept": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Department"
+      },
+      {
+        "key": "progress",
+        "label": "Nurse note gap (hrs)"
+      },
+      {
+        "key": "consultant",
+        "label": "Doctor note gap (hrs)"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Oncology",
+        "progress": 0,
+        "consultant": 62
+      }
+    ],
+    "note": "Average hours between consecutive notes within one admission, by the admitting department. Departments without a measurable gap are omitted."
+  },
+  "topAdmitDx": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Admission diagnosis"
+      },
+      {
+        "key": "count",
+        "label": "Entries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Follicular lymphoma grade I- unspecified site",
+        "count": 23
+      },
+      {
+        "k": "Follicular lymphoma grade I",
+        "count": 2
+      },
+      {
+        "k": "Follicular lymphoma grade I- lymph nodes of head- face- and neck",
+        "count": 2
+      },
+      {
+        "k": "Ataxic gait",
+        "count": 1
+      },
+      {
+        "k": "Paralytic gait",
+        "count": 1
+      },
+      {
+        "k": "Difficulty in walking- not elsewhere classified",
+        "count": 1
+      },
+      {
+        "k": "Abnormal findings on microbiological examination of urine",
+        "count": 1
+      },
+      {
+        "k": "Follicular lymphoma grade II- intrapelvic lymph nodes",
+        "count": 1
+      },
+      {
+        "k": "Diagnosis For Admission",
+        "count": 1
+      },
+      {
+        "k": "Malignant neoplasm of acoustic nerve\t",
+        "count": 1
+      }
+    ]
+  },
+  "topDischargeDx": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Discharge diagnosis"
+      },
+      {
+        "key": "count",
+        "label": "Entries"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Follicular lymphoma grade I- intrathoracic lymph nodes",
+        "count": 21
+      },
+      {
+        "k": "Follicular lymphoma grade I- lymph nodes of head- face- and neck",
+        "count": 6
+      },
+      {
+        "k": "Ataxic gait",
+        "count": 1
+      },
+      {
+        "k": "Paralytic gait",
+        "count": 1
+      },
+      {
+        "k": "Follicular lymphoma grade II",
+        "count": 1
+      },
+      {
+        "k": "Follicular lymphoma grade I- unspecified site",
+        "count": 1
+      },
+      {
+        "k": "Malignant neoplasm of acoustic nerve\t2",
+        "count": 1
+      },
+      {
+        "k": "Follicular lymphoma grade I- spleen",
+        "count": 1
+      }
+    ]
+  },
+  "otByDoctor": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Operating doctor"
+      },
+      {
+        "key": "count",
+        "label": "Procedures"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Samir Vankhade",
+        "count": 76
+      },
+      {
+        "k": "Avinash Sharma",
+        "count": 7
+      },
+      {
+        "k": "Anuj",
+        "count": 3
+      },
+      {
+        "k": "Neel Patel ",
+        "count": 1
+      },
+      {
+        "k": "jayesh(neu)",
+        "count": 1
+      },
+      {
+        "k": "naresh",
+        "count": 1
+      },
+      {
+        "k": "avnish",
+        "count": 1
+      }
+    ]
+  },
+  "anaesthesiaMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Anaesthesia"
+      },
+      {
+        "key": "count",
+        "label": "Procedures"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Not recorded",
+        "count": 17
+      },
+      {
+        "k": "Local anesthesia",
+        "count": 10
+      },
+      {
+        "k": "Regional anesthesia",
+        "count": 10
+      },
+      {
+        "k": "Sedation",
+        "count": 2
+      }
+    ]
+  },
+  "summaryCompletion": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Discharge summary"
+      },
+      {
+        "key": "count",
+        "label": "Discharges"
+      }
+    ],
+    "rows": [
+      {
+        "k": "With summary",
+        "count": 30
+      },
+      {
+        "k": "Without summary",
+        "count": 23
+      }
+    ]
+  },
+  "otRegister": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "time",
+        "label": "Time"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "procedure",
+        "label": "Procedure"
+      },
+      {
+        "key": "operatingDoctor",
+        "label": "Operating doctor"
+      },
+      {
+        "key": "anaesthetist",
+        "label": "Anaesthetist"
+      },
+      {
+        "key": "anaesthesia",
+        "label": "Anaesthesia"
+      },
+      {
+        "key": "duration",
+        "label": "Duration"
+      },
+      {
+        "key": "status",
+        "label": "Status"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2026-04-21",
+        "time": "19:00:00",
+        "patient": "Demo Patient 395",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2024-04-16",
+        "time": "12:00:00",
+        "patient": "Demo Patient 430",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Anurag(gastro)",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2024-04-15",
+        "time": "17:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Rohan Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Cancelled"
+      },
+      {
+        "date": "2024-04-11",
+        "time": "12:00:00",
+        "patient": "Demo Patient 392",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2024-04-10",
+        "time": "12:55:00",
+        "patient": "Demo Patient 411",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2024-04-10",
+        "time": "12:35:00",
+        "patient": "Demo Patient 431",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-11-08",
+        "time": "12:30:00",
+        "patient": "Demo Patient 395",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-11-01",
+        "time": "12:30:00",
+        "patient": "Demo Patient 411",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-10-04",
+        "time": "12:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Asynchronous one-way",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Anuj",
+        "anaesthesia": "Local anesthesia",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-10-04",
+        "time": "12:00:00",
+        "patient": "Demo Patient 408",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Anuj",
+        "anaesthesia": "Not recorded",
+        "duration": "120 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-29",
+        "time": "12:00:00",
+        "patient": "Demo Patient 432",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-29",
+        "time": "12:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-28",
+        "time": "18:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Anuj",
+        "anaesthetist": "Ami",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-28",
+        "time": "15:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "avnish",
+        "anaesthetist": "Ami",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-28",
+        "time": "12:00:00",
+        "patient": "Demo Patient 411",
+        "procedure": "Not linked",
+        "operatingDoctor": "Anuj",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-28",
+        "time": "12:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Not linked",
+        "operatingDoctor": "Anuj",
+        "anaesthetist": "Anuj",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-28",
+        "time": "12:00:00",
+        "patient": "Demo Patient 432",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-09-21",
+        "time": "12:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Asynchronous request/response",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Ami",
+        "anaesthesia": "Regional anesthesia",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-08-15",
+        "time": "12:00:00",
+        "patient": "Demo Patient 86",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Anuj",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-08-13",
+        "time": "23:55:00",
+        "patient": "Demo Patient 112",
+        "procedure": "Asynchronous request/response",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Regional anesthesia",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "kartik",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Asynchronous request/response",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "kartik",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "kartik",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "kartik",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-30",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "kartik",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-17",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "naresh",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-17",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Asynchronous one-way",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Regional anesthesia",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-09",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-09",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-09",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-09",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-09",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "Vikas",
+        "anaesthesia": "Not recorded",
+        "duration": "120 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-08",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-07",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-07",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-07",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-06-07",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-26",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-25",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Asynchronous request/response",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "-",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-19",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-19",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-19",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-19",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-19",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 398",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 428",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-18",
+        "time": "12:00:00",
+        "patient": "Demo Patient 433",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-15",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-15",
+        "time": "12:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "jayesh(neu)",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-05-02",
+        "time": "12:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "240 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2023-04-26",
+        "time": "13:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Not linked",
+        "operatingDoctor": "jayesh(neu)",
+        "anaesthetist": "Neel Patel ",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Completed"
+      },
+      {
+        "date": "2023-03-11",
+        "time": "13:00:00",
+        "patient": "Demo Patient 426",
+        "procedure": "Asynchronous one-way",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Local anesthesia",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2022-11-17",
+        "time": "13:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "Neel Patel ",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2022-11-09",
+        "time": "14:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2022-11-08",
+        "time": "13:00:00",
+        "patient": "Demo Patient 420",
+        "procedure": "Not linked",
+        "operatingDoctor": "Avinash Sharma",
+        "anaesthetist": "Avinash Sharma",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2022-04-12",
+        "time": "14:00:00",
+        "patient": "Demo Patient 399",
+        "procedure": "Not linked",
+        "operatingDoctor": "Neel Patel ",
+        "anaesthetist": "Neel Patel ",
+        "anaesthesia": "Not recorded",
+        "duration": "60 min",
+        "status": "Scheduled"
+      },
+      {
+        "date": "2022-04-11",
+        "time": "12:00:00",
+        "patient": "Demo Patient 85",
+        "procedure": "Not linked",
+        "operatingDoctor": "Samir Vankhade",
+        "anaesthetist": "Samir Vankhade",
+        "anaesthesia": "Not recorded",
+        "duration": "30 min",
+        "status": "Scheduled"
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 90,
+    "note": "Source: legacy clinic replica. Hospitals on the modern pm-ipd microservice need that feed wired in before their data appears here. Cross referrals and medical-records uploads live in the pm-ipd and pm-patient-docs microservices, so they do not appear in this replica."
+  }
+}

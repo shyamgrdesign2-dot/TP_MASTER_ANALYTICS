@@ -1,0 +1,14 @@
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0; /* Light gray for unfilled background */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-bar {
+    transition: width 0.1s linear; /* Smooth linear transition for progress */
+    border-radius: 10px;
+    height: 100%;
+  }
+  

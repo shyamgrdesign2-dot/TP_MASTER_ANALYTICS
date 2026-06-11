@@ -1,0 +1,32 @@
+.ancPrintPreviewTcell {
+  border-bottom: 1px solid #ddd;
+  padding: 8px !important;
+  vertical-align: middle;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  background-color: #fff;
+
+  @media only screen and (min-width: 1200px) {
+    padding: 6px 20px !important;
+  }
+}
+
+.ancImmunisationWarning {
+  position: relative;
+  color: #ed8a00 !important;
+  background-color: #fef4e6;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.warningTip {
+  background-color: #fef4e6;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 132px;
+  top: -10px;
+  rotate: 45deg;
+}

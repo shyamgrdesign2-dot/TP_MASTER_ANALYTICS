@@ -1,0 +1,65 @@
+.richTextEditor {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  
+  [data-slate-editor] {
+    min-height: auto;
+    max-height: 300px;
+    outline: none;
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+    
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #F3F4F6;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D1D5DB;
+      border-radius: 3px;
+      
+      &:hover {
+        background: #9CA3AF;
+      }
+    }
+    
+    p {
+      margin: 0 0 8px 0;
+      line-height: 1.6;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    ul, ol {
+      margin: 0 0 8px 0;
+      padding-left: 28px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      li {
+        line-height: 1.6;
+        margin-bottom: 6px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    strong {
+      font-weight: 600;
+    }
+  }
+}

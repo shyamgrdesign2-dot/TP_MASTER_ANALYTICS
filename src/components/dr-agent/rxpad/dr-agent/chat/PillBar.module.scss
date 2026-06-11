@@ -1,0 +1,67 @@
+/* Hide scrollbar cross-browser */
+.pillScroll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 0 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* AI gradient pill — default and hovered states */
+.pill {
+  display: flex;
+  height: 26px;
+  flex-shrink: 0;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid rgba(103, 58, 172, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(213, 101, 234, 0.08) 0%,
+    rgba(103, 58, 172, 0.08) 50%,
+    rgba(26, 25, 148, 0.08) 100%
+  );
+  transition: background 150ms ease;
+
+  &[data-hovered="true"] {
+    background: linear-gradient(
+      135deg,
+      rgba(213, 101, 234, 0.14) 0%,
+      rgba(103, 58, 172, 0.14) 50%,
+      rgba(26, 25, 148, 0.14) 100%
+    );
+  }
+}
+
+.pillDisabled {
+  opacity: 0.5;
+}
+
+.pillForce {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* AI gradient text on pill labels */
+.pillText {
+  background: linear-gradient(91deg, #d565ea 3.04%, #673aac 66.74%, #1a1994 130.45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+}

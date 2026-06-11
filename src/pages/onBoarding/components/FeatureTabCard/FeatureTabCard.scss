@@ -1,0 +1,333 @@
+.feature-card-container {
+  padding: 2rem;
+  width: 95%;
+  margin-left: 2.5rem;
+  margin-bottom: 6rem !important;
+  height: 100vh;
+
+
+  .main-heading {
+    text-align: center;
+    // color: #6941C6;
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #4443C5 7.86%, #A41AF0 93.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    .emoji {
+      font-size: 2.5rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.feature-tab-card {
+  position: relative;
+  // background: linear-gradient(120deg, #FEF6E1 0%, #FEF0C7 100%);
+  border-radius: 3rem;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  opacity: 1;
+  height: 80vh;
+
+  &__tabs {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: white;
+    padding: 0.5rem;
+    width: 60%;
+    justify-content: center;
+    border-radius: 0 0 42px 42px;
+    border: 1px solid #F2F4F7;
+    position: relative;
+    z-index: 10;
+
+    // Main container shadow
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  }
+
+  &__tab {
+    padding: 0.75rem 2rem;
+    border: none;
+    background: transparent;
+    border-radius: 6.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #344054;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &.active {
+      background: linear-gradient(92deg, #27276F -7.09%, #5C5BD6 46.98%, #27276F 107.96%);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(89, 37, 220, 0.15);
+    }
+
+    &:not(.active):hover {
+      background: #F9FAFB;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // margin-top: 2rem;
+  }
+
+  &__text {
+    // padding-top: 2rem;
+    padding-left: 2.5rem;
+    color: #fff;
+  }
+
+  &__heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    .ai-feature-heading {
+      font-family: "Playfair Display" !important;
+      background: linear-gradient(90deg, #4443C5 4.86%, #A41AF0 29.74%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__points {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #E3E3FF;
+      font-family: Poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 3.94963rem;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background: #B08D57;
+        color: white;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .curved-shadow {
+    position: absolute;
+    top: 0px;
+    width: 10px;
+    height: 14px;
+    background: linear-gradient(164deg, rgb(106 106 106) 0%, rgb(209 209 209 / 3%) 100%);
+    z-index: -7 !important;
+
+    &.left {
+      left: -11px !important;
+      border-radius: 60% 0 0 0;
+    }
+
+    &.right {
+      right: -11px !important;
+      border-radius: 0 60% 0 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card-container {
+    padding: 0 !important;
+    width: 100vw !important;
+    margin-left: 0 !important;
+    margin-bottom: 6rem !important;
+    height: auto !important;
+
+    .main-heading {
+      font-size: 1.75rem;
+      margin: 3rem 0 2rem 0 !important;
+
+      .emoji {
+        width: 2rem !important;
+        height: 2rem !important;
+      }
+    }
+  }
+
+  .feature-tab-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem !important;
+    height: auto !important;
+    padding: 3rem 1rem !important;
+
+    // align-items: center;
+    // justify-content: center;
+    .feature-tab-card__tab {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.78rem;
+    }
+
+    .feature-tab-card__image img {
+      width: 100% !important;
+      height: 16rem !important;
+    }
+
+    .feature-tab-card__tabs {
+      top: -3.5rem;
+      width: 100% !important;
+      border-radius: 0 0 23px 23px;
+      padding: 0.7rem;
+    }
+
+    .feature-tab-card__text {
+      padding-left: 0rem !important;
+      margin-bottom: 11rem;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      color: #fff;
+    }
+
+    &__heading {
+      font-size: 1.75rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    &__points{
+      margin-bottom: 4rem !important;
+    }
+
+    &__points li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.25rem !important;
+      // gap: 1rem;
+      font-size: 1rem;
+      color: #E3E3FF;
+      font-family: Poppins;
+      font-size: 1rem !important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.94963rem;
+
+      .icon {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1180px) {
+  .feature-card-container {
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 6rem !important;
+    margin-left: 0 !important;
+    height: 100vh;
+
+    .main-heading {
+
+      .emoji {
+
+      }
+    }
+  }
+
+  .feature-tab-card {
+    position: relative !important;
+    border-radius: 3rem;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    // opacity: 1;
+    height: 37rem !important;
+
+    .feature-tab-card__tab {
+
+    }
+
+    .feature-tab-card__image {
+      width: 50% !important;
+
+      img {
+        position: absolute !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 92% !important;
+      }
+    }
+
+    .feature-tab-card__tabs {
+      width: 75% !important;
+    }
+
+    .feature-tab-card__text li{
+      // padding-left: 1rem;
+      line-height: 2rem !important;
+    }
+
+    &__content {
+      gap: 0 !important;
+      color: #fff;
+    }
+
+    &__heading {
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    &__points{
+
+    }
+
+    &__points li {
+      font-size: 1.25rem;
+
+      .icon {
+
+      }
+    }
+  }
+}

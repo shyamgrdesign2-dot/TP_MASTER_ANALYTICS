@@ -1,0 +1,158 @@
+.patient-list-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .patient-content {
+    width: 100%;
+
+    .patient-avatar-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+
+      .patient-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        flex-shrink: 0;
+        overflow: hidden;
+        color: #A461D8 !important;
+      }
+
+      .patient-info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .patient-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          width: 100%;
+
+          .patient-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #4b4ad5 !important;
+            cursor: pointer;
+            flex: 1;
+            min-width: 0;
+          }
+
+          .kebab-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.05);
+              border-radius: 4px;
+            }
+
+            &:active {
+              transform: rotate(90deg) scale(0.9);
+            }
+
+            .kebab-icon {
+              width: 16px;
+              height: 16px;
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .patient-details {
+          width: 100%;
+
+          .details-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #3d4854 !important;
+            margin: 0 0 4px 0;
+            word-break: break-word;
+
+            .separator {
+              color: #A2A2A8 !important;
+            }
+          }
+
+          .last-visit,
+          .patient-category {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 16px;
+            color: #6b7280;
+            margin: 2px 0;
+          }
+
+          .last-visit {
+            color: #3d4854 !important;
+          }
+
+          .patient-category {
+            color: #7c3aed !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 375px) {
+  .patient-list-item {
+    padding: 14px;
+
+    .patient-content .patient-avatar-section {
+      gap: 10px;
+
+      .patient-avatar {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+      }
+
+      .patient-info {
+        .patient-header .patient-name {
+          font-size: 13px;
+        }
+
+        .patient-details .details-text {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

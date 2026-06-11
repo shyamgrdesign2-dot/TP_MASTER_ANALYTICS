@@ -1,0 +1,49 @@
+.date-banner {
+  background: linear-gradient(90deg, rgba(164, 97, 216, 0.04) 0%, rgba(164, 97, 216, 0.20) 50%, rgba(164, 97, 216, 0.04) 100%);
+  padding: 10px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  position: relative;
+  z-index: 5;
+
+  &:active {
+    background: linear-gradient(90deg, rgba(164, 97, 216, 0.06) 0%, rgba(164, 97, 216, 0.25) 50%, rgba(164, 97, 216, 0.06) 100%);
+  }
+
+  .date-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .calendar-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .date-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: #A461D8 !important;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.25px;
+      line-height: 16.80px;
+    }
+
+    .dropdown-icon {
+      width: 16px;
+      height: 16px;
+      margin-left: 2px;
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

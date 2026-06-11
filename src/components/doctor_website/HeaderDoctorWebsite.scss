@@ -1,0 +1,57 @@
+.link-box {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .link-text {
+    height: 3.75rem !important;
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
+    background: rgba(75, 74, 213, 0.10);
+    box-shadow: 0px 0px 23.964px 0px rgba(162, 56, 255, 0.05);
+    display: flex;
+    padding: 1.125rem 0.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+  }
+
+  .action-buttons-success {
+    display: flex;
+    height: 3.75rem !important;
+    padding: 0 1rem;
+    align-items: center;
+    border-radius: 0rem 0.75rem 0.75rem 0rem;
+    background: rgba(75, 74, 213, 0.20);
+    box-shadow: 0px 0px 23.964px 0px rgba(162, 56, 255, 0.05);
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: rgba(75, 74, 213, 0.1);
+        border-radius: 0.25rem;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

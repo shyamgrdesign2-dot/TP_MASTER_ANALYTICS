@@ -1,0 +1,501 @@
+{
+  "kpis": [
+    {
+      "key": "billed",
+      "label": "Total billed",
+      "value": 154145,
+      "unit": "₹",
+      "description": "Gross invoice value raised in this period: billed whether paid or not.",
+      "spark": [
+        6300,
+        2550,
+        2800,
+        38805,
+        21964,
+        200,
+        1632,
+        79894
+      ]
+    },
+    {
+      "key": "collected",
+      "label": "Total collected",
+      "value": 99011,
+      "unit": "₹",
+      "description": "Cash actually received against those invoices in this period.",
+      "spark": [
+        2400,
+        2000,
+        2000,
+        37725,
+        19169,
+        200,
+        -7603,
+        43120
+      ]
+    },
+    {
+      "key": "outstanding",
+      "label": "Total due",
+      "value": 55135,
+      "unit": "₹",
+      "description": "Balance still owed by patients (billed minus collected).",
+      "spark": [
+        3900,
+        550,
+        800,
+        1080,
+        2795,
+        0,
+        9236,
+        36774
+      ]
+    },
+    {
+      "key": "rate",
+      "label": "Collection rate",
+      "value": 64.2,
+      "unit": "%",
+      "description": "Collected as a share of billed: how much of what you billed you actually got.",
+      "spark": [
+        38.1,
+        78.4,
+        71.4,
+        97.2,
+        87.3,
+        100,
+        -465.9,
+        54
+      ]
+    },
+    {
+      "key": "avgBill",
+      "label": "Avg bill value",
+      "value": 1772,
+      "unit": "₹",
+      "description": "Total billed ÷ number of invoices.",
+      "spark": [
+        1575,
+        283,
+        400,
+        2283,
+        998,
+        200,
+        96,
+        7989
+      ]
+    },
+    {
+      "key": "invoices",
+      "label": "Invoices",
+      "value": 87,
+      "description": "Number of non-cancelled invoices raised in this period.",
+      "spark": [
+        4,
+        9,
+        7,
+        17,
+        22,
+        1,
+        17,
+        10
+      ]
+    },
+    {
+      "key": "topMode",
+      "label": "Top payment mode",
+      "value": "Mobile Payments",
+      "description": "The payment method that collected the most money in this period."
+    },
+    {
+      "key": "refund",
+      "label": "Refunds",
+      "value": 22050,
+      "unit": "₹",
+      "description": "Total amount refunded back to patients in this period."
+    },
+    {
+      "key": "advances",
+      "label": "Advances held",
+      "value": 22087,
+      "unit": "₹",
+      "description": "Patient money received ahead of billing (credit balance)."
+    }
+  ],
+  "streamMix": {
+    "columns": [
+      {
+        "key": "stream",
+        "label": "Stream"
+      },
+      {
+        "key": "revenue",
+        "label": "Revenue"
+      }
+    ],
+    "rows": [
+      {
+        "stream": "IPD",
+        "revenue": 154145
+      }
+    ]
+  },
+  "byDoctor": {
+    "columns": [
+      {
+        "key": "doctor",
+        "label": "Doctor"
+      },
+      {
+        "key": "revenue",
+        "label": "Revenue"
+      }
+    ],
+    "rows": [
+      {
+        "doctor": "Samir Vankhade",
+        "revenue": 145751
+      },
+      {
+        "doctor": "Rushabh shah",
+        "revenue": 7294
+      },
+      {
+        "doctor": "Reception 1 ",
+        "revenue": 1100
+      }
+    ]
+  },
+  "duesAging": {
+    "columns": [
+      {
+        "key": "band",
+        "label": "Age"
+      },
+      {
+        "key": "dues",
+        "label": "Outstanding"
+      }
+    ],
+    "rows": [
+      {
+        "band": "90+ days",
+        "dues": 55135
+      }
+    ]
+  },
+  "patientDues": {
+    "columns": [
+      {
+        "key": "patientName",
+        "label": "Patient"
+      },
+      {
+        "key": "patientUHID",
+        "label": "UHID"
+      },
+      {
+        "key": "mobile",
+        "label": "Mobile"
+      },
+      {
+        "key": "dues",
+        "label": "Outstanding",
+        "type": "money"
+      }
+    ],
+    "rows": [
+      {
+        "patientName": "Demo Patient 101",
+        "patientUHID": "DEMO-0455",
+        "mobile": "98XXXXXX04",
+        "dues": 34652
+      },
+      {
+        "patientName": "Demo Patient 6",
+        "patientUHID": "DEMO-0007",
+        "mobile": "98XXXXXX06",
+        "dues": 3700
+      },
+      {
+        "patientName": "Demo Patient 77",
+        "patientUHID": "DEMO-0097",
+        "mobile": "98XXXXXX51",
+        "dues": 1375
+      },
+      {
+        "patientName": "Demo Patient 10",
+        "patientUHID": "DEMO-0011",
+        "mobile": "98XXXXXX06",
+        "dues": 700
+      },
+      {
+        "patientName": "Demo Patient 77",
+        "patientUHID": "DEMO-0456",
+        "mobile": "98XXXXXX51",
+        "dues": 400
+      },
+      {
+        "patientName": "Demo Patient 77",
+        "patientUHID": "DEMO-0457",
+        "mobile": "98XXXXXX51",
+        "dues": 400
+      },
+      {
+        "patientName": "Demo Patient 42",
+        "patientUHID": "DEMO-0046",
+        "mobile": "98XXXXXX23",
+        "dues": 400
+      },
+      {
+        "patientName": "Demo Patient 85",
+        "patientUHID": "DEMO-0092",
+        "mobile": "98XXXXXX47",
+        "dues": 200
+      },
+      {
+        "patientName": "Demo Patient 3",
+        "patientUHID": "DEMO-0003",
+        "mobile": "98XXXXXX03",
+        "dues": 200
+      }
+    ]
+  },
+  "collectionTrend": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "collection",
+        "label": "Collection"
+      },
+      {
+        "key": "refund",
+        "label": "Refund"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2022-02",
+        "collection": 2400,
+        "refund": 2000
+      },
+      {
+        "date": "2022-12",
+        "collection": 2000,
+        "refund": 0
+      },
+      {
+        "date": "2023-03",
+        "collection": 2000,
+        "refund": 0
+      },
+      {
+        "date": "2023-05",
+        "collection": 37725,
+        "refund": 0
+      },
+      {
+        "date": "2023-06",
+        "collection": 19169,
+        "refund": 8900
+      },
+      {
+        "date": "2023-07",
+        "collection": 200,
+        "refund": 0
+      },
+      {
+        "date": "2023-09",
+        "collection": -7603,
+        "refund": 2000
+      },
+      {
+        "date": "2024-04",
+        "collection": 43120,
+        "refund": 6800
+      }
+    ]
+  },
+  "revenueTrend": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "revenue",
+        "label": "Revenue"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2022-02",
+        "revenue": 6300
+      },
+      {
+        "date": "2022-12",
+        "revenue": 2550
+      },
+      {
+        "date": "2023-03",
+        "revenue": 2800
+      },
+      {
+        "date": "2023-05",
+        "revenue": 38805
+      },
+      {
+        "date": "2023-06",
+        "revenue": 21964
+      },
+      {
+        "date": "2023-07",
+        "revenue": 200
+      },
+      {
+        "date": "2023-09",
+        "revenue": 1632
+      },
+      {
+        "date": "2024-04",
+        "revenue": 79894
+      }
+    ]
+  },
+  "paymentModeMix": {
+    "columns": [
+      {
+        "key": "payment_mode",
+        "label": "Payment mode"
+      },
+      {
+        "key": "amount",
+        "label": "Amount"
+      }
+    ],
+    "rows": [
+      {
+        "payment_mode": "Mobile Payments",
+        "amount": 63278
+      },
+      {
+        "payment_mode": "Bank Credit Cards",
+        "amount": 50221
+      },
+      {
+        "payment_mode": "Unspecified",
+        "amount": 37707
+      },
+      {
+        "payment_mode": "Online Bank Transfers",
+        "amount": 2940
+      }
+    ]
+  },
+  "summary": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "invoices",
+        "label": "Invoices",
+        "type": "number"
+      },
+      {
+        "key": "billed",
+        "label": "Billed",
+        "type": "money"
+      },
+      {
+        "key": "collected",
+        "label": "Collected",
+        "type": "money"
+      },
+      {
+        "key": "outstanding",
+        "label": "Outstanding",
+        "type": "money"
+      },
+      {
+        "key": "refund",
+        "label": "Refund",
+        "type": "money"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2024-04",
+        "invoices": 10,
+        "billed": 79894,
+        "collected": 43120,
+        "outstanding": 36774,
+        "refund": 6800
+      },
+      {
+        "date": "2023-09",
+        "invoices": 17,
+        "billed": 1632,
+        "collected": -7603,
+        "outstanding": 9236,
+        "refund": 2000
+      },
+      {
+        "date": "2023-07",
+        "invoices": 1,
+        "billed": 200,
+        "collected": 200,
+        "outstanding": 0,
+        "refund": 0
+      },
+      {
+        "date": "2023-06",
+        "invoices": 22,
+        "billed": 21964,
+        "collected": 19169,
+        "outstanding": 2795,
+        "refund": 8900
+      },
+      {
+        "date": "2023-05",
+        "invoices": 17,
+        "billed": 38805,
+        "collected": 37725,
+        "outstanding": 1080,
+        "refund": 0
+      },
+      {
+        "date": "2023-03",
+        "invoices": 7,
+        "billed": 2800,
+        "collected": 2000,
+        "outstanding": 800,
+        "refund": 0
+      },
+      {
+        "date": "2022-12",
+        "invoices": 9,
+        "billed": 2550,
+        "collected": 2000,
+        "outstanding": 550,
+        "refund": 0
+      },
+      {
+        "date": "2022-02",
+        "invoices": 4,
+        "billed": 6300,
+        "collected": 2400,
+        "outstanding": 3900,
+        "refund": 2000
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 8
+  }
+}

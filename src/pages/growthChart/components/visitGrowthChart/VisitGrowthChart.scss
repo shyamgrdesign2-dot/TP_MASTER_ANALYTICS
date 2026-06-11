@@ -1,0 +1,46 @@
+.visitGrowthContainer {
+  padding: 20px;
+
+  .rowContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    .previousText {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .updatedText {
+      color: #a2a2a8 !important;
+    }
+  }
+
+  .detailContainer {
+    border-radius: var(--radius-xl, 12px);
+    border: 1px solid var(--Stroke-Grey, #eaecf0);
+    padding: 10px 20px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    .measurementItem {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+
+      .keyStyle {
+        font-weight: 600;
+      }
+    }
+
+    .dottedLineStyle {
+      border-left: 2px dotted #eaecf0;
+    }
+  }
+}

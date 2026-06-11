@@ -1,0 +1,124 @@
+.followup-rich-text-editor {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  .followup-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    .followup-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #14B8A6;
+      flex-shrink: 0;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .followup-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151 !important;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+  }
+
+  .editor-container {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #FFFFFF;
+  }
+
+  .shimmer-container {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+
+  .shimmer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .richTextEditor {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    transition: none;
+    overflow: hidden;
+
+    [data-slate-editor] {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #374151;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+      &:focus {
+        outline: none;
+      }
+
+      p {
+        color: #374151;
+      }
+
+      ul, ol {
+        li {
+          color: #374151;
+        }
+      }
+
+      strong {
+        font-weight: 600;
+        color: #111827;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      u {
+        text-decoration: underline;
+      }
+    }
+
+    // Toolbar styling (footer)
+    [data-test-id='menu'] {
+      background-color: #FAFAFB !important;
+      border-top: 1px solid #E5E7EB;
+      height: 36px !important;
+      min-height: 36px !important;
+    }
+  }
+}
+

@@ -1,0 +1,111 @@
+.clinic-popup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px 16px 0 0;
+  padding: 12px;
+  animation: slideUp 0.3s ease;
+  font-size: 12px;
+  //   margin: 14px;
+  border-radius: 15px;
+}
+
+.clinic-popup-content {
+  width: 100%;
+}
+
+.popup-title {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.clinic-info {
+  background-color: #fafafb;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+
+  .info-icon {
+    color: #000 !important;
+  }
+}
+
+.info-row i {
+  font-size: 14px;
+  color: #666;
+  margin-top: 1px;
+}
+
+.highlight-text {
+  color: #f5821f;
+  font-size: 12px;
+}
+
+.clinic-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.clinic-address {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.language-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+}
+
+.language-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  padding: 10px 5px 10px 10px;
+}
+
+.language-card:hover {
+  transform: translateX(1px);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview-title-text {
+  background: linear-gradient(0deg, #a2a2a8 0%, #ddd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.radio-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+  flex-shrink: 0;
+}

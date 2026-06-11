@@ -1,0 +1,283 @@
+.testimonials-container {
+  padding: 4rem 2rem;
+  background: #FFF;
+  position: relative;
+
+  .testimonials-title {
+    text-align: center;
+    color: #6941C6;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      margin: -6rem 0.3rem !important;
+    }
+  }
+
+  .testimonials-carousel {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+
+    .prev {
+      padding: 0 1rem;
+      border-radius: 50%;
+      border: none;
+      height: 3rem;
+      position: absolute;
+      left: -1.5rem;
+      z-index: 10;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .next {
+      padding: 0 1rem;
+      border-radius: 50%;
+      border: none;
+      height: 3rem;
+      position: absolute;
+      right: -1.5rem;
+      z-index: 10;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .testimonials-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    align-items: center;
+    gap: 0rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    // -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .testimonial-card {
+    margin: 1rem 1rem;
+    flex: 0 0 400px;
+    min-width: 400px;
+    height: 22rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
+    .testimonial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .doctor-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .doctor-image {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        h3 {
+          margin: 0;
+          color: #101828;
+          font-size: 1.1rem;
+        }
+
+        p {
+          margin: 0.2rem 0;
+          color: #667085;
+          font-size: 0.9rem;
+        }
+      }
+
+      .hospital-logo {
+        height: 30px;
+        object-fit: contain;
+      }
+    }
+
+    .rating {
+
+      .star {
+        padding: 0 0.1rem 0 0;
+        color: #d0d0d0 !important;
+
+        &.filled {
+          color: #FF7A00 !important;
+        }
+      }
+    }
+
+    .testimonial-text {
+      color: #475467;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: Roboto !important;
+    }
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #E4E7EC;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background: #F9FAFB;
+      }
+    }
+  }
+
+  .mobile-dots {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #D1D5DB;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.3s ease;
+
+        &.active {
+          width: 24px;
+          border-radius: 4px;
+          background: #6B46C1;
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 1rem 0rem !important;
+
+    .testimonials-carousel {
+      flex-direction: row !important;
+      padding: 0 !important;
+      overflow: visible;
+
+      .prev,
+      .next {
+        display: none;
+      }
+    }
+
+    .testimonials-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      padding: 0 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .testimonial-card {
+      flex: 0 0 300px !important;
+      min-width: 300px !important;
+      height: 23rem !important;
+      scroll-snap-align: start;
+      padding: 1rem;
+      border-radius: 20px;
+      margin-right: 1rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .testimonial-header .hospital-logo {
+        display: none;
+      }
+    }
+
+    .testimonials-title {
+      font-size: 1.7rem !important;
+
+      img {
+        width: 2rem !important;
+        height: 2rem !important;
+        margin: -6rem 0.3rem !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .testimonials-container {
+    .testimonials-wrapper {
+      gap: 1rem !important;
+    }
+
+    .testimonial-card {
+      padding: 1rem !important;
+      max-width: 31% !important;
+    }
+
+    .testimonials-carousel {
+      .prev {
+        left: -2rem !important;
+      }
+
+      .next {
+        right: -2rem !important;
+      }
+    }
+  }
+}

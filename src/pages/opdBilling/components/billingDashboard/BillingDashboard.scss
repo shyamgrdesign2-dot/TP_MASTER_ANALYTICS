@@ -1,0 +1,80 @@
+.billing-dashboard-wraper {
+    .btn-manage-bill {
+        cursor: pointer !important;
+        display: flex;
+        height: 41px;
+        padding: 10px 24px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--P-CTA-100, #4B4AD5);
+        background: var(--S-BG-50, #FFE8AE);
+
+        &:hover,
+        &:focus {
+            background-color: var(--S-BG-50, #FFE8AE) !important;
+            border: 1px solid var(--P-CTA-100, #4B4AD5);
+        }
+
+        span {
+            color: #4B4AD5 !important;
+        }
+    }
+
+    .advance-deposite-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        flex-shrink: 0;
+        border-radius: 100px;
+        border: 1px solid var(--S-Icon-80, #BA7DE9);
+        background: #F6EFFB;
+
+        span{
+            color: #BA7DE9 !important;
+            padding-left: 5px;
+        }
+
+        .add-advance-icon {
+            // background: rgba(237, 223, 247, 0.6) !important;
+            width: 20%;
+            position: relative;
+            right: -6px;
+            margin: 0;
+            padding: 8px 13px;
+            border: 1px solid F6EFFB !important;
+            border-bottom-right-radius: 18px !important;
+            border-top-right-radius: 18px !important;
+            background: rgba(237, 223, 247, 0.60) !important;
+        }
+
+    }
+
+    .total-due-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        flex-shrink: 0;
+        border-radius: 100px;
+        background: var(--Colour-Yellow-Yellow---20, #FDF7D7);
+        color: #ED8A00 !important;
+        border: 1px solid var(--S-Icon-80, #ED8A00);
+        background: #FDF7D7;
+
+        span{
+            color: #ED8A00 !important;
+            // padding-left: 5px;
+            padding: 8px 13px;
+        }
+    }
+
+    .zindex-10{
+        z-index: 10 !important;
+    }
+
+    .appointment-data .ant-table table thead{
+        z-index:  1 !important;
+    }
+}

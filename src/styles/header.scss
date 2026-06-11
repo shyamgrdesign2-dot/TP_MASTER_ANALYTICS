@@ -1,0 +1,128 @@
+body{
+    .portal-header {
+        box-shadow: -1px -1px 0px 0px #E2E2EA inset;
+        .dropdown-profile i::before {
+            font-size: 24px;
+        }
+        nav {
+            box-shadow: $boxshadowtheme;
+        }
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .ant-select {
+            min-width: 200px;
+            border-radius: 10px;
+            box-shadow: $boxshadowtheme;
+            &.ant-select-single {
+                height: 38px;
+            }
+        }
+        .active-notification {
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                right: 2px;
+                top: -2px;
+                width: 9px;
+                height: 9px;
+                border-radius: 100px;
+                background-color: #FC5A5A;
+            }
+        }
+    }
+    .headerprescription {
+        height: 60px;
+        box-shadow: -1px -1px 0px 0px #E2E2EA inset;
+
+        .teleconsult-video-btn {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            padding: 8px;
+            border: 1px solid #D1D5DB;
+            border-radius: 10px;
+            background: transparent;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            &:hover {
+                background-color: transparent !important;
+                border-color: #D1D5DB !important;
+            }
+        }
+
+        &.headerprescription--tablet {
+            background: #fff;
+            padding-left: 0;
+            padding-right: 0;
+
+            .pr-0 {
+                padding-right: 0 !important;
+            }
+
+            .headerprescription-actions-col {
+                flex: 1 1 auto;
+                min-width: 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .headerprescription-actions {
+                flex-wrap: nowrap;
+                min-width: 0;
+
+                .btn:not(.btn-primary3):not(.btn-more) {
+                    padding: 0 12px 0 0;
+                }
+            }
+
+            .headerprescription-tablet-sep {
+                width: 1px;
+                height: 28.367px;
+                background: #D1D5DB;
+                flex-shrink: 0;
+                margin: 0 16px;
+            }
+
+            .save-as-draft-btn {
+                border-radius: 10px;
+                border: 1px solid #4B4AD5;
+                background: #fff;
+                height: 42px;
+                padding: 10px 16px;
+                font-weight: 600;
+
+                span {
+                    color: #4B4AD5 !important;
+                    font-size: 14px;
+                }
+            }
+
+            .patientName {
+                color: #44444F;
+                font-weight: 500;
+                max-width: 140px;
+            }
+
+            .teleconsult-video-btn + .headerprescription-tablet-sep {
+                margin-inline-start: 8px;
+            }
+        }
+    }
+}
+@keyframes headerVoicePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+}
+.header-voice-transcribing {
+    padding: 0 12px !important;
+}
+.header-voice-locked {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    opacity: 0.45;
+    cursor: not-allowed !important;
+}

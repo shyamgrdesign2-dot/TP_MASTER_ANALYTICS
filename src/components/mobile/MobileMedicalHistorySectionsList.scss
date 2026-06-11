@@ -1,0 +1,284 @@
+.mobile-medical-history-sections-list {
+  .ant-drawer-content-wrapper {
+    border-radius: 16px 16px 0 0;
+    max-height: 75vh !important;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.mobile-medical-history-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-medical-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #E8E8E8;
+  flex-shrink: 0;
+}
+
+.mobile-medical-history-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.mobile-medical-history-close {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.sections-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 20px;
+}
+
+.medical-history-section {
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E8E8E8;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 12px 16px 0 16px;
+  &:active {
+    background: #F5F5F5;
+  }
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.section-content {
+  padding: 0 16px 16px;
+  border-radius: 8px;
+}
+
+.section-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.section-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-quick-list-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 4px 8px;
+
+  .icon-setting {
+    font-size: 16px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.add-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #5B47FB;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.history-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #1A1A1A;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:active {
+    background: #F5F5F5;
+    border-color: #5B47FB;
+  }
+}
+
+.chip-text {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chip-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chip-status-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.chip-status-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.chip-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+
+  &.chip-status-y {
+    background: #E8F5E9;
+    color: #4CAF50;
+  }
+
+  &.chip-status-n {
+    background: #FFEBEE;
+    color: #F44336;
+  }
+
+  &.chip-status-dash {
+    background: #F5F5F5;
+    color: #999;
+  }
+}
+
+.additional-history-content {
+  padding-top: 12px;
+}
+
+.additional-history-text {
+  margin-top: 12px;
+  padding: 12px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1A1A1A;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.additional-history-textarea {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 8px;
+  resize: none;
+}
+
+// Footer with Save button
+.mobile-medical-history-footer {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E5E5;
+  z-index: 10;
+
+  .save-btn {
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #6C5CE7;
+    border: none;
+
+    &:hover {
+      background: #5A4BD9;
+    }
+
+    &:active {
+      background: #4A3BC9;
+    }
+  }
+}

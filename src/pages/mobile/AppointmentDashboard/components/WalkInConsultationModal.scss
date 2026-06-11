@@ -1,0 +1,123 @@
+.ant-drawer-content-wrapper:has(.walk-in-modal),
+.ant-drawer-content-wrapper .walk-in-modal {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.ant-drawer-content.walk-in-modal {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.walk-in-modal {
+  .ant-drawer-body {
+    padding: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .modal-content {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+
+      .modal-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1c1e;
+        line-height: 26px;
+        margin: 0;
+        flex: 1;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .close-btn {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 25px;
+        height: 24px;
+
+        .close-icon {
+          width: 25px;
+          height: 24px;
+          display: block;
+          object-fit: contain;
+        }
+
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      width: 100%;
+
+      button {
+        height: 56px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 16px;
+        width: 100%;
+        box-sizing: border-box;
+        letter-spacing: 0.1px;
+
+        &.btn-outline {
+          border: 1px solid #4b4ad5;
+          background: transparent;
+          color: #4b4ad5;
+
+          &:active {
+            background: rgba(75, 74, 213, 0.1);
+          }
+        }
+
+        &.btn-primary,
+        &.btn-walk-in {
+          border: 1px solid #4b4ad5;
+          background: #4b4ad5;
+          color: white;
+
+          &:active {
+            background: #3d3cc4;
+          }
+        }
+
+        i {
+          font-size: 20px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+

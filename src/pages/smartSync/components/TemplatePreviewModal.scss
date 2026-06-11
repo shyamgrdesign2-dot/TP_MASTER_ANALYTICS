@@ -1,0 +1,65 @@
+.rpv-core__text-layer {
+  display: none !important;
+}
+
+.rpv-core__inner-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rpv-core__page-layer {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.document-preview {
+  padding: 0 10px;
+}
+
+.document-measurement {
+  color: white !important;
+}
+
+.document-date {
+  color: #a2a2a8 !important;
+}
+
+.document-notes {
+  color: white !important;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.document-measurement-box {
+  background-color: #797d85;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.document-separator {
+  height: 15px;
+  border: 1px solid rgba(162, 162, 168, 1);
+}
+
+// PDF container - no height constraints to show all pages
+.pdf-container {
+  padding: 20px;
+}
+
+// Controls positioning
+.controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+// Icon rotation fix
+.iconrotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+} 

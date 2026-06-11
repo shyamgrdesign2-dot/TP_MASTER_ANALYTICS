@@ -1,0 +1,49 @@
+.titleContainer {
+  background-color: #fcdada;
+  .imageStyle {
+    cursor: pointer;
+  }
+}
+
+.tableContainer {
+  position: relative;
+  height: 626px;
+  border-radius: 16px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.custom-modal .ant-modal-content {
+  background-color: #fcdada;
+}
+
+.vaccine-tab-filter {
+  display: inline-flex;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+
+  .vaccine-tab-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+
+    &:hover {
+      color: #4b4ad5;
+    }
+
+    &.active {
+      background-color: #4b4ad5;
+      color: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

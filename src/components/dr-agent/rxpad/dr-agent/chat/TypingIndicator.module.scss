@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ellipsis dot staggered animation delays — static, per-dot values */
+.dot1 {
+  animation-delay: 0ms;
+}
+
+.dot2 {
+  animation-delay: 180ms;
+}
+
+.dot3 {
+  animation-delay: 360ms;
+}

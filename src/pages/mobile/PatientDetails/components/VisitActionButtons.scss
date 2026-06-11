@@ -1,0 +1,97 @@
+.visit-action-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .action-buttons-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .action-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+
+    &.icon-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 31px;
+      border: 1.292px solid #FFF;
+      box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(12.916665077209473px);
+
+      img {
+        width: 20px;
+        height: 20px;
+        display: block;
+        object-fit: contain;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    &.repeat-button {
+      flex: 1;
+      height: 40px;
+      border-radius: 31px;
+      border: 1.292px solid #FFF;
+      box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(12.916665077209473px);
+      gap: 8px;
+      padding: 0 16px;
+      max-width: 140px;
+
+      .repeat-icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .repeat-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: #1D1B20;
+        font-family: 'Poppins', sans-serif;
+        white-space: nowrap;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .page-number-display {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1D1B20;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    padding: 8px 16px 4px 16px;
+    border-radius: 10px 10px 0 0;
+    border: 1.292px solid #FFF;
+    background: linear-gradient(89deg, rgba(251, 255, 251, 0.16) 2.52%, rgba(255, 255, 255, 0.16) 51.21%, rgba(255, 255, 255, 0.16) 98.97%);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(12.916665077209473px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 8px auto 0 auto;
+  }
+}
+

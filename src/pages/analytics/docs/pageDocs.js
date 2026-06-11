@@ -1,0 +1,2373 @@
+// AUTO-GENERATED (scripts/gen-page-docs.js). One entry per analytics leaf:
+// { title, explanatory, api }. explanatory = what the page is, for doctors and
+// admins; api = backend-developer spec (routes, sources, missing feeds).
+// Rendered in the page-info drawer; downloadable as .md and as the full ZIP.
+/* eslint-disable */
+export const PAGE_DOCS = {
+  "overview": {
+    title: "Overview",
+    explanatory: `## What this page is
+The Overview is the landing scoreboard of Analytics: one headline number per section of the product, plus four orienting charts. It answers "how is my practice doing right now?" in five seconds. Detail lives on the section pages (Appointments, Billing, Patients, Care, Pharmacy, Grow); the Overview never duplicates their charts.
+
+It obeys the global filters (Doctor, Clinic, Period) and is OPD-scoped in this product (\`careSetting=opd\`). Doctor logins land pre-filtered to themselves; owner/admin logins land clinic-wide.
+
+## The 12 KPI cards (fixed order)
+- **Total footfall**: all patient visits in the period, booked appointments plus walk-in consultations. The headline load signal.
+- **~Avg consult time**: mean appointment duration in minutes (zero/blank durations excluded). Approximate, hence the ~.
+- **Total billed**: gross value billed this period (OPD stream). Collections and dues live on the Billing page.
+- **Advance received**: money deposited by patients into their advance wallet this period.
+- **Top symptoms**: shows "-" today. Per-patient symptoms live in the separate symptoms microservice, not yet connected (the card says so honestly).
+- **Top diagnosis**: the most-recorded diagnosis this period.
+- **Top medication**: the most-prescribed medicine this period.
+- **Top lab test**: the most-ordered investigation (cleaned from free-text Rx investigation boxes).
+- **Top chronic condition**: the most-recorded condition in patients' medical history.
+- **Net pharmacy sales**: pharmacy counter revenue, gross sales minus sale returns.
+- **Follow-up adherence**: share of due follow-ups where the patient actually returned within 45 days.
+- **ABHA linked**: % of this period's patients with an ABHA (national health ID) linked.
+
+Cards 5-9 run in the clinical flow order: symptoms, diagnosis, medicine, investigation, history. Cards carry period-over-period deltas (vs the immediately-preceding window of equal length) and sparklines where a trend exists.
+
+## The 4 orienting charts
+- **Appointment status mix** (donut): Completed / Cancelled / Scheduled, always all three (0-filled).
+- **Footfall over time** (line): appointments and completed per day/week/month bucket.
+- **Payment-mode mix** (donut): billed amount per payment mode.
+- **Top diagnoses** (bar): the 10 most-recorded diagnoses.
+
+## Caveats
+- Top symptoms is a stated gap, not a zero: the feed does not exist yet.
+- Status here is the simple 3-way roll-up (Scheduled = everything not completed/cancelled); the Appointments page carries the full 5-status model including Draft.
+- All queries are read-only and tenant-scoped from the JWT; nothing is editable from this page.`,
+    api: `## Endpoint
+\`GET /api/v1/analytics/operational/overview\`
+- Params: \`startDate\`, \`endDate\` (YYYY-MM-DD), \`grain=day|week|month\`, \`doctorIds\` (repeatable, um_id), \`hospitalId\` (hm_id CSV, FIND_IN_SET), \`careSetting=opd|ipd|all\` (FE sends \`opd\`; drives which KPI set and which billing streams).
+- Auth: \`Authorization: Bearer <JWT>\`; tenant = \`result.hospital_business_id\` (see src/common/scope.ts). Verify with ANALYTICS_JWT_SECRET in prod.
+- Builder: pm-analytics-service/src/analytics/builders/operational.ts, \`case 'overview'\`. SELECT-only on the replica.
+- FE registration: DASHBOARD_ENDPOINTS.overview = { endpoint: "operational/overview", params: { careSetting: "opd" } } in shell/analyticsNav.jsx.
+
+## Response: \`kpis[]\` (key, label, value, unit?, description, delta?, spark?)
+- \`footfall\`: COUNT(*) tbl_appointment_master, pam_del=0, hm_business_id=:biz, pam_app_date in window (+hm_id, um_id filters). Spark from the appointment trend.
+- \`avgConsult\`: ROUND(AVG(NULLIF(pam_appointment_duration,0))) same scope.
+- \`billed\`: ROUND(SUM(g)) over the billing union; OPD branch = tbl_opd_billing_overview (tobo_delete=0, tobo_invoice_cancel=0, tobo_invoice_date window, tobo_hm_id, doctor via doctor_unique_id mapped from um_id through tbl_user_master). care=all adds tbl_ipd_billing_overview + tbl_path_opd_billing_overview.
+- \`advance\`: SUM(am_advance_amount) tbl_opd_billing_advance_master, am_status=0, am_parent NULL/0, am_date window.
+- \`topSymptom\`: hardcoded "-" (missing feed, see below).
+- \`topDx\`: top diagnosis by COUNT, tbl_casemanager_diagnosis (tcd_del=0, diagnosis<>'', tcd_created_date window, um_id filter).
+- \`topMed\`: top tbl_medicine_report JOIN tbl_medicine_master (tmm_id), tcm_datetime window.
+- \`topLab\`: tbl_case_manager.tcm_investigation free text, cleaned + counted in JS (cleanInvestigations from builders/lab.ts).
+- \`topCond\`: tbl_micro_patient_medical_history.medical_history JSON, parsed in JS (extractSections from builders/medical.ts), conditions = section ids 1,2.
+- \`pharmacy\`: SUM(tpsi_grand_total) tbl_pha_sales_invoice minus SUM(tpsr_grand_total) tbl_pha_sales_return (del=0, date window).
+- \`adherence\`: kept/due % from tbl_case_manager.tcm_followup_date; due = followup date >= '2000-01-01' AND < CURDATE; kept = EXISTS appointment for that patient within 45 days after the followup date.
+- \`abha\`: % of distinct period patients (via appointments) with tbl_patient_master.pm_abha_address non-empty.
+- careSetting=ipd swaps in admissions/occupied/discharged from tbl_atd_patient_master (tapm_delete=0, tapm_admitting_date; occupied = tapm_discharge=0).
+- Deltas: same aggregates re-run over the preceding window (comparisonWindow in builders/period.ts); \`meta.compareLabel\` names it.
+
+## Response: chart blocks (universal { columns, rows })
+- \`apptStatusMix\`: Completed=SUM(pam_status=3), Cancelled=SUM(pam_status=4), Scheduled=total minus both. Fixed 3-row domain.
+- \`footfallTrend\`: DATE_FORMAT(pam_app_date, grain) buckets, last 12, appts + completed.
+- \`paymentModeMix\`: SUM(g) per mode code over the billing union; titles via tbl_biiling_payment_option (bpid -> title); code '0'/blank = Cash.
+- \`topDiagnoses\`: top 10 from tbl_casemanager_diagnosis.
+- \`meta\`: { live, compareLabel, careSetting }.
+
+## Missing feed (stated, not faked)
+- **Top symptoms**: per-patient symptom records live only in the symptoms microservice. Needed contract: a bulk read (top-N symptom counts by hospital_business_id + date range + optional doctor), or a sync into the replica. Until then the card renders "-" with the explanation in its description.`,
+  },
+  "footfall": {
+    title: "Appointments",
+    explanatory: `## What this page is
+Everything about appointments on one page: volume, how patients arrived, what happened, when load peaks, which channels book, and who the patients are. Core model: **a walk-in is not an appointment**. \`Total footfall = Booked appointments + Direct walk-ins\`, and within booked, \`Booked (clinic) + Booked (video) = Booked\`. Every card and chart is a cut of the same base set, so the numbers always reconcile.
+
+## Key metrics (KPI band)
+- **Total footfall**: all visits = booked + walk-in. Capacity headline.
+- **Booked appointments**: visits booked in advance through a channel. Planned demand.
+- **Direct walk-ins**: seen without a booking, always physical visits. Unplanned load.
+- **Booked (clinic) / Booked (video)**: the consult mode chosen at booking. Product rule: a walk-in is never a video consult (raw Walk rows with a video flag are not product video consults).
+- **~Avg consult time**: mean visit duration in minutes.
+- **Busiest day / ~Busiest hour**: the weekday/hour with most visits across the whole period, a pattern, not one date. Staffing signal.
+- **~Avg visits / day**: footfall / days in period.
+- **Projected this month**: footfall forecast at the period's daily run-rate. Only shown for a current rolling window of 7-92 days ending today; otherwise the card stays with "-" (so layout never shifts).
+Completed/Cancelled/Draft are deliberately not cards: the status donut carries them.
+
+## Charts
+- **Appointment status** (donut): Scheduled / Draft / Completed / Cancelled (verified status codes; "Pending digitisation" is an EMR UI view, not a status, and is not faked).
+- **Visit mix** (donut): Booked (clinic) / Booked (video) / Direct walk-in, sums to footfall.
+- **Booking channels** (bar): Doctor portal / KEA portal / Appointment agent / Legacy (migrated), always shown 0-filled; "Not tracked" only when residual rows exist. Walk-ins excluded (no booking happened).
+- **New vs returning bookings** (donut) and **per channel** (stacked bar): a booking is New iff it is that patient's first-ever booking on record (all time), else Returning. Shows which channels acquire vs retain.
+- **Booking sources over time** (line), **In-clinic vs video over time**, **New vs returning patients over time** (by visit history, never registration date).
+- **Visits by day of week / by hour** (bars, 0-filled), **Footfall over time** (visits vs cancellations), **Case-type mix** (New/Follow-up/Urgent/Revisit/Emergency), **By specialty** (all-time department catalogue, 0-filled), **Appointment-to-prescription conversion** (appointments vs appointments with an Rx).
+- **Demographics**: gender and age bands of patients seen.
+
+## Tables
+- **Doctor scorecard**: appointments, completion %, cancellation % per doctor, with the peer-median cancellation rate in the note (coaching surface).
+- **Patients with most visits** and **Frequent cancellers**: recall/manage lists with mobiles.
+- **Patient list**: row-level register (date, time, UHID, name, gender, age, doctor, Booked/Walk-in, status), exportable.
+
+## Caveats
+- Booking channel is partly inferred (explicit source wins, then hard row markers); the derivation is disclosed in the chart tooltip and meta note.
+- Zero-fill principle: every status, weekday, hour, channel, case type and known specialty is shown even at zero, never silently dropped.
+- EMR tab badges are doctor-scoped with their own date floor; match the Doctor filter and dates before comparing side by side.`,
+    api: `## Endpoint
+\`GET /api/v1/analytics/operational/footfall\`
+- Params: \`startDate\`, \`endDate\`, \`grain=day|week|month\` (FE auto: day <=10d, week <=92d, else month), \`doctorIds\` (um_id, repeatable), \`hospitalId\` (hm_id CSV, FIND_IN_SET). Bearer JWT, tenant = result.hospital_business_id.
+- Builder: pm-analytics-service/src/analytics/builders/footfall.ts (buildFootfallDashboard). Routed via operational/:report in analytics.controller.ts. FE: DASHBOARD_ENDPOINTS.footfall = "operational/footfall".
+- Base scope W: tbl_appointment_master a, pam_del=0, hm_business_id=:biz, pam_app_date in window AND >= '2000-01-01' (junk-date guard), + doctor/hospital filters. Joins: tbl_patient_master p (patient_unique_id), tbl_user_master u (um_id), tbl_opd_case_type t (toct_id), tbl_department d (dp_id), tbl_appointment_source s (pam_id), tbl_medicine_report mr (pam_id, Rx linkage).
+
+## Load-bearing constants (reimplement exactly)
+- Status: 0,7=Scheduled · 6=Draft · 3=Completed · 4=Cancelled · 1,2,5=Other (only if rows exist). Canonical order 0-filled.
+- Walk-in: pam_appointment_type='Walk'. Booked: <>'Walk'. Video: BOOKED rows only with pam_status_type_appointment IN (1,2). inClinic = booked - bookedVideo.
+- Booking SOURCE_CASE precedence (booked rows only): tas_source='CREATE_APPOINTMENT_SCREEN' -> Doctor portal; 'KEA' -> KEA portal (do NOT use kea_appointment_sequence, undercounts ~30x); IN ('APPOINTMENT_AGENT','CHIKITSALY-PORTAL') -> Appointment agent; THEN legacy check (old_id>0 OR old_trans_appointment_id non-zero) -> Legacy (migrated), which MUST precede the creator fallback; other non-empty tas_source -> Not tracked; pam_created_by = um_id -> Doctor portal; else Not tracked. Canonical 4 channels always 0-filled.
+- Cancellation rate denominator = booked only: bookedCancelled/booked. Completion rate = completed/footfall.
+- Projection gate: window ends within ~2 days of today AND spans 7-92 days; projected = round((appts/days) * daysInCurrentMonth).
+
+## Response blocks (dashboard-block: kpis[] + { columns, rows } blocks)
+- \`kpis[]\` keys: footfall, booked, walkins, inClinic, video, avgDuration (AVG(NULLIF(pam_appointment_duration,0))), peakDay (DAYOFWEEK max), peakHour (HOUR(pam_app_time) max), avgDay, projected. Deltas vs previous equal window (comparisonWindow); sparks from the 12-bucket trend.
+- Charts: \`apptStatusMix\`, \`typeMix\` (3-way visit mix), \`channelMix\` (in-clinic vs video over ALL visits), \`bookingChannelMix\`, \`newVsFollowupBooking\`, \`bookingByVisitType\` (channel x first-ever-booking split, first = MIN(pam_app_date) over booked rows all time), \`bookingSourceTrend\` (all channels 0-filled per bucket), \`channelTrend\`, \`newVsReturningTrend\` (first-ever-visit bucket = New, later buckets = Returning, via MIN(pam_app_date) per patient all time), \`byDayOfWeek\` (7 rows 0-filled), \`byHour\` (24 rows 0-filled), \`footfallTrend\` (appointments + cancelled, 12 buckets), \`caseMix\` (canon New/Follow-up/Urgent/Revisit/Emergency 0-filled via toct_type), \`bySpecialty\` (all-time catalogue via window-less scope, in-period counts, dp_name), \`conversionTrend\` (appts vs COUNT(DISTINCT mr.pam_id)), \`newVsReturning\`, \`genderMix\`, \`ageMix\` (bands <18/18-30/30-45/45-60/>60 from pm_dob).
+- Tables: \`doctorScorecard\` (HAVING appts>=5, LIMIT 30, peer-median note), \`repeatBookers\` (HAVING appointments>1, LIMIT 100), \`frequentCancellers\` (HAVING cancellations>0, LIMIT 100), \`patients\` register (LIMIT 5000).
+- \`meta\`: { live, rowCount, compareLabel, channelTrackedShare, bookingSourceNote }.
+
+## Missing feed
+- **Pending digitisation**: that EMR tab = Completed INTERSECT the SnapRx microservice's undigitised list (POST apStatue:3 + ids from /digitization/undigitizedAppointments). The set lives only in SnapRx. Needed contract: an export of undigitised appointment ids (pam_id) by hospital_business_id + date range; until then the bucket is omitted, never zero-faked.`,
+  },
+  "opd_billing": {
+    title: "Billing",
+    explanatory: `## What this page is
+The single money destination. Two bands:
+1. **Headline band** sourced from the production billing APIs (the same source as the OPD Billing screen), so every figure reconciles with the EMR exactly, for every tenant, including hospitals on the new billing service whose data never reaches the analytics replica.
+2. **Analytical depth band** from the read-only analytics service, adding what the billing screen does not have (per-doctor, discounts, services, audit/leakage tables).
+
+## Headline KPI cards (billing APIs)
+Bills family: **Total billed** (gross bills raised), **Total collected** (money received), **Total bill due** (outstanding, bill count in tooltip), **Total bill refunded**.
+Advance-wallet family: **Total advance received** (deposits; "received" and "deposited" are the same event), **Total advance refunded**, **Total advance debited** (wallet money USED on bills; it can legitimately exceed "received" in a window because this window's bills consume earlier deposits; it reappears as the "Advance Deposit" slice of the payment-mode mix).
+Derived: **~Avg bill value** (billed / bill count; "-" when no bills) and **~Projected billed (month)** (run-rate forecast, only for current rolling 7-92 day windows).
+
+## Headline charts (billing APIs, work for every tenant)
+Collection over time · Bill payment-mode mix (an "Advance Deposit" slice = bills paid from the wallet, already counted under Advance received) · Bill refunds by mode · Unpaid bills by age (how long ago unpaid bills were raised) · Advance payment-mode mix · Advance refunds by mode · Bills table (most-recent page; KPIs cover the full period).
+
+## Depth band (analytics service)
+- **Revenue by doctor**: who generates the revenue (incentive/coaching basis).
+- **Revenue by stream**: OPD vs IPD vs Pathology.
+- **Discount by doctor**: line discounts (converted to rupees) plus the bill-level extra discount, merged per doctor. Margin-erosion watch.
+- **Top services by count and by revenue**: what drives footfall vs what drives money.
+- **Bills built by role**: Doctor vs Front-office/Admin vs Other staff (by the creating login's role; no doctor-vs-KEA column exists anywhere, KEA writes no billing rows).
+- **Advance deposits by mode and by doctor**.
+- **Bills edited after issue** and **Cancelled/deleted by actor**: the leakage-review surface.
+- **Advance wallet alerts**: patients refunded more than they deposited (data-entry reconciliation list).
+- **Billing register by account**: the dimension the legacy Form-3C report partitions by.
+
+## The honesty conventions
+- Bill-level depth figures run over **debit documents only** (invoice + cash memo); the overview table also stores receipts, advances, refunds and credit notes as rows, and mixing them inflates billed and fabricates dues.
+- Refund money is the given-amount column (the total column is always 0). Advance-wallet refunds are the refund rows whose advance id starts ADRCPT.
+- Not buildable from this data, stated rather than faked: advance debited (billing-service store only, the headline card carries it from the API), the Form-3C added/not-added flag, predefined-vs-manual line discount provenance, and per-bill edit counts (only the last edit is stored).`,
+    api: `## Three sources compose the page (FE: loadLeaf('opd_billing') -> financialWidgets('opd') in src/pages/analytics/service.js)
+
+### 1. Production billing APIs (headline band, authoritative)
+- \`GET /api/v1/billing/bill/dashboard\`: params startDate, endDate, page=1, limit=100 (limit=1000 returns HTTP 400), sortBy=date, sortOrder=desc, patientId:'', \`doctorIds\` REQUIRED (resolve from filter or JWT user_id). Returns \`summary\` { totalBillAmount, totalPaidAmount, dueAmount, dueCount, refundedAmount, refundedCount, count, payment/refund mode aggregates } + \`bills[]\` page.
+- \`GET /api/v1/billing/advancedDeposit/dashboard\`: page, limit=100, startDate, endDate. Returns \`summary\` { totalAdvanceReceived, advanceReceivedCount, totalAdvanceRefunded, advanceRefundedCount, totalAdvanceDebited } + \`receipts[]\` (transactionType Deposit/Refund, feeds advance mode donuts; truncation honest-marked).
+- FE-derived: avgBill = totalBillAmount/count; projectedBilled gated to rolling 7-92d windows ending today; collection trend + unpaid-bills aging built from the bills page.
+
+### 2. \`GET /api/v1/analytics/financial/summary\` (registered composite; DASHBOARD_ENDPOINTS.opd_billing = financial/summary?careSetting=opd)
+- Params: startDate, endDate, grain, doctorIds (doctor_unique_id on billing rows; b.doc filter), hospitalId (FIND_IN_SET on tobo/tibo/tpobo_hm_id), careSetting=opd|ipd|all (selects union branches).
+- Source union: tbl_opd_billing_overview / tbl_ipd_billing_overview / tbl_path_opd_billing_overview, normalised to (g=grand_total, bal=balance, dt=invoice_date, mode, cancel, doc), delete=0.
+- Money math (bal can be NEGATIVE when advances are held): billed=SUM(g) cancel=0; collected=SUM(g - GREATEST(bal,0)); outstanding=SUM(GREATEST(bal,0)); advances=-SUM(LEAST(bal,0)). Refund = SUM(tbrm_given_amount) tbl_opd_billing_refund_master (tbrm_total is always 0). Mode titles via tbl_biiling_payment_option (bpid->title, TRIM).
+- Blocks: kpis (billed/collected/outstanding/rate/avgBill/invoices/topMode/refund/advances, with sparks + deltas), streamMix, byDoctor (JOIN tbl_user_master ON doctor_unique_id), duesAging (0-30/31-60/61-90/90+ anchored CURDATE), patientDues (per-patient union, LIMIT 100), collectionTrend, revenueTrend, paymentModeMix, summary daily ledger.
+- Note: the FE currently renders the headline from source 1 instead, but this endpoint remains the self-contained composite for any consumer.
+
+### 3. \`GET /api/v1/analytics/financial/depth\` (depth band)
+- Params: startDate, endDate, careSetting=opd, doctorIds, hospitalId, grain. Builder financial.ts \`case 'depth'\`. FE drops res.paymentModeMix/duesAging/refundByMode/receiptsTrend and clears kpis (API band covers them), keeping: \`byDoctor\`, \`streamMix\`, \`discountByDoctor\`, \`topServices\`, \`topServicesRevenue\`, \`billsByBuilder\`, \`advanceModeMix\`, \`advanceByDoctor\`, \`topBillEditors\`, \`cancelledByActor\`, \`negativeWallets\`, \`accountRegister3C\`.
+- Conventions (verified, reimplement exactly): debit docs only = tobo_invoice_type IN ('invoice','cash_memo'); refunds = tbrm_given_amount, tbrm_status=0; advance-wallet refunds = tbrm_advance_id_new LIKE 'ADRCPT%'; receipts = tbl_opd_billing_receipt_master (rm_status=0, date = COALESCE(NULLIF(rm_date,'1970-01-01'), DATE(rm_created_date))); advances = tbl_opd_billing_advance_master (am_status=0, am_parent NULL/0); service lines tbl_opd_billing_invoice_service JOIN invoice_master (is_status=0, im_status=0), catalogue JOIN tbl_bill_main_service ON service_id (NEVER the stale tbms_id column); discounts = line CASE per: price*qty*LEAST(pct,100)/100 else amount, plus bill-level im_rebate_type/im_rebate_amount, NEVER im_total_discount; builder role via tobo_created_by -> tbl_user_master -> tbl_user_type (ut_id 1,2,7,8 Doctor; 4 Front-office/Admin); aging anchored to :asof = endDate; account register via im_accountant -> tbl_bill_account_name. Each breakdown wrapped so one failing query degrades to an empty block, never a 500.
+
+### Missing feeds (contracts needed)
+- **Advance debited** per-window from analytics: lives only in the billing service; consumed via API (source 1).
+- **Form-3C added/not-added flag**: only in the billing microservice (/billing/bill/addToForm3C store). Needed: bill-id -> isForm3C export by hospital + date range.
+- **Discount provenance** (catalogue default vs manual edit) and **discount reason/approval**: no columns; product change required.
+- Related result-set routes for the Reports hub: financial/realtime, collection-trend, revenue-trend, payment-mode-mix, daily-collection, 3c-report (reportType=OPD|IPD), incentives (reportType=Overall|Detailed).`,
+  },
+  "opd_patients": {
+    title: "Patients",
+    explanatory: `## What this page is
+The patient panel: who the patients are, whether they come back, and who is worth calling. Core model: **new vs returning is judged on visit history, never registration date**. A patient is Returning when they have more than one visit on record (up to the period end); New when this period holds their only visit so far. \`Total patients = One-time visitors + Returning\`, always.
+
+## Key metrics
+- **Total patients** (hero): distinct patients seen in the period, one count per patient however many visits.
+- **One-time visitors**: patients whose only visit on record is this one. Acquisition plus the retention gap in one number.
+- **Returning patients**: patients seen this period with more than one lifetime visit. Retention.
+- **~Avg patient age**: mean age of the cohort (patients without a date of birth excluded).
+- **ABHA linked %**: share with an ABHA (national health ID) on file.
+- **Contactable %**: share with a mobile or email on file, reachable for recalls/campaigns. Mobile is mandatory at registration, so a low number flags data-quality gaps.
+- **Top blood group**: most common recorded group (count in tooltip); "-" when none recorded.
+
+## Charts
+- **Gender / Age bands**: Male/Female/Other and 5 age bands, all 0-filled.
+- **Blood group**: all 8 canonical groups always listed 0-filled, free-text variants normalised ("0-" reads as O-), plus an honest "Not recorded" bucket.
+- **Marital status**: the registration form's 5 values 0-filled plus "Not recorded"; rarely captured, so the chart doubles as a front-desk data-quality prompt.
+- **Top cities**: every city with at least 1 patient plus one explicit Unknown bucket. Catchment view.
+- **Visit frequency**: lifetime visits bucketed 1 / 2 / 3 / 4-5 / 6-10 / 10+. A tall "1 visit" bar is the retention gap made visible.
+- **Patient value segments (RFM)** (donut): every patient ever seen, placed in exactly one of five segments by recency (days since last visit, anchored to the clinic's latest visit date so stale data stays meaningful) and frequency (lifetime visits): Champions (<=90d, >=3 visits), Loyal (<=180d, >=2), Recent (<=180d, single), At risk (181-365d), Lapsed (>365d). Per-segment value = those patients' lifetime billing.
+
+## Action lists
+- **Most valuable patients**: lifetime spend per patient with visits, last visit, mobile. Protect these relationships.
+- **Lapsed high-value (recall list)**: >=2 visits, billed > 0, no visit in 180+ days, sorted by spend. This week's call list for the front desk.
+- **Patient register** (downloadable): honours every active filter (gender, blood group, ABHA, new/returning), so a CSV export is exactly the on-screen segment.
+
+## Caveats
+- The cohort is scoped to the business through visits (the patient master is global), so "patients" means patients seen here, not all registrations.
+- RFM and the action lists use OPD lifetime history and OPD billing; they are hidden for an IPD-only care setting.
+- Reconciliation by construction: this page's New/Returning uses the same visit-history basis as the Appointments trend, so retention numbers can never contradict each other.`,
+    api: `## Endpoint
+\`GET /api/v1/analytics/operational/patients\`
+- Standard params: \`startDate\`, \`endDate\`, \`doctorIds\` (um_id), \`hospitalId\` (hm_id CSV, FIND_IN_SET), \`careSetting=opd|ipd|all\` (FE sends \`opd\`).
+- In-page filter params (optional, AND-combined, also segment the register): \`gender=Male,Female,Other\` (CSV; expand Male->('Male','M'), Female->('Female','F'): a minority of rows store single letters), \`bloodGroup=B+\` (exact pm_blood_group), \`abha=linked|verified|notlinked\` (pm_abha_address non-empty / pm_abha_verify=1 / NOT linked), \`status=new|returning\` (lifetime visits =1 / >1).
+- Bearer JWT; tenant = result.hospital_business_id. Builder: pm-analytics-service/src/analytics/builders/patients.ts (buildPatientsDashboard). FE: DASHBOARD_ENDPOINTS.opd_patients = { endpoint: "operational/patients", params: { careSetting: "opd" } }.
+
+## Cohort SQL (the part to get right)
+- Visit sources: OPD = tbl_appointment_master (pam_del=0, hm_business_id=:biz, pam_app_date in window); IPD = tbl_atd_patient_master (tapm_delete=0, tapm_admitting_date). careSetting picks one or UNION ALL both.
+- Base = GROUP BY patient_unique_id over the period sources (visits, MIN/MAX dt = first/last visit) JOIN tbl_patient_master ON patient_unique_id.
+- Lifetime visits: same sources WITHOUT the start date, capped at the period END (\`dt <= :e\`), LEFT JOIN as lv.lifeVisits. new = COALESCE(lifeVisits, visits)=1; returning = >1. This cap is the new/returning definition; do not use pm_created_date.
+
+## Response blocks
+- \`hero\` Total patients = COUNT(*) over the cohort. \`kpis[]\`: new, returning, age (ROUND(AVG(TIMESTAMPDIFF(YEAR, pm_dob, CURDATE())))), abha (% pm_abha_address non-empty), reach (% pm_contact_no OR pm_email non-empty), topBlood (max of the 8 canonical groups after normalisation).
+- \`genderMix\` (M/F/Other 0-filled), \`ageMix\` (5 bands 0-filled), \`bloodGroupMix\` (8 canon groups 0-filled + normalised extras + 'Not recorded'; normalise: strip parenthetical, leading 0 -> O, uppercase), \`maritalMix\` (5 canon + 'Not recorded', pm_married_status), \`cityMix\` (pm_city, every named city + Unknown last, LIMIT 50).
+- RFM blocks (skipped when careSetting=ipd): anchor = MAX(pam_app_date) <= CURDATE for the business (NOT CURDATE itself). Per patient: freq = lifetime appointment count, lastV = MAX(pam_app_date); monetary = SUM(tobo_invoice_grand_total) tbl_opd_billing_overview (tobo_delete=0, tobo_invoice_cancel=0) grouped by patient_unique_id (exact patient-level join, no pam_id needed). Segment CASE top-down: Champions (DATEDIFF(anchor,lastV)<=90 AND freq>=3), Loyal (<=180 AND freq>=2), Recent (<=180), At risk (<=365), Lapsed (else). Blocks: \`rfmMix\` (5 segments 0-filled), \`visitFrequency\` (buckets 1/2/3/4-5/6-10/10+ 0-filled), \`mostValuable\` (spent>0, ORDER BY spent DESC LIMIT 100), \`lapsedRecall\` (DATEDIFF>180 AND freq>=2, ORDER BY spent DESC LIMIT 100).
+- \`patients\` register: UHID, name, gender, age, mobile, email, city, state, bloodGroup, ABHA status ('KYC verified' when pm_abha_verify=1, else 'Linked'/'Not linked'), registered (pm_created_date), visits, lastVisit; ORDER BY lastVisit DESC LIMIT 5000; honours every filter above.
+- \`meta\`: { live, rowCount, filters: { gender, bloodGroup, abha, status } } (echo of the applied segment).
+
+## Notes for extension
+- No missing feeds block this page; all sources are in the replica.
+- If adding acquisition-source analytics, reuse the footfall builder's SOURCE_CASE derivation (tbl_appointment_source) rather than inventing a new attribution.
+- Keep zero-fill: gender, age bands, the 8 blood groups and the 5 RFM segments are fixed domains; an empty group must render at 0, never disappear.`,
+  },
+  "symptoms": {
+    title: "Symptoms",
+    explanatory: `## What this page is
+
+Per-prescription symptom analytics. Every prescription has a "symptom box"; when a doctor uses the structured entry UI it stores entries like *Fever, since 2 days, severity High, note*. This page parses those entries and shows what patients present with, how severe, and how it trends.
+
+## Key metrics
+
+- **Top symptom**: the symptom mentioned most often on prescriptions this period. Case and spacing variants are counted together (lowercase plus whitespace normalization); the displayed name is the most frequent original casing. Why: the single fastest read on what the clinic is seeing.
+- **Symptom entries**: total structured entries parsed in the period. One prescription can list several symptoms, so this counts mentions, not visits.
+- **Distinct symptoms**: unique symptom names as typed. This is not a medical taxonomy: spelling variants count separately.
+- **Patients with symptoms**: distinct patients with at least one structured entry. Why: separates breadth (patients) from intensity (entries).
+
+## Charts and tables
+
+- **Symptom severity** (donut): fixed 3-level scale plus Not recorded, always all four slices, zero-filled. Raw severities are folded: high becomes Severe, medium becomes Moderate, low becomes Mild; anything else is Not recorded.
+- **Top symptoms** (bar): the 15 most-mentioned symptoms, by mentions.
+- **Symptom entries over time** (line): entries and distinct patients per period, zero-filled so quiet periods still show.
+- **Symptom register** (table, download): the 200 most recent entries: patient, date, symptom, severity, duration as typed ("since"), and the doctor's note.
+
+## Honest caveats
+
+- Only structured entries are counted. Legacy free-text symptom boxes that do not match the structured pattern yield no entries and are excluded (the page says so in its note).
+- Volume guard: only the most recent 20,000 prescriptions in the window are parsed. If the guard trips, the note tells you to narrow the date range.
+- Symptom names are doctor-typed free text, so "fever" and "feverish" are different symptoms.`,
+    api: `## Endpoint
+
+\`GET /api/v1/analytics/clinical/symptoms\`
+
+- Auth: Bearer JWT. Scope (hm_business_id, um_id) decoded server-side from the token (src/common/scope.ts), never from the client.
+- Params: \`startDate=YYYY-MM-DD\`, \`endDate=YYYY-MM-DD\` (inclusive, expanded to 23:59:59), \`grain=day|week|month\` (DEFAULT month, unlike the other clinical builders), \`doctorIds\` (repeatable, normalized to array at the controller).
+- Builder: pm-analytics-service/src/analytics/builders/symptoms.ts.
+
+## Source and method
+
+- Single fetch: \`tbl_case_manager cm LEFT JOIN tbl_patient_master p ON patient_unique_id\`, \`WHERE cm.tcm_del = 0 AND cm.hm_business_id = :biz AND cm.tcm_history_box_type = 1 AND cm.tcm_history_box <> '' AND cm.tcm_datetime BETWEEN :s AND :e [AND cm.um_id IN (...)]\`, \`ORDER BY tcm_datetime DESC LIMIT 20000\` (FETCH_LIMIT; most-recent-first so truncation keeps recent data; truncation appends to meta.note).
+- \`tcm_history_box\` is BLOB-ish: select via \`CONVERT(... USING utf8mb4)\`, then parse in TS with regex \`/<b>([^<]*)<\\/b>- since ([^,]*), severity -<b>([^<]*)<\\/b>, ([^;]*);/g\`. Non-matching (legacy free-text) boxes produce zero entries.
+- Severity fold: high/severe to Severe, medium/moderate to Moderate, low/mild to Mild, else Not recorded. Name key: \`LOWER\` + whitespace collapse; display name: most frequent original casing.
+
+## Response blocks (dashboard-block shape)
+
+- \`kpis\`: \`topSymptom\` (name), \`symptomEntries\`, \`distinctSymptoms\`, \`patientsWithSymptom\` (distinct patient_unique_id). No \`hero\` (the KPI carries it).
+- \`severityMix\`: \`[k, count]\`, fixed order Mild, Moderate, Severe, Not recorded, zero-filled.
+- \`topSymptoms\`: \`[k, count]\`, top 15 by mentions.
+- \`symptomTrend\`: \`[k, entries, patients]\`; bucket key matches MySQL \`%Y-%m-%d\` / \`%x-W%v\` / \`%Y-%m\`; zero-filled across the data's calendar span (500-bucket guard, falls back to raw keys).
+- \`register\`: \`[patientName, date, symptom, severity, since, note]\`, first 200 parsed entries (newest first).
+- \`meta\`: \`{ live: true, rowCount, note }\`.
+
+FE wiring: nav leaf \`symptoms\` maps to \`clinical/symptoms\` in DASHBOARD_ENDPOINTS (src/pages/analytics/shell/analyticsNav.jsx); blocks render via BLOCK titles/kinds in src/pages/analytics/service.js (topSymptoms bar, symptomTrend line, severityMix donut, register table).`,
+  },
+  "diagnosis": {
+    title: "Diagnoses",
+    explanatory: `## What this page is
+
+What the clinic diagnoses: condition mix, clinical status (suspected vs confirmed vs ruled out), ICD coding discipline, and a patient-level register.
+
+## Key metrics
+
+- **Top diagnosis** (hero): the most common condition by distinct patients.
+- **Patients diagnosed**: distinct patients with at least one diagnosis entry in the period.
+- **Diagnoses recorded**: total entries (a patient can have several).
+- **Distinct conditions**: unique diagnosis names as recorded. Mostly free text, not ICD-deduplicated, so spelling variants count separately.
+- **ICD-coded entries**: entries carrying a standard ICD code, with the coded share (%). Why: a data-quality lever; uncoded free text cannot feed registries or claims cleanly.
+- **Suspected / Confirmed / Ruled out (patients)**: distinct patients with at least one entry in each status. See the status caveat below.
+
+## Charts and tables
+
+- **Diagnoses over time** (line): entries and distinct patients per period, zero-filled so quiet days still show.
+- **Diagnosis status mix** (donut): entry counts across Suspected, Confirmed, Ruled out, Unspecified; all four slices always shown.
+- **Top conditions** (bar): top 15 conditions by distinct patients, case and spacing variants merged.
+- **Patients** (table, download): one row per patient per day with diagnoses and ICD codes concatenated, plus demographics (gender, age, mobile). Capped at 5,000 rows.
+
+## Honest caveats
+
+- Status is computed only from entries dated 2024-01-01 onward, regardless of the selected window: a 2023 legacy bulk import marks every row "Primary", which carries no clinical status. Legacy and blank statuses appear as Unspecified.
+- Diagnosis names are free text; "DM II" and "Type 2 Diabetes" count as different conditions.`,
+    api: `## Endpoint
+
+\`GET /api/v1/analytics/clinical/diagnosis\` (the worked REFERENCE clinical builder; clone it for new entities)
+
+- Params: \`startDate\`, \`endDate\` (inclusive), \`grain=day|week|month\` (default day), \`doctorIds\` (repeatable). Scope from JWT.
+- Builder: pm-analytics-service/src/analytics/builders/diagnosis.ts.
+
+## Source
+
+- \`tbl_casemanager_diagnosis d\` (\`diagnosis\`, \`icd_code\`, \`type\`, \`patient_unique_id\`, \`um_id\`, \`hm_business_id\`, \`tcd_del\`, \`tcd_created_date\`), join \`tbl_patient_master p\` on \`patient_unique_id\` (register only).
+- Base WHERE: \`d.tcd_del = 0 AND d.hm_business_id = :biz AND d.diagnosis <> '' AND d.tcd_created_date BETWEEN :s AND :e [AND d.um_id IN (...)]\`.
+- Status WHERE adds \`d.tcd_created_date >= '2024-01-01'\` (STATUS_FLOOR constant). Status CASE on \`LOWER(TRIM(d.type))\`: suspected/suspect to Suspected, confirmed to Confirmed, ruled out/rule-out/ruleout to Ruled out, else Unspecified.
+
+## KPIs (key: formula)
+
+- \`patientsDiagnosed\`: \`COUNT(DISTINCT d.patient_unique_id)\`.
+- \`diagnosesRecorded\`: \`COUNT(*)\`.
+- \`distinctConditions\`: \`COUNT(DISTINCT LOWER(TRIM(d.diagnosis)))\`.
+- \`icdCoded\`: \`SUM(d.icd_code <> '' AND d.icd_code IS NOT NULL)\`; description embeds rate = coded/total, 1 decimal.
+- \`suspected\` / \`confirmed\` / \`ruledOut\`: \`COUNT(DISTINCT patient_unique_id)\` per status bucket (status-floored WHERE).
+
+## Blocks
+
+- \`hero\`: top condition name.
+- \`diagnosisTrend\`: \`[k, diagnoses, patients]\`, \`DATE_FORMAT(tcd_created_date, :g)\` with g = \`%Y-%m-%d\` / \`%x-W%v\` / \`%Y-%m\`; zero-filled via a TS skeleton spanning startDate..endDate (skipped if window invalid or over 1500 days, then raw buckets).
+- \`statusMix\`: \`[k, count]\`, entry counts, fixed 4-bucket domain, zero-filled.
+- \`topConditions\`: \`[k, count]\`, \`GROUP BY LOWER(TRIM(diagnosis))\`, \`COUNT(DISTINCT patient_unique_id)\`, top 15, first letter capitalised.
+- \`patients\`: \`[date, patientUHID, patientName, gender, age, mobile, diagnosis, icd_code]\`, \`GROUP BY patient_unique_id, DATE(tcd_created_date)\` with \`GROUP_CONCAT(DISTINCT ...)\`, age = \`TIMESTAMPDIFF(YEAR, pm_dob, CURDATE())\`, newest first, LIMIT 5000.
+- \`meta.note\` repeats the 2024 status-floor caveat.
+
+Every query runs through a catch-to-empty wrapper so one schema drift cannot 500 the dashboard. FE: nav leaf \`diagnosis\` maps to \`clinical/diagnosis\`.`,
+  },
+  "rx": {
+    title: "Medications",
+    explanatory: `## What this page is
+
+Prescribing analytics: what gets prescribed, by whom, generics and manufacturers, polypharmacy, and (critically for catalogue upkeep) how much prescribing happens OUTSIDE the medicine catalogue via doctor-added custom medicines.
+
+## Key metrics
+
+- **Top medication**: the most prescribed brand this period, with its line count and distinct patient reach. Catalogue test entries are excluded so junk never tops the list.
+- **Medicines prescribed**: total medicine lines written (each drug on a prescription counts once).
+- **Distinct drugs**: unique catalogue products prescribed.
+- **Patients with a prescription**: distinct patients who received at least one medication.
+- **Avg drugs per prescription**: mean lines per prescription, rounded; prescriptions over 30 lines count as 30 so data-entry outliers cannot skew the mean.
+- **Custom medicines**: lines that were doctor-added rather than picked from the catalogue, with the % of all lines. Why: a high share usually means the catalogue is missing the drugs this clinic actually prescribes.
+
+## Charts and tables
+
+- **Catalogue vs custom medicines** (donut): prescription lines from the system catalogue vs doctor-added.
+- **Custom medicines by doctor** (bar): top 15 doctors by custom lines; flags whose catalogue gaps to fix first.
+- **Prescribing trend** (line): medicine lines and distinct patients over time.
+- **Top generics / Top manufacturers** (bars): top 10 each by lines, name variants merged for generics.
+- **Drugs per prescription** (bar): fixed buckets 1, 2, 3, 4, 5+, always shown; the polypharmacy profile.
+- **Generic name capture** (donut): lines where a generic name was recorded vs not. This is data-capture completeness, NOT a clinical generic-vs-branded prescribing split.
+- **Registers** (tables, download): drug register (top 100 catalogue products: brand, generic, manufacturer, lines, patients, last prescribed), generics register (top 100), custom medicines register (top 150 doctor-added medicines with maker, reach, last prescribed).
+
+## Honest caveats
+
+- Top lists and registers exclude catalogue test entries; the raw count KPIs include every line (honest totals).
+- Generic and manufacturer are free-entry fields on the prescription line, so coverage varies.`,
+    api: `## Endpoint
+
+\`GET /api/v1/analytics/clinical/drug\` (FE nav leaf \`rx\` maps here)
+
+- Params: \`startDate\`, \`endDate\`, \`grain=day|week|month\` (default day), \`doctorIds\` (repeatable). Scope from JWT.
+- Builder: pm-analytics-service/src/analytics/builders/drug.ts.
+
+## Source
+
+- \`tbl_medicine_report r\` (\`patient_unique_id\`, \`um_id\`, \`hm_business_id\`, \`tcm_datetime\`, \`tcm_id\`, \`tmm_id\`, \`tmm_generic\`, \`tmm_company\`) JOIN \`tbl_medicine_master m ON m.tmm_id = r.tmm_id\` for the brand (\`m.tmm_medicine_name\`; brand is NOT on the report row). Doctor names via \`tbl_user_master u ON u.um_id = r.um_id\`.
+- WHERE: \`r.hm_business_id = :biz AND r.tcm_datetime BETWEEN :s AND :e [AND r.um_id IN (...)]\` (no soft-delete column here).
+- JUNK filter (top-N, registers, topMedication only): \`NOT (LOWER(tmm_generic) LIKE 'testing%' OR LOWER(tmm_company) = 'test')\`. Raw count KPIs skip it.
+- CUSTOM definition: \`LEFT JOIN tbl_medicine_master\`; \`IS_CUSTOM = (m.tmm_id IS NULL OR m.pms_default = 0)\` (orphan free-typed lines bucket to custom).
+- Prod note: the raw table is large; read the nightly rollup, SQL identical.
+
+## KPIs
+
+- \`topMedication\`: top brand by \`COUNT(*)\` lines (junk-filtered) with distinct patients.
+- \`medsPrescribed\`: \`COUNT(*)\`. \`distinctDrugs\`: \`COUNT(DISTINCT r.tmm_id)\`. \`patientsWithMeds\`: \`COUNT(DISTINCT r.patient_unique_id)\`.
+- \`avgDrugsPerRx\`: \`ROUND(AVG(LEAST(linesPerTcmId, 30)))\` over \`GROUP BY r.tcm_id\`.
+- \`customMeds\`: \`SUM(IS_CUSTOM)\` plus % of all lines.
+
+## Blocks
+
+- \`medCustomMix\`: \`[k, count]\`, two fixed rows (From catalogue / Custom).
+- \`customByDoctor\`: \`[k, count]\`, top 15 doctors by custom lines.
+- \`customMedsRegister\`: \`[medicine, company, lines, patients, lastPrescribed]\`, \`GROUP BY tmm_generic, tmm_company\`, LIMIT 150.
+- \`rxTrend\`: \`[k, lines, patients]\`, \`DATE_FORMAT(tcm_datetime, :g)\`, last 12 buckets (DESC then reversed; NOT zero-filled).
+- \`topGenerics\`: top 10 \`GROUP BY LOWER(TRIM(tmm_generic))\`. \`topManufacturers\`: top 10 by \`TRIM(tmm_company)\`.
+- \`polypharmacy\`: \`[k, count]\`, buckets 1/2/3/4/5+ over lines per \`tcm_id\`, zero-filled.
+- \`genericVsBranded\`: \`[k, count]\`, \`SUM(COALESCE(tmm_generic,'') <> '')\` vs remainder (capture completeness).
+- \`drugsRegister\`: \`[brand, generic, company, lines, patients, lastPrescribed]\`, \`GROUP BY r.tmm_id\`, LIMIT 100. \`genericsRegister\`: \`[generic, brands, lines, patients]\`, LIMIT 100.
+- \`meta.note\`: junk-filter disclosure.`,
+  },
+  "lab_tests": {
+    title: "Lab Tests",
+    explanatory: `## What this page is
+
+Investigation-ordering analytics: which tests doctors order, how often, for whom (age and gender), and by which doctor, with a per-consult register for download.
+
+## Key metrics
+
+- **Top investigation** (hero): the test ordered for the most distinct patients this period.
+- **Consults with tests**: consultations where at least one investigation was ordered. This counts consultations, not individual tests.
+- **Patients**: distinct patients who had a test ordered.
+- **Distinct tests**: number of different investigation names ordered.
+
+## Charts and tables
+
+- **Investigations over time** (line): consults with tests and distinct patients per period.
+- **By doctor** (bar): top 15 doctors by distinct patients with tests ordered.
+- **Investigation summary** (table): top 50 tests ranked by distinct patients.
+- **Gender mix / Age mix** (donuts): distinct patients by gender and by standard age band (<18, 18-30, 30-45, 45-60, >60).
+- **Patients** (table, download): per consultation: date, UHID, name, gender, age, mobile, and the cleaned list of investigations ordered.
+
+## Honest caveats
+
+- Investigations are captured as free text on the prescription; there is no normalized per-order table. Top tests reflect the field verbatim, so typos and placeholder entries from test clinics can appear, and name variants count separately.
+- The page parses the most recent 20,000 consultations in the window; extremely wide windows on busy clinics may be partially covered.
+- Test counts are by distinct patients per test, so a panel re-ordered for the same patient counts once.`,
+    api: `## Endpoint
+
+\`GET /api/v1/analytics/clinical/lab-test\` (FE nav leaf \`lab_tests\` maps here)
+
+- Params: \`startDate\`, \`endDate\`, \`grain=day|week|month\` (default day), \`doctorIds\` (repeatable). Scope from JWT.
+- Builder: pm-analytics-service/src/analytics/builders/lab.ts.
+
+## Source and parsing
+
+- \`tbl_case_manager cm JOIN tbl_patient_master p ON patient_unique_id\`. WHERE: \`cm.tcm_del = 0 AND cm.hm_business_id = :biz AND cm.tcm_investigation <> '' AND cm.tcm_datetime BETWEEN :s AND :e [AND cm.um_id IN (...)]\`. Fetch newest-first, LIMIT 20000.
+- \`tbl_investigation\` is only a catalogue of report names (no patient or business scope), hence the in-app split.
+- \`cleanInvestigations()\` (exported, reuse it): converts \`<br>\` to the \`//~//\` delimiter, strips HTML tags, \`&nbsp;\`, and \`Â\` mojibake, splits on \`//~//\`, drops trailing \`Remark: ...\`, comma-splits only when the segment has no parentheses (preserves "Bilirubin (Total, Direct)"), collapses whitespace, drops empties, \`[]\`, 1-char strings, and lorem-ipsum junk.
+- Per-test counting: DISTINCT patients per cleaned test name (Map of Sets in TS).
+
+## KPIs
+
+- \`orders\`: fetched row count (consults with at least one investigation).
+- \`patients\`: distinct \`patient_unique_id\`. \`distinct\`: unique cleaned test names.
+
+## Blocks
+
+- \`hero\`: top investigation by distinct patients.
+- \`labTrend\`: \`[k, orders, patients]\`, \`DATE_FORMAT(tcm_datetime, :g)\` (g = \`%Y-%m-%d\` / \`%x-W%v\` / \`%Y-%m\`), last 12 buckets DESC then reversed (NOT zero-filled).
+- \`byDoctor\`: \`[doctor, patients]\`, \`LEFT JOIN tbl_user_master\`, \`COUNT(DISTINCT patient_unique_id)\`, top 15.
+- \`summary\`: \`[investigation, total]\`, top 50 by distinct patients (computed in TS).
+- \`genderMix\`: \`[k, count]\`, M/F folded to Male/Female, else Other; first-seen patient only.
+- \`ageMix\`: \`[k, count]\`, bands from \`TIMESTAMPDIFF(YEAR, pm_dob, CURDATE())\`: <18, 18-30, 30-45, 45-60, >60 (only bands present are returned).
+- \`patients\`: \`[date, patientUHID, patientName, gender, age, mobile, investigations]\` (cleaned, comma-joined).
+- \`meta.note\`: free-text caveat on \`tcm_investigation\`.`,
+  },
+  "procedures": {
+    title: "Procedures",
+    explanatory: `## What this page is
+
+OPD procedures and minor surgeries recorded on prescriptions (the Rx "Surgeries/Procedures" box): what is performed, how often, by which doctor, and a per-procedure register.
+
+## Status: SAMPLE DATA (microservice-blocked)
+
+This page currently renders deterministic, clearly-labelled sample data. The source records live in the pm-patient-docs microservice, which is not connected to analytics yet. The page is fully designed so it is visible and testable; it switches to live data automatically once the bulk feed lands. Every response carries a banner note saying exactly this.
+
+Why blocked: pm-patient-docs only exposes a per-patient lookup (\`/api/v1/surgeries\`), so analytics cannot aggregate across a hospital and date range. The analytics replica has only a tiny INPATIENT procedure table (\`tbl_inpatient_doctor_procedure\`), which is the wrong population for this OPD page (a separate replica-backed builder exists for it).
+
+## Metrics (as designed, sample values today)
+
+- **Top procedure**: the most performed procedure this period.
+- **Procedures performed**: total procedures recorded on prescriptions.
+- **Distinct procedures**: unique procedure names.
+- **Patients with a procedure**: distinct patients who underwent at least one.
+
+## Charts and tables (as designed)
+
+- **Top procedures** (bar), **Procedures over time** (line), **Procedures by doctor** (bar), **Procedure register** (table, download: date, patient, procedure, doctor, notes).
+
+## Honest caveats
+
+- Every number on this page is illustrative until the pm-patient-docs feed ships; sample rows are prefixed "Sample:".
+- Procedure names will be doctor-typed free text once live, so name variants will count separately (same caveat as Symptoms and Lab Tests).`,
+    api: `## Endpoints today
+
+- \`GET /api/v1/analytics/clinical/procedures-opd\`: what the FE Procedures page calls (nav leaf \`procedures\` in analyticsNav.jsx). Served by \`buildProceduresMockDashboard\` (pm-analytics-service/src/analytics/builders/mock.ts): deterministic sample blocks, \`meta: { live: false, note: SAMPLE DATA ... }\`. Params accepted but ignored.
+- \`GET /api/v1/analytics/clinical/procedure\`: separate LIVE builder (builders/procedures.ts) over the replica's \`tbl_inpatient_doctor_procedure\` (\`tidp_title\`, \`tidp_date\`, \`tidp_del\`, \`tidp_anaesthetic_type\`, \`patient_unique_id\`, \`um_id\`, \`hm_business_id\`). Inpatient-only and tiny; not wired to the OPD Procedures page. Blocks: hero, kpis (total/patients/distinct), procedureTrend, byDoctor, summary, genderMix, ageMix, patients register (LIMIT 5000).
+
+## Sample response blocks (the page contract; the real feed must fill the SAME keys)
+
+- \`kpis\`: \`topProcedure\`, \`performed\`, \`distinctProcedures\`, \`patientsWithProcedure\`.
+- \`procTopList\`: \`[k, count]\` (bar). \`procTrend\`: \`[k, count]\` per period (line). \`procByDoctor\`: \`[k, count]\` (bar).
+- \`procRegister\`: \`[date, patient, procedure, doctor, notes]\` (download table).
+- \`meta\`: \`{ live: false }\` until real data; flip to \`live: true\` when the feed lands. The FE needs no changes: only the row sources swap.
+
+## MISSING FEED: pm-patient-docs bulk export (required contract)
+
+Source of truth: pm-patient-docs microservice (config \`lab_params_api_url\`), endpoint \`/api/v1/surgeries\`, today per-patient only. Two acceptable options (mirrors GYNEC-OBSTETRIC-INTEGRATION.md option A/B):
+
+- **Option A (preferred), bulk export endpoint**: \`GET /api/v1/surgeries/export?businessId=<hm_business_id>&from=YYYY-MM-DD&to=YYYY-MM-DD&page=&pageSize=\` returning flattened rows: \`{ recordId, patientUniqueId, doctorId (um_id), businessId (hm_business_id), procedureName, performedDate, notes, deleted, updatedAt }\`. Service-to-service auth; paginated; \`updatedAt\` cursor support for incremental pulls.
+- **Option B, nightly sync into the analytics replica**: same fields landed as a table (e.g. \`rpt_opd_procedures\`), keyed by recordId, soft-delete aware.
+
+Field mapping to blocks: procedureName feeds topProcedure/procTopList/distinctProcedures; performedDate feeds procTrend (grain-aware \`day|week|month\`); doctorId joins \`tbl_user_master.um_name\` for procByDoctor; patientUniqueId joins \`tbl_patient_master\` for the register and distinct-patient KPIs; businessId is the mandatory scope filter; notes fills the register. Once available, clone builders/diagnosis.ts query patterns and replace the mock in analytics.service.ts case \`procedures-opd\`.`,
+  },
+  "vitals": {
+    title: "Vitals",
+    explanatory: `## What this page is
+Capture and quality view of the vital signs recorded at the clinic: what gets measured, how often, and what the readings look like once parsed. It reads BOTH capture tables (the consultation vitals drawer and the body-composition entries), because the older report ignored the second one.
+
+All vitals values are stored as free text at source. Every chart parses defensively (numeric regex plus sanity bounds) and states how many values were discarded. "Captured" means the field was filled in, nothing more: this page measures capture, not clinical validity.
+
+## Key metrics
+- **Vitals records** (hero): total entries across both tables in the period. Why: the raw activity volume of vitals capture.
+- **~Avg vitals per patient**: records / distinct patients, rounded. Why: capture depth per patient, not just volume.
+- **Most captured vital**: the field filled in most often across all entries. Why: shows what the desk actually measures.
+- **Patients with vitals**: distinct patients with at least one entry in either table. Why: reach of vitals capture.
+
+## Charts
+- **What gets measured** (bar): entries per field across all 12 capturable vitals (Temperature, Pulse, BP, Resp. rate, SpO2, RBS, FIB-4, Waist, Height, Weight, OFC, BMI), fixed order, zero-filled so a never-captured vital stays visible.
+- **Blood pressure stages** (bar): parseable systolic/diastolic readings staged Normal, Elevated, Stage 1, Stage 2, Crisis (the higher of the two component stages wins). The note states how many readings were unparseable and how many entries had no BP.
+- **BMI distribution** (bar): Underweight / Normal / Overweight / Obese, parsed with sanity bounds 10 to 60; discards noted.
+- **BMI coverage** (donut): of patients with any vitals record this period, how many have at least one usable BMI.
+- **Random blood sugar bands** (bar): <140 / 140-199 / 200+ mg/dl, bounds 20 to 1000; RBS fill is low and the note says exactly how low.
+- **Repeat monitoring** (donut): patients with 2+ entries (trackable trend) vs a single one-off capture.
+- **Recent entries register** (table): last 100 entries with patient, source table and which fields were recorded.
+
+## Caveats
+- Free-text source: every banded chart excludes unparseable values and says so on the chart.
+- BMI is FE-computed at capture time; per-visit linkage and BMR/BSA analytics are not buildable from this data.`,
+    api: `## Endpoint
+- \`GET /api/v1/analytics/clinical/vitals\` (NestJS global prefix \`api/v1/analytics\`; controller \`@Get('clinical/:entity')\` dispatches to \`buildVitalsDashboard\` in \`pm-analytics-service/src/analytics/builders/vitals.ts\`).
+- Params: \`startDate\`, \`endDate\` (YYYY-MM-DD; defaults 1970-01-01 / 2999-12-31, end expanded to 23:59:59), \`doctorIds\` (repeatable, normalised to array at the controller). \`grain\` not used. Tenant scope NEVER from params: \`hm_business_id = scope.hospitalBusinessId\` decoded from the Bearer JWT.
+
+## Sources
+- \`tbl_casemanager_vitals\` (alias cm): \`tcv_del=0\`, dated by \`tcv_created_date\`. Fields: \`temp\`, \`pres\` (pulse), \`blood_press\`, \`resp_rate\`, \`spo2\`, \`general_rbs\`, \`fib4\`, \`waist_circumference\`.
+- \`tbl_casemanager_b_composition\`: \`tcbc_del=0\`, dated by \`tcbc_created_date\`. Fields: \`height\`, \`weight\`, \`ofc\`, \`bmi\`.
+- \`tbl_patient_master\` LEFT JOIN on \`patient_unique_id\` for register names.
+- Doctor filter: \`cm.um_id IN (:doctorIds)\` on both tables.
+
+## Parsing rules (all value columns are VARCHAR)
+- Numeric: \`TRIM(col) REGEXP '^[0-9]+([.][0-9]+)?$'\`. BP: \`blood_press REGEXP '^[0-9]{2,3}/[0-9]{2,3}$'\`, split with \`SUBSTRING_INDEX\`. BMI valid: numeric AND 10-60. RBS valid: numeric AND 20-1000.
+- Each query wrapped in safeQ (per-query failure returns [], never 500s the page).
+
+## Response blocks (dashboard-block contract)
+- \`hero\` {label 'Vitals records', value}: COUNT(*) both tables.
+- \`kpis\`: \`avgVitalsPerPatient\` (~records/patients), \`topVital\`, \`patientsWithVitals\` (COUNT DISTINCT patient_unique_id over the UNION of both tables).
+- \`vitalsCaptured\` {k,count}: SUM(field <> '') per field, 12 rows fixed order, zero-filled.
+- \`bpMix\` {k,count}: 5 fixed stage rows; note carries unparseable + not-recorded counts.
+- \`bmiMix\` {k,count}: 4 fixed bands; note carries discard count.
+- \`bmiCoverage\` {k,count}: With BMI (distinct patients with a valid BMI) vs Without.
+- \`rbsMix\` {k,count}: 3 fixed bands; note carries fill rate + discards.
+- \`monitoredShare\` {k,count}: patients with >=2 vs =1 entries (UNION universe).
+- \`patients\` (register): date, patientUHID, patientName, source (Vitals | Body composition), recorded (comma list of filled fields), ORDER BY ts DESC LIMIT 100.
+- \`meta\` {live:true, rowCount, note}.
+
+## FE wiring
+- \`DASHBOARD_ENDPOINTS.vitals = "clinical/vitals"\` (shell/analyticsNav.jsx); block keys must be in \`BLOCK_ORDER\`, titles in \`BLOCK_TITLES\`, chart types in \`BLOCK_CHART_TYPE\` (service.js): vitalsCaptured/bpMix/bmiMix/rbsMix bar, bmiCoverage/monitoredShare donut.`,
+  },
+  "medical_history": {
+    title: "Medical History",
+    explanatory: `## What this page is
+Prevalence view of the structured medical-history registry: which conditions, allergies, family history items, lifestyle factors and past surgeries the clinic's patients carry.
+
+The one rule that defines this page: **history is a registry, not an event stream**. Prevalence is computed from each patient's LATEST saved history record over ALL TIME. The selected date range applies ONLY to the captures-over-time trend.
+
+## Counting rules
+- A history item counts only when the doctor ticked it (\`enable='Y'\`). Unticked items (\`enable='N'\`) are documented denials ("asked, patient said no") and are excluded from every count.
+- Items bucket strictly by section: 1 Lifestyle, 2 Medical condition, 3 Family history, 4 Allergies, 5 Surgical.
+- Items group by normalised title (case/space-insensitive), displaying the most frequent casing. Never by internal tag id: the same title gets different ids per clinic.
+- A sixth segregation, **Additional history**, counts patients whose record carries free-text remarks outside the tag taxonomy (presence only, content is not analysed).
+
+## Key metrics
+- **Patients with history**: distinct patients with at least one confirmed item in any section on their latest record. Why: the registry's true coverage.
+- **Top condition / Top allergy / Top family history / Top lifestyle factor / Top past surgery**: the item confirmed for the most distinct patients in each section. Why: the clinic's clinical profile at a glance.
+
+## Charts and tables
+- Five distribution bars (**Top medical conditions / allergies / family history / lifestyle factors / past surgeries**): top 10 items each, by distinct patients.
+- **Additional history notes** (donut): patients with vs without free-text remarks.
+- **History captures over time** (line): history entries saved per day/week/month in the selected period, with distinct patients. The ONLY date-windowed block.
+- **History register** (table): all five sections in one ranked table (Section, Item, Patients, Last recorded), top 150.
+
+## Caveats
+- The Doctor filter does not apply: the history table records no doctor.
+- Records that fail JSON parsing are skipped and counted in the page note.
+- Not buildable: the unanswered "-" state (never persisted), remarks content analytics, surgical timelines, onset trends.`,
+    api: `## Endpoint
+- \`GET /api/v1/analytics/clinical/medical-history\` (dispatches to \`buildMedicalHistoryDashboard\` in \`pm-analytics-service/src/analytics/builders/medical.ts\`).
+- Params: \`startDate\`, \`endDate\` (apply ONLY to \`captureTrend\`), \`grain\` (day|week|month, DATE_FORMAT '%Y-%m-%d' | '%x-W%v' | '%Y-%m', default month). \`doctorIds\` accepted but IGNORED (no doctor column; stated in meta.note). Tenant scope from JWT (\`hm_business_id = :biz\`).
+
+## Source
+- \`tbl_micro_patient_medical_history\`: \`medical_history\` is a JSON string per row: \`[{ tmmhs_id, no_know_history, tags:[{ tmmhst_id, title, enable }], medical_history_remarks? }]\`.
+- Registry query: latest row per patient via \`JOIN (SELECT patient_unique_id, MAX(tmpmh_id) ...)\`, filters \`tmpmh_delete=0\`, \`medical_history NOT IN ('','[]')\`, LIMIT 20000. No date filter.
+- Trend query: COUNT(*) entries + COUNT(DISTINCT patient_unique_id) grouped by \`DATE_FORMAT(tmpmh_created_date, :g)\` within the window.
+- JSON parsed in TS (\`extractSections\`): bucket by \`tmmhs_id\` 1-5, keep \`enable='Y'\` only, group by \`LOWER(TRIM(title))\` (display = most frequent casing). Parse failures counted into \`meta.parseFails\`.
+
+## Response blocks
+- \`kpis\` (no hero): \`patientsWithHistory\`, \`topCondition\` (section 2), \`topAllergy\` (4), \`topFamilyHistory\` (3), \`topLifestyle\` (1), \`topSurgical\` (5).
+- \`conditionDist\` / \`allergyDist\` / \`familyDist\` / \`lifestyleDist\` / \`surgicalDist\` {k,count}: top 10 per section by distinct patients.
+- \`additionalHistory\` {k,count}: with vs without non-empty \`medical_history_remarks\` on the latest record.
+- \`captureTrend\` {k,entries,patients}: per-grain saves in the window.
+- \`historyRegister\` {section,item,patients,lastRecorded}: all sections ranked by patients, top 150.
+- \`meta\` {live:true, rowCount, parseFails, note} where note states the registry semantics, the enable='N' exclusion and the unsupported doctor filter.
+
+## FE wiring
+- \`DASHBOARD_ENDPOINTS.medical_history = "clinical/medical-history"\`; chart types: five dist bars, additionalHistory donut, captureTrend line; \`historyRegister\` is in TABLE_BLOCKS (renders as table).`,
+  },
+  "gynec": {
+    title: "Gynec (Menstrual)",
+    explanatory: `## What this page is
+Menstrual gynec history analytics: cycle regularity, flow, pain, reproductive life stage, and the menarche/cycle-interval averages. Clinically, irregular-cycle share is the screening signal for PCOD and thyroid workups.
+
+## Why it shows SAMPLE data today
+The gynec record is NOT in the analytics database. The EMR's Gynec History screen saves to a separate microservice (\`pm-medicalhistory\`), which exposes only a per-patient lookup: there is no "all gynec records for hospital X in range Y" call. Per product direction there are no "coming soon" pages, so the page renders deterministic, clearly-labelled sample data with a banner; it switches to live data automatically once a bulk feed lands. Nothing on this page is real today.
+
+## The metrics (as designed, mapped to real fields)
+- **Patients with gynec history**: distinct \`patientId\` with a record; denominator for coverage = female patients in the patient master.
+- **~Avg age at menarche** (\`ageAtMenarche\`): mean recorded age at first menstruation; outliers under 9 or over 16 flagged.
+- **~Avg cycle interval** (\`intervalOfCycle\`, days) and **~avg flow duration** (\`durationOfMenstrualFlow\`, days).
+- **Irregular cycles %**: share of records with \`cycle = Irregular\`.
+- **Cycle mix** (\`cycle\`: Regular / Irregular / Not recorded), **Flow mix** (\`flow\`: Heavy / Moderate / Scanty / Not recorded), **Pain mix** (\`pain\`: None / Mild / Moderate / Severe / Not recorded), **Reproductive life stages** (\`reproductiveLifeStages\`: Menopause / Perimenopause / Lactational amenorrhea, with \`typeOfMenopause\` detail).
+- **Gynec history register**: per-patient summary (LMP, cycle, flow, pain, stage).
+All value vocabularies are fixed in the EMR (\`gynec_constants.js\`), so every mix has a known, zero-fillable domain.
+
+## Caveats
+- Until the feed lands, every number is illustrative; the response carries \`meta.live: false\` and an explicit sample-data note the UI shows as a banner.
+- Tenant attribution must be recovered by joining \`patientId\` to the patient master: the gynec document carries no hospital id.`,
+    api: `## Endpoint (today)
+- \`GET /api/v1/analytics/clinical/gynec\` returns \`buildGynecMockDashboard\` (\`pm-analytics-service/src/analytics/builders/mock.ts\`): deterministic sample data, ignores all params, \`meta: { live:false, note: SAMPLE_NOTE('pm-medicalhistory gynec service') }\`.
+- Sample blocks (the page contract to keep when going live): \`kpis\` (\`patientsWithGynec\`, \`avgMenarche\`, \`avgCycle\`, \`avgFlowDays\`, \`irregularShare\`), \`cycleMix\`, \`flowMix\`, \`painMix\`, \`stageMix\` (all {k,count} donuts), \`gynecRegister\` {patient,age,lmp,cycle,flow,pain,stage} table.
+- FE wiring: \`DASHBOARD_ENDPOINTS.gynec = "clinical/gynec"\`; blocks already registered in BLOCK_ORDER / BLOCK_TITLES / BLOCK_CHART_TYPE.
+
+## Where the real data lives (pm-medicalhistory microservice)
+- \`gynec_api_url = https://pm-medicalhistory-{env}.tatvacare.in/api/v1/gynec-history\`.
+- Existing calls (EMR \`ApiGynec.js\`): \`GET /gynec/{patientId}/{userId}\` (point lookup), \`POST /gynec\`, \`PATCH /gynec/{patientId}/{userId}\`. \`userId\` = doctor's \`user_id\` from the JWT.
+- Document shape: \`{ patientId, timeline: [{ lmp, ageAtMenarche, ageAtMenopause, intervalOfCycle, durationOfMenstrualFlow, numberOfPadsPerDay, cycle, flow, pain, occurrenceOfPain, clots, reproductiveLifeStages, typeOfMenopause, note, createdAt, createdBy }], createdAt, createdBy }\`.
+
+## Why analytics cannot read it (three blockers)
+1. No bulk/list endpoint: per-patient GET only; N HTTP calls per cohort is not viable.
+2. \`pm-analytics-service\` is a pure read-replica reader (mysql2 only): no HTTP client, and proxying the doctor's session token is wrong and blocked.
+3. No tenant id in the payload: \`patientId\` must be joined back to \`tbl_patient_master\` in the replica for \`hm_business_id\` attribution.
+
+## MISSING FEED, required contract (pick one; A recommended)
+- **A. Bulk export on pm-medicalhistory**: \`GET /gynec-history/export?businessId=&from=&to=\` returning flattened timeline rows (one row per timeline entry, keys above plus patientId). Analytics reads it on a schedule or proxies it. Same shape needed for the obstetric collection.
+- **B. Read replica** of the pm-medicalhistory datastore: analytics queries it directly, joins patient to tenant in the replica.
+- **C. Nightly sync job** copying the flattened timeline into a \`tatva_clinic\` table keyed by \`patient_unique_id\` (best fit for the existing builder pattern).
+- Full contract: \`docs/analytics-planning/GYNEC-OBSTETRIC-INTEGRATION.md\`. When a feed lands, replace the mock's row sources; the page contract stays.`,
+  },
+  "obstetric": {
+    title: "Obstetrics",
+    explanatory: `## What this page is
+Obstetric history analytics: recorded pregnancy, abortion and ectopic events, delivery modes, gestation at delivery, the expected-delivery pipeline and ANC schedule status. Gynec (menstrual) history is a separate page; per product rule the two are never mixed.
+
+## The legacy gate (read this first)
+The analytics database only holds the LEGACY obstetric tables, frozen around mid-2024. The modern obstetric screen saves to the gynec microservice (\`pm-medicalhistory\`), which has no bulk feed yet. The page says so in an explicit banner: clinics with legacy rows see them labelled as legacy; clinics with none see the pending note, never fake zeros. It lights up with current data once the obstetric feed lands (same contract as gynec).
+
+Also: G/P/L/A/E counters are NOT persisted in this database. The page counts recorded EVENTS instead and labels them as such.
+
+## Key metrics
+- **Patients with obstetric record**: distinct patients with at least one history row. Why: reach of obstetric documentation.
+- **Obstetric records**: total entries (pregnancies, abortions, ectopics).
+- **Pregnancy / delivery events**, **Abortion events**, **Ectopic events**: event-type counts from the record's box type. The abortion count is the nearest available proxy for the A counter.
+- **Marked currently pregnant**: legacy pregnancy rows flagged pregnant. Frozen data: treat as historical.
+
+## Charts and tables
+- **Obstetric outcomes** (donut): events by type (Pregnancy/delivery, Abortion, Ectopic, plus Other only when present).
+- **Delivery mode mix** (donut): recorded deliveries by mode, top 10, 'Not recorded' kept visible.
+- **Gestation at delivery** (bar): weeks parsed from free text, banded under 28, 28-36 (preterm), 37-42 (term), over 42, Not recorded.
+- **Expected deliveries by month** (line): EDD pipeline from the legacy pregnancy rows. Newest EDDs end in 2024, so this reads as a historical pipeline.
+- **ANC schedule status** (donut): antenatal scheduler items by status (legacy scheduler, not date-windowed).
+- **Obstetric register** (table): latest 200 events with patient, age, event, delivery mode, weeks, baby gender and outcome.`,
+    api: `## Endpoint
+- \`GET /api/v1/analytics/clinical/obstetric\` (dispatches to \`buildObstetricDashboard\` in \`pm-analytics-service/src/analytics/builders/obstetric.ts\`).
+- Params: \`startDate\`, \`endDate\` (window applies to \`tbl_case_obstetrics_history\` blocks via \`tcoh_created_date\`; the EDD pipeline, ANC mix and pregnancy totals are deliberately not windowed: legacy registry reads), \`doctorIds\` (filters \`o.um_id\` on the history table only). Tenant scope from JWT (\`hm_business_id = :biz\` on all three tables).
+
+## Sources (all legacy, frozen ~mid-2024)
+- \`tbl_case_obstetrics_history\` (o): \`tcoh_del=0\`. Event type from \`UPPER(LEFT(tcoh_box_type,1))\`: P=Pregnancy/delivery, A=Abortion, E=Ectopic, else Other. Detail fields: \`tcoh_p_delivery\` (mode), \`tcoh_p_weeks\` (free text, weeks via \`REGEXP_SUBSTR('[0-9]+')\`), \`tcoh_p_gender\`, \`tcoh_p_status\`.
+- \`tbl_case_obstetrics_history_pregnancy\` (hp): \`tcohp_del=0\`; \`tcohp_expected_delivery_date > '1900-01-01'\` for the EDD pipeline; \`tcohp_pregnant IN ('yes','y','1')\` for currently-pregnant.
+- \`tbl_doctor_anc_scheduler\` (a): \`anc_del=0\`, \`anc_status\` mix, top 8.
+- \`tbl_patient_master\` LEFT JOIN for register name + age (\`TIMESTAMPDIFF(YEAR, pm_dob, CURDATE())\`).
+
+## Response blocks
+- \`kpis\` (no hero): \`patients\`, \`records\`, \`pregnancies\`, \`abortions\`, \`ectopic\`, \`currentlyPregnant\`.
+- \`outcomeMix\` {k,count}: fixed order Pregnancy/delivery, Abortion, Ectopic; Other appended only when nonzero.
+- \`deliveryModeMix\` {k,count}: P-events only, \`COALESCE(NULLIF(TRIM(tcoh_p_delivery),''),'Not recorded')\`, top 10.
+- \`gestationMix\` {k,count}: 5 fixed bands, zero-filled.
+- \`eddPipeline\` {k,count}: per \`DATE_FORMAT(tcohp_expected_delivery_date,'%Y-%m')\`.
+- \`ancStatusMix\` {k,count}: per \`anc_status\`.
+- \`patients\` (register): date, patientUHID, patientName, age, outcome, delivery, gestationWeeks, babyGender, babyStatus; ORDER BY tcoh_created_date DESC LIMIT 200.
+- \`meta\` {live:true, rowCount, note}: note is the legacy banner (has-data vs no-data variants).
+
+## Missing feed
+- Modern obstetric entries live at \`obstetric_api_url = https://pm-medicalhistory-{env}.tatvacare.in/api/v1/obstetric-history\` (per-patient pattern, no bulk feed). Required contract = the same A/B/C options as the gynec page (recommended: \`GET /obstetric-history/export?businessId=&from=&to=\` returning flattened rows). See \`docs/analytics-planning/GYNEC-OBSTETRIC-INTEGRATION.md\`.
+
+## FE wiring
+- \`DASHBOARD_ENDPOINTS.obstetric = "clinical/obstetric"\`; outcomeMix/deliveryModeMix/ancStatusMix donut, gestationMix bar, eddPipeline line.`,
+  },
+  "growth_chart": {
+    title: "Growth Chart",
+    explanatory: `## What this page is
+Pediatric growth measurement analytics: how many children get measured, what the recorded heights and weights look like, whether head circumference is captured, and whether children are measured repeatedly (a growth chart only has value with serial measurements).
+
+## Pediatric scope (the defining rule)
+Only measurements taken while the patient was UNDER 18 at the time of measurement count (age computed from date of birth vs the measurement date). Rows with no usable DOB (missing, zero-date, or DOB after the measurement) are excluded, because age at measurement cannot be established. This fixed the old page, where adult consultation vitals inflated the numbers.
+
+Adult BMI bands (18.5/25/30) are clinically meaningless for children (pediatric BMI is age-and-sex percentile based), so the adult-banded BMI chart was removed. Raw height and weight distributions are shown instead.
+
+## Key metrics
+- **Measurements**: height/weight entries for under-18 patients in the period. Why: capture volume.
+- **Children measured**: distinct children with at least one measurement. Why: reach.
+- **Growth-screen entries**: entries made on the growth-chart screen itself (source flag); the rest of the height/weight data comes from the consultation vitals drawer. Why: adoption of the dedicated tool vs incidental capture.
+
+## Charts and tables
+- **Height distribution** (bar): fixed centimetre bands (Under 50 up to 150-200), plus explicit 'Implausible value' (over 200 cm or non-positive) and 'Not recorded' buckets; nothing is silently dropped.
+- **Weight distribution** (bar): fixed kilogram bands (Under 5 up to 60-120), same implausible/missing treatment (implausible = over 120 kg or non-positive).
+- **Head circumference capture** (donut): measurements with OFC recorded vs not.
+- **Repeat measurement coverage** (donut): children measured 2+ times vs once in the period. Why: serial measurement is the real value signal of a growth module.
+- **Measurement register** (table): up to 5000 rows with date, patient, gender, age at measurement, height, weight, BMI (shown only when plausible), OFC.
+
+## Caveats
+- Percentile / z-score analytics (height-for-age, weight-for-age, stunting/wasting) need WHO/IAP reference tables and clean sex+DOB data; not built yet.
+- Doctor filter applies (entries carry the recording doctor).`,
+    api: `## Endpoint
+- \`GET /api/v1/analytics/clinical/growth-chart\` (dispatches to \`buildGrowthChartDashboard\` in \`pm-analytics-service/src/analytics/builders/growth.ts\`).
+- Params: \`startDate\`, \`endDate\` (window on \`tcbc_created_date\`), \`doctorIds\` (filters \`cm.um_id\`). Tenant scope from JWT (\`hm_business_id = :biz\`).
+
+## Source
+- \`tbl_casemanager_b_composition\` (cm): \`tcbc_del=0\`; fields \`height\`, \`weight\`, \`bmi\`, \`ofc\`, \`tcbc_source\`.
+- INNER JOIN \`tbl_patient_master\` p on \`patient_unique_id\` (needed for DOB; the join plus the age predicate enforce the pediatric scope).
+- Pediatric predicate: \`TIMESTAMPDIFF(YEAR, p.pm_dob, cm.tcbc_created_date) BETWEEN 0 AND 17\` (NULL/zero DOB makes the age NULL, which fails BETWEEN and drops the row).
+- Banding: height CAST DECIMAL, implausible = <=0 or >200 cm; weight implausible = <=0 or >120 kg; BMI shown in the register only when \`bmi > 0 AND bmi < 100\`; OFC counted when \`> 0\`.
+- All queries via safeQ (failure returns [], page never 500s).
+
+## Response blocks
+- \`kpis\` (no hero): \`measurements\` (COUNT(*)), \`patients\` (COUNT DISTINCT patient_unique_id, labelled Children measured), \`growthScreenUsage\` (SUM(tcbc_source='GROWTH_CHART')).
+- \`heightDistribution\` {k,count}: 8 fixed rows (6 bands + Implausible value + Not recorded), zero-filled.
+- \`weightDistribution\` {k,count}: 8 fixed rows, same treatment.
+- \`ofcCapture\` {k,count}: OFC recorded vs Not recorded (= measurements - ofcRecorded).
+- \`repeatMeasured\` {k,count}: Measured 2+ times vs Measured once (GROUP BY patient).
+- \`patients\` (register): date, patientUHID, patientName, gender, age (at measurement), height, weight, bmi, ofc; ORDER BY tcbc_created_date DESC LIMIT 5000.
+- \`meta\` {live:true, rowCount, note}: note states the pediatric scope, the DOB exclusion and the implausible-value bucketing.
+
+## FE wiring
+- \`DASHBOARD_ENDPOINTS.growth_chart = "clinical/growth-chart"\`; heightDistribution/weightDistribution bar, ofcCapture/repeatMeasured donut; titles in BLOCK_TITLES (service.js).
+
+## Needed for the planned percentile metrics
+- WHO/IAP growth reference tables (LMS parameters by age in months and sex) loaded server-side; then height-for-age / weight-for-age z-scores and stunting/wasting prevalence become computable from the same rows. No external service feed required, only the reference dataset.`,
+  },
+  "vaccination": {
+    title: "Vaccination",
+    explanatory: `## What this page is
+Doses-administered analytics: which vaccines are given, to how many patients, and whether they follow the standard IAP schedule or a clinic-customised one.
+
+Two data fixes define this page's numbers:
+- **Join fix**: bulk-entered doses store the vaccine id in a different column than single entries. The old report joined only the single-entry column and silently dropped ~65% of doses (one reference tenant went from 0 to 148 doses). The join now falls back to the bulk column.
+- **Date fix**: doses are dated strictly by their recorded GIVEN date. The old fallback to the catalog row's creation date invented dates; doses without a given date (or with a placeholder before 1901) are excluded from every count rather than guessed.
+
+## Key metrics
+- **Top vaccine** (hero): the vaccine with the most doses this period.
+- **Doses administered**: dose rows with a valid given date in the period. Why: true administration volume.
+- **Patients vaccinated**: distinct patients receiving at least one dated dose. Why: reach.
+- **Distinct vaccines**: number of different vaccines administered. Why: breadth of the immunisation service.
+
+## Charts and tables
+- **Summary** (per-vaccine): top 50 vaccines with doses and distinct patients.
+- **IAP schedule vs other** (donut): doses recorded against the system-provided IAP vaccination chart vs a clinic-customised or unmapped template; both rows always shown, zero-filled. Why: schedule standardisation signal.
+- **Dose register** (table): up to 5000 rows with date, patient, vaccine, dose label and route.
+
+## Caveats
+- A deleted catalog entry does not erase administered doses: the catalog delete flag is deliberately not filtered.
+- The Doctor filter is ignored: dose rows carry the recording user, not necessarily the doctor.
+- Not buildable from this data: refusal status (not stored anywhere), administered brand per dose, batch/lot/expiry.`,
+    api: `## Endpoint
+- \`GET /api/v1/analytics/clinical/vaccination\` (dispatches to \`buildVaccinationDashboard\` in \`pm-analytics-service/src/analytics/builders/vaccination.ts\`).
+- Params: \`startDate\`, \`endDate\` (window on \`vp.tvp_given_date\`). \`doctorIds\` accepted but IGNORED (\`tvpv_user\` is the recording user, not the doctor). Tenant scope from JWT, applied via the PATIENT's hospital (dose rows carry no business column).
+
+## Sources and joins
+- \`tbl_vaccine_patient_vacc\` v (dose rows: \`tvpv_vaccine\`, \`tvpv_vaccine_all\` varchar, \`tvpv_temp_id\`, \`tvpv_dose\`, \`tvpv_route\`, \`patient_unique_id\`, \`tvp_id\`).
+- JOIN \`tbl_vaccine\` vc ON \`vc.tvac_id = IF(v.tvpv_vaccine > 0, v.tvpv_vaccine, CAST(v.tvpv_vaccine_all AS UNSIGNED))\` (the bulk-entry fallback; \`vc.tvac_del\` intentionally NOT filtered).
+- JOIN \`tbl_vaccine_patient\` vp ON \`tvp_id\` for \`tvp_given_date\` (the only dose date; \`> '1900-01-01'\` drops NULLs and placeholders).
+- JOIN \`tbl_patient_master\` p ON \`patient_unique_id\`, JOIN \`tbl_hospital_master\` h ON \`h.hm_id = p.hm_id\`; scope \`h.hm_business_id = :biz\`.
+- IAP split: LEFT JOIN \`tbl_vaccine_templete\` t ON \`t.tvt_id = v.tvpv_temp_id\`; \`t.pms_default IN (1,2)\` = IAP, else (including unmapped) Other.
+
+## Response blocks
+- \`hero\` {label 'Top vaccine', value}.
+- \`kpis\`: \`doses\` (COUNT(*)), \`patients\` (COUNT DISTINCT v.patient_unique_id), \`vaccines\` (COUNT DISTINCT vc.tvac_id).
+- \`summary\` {vaccine,doses,patients}: per \`COALESCE(NULLIF(vc.tvac_name,''),'(unnamed)')\`, ORDER BY doses DESC LIMIT 50.
+- \`iapVsOther\` {k,doses,patients}: two fixed rows ('IAP standard schedule', 'Clinic-customised or other'), zero-filled.
+- \`patients\` (register): date (DATE(tvp_given_date)), patientUHID, patientName, vaccine, dose (\`NULLIF(tvpv_dose,'')\`), route (\`NULLIF(tvpv_route,'')\`); ORDER BY date DESC LIMIT 5000.
+- \`meta\` {live:true, rowCount, note}: note states the given-date rule, the bulk-join recovery and the IAP derivation.
+
+## FE wiring
+- \`DASHBOARD_ENDPOINTS.vaccination = "clinical/vaccination"\`; \`iapVsOther\` donut; titles in BLOCK_TITLES (service.js).
+
+## Known gaps (would need product/schema changes, no external feed)
+- Refusal tracking: no status field exists anywhere in the vaccine tables.
+- Brand-per-dose and batch/lot/expiry: not captured at administration time.
+- Due/overdue list: requires evaluating the patient's template schedule against administered doses (template ages exist in \`tbl_vaccine_templete.tvt_age\` sections); buildable server-side later, no new feed needed.`,
+  },
+  "custom_modules": {
+    title: "Custom Modules (Care)",
+    explanatory: `## What this page is
+
+Custom Modules tracks the reusable RxPad blocks doctors build themselves (diet plans, bed-rest instructions, specialty tables) and, critically, whether those modules get **shared and reused across doctors**: the signal that a clinic is building its own clinical content library.
+
+> **Status: SAMPLE DATA (microservice-blocked).** The module registry lives in the **dynamic-modules microservice** (\`custom_module_api_url\`, called via \`ApiCustomModule.js\`), not in the \`tatva_clinic\` analytics replica. The only in-DB trace is an opaque per-doctor template blob, which cannot yield reuse-by-another-doctor or most-used counts. Per product direction there are no "coming soon" pages: the page renders deterministic illustrative numbers, every response carries \`meta.live: false\` and a \`meta.note\` banner, and it switches to live data automatically once the bulk feed lands.
+
+## Key metrics (illustrative until the feed lands)
+
+- **Custom modules**: total reusable modules built by this hospital's doctors (matches the count the Rx screen shows, e.g. 15/15). Why: size of the clinic's own content library.
+- **Created this period**: new modules built in the selected date range. Why: is the library still growing.
+- **Creating doctors**: doctors who have built at least one module. Why: is creation concentrated in one power user or spread.
+- **Reuse rate (%)**: share of module uses where the user is NOT the module's creator. Why: the cross-doctor sharing signal, the whole point of custom modules.
+
+## Charts and tables
+
+- **Most used modules** (bar): which modules get picked the most across all doctors.
+- **Modules created by doctor** (bar): per-doctor creation counts.
+- **Created vs reused** (donut): uses by the creator vs reuses by another doctor.
+- **Module register** (table, downloadable): every module with creator, column count, created date, times used, and how many other doctors reused it.
+
+## Caveats
+
+- Every number on this page is sample data today; the banner says so explicitly. Do not quote these figures.
+- The page contract (KPI keys, block keys) is final: swapping in the real feed only replaces the row sources.`,
+    api: `## Endpoint (live today, returns sample data)
+
+- \`GET /api/v1/analytics/operational/custom-modules\`
+- Auth: \`Authorization: Bearer <JWT>\`; tenant scope (\`result.hospital_business_id\`) decoded server-side, never trusted from the client.
+- Params accepted: \`startDate\`, \`endDate\`, \`grain=day|week|month\`, \`doctorIds\` (currently ignored by the mock builder).
+- Builder: \`pm-analytics-service/src/analytics/builders/operational.ts\` \`case 'custom-modules'\` delegates to \`buildCustomModulesMockDashboard\` in \`builders/mock.ts\`.
+- FE wiring: leaf \`custom_modules\` in \`src/pages/analytics/shell/analyticsNav.jsx\` (\`DASHBOARD_ENDPOINTS.custom_modules = "operational/custom-modules"\`); block titles/viz in \`src/pages/analytics/service.js\` (\`moduleMostUsed\` bar, \`moduleByCreator\` bar, \`moduleCreatedVsReused\` donut, \`moduleRegister\` table).
+
+## Response contract (stable; real feed must fill the same shape)
+
+- \`kpis[]\`: \`totalModules\`, \`createdPeriod\`, \`creatingDoctors\`, \`reuseRate\` (unit \`%\`).
+- \`moduleMostUsed\`: \`{ k: module, count: timesUsed }\`.
+- \`moduleByCreator\`: \`{ k: doctor, count: modulesCreated }\`.
+- \`moduleCreatedVsReused\`: fixed 2-row domain \`{ k: 'Used by the creator' | 'Reused by another doctor', count }\`.
+- \`moduleRegister\`: \`{ module, creator, columns, created, uses, reusedBy }\`.
+- \`meta\`: \`{ live: false, rowCount, note: SAMPLE-DATA banner }\`. Flip \`live: true\` and drop the note when real.
+
+## MISSING FEED: dynamic-modules bulk export (required to go live)
+
+The dynamic-modules service must expose a hospital-keyed bulk export (or sync into the replica), same pattern as the gynec feed (see \`docs/analytics-planning/GYNEC-OBSTETRIC-INTEGRATION.md\`):
+
+1. **Modules registry**: \`GET .../modules/export?hospitalBusinessId=&since=\` returning per module: \`module_id\`, \`hospital_business_id\`, \`creator_doctor_id\` (um_id or doctor_unique_id, state which), \`name\`, \`column_count\`, \`created_at\`, \`deleted\` flag.
+2. **Usage / reuse log with \`origin_id\`**: per use event: \`module_id\`, **\`origin_id\`** (the source module a copy was cloned from: the reuse marker), \`used_by_doctor_id\`, \`hospital_business_id\`, \`used_at\`. Reuse rate = events where \`used_by_doctor_id != creator_doctor_id\` (resolved via \`origin_id\`) divided by all use events.
+
+Without the \`origin_id\` reuse log, only creation counts are computable; reuse rate, most-used and created-vs-reused all stay blocked.`,
+  },
+  "certificates": {
+    title: "Certificates (Care)",
+    explanatory: `## What this page is
+
+Medical-certificate issuance for the clinic: how many certificates were issued, of what type, by which doctor, and whether they came from system templates or the clinic's own custom templates. Useful for admins (workload, template adoption) and for audit (who certified whom, when). Live data, verified against the reference tenant (194 issued, top type Medical Fitness, top doctor Dr Sheela BR).
+
+## Key metrics
+
+- **Certificates issued**: count of certificates issued to patients in the period. Source: \`tbl_certificate_upgrade\` rows (\`tcu_del = 0\`, dated by \`tcu_created_date\`). Why: the headline volume.
+- **Most-issued type**: the top certificate type with its count. Type is canonicalised: the linked template title where available, else the saved snapshot title, blanks bucket to "Untitled". Why: what the clinic actually certifies.
+- **Top issuing doctor**: the doctor who issued the most (the **issuing** doctor, not the template author). Why: workload attribution.
+- **Patients certified**: distinct patients who received a certificate (\`COUNT(DISTINCT patient_unique_id)\`). Why: reach, vs repeat issuance.
+- **Custom templates**: templates this clinic built itself (\`tbl_certificate_document.pms_default = 0\` for this business), shown against the count of system templates (\`pms_default = 1\`, global). Why: template-library adoption.
+
+## Charts and tables
+
+- **Certificate types** (donut, top 12): issued certificates by canonical type.
+- **Certificates over time** (line, per selected grain): issuance trend.
+- **Certificates by doctor** (bar, top 15): issuing doctor ranking.
+- **Certificate register** (table, latest 200): date, type, patient, issuing doctor, and template source (System template / Custom template / Ad-hoc when no template is linked).
+
+## Caveats
+
+- Type names come from titles, not a coded taxonomy: renamed templates change historical labels via the join; blank titles show as Untitled.
+- The doctor dimension joins on \`tbl_user_master.doctor_unique_id\` (a string token, NOT \`um_id\`); unmatched tokens display as "Unknown".`,
+    api: `## Endpoint
+
+- \`GET /api/v1/analytics/operational/certificates?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&grain=day|week|month&doctorIds=...\`
+- Auth: Bearer JWT; scope = \`hospital_business_id\` from token.
+- Builder: \`builders/operational.ts\` \`case 'certificates'\`. SELECT-only, every sub-query wrapped in a catch that degrades to an empty block.
+- FE: leaf \`certificates\` maps to \`operational/certificates\` (\`analyticsNav.jsx:126\`); titles/viz registered in \`service.js\` (\`certTypeMix\` donut, \`certTrend\` line and a SEQUENCE_BLOCK single-colour bar, \`certByDoctor\` bar, \`certificates\` register table).
+
+## Tables and joins
+
+- Facts: \`tbl_certificate_upgrade c\` (filter \`c.tcu_del = 0 AND c.hm_business_id = :biz AND c.tcu_created_date BETWEEN :s AND :e\`).
+- Templates: \`LEFT JOIN tbl_certificate_document d ON d.id = c.tcu_content_id\` (\`d.pms_default\`: 1 system/global with \`hm_business_id = 0\`, 0 custom; library filter \`del = 0\`).
+- Doctor names: \`LEFT JOIN tbl_user_master u ON u.doctor_unique_id = c.doctor_unique_id\` (string token join, NOT um_id).
+- Patients: \`LEFT JOIN tbl_patient_master p ON p.patient_unique_id = c.patient_unique_id\`.
+- Canonical type expression: \`COALESCE(NULLIF(TRIM(d.title),''), NULLIF(TRIM(c.tcu_title),''), 'Untitled')\`.
+- NOTE for reimplementers: the \`doctorIds\` filter is bound directly against \`c.doctor_unique_id IN (...)\`. The FE sends um_id values elsewhere; if you extend this, map um_id to doctor_unique_id via \`tbl_user_master\` (the billing pages already do this).
+
+## Response blocks
+
+- \`kpis[]\`: \`issued\`, \`topType\` (value = type string, count in description), \`topDoctor\`, \`patients\`, \`customTemplates\` (system count in description). Empty period: \`topType\`/\`topDoctor\` render value \`'—'\`.
+- \`certTypeMix\`: \`{ k: type, count }\` top 12.
+- \`certTrend\`: \`{ k: grainBucket, count }\` (DATE_FORMAT by grain: \`%Y-%m-%d\` / \`%x-W%v\` / \`%Y-%m\`).
+- \`certByDoctor\`: \`{ k: doctor, count }\` top 15, grouped by \`c.doctor_unique_id\`.
+- \`certificates\` (register): \`{ date, type, patient, doctor, source }\`, latest 200; \`source\` = \`d.pms_default = 0\` ? 'Custom template' : \`d.id\` non-null ? 'System template' : 'Ad-hoc'.
+- Template KPI source: \`SELECT SUM(pms_default = 0 AND hm_business_id = :biz) AS custom, SUM(pms_default = 1) AS system FROM tbl_certificate_document WHERE del = 0\` (not date-filtered: library size is point-in-time).
+- \`meta\`: \`{ live: true, rowCount }\`.
+
+No missing feeds: fully served from the replica.`,
+  },
+  "pharmacy": {
+    title: "Pharmacy",
+    explanatory: `## What this page is
+
+The full pharmacy-counter picture from the standalone pharmacy module's own tables (the \`tbl_pha_*\` family): sales and returns, purchases and suppliers, stock and expiry, plus the legacy counter-retail services band. Audience: pharmacy in-charge (returns, stock, expiry, reorder) and hospital admin (net sales, GST, purchases). A correction shipped with this page: the earlier view read \`tbl_bill_retail_sale_*\`, which are SERVICE bills (X-ray, bed), not medicines; that data now sits honestly at the bottom as "Counter retail (services)".
+
+## Key metrics (12 cards, fixed order)
+
+- **Net pharmacy sales** (hero): gross sale invoices minus sale returns: \`SUM(tpsi_grand_total) - SUM(tpsr_grand_total)\`. The true counter revenue.
+- **Gross sales**: \`SUM(tpsi_grand_total)\`. Top line before refunds.
+- **Sale returns**: \`SUM(tpsr_grand_total)\` (document count in the tooltip). Refund leakage, lower is better.
+- **Bills**: sale-invoice count. Volume signal.
+- **~Avg bill value**: \`AVG(tpsi_grand_total)\`. Basket size (approximate, a mean).
+- **~Items / bill**: medicine LINES per bill (line rows over distinct invoices, not unit counts: unit sums are polluted by junk quantities). Cross-sell depth.
+- **GST collected (net)**: \`SUM(tpsi_gst_total + tpsi_sgst_total) - SUM(tpsr_gst_total + tpsr_sgst_total)\`. GST filing input.
+- **Discount given**: \`SUM(tpsi_dis_total)\`. Discounting discipline.
+- **~Unique buyers**: distinct registered patients (\`patient_unique_id > 0\`). Approximate by design: walk-in sales carry no patient record, so the true number is higher.
+- **Outstanding on bills**: \`SUM(tpsi_pending_balance)\`. Credit extended at the counter.
+- **Purchases (PI)**: \`SUM(tppi_grand_total)\`. Procurement spend, read against net sales for cash flow.
+- **~Projected sales (month)**: net-sales run-rate times days in the current month; only shown for a current rolling 7 to 92 day window ending today, otherwise the card shows "—".
+
+## Charts and tables
+
+- **Sales & returns over time** (line): refund spikes stand out against the sales line.
+- **Payment-mode mix** (donut): the pharmacy module's own fixed payment domain (Bank Credit Cards, Online Bank Transfers, Bank Transfers, Mobile Payments, E-wallet, Cash Payment, UPI), all listed zero-filled, plus Other only when present.
+- **Top medicines by revenue** (bar) · **Manufacturer mix** (donut) · **Top molecules** (bar): sold lines joined to company and generic masters (both verified fully joinable).
+- **One-time vs repeat buyers** (donut): registered patients only, same walk-in caveat.
+- **Sales by weekday** (bar): all 7 days, zero-filled.
+- **Purchases over time** (line) · **Top suppliers** (table): LEFT JOIN keeps purchases from since-deleted suppliers, shown as "(deleted supplier)".
+- **Stock snapshot** and **Stock by expiry window**: point-in-time as of today, the date filter does NOT apply; valuation at MRP (complete) and at purchase cost (only where recorded). Five expiry buckets always shown (Expired / 30 / 60 / 90 / beyond).
+- **Batch register**: every in-stock batch, first-expiry-first-out: the dispensing or return-to-supplier worklist.
+- **Documents over time**: SI / SR / PI / PR counts per bucket on one chart.
+- **Counter retail (services)**: the old "pharmacy" numbers, clearly labelled as services, not medicines.
+
+## Honest gaps (stated, never faked)
+
+Schedule H/H1 mix (no schedule column exists), HSN-wise GST (HSN only on ~25% of purchase lines), doctor-attributed pharmacy revenue (invoices carry only a free-text doctor name), true margin / FIFO COGS (cost on only about a third of batches), stock value over time (no historical snapshots), supplier outstanding (amounts stored as unjoinable text).`,
+    api: `## Endpoint
+
+- \`GET /api/v1/analytics/operational/pharmacy?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&grain=day|week|month\`
+- Auth: Bearer JWT, tenant scope \`hm_business_id = :biz\` from token. \`doctorIds\`/\`hospitalId\` are NOT applied here (sale invoices carry no doctor id, only a half-filled free-text name).
+- Builder: \`builders/operational.ts\` \`case 'pharmacy'\`. Dictionary: \`docs/analytics-planning/METRICS-PHARMACY.md\`.
+
+## Tables (verified live)
+
+- SI \`tbl_pha_sales_invoice\` (tpsi_*) + lines \`tbl_pha_sales_invoice_qty\` (tpsiq_*); SR \`tbl_pha_sales_return\` (tpsr_*); PI \`tbl_pha_purchase_invoice\` (tppi_*); PR \`tbl_pha_purchase_return\` (tppr_*).
+- Catalogue: \`tbl_pha_medicine\` (tpm_*) joined to \`tbl_pha_medicine_company\` (tpmc_*) and \`tbl_pha_medicine_generic\` (tpmgn_*). Stock: \`tbl_pha_medicine_batch\` (tpmb_*, with expiry; \`tpm_qty = SUM(tpmb_qty)\` reconciles). Suppliers: \`tbl_supplier\` (ts_*).
+- Sold-line base: \`tpsiq\` JOIN \`tpsi\` ON tpsi_id JOIN \`tpm\` ON tpm_id, business-scoped via the invoice.
+- Counter retail: \`tbl_bill_reatil_sale_service\` (sic, misspelled in schema) LEFT JOIN \`tbl_bill_main_service\` ON \`service_id\`.
+
+## Mandatory data-hygiene guards (reimplement exactly)
+
+- Per-family soft deletes: \`tpsi_del/tpsr_del/tppi_del/tppr_del/tpsiq_del/tpm_del/tpmb_del = 0\`.
+- All dates \`>= '2000-01-01'\` (epoch junk); PR dates additionally clamped \`<= CURDATE()\` (demo rows dated 2027/2030).
+- Stock aggregates require \`tpmb_qty > 0\` (demo has negative-million-unit junk batches).
+- Purchase-cost valuation only where \`tpmb_single_pur_cost > 0\`.
+
+## Response blocks
+
+- \`kpis[]\` (12, fixed order): \`netSales\`, \`gross\`, \`returns\`, \`bills\`, \`avgBill\`, \`itemsPerBill\`, \`gst\`, \`discount\`, \`buyers\`, \`pending\`, \`purchases\`, \`projected\` (gated: rolling 7 to 92 days ending today, else value \`'—'\`).
+- \`salesTrend\` \`{ k, sales, returns }\` (SI and SR merged per bucket, returns zero-filled); \`pharmaPayMix\` \`{ k, amount }\` fixed label map \`1..6,8\`; \`pharmaTopItems\` \`{ k, revenue }\` top 15 by medicine id; \`pharmaMakerMix\` / \`pharmaGenericMix\` \`{ k, revenue }\` top 12; \`pharmaBuyerMix\` fixed 2 rows; \`pharmaWeekday\` all 7 days.
+- \`purchaseTrend\` \`{ k, amount, invoices }\`; \`topSuppliers\` \`{ supplier, invoices, amount }\` top 15.
+- \`stockSnapshot\` (4 metric rows + note), \`expiryBuckets\` (fixed 5 buckets: Expired / Within 30 days / 31-60 / 61-90 / Beyond 90, zero-filled), \`batchRegister\` (50 rows FEFO, \`{ medicine, batch, expiry, daysLeft, units, value }\`): all three are as-of-today, ignore the date filter.
+- \`docVolume\`: per-bucket counts for 'Sale (SI)', 'Sale return (SR)', 'Purchase (PI)', 'Purchase return (PR)'.
+- \`counterRetail\` \`{ item, count, amount }\` top 20 (\`tbrss_status = 0\`).
+- \`meta\`: \`{ live: true, rowCount, prNote? }\` (purchase-return value rides in meta; a return-rate KPI was deliberately deferred: demo PRs contain duplicate full-value returns).
+
+No missing feeds: fully served from the replica. Extension warning: do not attempt margin, HSN GST, schedule mix or doctor attribution from these tables (see the honest-gaps list); the data cannot support them today.`,
+  },
+  "followups": {
+    title: "Follow-ups (Grow)",
+    explanatory: `## What this page is
+
+The follow-up loop: how often doctors advise a return visit, and whether patients actually come back. This is the practice's retention engine and the source of the recall worklist (due follow-ups that were missed). Lives under Grow → Follow-ups; the Overview page carries its adherence headline.
+
+## Definitions (the three states)
+
+- **Advised**: a consultation that set a valid follow-up date (\`tbl_case_manager.tcm_followup_date >= '2000-01-01'\`; the floor guards empty/zero dates).
+- **Due**: the advised date is in the past (\`< CURDATE()\`).
+- **Kept**: the patient actually returned: ANY appointment for that patient between the advised date and 45 days after it. This appointment join is the single highest-value computation on the page.
+
+## Key metrics
+
+- **Follow-ups advised**: consults in the period that set a follow-up date. Why: is return advice being given at all.
+- **Advice rate (%)**: advised divided by all consultations in the period. Why: doctor habit, not patient behaviour.
+- **Kept**: due follow-ups where the patient returned within the 45-day window. Why: the loop actually closing.
+- **Adherence rate (%)**: kept divided by due. Why: the page's headline, also surfaced on Overview.
+- **Missed (recall)**: due but not returned. Why: this IS the call list.
+- **Avg interval (days)**: mean advised gap from visit date to follow-up date. Why: practice norm for return windows.
+
+## Charts and tables
+
+- **Follow-up adherence** (donut): fixed 3-state domain Kept / Missed / Upcoming, always all three rows, zero when empty.
+- **Follow-ups over time** (line): advised vs kept per period bucket.
+- **By doctor** (table): advised and kept per doctor (top 15), the adherence comparison across the team.
+- **Patient register** (table, downloadable, up to 5000 rows): UHID, name, mobile, visit date, follow-up due date, status (Kept / Missed / Upcoming), sorted by due date. Filter to Missed for the recall worklist.
+
+## Caveats
+
+- "Kept" counts ANY return appointment in the 45-day window, not specifically a visit linked to that advice: it is a behavioural proxy, deliberately generous.
+- The period filter applies to the CONSULT date (when the advice was given), not the due date; recently advised follow-ups show as Upcoming.
+- Adherence is 0 (not an error) when nothing is due yet in a fresh window.`,
+    api: `## Endpoint
+
+- \`GET /api/v1/analytics/operational/followups?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&grain=day|week|month\`
+- Auth: Bearer JWT; scope \`cm.hm_business_id = :biz\` from token.
+- Builder: \`builders/operational.ts\` \`case 'followups'\`.
+- FE: leaf \`followups\` maps to \`operational/followups\` (\`analyticsNav.jsx:120\`); blocks registered in \`service.js\` (\`adherenceMix\` donut, \`followupTrend\` line, \`byDoctor\` table, \`patients\` register).
+
+## Tables and joins
+
+- Base: \`tbl_case_manager cm\`, filter \`cm.tcm_del = 0 AND cm.hm_business_id = :biz AND cm.tcm_datetime BETWEEN :s AND :e\`.
+- Predicates (verbatim): \`ADV: cm.tcm_followup_date >= '2000-01-01'\`; \`DUE: cm.tcm_followup_date < CURDATE()\`; \`KEPT: EXISTS (SELECT 1 FROM tbl_appointment_master a2 WHERE a2.patient_unique_id = cm.patient_unique_id AND a2.pam_del = 0 AND a2.hm_business_id = :biz AND a2.pam_app_date BETWEEN DATE(cm.tcm_followup_date) AND DATE_ADD(DATE(cm.tcm_followup_date), INTERVAL 45 DAY))\`.
+- Doctor names: \`LEFT JOIN tbl_user_master u ON u.um_id = cm.um_id\`. Patient details for the register: \`LEFT JOIN tbl_patient_master p ON p.patient_unique_id = cm.patient_unique_id\`.
+
+## Response blocks
+
+- \`kpis[]\`: \`advised\`, \`rate\` (% = advised/consults), \`kept\`, \`adherence\` (% = kept/due), \`missed\`, \`avgInterval\` (days, \`AVG(DATEDIFF(tcm_followup_date, DATE(tcm_datetime)))\` over advised rows).
+- \`adherenceMix\`: fixed rows \`{ k: 'Kept' | 'Missed' | 'Upcoming', count }\` (Upcoming = advised AND NOT due).
+- \`followupTrend\`: \`{ k: grainBucket, advised, kept }\`, last 12 buckets, chronological.
+- \`byDoctor\`: \`{ doctor, advised, kept }\` top 15 by advised.
+- \`patients\` (register): \`{ patientUHID, patientName, mobile, visitDate, followUpDate, status }\`, advised rows only, ORDER BY due date DESC, LIMIT 5000.
+- \`meta\`: \`{ live: true, rowCount }\`.
+
+## Known gap for extenders
+
+- \`doctorIds\` and \`hospitalId\` are accepted by the route but NOT applied in this builder (its local WHERE clause omits the doctor/clinic filters; the Overview page's adherence KPI does apply \`cm.um_id IN (...)\`). To add: filter \`cm.um_id\` for doctors and \`cm.hm_id\` (FIND_IN_SET) for clinics, matching the Overview's \`dCm\` pattern.
+- No missing microservice feeds: fully served from the replica.`,
+  },
+  "abha": {
+    title: "ABHA / ABDM (Grow)",
+    explanatory: `## What this page is
+
+ABHA (Ayushman Bharat Health Account, the national health ID) adoption for the patients this clinic actually saw in the period: how many have an ABHA linked, verified, consent-flagged, plus care-context linkage and the enrolment trend. Built strictly on what the \`tatva_clinic\` replica stores; everything the ABDM microservices keep only transiently is labelled as a proxy or stated as a gap, never faked.
+
+## Key metrics
+
+- **Total ABHA patients**: patients seen in the period with an ABHA address linked (\`pm_abha_address\` non-empty), out of all patients seen. Why: the adoption headline.
+- **ABHA verified**: linked patients whose ABHA is verified (\`pm_abha_verify = 1\`). PROXY: the KYC vs non-KYC enrolment channel is not stored in this database; verification state is the nearest available signal, and the card says so.
+- **Linked, unverified**: linked minus verified. Why: the verification backlog.
+- **Consent-flagged patients**: patients carrying the coarse consent flag (\`pm_abha_consent = 1\`). PROXY: request-level consent success/failure (and its KYC split) is not persisted here.
+- **Care contexts linked**: rows in the HIP link master with a real linking token. Coarse count only: no KYC split of care contexts exists in this database.
+- **Linkage rate (%)**: linked divided by patients who visited in the period; renders "—" with an explanation when no one visited (never a fake 0%).
+
+## Charts and tables
+
+- **ABHA linkage** (donut): fixed 3-state domain, always zero-filled: Verified / Linked (unverified) / Not linked.
+- **ABHA enrolments over time** (line): the only reliably dated ABHA signal (hospital-side enrolment records).
+- **Patient register** (table, up to 5000 rows): UHID, name, gender, ABHA address, status (Verified / Linked (unverified) / Not linked), linked patients first.
+
+## Honest gaps (the owner's KYC asks)
+
+Three requested cards CANNOT be built from this database because the data lives only transiently in the ABDM microservices (\`ApiAbha.js\`):
+
+1. **KYC vs non-KYC enrolment channel** (Aadhaar-KYC vs non-KYC ABHA creation).
+2. **Consent success/failure at request level** (with/without KYC).
+3. **KYC split of care contexts.**
+
+The page shows the stored patient-level flags as clearly relabelled proxies, and \`meta.note\` states the gap verbatim.
+
+## Caveats
+
+- The three patient flags carry ~50 corrupted huge-integer rows tenant-wide; every read guards \`IN (0,1)\`.
+- The care-context count and the enrolment trend are not filtered by the page date range (link rows lack a usable in-period date; the trend shows full history by bucket).`,
+    api: `## Endpoint
+
+- \`GET /api/v1/analytics/operational/abha?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD&grain=day|week|month\`
+- Auth: Bearer JWT; scope \`hm_business_id\` from token.
+- Builder: \`builders/operational.ts\` \`case 'abha'\`. Dictionary: \`docs/analytics-planning/METRICS-CARE.md\` (ABHA section).
+- FE: leaf \`abha\` maps to \`operational/abha\` (\`analyticsNav.jsx:114\`); blocks in \`service.js\` (\`linkageMix\` donut, \`linkageTrend\` line and SEQUENCE_BLOCK, \`patients\` register).
+
+## Tables and joins
+
+- Cohort: \`(SELECT DISTINCT patient_unique_id FROM tbl_appointment_master WHERE pam_del = 0 AND hm_business_id = :biz AND pam_app_date BETWEEN :s AND :e) a JOIN tbl_patient_master p\` (patient flags are global; period scoping rides on visits).
+- Flags on \`tbl_patient_master\`: \`pm_abha_address\` (linked = non-empty), \`pm_abha_verify\`, \`pm_abha_consent\`; ALWAYS guard \`IN (0,1)\` (corrupted huge-int rows).
+- Care contexts: \`tbl_abha_hip_link_master\` WHERE \`tahlm_del = 0 AND hm_business_id = :biz AND hip_linking_token <> ''\` (count only, not date-filtered).
+- Enrolment trend: \`tbl_patient_abha_with_hospital w JOIN tbl_hospital_master h ON h.hm_id = w.abha_hospital\` WHERE \`h.hm_business_id = :biz AND w.createdAt >= '2000-01-01'\`, \`COUNT(DISTINCT w.patient_unique_id)\` per grain bucket (full history, not range-filtered).
+- All sub-queries via a safe wrapper: a failing block degrades to empty, never a 500.
+
+## Response blocks
+
+- \`kpis[]\`: \`linked\`, \`verified\`, \`unverified\`, \`consented\`, \`careCtx\`, \`rate\` (% or value \`'—'\` when the cohort is empty). Descriptions carry the proxy labelling verbatim.
+- \`linkageMix\`: fixed rows \`{ k: 'Verified' | 'Linked (unverified)' | 'Not linked', count }\`.
+- \`linkageTrend\`: \`{ k: grainBucket, count }\` enrolments.
+- \`patients\` (register): \`{ patientUHID, patientName, gender, abhaAddress, abhaStatus }\`, linked-first, LIMIT 5000.
+- \`meta\`: \`{ live: true, rowCount, note }\` where note states the ABDM gaps.
+- Known gap for extenders: \`doctorIds\`/\`hospitalId\` are accepted by the route but not applied in this builder (the Overview's ABHA KPI does apply the doctor filter via the appointment join; replicate that to add it here).
+
+## MISSING FEED: ABDM-microservice export (required for the KYC depth)
+
+To light up the three blocked cards, the ABDM service must persist and export, keyed by \`hospital_business_id\` (same pattern as the gynec feed contract in \`docs/analytics-planning/GYNEC-OBSTETRIC-INTEGRATION.md\`):
+
+1. **Enrolment events**: \`patient_unique_id\`, \`hospital_business_id\`, \`channel\` (KYC: aadhaar/biometric vs non-KYC), \`created_at\`. Yields the true KYC vs non-KYC ABHA-patient split (replacing the verification proxy).
+2. **Consent requests**: request id, patient, purpose, \`status\` (granted/denied/expired), \`kyc_flag\`, timestamps. Yields request-level consent success/failure, with and without KYC.
+3. **Care-context links**: link id, patient, \`kyc_flag\`, linked_at. Yields the KYC split of care contexts and a properly date-filterable care-context trend.`,
+  },
+  "bulk_comm": {
+    title: "Campaigns",
+    explanatory: `# Campaigns (Grow > Campaigns)
+
+What happened with your bulk-message campaigns: how many ran, who they reached, whether messages landed, and what they cost in credits. This page reads the production bulk-messages service directly from the frontend: it does not use the analytics service.
+
+## KPI band
+- **Credit Balance**: messaging credits left on the account. Source: \`userCredit\` API (\`userCredit\` field). Why: campaigns stop when credits run out.
+- **Campaigns**: campaigns run in the period (drafts excluded). Source: count of rows from the \`userCampaign\` API. Why: activity volume.
+- **Patients Reached**: sum of \`total_patient\` across campaigns. Why: audience size.
+- **Messages Delivered**: sum of \`success\`. Why: what actually landed, not what was attempted.
+- **Credits Used**: sum of \`total_credit\`, rounded to a whole number. Why: spend for the period.
+
+## Charts and table
+- **Delivery: delivered vs failed** (donut): total \`success\` vs \`failed\` across the period's campaigns. A large failed slice usually means stale phone numbers.
+- **Patients reached by campaign (top 8)** (bar): the campaigns with the biggest audiences.
+- **Campaigns** (table): one row per campaign: Campaign, Date, Patients, Sent, Delivered, Failed, Credits, Status. Downloadable as CSV/Excel.
+
+## Caveats
+- The Date range filter applies (passed as \`start_date\`/\`end_date\`); the **Doctor filter does not**: campaigns belong to the account, not a doctor.
+- Status semantics (sent vs delivered vs failed) come from the messaging provider via the bulk-messages service; analytics displays them as returned.
+- Planned but not built (needs richer data than the campaign list returns): delivery rate trend, best send time, per-template performance.`,
+    api: `## Backend notes: Campaigns
+
+**No pm-analytics-service endpoint exists or is needed today.** The page is FE-orchestrated against the bulk-messages service (\`config.bulk_messages\` base URL, Bearer JWT attached by \`axiosService\`). Loader: \`bulkCommWidgets()\` in \`src/pages/analytics/service.js\` (leaf \`bulk_comm\` via \`PAGE_MAP\`).
+
+### Calls used
+- \`GET {bulk_messages}/api/v1/communication/userCredit\` -> \`{ userCredit }\` (credit balance KPI).
+- \`POST {bulk_messages}/api/v1/campaign/userCampaign\` body \`{ draft: 0, start_date, end_date }\` -> array-like object \`{0:{...},1:{...}}\` of campaigns. Fields consumed per campaign: \`campaign_name\`, \`campaign_date\`, \`total_patient\`, \`campaign_sent\`, \`success\`, \`failed\`, \`total_credit\`, \`campaign_status\`.
+- Client mappers: KPI sums + \`campaignsTable()\` (\`src/pages/analytics/analyticsHelpers.js\`) -> \`{columns, rows}\`; both APIs failing renders an honest empty widget.
+- Full client list (create/edit/delete, templates, payment) in \`src/api/services/ApiBulkMessages.js\`.
+
+### Needed-but-missing feed (only if server-side campaign analytics is wanted)
+- **Per-message delivery log export** on the bulk-messages service: \`GET /api/v1/campaign/messages/export?businessId=&from=&to=\` returning one row per message \`{ campaign_id, patient_id, channel, sent_at, delivered_at|null, status, credits }\`. Unblocks: delivery-rate trend, best send time (delivery by hour/weekday), per-template performance. Until then the page stays campaign-grain only.
+- If the page should move behind the analytics service later, mirror the universal envelope: \`GET /api/v1/analytics/engagement/campaigns?startDate&endDate\` returning a dashboard-block (\`kpis\` + \`deliveryMix\` + \`campaignsRegister\`), and the FE keys must be registered in \`BLOCK_TITLES\` / \`BLOCK_ORDER\` (see Architecture overview).`,
+  },
+  "reports_hub": {
+    title: "Reports",
+    explanatory: `# Reports (downloadable exports)
+
+The export counter of the module: 10 report cards in three labelled sections (Financial, Clinical, Reference), rebuilt native from the legacy \`data_analytics_reports.php\` and **OPD-only** (inpatient reports and the Inpatient ID column dropped). Each card opens a filter modal (date range, the page's doctor scope, and a report-type radio where the legacy had one), then downloads CSV or Excel **client-side** from a JSON \`{columns, rows}\` result via \`exportRows\`. Nothing renders on screen: these are raw registers for accountants, auditors and pharma conversations.
+
+## Financial
+- **Daily Collection**: cash memo / receipt / advance / refund bills for the period. Built from the live billing API bills list.
+- **Collection Report**: the bills list with a report-type radio (General / Detailed / Day-Wise). Billing API sourced.
+- **Incentive Report**: service-level incentive payouts (Detailed) or per-user totals with a grand total (Overall). Note: currently empty on every tenant: incentive config exists but no billed line uses an incentivised service yet; populates when real data exists.
+- **3C Report**: service-level Cash memo / Invoice / Credit-note rows by account (credit notes appear as negative amounts).
+- **Billing Overall**: revenue / cash-flow over the bills list. Billing API sourced.
+
+## Clinical (new vs legacy)
+- **Appointment Analytics**: General = one row per appointment with patient demographics (id, name, age, gender, contact, city, state, date, type, case type, status, doctor). Overall = per-doctor status matrix (booked vs walk-in vs total per status).
+- **Prescription Analytics**: brand / generic / company with total doses and prescription-line counts. OPD prescriptions only.
+- **Medicine Analytics**: prescribed-medicine counts and distinct patients per brand.
+
+## Reference
+- **Referred by Patients**: patients who referred other patients, with referred-case counts and first-referred date.
+- **Referred by Others**: external referrers (reference master) with case counts.
+
+## Caveats
+- Verified live on the reference tenant: appointment-analytics 5,582 rows, prescription 328, medicine 328, referred-by-others 6, referred-by-patients 0 (genuinely none).
+- Registers are row-capped server-side (5,000 to 20,000 depending on report); the cap is honest, not silent truncation of totals.
+- Every chart on every module page also carries its own download arrow exporting its underlying patient rows; this hub is for the named, accountant-shaped cuts.`,
+    api: `## Backend notes: Reports hub
+
+FE: \`REPORT_CARDS\` / \`REPORT_SECTIONS\` in \`src/pages/analytics/analyticsPages.js\`; download resolver \`downloadReport(card, filters)\` in \`src/pages/analytics/service.js\`. Two source kinds: \`source:'billing'\` builds rows from the production billing dashboard API (\`billsTable\`); \`endpoint:\` pulls the analytics service. All analytics routes below: base \`GET /api/v1/analytics/...\`, Bearer JWT, common params \`startDate\`, \`endDate\`, \`doctorIds\` (repeatable), \`hospitalId\`, \`reportType\`. All return the universal \`{ columns:[{key,label,type?}], rows, meta:{live,rowCount} }\` envelope.
+
+### Endpoint-sourced reports (builders are ground truth)
+- \`GET financial/incentives\` (\`builders/financial.ts\`): OPD invoice lines \`tbl_opd_billing_invoice_service\` JOIN \`tbl_bill_main_service\` (\`set_incentive=1\`, \`tbms_tim_id\` -> recipient) JOIN \`tbl_incentive_master\`. Per-line incentive: type LIKE 'per%' -> \`ims_total * tbms_incentive / 100\`, else \`tbms_ins_total * ims_qty\`. \`reportType=Overall Report\` -> per-user totals + Grand total row; default Detailed -> user, patient, billId, billType, billDate, service, servicePrice, incentiveAmount (LIMIT 5000).
+- \`GET financial/3c-report\`: UNION of Invoice (\`tbl_opd_billing_invoice_service\`), Credit Note negative (\`tbl_opd_billing_credit_service\`), Cash Memo (\`tbl_bill_reatil_sale_service\`, OPD = \`in_pid\` null/0); \`reportType=IPD\` switches to the inpatient service tables and adds the Inpatient ID column. Columns: patientId, patient, billId, billingItem, type, date, amount (LIMIT 5000).
+- \`GET operational/appointment-analytics\` (\`builders/operational.ts\`): \`tbl_appointment_master\` JOIN \`tbl_patient_master\`, LEFT JOIN \`tbl_opd_case_type\`, \`tbl_user_master\`; status CASE 0/7 Scheduled, 6 Draft, 3 Completed, 4 Cancelled. Default: 13-column per-appointment export (LIMIT 20000). \`reportType\` containing 'overall': per-doctor x status matrix with booked (\`pam_appointment_type<>'Walk'\`) vs walk-in vs total. Supports \`doctorIds\` (\`a.um_id IN\`) and \`hospitalId\` (\`FIND_IN_SET(a.hm_id,...)\`).
+- \`GET operational/prescription-analytics\`: \`tbl_medicine_report r\` LEFT JOIN \`tbl_medicine_master\` WHERE \`tmr_case_type='CM'\` AND \`tcm_datetime\` in range; GROUP BY brand/generic/company; doses = \`SUM(NULLIF(tmr_tmm_dose,0))\`, lines = COUNT(*) (LIMIT 5000).
+- \`GET operational/medicine-analytics\`: same source; COUNT(*) and COUNT(DISTINCT patient_unique_id) per brand/company/generic; supports \`hospitalId\` (LIMIT 5000).
+- \`GET operational/referred-by-patients\`: \`tbl_patient_master_logs\` (\`other_ref=1\`) JOIN \`tbl_reference_master\` JOIN referring \`tbl_patient_master\`; COUNT(DISTINCT referred patient), MIN(log date) as First Referred. Not date-filtered (all-time register).
+- \`GET operational/referred-by-others\`: \`tbl_reference_master\` (\`rm_del=0\`, named) with correlated count of \`tbl_patient_master_logs\` (\`other_ref=0\`). All-time register.
+
+All queries tenant-scope on \`hm_business_id = scope.hospitalBusinessId\` from the JWT.
+
+### Billing-sourced reports (no analytics endpoint yet)
+Daily Collection, Collection Report, Billing Overall call the production billing dashboard (\`fetchBillingDashboard\`, params startDate, endDate, page, limit<=100, doctorIds required) and export \`billsTable(bills)\`.
+
+### Needed-but-missing backend work
+- \`GET financial/collection-report?reportType=General|Detailed|Day Wise\`: server-side full-period export reusing the billing UNION (the FE billing API caps at 100 bills/page; full export needs this endpoint). Day-Wise = \`daily-collection\` shape; Detailed adds issued-by, payment-mode, account columns.
+- \`GET financial/billing-overall\`: revenue + cash-flow summary rows over the same UNION.
+- Modal filter params still to wire end-to-end (legacy parity): \`issuedBy\`, \`paymentMode\`, \`account\`, \`department\`, \`incentiveUser\`, \`medicine\` multi-selects, in-modal hospital/doctor multi-selects, and \`includeClinicalData\` on Appointment Analytics (appends 16 clinical columns from the case manager). Each is a WHERE-clause addition or a wider SELECT on the queries above.
+- Pagination/streaming for the LIMIT-capped registers when a tenant exceeds the cap.`,
+  },
+  "architecture": {
+    title: "Architecture overview",
+    explanatory: `# Architecture overview
+
+The master picture of how the analytics module hangs together. For doctors and admins: where the numbers come from; for engineers: the contracts everything obeys.
+
+## System diagram (in words)
+- **Frontend**: a native React (CRA) analytics module at \`src/pages/analytics\` inside the doctor portal, replacing the legacy PHP \`data_analytics\` link-out. A sidebar (Overview, Appointments, Billing, Patients, Care group, Pharmacy, Grow group, Reports) drives a single workspace shell with shared Date / Doctor filters.
+- **Backend**: \`pm-analytics-service\`, a NestJS service that reads the \`tatva_clinic\` MySQL **read replica only** (SELECT-only DB user, no writes ever). Listed at \`/api/v1/analytics\`.
+- **Production APIs**: Billing and Appointments pages additionally read the same production APIs the EMR screens use (billing dashboard, advance-deposit dashboard, appointment list), so their figures reconcile exactly with what staff see elsewhere. Campaigns reads the bulk-messages service.
+- **Microservice-blocked domains** (honest placeholders until a feed lands): Gynec menstrual history and current Obstetrics (pm-medicalhistory service), OPD Procedures (pm-patient-docs), Custom RxPad modules (dynamic-modules service), ABHA KYC channel and request-level consent (ABDM service), per-patient Symptoms for the Overview card (symptoms service), plus VoiceRx / symptom-collector engagement (write-only logs today).
+
+## House rules (every page obeys these)
+- **Zero-fill**: fixed domains always render every bucket, zero included (all 24 hours, all 7 weekdays, all genders, all blood groups). A quiet category shows flat, never disappears.
+- **Not recorded buckets**: missing data is shown explicitly as its own grey bucket, never silently dropped.
+- **No em dashes** in any copy; colons, commas, parentheses instead.
+- **~ approximations**: averages and forecasts are whole numbers prefixed with ~ ("~₹ 1.2L", "~12 min").
+- **Whole-number counts** everywhere; Indian-format compact numbers (k / L / Cr).
+- **Projection gating**: forecast cards (projected billed, etc.) compute only for a current rolling window of 7 to 92 days ending roughly today; otherwise the card stays with a dash and explains why.
+- **Role-default landing**: a doctor login opens every page pre-scoped to themselves (Reset returns to that default); owner/admin logins open clinic-wide.
+- **Semantic status colors**: labels with fixed meaning get fixed colors everywhere: completed green, cancelled red, scheduled amber, residual buckets (Other, Unknown, Not recorded) grey; everything else cycles a categorical palette.
+- **Honesty**: truncated registers say so in a note; empty states are real ("No data for this period"), never fabricated sample data.`,
+    api: `## Backend notes: Architecture
+
+### Routes (NestJS, global prefix \`api/v1/analytics\`)
+- \`GET health\` (unauthenticated probe).
+- \`GET clinical/:entity\` (diagnosis, symptoms, drug, lab-test, vitals, medical-history, growth-chart, vaccination, obstetric, quality...).
+- \`GET operational/:report\` (overview, footfall, patients, pharmacy, pathology, abha, followups, certificates, the report exports...).
+- \`GET financial/:report\` (summary, collection-trend, revenue-trend, payment-mode-mix, daily-collection, 3c-report, incentives, depth).
+- \`GET ipd/:report\`, \`GET engagement/:entity\`, \`POST query\` (generic engine, not built yet).
+- Controller normalises repeatable params: a single \`doctorIds=408\` becomes \`['408']\` before any builder runs.
+- Common params (\`src/common/scope.ts\` AnalyticsQuery): \`startDate\`, \`endDate\`, \`doctorIds[]\`, \`hospitalId\`, \`grain\` (day|week|month), \`reportType\`; leaf extras passed through by the FE: \`careSetting\`, \`gender\`, \`bloodGroup\`, \`abha\`, \`status\`.
+
+### Auth
+- Bearer JWT on every call; the \`@Scope()\` decorator verifies (when \`ANALYTICS_JWT_SECRET\` + \`ANALYTICS_JWT_ALG\` are set; dev falls back to unverified decode with a logged warning) and extracts \`result.hospital_business_id\` -> \`scope.hospitalBusinessId\`, plus \`user_id\`, \`clinic_id\`, \`doctor_unique_id\`, \`roles\`.
+- EVERY builder query filters \`hm_business_id = :biz\` from that scope. Tenant scope is never accepted from the client.
+
+### Universal response contract (what every endpoint returns)
+- **Dashboard-block**: \`{ hero?: {label, value}, kpis?: [{key, label, value, unit?, description?, delta?, spark?}], <blockKey>: {columns:[{key,label,type?}], rows:[...], note?}, patients?: {columns, rows}, meta: {live, rowCount, compareLabel?, note?} }\`. KPI \`unit:'₹'\` renders as a money prefix; \`key\` is the stable identity for per-card customization.
+- **Lone result-set**: \`{ columns, rows, meta }\` (the report exports); the FE auto-renders chart + downloadable table (time-like x -> line, single series -> donut, else bar; wide tables render table-only).
+
+### FE registration maps (src/pages/analytics/service.js)
+A dashboard-block key renders ONLY if it appears in \`BLOCK_ORDER\`; an unregistered key is silently ignored. To ship a new block: add the key to the builder response AND register it in: \`BLOCK_TITLES\` (display title), \`BLOCK_INFO\` (tooltip copy), \`BLOCK_CHART_TYPE\` (donut|bar|line|stackedBar; default bar), \`BLOCK_ORDER\` (render gate + page order), \`BLOCK_GROUP\` + \`SECTION_ORDER\` (labelled band; unmapped -> More insights; tables collect under Patient data), \`TABLE_BLOCKS\` (renders as searchable table, not chart), \`SEQUENCE_BLOCKS\` (ordered sequences: single-colour bars + line/bar toggle; donuts never toggle). Leaf -> endpoint wiring: \`DASHBOARD_ENDPOINTS\` in \`src/pages/analytics/shell/analyticsNav.jsx\` (string or \`{endpoint, params}\`); \`PAGE_MAP\` routes the FE-built pages (overview, opd_billing, bulk_comm, reports_hub).
+
+### Needed-but-missing backend feeds (one-line contracts)
+- **Gynec (menstrual)**: pm-medicalhistory \`GET /gynec-history/export?businessId=&from=&to=\` -> flattened timeline rows (lmp, ageAtMenarche, cycle, flow, pain, reproductiveLifeStages...); today only a per-patient GET exists and the doc carries no tenant id (join patientId -> \`tbl_patient_master\`). Contract: docs/analytics-planning/GYNEC-OBSTETRIC-INTEGRATION.md.
+- **Obstetric (current)**: same service, same export shape for the obstetric-history collection; replica obstetric tables are frozen ~mid-2024 so the page is legacy-only.
+- **Procedures (OPD)**: pm-patient-docs (\`lab_params_api_url\`, \`/api/v1/surgeries\`) bulk export: procedures by hospital + date range; the replica only holds a tiny inpatient procedure table.
+- **Custom modules**: dynamic-modules service (\`custom_module_api_url\`) bulk export: modules + reuse log by hospital (created, creator, used-by-other-doctor events).
+- **ABHA KYC / consent**: ABDM service export of request-level consent success/failure and the KYC vs non-KYC enrolment channel; the replica only has coarse patient flags (\`pm_abha_verify\`, \`pm_abha_consent\`), used as stated proxies.
+- **Symptoms service**: per-patient symptoms read endpoint for the Overview Top-symptoms card (the Care > Symptoms page already parses structured Rx entries from \`tcm_history_box\`).
+- **VoiceRx / symptom-collector**: read/aggregation API over today's write-only logs before \`engagement/*\` can build.
+- Each feed should land as either a bulk export the service polls, a read replica connection, or a nightly sync into a small \`tatva_clinic\` table (pattern A/B/C in the gynec doc); pm-analytics-service is mysql2-only today (no HTTP client).`,
+  },
+  "ipd_overview": {
+    title: "IPD Overview",
+    explanatory: `## What this page is
+The hospital scoreboard for the inpatient unit: how full are we, what moved this period, anything alarming.
+
+## Key metrics
+- **Current census**: patients in hospital right now (admitted, not discharged). The headline.
+- **Admitted / Discharged**: admissions and completed discharges in the period.
+- **In discharge queue**: patients sent for discharge approval but not yet discharged (the 'ready to discharge' state). Why: the discharge bottleneck at a glance.
+- **~Avg length of stay**: mean days from admission to discharge for stays completed in the period.
+- **Bed occupancy**: census divided by active beds. The capacity headline.
+
+## Charts
+- Admissions vs discharges over time (flow balance), inpatient census over time, ward occupancy (occupied vs available), discharge-type mix.
+
+## Caveats
+- Source is the legacy replica; hospitals on the modern pm-ipd microservice need the export feed (the page banner says so).
+- Legacy data has no discharge-date column: the discharge moment uses the ready-to-discharge log, then the discharge-summary date, then last-modified (approximation marked).`,
+    api: `## Endpoint conventions
+- Base GET /api/v1/analytics/ipd/{report}; Bearer JWT (tenant from token); params startDate, endDate, grain=day|week|month, doctorIds (any um-id column), hospitalId.
+- Builder: pm-analytics-service/src/analytics/builders/ipd.ts (buildIpdReport dispatcher).
+- Source: legacy replica tables (tbl_atd_patient_master, tbl_ward_management/tbl_ward_room_management, tbl_atd_logs, tbl_inpatient_*). Modern pm-ipd microservice tenants need the export feed (MASTER-API.md Part 2 item 9).
+- Key facts: cross-table admission key is the STRING in_pid (never tapm_id); no discharge-date column exists, precedence = redy_to_discharge log -> dis-summary created date -> modify date; beds = tbl_ward_room_management rows with room_type='bed', twrm_status=1 active; a 'bed occupied' = an active admission's twrm_id.
+
+## Response (ipd/summary)
+- kpis: census, admitted, discharged, inQueue, avgLos, occupancy (%).
+- Blocks: ipdFlowTrend {k, admitted, discharged}; censusTrend {k, count} (census computed in JS from the admission set per bucket); wardOccupancy {k, occupied, available}; dischargeTypeMix {k, count} (tbl_inpatient_discharge_type: Medical, DAMA, Transfer Out, Death).
+- meta {live, rowCount, note}.`,
+  },
+  "ipd_admissions": {
+    title: "IPD Admissions & Discharges",
+    explanatory: `## What this page is
+Inpatient throughput: who admits, where patients go, how long they stay, and how they leave. DAMA share and death share are quality flags; queue time exposes discharge bottlenecks.
+
+## Key metrics
+- **Admissions / Discharges** in the period; **Readmissions** (flagged re-admits); **MLC cases** (medico-legal).
+- **~Avg LOS** and **Longest current stay**.
+- **Discharge queue size** and **~Time in queue**: from the ready-to-discharge moment to actual discharge. Why: this is the asked-for normal-to-queue conversion time, the single best discharge-process metric.
+
+## Charts and tables
+- Admissions over time; by department; by ward; by admitting doctor; patient-category mix (Insurance/TPA vs Self-pay, derived from the insurance fields because the category id is unused); discharge-type mix; LOS distribution (fixed buckets 0-1, 2-3, 4-7, 8-14, 15+ days, zero-filled).
+- Registers: every admission, discharged patients, the live discharge queue, per-stay LOS.`,
+    api: `## Endpoint conventions
+- Base GET /api/v1/analytics/ipd/{report}; Bearer JWT (tenant from token); params startDate, endDate, grain=day|week|month, doctorIds (any um-id column), hospitalId.
+- Builder: pm-analytics-service/src/analytics/builders/ipd.ts (buildIpdReport dispatcher).
+- Source: legacy replica tables (tbl_atd_patient_master, tbl_ward_management/tbl_ward_room_management, tbl_atd_logs, tbl_inpatient_*). Modern pm-ipd microservice tenants need the export feed (MASTER-API.md Part 2 item 9).
+- Key facts: cross-table admission key is the STRING in_pid (never tapm_id); no discharge-date column exists, precedence = redy_to_discharge log -> dis-summary created date -> modify date; beds = tbl_ward_room_management rows with room_type='bed', twrm_status=1 active; a 'bed occupied' = an active admission's twrm_id.
+
+## Response (ipd/admissions)
+- kpis: admissions, discharges, readmissions, mlcCases, avgLos, queueSize, queueTime (~hrs under 72h else ~days), longestStay.
+- Blocks: admitTrend; byDepartment (tbl_department join on dp_id only, no business id on that master); byWard; byAdmittingDoctor; categoryMix; dischargeTypeMix; losDistribution (fixed buckets); admissionRegister; dischargeRegister; queueRegister; losRegister.
+- Queue semantics (legacy): a redy_to_discharge row in tbl_atd_logs with tapm_discharge=0; queueTime = first queue log -> discharge timestamp. Modern equivalent: sentForApproval=true && isDischarged=false in pm-ipd.`,
+  },
+  "ipd_wards": {
+    title: "IPD Wards & Beds",
+    explanatory: `## What this page is
+Bed management: the revenue ceiling of an inpatient unit. Capacity, what is occupied/blocked, patient moves, and two predictive bands that turn the census into a planning tool.
+
+## Key metrics
+- **Beds total / occupied / available / blocked** (a bed is a ward-room row of type bed; occupancy is derived from active admissions' room assignment).
+- **Occupancy %**, **Room shifts** (ward/department moves this period), **~Bed turnover** (discharges per bed).
+
+## Charts and tables
+- Ward and department throughput: admissions and completed discharges per ward and per department (specialty); avg LOS by department; transfers in and out per ward (the ward transfer load).
+- Beds by ward (occupied/available/blocked); bed occupancy over time; avg LOS by ward; transfers register (every ward/department/doctor move with old and new values).
+- **Predictive band**: expected discharges next 7 days (patients in the queue plus patients past their ward's median stay) and projected occupancy (census minus expected discharges plus the trailing admission rate). Heuristics, clearly labelled.
+
+## Caveats
+- Bed-level move history is complete only when transfers go through the transfer screen; the log reliably captures ward-level moves.`,
+    api: `## Endpoint conventions
+- Base GET /api/v1/analytics/ipd/{report}; Bearer JWT (tenant from token); params startDate, endDate, grain=day|week|month, doctorIds (any um-id column), hospitalId.
+- Builder: pm-analytics-service/src/analytics/builders/ipd.ts (buildIpdReport dispatcher).
+- Source: legacy replica tables (tbl_atd_patient_master, tbl_ward_management/tbl_ward_room_management, tbl_atd_logs, tbl_inpatient_*). Modern pm-ipd microservice tenants need the export feed (MASTER-API.md Part 2 item 9).
+- Key facts: cross-table admission key is the STRING in_pid (never tapm_id); no discharge-date column exists, precedence = redy_to_discharge log -> dis-summary created date -> modify date; beds = tbl_ward_room_management rows with room_type='bed', twrm_status=1 active; a 'bed occupied' = an active admission's twrm_id.
+
+## Response (ipd/wards)
+- kpis: bedsTotal, bedsOccupied, bedsAvailable, bedsBlocked, occupancyPct, roomShifts, bedTurnover.
+- Blocks: wardFlow / deptFlow {k, admitted, discharged}; alosByDept; wardTransfers {k, transfersIn, transfersOut} (tal_transfer_type=ward, in by tal_new_twm_id, out by tal_old_twm_id); bedsByWard {k, occupied, available, blocked} (stacked); occupancyTrend; alosByWard; transfersRegister (tbl_atd_logs old/new pairs: tal_old_/tal_new_ dp_id, twm_id, twrm_id, admitting_doctor); expectedDischarges {k,count} and projectedOccupancy {k,occupied} (7-day heuristics documented in the builder).
+- Capacity rule: bedsTotal = active (twrm_status=1) + blocked (twrm_block=1); status-0 unblocked rows are decommissioned.`,
+  },
+  "ipd_clinical": {
+    title: "IPD Clinical Activity",
+    explanatory: `## What this page is
+In-stay documentation and OT activity, modeled on the actual IPD documentation flow. Each artifact has its own cadence and its own metric: Admission Assessment happens ONCE per admission (so we show coverage), Progress Notes are filled by nurses multiple times every stay day (so we show per-day cadence), Consultant Notes are doctors' entries through the stay (per-day cadence), OT Notes exist per operation (coverage per OT event), the Discharge Summary closes the stay (completion).
+
+## Key metrics
+- **Assessment coverage**: % of admissions with an admission assessment. The once-per-admission artifact.
+- **~Progress notes / day**: nurse progress notes per patient-day. The ward documentation pulse.
+- **~Consultant notes / day**: doctor notes per patient-day.
+- **OT note coverage**: % of OT events with an OT note (surgery details, team, operative notes).
+- **~Nurse note interval**: average hours between consecutive nurse progress notes within a stay. The interval exposes the gaps an average per-day count hides.
+- **Lab results**: lab values plus radiology reports recorded in the period.
+- **Cross referrals**: shows a dash. The two-view referral workflow (one doctor refers, the receiving doctor answers with consultant notes) lives only in the pm-ipd microservice; Medical Records uploads live in pm-patient-docs. Both feeds are specified in MASTER-API.md.
+
+## Charts and tables
+- **Documentation funnel**: of all admissions, how many carry an assessment, progress notes, consultant notes, a discharge summary. Gaps show exactly where documentation breaks down (the what-went-wrong view).
+- **Notes by stay day**: notes recorded on day 1, 2 ... 8+ of the stay. A fading tail means later days get documented less.
+- Clinical documentation by type (product language: assessments, progress notes, consultant notes, vitals, medications, investigations, lab values, radiology).
+- Top admission vs discharge diagnoses; OT procedures by doctor; anaesthesia mix; discharge summary completion; OT register.`,
+    api: `## Endpoint conventions
+- Base GET /api/v1/analytics/ipd/{report}; Bearer JWT (tenant from token); params startDate, endDate, grain=day|week|month, doctorIds (any um-id column), hospitalId.
+- Builder: pm-analytics-service/src/analytics/builders/ipd.ts (buildIpdReport dispatcher).
+- Source: legacy replica tables (tbl_atd_patient_master, tbl_ward_management/tbl_ward_room_management, tbl_atd_logs, tbl_inpatient_*). Modern pm-ipd microservice tenants need the export feed (MASTER-API.md Part 2 item 9).
+- Key facts: cross-table admission key is the STRING in_pid (never tapm_id); no discharge-date column exists, precedence = redy_to_discharge log -> dis-summary created date -> modify date; beds = tbl_ward_room_management rows with room_type='bed', twrm_status=1 active; a 'bed occupied' = an active admission's twrm_id.
+
+## Response (ipd/clinical)
+- kpis: assessmentCoverage (%), progressPerDay (~, nurse notes / patient-days), consultantPerDay (~), otNoteCoverage (%), labResults (count), crossReferrals ('-', microservice gap incl. medical-records uploads in pm-patient-docs).
+- Also: noteInterval KPI (~hrs between consecutive nurse notes; note charting time = tinn_date + tinn_time, NOT created_date); noteIntervalByDept {k, progress, consultant} avg gap hours per department.
+- Blocks: notesByType (8 fixed rows, product labels); docFunnel (5 fixed rows: Admissions, With admission assessment, With progress notes, With consultant notes, With discharge summary; independent coverages, not a strict subset chain); notesByStayDay (Day 1..7, Day 8+, zero-filled, DATEDIFF(note, admit)+1); topAdmitDx; topDischargeDx; otByDoctor; anaesthesiaMix; summaryCompletion; otRegister.
+- Mapping: assessment = tbl_inpatient_admit_notes; progress = tbl_inpatient_nurse_notes; consultant = tbl_inpatient_doctor_notes; OT note = tbl_inpatient_doctor_procedure via tpos_id; labs = tbl_inpatient_lab_parameter/lab_val (in_pid, tilv_delete) + radiology. Patient-days = in-period days between admit and discharge/now per admission.`,
+  },
+  "ipd_billing": {
+    title: "IPD Billing",
+    explanatory: `## What this page is
+The IPD money page, mirroring OPD Billing against the IPD bill ledger: one bill per admission in the modern billing service, large slow-moving amounts where dues ageing and deposits are the cash-flow guards.
+
+## Key metrics and charts
+- Bill family: total billed, collected, bill due, refunded; advance family: received, refunded, debited (the advance wallet is patient-level and shared across OPD and IPD, the copy says so).
+- Collection over time; bill payment-mode mix; refunds by mode; unpaid bills by age; advance mode mixes; bills register.
+
+## Caveats
+- Figures come from the production billing dashboards (works for every tenant); the replica depth band ships later for IPD.
+- One bill per admission means bill count roughly equals admission count.`,
+    api: `## Backend notes (IPD Billing)
+- NO analytics endpoint: FE-orchestrated like OPD Billing. Loader financialWidgets("ipd") in src/pages/analytics/service.js -> fetchBillingDashboard(params, "ipd") (billing service POST {billing}/api/v1/billing/ipd-bill/dashboard) + shared GET /advancedDeposit/dashboard.
+- Replica twin: tbl_ipd_billing_overview (tibo_), debit-doc convention confirmed: grand totals stored positive for ALL types; direction encoded by type + balance sign (invoice -> +balance receivable; advance/receipt/credit_note -> negative balance; refund -> positive balance). ANY dues computation must filter tibo_invoice_type IN ('invoice','cash_memo') or refunds masquerade as receivables (this guard is now in financial.ts patientDues).
+- financial/summary?careSetting=ipd serves the dues register; financial/depth?careSetting=ipd is the planned extension (by-doctor revenue, discounts) pending verification of the IPD twin detail tables.`,
+  },
+  "ipd_reports": {
+    title: "IPD Reports",
+    explanatory: `## What this page is
+Raw-data downloads for the inpatient unit, same modal pattern as the OPD Reports hub: pick dates and doctors, download CSV or Excel.
+
+## The reports
+- **Patient flow**: Admission Register (every admission with demographics, placement, doctor, status, LOS); Discharged Patients; Discharge Queue (who is waiting and for how long); LOS Report.
+- **Clinical**: Transfers Register (every ward/department/doctor move); OT Register.
+- **Financial**: IPD Bills (the bill ledger from the billing service); IPD Outstanding Dues (unpaid debit documents only).`,
+    api: `## Backend notes (IPD Reports)
+- All register cards reuse the superset ipd/* endpoints via the card.block extractor (IPD_REPORT_CARDS in analyticsPages.js): ipd/admissions -> admissionRegister | dischargeRegister | queueRegister | losRegister; ipd/wards -> transfersRegister; ipd/clinical -> otRegister.
+- IPD Bills: card.source="billing-ipd" -> fetchBillingDashboard(params, "ipd") -> billsTable (client-side export).
+- IPD Outstanding Dues: financial/summary?careSetting=ipd block patientDues (debit-doc filtered).
+- No new endpoints were needed: the superset rule paid off, every register already rides an existing response.`,
+  },
+  "master_api": {
+    title: "Master APIs (OPD + IPD)",
+    explanatory: `# TP Analytics Master APIs: OPD + IPD
+
+This is the master list of every API the analytics product runs on, both
+modules: OPD Analytics (/analytics) and IPD Analytics (/analytics/ipd). It
+exists so anyone (product, frontend, backend) can see the whole surface in one
+file: what each API is FOR, and which APIs we still need written.
+
+## The design philosophy (read this first)
+
+Every analytics API here is a **superset API**: it returns EVERYTHING its
+domain can say (all KPIs, all chart blocks, the full raw register up to an
+honest cap), not just what today's screen renders. The frontend picks what to
+display and handles its own logic; whatever it ignores is still in the
+response. This is deliberate: when we add a chart, a filter, or an export
+tomorrow, the data is already flowing and no backend change is needed. When
+you write a NEW API for this module, follow the same rule: include every field
+and every breakdown the source tables can give, even if no screen shows it yet.
+
+Conventions for all pm-analytics-service routes: base \`GET /api/v1/analytics/...\`,
+auth \`Authorization: Bearer <JWT>\` (tenant = \`result.hospital_business_id\` from
+the token, never from the client), common params \`startDate\`, \`endDate\`
+(YYYY-MM-DD), \`grain=day|week|month\`, \`doctorIds\` (repeatable), \`hospitalId\`
+(hm_id CSV), \`reportType\` where noted. Every response is the universal
+envelope: dashboard-block (\`hero? / kpis[] / <block>{columns,rows} /
+patients? / meta\`) or a lone result-set (\`{columns, rows, meta}\`). All reads
+are SELECT-only on the \`tatva_clinic\` replica.
+
+---
+
+## Part 1: APIs that exist today
+
+### pm-analytics-service (NestJS, reads the replica)
+
+Each row: the route, what it serves, and WHY we need it.
+
+| Route | Serves | Why we need it |
+|---|---|---|
+| \`GET operational/overview?careSetting=opd\` | Overview page: 12 KPI cards + 4 charts | The landing scoreboard: one headline per section so the practice's health reads in five seconds without opening any page |
+| \`GET operational/footfall\` | Appointments page | The demand engine: footfall = booked + walk-ins, channels, busiest patterns, new-vs-returning bookings; staffing and marketing decisions start here |
+| \`GET operational/patients?careSetting=opd\` | Patients page | Who the practice serves and whether they come back: retention by visit history, RFM value segments, the lapsed high-value recall list |
+| \`GET financial/summary?careSetting=opd\` | Billing depth blocks | The replica-side money detail the billing API cannot give: revenue by doctor, discounts by doctor, bill-builder roles, registers |
+| \`GET financial/depth\` | Billing replica-only blocks | Same purpose, split endpoint: keeps the billing page fast by loading depth separately |
+| \`GET financial/incentives?reportType=\` | Incentive report (Detailed/Overall) | Pays staff correctly: service-level incentive payouts per user, the accountant's monthly settlement sheet |
+| \`GET financial/3c-report\` | 3C report rows | The audit cut: cash memo / invoice / credit-note at service level by account, what the auditor and accountant reconcile against |
+| \`GET operational/pharmacy\` | Pharmacy page | The counter business: net sales, GST position, stock valuation, expiry risk (FEFO), supplier spend; entirely invisible without this |
+| \`GET operational/followups\` | Follow-ups page | The retention engine: who was advised to return, who actually did, and the missed list the front desk should call |
+| \`GET operational/abha\` | ABHA page | Government-programme compliance: ABHA adoption among the period's patients, with honest proxies where ABDM data is not persisted |
+| \`GET operational/certificates\` | Certificates page | A real workload doctors do daily that no screen measured: who issues what certificate, from which template |
+| \`GET operational/appointment-analytics?reportType=\` | Appointment report export | The raw per-appointment dump with patient demographics for offline analysis; Overall gives the per-doctor status matrix |
+| \`GET operational/prescription-analytics\` | Prescription report export | Brand/generic/company dose volumes: the pharma-conversation and formulary sheet |
+| \`GET operational/medicine-analytics\` | Medicine report export | Prescribed-medicine counts with patient reach per brand: simpler counting cut of the same source |
+| \`GET operational/referred-by-patients\` | Reference report | Which patients bring other patients: the organic-growth signal |
+| \`GET operational/referred-by-others\` | Reference report | Which external referrers send cases: the referral-network ledger |
+| \`GET clinical/diagnosis\` | Diagnoses page | What the practice diagnoses, with the clinical statuses (Suspected/Confirmed/Ruled out) and ICD-coded vs free-text capture quality |
+| \`GET clinical/symptoms\` | Symptoms page | What patients present with, parsed from the Rx symptom box with real severity: the demand-side clinical picture |
+| \`GET clinical/drug\` | Medications page | What gets prescribed, polypharmacy load, and custom-vs-catalogue medicines (which flags catalogue gaps) |
+| \`GET clinical/lab-test\` | Lab tests page | Which investigations get ordered and how often: utilisation of diagnostics |
+| \`GET clinical/vitals\` | Vitals page | What actually gets measured (12-field capture grid), BP staging, BMI bands: clinical data-quality plus population health |
+| \`GET clinical/medical-history\` | Medical history page | The chronic-disease registry: six segregations (condition/allergy/family/lifestyle/surgical/additional) by distinct patients |
+| \`GET clinical/obstetric\` | Obstetrics page (legacy-gated) | Pregnancy events, delivery modes, EDD pipeline from the legacy tables, honestly bannered until the service feed lands |
+| \`GET clinical/growth-chart\` | Growth page (pediatric-only) | Child growth monitoring: serial measurements, OFC capture, repeat-measurement coverage |
+| \`GET clinical/vaccination\` | Vaccination page | Dose volumes and IAP-vs-other split (after fixing a join that silently dropped ~65% of doses) |
+| \`GET clinical/gynec\` | Gynec page: **SAMPLE DATA** | Menstrual-history analytics, fully designed and visible; switches live when the Part-2 feed lands |
+| \`GET clinical/procedures-opd\` | Procedures page: **SAMPLE DATA** | OPD procedures analytics, fully designed; switches live when the Part-2 feed lands |
+| \`GET operational/custom-modules\` | Custom Modules page: **SAMPLE DATA** | RxPad module creation and cross-doctor reuse; switches live when the Part-2 feed lands |
+| \`GET ipd/summary\` | IPD Overview | The hospital scoreboard: census, occupancy, queue, deaths; one glance answers how full are we and what is moving |
+| \`GET ipd/admissions\` | IPD Admissions & Discharges | Throughput is THE inpatient operations question: who admits, where, how long, and how patients leave (DAMA and death rates are quality flags) |
+| \`GET ipd/wards\` | IPD Wards & Beds | Bed management is the revenue ceiling: capacity, occupancy, transfers, and the predictive discharge/occupancy bands turn the census into a planning tool |
+| \`GET ipd/clinical\` | IPD Clinical Activity | Documentation coverage is the medico-legal shield; OT volume is the high-revenue clinical activity |
+
+### Production APIs the frontend reads directly
+
+| API | Serves | Why we need it |
+|---|---|---|
+| \`POST {billing}/bill/dashboard\` | Billing headline band, mode mixes, dues-by-age, bills register | The ONLY source that works for every tenant (old and new billing service); figures reconcile exactly with the OPD Billing screen staff already trust |
+| \`POST {billing}/advancedDeposit/dashboard\` | Advance wallet cards + advance mode mixes (OPD and IPD pages) | The wallet ledger (received/refunded/debited) lives only in the billing service, not the replica; it is patient-level and shared across care settings |
+| \`POST {billing}/api/v1/billing/ipd-bill/dashboard\` | IPD Billing page band + IPD Bills report | The IPD bill ledger (one bill per admission) lives in the billing service; figures reconcile with the IPD billing screen staff already use |
+| \`POST /api/v1/appointment/listAppointment\` | EMR parity reference | The ground truth our appointment numbers are verified against (the tab keys ARE the status codes) |
+| \`GET {bulk_messages}/communication/userCredit\`, \`POST {bulk_messages}/campaign/userCampaign\` | Campaigns page | Campaign reach, delivery and credit spend belong to the messaging service; analytics renders what it returns |
+
+---
+
+## Part 2: APIs we NEED but DO NOT HAVE (write these)
+
+> We do not have these APIs today. For each: why we need it, who owns it, and
+> the contract hint a backend developer can build from. Follow the superset
+> rule: export EVERY field the source stores, not just what today's design
+> shows. Pattern options for every feed: (A) a bulk export endpoint the
+> analytics service polls, (B) a read replica of the owning service's
+> datastore, or (C) a nightly sync into a small \`tatva_clinic\` table.
+> pm-analytics-service is mysql2-only today (no HTTP client), so (B)/(C) are
+> drop-ins and (A) needs a small fetch layer.
+
+### 1. Gynec menstrual history export: pm-medicalhistory service
+**Why we need it:** the Gynec page (cycle regularity, flow, pain, menarche age,
+reproductive life stages) runs on sample data; irregular-cycle share is a real
+screening signal for PCOD and thyroid workups that doctors asked for.
+**What exists:** only a per-patient \`GET /gynec-history/gynec/{patientId}/{userId}\`;
+no list by hospital, and the stored document carries no \`hm_business_id\`.
+**Hint:** \`GET /gynec-history/export?businessId=&from=&to=\` returning flattened
+timeline rows with EVERY stored key: \`patientId, lmp, ageAtMenarche,
+ageAtMenopause, intervalOfCycle, durationOfMenstrualFlow, numberOfPadsPerDay,
+cycle, flow, pain, occurrenceOfPain, clots, reproductiveLifeStages,
+typeOfMenopause, note, createdAt, createdBy\`. Include \`businessId\` in the
+export. Full contract: \`GYNEC-OBSTETRIC-INTEGRATION.md\`.
+
+### 2. Obstetric (current) export: same pm-medicalhistory service
+**Why we need it:** the Obstetrics page covers only legacy rows frozen at
+~mid-2024; current pregnancies, EDD pipeline and G/P/L/A/E counters are
+invisible to analytics.
+**Hint:** same export shape as (1) for the obstetric-history collection:
+LMP/EDD/CEDD, gestation, G/P/L/A/E counters, pregnancy-history rows (mode of
+delivery, date, gender, baby weight, remarks), current-examination values,
+ANC schedule items, immunisation history, keyed by businessId + date range.
+
+### 3. OPD procedures export: pm-patient-docs service
+**Why we need it:** procedures are real revenue and clinical workload; the
+Procedures page runs on sample data because the Rx "Surgeries/Procedures" box
+writes only to this service (the replica's procedure table is inpatient-only,
+~53 rows).
+**Hint:** \`GET /api/v1/surgeries/export?businessId=&from=&to=\` returning one
+row per performed procedure with every stored field: \`patientId,
+procedureName, performedAt, doctorId (userId), notes, template/source flags\`.
+
+### 4. Custom-modules registry + reuse log: dynamic-modules service
+**Why we need it:** module reuse across doctors is the signal that the RxPad
+investment is paying off; the page runs on sample data because the registry
+and usage log exist only in this service.
+**Hint:** two exports keyed by hospital: (a) modules: \`module_id, name,
+creator_userId, column_count, column_labels, created_at, origin_id (null =
+original, else cloned-from), deleted\`; (b) usage events: \`module_id,
+used_by_userId, used_at, rx_id\`. \`origin_id\` + used_by != creator yields reuse
+rate, most-used across doctors, created-vs-reused.
+
+### 5. ABHA KYC + consent depth: ABDM service
+**Why we need it:** the owner's asked-for cards (KYC vs non-KYC patients,
+consent success with/without KYC, KYC split of care contexts) cannot be built;
+the replica stores only coarse flags, shown today as labelled proxies.
+**Hint:** persist + export three event sets keyed by businessId, with every
+field the flow produces: (a) enrolments: \`patientId, channel
+(aadhaar-kyc | non-kyc), abhaAddress, createdAt\`; (b) consent requests:
+\`requestId, patientId, purpose, status (granted|denied|expired), kycFlag,
+requestedAt, decidedAt\`; (c) care-context links: \`linkId, patientId, kycFlag,
+contextType, linkedAt\`.
+
+### 6. Per-patient symptoms read: symptoms service
+**Why we need it:** the Overview "Top symptoms" card shows a dash; the
+symptoms service holds richer per-patient data than the Rx-box parse the
+Symptoms page uses.
+**Hint:** \`GET /symptoms/export?businessId=&from=&to=\` row-level (patientId,
+symptomName, severity, since, recordedAt, doctorId) so analytics can aggregate
+any way the future needs, or at minimum \`GET /symptoms/top?businessId=&from=&to=&limit=\`.
+
+### 7. Server-side collection-report export: pm-analytics-service (extend)
+**Why we need it:** Daily Collection / Collection Report / Billing Overall
+export the billing API's bills list, which pages at 100 rows; a busy month
+exceeds the page and the export silently covers only the most-recent bills.
+**Hint:** add \`GET financial/collection-report?reportType=General|Detailed|Day Wise\`
+reusing the existing billing UNION, returning EVERY collection event in the
+window with every column the tables hold (type, bill id, date, issued-by,
+patient, mode, account, amounts, balance). Plus the per-report filters to wire
+end-to-end: \`issuedBy[]\`, \`paymentMode[]\`, \`account\`, \`department\`,
+\`incentiveUser[]\`, \`medicine[]\`, and \`includeClinicalData\` on
+appointment-analytics (appends the 16 clinical columns).
+
+### 8. Campaign message-level export: bulk-messages service
+**Why we need it:** the campaign list is campaign-grain only, so delivery
+trend, best send time, and per-template performance cannot be built.
+**Hint:** \`GET /api/v1/campaign/messages/export?businessId=&from=&to=\`
+returning one row per message: \`campaignId, templateId, patientId, channel,
+sentAt, deliveredAt|null, status, failureReason, credits\`.
+
+### 9. pm-ipd microservice export: modern IPD tenants
+**Why we need it:** the IPD analytics module reads the legacy replica tables;
+hospitals on the modern IPD microservice (pm-ipd, Mongo) keep admissions,
+the discharge pipeline, wards/beds, assessments, notes and cross-referrals
+THERE, invisible to the replica.
+**Hint:** bulk exports keyed by hospitalId + date range, every stored field:
+(a) admissions: patient, ward/room, admitting doctor, admittedOn, category,
+MLC, caretaker, isDischarged, sentForApproval (the discharge queue flag),
+isIntimateDischarged, dischargeType (Normal/Daycare/LAMA/Death), proposed
+discharge datetime, dischargedAt, dischargeNo; (b) transfers/bed moves;
+(c) cross-referrals: referring/receiving doctor, department, status,
+timestamps (unlocks the requested cross-referral analytics); (d) notes
+events: type, author, timestamp per admission.
+
+### 10. VoiceRx / symptom-collector aggregation: owning services
+**Why we need it:** adoption of these features is invisible; today's logs are
+write-only.
+**Hint:** counters by businessId + date range to start (sessions, adoption by
+doctor, edit rate; messages sent, response rate), row-level exports preferred
+per the superset rule.
+`,
+    api: `# TP Analytics Master APIs: OPD + IPD
+
+This is the master list of every API the analytics product runs on, both
+modules: OPD Analytics (/analytics) and IPD Analytics (/analytics/ipd). It
+exists so anyone (product, frontend, backend) can see the whole surface in one
+file: what each API is FOR, and which APIs we still need written.
+
+## The design philosophy (read this first)
+
+Every analytics API here is a **superset API**: it returns EVERYTHING its
+domain can say (all KPIs, all chart blocks, the full raw register up to an
+honest cap), not just what today's screen renders. The frontend picks what to
+display and handles its own logic; whatever it ignores is still in the
+response. This is deliberate: when we add a chart, a filter, or an export
+tomorrow, the data is already flowing and no backend change is needed. When
+you write a NEW API for this module, follow the same rule: include every field
+and every breakdown the source tables can give, even if no screen shows it yet.
+
+Conventions for all pm-analytics-service routes: base \`GET /api/v1/analytics/...\`,
+auth \`Authorization: Bearer <JWT>\` (tenant = \`result.hospital_business_id\` from
+the token, never from the client), common params \`startDate\`, \`endDate\`
+(YYYY-MM-DD), \`grain=day|week|month\`, \`doctorIds\` (repeatable), \`hospitalId\`
+(hm_id CSV), \`reportType\` where noted. Every response is the universal
+envelope: dashboard-block (\`hero? / kpis[] / <block>{columns,rows} /
+patients? / meta\`) or a lone result-set (\`{columns, rows, meta}\`). All reads
+are SELECT-only on the \`tatva_clinic\` replica.
+
+---
+
+## Part 1: APIs that exist today
+
+### pm-analytics-service (NestJS, reads the replica)
+
+Each row: the route, what it serves, and WHY we need it.
+
+| Route | Serves | Why we need it |
+|---|---|---|
+| \`GET operational/overview?careSetting=opd\` | Overview page: 12 KPI cards + 4 charts | The landing scoreboard: one headline per section so the practice's health reads in five seconds without opening any page |
+| \`GET operational/footfall\` | Appointments page | The demand engine: footfall = booked + walk-ins, channels, busiest patterns, new-vs-returning bookings; staffing and marketing decisions start here |
+| \`GET operational/patients?careSetting=opd\` | Patients page | Who the practice serves and whether they come back: retention by visit history, RFM value segments, the lapsed high-value recall list |
+| \`GET financial/summary?careSetting=opd\` | Billing depth blocks | The replica-side money detail the billing API cannot give: revenue by doctor, discounts by doctor, bill-builder roles, registers |
+| \`GET financial/depth\` | Billing replica-only blocks | Same purpose, split endpoint: keeps the billing page fast by loading depth separately |
+| \`GET financial/incentives?reportType=\` | Incentive report (Detailed/Overall) | Pays staff correctly: service-level incentive payouts per user, the accountant's monthly settlement sheet |
+| \`GET financial/3c-report\` | 3C report rows | The audit cut: cash memo / invoice / credit-note at service level by account, what the auditor and accountant reconcile against |
+| \`GET operational/pharmacy\` | Pharmacy page | The counter business: net sales, GST position, stock valuation, expiry risk (FEFO), supplier spend; entirely invisible without this |
+| \`GET operational/followups\` | Follow-ups page | The retention engine: who was advised to return, who actually did, and the missed list the front desk should call |
+| \`GET operational/abha\` | ABHA page | Government-programme compliance: ABHA adoption among the period's patients, with honest proxies where ABDM data is not persisted |
+| \`GET operational/certificates\` | Certificates page | A real workload doctors do daily that no screen measured: who issues what certificate, from which template |
+| \`GET operational/appointment-analytics?reportType=\` | Appointment report export | The raw per-appointment dump with patient demographics for offline analysis; Overall gives the per-doctor status matrix |
+| \`GET operational/prescription-analytics\` | Prescription report export | Brand/generic/company dose volumes: the pharma-conversation and formulary sheet |
+| \`GET operational/medicine-analytics\` | Medicine report export | Prescribed-medicine counts with patient reach per brand: simpler counting cut of the same source |
+| \`GET operational/referred-by-patients\` | Reference report | Which patients bring other patients: the organic-growth signal |
+| \`GET operational/referred-by-others\` | Reference report | Which external referrers send cases: the referral-network ledger |
+| \`GET clinical/diagnosis\` | Diagnoses page | What the practice diagnoses, with the clinical statuses (Suspected/Confirmed/Ruled out) and ICD-coded vs free-text capture quality |
+| \`GET clinical/symptoms\` | Symptoms page | What patients present with, parsed from the Rx symptom box with real severity: the demand-side clinical picture |
+| \`GET clinical/drug\` | Medications page | What gets prescribed, polypharmacy load, and custom-vs-catalogue medicines (which flags catalogue gaps) |
+| \`GET clinical/lab-test\` | Lab tests page | Which investigations get ordered and how often: utilisation of diagnostics |
+| \`GET clinical/vitals\` | Vitals page | What actually gets measured (12-field capture grid), BP staging, BMI bands: clinical data-quality plus population health |
+| \`GET clinical/medical-history\` | Medical history page | The chronic-disease registry: six segregations (condition/allergy/family/lifestyle/surgical/additional) by distinct patients |
+| \`GET clinical/obstetric\` | Obstetrics page (legacy-gated) | Pregnancy events, delivery modes, EDD pipeline from the legacy tables, honestly bannered until the service feed lands |
+| \`GET clinical/growth-chart\` | Growth page (pediatric-only) | Child growth monitoring: serial measurements, OFC capture, repeat-measurement coverage |
+| \`GET clinical/vaccination\` | Vaccination page | Dose volumes and IAP-vs-other split (after fixing a join that silently dropped ~65% of doses) |
+| \`GET clinical/gynec\` | Gynec page: **SAMPLE DATA** | Menstrual-history analytics, fully designed and visible; switches live when the Part-2 feed lands |
+| \`GET clinical/procedures-opd\` | Procedures page: **SAMPLE DATA** | OPD procedures analytics, fully designed; switches live when the Part-2 feed lands |
+| \`GET operational/custom-modules\` | Custom Modules page: **SAMPLE DATA** | RxPad module creation and cross-doctor reuse; switches live when the Part-2 feed lands |
+| \`GET ipd/summary\` | IPD Overview | The hospital scoreboard: census, occupancy, queue, deaths; one glance answers how full are we and what is moving |
+| \`GET ipd/admissions\` | IPD Admissions & Discharges | Throughput is THE inpatient operations question: who admits, where, how long, and how patients leave (DAMA and death rates are quality flags) |
+| \`GET ipd/wards\` | IPD Wards & Beds | Bed management is the revenue ceiling: capacity, occupancy, transfers, and the predictive discharge/occupancy bands turn the census into a planning tool |
+| \`GET ipd/clinical\` | IPD Clinical Activity | Documentation coverage is the medico-legal shield; OT volume is the high-revenue clinical activity |
+
+### Production APIs the frontend reads directly
+
+| API | Serves | Why we need it |
+|---|---|---|
+| \`POST {billing}/bill/dashboard\` | Billing headline band, mode mixes, dues-by-age, bills register | The ONLY source that works for every tenant (old and new billing service); figures reconcile exactly with the OPD Billing screen staff already trust |
+| \`POST {billing}/advancedDeposit/dashboard\` | Advance wallet cards + advance mode mixes (OPD and IPD pages) | The wallet ledger (received/refunded/debited) lives only in the billing service, not the replica; it is patient-level and shared across care settings |
+| \`POST {billing}/api/v1/billing/ipd-bill/dashboard\` | IPD Billing page band + IPD Bills report | The IPD bill ledger (one bill per admission) lives in the billing service; figures reconcile with the IPD billing screen staff already use |
+| \`POST /api/v1/appointment/listAppointment\` | EMR parity reference | The ground truth our appointment numbers are verified against (the tab keys ARE the status codes) |
+| \`GET {bulk_messages}/communication/userCredit\`, \`POST {bulk_messages}/campaign/userCampaign\` | Campaigns page | Campaign reach, delivery and credit spend belong to the messaging service; analytics renders what it returns |
+
+---
+
+## Part 2: APIs we NEED but DO NOT HAVE (write these)
+
+> We do not have these APIs today. For each: why we need it, who owns it, and
+> the contract hint a backend developer can build from. Follow the superset
+> rule: export EVERY field the source stores, not just what today's design
+> shows. Pattern options for every feed: (A) a bulk export endpoint the
+> analytics service polls, (B) a read replica of the owning service's
+> datastore, or (C) a nightly sync into a small \`tatva_clinic\` table.
+> pm-analytics-service is mysql2-only today (no HTTP client), so (B)/(C) are
+> drop-ins and (A) needs a small fetch layer.
+
+### 1. Gynec menstrual history export: pm-medicalhistory service
+**Why we need it:** the Gynec page (cycle regularity, flow, pain, menarche age,
+reproductive life stages) runs on sample data; irregular-cycle share is a real
+screening signal for PCOD and thyroid workups that doctors asked for.
+**What exists:** only a per-patient \`GET /gynec-history/gynec/{patientId}/{userId}\`;
+no list by hospital, and the stored document carries no \`hm_business_id\`.
+**Hint:** \`GET /gynec-history/export?businessId=&from=&to=\` returning flattened
+timeline rows with EVERY stored key: \`patientId, lmp, ageAtMenarche,
+ageAtMenopause, intervalOfCycle, durationOfMenstrualFlow, numberOfPadsPerDay,
+cycle, flow, pain, occurrenceOfPain, clots, reproductiveLifeStages,
+typeOfMenopause, note, createdAt, createdBy\`. Include \`businessId\` in the
+export. Full contract: \`GYNEC-OBSTETRIC-INTEGRATION.md\`.
+
+### 2. Obstetric (current) export: same pm-medicalhistory service
+**Why we need it:** the Obstetrics page covers only legacy rows frozen at
+~mid-2024; current pregnancies, EDD pipeline and G/P/L/A/E counters are
+invisible to analytics.
+**Hint:** same export shape as (1) for the obstetric-history collection:
+LMP/EDD/CEDD, gestation, G/P/L/A/E counters, pregnancy-history rows (mode of
+delivery, date, gender, baby weight, remarks), current-examination values,
+ANC schedule items, immunisation history, keyed by businessId + date range.
+
+### 3. OPD procedures export: pm-patient-docs service
+**Why we need it:** procedures are real revenue and clinical workload; the
+Procedures page runs on sample data because the Rx "Surgeries/Procedures" box
+writes only to this service (the replica's procedure table is inpatient-only,
+~53 rows).
+**Hint:** \`GET /api/v1/surgeries/export?businessId=&from=&to=\` returning one
+row per performed procedure with every stored field: \`patientId,
+procedureName, performedAt, doctorId (userId), notes, template/source flags\`.
+
+### 4. Custom-modules registry + reuse log: dynamic-modules service
+**Why we need it:** module reuse across doctors is the signal that the RxPad
+investment is paying off; the page runs on sample data because the registry
+and usage log exist only in this service.
+**Hint:** two exports keyed by hospital: (a) modules: \`module_id, name,
+creator_userId, column_count, column_labels, created_at, origin_id (null =
+original, else cloned-from), deleted\`; (b) usage events: \`module_id,
+used_by_userId, used_at, rx_id\`. \`origin_id\` + used_by != creator yields reuse
+rate, most-used across doctors, created-vs-reused.
+
+### 5. ABHA KYC + consent depth: ABDM service
+**Why we need it:** the owner's asked-for cards (KYC vs non-KYC patients,
+consent success with/without KYC, KYC split of care contexts) cannot be built;
+the replica stores only coarse flags, shown today as labelled proxies.
+**Hint:** persist + export three event sets keyed by businessId, with every
+field the flow produces: (a) enrolments: \`patientId, channel
+(aadhaar-kyc | non-kyc), abhaAddress, createdAt\`; (b) consent requests:
+\`requestId, patientId, purpose, status (granted|denied|expired), kycFlag,
+requestedAt, decidedAt\`; (c) care-context links: \`linkId, patientId, kycFlag,
+contextType, linkedAt\`.
+
+### 6. Per-patient symptoms read: symptoms service
+**Why we need it:** the Overview "Top symptoms" card shows a dash; the
+symptoms service holds richer per-patient data than the Rx-box parse the
+Symptoms page uses.
+**Hint:** \`GET /symptoms/export?businessId=&from=&to=\` row-level (patientId,
+symptomName, severity, since, recordedAt, doctorId) so analytics can aggregate
+any way the future needs, or at minimum \`GET /symptoms/top?businessId=&from=&to=&limit=\`.
+
+### 7. Server-side collection-report export: pm-analytics-service (extend)
+**Why we need it:** Daily Collection / Collection Report / Billing Overall
+export the billing API's bills list, which pages at 100 rows; a busy month
+exceeds the page and the export silently covers only the most-recent bills.
+**Hint:** add \`GET financial/collection-report?reportType=General|Detailed|Day Wise\`
+reusing the existing billing UNION, returning EVERY collection event in the
+window with every column the tables hold (type, bill id, date, issued-by,
+patient, mode, account, amounts, balance). Plus the per-report filters to wire
+end-to-end: \`issuedBy[]\`, \`paymentMode[]\`, \`account\`, \`department\`,
+\`incentiveUser[]\`, \`medicine[]\`, and \`includeClinicalData\` on
+appointment-analytics (appends the 16 clinical columns).
+
+### 8. Campaign message-level export: bulk-messages service
+**Why we need it:** the campaign list is campaign-grain only, so delivery
+trend, best send time, and per-template performance cannot be built.
+**Hint:** \`GET /api/v1/campaign/messages/export?businessId=&from=&to=\`
+returning one row per message: \`campaignId, templateId, patientId, channel,
+sentAt, deliveredAt|null, status, failureReason, credits\`.
+
+### 9. pm-ipd microservice export: modern IPD tenants
+**Why we need it:** the IPD analytics module reads the legacy replica tables;
+hospitals on the modern IPD microservice (pm-ipd, Mongo) keep admissions,
+the discharge pipeline, wards/beds, assessments, notes and cross-referrals
+THERE, invisible to the replica.
+**Hint:** bulk exports keyed by hospitalId + date range, every stored field:
+(a) admissions: patient, ward/room, admitting doctor, admittedOn, category,
+MLC, caretaker, isDischarged, sentForApproval (the discharge queue flag),
+isIntimateDischarged, dischargeType (Normal/Daycare/LAMA/Death), proposed
+discharge datetime, dischargedAt, dischargeNo; (b) transfers/bed moves;
+(c) cross-referrals: referring/receiving doctor, department, status,
+timestamps (unlocks the requested cross-referral analytics); (d) notes
+events: type, author, timestamp per admission.
+
+### 10. VoiceRx / symptom-collector aggregation: owning services
+**Why we need it:** adoption of these features is invisible; today's logs are
+write-only.
+**Hint:** counters by businessId + date range to start (sessions, adoption by
+doctor, edit rate; messages sent, response rate), row-level exports preferred
+per the superset rule.
+`,
+  },
+  "project_scope": {
+    title: "OPD Analytics: the complete project",
+    explanatory: `# OPD Analytics: project scope
+
+The complete picture of what this module is, who it serves, what it covers,
+and where it is headed. One read should orient anyone: a doctor, an admin, a
+new frontend or backend developer, or a product owner.
+
+## What it is
+
+A native analytics module inside the TatvaCare doctor portal that replaces the
+legacy PHP \`data_analytics\` link-out. It answers one question for an OPD
+practice: **how is the practice doing, and where exactly should I act?** It
+ships as TWO modules from the same workspace shell: **OPD Analytics**
+(\`/analytics\`) and **IPD Analytics** (\`/analytics/ipd\`), both strictly
+read-only (a SELECT-only user on the \`tatva_clinic\` replica plus the
+production billing/messaging APIs; nothing here writes anywhere), and
+tenant-scoped from the login token, never from the client.
+
+## Who it is for
+
+- **Doctors**: land pre-filtered to their own practice (the role-default
+  landing); their numbers line up with the EMR screens they already trust.
+- **Clinic owners / admins**: land clinic-wide; compare doctors, watch money,
+  staff the busy hours, run the recall lists.
+- **Accountants / auditors**: the Reports hub's downloadable cuts (collection,
+  3C, incentives, registers).
+- **Developers**: every page self-documents (the info button), and the
+  documentation pack + master API file specify every route and every missing
+  feed.
+
+## What it covers (the sections)
+
+- **Overview**: one headline per section, the practice scoreboard.
+- **Appointments**: footfall = booked + walk-ins, channels, statuses, busiest
+  patterns, new-vs-returning bookings, doctor scorecard.
+- **Billing**: the bill ledger and the advance wallet as two explicit
+  families, payment/refund mode mixes, dues by age, replica depth (revenue and
+  discounts by doctor, registers).
+- **Patients**: retention by visit history, demographics, blood groups,
+  marital status, RFM value segments, lapsed high-value recall.
+- **Care**: Symptoms, Diagnoses, Medications (incl. custom-vs-catalogue), Lab
+  Tests, Procedures, Vitals, Medical History (six segregations), Gynec
+  (menstrual), Obstetrics, Growth Chart, Vaccination, Custom Modules,
+  Certificates.
+- **Pharmacy**: the standalone PHP pharmacy module's full business: sales,
+  purchases, suppliers, stock, expiry risk.
+- **Grow**: Follow-ups (the retention loop), ABHA/ABDM, Campaigns.
+- **Reports**: 16 downloadable cuts in four groups (Financial, Clinical,
+  Reference, Registers), CSV and Excel.
+
+### The IPD module (\`/analytics/ipd\`)
+- **Overview**: census, admissions/discharges, discharge queue, ~avg length of
+  stay, bed occupancy, deaths.
+- **Admissions & Discharges**: by department/ward/admitting doctor, discharge
+  types, LOS distribution, queue size and ~time in queue.
+- **Wards & Beds**: capacity/occupied/available/blocked, room shifts, ALOS by
+  ward, transfers log, predictive expected discharges + projected occupancy.
+- **Clinical Activity**: assessment and note coverage, admit vs discharge
+  diagnoses, OT volume by doctor, anaesthesia mix, summary completion.
+- **Billing**: the IPD bill ledger + advance wallet, mirroring OPD billing.
+- **Reports**: 8 raw-data registers (admissions, discharges, queue, LOS,
+  transfers, OT, bills, dues).
+Source: the legacy replica IPD tables; hospitals on the modern pm-ipd
+microservice need the export feed in MASTER-API.md Part 2.
+
+## The rules every page obeys
+
+- **Honesty first**: no fabricated numbers. Pages whose source lives in an
+  unconnected microservice run on clearly-bannered SAMPLE data (Gynec,
+  Procedures, Custom Modules) or labelled proxies (ABHA KYC), never silent
+  zeros. Truncated registers say so.
+- **Zero-fill**: every fixed domain renders all its buckets (all 24 hours, all
+  7 weekdays, all 8 blood groups), zero included. Missing data appears as an
+  explicit "Not recorded" bucket.
+- **Reconciliation**: identities hold everywhere (footfall = booked +
+  walk-ins; one-time + returning = total patients; the donut always sums to
+  the cards). Numbers were verified against the EMR's own screens and write
+  paths, not assumed.
+- **Approximations are marked** (~), counts are whole numbers, forecasts only
+  show for current rolling windows.
+- **Stable layout**: KPI card positions never change with the period or
+  filters; conditional cards show a dash instead of disappearing.
+- **Semantic colors**: completed is green, cancelled red, scheduled amber,
+  residual buckets grey, everywhere.
+
+## How it is built (one paragraph each)
+
+**Frontend**: a self-contained React module at \`src/pages/analytics\` (Tailwind
++ vendored shadcn primitives + Recharts, scoped so the rest of the EMR is
+untouched). A single workspace shell drives every page: shared Doctor / Clinic
+/ Period filters, a sidebar, KPI bands, chart widgets with per-chart download,
+and the info drawer with the documentation pack.
+
+**Backend**: \`pm-analytics-service\`, a NestJS service exposing
+\`/api/v1/analytics/...\` routes (the master API file lists all of them). Every
+builder is a superset API: it returns all KPIs, all blocks and the full
+register its domain supports; the frontend chooses what to render.
+
+**Data**: the \`tatva_clinic\` MySQL replica (read-only) plus the production
+billing and messaging APIs. Five domains await microservice feeds (gynec,
+obstetric-current, procedures, custom modules, ABHA KYC/consent depth); the
+master API file carries the exact contract each owning team should build.
+
+## Where to read more
+
+- **MASTER-API.md**: every API that exists (with why), and every API we still
+  need (with the contract hint).
+- **architecture.md**: the system contract in detail (response envelope,
+  frontend registration rules, auth).
+- **Per-section guides**: every page's info button carries its own guide and
+  backend spec; the full pack downloads as a ZIP.
+`,
+    api: `# TP Analytics Master APIs: OPD + IPD
+
+This is the master list of every API the analytics product runs on, both
+modules: OPD Analytics (/analytics) and IPD Analytics (/analytics/ipd). It
+exists so anyone (product, frontend, backend) can see the whole surface in one
+file: what each API is FOR, and which APIs we still need written.
+
+## The design philosophy (read this first)
+
+Every analytics API here is a **superset API**: it returns EVERYTHING its
+domain can say (all KPIs, all chart blocks, the full raw register up to an
+honest cap), not just what today's screen renders. The frontend picks what to
+display and handles its own logic; whatever it ignores is still in the
+response. This is deliberate: when we add a chart, a filter, or an export
+tomorrow, the data is already flowing and no backend change is needed. When
+you write a NEW API for this module, follow the same rule: include every field
+and every breakdown the source tables can give, even if no screen shows it yet.
+
+Conventions for all pm-analytics-service routes: base \`GET /api/v1/analytics/...\`,
+auth \`Authorization: Bearer <JWT>\` (tenant = \`result.hospital_business_id\` from
+the token, never from the client), common params \`startDate\`, \`endDate\`
+(YYYY-MM-DD), \`grain=day|week|month\`, \`doctorIds\` (repeatable), \`hospitalId\`
+(hm_id CSV), \`reportType\` where noted. Every response is the universal
+envelope: dashboard-block (\`hero? / kpis[] / <block>{columns,rows} /
+patients? / meta\`) or a lone result-set (\`{columns, rows, meta}\`). All reads
+are SELECT-only on the \`tatva_clinic\` replica.
+
+---
+
+## Part 1: APIs that exist today
+
+### pm-analytics-service (NestJS, reads the replica)
+
+Each row: the route, what it serves, and WHY we need it.
+
+| Route | Serves | Why we need it |
+|---|---|---|
+| \`GET operational/overview?careSetting=opd\` | Overview page: 12 KPI cards + 4 charts | The landing scoreboard: one headline per section so the practice's health reads in five seconds without opening any page |
+| \`GET operational/footfall\` | Appointments page | The demand engine: footfall = booked + walk-ins, channels, busiest patterns, new-vs-returning bookings; staffing and marketing decisions start here |
+| \`GET operational/patients?careSetting=opd\` | Patients page | Who the practice serves and whether they come back: retention by visit history, RFM value segments, the lapsed high-value recall list |
+| \`GET financial/summary?careSetting=opd\` | Billing depth blocks | The replica-side money detail the billing API cannot give: revenue by doctor, discounts by doctor, bill-builder roles, registers |
+| \`GET financial/depth\` | Billing replica-only blocks | Same purpose, split endpoint: keeps the billing page fast by loading depth separately |
+| \`GET financial/incentives?reportType=\` | Incentive report (Detailed/Overall) | Pays staff correctly: service-level incentive payouts per user, the accountant's monthly settlement sheet |
+| \`GET financial/3c-report\` | 3C report rows | The audit cut: cash memo / invoice / credit-note at service level by account, what the auditor and accountant reconcile against |
+| \`GET operational/pharmacy\` | Pharmacy page | The counter business: net sales, GST position, stock valuation, expiry risk (FEFO), supplier spend; entirely invisible without this |
+| \`GET operational/followups\` | Follow-ups page | The retention engine: who was advised to return, who actually did, and the missed list the front desk should call |
+| \`GET operational/abha\` | ABHA page | Government-programme compliance: ABHA adoption among the period's patients, with honest proxies where ABDM data is not persisted |
+| \`GET operational/certificates\` | Certificates page | A real workload doctors do daily that no screen measured: who issues what certificate, from which template |
+| \`GET operational/appointment-analytics?reportType=\` | Appointment report export | The raw per-appointment dump with patient demographics for offline analysis; Overall gives the per-doctor status matrix |
+| \`GET operational/prescription-analytics\` | Prescription report export | Brand/generic/company dose volumes: the pharma-conversation and formulary sheet |
+| \`GET operational/medicine-analytics\` | Medicine report export | Prescribed-medicine counts with patient reach per brand: simpler counting cut of the same source |
+| \`GET operational/referred-by-patients\` | Reference report | Which patients bring other patients: the organic-growth signal |
+| \`GET operational/referred-by-others\` | Reference report | Which external referrers send cases: the referral-network ledger |
+| \`GET clinical/diagnosis\` | Diagnoses page | What the practice diagnoses, with the clinical statuses (Suspected/Confirmed/Ruled out) and ICD-coded vs free-text capture quality |
+| \`GET clinical/symptoms\` | Symptoms page | What patients present with, parsed from the Rx symptom box with real severity: the demand-side clinical picture |
+| \`GET clinical/drug\` | Medications page | What gets prescribed, polypharmacy load, and custom-vs-catalogue medicines (which flags catalogue gaps) |
+| \`GET clinical/lab-test\` | Lab tests page | Which investigations get ordered and how often: utilisation of diagnostics |
+| \`GET clinical/vitals\` | Vitals page | What actually gets measured (12-field capture grid), BP staging, BMI bands: clinical data-quality plus population health |
+| \`GET clinical/medical-history\` | Medical history page | The chronic-disease registry: six segregations (condition/allergy/family/lifestyle/surgical/additional) by distinct patients |
+| \`GET clinical/obstetric\` | Obstetrics page (legacy-gated) | Pregnancy events, delivery modes, EDD pipeline from the legacy tables, honestly bannered until the service feed lands |
+| \`GET clinical/growth-chart\` | Growth page (pediatric-only) | Child growth monitoring: serial measurements, OFC capture, repeat-measurement coverage |
+| \`GET clinical/vaccination\` | Vaccination page | Dose volumes and IAP-vs-other split (after fixing a join that silently dropped ~65% of doses) |
+| \`GET clinical/gynec\` | Gynec page: **SAMPLE DATA** | Menstrual-history analytics, fully designed and visible; switches live when the Part-2 feed lands |
+| \`GET clinical/procedures-opd\` | Procedures page: **SAMPLE DATA** | OPD procedures analytics, fully designed; switches live when the Part-2 feed lands |
+| \`GET operational/custom-modules\` | Custom Modules page: **SAMPLE DATA** | RxPad module creation and cross-doctor reuse; switches live when the Part-2 feed lands |
+| \`GET ipd/summary\` | IPD Overview | The hospital scoreboard: census, occupancy, queue, deaths; one glance answers how full are we and what is moving |
+| \`GET ipd/admissions\` | IPD Admissions & Discharges | Throughput is THE inpatient operations question: who admits, where, how long, and how patients leave (DAMA and death rates are quality flags) |
+| \`GET ipd/wards\` | IPD Wards & Beds | Bed management is the revenue ceiling: capacity, occupancy, transfers, and the predictive discharge/occupancy bands turn the census into a planning tool |
+| \`GET ipd/clinical\` | IPD Clinical Activity | Documentation coverage is the medico-legal shield; OT volume is the high-revenue clinical activity |
+
+### Production APIs the frontend reads directly
+
+| API | Serves | Why we need it |
+|---|---|---|
+| \`POST {billing}/bill/dashboard\` | Billing headline band, mode mixes, dues-by-age, bills register | The ONLY source that works for every tenant (old and new billing service); figures reconcile exactly with the OPD Billing screen staff already trust |
+| \`POST {billing}/advancedDeposit/dashboard\` | Advance wallet cards + advance mode mixes (OPD and IPD pages) | The wallet ledger (received/refunded/debited) lives only in the billing service, not the replica; it is patient-level and shared across care settings |
+| \`POST {billing}/api/v1/billing/ipd-bill/dashboard\` | IPD Billing page band + IPD Bills report | The IPD bill ledger (one bill per admission) lives in the billing service; figures reconcile with the IPD billing screen staff already use |
+| \`POST /api/v1/appointment/listAppointment\` | EMR parity reference | The ground truth our appointment numbers are verified against (the tab keys ARE the status codes) |
+| \`GET {bulk_messages}/communication/userCredit\`, \`POST {bulk_messages}/campaign/userCampaign\` | Campaigns page | Campaign reach, delivery and credit spend belong to the messaging service; analytics renders what it returns |
+
+---
+
+## Part 2: APIs we NEED but DO NOT HAVE (write these)
+
+> We do not have these APIs today. For each: why we need it, who owns it, and
+> the contract hint a backend developer can build from. Follow the superset
+> rule: export EVERY field the source stores, not just what today's design
+> shows. Pattern options for every feed: (A) a bulk export endpoint the
+> analytics service polls, (B) a read replica of the owning service's
+> datastore, or (C) a nightly sync into a small \`tatva_clinic\` table.
+> pm-analytics-service is mysql2-only today (no HTTP client), so (B)/(C) are
+> drop-ins and (A) needs a small fetch layer.
+
+### 1. Gynec menstrual history export: pm-medicalhistory service
+**Why we need it:** the Gynec page (cycle regularity, flow, pain, menarche age,
+reproductive life stages) runs on sample data; irregular-cycle share is a real
+screening signal for PCOD and thyroid workups that doctors asked for.
+**What exists:** only a per-patient \`GET /gynec-history/gynec/{patientId}/{userId}\`;
+no list by hospital, and the stored document carries no \`hm_business_id\`.
+**Hint:** \`GET /gynec-history/export?businessId=&from=&to=\` returning flattened
+timeline rows with EVERY stored key: \`patientId, lmp, ageAtMenarche,
+ageAtMenopause, intervalOfCycle, durationOfMenstrualFlow, numberOfPadsPerDay,
+cycle, flow, pain, occurrenceOfPain, clots, reproductiveLifeStages,
+typeOfMenopause, note, createdAt, createdBy\`. Include \`businessId\` in the
+export. Full contract: \`GYNEC-OBSTETRIC-INTEGRATION.md\`.
+
+### 2. Obstetric (current) export: same pm-medicalhistory service
+**Why we need it:** the Obstetrics page covers only legacy rows frozen at
+~mid-2024; current pregnancies, EDD pipeline and G/P/L/A/E counters are
+invisible to analytics.
+**Hint:** same export shape as (1) for the obstetric-history collection:
+LMP/EDD/CEDD, gestation, G/P/L/A/E counters, pregnancy-history rows (mode of
+delivery, date, gender, baby weight, remarks), current-examination values,
+ANC schedule items, immunisation history, keyed by businessId + date range.
+
+### 3. OPD procedures export: pm-patient-docs service
+**Why we need it:** procedures are real revenue and clinical workload; the
+Procedures page runs on sample data because the Rx "Surgeries/Procedures" box
+writes only to this service (the replica's procedure table is inpatient-only,
+~53 rows).
+**Hint:** \`GET /api/v1/surgeries/export?businessId=&from=&to=\` returning one
+row per performed procedure with every stored field: \`patientId,
+procedureName, performedAt, doctorId (userId), notes, template/source flags\`.
+
+### 4. Custom-modules registry + reuse log: dynamic-modules service
+**Why we need it:** module reuse across doctors is the signal that the RxPad
+investment is paying off; the page runs on sample data because the registry
+and usage log exist only in this service.
+**Hint:** two exports keyed by hospital: (a) modules: \`module_id, name,
+creator_userId, column_count, column_labels, created_at, origin_id (null =
+original, else cloned-from), deleted\`; (b) usage events: \`module_id,
+used_by_userId, used_at, rx_id\`. \`origin_id\` + used_by != creator yields reuse
+rate, most-used across doctors, created-vs-reused.
+
+### 5. ABHA KYC + consent depth: ABDM service
+**Why we need it:** the owner's asked-for cards (KYC vs non-KYC patients,
+consent success with/without KYC, KYC split of care contexts) cannot be built;
+the replica stores only coarse flags, shown today as labelled proxies.
+**Hint:** persist + export three event sets keyed by businessId, with every
+field the flow produces: (a) enrolments: \`patientId, channel
+(aadhaar-kyc | non-kyc), abhaAddress, createdAt\`; (b) consent requests:
+\`requestId, patientId, purpose, status (granted|denied|expired), kycFlag,
+requestedAt, decidedAt\`; (c) care-context links: \`linkId, patientId, kycFlag,
+contextType, linkedAt\`.
+
+### 6. Per-patient symptoms read: symptoms service
+**Why we need it:** the Overview "Top symptoms" card shows a dash; the
+symptoms service holds richer per-patient data than the Rx-box parse the
+Symptoms page uses.
+**Hint:** \`GET /symptoms/export?businessId=&from=&to=\` row-level (patientId,
+symptomName, severity, since, recordedAt, doctorId) so analytics can aggregate
+any way the future needs, or at minimum \`GET /symptoms/top?businessId=&from=&to=&limit=\`.
+
+### 7. Server-side collection-report export: pm-analytics-service (extend)
+**Why we need it:** Daily Collection / Collection Report / Billing Overall
+export the billing API's bills list, which pages at 100 rows; a busy month
+exceeds the page and the export silently covers only the most-recent bills.
+**Hint:** add \`GET financial/collection-report?reportType=General|Detailed|Day Wise\`
+reusing the existing billing UNION, returning EVERY collection event in the
+window with every column the tables hold (type, bill id, date, issued-by,
+patient, mode, account, amounts, balance). Plus the per-report filters to wire
+end-to-end: \`issuedBy[]\`, \`paymentMode[]\`, \`account\`, \`department\`,
+\`incentiveUser[]\`, \`medicine[]\`, and \`includeClinicalData\` on
+appointment-analytics (appends the 16 clinical columns).
+
+### 8. Campaign message-level export: bulk-messages service
+**Why we need it:** the campaign list is campaign-grain only, so delivery
+trend, best send time, and per-template performance cannot be built.
+**Hint:** \`GET /api/v1/campaign/messages/export?businessId=&from=&to=\`
+returning one row per message: \`campaignId, templateId, patientId, channel,
+sentAt, deliveredAt|null, status, failureReason, credits\`.
+
+### 9. pm-ipd microservice export: modern IPD tenants
+**Why we need it:** the IPD analytics module reads the legacy replica tables;
+hospitals on the modern IPD microservice (pm-ipd, Mongo) keep admissions,
+the discharge pipeline, wards/beds, assessments, notes and cross-referrals
+THERE, invisible to the replica.
+**Hint:** bulk exports keyed by hospitalId + date range, every stored field:
+(a) admissions: patient, ward/room, admitting doctor, admittedOn, category,
+MLC, caretaker, isDischarged, sentForApproval (the discharge queue flag),
+isIntimateDischarged, dischargeType (Normal/Daycare/LAMA/Death), proposed
+discharge datetime, dischargedAt, dischargeNo; (b) transfers/bed moves;
+(c) cross-referrals: referring/receiving doctor, department, status,
+timestamps (unlocks the requested cross-referral analytics); (d) notes
+events: type, author, timestamp per admission.
+
+### 10. VoiceRx / symptom-collector aggregation: owning services
+**Why we need it:** adoption of these features is invisible; today's logs are
+write-only.
+**Hint:** counters by businessId + date range to start (sessions, adoption by
+doctor, edit rate; messages sent, response rate), row-level exports preferred
+per the superset rule.
+`,
+  },
+  "project_scope_ipd": {
+    title: "IPD Analytics: the complete project",
+    explanatory: `# IPD Analytics: project scope
+
+The complete picture of the inpatient analytics module: what it is, who it
+serves, what it covers, how it is built, and where it is headed. One read
+should orient anyone: a doctor, a hospital admin, a new developer, or a
+product owner.
+
+## What it is
+
+The inpatient half of TP Analytics, at \`/analytics/ipd\`, sharing one
+workspace shell with OPD Analytics (\`/analytics\`): same filters, same cards,
+same info drawers, a separate nav tree. It answers the hospital's standing
+questions: **how full are we, what is moving, where are the bottlenecks, and
+is the stay being documented and billed properly?** Strictly read-only
+(SELECT-only replica user plus the production billing APIs) and tenant-scoped
+from the login token, never from the client.
+
+## Who it is for
+
+- **Admitting doctors**: their own admissions, stays, OT volume and
+  documentation coverage.
+- **Hospital owners / bed managers**: census, occupancy, ward throughput,
+  transfer load, the predictive discharge and occupancy bands.
+- **Nursing and quality leads**: documentation cadence (progress-note
+  intervals), the documentation funnel, discharge-summary completion, DAMA
+  and death shares.
+- **Accountants**: the IPD bill ledger, dues ageing, deposit coverage, the
+  raw registers.
+
+## The pages
+
+- **Overview**: current census, admitted/discharged this period, discharge
+  queue, ~avg length of stay, bed occupancy; flow and census trends, ward
+  occupancy, discharge-type mix.
+- **Admissions & Discharges**: throughput by department, ward and admitting
+  doctor; patient-category and discharge-type mixes; LOS distribution; the
+  discharge queue with ~time in queue (the discharge-process bottleneck
+  metric); admission, discharge, queue and LOS registers.
+- **Wards & Beds**: bed capacity (active/occupied/available/blocked), room
+  shifts, bed turnover; beds by ward, occupancy trend, ALOS by ward and by
+  department; ward and department admission/discharge flow; transfers in and
+  out per ward; predictive expected discharges and projected occupancy
+  (next 7 days, labelled heuristics).
+- **Clinical Activity**: built on the real per-artifact documentation model
+  (admission assessment once per admission; nurse progress notes multiple
+  per day; doctor consultant notes through the stay; OT notes per operation;
+  cross referral request and response; lab results; medical-record uploads;
+  discharge summary). Coverage and cadence per artifact: assessment coverage,
+  ~progress and consultant notes per patient-day, ~nurse note interval, OT
+  note coverage; the documentation funnel; notes by stay day; admit vs
+  discharge diagnoses; OT volume, anaesthesia mix, summary completion.
+- **Billing**: the IPD bill ledger and the shared advance wallet (mirroring
+  OPD Billing), plus the replica depth the billing API cannot give: revenue
+  by doctor and the named patient-dues register (debit documents only).
+- **Reports**: 8 raw-data downloads: admission, discharged, discharge-queue,
+  LOS, transfers and OT registers, IPD bills, outstanding dues.
+
+## The rules every page obeys
+
+Same house rules as OPD: honesty first (no fabricated numbers; source notes
+on every page), zero-filled fixed domains, ~ marked approximations, stable
+KPI layout, semantic status colors, superset APIs (every endpoint returns
+everything its domain can say; the frontend picks what to render).
+
+## How it is built
+
+- **Data source today**: the legacy replica IPD tables (\`tbl_atd_patient_master\`,
+  ward/room management, the \`tbl_atd_logs\` transfer log, the OT schedule and
+  procedure tables, ~20 \`tbl_inpatient_*\` clinical tables, the IPD billing
+  overview). Key facts the builders encode: the cross-table admission key is
+  the string \`in_pid\`; legacy has NO discharge-date column (precedence:
+  ready-to-discharge log, then discharge-summary date, then last-modified);
+  a bed is a ward-room row of type bed; occupancy derives from active
+  admissions' room assignment.
+- **The discharge queue**: an admission sent for discharge approval and not
+  yet discharged (modern: \`sentForApproval\` without \`isDischarged\`; legacy
+  proxy: a ready-to-discharge log with the discharge flag still 0).
+- **Modern-tenant gap, stated everywhere it matters**: hospitals on the
+  modern pm-ipd microservice keep admissions, the discharge pipeline,
+  wards/beds, notes and cross-referrals in that service's own datastore,
+  invisible to the replica. The export contract that lights them up (and
+  unlocks cross-referral analytics and medical-records counts) is specified
+  in MASTER-API.md Part 2.
+
+## Where to read more
+
+- **MASTER-API.md**: every analytics API (OPD + IPD) with why it exists, and
+  every API still needed, with contract hints.
+- **Per-page guides**: every IPD page's info button carries its own guide and
+  backend spec; the full pack downloads as a ZIP.
+`,
+    api: `# TP Analytics Master APIs: OPD + IPD
+
+This is the master list of every API the analytics product runs on, both
+modules: OPD Analytics (/analytics) and IPD Analytics (/analytics/ipd). It
+exists so anyone (product, frontend, backend) can see the whole surface in one
+file: what each API is FOR, and which APIs we still need written.
+
+## The design philosophy (read this first)
+
+Every analytics API here is a **superset API**: it returns EVERYTHING its
+domain can say (all KPIs, all chart blocks, the full raw register up to an
+honest cap), not just what today's screen renders. The frontend picks what to
+display and handles its own logic; whatever it ignores is still in the
+response. This is deliberate: when we add a chart, a filter, or an export
+tomorrow, the data is already flowing and no backend change is needed. When
+you write a NEW API for this module, follow the same rule: include every field
+and every breakdown the source tables can give, even if no screen shows it yet.
+
+Conventions for all pm-analytics-service routes: base \`GET /api/v1/analytics/...\`,
+auth \`Authorization: Bearer <JWT>\` (tenant = \`result.hospital_business_id\` from
+the token, never from the client), common params \`startDate\`, \`endDate\`
+(YYYY-MM-DD), \`grain=day|week|month\`, \`doctorIds\` (repeatable), \`hospitalId\`
+(hm_id CSV), \`reportType\` where noted. Every response is the universal
+envelope: dashboard-block (\`hero? / kpis[] / <block>{columns,rows} /
+patients? / meta\`) or a lone result-set (\`{columns, rows, meta}\`). All reads
+are SELECT-only on the \`tatva_clinic\` replica.
+
+---
+
+## Part 1: APIs that exist today
+
+### pm-analytics-service (NestJS, reads the replica)
+
+Each row: the route, what it serves, and WHY we need it.
+
+| Route | Serves | Why we need it |
+|---|---|---|
+| \`GET operational/overview?careSetting=opd\` | Overview page: 12 KPI cards + 4 charts | The landing scoreboard: one headline per section so the practice's health reads in five seconds without opening any page |
+| \`GET operational/footfall\` | Appointments page | The demand engine: footfall = booked + walk-ins, channels, busiest patterns, new-vs-returning bookings; staffing and marketing decisions start here |
+| \`GET operational/patients?careSetting=opd\` | Patients page | Who the practice serves and whether they come back: retention by visit history, RFM value segments, the lapsed high-value recall list |
+| \`GET financial/summary?careSetting=opd\` | Billing depth blocks | The replica-side money detail the billing API cannot give: revenue by doctor, discounts by doctor, bill-builder roles, registers |
+| \`GET financial/depth\` | Billing replica-only blocks | Same purpose, split endpoint: keeps the billing page fast by loading depth separately |
+| \`GET financial/incentives?reportType=\` | Incentive report (Detailed/Overall) | Pays staff correctly: service-level incentive payouts per user, the accountant's monthly settlement sheet |
+| \`GET financial/3c-report\` | 3C report rows | The audit cut: cash memo / invoice / credit-note at service level by account, what the auditor and accountant reconcile against |
+| \`GET operational/pharmacy\` | Pharmacy page | The counter business: net sales, GST position, stock valuation, expiry risk (FEFO), supplier spend; entirely invisible without this |
+| \`GET operational/followups\` | Follow-ups page | The retention engine: who was advised to return, who actually did, and the missed list the front desk should call |
+| \`GET operational/abha\` | ABHA page | Government-programme compliance: ABHA adoption among the period's patients, with honest proxies where ABDM data is not persisted |
+| \`GET operational/certificates\` | Certificates page | A real workload doctors do daily that no screen measured: who issues what certificate, from which template |
+| \`GET operational/appointment-analytics?reportType=\` | Appointment report export | The raw per-appointment dump with patient demographics for offline analysis; Overall gives the per-doctor status matrix |
+| \`GET operational/prescription-analytics\` | Prescription report export | Brand/generic/company dose volumes: the pharma-conversation and formulary sheet |
+| \`GET operational/medicine-analytics\` | Medicine report export | Prescribed-medicine counts with patient reach per brand: simpler counting cut of the same source |
+| \`GET operational/referred-by-patients\` | Reference report | Which patients bring other patients: the organic-growth signal |
+| \`GET operational/referred-by-others\` | Reference report | Which external referrers send cases: the referral-network ledger |
+| \`GET clinical/diagnosis\` | Diagnoses page | What the practice diagnoses, with the clinical statuses (Suspected/Confirmed/Ruled out) and ICD-coded vs free-text capture quality |
+| \`GET clinical/symptoms\` | Symptoms page | What patients present with, parsed from the Rx symptom box with real severity: the demand-side clinical picture |
+| \`GET clinical/drug\` | Medications page | What gets prescribed, polypharmacy load, and custom-vs-catalogue medicines (which flags catalogue gaps) |
+| \`GET clinical/lab-test\` | Lab tests page | Which investigations get ordered and how often: utilisation of diagnostics |
+| \`GET clinical/vitals\` | Vitals page | What actually gets measured (12-field capture grid), BP staging, BMI bands: clinical data-quality plus population health |
+| \`GET clinical/medical-history\` | Medical history page | The chronic-disease registry: six segregations (condition/allergy/family/lifestyle/surgical/additional) by distinct patients |
+| \`GET clinical/obstetric\` | Obstetrics page (legacy-gated) | Pregnancy events, delivery modes, EDD pipeline from the legacy tables, honestly bannered until the service feed lands |
+| \`GET clinical/growth-chart\` | Growth page (pediatric-only) | Child growth monitoring: serial measurements, OFC capture, repeat-measurement coverage |
+| \`GET clinical/vaccination\` | Vaccination page | Dose volumes and IAP-vs-other split (after fixing a join that silently dropped ~65% of doses) |
+| \`GET clinical/gynec\` | Gynec page: **SAMPLE DATA** | Menstrual-history analytics, fully designed and visible; switches live when the Part-2 feed lands |
+| \`GET clinical/procedures-opd\` | Procedures page: **SAMPLE DATA** | OPD procedures analytics, fully designed; switches live when the Part-2 feed lands |
+| \`GET operational/custom-modules\` | Custom Modules page: **SAMPLE DATA** | RxPad module creation and cross-doctor reuse; switches live when the Part-2 feed lands |
+| \`GET ipd/summary\` | IPD Overview | The hospital scoreboard: census, occupancy, queue, deaths; one glance answers how full are we and what is moving |
+| \`GET ipd/admissions\` | IPD Admissions & Discharges | Throughput is THE inpatient operations question: who admits, where, how long, and how patients leave (DAMA and death rates are quality flags) |
+| \`GET ipd/wards\` | IPD Wards & Beds | Bed management is the revenue ceiling: capacity, occupancy, transfers, and the predictive discharge/occupancy bands turn the census into a planning tool |
+| \`GET ipd/clinical\` | IPD Clinical Activity | Documentation coverage is the medico-legal shield; OT volume is the high-revenue clinical activity |
+
+### Production APIs the frontend reads directly
+
+| API | Serves | Why we need it |
+|---|---|---|
+| \`POST {billing}/bill/dashboard\` | Billing headline band, mode mixes, dues-by-age, bills register | The ONLY source that works for every tenant (old and new billing service); figures reconcile exactly with the OPD Billing screen staff already trust |
+| \`POST {billing}/advancedDeposit/dashboard\` | Advance wallet cards + advance mode mixes (OPD and IPD pages) | The wallet ledger (received/refunded/debited) lives only in the billing service, not the replica; it is patient-level and shared across care settings |
+| \`POST {billing}/api/v1/billing/ipd-bill/dashboard\` | IPD Billing page band + IPD Bills report | The IPD bill ledger (one bill per admission) lives in the billing service; figures reconcile with the IPD billing screen staff already use |
+| \`POST /api/v1/appointment/listAppointment\` | EMR parity reference | The ground truth our appointment numbers are verified against (the tab keys ARE the status codes) |
+| \`GET {bulk_messages}/communication/userCredit\`, \`POST {bulk_messages}/campaign/userCampaign\` | Campaigns page | Campaign reach, delivery and credit spend belong to the messaging service; analytics renders what it returns |
+
+---
+
+## Part 2: APIs we NEED but DO NOT HAVE (write these)
+
+> We do not have these APIs today. For each: why we need it, who owns it, and
+> the contract hint a backend developer can build from. Follow the superset
+> rule: export EVERY field the source stores, not just what today's design
+> shows. Pattern options for every feed: (A) a bulk export endpoint the
+> analytics service polls, (B) a read replica of the owning service's
+> datastore, or (C) a nightly sync into a small \`tatva_clinic\` table.
+> pm-analytics-service is mysql2-only today (no HTTP client), so (B)/(C) are
+> drop-ins and (A) needs a small fetch layer.
+
+### 1. Gynec menstrual history export: pm-medicalhistory service
+**Why we need it:** the Gynec page (cycle regularity, flow, pain, menarche age,
+reproductive life stages) runs on sample data; irregular-cycle share is a real
+screening signal for PCOD and thyroid workups that doctors asked for.
+**What exists:** only a per-patient \`GET /gynec-history/gynec/{patientId}/{userId}\`;
+no list by hospital, and the stored document carries no \`hm_business_id\`.
+**Hint:** \`GET /gynec-history/export?businessId=&from=&to=\` returning flattened
+timeline rows with EVERY stored key: \`patientId, lmp, ageAtMenarche,
+ageAtMenopause, intervalOfCycle, durationOfMenstrualFlow, numberOfPadsPerDay,
+cycle, flow, pain, occurrenceOfPain, clots, reproductiveLifeStages,
+typeOfMenopause, note, createdAt, createdBy\`. Include \`businessId\` in the
+export. Full contract: \`GYNEC-OBSTETRIC-INTEGRATION.md\`.
+
+### 2. Obstetric (current) export: same pm-medicalhistory service
+**Why we need it:** the Obstetrics page covers only legacy rows frozen at
+~mid-2024; current pregnancies, EDD pipeline and G/P/L/A/E counters are
+invisible to analytics.
+**Hint:** same export shape as (1) for the obstetric-history collection:
+LMP/EDD/CEDD, gestation, G/P/L/A/E counters, pregnancy-history rows (mode of
+delivery, date, gender, baby weight, remarks), current-examination values,
+ANC schedule items, immunisation history, keyed by businessId + date range.
+
+### 3. OPD procedures export: pm-patient-docs service
+**Why we need it:** procedures are real revenue and clinical workload; the
+Procedures page runs on sample data because the Rx "Surgeries/Procedures" box
+writes only to this service (the replica's procedure table is inpatient-only,
+~53 rows).
+**Hint:** \`GET /api/v1/surgeries/export?businessId=&from=&to=\` returning one
+row per performed procedure with every stored field: \`patientId,
+procedureName, performedAt, doctorId (userId), notes, template/source flags\`.
+
+### 4. Custom-modules registry + reuse log: dynamic-modules service
+**Why we need it:** module reuse across doctors is the signal that the RxPad
+investment is paying off; the page runs on sample data because the registry
+and usage log exist only in this service.
+**Hint:** two exports keyed by hospital: (a) modules: \`module_id, name,
+creator_userId, column_count, column_labels, created_at, origin_id (null =
+original, else cloned-from), deleted\`; (b) usage events: \`module_id,
+used_by_userId, used_at, rx_id\`. \`origin_id\` + used_by != creator yields reuse
+rate, most-used across doctors, created-vs-reused.
+
+### 5. ABHA KYC + consent depth: ABDM service
+**Why we need it:** the owner's asked-for cards (KYC vs non-KYC patients,
+consent success with/without KYC, KYC split of care contexts) cannot be built;
+the replica stores only coarse flags, shown today as labelled proxies.
+**Hint:** persist + export three event sets keyed by businessId, with every
+field the flow produces: (a) enrolments: \`patientId, channel
+(aadhaar-kyc | non-kyc), abhaAddress, createdAt\`; (b) consent requests:
+\`requestId, patientId, purpose, status (granted|denied|expired), kycFlag,
+requestedAt, decidedAt\`; (c) care-context links: \`linkId, patientId, kycFlag,
+contextType, linkedAt\`.
+
+### 6. Per-patient symptoms read: symptoms service
+**Why we need it:** the Overview "Top symptoms" card shows a dash; the
+symptoms service holds richer per-patient data than the Rx-box parse the
+Symptoms page uses.
+**Hint:** \`GET /symptoms/export?businessId=&from=&to=\` row-level (patientId,
+symptomName, severity, since, recordedAt, doctorId) so analytics can aggregate
+any way the future needs, or at minimum \`GET /symptoms/top?businessId=&from=&to=&limit=\`.
+
+### 7. Server-side collection-report export: pm-analytics-service (extend)
+**Why we need it:** Daily Collection / Collection Report / Billing Overall
+export the billing API's bills list, which pages at 100 rows; a busy month
+exceeds the page and the export silently covers only the most-recent bills.
+**Hint:** add \`GET financial/collection-report?reportType=General|Detailed|Day Wise\`
+reusing the existing billing UNION, returning EVERY collection event in the
+window with every column the tables hold (type, bill id, date, issued-by,
+patient, mode, account, amounts, balance). Plus the per-report filters to wire
+end-to-end: \`issuedBy[]\`, \`paymentMode[]\`, \`account\`, \`department\`,
+\`incentiveUser[]\`, \`medicine[]\`, and \`includeClinicalData\` on
+appointment-analytics (appends the 16 clinical columns).
+
+### 8. Campaign message-level export: bulk-messages service
+**Why we need it:** the campaign list is campaign-grain only, so delivery
+trend, best send time, and per-template performance cannot be built.
+**Hint:** \`GET /api/v1/campaign/messages/export?businessId=&from=&to=\`
+returning one row per message: \`campaignId, templateId, patientId, channel,
+sentAt, deliveredAt|null, status, failureReason, credits\`.
+
+### 9. pm-ipd microservice export: modern IPD tenants
+**Why we need it:** the IPD analytics module reads the legacy replica tables;
+hospitals on the modern IPD microservice (pm-ipd, Mongo) keep admissions,
+the discharge pipeline, wards/beds, assessments, notes and cross-referrals
+THERE, invisible to the replica.
+**Hint:** bulk exports keyed by hospitalId + date range, every stored field:
+(a) admissions: patient, ward/room, admitting doctor, admittedOn, category,
+MLC, caretaker, isDischarged, sentForApproval (the discharge queue flag),
+isIntimateDischarged, dischargeType (Normal/Daycare/LAMA/Death), proposed
+discharge datetime, dischargedAt, dischargeNo; (b) transfers/bed moves;
+(c) cross-referrals: referring/receiving doctor, department, status,
+timestamps (unlocks the requested cross-referral analytics); (d) notes
+events: type, author, timestamp per admission.
+
+### 10. VoiceRx / symptom-collector aggregation: owning services
+**Why we need it:** adoption of these features is invisible; today's logs are
+write-only.
+**Hint:** counters by businessId + date range to start (sessions, adoption by
+doctor, edit rate; messages sent, response rate), row-level exports preferred
+per the superset rule.
+`,
+  },
+};

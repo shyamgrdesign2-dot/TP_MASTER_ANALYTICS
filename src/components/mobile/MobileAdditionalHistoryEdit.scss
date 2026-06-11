@@ -1,0 +1,43 @@
+.mobile-additional-history-edit {
+  .ant-drawer-content-wrapper {
+    border-radius: 16px 16px 0 0;
+    max-height: 90vh !important;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.additional-history-textarea {
+  border-radius: 8px;
+  border: 1px solid #E8E8E8;
+  padding: 12px;
+  font-size: 14px;
+  resize: none;
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+
+.mobile-item-edit-footer .save-btn {
+  font-weight: 500;
+}

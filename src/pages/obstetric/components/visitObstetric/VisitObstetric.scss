@@ -1,0 +1,70 @@
+.visitObstetricContainer {
+  padding: 20px 20px 0px;
+
+  .rowContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    .previousText {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .updatedText {
+      color: #a2a2a8 !important;
+    }
+  }
+
+  .detailContainer {
+    border-radius: var(--radius-xl, 12px);
+    border: 1px solid var(--Stroke-Grey, #eaecf0);
+    padding: 10px 24px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .measurementItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 21px;
+      padding: 16px 0px;
+    }
+
+    .key {
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .colon {
+      width: 20px;
+      text-align: center;
+    }
+
+    .value {
+      flex: 1;
+      text-align: right;
+      margin-left: 8px;
+    }
+
+    .dottedLineStyle {
+      border-bottom: 2px dotted #eaecf0;
+    }
+  }
+}
+
+.viewLessOrMore {
+  display: flex !important;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  color: #4b4ad5 !important;
+}

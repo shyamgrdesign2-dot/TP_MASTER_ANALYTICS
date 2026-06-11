@@ -1,0 +1,216 @@
+.medeco {
+    .medeco_header {
+        display: flex;
+        padding: 15px 16px 15px 10px;
+        align-items: center;
+    }
+
+    .logo-text {
+        font-weight: 600;
+        font-size: 26px;
+        text-align: center;
+        background: linear-gradient(90deg, #413AFF 0%, #7F00E3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        /* Fallback for non-webkit browsers */
+        margin-left: 15px;
+    }
+
+    .tatva_care_logo {
+        width: 130px;
+        height: auto;
+        margin-left: 15px;
+    }
+
+    .medeco_container {
+        position: relative;
+
+        .gradient_container {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(114.09deg, #4c1357 0%, #15114B 48.38%, #1A1A2F 92.15%);
+            border-radius: 0px 0px 12px 12px;
+            z-index: 1;
+
+            .header_white_grid {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+                right: 0px;
+            }
+        }
+
+        .data_container {
+            position: relative;
+            z-index: 2;
+            padding: 40px 30px 30px 30px;
+        }
+
+        .doctor_name {
+            font-family: Poppins;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: white !important;
+        }
+
+        .sub_text {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0px;
+            color: white !important;
+        }
+
+        .offering_container {
+            padding: 42px 20px 42px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 24px;
+            border: 1px solid #E2E2EA
+        }
+
+        .offering_text_container {
+            color: #454551 !important;
+        }
+
+        .offering_text {
+            font-family: Poppins;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+
+        .offering_subtext {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+
+        .offering_cards_container {
+            margin-top: 30px;
+            display: grid;
+            // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .offering_container_card {
+            background: linear-gradient(180deg, #D6CBF9 0%, #EFEAFD 100%);
+            box-shadow: 3px 4px 0px 0px #47018A;
+            border-radius: 21.32px;
+            animation-timing-function: ease-out;
+            animation-duration: 300ms;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            min-height: 140px;
+            max-width: 300px;
+            position: relative;
+            min-width: 280px;
+
+            .card_white_grid {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: -18%;
+            }
+
+            .card_title {
+                font-family: Poppins;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 0px;
+                text-align: center;
+                background: linear-gradient(270deg, #685FB4 0%, #3A308E 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .card_img {
+                height: 75px;
+                width: 75px;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .qr_container {
+            margin-top: 40px;
+            width: 80%;
+            background: linear-gradient(90deg, rgba(250, 218, 137, 0) 0%, rgba(250, 218, 137, 0.4) 50%, rgba(250, 218, 137, 0) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            gap: 30px;
+
+            .qr_content {
+                padding-top: 22px;
+                padding-bottom: 22px;
+                max-width: 600px;
+
+                .qr_heading {
+                    font-family: Poppins;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    vertical-align: middle;
+                    color: #454551 !important;
+                }
+
+                .qr_know_more {
+                    font-weight: 500 !important;
+                    font-size: 16px !important;
+                    line-height: 26px !important;
+                    letter-spacing: 0px;
+                    vertical-align: middle;
+                    text-decoration: underline;
+                    color: #4B4AD5 !important;
+                }
+
+                .qr_subtext {
+                    font-family: Poppins;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                    vertical-align: middle;
+                    color: #454551 !important;
+                }
+            }
+
+            .qr_img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+}

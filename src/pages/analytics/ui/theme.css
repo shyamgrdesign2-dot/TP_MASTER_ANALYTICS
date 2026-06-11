@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The whole analytics module (chrome + canvas + its Radix/antd portals) uses
+   Inter. The global EMR forces `font-family: Poppins !important` on
+   body p/div/span/table/tr/th/td (specificity 0,0,2), so Inter only wins with
+   matching `!important` and a class-led selector (0,1,0). Scoped to the
+   analytics root + portal sentinel, so the rest of the EMR is untouched. */
+.tp-analytics,
+.tp-analytics *,
+.tp-analytics-portal,
+.tp-analytics-portal * {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Keep monospace where it is genuinely intended (code/pre), still Inter-free. */
+.tp-analytics code,
+.tp-analytics pre,
+.tp-analytics kbd,
+.tp-analytics samp {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
+
+/* Analytics tooltips render into a body portal tagged .tp-analytics-portal and
+   sit on a dark spotlight background — force their text white (the global EMR
+   colour rules were tinting it dark-on-dark). */
+.tp-analytics-portal .ant-tooltip-inner,
+.tp-analytics-portal .ant-tooltip-inner * {
+  color: #fff !important;
+}
+
+/* shadcn design tokens, mapped to the TatvaCare palette (tpTokens.scss).
+   Scoped to the analytics root AND to `.tp-analytics-portal` — the sentinel
+   class our vendored Radix portal content carries — so dialogs/selects/
+   popovers that render into document.body still resolve these variables. */
+.tp-analytics,
+.tp-analytics-portal {
+  --background: 0 0% 100%;
+  --foreground: 240 24% 12%;          /* tp-slate-900  #171725 */
+  --card: 0 0% 100%;
+  --card-foreground: 240 24% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 24% 12%;
+  --primary: 241 60% 56%;             /* tp-blue-500   #4b4ad5 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 60% 61%;           /* tp-violet-500 #a461d8 */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 24% 96%;               /* tp-slate-100  #f1f1f5 */
+  --muted-foreground: 240 6% 45%;     /* tp-slate-500  #717179 */
+  --accent: 240 24% 96%;
+  --accent-foreground: 240 24% 12%;
+  --destructive: 0 72% 51%;           /* red #e5484d-ish */
+  --destructive-foreground: 0 0% 100%;
+  --success: 162 67% 37%;             /* green #1f9d76 */
+  --success-foreground: 0 0% 100%;
+  --border: 240 14% 91%;              /* tp-slate-200  #e2e2ea */
+  --input: 240 14% 91%;
+  --ring: 241 60% 56%;
+  --radius: 0.6rem;
+  --chart-1: 241 60% 56%;             /* indigo */
+  --chart-2: 270 60% 61%;             /* violet */
+  --chart-3: 165 57% 49%;             /* teal   #36c5a8 */
+  --chart-4: 36 91% 55%;              /* amber  #f5a623 */
+  --chart-5: 330 80% 65%;             /* pink   #ef5da8 */
+  --chart-6: 199 76% 53%;             /* cyan   #2bb3e0 */
+  --chart-7: 231 100% 74%;            /* periwinkle #7a8cff */
+  --chart-8: 24 95% 58%;              /* orange */
+}
+
+/* Tailwind's preflight is globally OFF (to protect the rest of the EMR), but
+   shadcn components assume border-box sizing and zero-width solid borders.
+   Re-apply just those, scoped to analytics in-page content and portal content. */
+.tp-analytics,
+.tp-analytics *,
+.tp-analytics *::before,
+.tp-analytics *::after,
+.tp-analytics-portal,
+.tp-analytics-portal *,
+.tp-analytics-portal *::before,
+.tp-analytics-portal *::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: hsl(var(--border));
+}

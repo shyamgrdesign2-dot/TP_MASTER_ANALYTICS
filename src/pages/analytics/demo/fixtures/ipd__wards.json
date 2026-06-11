@@ -1,0 +1,886 @@
+{
+  "kpis": [
+    {
+      "key": "bedsTotal",
+      "label": "Beds total",
+      "value": 36,
+      "description": "Configured beds and rooms (active plus blocked; decommissioned units excluded)."
+    },
+    {
+      "key": "bedsOccupied",
+      "label": "Beds occupied",
+      "value": 34,
+      "description": "Active admissions currently in house."
+    },
+    {
+      "key": "bedsAvailable",
+      "label": "Beds available",
+      "value": 1,
+      "description": "Active unblocked beds minus current occupancy."
+    },
+    {
+      "key": "bedsBlocked",
+      "label": "Beds blocked",
+      "value": 1,
+      "description": "Beds and rooms marked blocked in ward setup."
+    },
+    {
+      "key": "occupancyPct",
+      "label": "Occupancy",
+      "value": 97.1,
+      "unit": "%",
+      "description": "Current census over active bed capacity."
+    },
+    {
+      "key": "roomShifts",
+      "label": "Room shifts",
+      "value": 19,
+      "description": "Ward or bed transfers logged in the selected period."
+    },
+    {
+      "key": "bedTurnover",
+      "label": "Bed turnover",
+      "value": 1.5,
+      "description": "Discharges in the period per active bed."
+    }
+  ],
+  "bedsByWard": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "occupied",
+        "label": "Occupied"
+      },
+      {
+        "key": "available",
+        "label": "Available"
+      },
+      {
+        "key": "blocked",
+        "label": "Blocked"
+      }
+    ],
+    "rows": [
+      {
+        "k": "ICU Ward",
+        "occupied": 14,
+        "available": 1,
+        "blocked": 0
+      },
+      {
+        "k": "General Ward",
+        "occupied": 13,
+        "available": 0,
+        "blocked": 0
+      },
+      {
+        "k": "Special",
+        "occupied": 3,
+        "available": 1,
+        "blocked": 0
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "occupied": 2,
+        "available": 0,
+        "blocked": 0
+      },
+      {
+        "k": "Apollo Hospital - ICU ward",
+        "occupied": 1,
+        "available": 0,
+        "blocked": 0
+      },
+      {
+        "k": "WP11",
+        "occupied": 0,
+        "available": 0,
+        "blocked": 1
+      },
+      {
+        "k": "Unassigned",
+        "occupied": 1,
+        "available": 0,
+        "blocked": 0
+      }
+    ]
+  },
+  "occupancyTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Period"
+      },
+      {
+        "key": "occupied",
+        "label": "Patients in house"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2025-07",
+        "occupied": 35
+      },
+      {
+        "k": "2025-08",
+        "occupied": 35
+      },
+      {
+        "k": "2025-09",
+        "occupied": 35
+      },
+      {
+        "k": "2025-10",
+        "occupied": 34
+      },
+      {
+        "k": "2025-11",
+        "occupied": 34
+      },
+      {
+        "k": "2025-12",
+        "occupied": 34
+      },
+      {
+        "k": "2026-01",
+        "occupied": 34
+      },
+      {
+        "k": "2026-02",
+        "occupied": 34
+      },
+      {
+        "k": "2026-03",
+        "occupied": 34
+      },
+      {
+        "k": "2026-04",
+        "occupied": 34
+      },
+      {
+        "k": "2026-05",
+        "occupied": 34
+      },
+      {
+        "k": "2026-06",
+        "occupied": 34
+      }
+    ]
+  },
+  "alosByWard": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "days",
+        "label": "ALOS (days)"
+      }
+    ],
+    "rows": [
+      {
+        "k": "ICU Ward",
+        "days": 78.1
+      },
+      {
+        "k": "General Ward",
+        "days": 66
+      },
+      {
+        "k": "Special",
+        "days": 23.5
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "days": 0
+      }
+    ]
+  },
+  "alosByDept": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Department"
+      },
+      {
+        "key": "days",
+        "label": "ALOS (days)"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Orthopaedics",
+        "days": 94.7
+      },
+      {
+        "k": "Oncology",
+        "days": 61.4
+      },
+      {
+        "k": "Psychiatry",
+        "days": 42.3
+      },
+      {
+        "k": "Gynaecology",
+        "days": 37
+      },
+      {
+        "k": "Paediatrics",
+        "days": 37
+      },
+      {
+        "k": "Unassigned",
+        "days": 28.3
+      },
+      {
+        "k": "Neurology",
+        "days": 0
+      }
+    ]
+  },
+  "wardFlow": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "admitted",
+        "label": "Admitted"
+      },
+      {
+        "key": "discharged",
+        "label": "Discharged"
+      }
+    ],
+    "rows": [
+      {
+        "k": "General Ward",
+        "admitted": 34,
+        "discharged": 21
+      },
+      {
+        "k": "ICU Ward",
+        "admitted": 31,
+        "discharged": 17
+      },
+      {
+        "k": "Special",
+        "admitted": 13,
+        "discharged": 10
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "admitted": 7,
+        "discharged": 5
+      },
+      {
+        "k": "Apollo Hospital - ICU ward",
+        "admitted": 1,
+        "discharged": 0
+      },
+      {
+        "k": "Unassigned",
+        "admitted": 1,
+        "discharged": 0
+      }
+    ]
+  },
+  "deptFlow": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Department"
+      },
+      {
+        "key": "admitted",
+        "label": "Admitted"
+      },
+      {
+        "key": "discharged",
+        "label": "Discharged"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Oncology",
+        "admitted": 37,
+        "discharged": 23
+      },
+      {
+        "k": "Psychiatry",
+        "admitted": 29,
+        "discharged": 16
+      },
+      {
+        "k": "Orthopaedics",
+        "admitted": 12,
+        "discharged": 7
+      },
+      {
+        "k": "Unassigned",
+        "admitted": 3,
+        "discharged": 3
+      },
+      {
+        "k": "Gynaecology",
+        "admitted": 3,
+        "discharged": 2
+      },
+      {
+        "k": "Paediatrics",
+        "admitted": 2,
+        "discharged": 1
+      },
+      {
+        "k": "Neurology",
+        "admitted": 1,
+        "discharged": 1
+      }
+    ]
+  },
+  "wardTransfers": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Ward"
+      },
+      {
+        "key": "transfersIn",
+        "label": "Transfers in"
+      },
+      {
+        "key": "transfersOut",
+        "label": "Transfers out"
+      }
+    ],
+    "rows": [
+      {
+        "k": "General Ward",
+        "transfersIn": 14,
+        "transfersOut": 9
+      },
+      {
+        "k": "Special",
+        "transfersIn": 3,
+        "transfersOut": 9
+      },
+      {
+        "k": "ICU Ward",
+        "transfersIn": 1,
+        "transfersOut": 0
+      },
+      {
+        "k": "Unassigned",
+        "transfersIn": 1,
+        "transfersOut": 0
+      },
+      {
+        "k": "SVVP Hosptial - Normal Ward",
+        "transfersIn": 0,
+        "transfersOut": 1
+      }
+    ],
+    "note": "A transfer leaves one ward and enters another, so each move counts once on each side. Same-ward rows are bed shifts."
+  },
+  "transfersRegister": {
+    "columns": [
+      {
+        "key": "date",
+        "label": "Date"
+      },
+      {
+        "key": "ipNo",
+        "label": "IP no"
+      },
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "type",
+        "label": "Type"
+      },
+      {
+        "key": "fromWard",
+        "label": "From ward"
+      },
+      {
+        "key": "toWard",
+        "label": "To ward"
+      },
+      {
+        "key": "fromDept",
+        "label": "From dept"
+      },
+      {
+        "key": "toDept",
+        "label": "To dept"
+      },
+      {
+        "key": "byDoctor",
+        "label": "Doctor"
+      }
+    ],
+    "rows": [
+      {
+        "date": "2024-04-11 16:13",
+        "patient": "Demo Patient 396",
+        "ipNo": "54106",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Oncology",
+        "toDept": "Oncology",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2024-04-11 16:08",
+        "patient": "Demo Patient 397",
+        "ipNo": "59270",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "-",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "avnish"
+      },
+      {
+        "date": "2023-09-27 09:34",
+        "patient": "Demo Patient 397",
+        "ipNo": "59270",
+        "type": "Department shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Oncology",
+        "toDept": "Orthopaedics",
+        "byDoctor": "avnish"
+      },
+      {
+        "date": "2023-09-27 09:34",
+        "patient": "Demo Patient 404",
+        "ipNo": "23840",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "ICU Ward",
+        "fromDept": "Oncology",
+        "toDept": "Oncology",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2023-07-01 09:29",
+        "patient": "Demo Patient 399",
+        "ipNo": "12574",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "kartik"
+      },
+      {
+        "date": "2023-07-01 09:29",
+        "patient": "Demo Patient 399",
+        "ipNo": "12574",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-07-01 09:25",
+        "patient": "Demo Patient 420",
+        "ipNo": "28951",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "kartik"
+      },
+      {
+        "date": "2023-07-01 09:25",
+        "patient": "Demo Patient 420",
+        "ipNo": "28951",
+        "type": "Ward / bed shift",
+        "fromWard": "SVVP Hosptial - Normal Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-07-01 09:22",
+        "patient": "Demo Patient 426",
+        "ipNo": "20165",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "kartik"
+      },
+      {
+        "date": "2023-07-01 09:22",
+        "patient": "Demo Patient 426",
+        "ipNo": "20165",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-06-30 12:29",
+        "patient": "Demo Patient 397",
+        "ipNo": "86401",
+        "type": "Department shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Oncology",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-06-30 12:29",
+        "patient": "Demo Patient 397",
+        "ipNo": "45926",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-06-22 15:43",
+        "patient": "Demo Patient 397",
+        "ipNo": "45926",
+        "type": "Department shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Oncology",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-06-22 15:43",
+        "patient": "Demo Patient 397",
+        "ipNo": "74586",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-06-12 11:54",
+        "patient": "Demo Patient 426",
+        "ipNo": "20165",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Oncology",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-06-12 11:54",
+        "patient": "Demo Patient 426",
+        "ipNo": "20165",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Oncology",
+        "toDept": "Oncology",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2023-06-12 11:47",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-06-12 11:47",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-06-07 13:44",
+        "patient": "Demo Patient 397",
+        "ipNo": "74586",
+        "type": "Department shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Oncology",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-06-07 13:44",
+        "patient": "Demo Patient 397",
+        "ipNo": "43906",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Oncology",
+        "toDept": "Oncology",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2023-06-07 13:42",
+        "patient": "Demo Patient 411",
+        "ipNo": "67548",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Rushabh shah"
+      },
+      {
+        "date": "2023-05-18 11:22",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-05-18 11:22",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Psychiatry",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-04-11 09:23",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Department shift",
+        "fromWard": "Special",
+        "toWard": "Special",
+        "fromDept": "Endocrinology",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2023-03-15 09:28",
+        "patient": "Demo Patient 410",
+        "ipNo": "38960",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Oncology",
+        "toDept": "Psychiatry",
+        "byDoctor": "Avinash Sharma"
+      },
+      {
+        "date": "2022-03-28 16:44",
+        "patient": "Demo Patient 429",
+        "ipNo": "57962",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2022-03-21 16:19",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "Special",
+        "fromDept": "Endocrinology",
+        "toDept": "Endocrinology",
+        "byDoctor": "Neel Patel "
+      },
+      {
+        "date": "2022-03-21 16:18",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Department shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Endocrinology",
+        "byDoctor": "Neel Patel "
+      },
+      {
+        "date": "2022-03-21 16:13",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Ward / bed shift",
+        "fromWard": "Special",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2022-03-21 15:16",
+        "patient": "Demo Patient 85",
+        "ipNo": "82015",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "Special",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2022-02-14 11:32",
+        "patient": "Demo Patient 429",
+        "ipNo": "57962",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2022-02-14 11:32",
+        "patient": "Demo Patient 429",
+        "ipNo": "57962",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      },
+      {
+        "date": "2022-02-14 11:32",
+        "patient": "Demo Patient 429",
+        "ipNo": "57962",
+        "type": "Ward / bed shift",
+        "fromWard": "General Ward",
+        "toWard": "General Ward",
+        "fromDept": "Orthopaedics",
+        "toDept": "Orthopaedics",
+        "byDoctor": "Samir Vankhade"
+      }
+    ]
+  },
+  "expectedDischarges": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Date"
+      },
+      {
+        "key": "count",
+        "label": "Expected discharges"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2026-06-12",
+        "count": 34
+      },
+      {
+        "k": "2026-06-13",
+        "count": 0
+      },
+      {
+        "k": "2026-06-14",
+        "count": 0
+      },
+      {
+        "k": "2026-06-15",
+        "count": 0
+      },
+      {
+        "k": "2026-06-16",
+        "count": 0
+      },
+      {
+        "k": "2026-06-17",
+        "count": 0
+      },
+      {
+        "k": "2026-06-18",
+        "count": 0
+      }
+    ],
+    "note": "Forecast: queue patients leave tomorrow, the rest at their ward median length of stay."
+  },
+  "projectedOccupancy": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Date"
+      },
+      {
+        "key": "occupied",
+        "label": "Projected occupancy"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2026-06-12",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-13",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-14",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-15",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-16",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-17",
+        "occupied": 0
+      },
+      {
+        "k": "2026-06-18",
+        "occupied": 0
+      }
+    ],
+    "note": "Census today minus forecast discharges plus the trailing 7-day average of daily admissions."
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 33,
+    "note": "Source: legacy clinic replica. Hospitals on the modern pm-ipd microservice need that feed wired in before their data appears here."
+  }
+}

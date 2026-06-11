@@ -1,0 +1,21 @@
+.apollo-analytics-tab {
+  &.ant-tabs .ant-tabs-tab {
+    margin: 0 30px 0 0 !important;
+  }
+}
+
+.apollo-consultations-table {
+      .ant-table {
+        thead.ant-table-thead {
+            th, td {
+                padding: 7.5px 10px !important;
+            }
+        }
+
+        tbody.ant-table-tbody {
+            td {
+                padding: 9px 10px;
+            }
+        }
+    }
+}

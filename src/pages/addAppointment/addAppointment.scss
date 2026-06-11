@@ -1,0 +1,413 @@
+.appointment-wrap {
+
+    .slot-instruction-info {
+        color: #ED8A00 !important;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 1rem 1.2rem;
+    }
+
+    .date-selection-container {
+        .ant-picker {
+            height: 38px;
+            border-radius: 4px;
+        }
+    }
+
+    .ant-select-single {
+        font-size: 14px;
+        height: 50px;
+    }
+
+    .ant-picker-outlined {
+        background: #ffffff;
+        border: none !important;
+    }
+
+    .ant-picker .ant-picker-input>input {
+        color: #454551;
+        font-family: "Roboto";
+        font-size: 17px;
+        margin-left: -0.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.1px;
+    }
+
+    .suffix-icon-down {
+        transform: rotate(270deg);
+        display: inline-block;
+    }
+
+    .doctor-select {
+        display: flex;
+        flex-wrap: wrap;
+
+        .ant-select-selection-item {
+            display: flex !important;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    .date-chips-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        overflow-x: auto;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        .date-chip {
+            display: flex;
+            width: 54px;
+            height: 53.915px;
+            padding: 9px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: #f0f0f0 !important;
+            // color: #000 !important;
+            border-radius: 20px;
+
+            &.active {
+                background: #4B4AD5 !important;
+                color: white !important;
+            }
+
+            .day {
+                font-size: 12px;
+            }
+
+            .date {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .availability-settings-text-btn {
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: #4B4AD5;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+
+    .doctor-selection {
+        margin-top: 3.5rem !important;
+    }
+
+    .time-slot-chip {
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+
+        &.active {
+            background-color: #4318FF;
+            color: white;
+        }
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .arrows {
+        .arrow-btn {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #e1e1e1;
+            background-color: transparent !important;
+            border-radius: 9px;
+            font-size: 16px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+
+    .ant-picker {
+        width: 200px !important;
+    }
+}
+
+.timeslots-section {
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #E2E2EA;
+    background: transparent;
+
+    .ant-tabs {
+        .ant-tabs-nav {
+            margin-bottom: 0;
+            background: fixed;
+            border-radius: 12px 12px 0px 0px;
+            border: 1px solid transparent;
+            background: #FAFAFB;
+
+            .ant-tabs-nav-wrap {
+                padding: 0 1rem;
+                height: 3.5rem;
+            }
+
+            .ant-tabs-tab {
+                padding: 8px 16px;
+                margin: 0 !important;
+
+                .ant-tabs-tab-btn {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                }
+
+                &.ant-tabs-tab-active {
+                    .ant-tabs-tab-btn {
+                        color: #4318FF;
+                    }
+                }
+
+                // &.ant-tabs-content-holder {
+                //     margin: 1rem 1rem !important;
+                // }
+            }
+
+            .ant-tabs-ink-bar {
+                background: #4318FF;
+            }
+        }
+    }
+
+    .slots-info {
+        color: #454551 !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 380;
+        line-height: 24px;
+        margin: 1.5rem 1.2rem;
+    }
+
+    .slots-container {
+        display: flex;
+        margin: 1rem 1rem !important;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .slot {
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 100px;
+
+            &.unavailable {
+                background-color: #f5f5f5;
+                color: #666;
+                border: 1px solid #ddd;
+                cursor: not-allowed;
+            }
+
+            &.leave{
+                background-color: #f5f5f5;
+                color: #666;
+                border: 1px solid #aeaeae;
+                cursor: not-allowed;
+            }
+
+            &.available {
+                background-color: #fff;
+                // color: #4318FF;
+                border: 1px solid #4318FF;
+
+                span,
+                div {
+                    color: #4318FF !important;
+                }
+
+                // &.active {
+                //   background-color: #4318FF;
+                //   color: #fff;
+                // }
+            }
+
+            &.confirmed {
+                background-color: #E6F4EA;
+                // border: 1px solid #1E8E3E;
+
+                // color: #1E8E3E !important;
+                // border: 1px solid #1E8E3E;
+                span,
+                div {
+                    color: #1E8E3E !important;
+                }
+            }
+
+            &.past {
+                opacity: 0.25;
+            }
+
+            &.rescheduling {
+                background-color: #FFF3E0;
+                color: #F57C00;
+                border: 1px solid #F57C00;
+            }
+
+            .note {
+                font-size: 12px;
+                margin-top: 4px;
+                color: #666;
+                text-align: center;
+            }
+        }
+    }
+
+    .section-title {
+        margin-bottom: 10px;
+    }
+}
+
+.slot-tooltip {
+
+    min-width: 200px !important;
+    max-width: 540px !important;
+
+    .ant-tooltip .ant-tooltip-content {
+        position: relative;
+        // width: 600px !important;
+    }
+
+    :where(.css-dev-only-do-not-override-1okl62o).ant-tooltip {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.88);
+        font-size: 14px;
+        line-height: 1.5714285714285714;
+        list-style: none;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        position: absolute;
+        z-index: 1070;
+        display: block;
+        width: max-content;
+        /* max-width: 250px; */
+        visibility: visible;
+        transform-origin: var(--arrow-x, 50%) var(--arrow-y, 50%);
+        --antd-arrow-background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .ant-tooltip-inner {
+        background: white;
+        color: #333;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+        h4 {
+            margin: 0;
+            padding: 16px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            border-bottom: 1px solid #E2E2EA;
+            margin: -20px -20px 20px -20px;
+        }
+    }
+
+    .appointment-tooltip {
+
+        .appointments-scroll {
+            background: #FAFAFB !important;
+            border-radius: 12px !important;
+
+            .appointment-patient-content {
+                display: flex;
+                padding: 4px 16px;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 4px;
+                border-radius: 100px;
+                background: #EDF7ED !important;
+                color: #3D8C40 !important;
+            }
+        }
+
+        .patient-info {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+
+            i {
+                color: #666;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background: #E2E2EA;
+            margin: 0;
+        }
+
+        .appointment-patient-info {
+            border-bottom: 1px solid #E2E2EA;
+        }
+
+        .time-info {
+            margin-top: 16px;
+            background: #EDF7ED;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            // display: flex;
+
+
+            div:first-child {
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+
+            div:last-child {
+                color: #666;
+            }
+        }
+
+        .unavailability-text {
+            padding: 12px 8px;
+            border-radius: 12px;
+            border: 0.6px solid rgba(237, 138, 0, 0.40) !important;
+            background: #FEFBEB;
+            color: #ED8A00 !important;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0.1px;
+        }
+
+        span {
+            color: #ED8A00 !important;
+            font-weight: 550 !important;
+        }
+    }
+}
+
+// Remove default tooltip arrow and add custom arrow
+.ant-tooltip-arrow {
+    display: none;
+}

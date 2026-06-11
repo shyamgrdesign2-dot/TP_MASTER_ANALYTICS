@@ -1,0 +1,676 @@
+/* Custom Module V2 - Table Design */
+.prescription-wrapper {
+  .prescription-box-sm.custom-module-v2--dropdown-open {
+    position: relative;
+    z-index: 20;
+    overflow: visible;
+  }
+}
+
+.custom-module-v2__table {
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e2e2ea;
+  border-bottom: 1px solid #e2e2ea;
+  border-left: 1px solid #e2e2ea;
+  border-right: 1px solid #e2e2ea;
+  border-radius: 16px;
+  border-collapse: collapse;
+  overflow: visible;
+  table-layout: auto;
+  position: relative;
+  z-index: 1;
+  
+  thead {
+    tr {
+      border-top: 1px solid #e2e2ea;
+      border-bottom: 1px solid #e2e2ea;
+    }
+  }
+  
+  tbody {
+    tr {
+      border-bottom: 1px solid #e2e2ea;
+    }
+    
+    tr:last-child {
+      border-bottom: 1px solid #e2e2ea;
+    }
+  }
+}
+
+@keyframes customModuleV2VoiceTargetShimmer {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(260%) skewX(-18deg);
+  }
+}
+
+.custom-module-v2__voice-target-cell {
+  position: relative;
+}
+
+.custom-module-v2__voice-target-cell::before {
+  content: "";
+  position: absolute;
+  inset: 8px 12px;
+  min-height: 32px;
+  border-radius: 4px !important;
+  background-color: #F3F4F6 !important;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.custom-module-v2__voice-target-cell::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 12px;
+  width: 42%;
+  min-height: 32px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), transparent);
+  pointer-events: none;
+  z-index: 1;
+  animation: customModuleV2VoiceTargetShimmer 1.5s infinite;
+}
+
+.custom-module-v2__voice-target-cell > * {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-module-v2__voice-target-cell textarea,
+.custom-module-v2__voice-target-cell .ant-input {
+  background: transparent !important;
+}
+
+.custom-module-v2__table-header-cell {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #e2e2ea;
+  text-align: left;
+
+  &--action {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    border-right: none;
+  }
+}
+
+.custom-module-v2__table-cell {
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #e2e2ea;
+  vertical-align: top;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  
+  // Ensure inputs take full width
+  .custom-module-v2__input {
+    width: 100%;
+  }
+
+  &--action {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    padding: 0 12px;
+    border-right: none;
+    vertical-align: middle;
+    text-align: center;
+    overflow: visible;
+  }
+}
+
+.custom-module-v2__table-row--dropdown-open,
+.custom-module-v2__table-cell--dropdown-open {
+  position: relative;
+  z-index: 30;
+}
+
+.custom-module-v2__input {
+  width: 100%;
+  font-size: 14px;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  resize: none;
+  margin: 0 !important;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  &::placeholder {
+    color: #bfbfbf !important;
+  }
+
+  &:disabled {
+    opacity: 1 !important;
+    
+    &::placeholder {
+      color: #bfbfbf !important;
+      -webkit-text-fill-color: #bfbfbf !important;
+      opacity: 1 !important;
+    }
+    
+    color: #454551 !important;
+    -webkit-text-fill-color: #454551 !important;
+  }
+
+  .ant-input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    &::placeholder {
+      color: #bfbfbf !important;
+    }
+    
+    &:disabled {
+      opacity: 1 !important;
+      
+      &::placeholder {
+        color: #bfbfbf !important;
+        -webkit-text-fill-color: #bfbfbf !important;
+        opacity: 1 !important;
+      }
+      
+      color: #454551 !important;
+      -webkit-text-fill-color: #454551 !important;
+    }
+  }
+  
+  &.ant-input {
+    border: none !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    color: #454551 !important;
+    
+    &:disabled {
+      color: #454551 !important;
+      -webkit-text-fill-color: #454551 !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+// TextArea specific overrides
+.custom-module-v2__table-cell {
+  textarea.ant-input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    
+    &::placeholder {
+      color: #bfbfbf !important;
+    }
+    
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+    
+    &:disabled {
+      opacity: 1 !important;
+      
+      &::placeholder {
+        color: #bfbfbf !important;
+        -webkit-text-fill-color: #bfbfbf !important;
+        opacity: 1 !important;
+      }
+      
+      color: #454551 !important;
+      -webkit-text-fill-color: #454551 !important;
+    }
+  }
+  
+  .ant-input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    
+    &::placeholder {
+      color: #bfbfbf !important;
+    }
+    
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+    
+    &:disabled {
+      opacity: 1 !important;
+      
+      &::placeholder {
+        color: #bfbfbf !important;
+        -webkit-text-fill-color: #bfbfbf !important;
+        opacity: 1 !important;
+      }
+      
+      color: #454551 !important;
+      -webkit-text-fill-color: #454551 !important;
+    }
+  }
+  
+  .custom-module-v2__input {
+    width: 100% !important;
+    
+    &::placeholder {
+      color: #bfbfbf !important;
+    }
+    
+    &:disabled {
+      opacity: 1 !important;
+      
+      &::placeholder {
+        color: #bfbfbf !important;
+        -webkit-text-fill-color: #bfbfbf !important;
+        opacity: 1 !important;
+      }
+      
+      color: #454551 !important;
+      -webkit-text-fill-color: #454551 !important;
+    }
+  }
+  
+  // Dropdown container styling
+  .custom-module-dropdown-container {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    
+    .custom-module-dropdown {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      z-index: 1000 !important; // Higher than table cells (z-index: 1)
+      // Match Ant Design AutoComplete dropdown styling
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #d9d9d9 !important;
+      border-radius: 8px !important;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1) !important;
+      padding: 4px 0 !important;
+      font-family: "Poppins", sans-serif;
+      max-height: 256px !important;
+      overflow-y: auto !important;
+      margin-top: 4px !important;
+      box-sizing: border-box !important;
+      
+      // Header item (FREQUENTLY USED)
+      .custom-module-dropdown-header {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: #454551 !important;
+        background-color: #fafafa !important;
+        cursor: default !important;
+        line-height: 22px !important;
+        transition: all 0.2s ease-in-out !important;
+        
+        &:hover {
+          background-color: #fafafa !important;
+        }
+      }
+      
+      // Regular dropdown items
+      .custom-module-dropdown-item {
+        padding: 8px 12px !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #454551 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease-in-out !important;
+        line-height: 22px !important;
+        
+        &:hover {
+          background-color: #f5f5f5 !important;
+        }
+        
+        // Custom value item styling
+        .text-primary {
+          color: #4b4ad5 !important;
+        }
+        
+        .fw-medium {
+          font-weight: 600 !important;
+        }
+        
+        .text-decoration-underline {
+          text-decoration: underline !important;
+        }
+      }
+    }
+    
+    // Ensure TextArea inside dropdown container has black text
+    textarea.ant-input {
+      &::placeholder {
+        color: #bfbfbf !important;
+      }
+      
+      &:disabled {
+        opacity: 1 !important;
+        
+        // Keep placeholder gray even when disabled - this must come first
+        &::placeholder {
+          color: #bfbfbf !important;
+          -webkit-text-fill-color: #bfbfbf !important;
+          opacity: 1 !important;
+        }
+        
+        // Apply black color for actual text content
+        color: #454551 !important;
+        -webkit-text-fill-color: #454551 !important;
+      }
+    }
+  }
+}
+
+/* Table automatically handles column widths based on content */
+
+.info-tooltip {
+  &.ant-tooltip {
+    .ant-tooltip-inner {
+      background: #ffffff !important;
+      color: #f1f1f1 !important;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+      min-width: 0;
+    }
+
+    .ant-tooltip-arrow {
+      &::before {
+        background: #ffffff !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-module-v2__table {
+    overflow-x: auto;
+    display: block;
+    
+    thead,
+    tbody,
+    tr {
+      display: block;
+    }
+    
+    thead tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+    
+    tbody {
+      display: block;
+    }
+    
+    tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      min-width: 600px;
+    }
+  }
+}
+
+/* Tablet and Tab view adjustments - increase action column width to 80px to prevent breaking */
+@media (min-width: 769px) and (max-width: 1366px) {
+  .custom-module-v2__table-header-cell--action {
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+  }
+  
+  .custom-module-v2__table-cell--action {
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+  }
+}
+
+
+.custom-module-v2-drawer {
+  .ant-drawer-body {
+    padding: 0;
+    background: #fafafb;
+  }
+
+  .custom-module-v2-drawer__header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #e2e2ea;
+    background: #ffffff;
+  }
+
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .custom-module-v2-drawer__title {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #454551;
+    line-height: 36px;
+  }
+
+  .custom-module-v2-drawer__save {
+    margin-left: auto;
+    height: 39px;
+    min-width: 82px;
+    border-radius: 10px;
+    background: #4b4ad5;
+    border-color: #4b4ad5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background: #3d3cc0;
+      border-color: #3d3cc0;
+    }
+  }
+
+  .custom-module-v2-drawer__body {
+    padding: 20px;
+    background: #fafafb;
+  }
+
+  .custom-module-v2-drawer__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .custom-module-v2-drawer__label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #454551;
+    margin-bottom: 8px;
+  }
+
+  .custom-module-v2-drawer__input {
+    min-height: 42px !important;
+    border: 1px solid #e2e2ea;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #454551 !important;
+    resize: none;
+
+    &:focus,
+    &:hover {
+      border-color: #4b4ad5 !important;
+      box-shadow: none !important;
+    }
+    
+    // TextArea specific styling
+    &.ant-input {
+      min-height: 42px !important;
+    }
+    
+    // TextArea inside drawer input
+    textarea.ant-input {
+      min-height: 42px !important;
+    }
+  }
+  
+  // Tablet view - increase textarea height in drawer only
+  @media (min-width: 769px) and (max-width: 1366px) {
+    .custom-module-v2-drawer__input {
+      min-height: 60px !important;
+      padding: 12px 16px !important;
+      
+      // TextArea specific styling for tablet
+      &.ant-input {
+        min-height: 60px !important;
+        padding: 12px 16px !important;
+      }
+      
+      // TextArea inside drawer input for tablet
+      textarea.ant-input {
+        min-height: 60px !important;
+        padding: 12px 16px !important;
+        line-height: 1.5;
+      }
+      
+      // Override autoSize minRows for tablet - ensure proper height
+      .ant-input {
+        min-height: 60px !important;
+      }
+    }
+  }
+  
+  // Dropdown styling specific to drawer context
+  .custom-module-v2-drawer__field {
+    .custom-module-dropdown-container {
+      width: 100% !important;
+      position: relative !important;
+      overflow: visible !important;
+      
+      .custom-module-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        // Ensure dropdown works properly in drawer
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        // Ensure dropdown appears above drawer content
+        z-index: 9999 !important;
+        // Match Ant Design AutoComplete dropdown styling
+        background: #ffffff !important;
+        border: 1px solid #d9d9d9 !important;
+        border-radius: 8px !important;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1) !important;
+        padding: 4px 0 !important;
+        font-family: "Poppins", sans-serif;
+        max-height: 256px !important;
+        overflow-y: auto !important;
+        margin-top: 4px !important;
+        
+        // Header item (FREQUENTLY USED) in drawer
+        .custom-module-dropdown-header {
+          padding: 8px 12px !important;
+          font-size: 12px !important;
+          font-weight: 600 !important;
+          color: #454551 !important;
+          background-color: #fafafa !important;
+          cursor: default !important;
+          line-height: 22px !important;
+          transition: all 0.2s ease-in-out !important;
+          
+          &:hover {
+            background-color: #fafafa !important;
+          }
+        }
+        
+        // Regular dropdown items in drawer
+        .custom-module-dropdown-item {
+          padding: 8px 12px !important;
+          font-size: 14px !important;
+          font-weight: 400 !important;
+          color: #454551 !important;
+          cursor: pointer !important;
+          transition: all 0.2s ease-in-out !important;
+          line-height: 22px !important;
+          
+          &:hover {
+            background-color: #f5f5f5 !important;
+          }
+          
+          // Custom value item styling
+          .text-primary {
+            color: #4b4ad5 !important;
+          }
+          
+          .fw-medium {
+            font-weight: 600 !important;
+          }
+          
+          .text-decoration-underline {
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+name: Notify Teams on PR merge to prod
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'prod' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure secret exists
+        run: |
+          [ -n "${{ secrets.TEAMS_WEBHOOK_URL }}" ] || { echo "❌ TEAMS_WEBHOOK_URL not set"; exit 1; }
+
+      - name: Build payload safely with jq
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y jq
+
+          jq -n --arg repo "${{ github.repository }}" \
+                --arg num "${{ github.event.pull_request.number }}" \
+                --arg title "${{ github.event.pull_request.title }}" \
+                --arg url "${{ github.event.pull_request.html_url }}" \
+                --arg author "${{ github.event.pull_request.user.login }}" \
+                --arg mergedby "${{ github.event.pull_request.merged_by.login }}" \
+                --arg sha "${{ github.event.pull_request.merge_commit_sha }}" \
+                --arg now "$(date -u +"%Y-%m-%d %H:%M:%SZ")" \
+          '{
+            type: "message",
+            attachments: [
+              {
+                contentType: "application/vnd.microsoft.card.adaptive",
+                content: {
+                  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                  type: "AdaptiveCard",
+                  version: "1.4",
+                  body: [
+                    { type: "TextBlock", size: "Large", weight: "Bolder", text: "✅ PR merged to prod" },
+                    { type: "TextBlock", text: "**\($repo)**", wrap: true },
+                    { type: "TextBlock", text: "**#\($num)** — \($title)", wrap: true },
+                    { type: "FactSet", facts: [
+                        { title: "Author", value: $author },
+                        { title: "Merged by", value: $mergedby },
+                        { title: "Merge SHA", value: $sha },
+                        { title: "Merged at (UTC)", value: $now }
+                      ] }
+                  ],
+                  actions: [
+                    { type: "Action.OpenUrl", title: "View Pull Request", url: $url }
+                  ]
+                }
+              }
+            ]
+          }' > card.json
+
+      - name: Post to Microsoft Teams
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: |
+          WEBHOOK="$(printf '%s' "$TEAMS_WEBHOOK_URL" | tr -d '\r' | sed 's/[[:space:]]*$//')"
+          STATUS=$(curl -sS -o /tmp/resp.txt -w "%{http_code}" \
+            -H 'Content-Type: application/json' \
+            --data @card.json "$WEBHOOK") || true
+          echo "HTTP_STATUS=$STATUS"
+          echo "RESPONSE_BODY:"; cat /tmp/resp.txt
+          test "$STATUS" -ge 200 -a "$STATUS" -lt 300

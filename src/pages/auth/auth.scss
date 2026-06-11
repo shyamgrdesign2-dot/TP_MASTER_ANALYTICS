@@ -1,0 +1,235 @@
+@import '../../styles/variables.scss';
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+
+  &.background-image{
+      background-image: url('#{$tp-assets-base}/images/website-images/login-background.webp');
+      background-size: cover; /* Adjusts the image to cover the entire element */
+      background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+      background-position: center; /* Centers the image */
+  }
+
+  .login-card {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .criteria-container {
+      width: 100%; 
+      max-width: 300px;
+      word-wrap: break-word;
+      word-break: break-word;
+      margin-left: 24px;
+      text-align: left;
+    }
+    
+    .criteria-container ul {
+      padding-left: 20px;
+      font-size: 11.5px;
+      margin: 0;
+    }
+    
+    .criteria-container li {
+      line-height: 1.4;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        margin: 15px 0 6px 30px;
+        text-align: left;
+        font-weight: 500;
+      }
+
+      input,select {
+        padding: 8px 10px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      select {
+        background: white;
+
+      }
+
+      .common-width {
+        width: 100%;
+        max-width: 300px; /* Adjust as needed */
+        box-sizing: border-box; /* Ensure padding is included in width */
+        margin: 0 auto; /* Center alignment */
+      }
+
+      #captch-id {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0; /* Space between input and captcha */
+      }
+
+      .show-password {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        input {
+          margin-right: 6px;
+          margin-top: 7px;
+        }
+
+        label {
+          font-size: 14px;
+        }
+      }
+
+      .error-message {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+
+      .login-button {
+        background-color: #4e5cf9;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #3d49d9;
+        }
+      }
+    
+    .register-button {
+      background-color: #4e5cf9;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #3d49d9;
+      }
+      &:disabled{
+        background-color: #ccc;
+      }
+    }
+    
+    }
+
+    span.color-white{
+      color: #fff !important;
+    }
+    .separator {
+      margin: 16px 0;
+      position: relative;
+
+      span {
+        background: #fff;
+        padding: 0 8px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background: #ddd;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+
+    .otp-button {
+      background: transparent;
+      color: #4e5cf9;
+      border: 1px solid #4e5cf9;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      width: 83%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 1rem;
+      margin-top: 1rem !important;
+      &:hover {
+        background-color: #f0f3ff;
+      }
+    }
+
+    .disable {
+      background: transparent;
+      color: #5f5f5f;
+      border: 1px solid #939393;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+    }
+
+    .links {
+      margin-top: 16px;
+      color: #4e5cf9 !important;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}

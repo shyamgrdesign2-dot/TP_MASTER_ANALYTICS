@@ -1,0 +1,116 @@
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.backgroundContainer {
+  position: relative;
+  background: white; /* Fallback background */
+  padding: 0;
+  border-radius: 0; /* No rounded corners */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent pseudo-element overflow */
+  z-index: 1;
+  box-shadow: none; /* No shadow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.backgroundContainer::before {
+  display: none; /* Remove the border effect */
+}
+
+.backgroundContainer::after {
+  content: none;
+}
+
+.backgroundContainer > * {
+  position: relative;
+  z-index: 1; /* Keep the content above all pseudo-elements */
+}
+
+.backgroundVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+
+.gradientSkeleton {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.genRxLoadingText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
+  color: #45455199 !important;
+  margin: 30px 0px;
+}
+
+.progressBarContainer {
+  width: 100%;
+  max-width: 400px;
+  height: 11px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: linear-gradient(to right, #e5e7eb, #f9fafb); /* Light gray gradient */
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.progressIndicator {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #6366f1 0%,
+    #9333ea 33%,
+    #f43f5e 66%,
+    #fbbf24 100%
+  ); /* Vibrant gradient */
+  transition: width 5s linear;
+}
+
+.skeletonScreen {
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  margin-top: 24px;
+}
+
+@keyframes skeleton-loading {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

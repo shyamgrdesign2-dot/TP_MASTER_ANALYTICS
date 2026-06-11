@@ -1,0 +1,2074 @@
+{
+  "kpis": [
+    {
+      "key": "topMedication",
+      "label": "Top medication",
+      "value": "Pain Killer 50Mg",
+      "description": "The most prescribed brand this period: 271 prescription lines for 62 distinct patients. Catalogue test entries are excluded."
+    },
+    {
+      "key": "medsPrescribed",
+      "label": "Medicines prescribed",
+      "value": 2789,
+      "description": "Total medicine lines written in this period (each drug on a prescription counts once)."
+    },
+    {
+      "key": "distinctDrugs",
+      "label": "Distinct drugs",
+      "value": 175,
+      "description": "Unique products from the medicine catalogue prescribed in this period."
+    },
+    {
+      "key": "patientsWithMeds",
+      "label": "Patients with a prescription",
+      "value": 206,
+      "description": "Distinct patients who received at least one medication in this period."
+    },
+    {
+      "key": "avgDrugsPerRx",
+      "label": "Avg drugs per prescription",
+      "value": 3,
+      "prefix": "~",
+      "description": "Average number of medicine lines per prescription, rounded to the nearest whole number. Prescriptions with more than 30 lines are counted as 30 so data-entry outliers do not skew the average."
+    },
+    {
+      "key": "customMeds",
+      "label": "Custom medicines",
+      "value": 989,
+      "suffix": " (35.5%)",
+      "description": "Medicine lines that were doctor-added rather than picked from the system catalogue (35.5% of all 2,789 lines). A high share can mean the catalogue is missing the drugs this clinic prescribes."
+    }
+  ],
+  "medCustomMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Source"
+      },
+      {
+        "key": "count",
+        "label": "Prescription lines"
+      }
+    ],
+    "rows": [
+      {
+        "k": "From catalogue",
+        "count": 1800
+      },
+      {
+        "k": "Custom (doctor-added)",
+        "count": 989
+      }
+    ]
+  },
+  "customByDoctor": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Doctor"
+      },
+      {
+        "key": "count",
+        "label": "Custom lines"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Samir Vankhade",
+        "count": 977
+      },
+      {
+        "k": "richa(gyna)",
+        "count": 11
+      },
+      {
+        "k": "Piyush sharma (peadia)",
+        "count": 1
+      }
+    ]
+  },
+  "customMedsRegister": {
+    "columns": [
+      {
+        "key": "medicine",
+        "label": "Medicine"
+      },
+      {
+        "key": "company",
+        "label": "Maker"
+      },
+      {
+        "key": "lines",
+        "label": "Lines",
+        "type": "number"
+      },
+      {
+        "key": "patients",
+        "label": "Patients",
+        "type": "number"
+      },
+      {
+        "key": "lastPrescribed",
+        "label": "Last prescribed"
+      }
+    ],
+    "rows": [
+      {
+        "medicine": "Pain kill",
+        "company": "(no maker)",
+        "patients": 62,
+        "lastPrescribed": {},
+        "lines": 262
+      },
+      {
+        "medicine": "gel",
+        "company": "OPEL",
+        "patients": 25,
+        "lastPrescribed": {},
+        "lines": 212
+      },
+      {
+        "medicine": "Paracetamol ",
+        "company": "Intas",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 158
+      },
+      {
+        "medicine": "(no generic)",
+        "company": "(no maker)",
+        "patients": 15,
+        "lastPrescribed": {},
+        "lines": 42
+      },
+      {
+        "medicine": "Paracetamol ",
+        "company": "(no maker)",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 36
+      },
+      {
+        "medicine": "gel",
+        "company": "(no maker)",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 36
+      },
+      {
+        "medicine": "painkill",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 28
+      },
+      {
+        "medicine": "Pepsin",
+        "company": "Pharmacology for Amylase",
+        "patients": 6,
+        "lastPrescribed": {},
+        "lines": 25
+      },
+      {
+        "medicine": "Pain kill",
+        "company": "INTAS Pharma",
+        "patients": 6,
+        "lastPrescribed": {},
+        "lines": 19
+      },
+      {
+        "medicine": "(no generic)",
+        "company": "(no maker)",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 19
+      },
+      {
+        "medicine": "\tBrands for Aceclofenac + Paracetamol + Chlorzoxazone",
+        "company": "Pharmacology for Aceclofenac + Paracetamol + Chlorzoxazone",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 18
+      },
+      {
+        "medicine": "test pro4",
+        "company": "(no maker)",
+        "patients": 12,
+        "lastPrescribed": {},
+        "lines": 15
+      },
+      {
+        "medicine": "Docetaxel (120mg)",
+        "company": "(no maker)",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 14
+      },
+      {
+        "medicine": "4",
+        "company": "(no maker)",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 14
+      },
+      {
+        "medicine": "Termitiro",
+        "company": "(no maker)",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 13
+      },
+      {
+        "medicine": "Bupropion (100mg)",
+        "company": "Aplenzin",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "medicine": "DOLO - M1",
+        "company": "Dolo 252",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "medicine": "inhalation ",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "medicine": "Dendrum dolo",
+        "company": "INTAS",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 7
+      },
+      {
+        "medicine": "rox generic ",
+        "company": "montar",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 6
+      },
+      {
+        "medicine": "Valbenazine",
+        "company": " tardive dyskinesia",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "medicine": "Termitiro",
+        "company": "OPEL",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "medicine": "Docetaxel (120mg)\r",
+        "company": "(no maker)",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "medicine": "Dobutamine (50mg)\r",
+        "company": "(no maker)",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "medicine": "Fluconazole (150mg)",
+        "company": "(no maker)",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "medicine": "\tBrands for Aceclofenac + Paracetamol + Chlorzoxazone",
+        "company": "(no maker)",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "medicine": "Pain kill",
+        "company": "OPEL",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "Dobutamine (50mg)",
+        "company": "(no maker)",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "Tacrolimus (0.01% w/w)\r",
+        "company": "(no maker)",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "Test Name Medicine 2\r",
+        "company": "test",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "Accubate (200mg)",
+        "company": "K-LOR",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "testpro",
+        "company": "struasss company",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 2
+      },
+      {
+        "medicine": "painkill",
+        "company": "(no maker)",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 1
+      },
+      {
+        "medicine": "Termitiro",
+        "company": "INTAS Pharma",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 1
+      },
+      {
+        "medicine": "Brands for Aceclofenac",
+        "company": "Pharmacology for Aceclofenac",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 1
+      },
+      {
+        "medicine": "testpro1",
+        "company": "struasss company1",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 1
+      }
+    ]
+  },
+  "rxTrend": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Month"
+      },
+      {
+        "key": "lines",
+        "label": "Medicine lines"
+      },
+      {
+        "key": "patients",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "2024-03",
+        "lines": 90,
+        "patients": 14
+      },
+      {
+        "k": "2024-04",
+        "lines": 383,
+        "patients": 59
+      },
+      {
+        "k": "2024-05",
+        "lines": 105,
+        "patients": 10
+      },
+      {
+        "k": "2024-06",
+        "lines": 69,
+        "patients": 9
+      },
+      {
+        "k": "2024-07",
+        "lines": 65,
+        "patients": 8
+      },
+      {
+        "k": "2024-08",
+        "lines": 21,
+        "patients": 8
+      },
+      {
+        "k": "2024-09",
+        "lines": 51,
+        "patients": 8
+      },
+      {
+        "k": "2024-10",
+        "lines": 189,
+        "patients": 4
+      },
+      {
+        "k": "2024-11",
+        "lines": 37,
+        "patients": 9
+      },
+      {
+        "k": "2024-12",
+        "lines": 6,
+        "patients": 2
+      },
+      {
+        "k": "2025-01",
+        "lines": 485,
+        "patients": 3
+      },
+      {
+        "k": "2025-03",
+        "lines": 4,
+        "patients": 1
+      }
+    ]
+  },
+  "topGenerics": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Generic"
+      },
+      {
+        "key": "count",
+        "label": "Prescription lines"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Pain kill",
+        "count": 283
+      },
+      {
+        "k": "Gel",
+        "count": 248
+      },
+      {
+        "k": "Paracetamol (1000mg)acetaminophen",
+        "count": 200
+      },
+      {
+        "k": "Paracetamol",
+        "count": 194
+      },
+      {
+        "k": "Acitretin (10mg)",
+        "count": 164
+      },
+      {
+        "k": "Paracetamol (120mg/5ml)acetaminophen",
+        "count": 130
+      },
+      {
+        "k": "Tocilizumab (400mg)",
+        "count": 103
+      },
+      {
+        "k": "Ondansetron (2mg)",
+        "count": 91
+      },
+      {
+        "k": "Paracetamol (500mg)acetaminophen",
+        "count": 80
+      },
+      {
+        "k": "Azithromycin (500mg)",
+        "count": 64
+      }
+    ]
+  },
+  "topManufacturers": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Manufacturer"
+      },
+      {
+        "key": "count",
+        "label": "Prescription lines"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Micro Labs Ltd",
+        "count": 434
+      },
+      {
+        "k": "OPEL",
+        "count": 219
+      },
+      {
+        "k": "Kaizen Pharmaceuticals Pvt Ltd",
+        "count": 169
+      },
+      {
+        "k": "INTAS",
+        "count": 167
+      },
+      {
+        "k": "Roche Products India Pvt Ltd",
+        "count": 102
+      },
+      {
+        "k": "American Biocare",
+        "count": 99
+      },
+      {
+        "k": "INTAS Pharma",
+        "count": 56
+      },
+      {
+        "k": "Hiral Labs Ltd",
+        "count": 54
+      },
+      {
+        "k": "Win-Medicare Pvt Ltd",
+        "count": 49
+      },
+      {
+        "k": "Galacus Healthcare Pvt Ltd",
+        "count": 39
+      }
+    ]
+  },
+  "polypharmacy": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Drugs per prescription"
+      },
+      {
+        "key": "count",
+        "label": "Prescriptions"
+      }
+    ],
+    "rows": [
+      {
+        "k": "1",
+        "count": 174
+      },
+      {
+        "k": "2",
+        "count": 173
+      },
+      {
+        "k": "3",
+        "count": 83
+      },
+      {
+        "k": "4",
+        "count": 75
+      },
+      {
+        "k": "5+",
+        "count": 188
+      }
+    ]
+  },
+  "genericVsBranded": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Generic name"
+      },
+      {
+        "key": "count",
+        "label": "Prescription lines"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Generic name recorded",
+        "count": 2621
+      },
+      {
+        "k": "Not recorded",
+        "count": 168
+      }
+    ]
+  },
+  "drugsRegister": {
+    "columns": [
+      {
+        "key": "brand",
+        "label": "Brand"
+      },
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "company",
+        "label": "Manufacturer"
+      },
+      {
+        "key": "lines",
+        "label": "Lines",
+        "type": "number"
+      },
+      {
+        "key": "patients",
+        "label": "Patients",
+        "type": "number"
+      },
+      {
+        "key": "lastPrescribed",
+        "label": "Last prescribed"
+      }
+    ],
+    "rows": [
+      {
+        "brand": "Pain Killer 50Mg",
+        "generic": "Pain kill",
+        "company": "",
+        "patients": 62,
+        "lastPrescribed": {},
+        "lines": 271
+      },
+      {
+        "brand": "Dolo 150",
+        "generic": "Paracetamol ",
+        "company": "Intas",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 194
+      },
+      {
+        "brand": "Dolo 1000mg Tablet",
+        "generic": "Paracetamol (1000mg)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 84,
+        "lastPrescribed": {},
+        "lines": 192
+      },
+      {
+        "brand": "A Tret 10mg Capsule",
+        "generic": "Acitretin (10mg)",
+        "company": "Kaizen Pharmaceuticals Pvt Ltd",
+        "patients": 41,
+        "lastPrescribed": {},
+        "lines": 174
+      },
+      {
+        "brand": "Medplus 100Mg TBC",
+        "generic": "gel",
+        "company": "OPEL",
+        "patients": 25,
+        "lastPrescribed": {},
+        "lines": 163
+      },
+      {
+        "brand": "Dolo 120 Suspension",
+        "generic": "Paracetamol (120mg/5ml)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 81,
+        "lastPrescribed": {},
+        "lines": 133
+      },
+      {
+        "brand": "ACTEMRA 400 MG INJECTION",
+        "generic": "Tocilizumab (400mg)",
+        "company": "Roche Products India Pvt Ltd",
+        "patients": 47,
+        "lastPrescribed": {},
+        "lines": 103
+      },
+      {
+        "brand": "Regen-100MG",
+        "generic": "gel",
+        "company": "OPEL",
+        "patients": 28,
+        "lastPrescribed": {},
+        "lines": 100
+      },
+      {
+        "brand": "A Tron 2mg Injection",
+        "generic": "Ondansetron (2mg)",
+        "company": "American Biocare",
+        "patients": 9,
+        "lastPrescribed": {},
+        "lines": 86
+      },
+      {
+        "brand": "Dolo 500 mg Tablet",
+        "generic": "Paracetamol (500mg)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 55,
+        "lastPrescribed": {},
+        "lines": 81
+      },
+      {
+        "brand": "Hinac MR 500mg/50mg/500mg Tablet",
+        "generic": "Chlorzoxazone (500mg) + Diclofenac (50mg) + Paracetamol (500mg)",
+        "company": "Hiral Labs Ltd",
+        "patients": 23,
+        "lastPrescribed": {},
+        "lines": 66
+      },
+      {
+        "brand": "Asacol 400mg Tablet",
+        "generic": "Mesalazine (400mg)Mesalamine",
+        "company": "Win-Medicare Pvt Ltd",
+        "patients": 26,
+        "lastPrescribed": {},
+        "lines": 52
+      },
+      {
+        "brand": "Asacus Sachet",
+        "generic": "Mesalazine (1gm)Mesalamine",
+        "company": "Galacus Healthcare Pvt Ltd",
+        "patients": 24,
+        "lastPrescribed": {},
+        "lines": 40
+      },
+      {
+        "brand": "A-Ret 0.5% Cream",
+        "generic": "Tretinoin (0.5% w/w)",
+        "company": "Menarini India Pvt Ltd",
+        "patients": 11,
+        "lastPrescribed": {},
+        "lines": 39
+      },
+      {
+        "brand": "Azithral 500 Tablet",
+        "generic": "Azithromycin (500mg)",
+        "company": "Alembic Pharmaceuticals Ltd",
+        "patients": 20,
+        "lastPrescribed": {},
+        "lines": 38
+      },
+      {
+        "brand": "Fulviglen 250mg Injection",
+        "generic": "",
+        "company": "",
+        "patients": 17,
+        "lastPrescribed": {},
+        "lines": 38
+      },
+      {
+        "brand": "A-Win 5 Injection",
+        "generic": "Iron Sucrose (100mg)",
+        "company": "Asterisk Laboratories India Pvt Ltd",
+        "patients": 10,
+        "lastPrescribed": {},
+        "lines": 37
+      },
+      {
+        "brand": "Assault 200 mg/500 mg Suspension",
+        "generic": "Ofloxacin (200mg) + Ornidazole (500mg)",
+        "company": "Alkem Laboratories Ltd",
+        "patients": 21,
+        "lastPrescribed": {},
+        "lines": 33
+      },
+      {
+        "brand": "A To Z Cream",
+        "generic": "Clobetasol (0.05% w/w) + Neomycin (0.5% w/w) + Miconazole (2% w/w) + Zinc Sulphate Monohydrate (2% w/w)",
+        "company": "Matins Pharma",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 32
+      },
+      {
+        "brand": "prefolic",
+        "generic": "painkill",
+        "company": "INTAS Pharma",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 29
+      },
+      {
+        "brand": "Azee 500 Tablet",
+        "generic": "Azithromycin (500mg)",
+        "company": "Cipla Ltd",
+        "patients": 19,
+        "lastPrescribed": {},
+        "lines": 26
+      },
+      {
+        "brand": "Buta Proxyvon Capsule",
+        "generic": "Pandrillo",
+        "company": "Resso Pharma",
+        "patients": 10,
+        "lastPrescribed": {},
+        "lines": 26
+      },
+      {
+        "brand": "Basaglar 100 Units/ml Cartridge",
+        "generic": "genlitics",
+        "company": "Takeda Pharmaceuticals",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 25
+      },
+      {
+        "brand": "Vicks Action 100",
+        "generic": "",
+        "company": "",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 25
+      },
+      {
+        "brand": "Accare Gel",
+        "generic": "Adapalene (0.1% w/w) + Clindamycin (1% w/w)",
+        "company": "Surecare Pharma Pvt Ltd",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 24
+      },
+      {
+        "brand": "Augmentin 625 Duo Tablet",
+        "generic": "Amoxycillin  (500mg) +  Clavulanic Acid (125mg)",
+        "company": "Glaxo SmithKline Pharmaceuticals Ltd",
+        "patients": 15,
+        "lastPrescribed": {},
+        "lines": 22
+      },
+      {
+        "brand": "A-Cet 10mg Tablet",
+        "generic": "Cetirizine (10mg)",
+        "company": "Acto Pharma Pvt Ltd",
+        "patients": 12,
+        "lastPrescribed": {},
+        "lines": 22
+      },
+      {
+        "brand": "Chlorzoxazone",
+        "generic": "\tBrands for Aceclofenac + Paracetamol + Chlorzoxazone",
+        "company": "Pharmacology for Aceclofenac + Paracetamol + Chlorzoxazone",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 21
+      },
+      {
+        "brand": "Ascoril LS Syrup",
+        "generic": "Ambroxol (30mg/5ml) + Levosalbutamol (1mg/5ml) + Guaifenesin (50mg/5ml)",
+        "company": "Glenmark Pharmaceuticals Ltd",
+        "patients": 11,
+        "lastPrescribed": {},
+        "lines": 20
+      },
+      {
+        "brand": "1100mg Tablet DT",
+        "generic": "Pepsin",
+        "company": "Pharmacology for Amylase",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 19
+      },
+      {
+        "brand": "A Tret 25mg Capsule",
+        "generic": "Acitretin (25mg)",
+        "company": "Kaizen Pharmaceuticals Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 19
+      },
+      {
+        "brand": "Bilanix Tablet",
+        "generic": "Vaporub",
+        "company": "Takeda Pharmaceuticals",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 18
+      },
+      {
+        "brand": "paracetamol for fever",
+        "generic": "Docetaxel (120mg)",
+        "company": "",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 18
+      },
+      {
+        "brand": "Dolo 1000mg Infusion",
+        "generic": "Paracetamol (1000mg)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 10,
+        "lastPrescribed": {},
+        "lines": 17
+      },
+      {
+        "brand": "A Trax 250mg Injection",
+        "generic": "Ceftriaxone (250mg)",
+        "company": "Abron Healthcare",
+        "patients": 8,
+        "lastPrescribed": {},
+        "lines": 16
+      },
+      {
+        "brand": "Asart HT 50 mg/12.5 mg Tablet",
+        "generic": "Losartan (50mg) + Hydrochlorothiazide (12.5mg)",
+        "company": "Stadmed Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 16
+      },
+      {
+        "brand": "A Vin 10mg Tablet",
+        "generic": "Atorvastatin (10mg)",
+        "company": "BestoChem Formulations  India  Ltd",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 16
+      },
+      {
+        "brand": "test4",
+        "generic": "test pro4",
+        "company": "",
+        "patients": 12,
+        "lastPrescribed": {},
+        "lines": 15
+      },
+      {
+        "brand": "regen-D",
+        "generic": "Pain kill",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 15
+      },
+      {
+        "brand": "DOLO 33",
+        "generic": "4",
+        "company": "",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 14
+      },
+      {
+        "brand": "Menabol 2mg Tablet",
+        "generic": "Stanozolol (2mg)",
+        "company": "Cfl Pharmaceuticals Ltd",
+        "patients": 10,
+        "lastPrescribed": {},
+        "lines": 14
+      },
+      {
+        "brand": "Uvex 750mg Tablet",
+        "generic": "Levofloxacin (750mg)",
+        "company": "Meyer Organics Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 14
+      },
+      {
+        "brand": "Amlokind 5 Tablet",
+        "generic": "Olanzepine",
+        "company": "Alkem Pentacare",
+        "patients": 7,
+        "lastPrescribed": {},
+        "lines": 13
+      },
+      {
+        "brand": "AAculate",
+        "generic": "Termitiro",
+        "company": "",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 13
+      },
+      {
+        "brand": "Cedoxtil 200mg Tablet",
+        "generic": "Cefpodoxime Proxetil (200mg)",
+        "company": "Disecure Pharma",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 10
+      },
+      {
+        "brand": "Test Name Medicine 1",
+        "generic": "Test Name Medicine 1",
+        "company": "Test Company 123",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 10
+      },
+      {
+        "brand": "Briv 50mg Tablet",
+        "generic": "Cefixime",
+        "company": "Johnson & Johnson",
+        "patients": 6,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "Wellbutrin SR",
+        "generic": "Bupropion (100mg)",
+        "company": "Aplenzin",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "A Tron 4mg Tablet MD",
+        "generic": "Ondansetron (4mg)",
+        "company": "American Biocare",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "Forex Syrup",
+        "generic": "",
+        "company": "",
+        "patients": 7,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "Acbro 3D 10mg/120mg/200mg Tablet SR",
+        "generic": "Montelukast (10mg) + Fexofenadine (120mg) + Acebrophylline (200mg)",
+        "company": "WellOK Pharma",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "Dollos S Tablet",
+        "generic": "Aceclofenac (100mg) + Paracetamol (325mg) + Serratiopeptidase (15mg)",
+        "company": "Disecure Pharma",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 9
+      },
+      {
+        "brand": "dolloe",
+        "generic": "DOLO - M1",
+        "company": "Dolo 252",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Cloba 10 Tablet",
+        "generic": "",
+        "company": "",
+        "patients": 6,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Perab L 75mg/20mg Capsule",
+        "generic": "Levosulpiride (75mg) + Rabeprazole (20mg)",
+        "company": "Acekinetics Healthcare Pvt Ltd",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Dolo 156.25mg Suspension",
+        "generic": "Paracetamol (156.25mg/5ml)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 7,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "A-Win 5 Injection",
+        "generic": "Iron Sucrose (100mg)",
+        "company": "Asterisk Laboratories India Pvt Ltd",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Asat 5mg Tablet",
+        "generic": "Atorvastatin (5mg)",
+        "company": "Sain Medicaments Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Perolight 12.5mg Tablet",
+        "generic": "Paroxetine (12.5mg)",
+        "company": "Truelight Life Sciences Pvt Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Asat 10 Tablet",
+        "generic": "Atorvastatin (10mg)",
+        "company": "Sain Medicaments Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Ciroxine 125mg Dry Syrup",
+        "generic": "Cefalexin (125mg)",
+        "company": "Ciron Drugs & Pharmaceuticals Pvt Ltd",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 8
+      },
+      {
+        "brand": "Bisoheart 2.5 Tablet",
+        "generic": "Group Of Amikacin",
+        "company": "Company 1",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 7
+      },
+      {
+        "brand": "Paracegen 100mg/500mg Tablet",
+        "generic": "Aceclofenac (100mg) + Paracetamol (500mg)",
+        "company": "Progen Nutraceuticals Pvt Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 7
+      },
+      {
+        "brand": "DOLO 650",
+        "generic": "Dendrum dolo",
+        "company": "INTAS",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 7
+      },
+      {
+        "brand": "Pera 1000mg Injection",
+        "generic": "Cefoperazone (1000mg)",
+        "company": "Parex Pharmaceuticals Pvt Ltd",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 7
+      },
+      {
+        "brand": "Falcigo 120mg Injection",
+        "generic": "",
+        "company": "",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 6
+      },
+      {
+        "brand": "Dolo for fever",
+        "generic": "Dobutamine (50mg)",
+        "company": "",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 6
+      },
+      {
+        "brand": "ASA 50mg Tablet",
+        "generic": "Aspirin (50mg)Acetylsalicylic Acid",
+        "company": "Zydus Cadila",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 6
+      },
+      {
+        "brand": "1100mg Tablet DT",
+        "generic": "Pepsin",
+        "company": "Pharmacology for Amylase",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 6
+      },
+      {
+        "brand": "Allegra 120mg Tablet",
+        "generic": "Fexofenadine (120mg)",
+        "company": "Sanofi India  Ltd",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Dolo 650 Tablet",
+        "generic": "Paracetamol (650mg)Acetaminophen",
+        "company": "Micro Labs Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Ingrezza",
+        "generic": "Valbenazine",
+        "company": " tardive dyskinesia",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Pod 100 Tablet DT",
+        "generic": "Cefpodoxime Proxetil (100mg)",
+        "company": "Astrophel Pharmaceuticals",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "F Tin 20 Tablet",
+        "generic": "",
+        "company": "",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Stopache Tablet",
+        "generic": "Caffeine (30mg) + Paracetamol (500mg)",
+        "company": "Paras Pharmaceuticals Ltd",
+        "patients": 4,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Dollos-P Tablet",
+        "generic": "Aceclofenac (100mg) + Paracetamol (325mg)",
+        "company": "Disecure Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Vomicap 2mg Injection",
+        "generic": "Ondansetron (2mg)",
+        "company": "Biofield Pharma",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Iospar 200mg Tablet",
+        "generic": "Sparfloxacin (200mg)",
+        "company": "Dion Pharmaceuticals",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Dol 3A 50mg/10mg Tablet",
+        "generic": "Diclofenac (50mg) + Serratiopeptidase (10mg)",
+        "company": "3A Pharmaceuticals",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Dol 80 Tablet",
+        "generic": "Drotaverine (80mg)",
+        "company": "Plena Remedies",
+        "patients": 5,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Nikpod Dry Syrup",
+        "generic": "Cefpodoxime Proxetil (50mg)",
+        "company": "Medilente Pharma Pvt Ltd",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 5
+      },
+      {
+        "brand": "Asys P 100mg/325mg Tablet",
+        "generic": "Aceclofenac (100mg) + Paracetamol (325mg)",
+        "company": "Biosys Medisciences",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Eprisan SR Capsule",
+        "generic": "",
+        "company": "",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "A Tron 4mg Tablet MD",
+        "generic": "Ondansetron (4mg)",
+        "company": "American Biocare",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "DOLO 651",
+        "generic": "Termitiro",
+        "company": "OPEL",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "DOLO 44",
+        "generic": "Pain kill",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "StayHappi Thiocolchicoside+Aceclofenac+Paracetamol 4mg/100mg/325mg Tablet",
+        "generic": "Thiocolchicoside (4mg) + Aceclofenac (100mg) + Paracetamol (325mg)",
+        "company": "Sarvagunaushdhi Pvt Ltd",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "ODIMONT FX",
+        "generic": "inhalation ",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Diolof 250mg Tablet",
+        "generic": "Levofloxacin (250mg)",
+        "company": "Divine Lifecare Pvt Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Aagnil-Sos Syrup",
+        "generic": "Sucralfate (1000mg) + Oxetacaine (20mg)",
+        "company": "Haledew Remedies",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Dolosmile RB Tablet",
+        "generic": "Aceclofenac (200mg) + Rabeprazole (20mg)",
+        "company": "Migliore Life Sciences",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "TAB Dompen SR",
+        "generic": "inhalation ",
+        "company": "INTAS Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Valprosh 100mg Tablet",
+        "generic": "Sodium Valproate (100mg)",
+        "company": "Osho Pharma Pvt Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 4
+      },
+      {
+        "brand": "Betheran 25mg Tablet",
+        "generic": "Cefixime",
+        "company": "Johnson & Johnson",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "Budez CR Capsule",
+        "generic": "Cefixime",
+        "company": "Johnson & Johnson",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "Etos 60 Tablet",
+        "generic": "",
+        "company": "",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "Amo AT 5mg/50mg Tablet",
+        "generic": "Amlodipine (5mg) + Atenolol (50mg)",
+        "company": "Olens Healthcare Pvt Ltd",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "Ruby 20mg Tablet",
+        "generic": "Rabeprazole (20mg)",
+        "company": "Abbott",
+        "patients": 2,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "A-CN Gel",
+        "generic": "Clindamycin (1% w/w) + Nicotinamide (4% w/w)",
+        "company": "Eskon Pharma",
+        "patients": 3,
+        "lastPrescribed": {},
+        "lines": 3
+      },
+      {
+        "brand": "Roxone SB 250mg/125mg Injection",
+        "generic": "Ceftriaxone (250mg) + Sulbactam (125mg)",
+        "company": "Medirose drug & pharma",
+        "patients": 1,
+        "lastPrescribed": {},
+        "lines": 3
+      }
+    ]
+  },
+  "genericsRegister": {
+    "columns": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "brands",
+        "label": "Brands",
+        "type": "number"
+      },
+      {
+        "key": "lines",
+        "label": "Lines",
+        "type": "number"
+      },
+      {
+        "key": "patients",
+        "label": "Patients",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "generic": "Pain kill",
+        "brands": 4,
+        "patients": 67,
+        "lines": 283
+      },
+      {
+        "generic": "Gel",
+        "brands": 2,
+        "patients": 25,
+        "lines": 248
+      },
+      {
+        "generic": "Paracetamol (1000mg)acetaminophen",
+        "brands": 2,
+        "patients": 87,
+        "lines": 200
+      },
+      {
+        "generic": "Paracetamol",
+        "brands": 1,
+        "patients": 5,
+        "lines": 194
+      },
+      {
+        "generic": "Acitretin (10mg)",
+        "brands": 1,
+        "patients": 38,
+        "lines": 164
+      },
+      {
+        "generic": "Paracetamol (120mg/5ml)acetaminophen",
+        "brands": 1,
+        "patients": 81,
+        "lines": 130
+      },
+      {
+        "generic": "Tocilizumab (400mg)",
+        "brands": 1,
+        "patients": 47,
+        "lines": 103
+      },
+      {
+        "generic": "Ondansetron (2mg)",
+        "brands": 2,
+        "patients": 11,
+        "lines": 91
+      },
+      {
+        "generic": "Paracetamol (500mg)acetaminophen",
+        "brands": 2,
+        "patients": 56,
+        "lines": 80
+      },
+      {
+        "generic": "Azithromycin (500mg)",
+        "brands": 2,
+        "patients": 27,
+        "lines": 64
+      },
+      {
+        "generic": "Chlorzoxazone (500mg) + diclofenac (50mg) + paracetamol (500mg)",
+        "brands": 1,
+        "patients": 20,
+        "lines": 61
+      },
+      {
+        "generic": "Mesalazine (400mg)mesalamine",
+        "brands": 1,
+        "patients": 26,
+        "lines": 52
+      },
+      {
+        "generic": "Iron sucrose (100mg)",
+        "brands": 1,
+        "patients": 13,
+        "lines": 45
+      },
+      {
+        "generic": "Mesalazine (1gm)mesalamine",
+        "brands": 1,
+        "patients": 24,
+        "lines": 40
+      },
+      {
+        "generic": "Tretinoin (0.5% w/w)",
+        "brands": 1,
+        "patients": 11,
+        "lines": 39
+      },
+      {
+        "generic": "Ofloxacin (200mg) + ornidazole (500mg)",
+        "brands": 2,
+        "patients": 23,
+        "lines": 35
+      },
+      {
+        "generic": "Clobetasol (0.05% w/w) + neomycin (0.5% w/w) + miconazole (2% w/w) + zinc sulphate monohydrate (2% w/w)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 32
+      },
+      {
+        "generic": "Painkill",
+        "brands": 1,
+        "patients": 4,
+        "lines": 29
+      },
+      {
+        "generic": "Pandrillo",
+        "brands": 1,
+        "patients": 10,
+        "lines": 26
+      },
+      {
+        "generic": "Genlitics",
+        "brands": 1,
+        "patients": 8,
+        "lines": 25
+      },
+      {
+        "generic": "Pepsin",
+        "brands": 1,
+        "patients": 6,
+        "lines": 25
+      },
+      {
+        "generic": "Adapalene (0.1% w/w) + clindamycin (1% w/w)",
+        "brands": 1,
+        "patients": 8,
+        "lines": 24
+      },
+      {
+        "generic": "Atorvastatin (10mg)",
+        "brands": 2,
+        "patients": 8,
+        "lines": 24
+      },
+      {
+        "generic": "Cefixime",
+        "brands": 6,
+        "patients": 6,
+        "lines": 24
+      },
+      {
+        "generic": "Amoxycillin  (500mg) +  clavulanic acid (125mg)",
+        "brands": 1,
+        "patients": 15,
+        "lines": 22
+      },
+      {
+        "generic": "Cetirizine (10mg)",
+        "brands": 1,
+        "patients": 12,
+        "lines": 22
+      },
+      {
+        "generic": "\tbrands for aceclofenac + paracetamol + chlorzoxazone",
+        "brands": 1,
+        "patients": 5,
+        "lines": 21
+      },
+      {
+        "generic": "Ambroxol (30mg/5ml) + levosalbutamol (1mg/5ml) + guaifenesin (50mg/5ml)",
+        "brands": 1,
+        "patients": 11,
+        "lines": 20
+      },
+      {
+        "generic": "Acitretin (25mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 19
+      },
+      {
+        "generic": "Termitiro",
+        "brands": 4,
+        "patients": 5,
+        "lines": 19
+      },
+      {
+        "generic": "Vaporub",
+        "brands": 1,
+        "patients": 8,
+        "lines": 18
+      },
+      {
+        "generic": "Ceftriaxone (250mg)",
+        "brands": 1,
+        "patients": 8,
+        "lines": 16
+      },
+      {
+        "generic": "Losartan (50mg) + hydrochlorothiazide (12.5mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 16
+      },
+      {
+        "generic": "Test pro4",
+        "brands": 1,
+        "patients": 12,
+        "lines": 15
+      },
+      {
+        "generic": "4",
+        "brands": 1,
+        "patients": 5,
+        "lines": 14
+      },
+      {
+        "generic": "Docetaxel (120mg)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 14
+      },
+      {
+        "generic": "Levofloxacin (750mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 14
+      },
+      {
+        "generic": "Stanozolol (2mg)",
+        "brands": 1,
+        "patients": 10,
+        "lines": 14
+      },
+      {
+        "generic": "Olanzepine",
+        "brands": 1,
+        "patients": 7,
+        "lines": 13
+      },
+      {
+        "generic": "Ondansetron (4mg)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 13
+      },
+      {
+        "generic": "Cefpodoxime proxetil (200mg)",
+        "brands": 2,
+        "patients": 4,
+        "lines": 11
+      },
+      {
+        "generic": "Test name medicine 1",
+        "brands": 1,
+        "patients": 5,
+        "lines": 10
+      },
+      {
+        "generic": "Aceclofenac (100mg) + paracetamol (325mg)",
+        "brands": 2,
+        "patients": 5,
+        "lines": 9
+      },
+      {
+        "generic": "Aceclofenac (100mg) + paracetamol (325mg) + serratiopeptidase (15mg)",
+        "brands": 1,
+        "patients": 4,
+        "lines": 9
+      },
+      {
+        "generic": "Bupropion (100mg)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 9
+      },
+      {
+        "generic": "Levosulpiride (75mg) + rabeprazole (20mg)",
+        "brands": 2,
+        "patients": 4,
+        "lines": 9
+      },
+      {
+        "generic": "Montelukast (10mg) + fexofenadine (120mg) + acebrophylline (200mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 9
+      },
+      {
+        "generic": "Aceclofenac (100mg) + paracetamol (500mg)",
+        "brands": 2,
+        "patients": 3,
+        "lines": 8
+      },
+      {
+        "generic": "Atorvastatin (5mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 8
+      },
+      {
+        "generic": "Cefalexin (125mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 8
+      },
+      {
+        "generic": "Dolo - m1",
+        "brands": 1,
+        "patients": 1,
+        "lines": 8
+      },
+      {
+        "generic": "Inhalation",
+        "brands": 2,
+        "patients": 3,
+        "lines": 8
+      },
+      {
+        "generic": "Paracetamol (156.25mg/5ml)acetaminophen",
+        "brands": 1,
+        "patients": 7,
+        "lines": 8
+      },
+      {
+        "generic": "Paroxetine (12.5mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 8
+      },
+      {
+        "generic": "Cefoperazone (1000mg)",
+        "brands": 1,
+        "patients": 4,
+        "lines": 7
+      },
+      {
+        "generic": "Dendrum dolo",
+        "brands": 1,
+        "patients": 3,
+        "lines": 7
+      },
+      {
+        "generic": "Group of amikacin",
+        "brands": 1,
+        "patients": 5,
+        "lines": 7
+      },
+      {
+        "generic": "Aspirin (50mg)acetylsalicylic acid",
+        "brands": 1,
+        "patients": 3,
+        "lines": 6
+      },
+      {
+        "generic": "Cefpodoxime proxetil (50mg)",
+        "brands": 2,
+        "patients": 2,
+        "lines": 6
+      },
+      {
+        "generic": "Diclofenac (50mg) + serratiopeptidase (10mg)",
+        "brands": 2,
+        "patients": 3,
+        "lines": 6
+      },
+      {
+        "generic": "Paracetamol (650mg)acetaminophen",
+        "brands": 2,
+        "patients": 2,
+        "lines": 6
+      },
+      {
+        "generic": "Amlodipine (5mg) + atenolol (50mg)",
+        "brands": 2,
+        "patients": 4,
+        "lines": 5
+      },
+      {
+        "generic": "Caffeine (30mg) + paracetamol (500mg)",
+        "brands": 1,
+        "patients": 4,
+        "lines": 5
+      },
+      {
+        "generic": "Cefpodoxime proxetil (100mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 5
+      },
+      {
+        "generic": "Drotaverine (80mg)",
+        "brands": 1,
+        "patients": 5,
+        "lines": 5
+      },
+      {
+        "generic": "Fexofenadine (120mg)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 5
+      },
+      {
+        "generic": "Sparfloxacin (200mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 5
+      },
+      {
+        "generic": "Valbenazine",
+        "brands": 1,
+        "patients": 1,
+        "lines": 5
+      },
+      {
+        "generic": "Aceclofenac (200mg) + rabeprazole (20mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 4
+      },
+      {
+        "generic": "Dobutamine (50mg)\r",
+        "brands": 1,
+        "patients": 2,
+        "lines": 4
+      },
+      {
+        "generic": "Docetaxel (120mg)\r",
+        "brands": 1,
+        "patients": 2,
+        "lines": 4
+      },
+      {
+        "generic": "Levofloxacin (250mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 4
+      },
+      {
+        "generic": "Sodium valproate (100mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 4
+      },
+      {
+        "generic": "Sucralfate (1000mg) + oxetacaine (20mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 4
+      },
+      {
+        "generic": "Thiocolchicoside (4mg) + aceclofenac (100mg) + paracetamol (325mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 4
+      },
+      {
+        "generic": "Bromelain (90mg) + trypsin (48mg) + rutoside (100mg)",
+        "brands": 2,
+        "patients": 3,
+        "lines": 3
+      },
+      {
+        "generic": "Ceftriaxone (250mg) + sulbactam (125mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 3
+      },
+      {
+        "generic": "Clindamycin (1% w/w) + nicotinamide (4% w/w)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 3
+      },
+      {
+        "generic": "Deflazacort (6mg)",
+        "brands": 1,
+        "patients": 3,
+        "lines": 3
+      },
+      {
+        "generic": "Paracetamol (250mg/5ml)acetaminophen",
+        "brands": 2,
+        "patients": 3,
+        "lines": 3
+      },
+      {
+        "generic": "Rabeprazole (20mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 3
+      },
+      {
+        "generic": "Accubate (200mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 2
+      },
+      {
+        "generic": "Ambroxol (15mg/5ml) + guaifenesin (50mg/5ml) + menthol (2.5mg/5ml) + terbutaline (1.25mg/5ml)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Aspirin (150mg)acetylsalicylic acid",
+        "brands": 1,
+        "patients": 1,
+        "lines": 2
+      },
+      {
+        "generic": "Aspirin (75mg)acetylsalicylic acid",
+        "brands": 1,
+        "patients": 1,
+        "lines": 2
+      },
+      {
+        "generic": "Dobutamine (50mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Levofloxacin (500mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 2
+      },
+      {
+        "generic": "Losartan (50mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Pantoprazole (40mg)",
+        "brands": 2,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Piroxicam (150mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Tacrolimus (0.01% w/w)\r",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Tacrolimus (0.5mg)",
+        "brands": 1,
+        "patients": 2,
+        "lines": 2
+      },
+      {
+        "generic": "Testpro",
+        "brands": 1,
+        "patients": 1,
+        "lines": 2
+      },
+      {
+        "generic": "Aceclofenac (100mg) + paracetamol (325mg) + serratiopeptidase (10mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Artesunate (60mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Brands for aceclofenac",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Caffeine (50mg) + paracetamol (650mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Carboxymethylcellulose (0.5% w/v)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Cefixime (200mg) + clavulanic acid (125mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      },
+      {
+        "generic": "Chloroquine (500mg)",
+        "brands": 1,
+        "patients": 1,
+        "lines": 1
+      }
+    ]
+  },
+  "meta": {
+    "live": true,
+    "rowCount": 100,
+    "note": "Top lists and registers exclude catalogue test entries; the count KPIs include every line."
+  }
+}

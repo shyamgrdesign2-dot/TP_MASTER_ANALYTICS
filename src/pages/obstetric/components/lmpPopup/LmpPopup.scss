@@ -1,0 +1,33 @@
+.lmpModal {
+  .ant-modal-header {
+    border-radius: 24px;
+  }
+  .ant-modal-content {
+    border-radius: 24px;
+    padding: 0px;
+  }
+
+  .lmpLabel {
+    height: 21px;
+    gap: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  .lmpBtn {
+    width: 179px;
+    height: 41px;
+    gap: 0px;
+
+    .lmpBtnTxt {
+      color: #4b4ad5 !important;
+    }
+  }
+
+  .disabledBtn {
+    opacity: 0.5 !important;
+    cursor: none !important;
+  }
+}

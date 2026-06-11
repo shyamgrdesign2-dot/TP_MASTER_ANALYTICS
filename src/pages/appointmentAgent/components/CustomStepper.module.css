@@ -1,0 +1,245 @@
+.stepperOuter {
+    width: 100% !important;
+    max-width: 690px !important;
+    margin-left: 30%;
+    padding: 0 20px;
+  }
+  
+  .stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 86%;
+    position: relative;
+  }
+  
+  .stepWithLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    /* max-width: 160px; */
+  }
+  
+  .stepCircleWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .connector {
+    height: 3px;
+    width: 150px;
+    border-radius: 2px;
+    background: #d1d5db;
+    z-index: 0;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .circleCompleted {
+    border-radius: 50%;
+    background: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+    font-size: 24px;
+    transition: background 0.2s;
+    width: 2.5675rem;
+    height: 2.5675rem;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  
+  .circleCompleted .anticon,
+  .circleCompleted .anticon > svg,
+  .circleCompleted .anticon > svg > path {
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+  }
+  
+  .circleActive {
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    position: relative;
+    width: 2.5675rem;
+    height: 2.5675rem;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  
+  .innerDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4f46e5;
+  }
+  
+  .circleUpcoming {
+    width: 2.5675rem;
+    height: 2.5675rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #bfc5d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    z-index: 1;
+  }
+  
+  .labelContainer {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .labelActive {
+    color: #4f46e5 !important;
+    font-weight: 400;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+  
+  .labelUpcoming {
+    color: #465668 !important;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .clickableStep {
+    transition: transform 0.2s ease;
+  }
+  
+  .clickableStep:hover {
+    transform: scale(1);
+  }
+  
+  .clickableStep:hover .circleCompleted {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  }
+  
+  .mobileStepsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 15px;
+  }
+  
+  .mobileStepWithLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  .mobileCircleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+  
+  .mobileConnectorWrapper {
+    position: absolute;
+    top: 15px; /* Align with circle center */
+    left: calc(50% + 15px); /* Start after the circle */
+    width: calc(100% - 30px); /* Ensure it doesn't overlap next circle */
+    height: 2px;
+    z-index: 0;
+  }
+  
+  .mobileConnector {
+    width: 100%;
+    height: 100%;
+    background-color: #d1d5db;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .stepperOuter {
+      padding: 0;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .stepsContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .stepWithLabel {
+      flex: 1;
+      position: relative;
+      min-width: 0;
+    }
+    
+    .stepCircleWrapper {
+      margin-bottom: 8px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* Critical fix for connector position */
+    .connector {
+      height: 2px;
+      width: calc(100% - 15px);
+      left: calc(50% + 15px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    /* Ensure the last step doesn't have a connector that extends too far */
+    .stepWithLabel:last-child .connector {
+      display: none;
+    }
+    
+    .circleCompleted,
+    .circleActive,
+    .circleUpcoming {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .labelActive,
+    .labelUpcoming {
+      font-size: 0.75rem;
+    text-align: center;
+    }
+    
+    .innerDot {
+      width: 8px;
+      height: 8px;
+    }
+    
+    /* Fix SVG tick size in completed circles */
+    .circleCompleted svg {
+      width: 18px;
+      height: 18px;
+    }
+  } 

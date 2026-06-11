@@ -1,0 +1,12 @@
+.addDOB-picker-dropdown {
+  &.ant-picker-dropdown .ant-picker-date-panel {
+    width: 415px;
+    height: 382px;
+    .ant-picker-content {
+      height: 320px;
+    }
+  }
+  .ant-picker-footer {
+    display: none;
+  }
+}

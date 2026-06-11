@@ -1,0 +1,707 @@
+/* Analytics workspace — TP App Shell layout. Tokens from shell/tpTokens.scss */
+
+.analytics-shell {
+  display: flex;
+  flex-direction: column; /* full-width header on top, sidebar + content below */
+  height: calc(100vh - 56px);
+  min-height: 560px;
+  background: var(--tp-bg);
+  overflow: hidden;
+  font-family: var(--tp-font-sans);
+  color: var(--tp-slate-900);
+}
+
+/* Row below the app header: the analytics sidebar starts here, not at the top. */
+.analytics-lower {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.analytics-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Mobile backdrop + hamburger ── */
+.analytics-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1090;
+  background: rgba(23, 23, 37, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  &.is-open { opacity: 1; pointer-events: auto; }
+}
+.analytics-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--tp-slate-200);
+  border-radius: 9px;
+  background: var(--tp-slate-0);
+  cursor: pointer;
+  margin-right: 4px;
+  &:hover { background: var(--tp-slate-50); }
+}
+
+/* ── Top bar ── */
+.analytics-topbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: var(--tp-slate-0);
+  border-bottom: 1px solid var(--tp-slate-100);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+
+    h1 {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--tp-slate-900);
+      font-family: var(--tp-font-heading);
+      white-space: nowrap;
+    }
+    .analytics-back {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--tp-slate-200);
+      border-radius: 9px;
+      background: var(--tp-slate-0);
+      cursor: pointer;
+      flex: none;
+      transition: background 0.15s, border-color 0.15s;
+      &:hover { background: var(--tp-slate-50); border-color: var(--tp-slate-300); }
+    }
+    .analytics-brand {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: var(--tp-slate-900); /* black brand text */
+      white-space: nowrap;
+    }
+    .analytics-crumb-sep {
+      color: var(--tp-slate-300);
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .analytics-crumb {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--tp-slate-400);
+    }
+    .analytics-soon-tag {
+      background: var(--tp-violet-50);
+      color: var(--tp-violet-600);
+      border: 1px solid var(--tp-violet-100);
+      font-size: 11px;
+      border-radius: 6px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* Icon-only CTAs (Tutorial / Refresh / Customize) — greyish, like the home page */
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .analytics-iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--tp-slate-100);
+    cursor: pointer;
+    color: var(--tp-slate-600);
+    transition: background 0.15s, transform 0.15s;
+    img { display: block; }
+    &:hover { background: var(--tp-slate-200); }
+    &:active { transform: scale(0.94); }
+    &.is-spinning svg { animation: tp-spin 0.8s linear infinite; }
+  }
+
+  .analytics-add-btn {
+    background: var(--tp-blue-500);
+    border-color: var(--tp-blue-500);
+    &:hover { background: var(--tp-blue-600) !important; border-color: var(--tp-blue-600) !important; }
+  }
+}
+
+@keyframes tp-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Keyboard focus rings for the chrome action cluster (WCAG 2.4.7). */
+.analytics-iconbtn,
+.analytics-hamburger,
+.analytics-back,
+.analytics-reset,
+.analytics-period-trigger {
+  &:focus-visible {
+    outline: 2px solid var(--tp-blue-500);
+    outline-offset: 2px;
+  }
+}
+
+/* ── Sub-header (Tier 2): the selected page's own heading + subtitle ── */
+.analytics-subhead {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: var(--tp-slate-0);
+  border-bottom: 1px solid var(--tp-slate-100);
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  &__crumb {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--tp-slate-400);
+    white-space: nowrap;
+    &::after { content: "/"; margin-left: 10px; color: var(--tp-slate-300); font-weight: 400; }
+  }
+  &__title {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--tp-slate-900);
+    font-family: var(--tp-font-heading);
+    white-space: nowrap;
+  }
+  &__desc {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--tp-slate-500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ── Filter bar (below the header) ── */
+.analytics-filterbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: var(--tp-slate-50);
+  border-bottom: 1px solid var(--tp-slate-100);
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--tp-slate-500);
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__spacer { flex: 1 1 auto; }
+
+  /* Tertiary "ghost" action — a plain underlined link, not a boxed button.
+     Orange, shown only when a filter is off the default. */
+  .analytics-reset {
+    border: none;
+    background: transparent;
+    color: #d97316;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 2px;
+    align-self: center;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: color 0.15s, text-decoration-thickness 0.15s;
+    &:hover { color: #b45309; text-decoration-thickness: 2px; }
+  }
+
+  /* Period dropdown trigger (shows preset name or custom dates). It is an
+     input-box selector like the dropdowns beside it, so it carries the same
+     outer stroke + focus ring (TP InputBox treatment). */
+  .analytics-period-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 150px;
+    min-height: 38px;
+    justify-content: flex-start;
+    font-weight: 500;
+    padding: 4px 12px;
+    border: 1.5px solid var(--tp-slate-200) !important;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: none;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+    span { flex: 1; text-align: left; }
+
+    &:hover { border-color: var(--tp-slate-300) !important; }
+    &:focus-visible,
+    &.ant-dropdown-open {
+      border-color: var(--tp-blue-500) !important;
+      box-shadow: 0 0 0 3px rgba(75, 74, 213, 0.18);
+      outline: none;
+    }
+  }
+}
+
+/* ── Filter multi-select (TP Dropdown molecule pattern: chips trigger,
+      checkbox rows, segregated "All" section, Clear/Apply footer) ── */
+.analytics-msel {
+  position: relative;
+  min-width: 200px;
+  max-width: 320px;
+
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    min-height: 38px;
+    padding: 4px 12px;
+    border: 1.5px solid var(--tp-slate-200);
+    border-radius: 10px;
+    background: #fff;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--tp-slate-700);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+
+    &:hover { border-color: var(--tp-slate-300); }
+    &[data-open="true"],
+    &:focus-visible {
+      border-color: var(--tp-blue-500);
+      box-shadow: 0 0 0 3px rgba(75, 74, 213, 0.18);
+      outline: none;
+    }
+    > svg { color: var(--tp-slate-400); }
+  }
+
+  /* "All doctors / All clinics" is a real selection state, not a hint — it
+     reads in value ink (slate-700), not placeholder grey. */
+  &__placeholder {
+    color: var(--tp-slate-700);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__chips { display: flex; align-items: center; gap: 4px; flex: 1; min-width: 0; overflow: hidden; }
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 140px;
+    padding: 2px 6px 2px 8px;
+    border-radius: 999px;
+    background: var(--tp-blue-50, #eeeeff);
+    color: var(--tp-blue-700, #2e2d96);
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+
+    &--count { padding: 2px 8px; }
+  }
+  &__chipLabel { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  &__chipX {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    color: var(--tp-blue-700, #2e2d96);
+    cursor: pointer;
+    flex-shrink: 0;
+    &:hover { background: rgba(46, 45, 150, 0.14); }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    width: max(100%, 260px);
+    max-height: 360px;
+    border: 1px solid var(--tp-slate-200);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 16px 32px -8px rgba(23, 23, 37, 0.16);
+    overflow: hidden;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--tp-slate-100);
+    color: var(--tp-slate-400);
+    flex-shrink: 0;
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--tp-slate-900);
+      &::placeholder { color: var(--tp-slate-400); }
+    }
+  }
+
+  &__list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--tp-slate-300) transparent;
+  }
+
+  &__divider { height: 1px; margin: 4px 2px; background: var(--tp-slate-100); }
+  &__heading {
+    padding: 8px 10px 4px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--tp-slate-400);
+  }
+  &__empty { padding: 14px 12px; text-align: center; font-size: 13px; color: var(--tp-slate-400); }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--tp-slate-700);
+    user-select: none;
+
+    &:hover { background: var(--tp-slate-100); }
+    &[data-selected="true"] { color: var(--tp-blue-700, #2e2d96); .analytics-msel__optTitle { font-weight: 600; } }
+    &--all .analytics-msel__optTitle { font-weight: 600; }
+  }
+
+  &__box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--tp-slate-300);
+    border-radius: 4px;
+    background: #fff;
+    color: #fff;
+    flex-shrink: 0;
+    transition: background 120ms ease, border-color 120ms ease;
+
+    &[data-checked="true"] { background: var(--tp-blue-500, #4b4ad5); border-color: var(--tp-blue-500, #4b4ad5); }
+  }
+
+  &__optText { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+  &__optTitle { font-size: 13px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  &__optSub { font-size: 11px; line-height: 1.3; color: var(--tp-slate-400); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 8px 12px;
+    border-top: 1px solid var(--tp-slate-100);
+    flex-shrink: 0;
+  }
+  &__btn {
+    font-family: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+
+    &--outline {
+      background: #fff;
+      border: 1.5px solid var(--tp-slate-200);
+      color: var(--tp-slate-600);
+      &:hover { border-color: var(--tp-slate-300); color: var(--tp-slate-800); }
+    }
+    &--solid {
+      background: var(--tp-blue-500, #4b4ad5);
+      border: 1.5px solid var(--tp-blue-500, #4b4ad5);
+      color: #fff;
+      &:hover { background: var(--tp-blue-600, #3c3bb5); border-color: var(--tp-blue-600, #3c3bb5); }
+    }
+  }
+}
+
+/* Period dropdown panel (presets + custom range) */
+.analytics-period-panel {
+  display: flex;
+  background: #fff;
+  border: 1px solid var(--tp-slate-100);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(23, 23, 37, 0.14);
+  overflow: hidden;
+
+  .analytics-period-presets {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    border-right: 1px solid var(--tp-slate-100);
+    min-width: 140px;
+  }
+  .analytics-period-preset {
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-size: 13px;
+    color: var(--tp-slate-700);
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover { background: var(--tp-slate-50); }
+    &.is-active { background: var(--tp-blue-50); color: var(--tp-blue-600); font-weight: 600; }
+  }
+  .analytics-period-custom {
+    padding: 12px;
+    &__label {
+      font-size: 11px; font-weight: 600; color: var(--tp-slate-500);
+      letter-spacing: 0.02em; margin-bottom: 6px;
+    }
+  }
+}
+
+/* ── Body ── */
+.analytics-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px 24px 48px;
+}
+
+/* Cap the canvas on ultrawide displays so KPI cards don't dilute to 8+ across
+   and full-width charts don't stretch to absurd widths; centred. */
+.analytics-canvas {
+  max-width: 1680px;
+  margin-inline: auto;
+}
+
+/* ── Widget grid ──
+   Fluid + adaptive: charts/tables reflow by available width (auto-fit), so the
+   canvas goes 1 → 2 → 3 columns across phone → laptop → wide screens with no
+   hard breakpoints. Full-width widgets (trends, ledgers) span every track. */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 18px;
+  // Stretch so two charts side by side share the same card height (the shorter
+  // one centres its content) — consistent rows, no ragged bottoms.
+  align-items: stretch;
+
+  .analytics-widget { &--wide { grid-column: 1 / -1; } }
+  .analytics-widget--wide { grid-column: 1 / -1; }
+}
+
+.analytics-widget-extra { display: inline-flex; align-items: center; gap: 8px; }
+.analytics-widget-note { margin-top: 8px; font-size: 11px; color: var(--tp-slate-400); }
+
+.analytics-empty {
+  padding: 18px 8px;
+  .analytics-empty-note {
+    display: inline-flex; align-items: center; gap: 6px;
+    max-width: 560px; color: var(--tp-warning-600); font-size: 13px; text-align: left;
+  }
+  .analytics-planned {
+    max-width: 560px; margin: 12px auto 0; padding-left: 18px;
+    text-align: left; color: var(--tp-slate-600); font-size: 12.5px; line-height: 1.7;
+  }
+}
+
+.analytics-widget-remove {
+  position: absolute; top: 10px; right: 40px; opacity: 0; transition: opacity 0.18s;
+}
+div:hover > .analytics-widget-remove { opacity: 1; }
+
+/* ── Reports hub ── */
+.analytics-report-section { margin-bottom: 30px; }
+.analytics-report-section-title {
+  font-size: 12px; font-weight: 700; color: var(--tp-slate-500);
+  text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px;
+}
+.analytics-reports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  .analytics-report-card {
+    border-radius: 14px;
+    border: 1px solid var(--tp-slate-100);
+    box-shadow: 0 1px 3px rgba(23, 23, 37, 0.05);
+    transition: border-color 0.18s, box-shadow 0.18s;
+    &:hover { border-color: rgba(75, 74, 213, 0.3); box-shadow: 0 6px 20px rgba(23, 23, 37, 0.08); }
+    .analytics-report-head { display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 8px; }
+    .analytics-report-desc { font-size: 12.5px; color: var(--tp-slate-500); min-height: 48px; margin-bottom: 12px; }
+    // Secondary CTA, ALWAYS visible (was a faint ghost-primary that only read on hover).
+    .analytics-report-dl.ant-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--tp-blue-50); border: 1px solid #c7c6f5;
+      color: #3c3bb5; font-weight: 600; font-size: 13px;
+      border-radius: 9px; height: 34px; box-shadow: none;
+      &:hover { background: #4b4ad5 !important; border-color: #4b4ad5 !important; color: #fff !important; }
+    }
+  }
+  @media (max-width: 1100px) { grid-template-columns: 1fr; }
+}
+
+/* ── Placeholder page ── */
+.tpph {
+  .tpph__hero {
+    display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
+    .tpph__hero-icon {
+      width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--tp-blue-50);
+    }
+    .tpph__hero-title { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.4px; font-family: var(--tp-font-heading); }
+    .tpph__hero-sub { margin: 2px 0 0; font-size: 13px; color: var(--tp-slate-500); }
+  }
+  .tpph__note {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--tp-warning-50); border: 1px solid #fde68a; color: var(--tp-warning-600);
+    padding: 8px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 24px;
+  }
+  .tpph__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    @media (max-width: 1100px) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 720px) { grid-template-columns: 1fr; }
+  }
+  .tpph__card {
+    background: var(--tp-card); border: 1px solid var(--tp-slate-100); border-radius: 14px;
+    padding: 18px; box-shadow: 0 1px 3px rgba(23, 23, 37, 0.04);
+    transition: 0.2s; position: relative; overflow: hidden;
+    &:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(75, 74, 213, 0.1); border-color: var(--tp-blue-200); }
+    .tpph__card-bars {
+      display: flex; align-items: flex-end; gap: 5px; height: 56px; margin-bottom: 14px; opacity: 0.5;
+      span { flex: 1; border-radius: 4px 4px 0 0; background: linear-gradient(to top, var(--tp-blue-200), var(--tp-blue-400)); }
+    }
+    .tpph__card-title { margin: 0; font-size: 14px; font-weight: 600; color: var(--tp-slate-700); }
+  }
+}
+
+/* ── Responsive overrides ──
+   Kept at the END of the file so they win over the unconditional base rules
+   above (media queries don't add specificity — source order breaks the tie). */
+@media (max-width: 768px) {
+  .analytics-backdrop { display: block; }
+  .analytics-hamburger { display: inline-flex; }
+  .analytics-topbar { padding: 10px 16px; }
+  .analytics-subhead { padding: 10px 16px; }
+  .analytics-subhead__desc { display: none; }
+  .analytics-body { padding: 16px 16px 40px; }
+  .analytics-filterbar { padding: 12px 16px; gap: 12px; }
+  .analytics-reports-grid { grid-template-columns: 1fr; }
+  /* The back button is redundant with the hamburger on phones. */
+  .analytics-topbar .analytics-back { display: none; }
+}
+
+/* Phone: stack the filter bar into a clean 2-up grid (Period spans the row),
+   drop the flex spacer so Reset doesn't orphan, and let fields fill width. */
+@media (max-width: 640px) {
+  .analytics-filterbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    .analytics-filterbar__field { min-width: 0; }
+    .analytics-filterbar__field:nth-last-child(2),
+    .analytics-filterbar__spacer { grid-column: 1 / -1; }
+    .analytics-filterbar__spacer { display: none; }
+    .ant-select, .analytics-period-trigger { width: 100%; min-width: 0 !important; }
+    .analytics-reset { grid-column: 1 / -1; justify-self: start; }
+  }
+}
+
+/* ── Page-info button + drawer ── */
+.analytics-subhead__main { display: flex; align-items: center; gap: 12px; }
+.analytics-subhead__info {
+  display: grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0;
+  border-radius: 10px; border: 1px solid var(--tp-slate-200); background: #fff; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  &:hover { border-color: #4b4ad5; background: var(--tp-blue-50); }
+}
+.analytics-subhead__sub { margin: 2px 0 0; font-size: 12.5px; color: var(--tp-slate-500); }
+.apid {
+  .apid__dl { display: flex; flex-wrap: wrap; gap: 8px; }
+  .apid__h3 { font-size: 15px; font-weight: 700; margin: 18px 0 8px; letter-spacing: -0.2px; }
+  .apid__h4 { font-size: 13.5px; font-weight: 600; margin: 14px 0 6px; }
+  .apid__p { font-size: 13px; color: var(--tp-slate-600); margin: 0 0 8px; line-height: 1.55; }
+  .apid__ul { margin: 0 0 10px; padding-left: 18px; li { font-size: 13px; color: var(--tp-slate-600); margin-bottom: 4px; line-height: 1.5; } }
+  .apid__code { background: var(--tp-slate-100); border-radius: 4px; padding: 1px 5px; font-size: 12px; }
+  .apid__trow { font-size: 12.5px; color: var(--tp-slate-600); padding: 4px 0; border-bottom: 1px solid var(--tp-slate-100); }
+  .apid__quote { border-left: 3px solid var(--tp-blue-200, #c7c6f5); padding: 6px 10px; margin: 8px 0; background: var(--tp-blue-50); border-radius: 6px; font-size: 12.5px; color: var(--tp-slate-600); }
+}
+
+/* Report-card heading glyph chip (violet, bulk) */
+.analytics-report-glyph {
+  display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0;
+  border-radius: 9px; background: #f2e9fb;
+}

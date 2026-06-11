@@ -1,0 +1,85 @@
+/* ============================================================================
+ * TP Design System tokens — ported from the GenX / TP App Shell reference.
+ * Scoped to .tp-analytics so they never leak into the rest of the EMR.
+ * ========================================================================== */
+
+.tp-analytics {
+  /* TP Blue (Primary Brand) */
+  --tp-blue-50: #eeeeff;
+  --tp-blue-100: #d8d8fa;
+  --tp-blue-200: #b5b4f2;
+  --tp-blue-300: #8e8de8;
+  --tp-blue-400: #6c6bde;
+  --tp-blue-500: #4b4ad5;
+  --tp-blue-600: #3c3bb5;
+  --tp-blue-700: #2e2d96;
+  --tp-blue-800: #212077;
+  --tp-blue-900: #161558;
+
+  /* TP Violet (Secondary) */
+  --tp-violet-50: #faf5fe;
+  --tp-violet-100: #eddff7;
+  --tp-violet-300: #c89fe7;
+  --tp-violet-500: #a461d8;
+  --tp-violet-600: #8a4dbb;
+
+  /* TP Amber */
+  --tp-amber-50: #fffbeb;
+  --tp-amber-500: #f5b832;
+  --tp-amber-600: #d99b1a;
+
+  /* AI gradient stops */
+  --ai-pink: #d565ea;
+  --ai-violet: #673aac;
+  --ai-indigo: #1a1994;
+
+  /* TP Slate (Neutrals) */
+  --tp-slate-0: #ffffff;
+  --tp-slate-50: #fafafb;
+  --tp-slate-100: #f1f1f5;
+  --tp-slate-200: #e2e2ea;
+  --tp-slate-300: #d0d5dd;
+  --tp-slate-400: #a2a2a8;
+  --tp-slate-500: #717179;
+  --tp-slate-600: #545460;
+  --tp-slate-700: #454551;
+  --tp-slate-800: #2c2c35;
+  --tp-slate-900: #171725;
+
+  /* Status */
+  --tp-success-50: #ecfdf5;
+  --tp-success-500: #10b981;
+  --tp-success-600: #059669;
+  --tp-success-700: #047857;
+  --tp-warning-50: #fffbeb;
+  --tp-warning-500: #f59e0b;
+  --tp-warning-600: #d97706;
+  --tp-error-50: #fff1f2;
+  --tp-error-500: #e11d48;
+  --tp-error-600: #c8102e;
+
+  /* Surfaces */
+  --tp-bg: #f1f1f5;
+  --tp-card: #ffffff;
+
+  /* Typography — Inter across the whole analytics module (chrome + canvas),
+   * imported in ui/theme.css. Keeps the product visually consistent. */
+  --tp-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --tp-font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Elevation scale (soft, neutral shadows tuned for the slate surfaces) */
+  --tp-shadow-xs: 0 1px 2px rgba(23, 23, 37, 0.04);
+  --tp-shadow-sm: 0 1px 3px rgba(23, 23, 37, 0.06), 0 1px 2px rgba(23, 23, 37, 0.04);
+  --tp-shadow-md: 0 6px 20px rgba(23, 23, 37, 0.08), 0 2px 6px rgba(23, 23, 37, 0.04);
+  --tp-shadow-lg: 0 16px 40px rgba(23, 23, 37, 0.14);
+
+  /* Chart palette (brand-derived) */
+  --tp-chart-1: #4b4ad5;
+  --tp-chart-2: #a461d8;
+  --tp-chart-3: #d565ea;
+  --tp-chart-4: #36c5a8;
+  --tp-chart-5: #f5b832;
+  --tp-chart-6: #2bb3e0;
+  --tp-chart-7: #ef5da8;
+  --tp-chart-8: #673aac;
+}

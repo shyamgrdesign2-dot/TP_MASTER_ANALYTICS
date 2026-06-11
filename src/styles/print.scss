@@ -1,0 +1,129 @@
+@import 'variables.scss';
+
+body .printCommon {
+    div, div span, label {
+        color: $welcomecolor !important;
+    }
+}
+
+table { width: 100%; }
+.watermark-inprint {
+    position: absolute;
+}
+
+@media print {
+   .watermark-inprint {
+    position: fixed;
+   }
+   thead {display: table-header-group;} 
+   tfoot {display: table-footer-group;}
+   button {display: none;}
+   
+   body {margin: 0;}
+
+   .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .page-header, .page-header-space {
+    height: 100px;
+    margin: 15px 0;
+  }
+  .page-footer, .page-footer-space {
+    height: 100px;
+  }
+  .page-header {
+    position: fixed;
+    top: 0mm;
+    width: 95%;
+  }
+}
+
+.text-blacks {
+    color: #000 !important;
+}
+
+.print-custom-header {
+    &.border-top {
+        border-top: 2px solid $welcomecolor !important;
+    }
+    &.border-bottom {
+        border-bottom: 2px solid $welcomecolor !important;
+    }
+}
+.border-dark {
+    border-color: $welcomecolor;
+}
+
+.patient-details-print {
+    padding:10px 0;
+    .details-name {
+        span {
+            font-size: 10px;
+            line-height:16px;
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+table tr th {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+table {
+    &.print_table {
+        border: 1px solid $welcomecolor;
+        border-collapse: collapse;
+        tr {
+            th {
+                font-weight: 500 !important;
+            }
+            th, td {
+                border: 1px solid $welcomecolor;
+                border-collapse: collapse;
+                color: $welcomecolor !important;
+                line-height: normal;
+                font-weight: 400;
+                &:first-child {
+                    font-weight: 500;
+                }
+            }
+        }
+
+    }
+    
+}
+.disable-preview {
+    position: relative;
+    color: #a1a1a1;
+    &:after {
+        position: absolute;
+        content: "";
+        left: 11px;
+        top: -2px;
+        height: 25px;
+        width: 1.5px;
+        background-color: #a1a1a1;
+        transform: rotate(25deg);
+
+    }
+}
+.patient-details-print{
+    .details-name {
+        line-height: 18px;
+        font-weight: 400;
+    }
+
+}
+.print-middle{
+    padding:9px 0 0 0;
+}
+.lh-18{line-height:18px;}
+
+
+
+

@@ -1,0 +1,368 @@
+// Header buttons styling (in Welcome1 component)
+.abha-records__refresh-btn {
+  background: #ffffff !important;
+  border: 1px solid #e2e2ea !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  color: #5a6774 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  &:hover {
+    background: #f6f6f8 !important;
+    border-color: #e2e2ea !important;
+    color: #5a6774 !important;
+  }
+
+  .anticon,
+  i {
+    font-size: 16px;
+  }
+}
+
+.abha-records__request-btn {
+  background: #564cff !important;
+  border: 1px solid #564cff !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  &:hover {
+    background: #4b4ad5 !important;
+    border-color: #4b4ad5 !important;
+    color: #ffffff !important;
+  }
+
+  .anticon,
+  i {
+    font-size: 16px;
+  }
+}
+
+.abha-records {
+  .ant-card.abha-records__card {
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__row-number {
+    margin-left: 12px;
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__filters-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+  &__search {
+    flex: 1;
+    max-width: 320px;
+    height: 40px;
+
+    .ant-input {
+      border-radius: 8px;
+      height: 30px;
+      border: 1px solid #e2e2ea;
+      padding-left: 36px;
+      font-size: 14px;
+      font-weight: 400;
+
+      &:hover {
+        border-color: #564cff;
+      }
+
+      &:focus {
+        border-color: #564cff;
+        box-shadow: 0 0 0 2px rgba(86, 76, 255, 0.1);
+      }
+
+      &::placeholder {
+        color: #a1a7b2;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .ant-input-prefix {
+      left: 12px;
+      color: #a1a7b2;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__status-filter {
+    min-width: 170px;
+    padding-top: 4px;
+
+    .ant-select-selector {
+      border-radius: 8px;
+      height: 42px !important;
+      border: 1px solid #e2e2ea;
+      padding: 0 12px;
+
+      &:hover {
+        border-color: #564cff;
+      }
+    }
+
+    .ant-select-focused .ant-select-selector {
+      border-color: #564cff;
+      box-shadow: 0 0 0 2px rgba(86, 76, 255, 0.1);
+    }
+
+    .ant-select-selection-item {
+      line-height: 36px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #2d3748;
+    }
+
+    .ant-select-arrow {
+      padding-bottom: 4px;
+      color: #a1a7b2;
+    }
+  }
+
+  &__table-wrapper {
+    flex: 1;
+    margin-top: 0;
+
+    .ant-table-thead > tr > th {
+      background: #f6f6f8;
+      font-weight: 600;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #2d3748;
+      line-height: 1.5;
+    }
+
+    // Center align status column header
+    .ant-table-thead > tr > th:nth-child(7) {
+      text-align: center;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #2d3748;
+      vertical-align: middle;
+      line-height: 1.5;
+    }
+
+    // Center align status column
+    .ant-table-tbody > tr > td:nth-child(7) {
+      text-align: center;
+    }
+  }
+
+  &__table {
+    .ant-table {
+      table-layout: fixed;
+    }
+  }
+
+  &__empty-state {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__empty-message {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  &__column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__sort-actions {
+    display: flex;
+    flex-direction: column;
+
+    .sort-icon {
+      border: none;
+      background: transparent;
+      font-size: 10px;
+      line-height: 1;
+      padding: 0;
+      cursor: pointer;
+      color: #a1a7b2;
+
+      &.active {
+        color: #4b4ad5;
+      }
+    }
+  }
+
+  &__date-cell {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+
+    small {
+      color: #8a8f9a;
+    }
+  }
+
+  &__date-range-cell {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 13px;
+    min-width: 80px;
+
+    div {
+      line-height: 1.6;
+    }
+
+    strong {
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      min-width: 120px;
+    }
+  }
+
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    min-width: fit-content;
+    white-space: nowrap;
+    line-height: 1.5;
+
+    &--pending {
+      background-color: #fff6da;
+      color: #a56d00;
+    }
+
+    &--granted {
+      background-color: #dff7ec;
+      color: #0d5f45;
+    }
+
+    &--denied {
+      background-color: #fde8e8;
+      color: #b42318;
+    }
+
+    &--expired {
+      background-color: #f2f3f8;
+      color: #5a6774;
+    }
+  }
+
+  &__shared {
+    display: block;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  &__action-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__view-btn {
+    border-radius: 8px;
+    border: 1px solid #564cff;
+    color: #564cff;
+    height: 36px;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &:hover:not(:disabled) {
+      border-color: #564cff;
+      color: #564cff;
+      background: rgba(86, 76, 255, 0.05);
+    }
+
+    &:disabled {
+      border-color: #d9d9d9;
+      color: #a1a7b2;
+      background: transparent;
+    }
+  }
+
+  &__more-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    i {
+      font-size: 18px;
+      color: #5a6774;
+    }
+  }
+
+  &__abha-pill {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 4px;
+    background: rgba(86, 76, 255, 0.12);
+    color: #4b4ad5;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    height: 38px;
+
+    img {
+      width: 26px;
+      height: 22px;
+      object-fit: contain;
+    }
+  }
+}
+

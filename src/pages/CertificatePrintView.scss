@@ -1,0 +1,89 @@
+// Mobile-specific styles for CertificatePrintView
+@media (max-width: 768px) {
+  .certificate-print-view-mobile {
+    background: #FAF8FD;
+    min-height: calc(100vh - 60px);
+    padding: 16px;
+
+    // Actions section (sidebar on desktop, top section on mobile)
+    .certificate-actions-section {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+
+      .certificate-actions-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1f2933;
+        margin: 0 0 16px 0;
+      }
+
+      // Match prescription print view: same btn-input outline style (from buttons.scss)
+      .certificate-cta-btn {
+        border-radius: 10px;
+        margin-bottom: 12px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // PDF Preview section
+    .certificate-preview-section {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      overflow: hidden;
+
+      .certificate-preview-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1f2933;
+        margin: 0 0 16px 0;
+      }
+
+      .certificate-preview-container {
+        border-radius: 8px;
+        overflow: auto;
+        background: #f9fafb;
+        min-height: 400px;
+        max-height: calc(100vh - 300px);
+        
+        .certificate-pdf-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 16px;
+          gap: 12px;
+
+          // React-PDF styles
+          :global(.react-pdf__Document) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+          }
+
+          :global(.react-pdf__Page) {
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0;
+
+            canvas {
+              max-width: 100%;
+              height: auto;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

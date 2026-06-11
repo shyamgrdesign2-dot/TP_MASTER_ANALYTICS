@@ -1,0 +1,40 @@
+.bs-container {
+  padding: 16px;
+}
+.bs-icon {
+  font-size: 32px;
+  text-align: center;
+}
+
+.bs-title {
+  margin-bottom: 33px;
+}
+.bs-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ed8a001a;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+.bs-desc {
+  margin: 0 0 0 20px;
+  color: #454551;
+}
+
+.bs-cta {
+  display: block;
+  margin: 0 auto 12px;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}

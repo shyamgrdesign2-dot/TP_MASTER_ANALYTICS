@@ -1,0 +1,4 @@
+1. Font popins generated and applied.
+2. Fonts icons generated and applied now all icons will be font based.
+3. React bootstrap
+4. AntD

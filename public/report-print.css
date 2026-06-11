@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  /* header handles its own padding; body content below header uses 14px sides */
+}
+
+/* ─── Print Resets ───────────────────────────────────────────────────────────── */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+    /* Prevents browser from printing headers and footers (URL, Data, Page Numbers) */
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-padding-wrapper {
+    padding: 10mm 1cm 3cm 2cm;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .page-top-margin {
+    height: 10mm;
+  }
+
+  .page-bottom-margin {
+    height: 10mm;
+  }
+}
+
+
+/* Logo (left) + "HEALTH CHECK-UP SUMMARY" title (right), separated by 57px gap  */
+.report-doc-header {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e2ea;
+  margin-bottom: 0;
+}
+
+.report-doc-header-logo {
+  width: 89px;
+  height: 57.24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.report-doc-header-title {
+  flex: 1;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 21.382px;
+  line-height: 37.418px;
+  letter-spacing: 0.1782px;
+  color: #454551;
+  /* editable inside the Smart Editor */
+  outline: none;
+}
+
+/* Body content below the header gets 14px side padding + 24px bottom */
+.report-doc-header+table,
+.report-doc-header+h2,
+.report-doc-header+div,
+.report-doc-header+p {
+  margin-left: 0;
+}
+
+/* Wrap all post-header content in 14px side padding via body or explicit padding */
+body>*:not(.report-doc-header) {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+p {
+  margin: 0 0 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+}
+
+/* ─── Patient Info Table ─────────────────────────────────────────────────────── */
+.report-patient-table,
+table.report-patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  background: transparent;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.report-patient-table tr:first-child td,
+.report-patient-table tr:last-child td {
+  padding: 0;
+  border: none;
+  vertical-align: top;
+}
+
+.report-patient-table tr:first-child td p.report-divider,
+.report-patient-table .report-divider {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  border: none;
+  border-top: 1px solid #f1f1f5;
+}
+
+.report-patient-table tr:last-child td p.report-divider {
+  border-top: none;
+  border-bottom: 1px solid #f1f1f5;
+}
+
+.report-patient-table tr:nth-child(2) td {
+  padding: 12px 14px 12px 14px;
+  border: none;
+  vertical-align: top;
+}
+
+.report-patient-table tr:nth-child(2) td.report-patient-left,
+.report-patient-table tr:nth-child(2) td:first-child {
+  width: 273px;
+}
+
+.report-patient-table tr:nth-child(2) td.report-patient-right,
+.report-patient-table tr:nth-child(2) td:last-child {
+  width: 204px;
+}
+
+.report-patient-table td p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #171725;
+  margin: 0 0 4px;
+}
+
+.report-patient-table td p:last-child {
+  margin-bottom: 0;
+}
+
+.report-patient-table td p strong {
+  font-weight: 600;
+}
+
+/* ─── Section Titles (h2) ───────────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+.report-section-title {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: #171725;
+  background: #f1f1f5;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 32px 0 10px;
+  overflow: hidden;
+}
+
+h2:first-of-type,
+.report-section-title:first-child {
+  margin-top: 0;
+}
+
+h2::before,
+.report-section-title::before {
+  content: '';
+  position: absolute;
+  width: 734.617px;
+  height: 715.67px;
+  left: calc(50% - 438.76px);
+  top: -694.67px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ─── Free-text Section Boxes (Chief Complaints, Impression, Advice, General Recommendations) ── */
+/*
+ * Using div.report-section-box so Enter key creates new <p> children INSIDE the box.
+ * Bare <p> elements get split by Enter key, pushing the cursor outside the styled border.
+ */
+table.report-section-box {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #f1f1f5;
+  border-radius: 0;
+}
+
+table.report-section-box td {
+  height: 52px !important;
+  overflow: visible;
+  padding: 6px 12px;
+  border: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+table.report-section-box td p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+  margin: 0;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+
+/* When the whole box (including p) is focused, hide placeholder on the focused p */
+table.report-section-box:focus-within p:not(:only-child):empty::before {
+  content: none;
+}
+
+/* General Recommendations: taller default empty-box height */
+table.report-section-box.report-general-rec td {
+  min-height: 154px;
+}
+
+/* ─── Data Tables ────────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+  margin: 0;
+}
+
+.smart-editor-editable table:not(.report-patient-table):not(.report-section-box) td,
+.smart-editor-editable table:not(.report-patient-table):not(.report-section-box) th {
+  height: 32px !important;
+  min-height: 32px !important;
+  vertical-align: top;
+}
+
+.report-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #f1f1f5;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 16px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+}
+
+/* h2+.report-data-table,
+.report-section-title+.report-data-table {
+  margin-top: 0;
+} */
+
+/* Table header */
+.report-data-table thead tr th {
+  background: #fafafb;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+  text-align: left;
+  vertical-align: middle;
+  padding: 6px 6.681px;
+  border: 0.607px solid #f1f1f5;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.report-data-table thead tr th p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+}
+
+/* Table body cells — min-height only so cells expand with content */
+.report-data-table tbody tr td {
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 6.681px;
+  border: 0.607px solid #f1f1f5;
+  min-height: 40px;
+  height: auto;
+  overflow: visible;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.report-data-table tbody tr td p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+}
+
+/* Column widths: 2-column tables (NAME | NOTE/NOTES) */
+.report-data-table:not(.report-consultations):not(.report-general-exam-grid) thead tr th:first-child,
+.report-data-table:not(.report-consultations):not(.report-general-exam-grid) tbody tr td:first-child {
+  width: 165px;
+  min-width: 165px;
+  max-width: 165px;
+  font-weight: 500;
+}
+
+/* Column widths: Consultations table (2 columns) */
+.report-consultations thead tr th:nth-child(1),
+.report-consultations tbody tr td:nth-child(1) {
+  width: 35%;
+  min-width: 35%;
+  font-weight: 500;
+  white-space: normal;
+}
+
+.report-consultations thead tr th:nth-child(2),
+.report-consultations tbody tr td:nth-child(2) {
+  width: 65%;
+  min-width: 65%;
+  white-space: normal;
+}
+
+.report-consultations tbody tr td {
+  min-height: 52px;
+  height: auto;
+  overflow: visible;
+}
+
+.report-data-table+h2,
+.report-data-table+.report-section-title {
+  margin-top: 12px;
+}
+
+.report-section-box+h2,
+.report-section-box+.report-section-title {
+  margin-top: 0;
+}
+
+/* ── General Examination Horizontal Grid ── */
+table.report-general-exam-grid {
+  table-layout: auto !important;
+  /* Let column widths size based on content */
+  margin-bottom: 0;
+}
+
+table.report-general-exam-grid.bottom-row-grid {
+  margin-top: 12px !important;
+  margin-bottom: 24px !important;
+}
+
+/* We don't use thead for the grid, but we need th styled firmly */
+table.report-general-exam-grid tbody tr th {
+  background: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 8px;
+  border: 0.607px solid #f1f1f5;
+  /* Maintain visual unity */
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table.report-general-exam-grid tbody tr td {
+  background: transparent;
+  padding: 6px 8px;
+  border: 0.607px solid #f1f1f5;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-align: left;
+  vertical-align: middle;
+  min-height: 28px;
+  /* Tighter than the generic 40px */
+}
+
+/* ─── Lists inside tables / boxes ───────────────────────────────────────────── */
+ul,
+ol {
+  margin: 0;
+  padding-left: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0607px;
+  color: #454551;
+}
+
+li {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+  display: inline;
+}
+
+/* ─── Print ──────────────────────────────────────────────────────────────────── */
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  h2,
+  .report-section-title {
+    break-after: avoid;
+  }
+
+  /* Page break at section start (wrapper, not heading alone — keeps heading with following block/table). */
+  .print-section-group.print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  /* Legacy: heading-only class still forces break if present without wrapper */
+  .print-page-break:not(.print-section-group) {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .print-section-group {
+    /* Prefer keeping heading + body together; allow break inside if section is taller than one sheet */
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /*
+   * Break AFTER the first-page table so the repeat table's <thead> renders correctly on page 2.
+   * Using break-before on the repeat table itself triggers a Chrome bug where <thead> is skipped
+   * on the table's first page but repeats correctly from page 3 onward.
+   */
+  .print-first-page-table.has-rest-pages {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+}

@@ -1,0 +1,409 @@
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--tp-slate-50, #f8fafc);
+  padding: 0;
+}
+
+/* ── Header ── */
+.drawerHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 12px 16px;
+}
+
+.headerBackBtn {
+  display: inline-flex;
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--tp-slate-500, #667085);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+
+  &:hover {
+    background: var(--tp-slate-100, #f1f5f9);
+    color: var(--tp-slate-900, #0f172a);
+  }
+}
+
+.headerTitle {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tp-slate-900, #0f172a);
+}
+
+.divider {
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--tp-slate-100, #f1f5f9);
+}
+
+/* ── Patient row ── */
+.patientRow {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 10px 16px;
+}
+
+.patientAvatar {
+  display: inline-flex;
+  height: 32px;
+  width: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--tp-violet-50, #f5f3ff);
+  color: var(--tp-violet-500, #8b5cf6);
+}
+
+.patientInfo {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.patientName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-slate-800, #1e293b);
+}
+
+.patientMeta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--tp-slate-500, #667085);
+}
+
+/* ── Slide track ── */
+.slideTrack {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: var(--tp-slate-50, #f8fafc);
+}
+
+.slidePanes {
+  display: flex;
+  height: 100%;
+  width: 200%;
+}
+
+/* ── List pane ── */
+.listPane {
+  height: 100%;
+  width: 50%;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sessionRow {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  background: #fff;
+  padding: 12px;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--tp-violet-200, #ddd6fe);
+    box-shadow: 0 6px 18px -10px rgba(103, 58, 172, 0.25);
+  }
+}
+
+.sessionIcon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.sessionIconConversation {
+  background: var(--tp-violet-50, #f5f3ff);
+  color: var(--tp-violet-600, #7c3aed);
+}
+
+.sessionIconDictation {
+  background: var(--tp-blue-50, #eff6ff);
+  color: var(--tp-blue-600, #2563eb);
+}
+
+.sessionMeta {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1px 0;
+}
+
+.sessionTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sessionDate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-slate-900, #0f172a);
+}
+
+.sessionTime {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--tp-slate-500, #667085);
+}
+
+.sessionModeBadge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.badgeConversation {
+  background: var(--tp-violet-50, #f5f3ff);
+  color: var(--tp-violet-700, #6d28d9);
+}
+
+.badgeDictation {
+  background: var(--tp-blue-50, #eff6ff);
+  color: var(--tp-blue-700, #1d4ed8);
+}
+
+.sessionSummary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--tp-slate-600, #475569);
+}
+
+.sessionChevron {
+  margin-top: 4px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  color: var(--tp-slate-400, #94a3b8);
+  transition: transform 150ms ease, color 150ms ease;
+
+  .sessionRow:hover & {
+    transform: translateX(2px);
+    color: var(--tp-violet-500, #8b5cf6);
+  }
+}
+
+/* ── Detail pane ── */
+.detailPane {
+  height: 100%;
+  width: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.detailInner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabStrip {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid var(--tp-slate-300, #cbd5e1);
+  padding: 8px 16px 0;
+}
+
+.tabBtn {
+  position: relative;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.tabBtnActive {
+  color: var(--tp-blue-700, #1d4ed8);
+}
+
+.tabBtnInactive {
+  color: var(--tp-slate-500, #667085);
+
+  &:hover {
+    color: var(--tp-slate-800, #1e293b);
+  }
+}
+
+.tabUnderline {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--tp-blue-600, #2563eb);
+}
+
+.tabContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+}
+
+/* ── Transcript ── */
+.transcriptList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.transcriptLine {
+  max-width: 88%;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.transcriptDoctor {
+  align-self: flex-start;
+  background: var(--tp-slate-50, #f8fafc);
+  color: var(--tp-slate-800, #1e293b);
+}
+
+.transcriptPatient {
+  align-self: flex-end;
+  background: var(--tp-blue-50, #eff6ff);
+  color: var(--tp-blue-900, #1e3a5f);
+}
+
+.transcriptSpeaker {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  opacity: 0.7;
+}
+
+/* ── TPMR ── */
+.tpmrList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tpmrCard {
+  border-radius: 12px;
+  border: 1px solid var(--tp-slate-100, #f1f5f9);
+  background: #fff;
+  padding: 12px;
+}
+
+.tpmrCardTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  color: var(--tp-slate-500, #667085);
+}
+
+.tpmrBullets {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 16px;
+  font-size: 14px;
+  color: var(--tp-slate-700, #334155);
+
+  & > li {
+    list-style: disc;
+  }
+}
+
+/* ── Sections ── */
+.sectionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemName {
+  font-weight: 500;
+}
+
+.itemDetail {
+  margin-left: 4px;
+  color: var(--tp-slate-500, #667085);
+}
+
+.emptyState {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--tp-slate-400, #94a3b8);
+}

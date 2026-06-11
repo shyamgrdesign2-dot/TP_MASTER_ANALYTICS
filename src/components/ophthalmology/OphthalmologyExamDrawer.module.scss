@@ -1,0 +1,108 @@
+.drawer :global(.ant-drawer-content) {
+  background: #f6f6fb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerHeader {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ececf3;
+}
+
+.backButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.backButton img {
+  width: 18px;
+  height: 18px;
+}
+
+.drawerTitle {
+  flex: 1;
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2e2e3a;
+}
+
+.drawerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prevButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: #5a5a6c;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  span {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.prevButton i {
+  font-size: 16px;
+}
+
+.saveButton {
+  background: #4b4ae5;
+  border-color: #4b4ae5;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0 22px;
+  height: 38px;
+  span {
+    color: #ffffff !important;
+  }
+}
+
+.moreButton {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.moreButton img {
+  width: 18px;
+  height: 18px;
+}
+
+.drawerBody {
+  padding: 16px 24px 32px;
+  overflow-y: auto;
+  flex: 1;
+}

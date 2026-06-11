@@ -1,0 +1,255 @@
+.image-wrapper {
+  position: relative;
+  height: 220px;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border: 1px solid #e2e2ea;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 6px;
+  padding-bottom: 20px;
+  cursor: pointer;
+
+  .doc-image {
+    width: 62px;
+    height: 62px;
+  }
+
+  .file-name {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .notes-style {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+.document-details {
+  position: absolute;
+  min-height: 60px;
+  bottom: 0px;
+  width: 100%;
+  background-color: #e2e2ea;
+  border: 1px solid #e2e2ea;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding: 8px 0 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn-more {
+    color: #171725;
+  }
+
+  .document-more-icon {
+    display: block;
+  }
+
+  .document-details-content {
+    min-width: 0;
+  }
+
+  .category {
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.notes-txt {
+  font-weight: 600;
+  font-size: 16px;
+  color: #171725;
+  padding-bottom: 6px;
+}
+
+.medical-records-tooltip {
+  &.ant-tooltip .ant-tooltip-inner {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  &.ant-tooltip .ant-tooltip-arrow {
+    --antd-arrow-background-color: #ffffff;
+  }
+}
+
+// Delete Record Bottom Sheet Styles (Mobile only)
+.ant-drawer-content-wrapper:has(.delete-record-bottom-sheet),
+.ant-drawer-content-wrapper .delete-record-bottom-sheet {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.ant-drawer-content.delete-record-bottom-sheet {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.delete-record-bottom-sheet {
+  .ant-drawer-body {
+    padding: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .delete-record-sheet-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    .delete-record-sheet-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+
+      .delete-record-sheet-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+        color: #1a1c1e;
+        margin: 0;
+        flex: 1;
+      }
+
+      .delete-record-sheet-close-btn {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+
+        .delete-record-close-icon {
+          width: 24px;
+          height: 24px;
+          display: block;
+          object-fit: contain;
+        }
+
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .delete-record-sheet-body {
+      width: 100%;
+
+      .alert-warning {
+        background: #FFF3CD;
+        border: 1px solid #FFE69C;
+        border-radius: 8px;
+        padding: 12px;
+
+        .d-flex {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+          }
+
+          span {
+            font-size: 14px;
+            color: #856404;
+            font-family: 'Poppins', sans-serif;
+          }
+        }
+      }
+    }
+
+    .delete-record-sheet-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      width: 100%;
+
+      .delete-record-actions-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .delete-record-sheet-btn {
+        height: 56px;
+        border-radius: 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        box-sizing: border-box;
+        border: 1px solid;
+        flex: 1;
+
+        &.delete-record-btn-yes {
+          border-color: #FC5A5A;
+          background: #FFFFFF;
+          color: #FC5A5A;
+
+          &:active {
+            background: #FFF5F5;
+            opacity: 0.8;
+          }
+        }
+
+        &.delete-record-btn-no {
+          border-color: #4B4AD5;
+          background: #4B4AD5;
+          color: #ffffff;
+
+          &:active {
+            background: #4B4AD5;
+          }
+        }
+
+        &.delete-record-btn-primary {
+          border-color: #603795;
+          background: #603795;
+          color: #ffffff;
+          width: 100%;
+
+          &:active {
+            background: #4d2d6b;
+          }
+        }
+      }
+    }
+  }
+}

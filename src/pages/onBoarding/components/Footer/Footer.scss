@@ -1,0 +1,177 @@
+.footer {
+  background-color: #3D2777 !important; // Purple background color
+  color: #fff !important;
+  padding: 3rem 6rem;
+  // width: 100vw;
+
+  .footer-container {
+    // width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    display: flex;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .company-info {
+    width: 35%;
+
+    p {
+      color: #fff !important;
+    }
+  }
+
+  .company-description {
+    width: 85%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-section {
+    width: 28%;
+    margin-right: 3rem;
+
+    h3 {
+      color: #ffffff !important;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      color: #ffffff !important;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-section-contact {
+    width: 20%;
+
+    h5 {
+      color: #ffffff !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+
+      a {
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 14px;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .office-locations {
+    .office {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #fff !important;
+      }
+    }
+  }
+
+  .contact-info {
+    margin-bottom: 2rem;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: white !important;
+
+      .contact-icon {
+        font-size: 1.2rem;
+        color: white !important;
+      }
+    }
+
+    p {
+      color: white !important;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem !important;
+    }
+  }
+
+  .social-links {
+    h4 {
+      margin-bottom: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #4d4d4d !important;
+        font-size: 20px;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+
+    .footer-container {
+      flex-direction: column !important;
+      gap: 1rem !important;
+
+
+      .company-info {
+        width: 100%;
+      }
+
+      .company-description {
+        width: 100%;
+      }
+
+      .footer-section {
+        width: 100%;
+      }
+
+      .footer-section-contact {
+        width: 100%;
+      }
+    }
+
+    .footer-section {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@import '../../../styles/variables.scss';
+
+.uploaded-files-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+  margin-bottom: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('#{$tp-assets-base}/images/snaprx-bg.webp');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.03;
+    z-index: -1;
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+
+    .loading-text {
+      font-size: 16px;
+      color: #6B7280;
+      font-weight: 500;
+    }
+  }
+
+  .files-grid {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .file-preview-card {
+    border-radius: 1.25rem;
+    border: 2px solid #BA7DE9;
+    background: #FFF;
+    box-shadow: 0px 5px 10px 0px rgba(170, 170, 170, 0.15);
+    overflow: hidden;
+    transition: all 0.2s ease;
+    width: 700px;
+
+    &:hover {
+      border-color: #7C3AED;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
+    }
+
+    .file-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: #F8F9FA;
+      border-bottom: 1px solid #E5E7EB;
+
+      .page-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .page-icon {
+          display: flex;
+          align-items: center;
+          color: #6B7280;
+        }
+
+        .page-text {
+          font-size: 14px;
+          font-weight: 500;
+          color: #374151;
+        }
+      }
+
+      .file-actions {
+        display: flex;
+        gap: 4px;
+
+        .edit-btn {
+          color: #A855F7;
+          cursor: pointer;
+        }
+
+        .delete-btn {
+          color: #EF4444;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .file-content {
+      .prescription-preview {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F9FAFB;
+        overflow: hidden;
+
+        .prescription-image {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-error {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          min-height: 300px;
+
+          .error-content {
+            text-align: center;
+            color: #6B7280;
+
+            .error-icon {
+              font-size: 48px;
+              margin-bottom: 8px;
+            }
+
+            p {
+              margin: 0;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .upload-more-section {
+    margin-top: 32px;
+    text-align: center;
+
+    .upload-more-btn {
+      background: #A855F7;
+      border-color: #A855F7;
+      border-radius: 8px;
+      height: 48px;
+      padding: 0 32px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(168, 85, 247, 0.2);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #7C3AED;
+        border-color: #7C3AED;
+        box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+        transform: translateY(-1px);
+      }
+
+      &:focus {
+        background: #7C3AED;
+        border-color: #7C3AED;
+        box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .uploaded-files-preview {
+    padding: 20px 16px;
+
+    .files-grid {
+      max-width: 100%;
+      gap: 16px;
+    }
+
+    .file-preview-card {
+      max-width: 100%;
+      
+      .file-content {
+        // padding: 12px;
+
+        .prescription-preview {
+          min-height: 300px;
+          // padding: 8px;
+
+          .prescription-image {
+            // max-height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .uploaded-files-preview {
+    padding: 16px 12px;
+
+    .files-grid {
+      max-width: 100%;
+    }
+
+    .file-preview-card {
+      max-width: 100%;
+      
+      .file-header {
+        padding: 8px 12px;
+
+        .page-text {
+          font-size: 13px;
+        }
+      }
+
+      .file-content {
+        // padding: 8px;
+
+        .prescription-preview {
+          min-height: 250px;
+          // padding: 6px;
+
+          .prescription-image {
+            // max-height: 300px;
+          }
+        }
+      }
+    }
+  }
+} 

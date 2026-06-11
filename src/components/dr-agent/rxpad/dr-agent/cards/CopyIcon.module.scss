@@ -1,0 +1,23 @@
+.copyBtn {
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: color 0.15s;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stateDefault {
+  color: var(--tp-blue-500, #4b4ad5);
+}
+
+.stateHovered {
+  color: var(--tp-blue-600, #3938c2);
+}
+
+.stateCopied {
+  color: var(--tp-success-600, #16a34a);
+}

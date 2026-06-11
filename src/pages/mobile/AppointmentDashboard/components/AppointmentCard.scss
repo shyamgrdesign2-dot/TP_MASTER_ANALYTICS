@@ -1,0 +1,210 @@
+.appointment-card {
+  background: white;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+
+    .patient-info {
+      display: flex;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+
+      .patient-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        // background: linear-gradient(135deg, #E8D5F5 0%, #D5B8E8 100%);
+        background: #F6EFFB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        .avatar-initials {
+          font-size: 18px;
+          font-weight: 600;
+          color: #7C3FA8 !important;
+          font-family: 'Poppins', sans-serif;
+        }
+      }
+
+      .patient-details {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        // gap: 10px;
+
+        .patient-name {
+          font-size: 14px;
+          font-weight: 500;
+          color: #454551;
+          line-height: 24px;
+          font-family: 'Poppins', sans-serif;
+          word-break: break-word;
+        }
+
+        .patient-meta {
+          gap: 4px;
+          font-size: 12px;
+          color: #3d4854;
+          line-height: 14px;
+          font-family: 'Poppins', sans-serif;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          span {
+            color: #a2a2a8 !important;
+          }
+        }
+      }
+    }
+
+    .more-options-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+
+      .more-options-icon {
+        width: 20px;
+        height: 20px;
+        display: block;
+        object-fit: contain;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .card-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    opacity: 0.7;
+
+    .chip {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%);
+      border-radius: 240px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 26px;
+
+      .chip-text {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(69, 69, 81, 0.70);
+        font-family: 'Poppins', sans-serif;
+        line-height: 14px;
+      }
+
+      &.time-chip {
+        .chip-text {
+          font-weight: 400;
+        }
+      }
+
+      &.status-chip {
+        .chip-bill-label {
+          font-size: 12px;
+          font-weight: 400;
+          font-family: 'Poppins', sans-serif;
+          line-height: 14px;
+        }
+
+        &.unbilled {
+          .chip-bill-label {
+            color: #ED8A00 !important;
+            font-weight: 500;
+          }
+          &:not(.has-bill-label) .chip-text {
+            color: #ED8A00 !important;
+            font-weight: 500;
+          }
+        }
+
+        &.billed {
+          .chip-bill-label {
+            color: #3D8C40 !important;
+            font-weight: 500;
+          }
+          &:not(.has-bill-label) .chip-text {
+            color: #3D8C40;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .card-divider {
+    height: 1px;
+    background: #EAECF0;
+    margin: 0;
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 10px;
+
+    button {
+      flex: 1;
+      height: 42px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.2s ease;
+      letter-spacing: 0.25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &.btn-outline {
+        border: 1.5px solid #4B4AD5;
+        background: transparent;
+        color: #4B4AD5;
+
+        &:active {
+          background: rgba(75, 74, 213, 0.08);
+          transform: scale(0.98);
+        }
+      }
+
+      &.btn-primary {
+        background: #4B4AD5;
+        color: white;
+
+        &:active {
+          background: #3d3cc4;
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,138 @@
+.sheetContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sheetFixed {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.sheetAbsolute {
+  position: absolute;
+  inset: 0;
+  z-index: 55;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  animation: fbFadeIn 150ms ease-out;
+}
+
+@keyframes fbFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sheetPanel {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  max-height: 55vh;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background-color: #f8f9fa;
+  animation: fbSlideUp 200ms ease-out;
+}
+
+@keyframes fbSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  background: #f8f9fa;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 10px;
+}
+
+.headerTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-slate-800, #1e293b);
+}
+
+.closeBtn {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--tp-slate-700, #334155);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background: var(--tp-slate-100, #f1f5f9);
+  }
+}
+
+.headerDivider {
+  border-top: 1px solid var(--tp-slate-300, #cbd5e1);
+}
+
+.scrollBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding: 14px 16px 20px;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid var(--tp-slate-200, #e2e8f0);
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--tp-slate-800, #1e293b);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+
+  &::placeholder {
+    color: var(--tp-slate-300, #d0d5dd);
+  }
+
+  &:focus {
+    border-color: var(--tp-blue-400, #6c6bde);
+    box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.08);
+  }
+}
+
+.submitButton {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+  background: var(--tp-blue-500, #4b4ad5);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

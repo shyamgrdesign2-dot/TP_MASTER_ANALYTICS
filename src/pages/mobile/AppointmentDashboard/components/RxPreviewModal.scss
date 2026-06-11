@@ -1,0 +1,121 @@
+.rx-preview-modal {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden !important;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.rx-preview-modal-content {
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rx-preview-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #E2E2EA;
+  flex-shrink: 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.rx-preview-modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1f2933;
+  margin: 0;
+  flex: 1;
+}
+
+.rx-preview-modal-close {
+  background: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.rx-preview-close-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.rx-preview-modal-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.rx-preview-content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px;
+  padding: 12px;
+}
+
+.rx-preview-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.rx-preview-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+  
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+}
+

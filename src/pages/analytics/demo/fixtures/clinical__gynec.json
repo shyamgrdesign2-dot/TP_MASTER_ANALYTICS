@@ -1,0 +1,241 @@
+{
+  "kpis": [
+    {
+      "key": "patientsWithGynec",
+      "label": "Patients with gynec history",
+      "value": 64,
+      "description": "Female patients with a menstrual history record on file."
+    },
+    {
+      "key": "avgMenarche",
+      "label": "Avg age at menarche",
+      "value": 13,
+      "prefix": "~",
+      "unit": "yrs",
+      "description": "Approximate: the mean recorded age at first menstruation (outliers under 9 or over 16 are flagged in the register)."
+    },
+    {
+      "key": "avgCycle",
+      "label": "Avg cycle interval",
+      "value": 29,
+      "prefix": "~",
+      "unit": "days",
+      "description": "Approximate: the mean recorded interval between cycles."
+    },
+    {
+      "key": "avgFlowDays",
+      "label": "Avg flow duration",
+      "value": 5,
+      "prefix": "~",
+      "unit": "days",
+      "description": "Approximate: the mean recorded duration of menstrual flow."
+    },
+    {
+      "key": "irregularShare",
+      "label": "Irregular cycles",
+      "value": 28.1,
+      "unit": "%",
+      "description": "Share of recorded cycles marked Irregular: the screening signal for PCOD and thyroid workups."
+    }
+  ],
+  "cycleMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Cycle"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Regular",
+        "count": 38
+      },
+      {
+        "k": "Irregular",
+        "count": 18
+      },
+      {
+        "k": "Not recorded",
+        "count": 8
+      }
+    ]
+  },
+  "flowMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Flow"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Heavy",
+        "count": 9
+      },
+      {
+        "k": "Moderate",
+        "count": 31
+      },
+      {
+        "k": "Scanty",
+        "count": 12
+      },
+      {
+        "k": "Not recorded",
+        "count": 12
+      }
+    ]
+  },
+  "painMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Pain"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "None",
+        "count": 22
+      },
+      {
+        "k": "Mild",
+        "count": 19
+      },
+      {
+        "k": "Moderate",
+        "count": 14
+      },
+      {
+        "k": "Severe",
+        "count": 9
+      }
+    ]
+  },
+  "stageMix": {
+    "columns": [
+      {
+        "key": "k",
+        "label": "Reproductive life stage"
+      },
+      {
+        "key": "count",
+        "label": "Patients"
+      }
+    ],
+    "rows": [
+      {
+        "k": "Menopause",
+        "count": 6
+      },
+      {
+        "k": "Perimenopause",
+        "count": 9
+      },
+      {
+        "k": "Lactational amenorrhea",
+        "count": 4
+      },
+      {
+        "k": "Not recorded",
+        "count": 45
+      }
+    ]
+  },
+  "gynecRegister": {
+    "columns": [
+      {
+        "key": "patient",
+        "label": "Patient"
+      },
+      {
+        "key": "age",
+        "label": "Age"
+      },
+      {
+        "key": "lmp",
+        "label": "LMP"
+      },
+      {
+        "key": "cycle",
+        "label": "Cycle"
+      },
+      {
+        "key": "flow",
+        "label": "Flow"
+      },
+      {
+        "key": "pain",
+        "label": "Pain"
+      },
+      {
+        "key": "stage",
+        "label": "Life stage"
+      }
+    ],
+    "rows": [
+      {
+        "patient": "Demo Patient 381",
+        "age": 31,
+        "lmp": "2026-05-28",
+        "cycle": "Regular",
+        "flow": "Moderate",
+        "pain": "Mild",
+        "stage": ""
+      },
+      {
+        "patient": "Demo Patient 382",
+        "age": 24,
+        "lmp": "2026-06-02",
+        "cycle": "Irregular",
+        "flow": "Heavy",
+        "pain": "Severe",
+        "stage": ""
+      },
+      {
+        "patient": "Demo Patient 383",
+        "age": 47,
+        "lmp": "2026-01-15",
+        "cycle": "Irregular",
+        "flow": "Scanty",
+        "pain": "None",
+        "stage": "Perimenopause"
+      },
+      {
+        "patient": "Demo Patient 384",
+        "age": 52,
+        "lmp": "",
+        "cycle": "",
+        "flow": "",
+        "pain": "",
+        "stage": "Menopause"
+      },
+      {
+        "patient": "Demo Patient 385",
+        "age": 28,
+        "lmp": "2026-05-19",
+        "cycle": "Regular",
+        "flow": "Moderate",
+        "pain": "Moderate",
+        "stage": "Lactational amenorrhea"
+      }
+    ]
+  },
+  "meta": {
+    "live": false,
+    "rowCount": 5,
+    "note": "SAMPLE DATA: this module's source lives in the pm-medicalhistory gynec service, which is not connected to analytics yet. The numbers below are illustrative so the full module is visible and testable; they switch to live data automatically once the bulk feed lands (contract documented in docs/analytics-planning)."
+  }
+}

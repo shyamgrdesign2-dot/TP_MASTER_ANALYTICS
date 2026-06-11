@@ -1,0 +1,212 @@
+.graphHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .graphName {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .percentileBtn {
+    border: none;
+    box-shadow: none;
+    color: #454551;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    .iconStyle {
+      display: inline-block;
+      transform: rotate(270deg);
+    }
+  }
+
+  .percentileBtn:hover {
+    color: #4b4ad5 !important;
+  }
+
+  .percentileBtn:focus {
+    color: #4b4ad5;
+    outline: none;
+  }
+  .enablePercentile {
+    position: absolute;
+    background: #ffffff;
+    width: 270px;
+    min-height: 180px;
+    z-index: 1;
+    padding: 16px;
+    border-radius: 10px;
+    right: 64px;
+
+    .percentileText {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      padding-bottom: 12px;
+    }
+
+    .percentileContainer {
+      border: 1px solid #eaecf0;
+      border-radius: 4px;
+      padding: 8px;
+
+      .dynamicColor {
+        color: var(--dynamic-color) !important;
+      }
+
+      .checkBoxSeparator {
+        border: 1px solid #eaecf0;
+        margin-right: 3px;
+      }
+    }
+
+    .doneBtn {
+      height: 34px !important;
+      width: 100%;
+      padding: 4px 8px 4px 8px;
+      border-radius: 6px;
+      margin-top: 12px;
+
+      .doneText {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.tooltipStyle {
+  background-color: white;
+  padding: 10px;
+  min-height: 130px;
+  min-width: 285px;
+
+  .measurementHeader {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    .rowContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+
+      .updateText {
+        color: #a2a2a8 !important;
+      }
+
+      .measurementText {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+      .iconStyle {
+        color: #4b4ad5;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 5px 0 0 5px;
+      }
+
+      .closeImg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .measurements {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    row-gap: 10px;
+
+    .rowContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .measurement {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+
+        .measurementKey {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .tooltipArrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    bottom: -6px;
+    left: 30%;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+  }
+}
+
+.breakStyle {
+  height: 20px;
+  border: 1px solid #eaecf0;
+  margin-right: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltipContainer {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 1;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.graphStyle {
+  height: 100%;
+}
+
+.graphBody {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.chartStyle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chartStylePrint {
+  width: 310px !important;
+}
+
+.growth-chart-custom-checkbox {
+  padding: 6px 0px 6px 6px;
+
+  &.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: white !important;
+    border-color: #a2a2a8 !important;
+    width: 20px;
+    height: 20px;
+  }
+  .ant-checkbox .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+    &:after {
+      border-color: #454551 !important;
+    }
+  }
+}

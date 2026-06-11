@@ -1,0 +1,38 @@
+.tp-agent-action-btn {
+  height: 36px;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+
+.tp-agent-action-btn--secondary {
+  background: #ffffff;
+  border: 1px solid var(--tp-blue-500, #4b4ad5) !important;
+  color: var(--tp-blue-600, #3a39c0) !important;
+}
+
+.tp-agent-action-btn--secondary:hover:not(:disabled) {
+  background: #eff6ff;
+  border-color: var(--tp-blue-600, #3a39c0) !important;
+}
+
+.tp-agent-action-btn:active {
+  transform: scale(0.99);
+}
+
+.tp-agent-action-btn__icon,
+.tp-agent-action-btn__text {
+  display: inline-flex;
+  align-items: center;
+  color: inherit !important;
+}

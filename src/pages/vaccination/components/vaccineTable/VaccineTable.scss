@@ -1,0 +1,67 @@
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 !important;
+  
+  @media print {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    
+    thead {
+      display: table-header-group;
+    }
+    
+    tbody {
+      display: table-row-group;
+    }
+    
+    tr {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+    
+    td, th {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+  }
+}
+.cell {
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  height: 48px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #fff;
+  padding: 6px 8px !important;
+  flex-wrap: wrap;
+  word-break: break-word;
+
+  .dateCell {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    span {
+      border-radius: 4px;
+      padding: 2px 4px;
+      line-height: 18px;
+    }
+  }
+
+  .overDue {
+    background-color: #fcdada;
+  }
+  .given {
+    background-color: #d1f1e4;
+  }
+}
+.headerCellStyle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  background-color: rgba(241, 241, 245, 0.4) !important;
+}

@@ -1,0 +1,237 @@
+.our-scale {
+  // width: 100vw;
+
+  .our-scale-title {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: "Playfair Display";
+    font-size: 3.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.375rem;
+    background: linear-gradient(90deg, #4443C5 -15.86%, #A41AF0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    .sparkle {
+      font-size: 3rem;
+      width: 3rem;
+      background-color: #fff;
+      margin-left: 1rem;
+      margin-top: 1.5rem;
+      height: 3rem;
+    }
+  }
+
+  .our-scale-container {
+    // width: 100vw;
+    padding: 4rem 0rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .scale-stats-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+        padding: 0 8px;
+      }
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+      padding-right: 1rem;
+      gap: 1rem;
+      transition: transform 0.3s ease;
+      border-radius: 2rem;
+      border: 1px solid #F2E2FF;
+      overflow: hidden;
+      background: linear-gradient(282deg, rgba(233, 204, 255, 0.00) -0.04%, rgba(242, 225, 255, 0.80) 130.11%);
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-icon {
+        font-size: 2rem;
+        opacity: 0.7;
+        position: relative;
+        bottom: -4%;
+      }
+
+      .stat-content {
+        text-align: left;
+
+        .stat-number {
+          color: #64388D;
+          font-family: Poppins;
+          font-size: 1.75rem;
+          font-weight: 700;
+          line-height: 2.07194rem;
+          /* 118.397% */
+        }
+
+        .stat-description {
+          color: #64388D !important;
+          font-family: Poppins !important;
+          font-size: 1.25rem;
+          font-weight: 400 !important;
+          line-height: 2.07194rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .our-scale {
+
+    .our-scale-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0rem;
+    }
+
+    .our-scale-title {
+      font-size: 2rem !important;
+      margin-top: 1rem !important;
+      padding: 1rem 0 0 0 !important;
+
+      .sparkle {
+        font-size: 3rem;
+        width: 2rem;
+        margin-left: 0.8rem;
+        margin-top: 1.6rem;
+        height: 2rem;
+
+      }
+    }
+
+    .lines-left {
+      display: none;
+    }
+
+    .lines-right {
+      display: none;
+    }
+
+    .stat-card {
+      padding-top: 0.5rem !important;
+      padding-right: 0.245rem !important;
+      gap: 1px !important;
+      border-radius: 1rem !important;
+
+      img {
+        width: 2.5rem;
+        height: 3.5rem;
+      }
+
+      .stat-icon {
+        font-size: 2rem !important;
+        opacity: 0.7 !important;
+        position: relative !important;
+        bottom: -10% !important;
+        left: -0.1rem !important;
+      }
+
+      .stat-number {
+        font-size: 1rem !important;
+        line-height: 1.34rem !important;
+      }
+
+      .stat-content {
+        padding-left: 0.1rem;
+      }
+
+      .stat-description {
+        font-size: 0.75rem !important;
+        line-height: 1rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (min-width: 769px) and (max-width: 1180px) {
+  .our-scale {
+    margin-bottom: 3rem !important;
+
+    .our-scale-container {
+      padding: 2rem 0rem;
+    }
+
+    .our-scale-title {
+      font-size: 3.875rem !important;
+      margin-top: 6rem !important;
+    }
+
+    .lines-left {
+      width: 7rem;
+      height: 12rem;
+      // display: none;
+    }
+
+    .lines-right {
+      width: 7rem;
+      height: 12rem;
+      // display: none;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+      padding-right: 1rem;
+      gap: 1rem;
+      transition: transform 0.3s ease;
+      border-radius: 2rem;
+      border: 1px solid #F2E2FF;
+      overflow: hidden;
+      background: linear-gradient(282deg, rgba(233, 204, 255, 0) -0.04%, rgba(242, 225, 255, 0.8) 130.11%);
+
+      img {
+        width: 3.5rem;
+        height: 5.5rem;
+      }
+
+      .stat-icon {
+        font-size: 2rem !important;
+        opacity: 0.7 !important;
+        position: relative !important;
+        bottom: -10% !important;
+        left: -0.1rem !important;
+      }
+
+      .stat-number {
+        color: #64388D;
+        font-family: Poppins;
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        line-height: 1.07194rem;
+      }
+
+      .stat-content {
+        padding-left: 0.1rem;
+      }
+
+      .stat-description {
+        font-size: 1rem !important;
+        line-height: 1rem !important;
+        margin-bottom: 0.25rem !important;
+      }
+    }
+  }
+}

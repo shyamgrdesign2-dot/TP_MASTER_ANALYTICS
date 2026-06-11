@@ -1,0 +1,455 @@
+@import '../../styles/variables';
+
+// Common CSS for Whole Message Component
+.text-delivered {
+    color: #70BF73 !important;
+}
+.text-scheduled {
+    color: #ED8A00 !important;
+}
+.radio-disabled {
+    color: #bfbfbf !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+.text-faild {
+    color: $alerText !important;
+}
+.text-green {
+    color: #3D8C40 !important;
+}
+.ant-radio-wrapper {
+    .ant-radio-checked .ant-radio-inner {
+        border-color: $theme !important;
+        background-color: $theme !important;
+    }
+    &:hover {
+        .ant-radio-inner {
+            border-color: $theme;
+        }
+    }
+}
+.text-primary-message {
+    color: #495AFF !important;
+}
+
+// Bulk Message Home
+.tabs-massages {
+    .ant-tabs-tab {
+        padding: 15px;
+        svg {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+        }
+        &.ant-tabs-tab-active .ant-tabs-tab-btn{
+            svg {
+                path {
+                    stroke: $theme;
+                }
+            }
+        }
+    }
+}
+
+// Buy Message Credits Drawer
+.badge-discount {
+    background-color: #3D8C401A;
+    color: #3D8C40 !important;
+    padding: 6px 8px;
+    border-radius: 10px;
+    width: 147px;
+    span {
+        color: #3D8C40 !important;
+    }
+}
+.text-suffix-credits {
+    .ant-input-suffix {
+        color: $grayColor !important;
+    }
+    input {
+        font-family: 'Poppins' !important;
+    }
+}
+.available-credits {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid $descpadcolor !important;
+    background-color: $descpadcolor;
+    height: 41px;
+    font-weight: 500 !important;
+    font-family: 'Poppins';
+    letter-spacing: 0.1px;
+    color: $themesecondary !important;
+    font-size: 14px;
+    i {
+        font-size: 19px;
+    }
+}
+
+// message Detailed View Drawer
+.bg-whatsup-message {
+    background-image: url(#{$tp-assets-base}/images/bg-whatsup.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Steps Code
+.ant-steps {
+    &.campaign-steps {
+        .ant-steps-item {
+            padding-left: 0 !important;
+            .ant-steps-item-container {
+                display: flex;
+                align-items: center;
+                .ant-steps-item-icon {
+                    border: 2px solid #CFD6DC;
+                    background-color: transparent;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 0;
+                    .ant-steps-icon {
+                        display: none;
+                    }
+                }
+            }
+            &.ant-steps-item-active {
+                .ant-steps-item-icon {
+                    border: 2px solid #495AFF;
+                    .ant-steps-icon {
+                        display: block;
+                        color: transparent !important;
+                        width: 16px;
+                        height: 16px;
+                        background-color: #495AFF;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            &.ant-steps-item-finish {
+                .ant-steps-item-icon {
+                    border-color: #495AFF;
+                    background-color: #495AFF;
+                    .ant-steps-icon {
+                        display: block;
+                        .anticon {
+                            color: $white !important;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .ant-steps-item-title {
+                    &::after {
+                      background-color: #495AFF !important;
+                    }
+                }
+            }
+            .ant-steps-item-title {
+                &::after {
+                  height: 3px;  
+                  background-color: #CFD6DC !important;
+                  top: 0;
+                }
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// First Step Code
+.message-box {
+    border: 1px solid #EAE9FF;
+    border-radius: 24px;
+    padding: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(194deg, rgba(255,255,255,1) 0%, rgba(224,226,245,1) 100%);
+    height: 100%;
+    cursor: pointer;
+}
+
+// 2nd Step's Left Preview
+.configure-template {
+    border: 1px solid $bordercolor;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: $white;
+    .ant-radio-wrapper {
+        padding: 12px 20px;
+        border: 1px solid $bordercolor;
+        border-radius: 10px;
+
+        &.ant-radio-wrapper-disabled {
+            opacity: 0.5;
+            cursor:not-allowed !important;
+            .ant-radio-wrapper-disabled {
+                opacity: 0.5;
+                cursor:not-allowed !important;
+            }
+        }
+
+        &.ant-radio-wrapper-checked {
+            border-color: $theme;
+            background-color: rgba(75, 74, 213, 0.1);
+            .ant-radio-checked {
+                .ant-radio-inner {
+                    &:after {
+                        content: '✔'; 
+                        font-size: 40px;
+                        color: $white;
+                        left: 12px;
+                        top: 6px;
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+        }
+        span {
+            font-weight: 500;
+            color: rgba(69, 69, 81, 1) !important;
+        }
+        .ant-radio {
+            .ant-radio-inner {
+                width: 24px;
+                height: 24px;
+                border: 2px solid rgba(90, 103, 116, 1);
+            }
+        }
+    }
+    .doctor-selection {
+        width: 100%;
+        margin-top: 8px;
+        .ant-select-selector {
+            padding-bottom: 4px;
+            padding-left: 8px;
+            padding-top: 8px;
+            min-height: 48px;
+            .ant-select-selection-item {
+                border: 1px solid $theme;
+                background-color: $white;
+                border-radius: 8px;
+                margin-right: 8px;
+                margin-bottom: 6px;
+                span {
+                    color: $theme !important;
+                    font-family: 'roboto' !important;
+                }
+            }
+        }
+    }
+}
+.patient-range {
+    .ant-input-wrapper {
+        input {
+            height: 48px;
+            border-radius: 10px;
+            ~.ant-input-group-addon {
+                border: none;
+                background-color: $drawerHeaderColor;
+                .ant-select-single {
+                    height: 48px;
+                }
+            }
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                border-color: $bordercolor;
+                ~.ant-input-group-addon {
+                    background-color: $drawerHeaderColor;
+                }
+            }
+        }
+    }
+}
+.message-gender {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    .ant-checkbox-wrapper {
+        border: 1px solid $bordercolor;
+        padding: 8px 10px;
+        border-radius: 10px;
+        flex: auto;
+        height: 48px;
+        align-items: center;
+        &.ant-checkbox-wrapper-checked {
+            border-color: $theme;
+            background-color: rgba(75, 74, 213, 0.1);
+        }
+    }
+}
+
+// 2nd Step's Left Preview (SMS Preview)
+.sms-preview {
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #EAECF0;
+    height: 303px;
+    .sms-preview-mobile {
+        background-image: url(#{$tp-assets-base}/images/device-sms.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        max-width: 310px;
+        height: 232px;
+        margin: 20px auto 0;
+        svg path {
+            color: #000;
+            fill: #000;
+        }
+        &.whatsup-preview-mobile {
+            background-image: url(#{$tp-assets-base}/images/device-whatsup.webp);
+            .sms-preview-message {
+                background-color: $white;
+            }
+        }
+        .sms-preview-message {
+            background-color: #E9E9EB;
+            top: 52%;
+            left: 10.5%;;
+            font-size: 12px;
+            width: 80%;
+            position: relative;
+            @media only screen and (max-width: 1300px) {
+                font-size: 11px;
+                top: 45%;
+            }
+        }
+    }
+}
+.massage-date {
+    .ant-picker-presets {
+        ul {
+            li {
+                padding: 0px !important;
+                &:hover {
+                    background-color: transparent;
+                }
+                div {
+                    padding: 4px 10px !important;
+                    border-radius: 6px !important;
+                    background-color: #F1F1F5;
+                    border: 1px solid #F1F1F5;
+                    &.active, &:hover {
+                        padding: 4px 10px !important;
+                        border-radius: 6px !important;
+                        border-color: $theme;
+                        background-color: #4B4AD514 !important;
+                    }
+                }
+            }
+        }
+    }
+    .ant-picker-panels {
+        .ant-picker-cell-in-view{
+            &.ant-picker-cell-in-range {
+                &:before {
+                    background-color: #4B4AD514;
+                }
+            }
+            &.ant-picker-cell-range-start, &.ant-picker-cell-range-end {
+                .ant-picker-cell-inner {
+                    background-color: $theme;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+.massage-date-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    border-radius: 12px;
+    height: 38px;
+    padding-left: 10px;
+    border: 1px solid #DCE4E8 !important;
+    position: relative;
+    .massage-input {
+        width: 100%;
+        height: 36px;
+        right: 0;
+        border-radius: 12px;
+        background-color: transparent;
+        position: absolute;
+        z-index: -9;
+        .ant-picker-suffix {
+            position: absolute;
+            right: 0;
+        }
+        &:hover, &:focus {
+            border-color: transparent !important;
+            box-shadow: none;
+            .ant-picker-clear {
+                display: none;
+            }
+        }
+    }
+}
+.ant-picker-ok {
+    .ant-btn-primary {
+        &:disabled {
+            background-color: rgba(75, 74, 213, 0.3);
+        }
+    }
+}
+.doctor-selection-popup {
+    .anticon-check {
+        display: none;
+    }
+}
+
+.reedem-bg {
+    background-image: url(#{$tp-assets-base}/images/redeem-bg.webp);
+    background-repeat: no-repeat;
+    width: 356px;
+    height: 137px;
+    background-position: center;
+    text-align: center;
+    div {
+        &:first-child {
+            font-size: 21px;
+            font-weight: 600;
+        }
+    }
+}
+
+.sms-radio-label-with-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 20px;
+}
+  
+.sms-radio-info-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bfbfbf;
+    font-size: 16px;
+    margin-left: 4px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.radio-group-with-info {
+  position: relative;
+}
+
+.radio-group-info-icon {
+  position: absolute;
+  right: 16px; // adjust as needed to fit inside the border
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bfbfbf;
+  font-size: 18px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1;
+}

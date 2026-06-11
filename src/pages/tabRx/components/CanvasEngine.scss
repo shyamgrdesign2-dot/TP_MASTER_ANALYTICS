@@ -1,0 +1,280 @@
+.tab-rx-canvas-container {
+  flex: 1;
+  background: #e5e5e5;
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+  cursor: crosshair;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  /* When embedded in scroll: parent handles scrolling */
+  &.embedded-in-scroll {
+    touch-action: none;
+    flex: none; /* Don't grow - parent controls size */
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    /* Fill parent page block; zoom is applied by outer dimensions, not transform scale */
+    .canvas-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* Also override the canvas element so inline style stays consistent */
+    .canvas-wrapper canvas {
+      touch-action: none;
+    }
+
+    /* While a pen is active (drawing), disable UA panning so Android stylus
+       can't scroll the surrounding pages container mid-stroke. */
+    &[data-pen-active="true"] {
+      touch-action: none;
+    }
+
+    .canvas-wrapper canvas[data-pen-active="true"] {
+      touch-action: none !important;
+    }
+  }
+
+  .canvas-wrapper {
+    transform-origin: 0 0;
+    width: 794px;
+    height: 1123px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    transition: transform 0.075s ease-out;
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: none;
+    z-index: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    // CRITICAL: Prevent browser context menu and text selection
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    // Ensure canvas always receives pointer events
+    pointer-events: auto !important;
+  }
+
+    .text-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      overflow: hidden;
+
+      .text-element {
+        position: absolute;
+        pointer-events: auto;
+        display: inline-block;
+        user-select: none;
+        transform-origin: top left;
+        min-width: 50px;
+        line-height: 1.2;
+
+        &.selected {
+          z-index: 50;
+        }
+
+        .text-selection-frame {
+          position: absolute;
+          inset: -8px;
+          border: 2px dashed #4B4AD5;
+          border-radius: 8px;
+          pointer-events: none;
+          animation: fadeIn 0.15s ease-out;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(2px);
+
+          .resize-handle {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            z-index: 50;
+
+            &.tl {
+              top: 0;
+              left: 0;
+              transform: translate(-50%, -50%);
+            }
+
+            &.tr {
+              top: 0;
+              right: 0;
+              transform: translate(50%, -50%);
+            }
+
+            &.bl {
+              bottom: 0;
+              left: 0;
+              transform: translate(-50%, 50%);
+            }
+
+            &.br {
+              bottom: 0;
+              right: 0;
+              transform: translate(50%, 50%);
+            }
+
+            .handle-dot {
+              width: 12px;
+              height: 12px;
+              background: #fff;
+              border: 2px solid #4B4AD5;
+              border-radius: 50%;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              transition: all 0.2s;
+
+              &:hover {
+                background: #4B4AD5;
+                transform: scale(1.25);
+              }
+            }
+          }
+
+          .text-toolbar {
+            position: absolute;
+            pointer-events: auto;
+            display: flex;
+            gap: 8px;
+            padding-bottom: 8px;
+
+            .toolbar-button {
+              width: 36px;
+              height: 36px;
+              border: none;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: all 0.2s;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+
+              svg {
+                width: 18px;
+                height: 18px;
+              }
+
+              &:active {
+                transform: scale(0.95);
+              }
+
+              &.drag-button {
+                background: #4B4AD5;
+                color: #fff;
+
+                &:hover {
+                  background: #3a39b3;
+                }
+              }
+
+              &.delete-button {
+                background: #fff;
+                color: #dc2626;
+
+                &:hover {
+                  background: #fee2e2;
+                }
+              }
+
+              &.done-button {
+                background: #fff;
+                color: #16a34a;
+
+                &:hover {
+                  background: #dcfce7;
+                }
+              }
+            }
+
+            &.left-toolbar {
+              top: 0;
+              left: 0;
+              transform: translateY(-100%);
+              transform-origin: bottom left;
+            }
+
+            &.right-toolbar {
+              top: 0;
+              right: 0;
+              transform: translateY(-100%);
+              transform-origin: bottom right;
+            }
+          }
+        }
+
+        .text-content {
+          min-width: 50px;
+          min-height: 1.5em;
+          outline: none;
+          padding: 4px 8px;
+          border-radius: 4px;
+          white-space: pre-wrap;
+          word-break: break-word;
+          cursor: text;
+          transition: all 0.2s;
+          max-width: 400px;
+
+          &:empty::before {
+            content: 'Type...';
+            color: #999;
+            font-style: italic;
+          }
+
+          &.selected {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            color: #1a1a1a;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          }
+
+          &:not(.selected) {
+            border: 1px solid transparent;
+
+            &:hover {
+              border-color: rgba(59, 130, 246, 0.5);
+              background: rgba(255, 255, 255, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

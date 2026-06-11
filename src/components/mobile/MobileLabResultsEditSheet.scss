@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.mobile-lab-results-bottom-sheet {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #FAF8FD;
+  }
+  
+  // Ensure LabParams content is scrollable
+  .ant-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  // Adjust maxHeight for mobile bottom sheet
+  .px-20 {
+    max-height: calc(90vh - 120px) !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  // Ensure proper scrolling for lab results table
+  .scrollvitals {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

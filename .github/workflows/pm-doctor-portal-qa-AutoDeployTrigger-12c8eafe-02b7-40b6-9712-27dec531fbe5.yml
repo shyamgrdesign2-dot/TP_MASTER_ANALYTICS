@@ -1,0 +1,47 @@
+name: Trigger auto deployment for pm-doctor-portal-qa
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: [qa]
+    paths:
+      - "**"
+      - ".github/workflows/pm-doctor-portal-qa-AutoDeployTrigger-12c8eafe-02b7-40b6-9712-27dec531fbe5.yml"
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      REACT_APP_ENV: qa_tp
+    permissions:
+      id-token: write #This is required for requesting the OIDC JWT Token
+      contents: read #Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.PMDOCTORPORTALQA_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.PMDOCTORPORTALQA_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.PMDOCTORPORTALQA_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }}
+          registryUrl: practiceqa.azurecr.io
+          registryUsername: ${{ secrets.PMDOCTORPORTALQA_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.PMDOCTORPORTALQA_REGISTRY_PASSWORD }}
+          containerAppName: pm-doctor-portal-qa
+          resourceGroup: tatva-uat
+          imageToBuild: practiceqa.azurecr.io/pm-doctor-portal-qa:${{ github.sha }}
+          buildArguments: |
+            REACT_APP_ENV=qa_tp
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}

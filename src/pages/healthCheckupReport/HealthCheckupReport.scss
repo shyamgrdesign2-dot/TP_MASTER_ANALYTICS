@@ -1,0 +1,16 @@
+// Health Check-up Report Page Styles
+// This file contains styles for the main HealthCheckupReport page wrapper
+
+.health-checkup-report {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  
+  &__container {
+    flex: 1;
+    overflow: auto;
+    padding: 24px;
+  }
+}

@@ -1,0 +1,443 @@
+.video-carousel {
+    position: relative;
+    padding-bottom: 12px;
+
+    .video-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 8px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #D9D9D9;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &.active {
+                background-color: #1890ff;
+            }
+
+            &:hover {
+                background-color: #40a9ff;
+            }
+        }
+    }
+}
+
+.welcome-modals-wrapper {
+    position: relative;
+
+    .modal-onboarding {
+        .ant-modal-content {
+            border-radius: 24px;
+            background: white;
+            padding: 32px !important;
+            max-height: calc(100vh - 200px);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ant-modal-body {
+            overflow-y: auto;
+            padding-right: 8px;
+            
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 3px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 3px;
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
+    }
+}
+
+.modal-content-container {
+    display: flex;
+    flex-direction: row !important;
+    gap: 32px;
+    margin-bottom: 24px;
+
+    .left-section {
+        flex: 2;
+
+        .welcome-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+        }
+
+        .doctor-name {
+            color: #454551 !important;
+            font-size: 1.00519rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.50781rem;
+        }
+
+        .welcome-title {
+            color: #454551 !important;
+            font-size: 3.37231rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 4.21538rem;
+            letter-spacing: -0.06744rem;
+        }
+
+        .support-box {
+            border-radius: 1.5rem;
+            background: rgba(252, 218, 218, 0.30);
+            padding: 1rem;
+
+            .support-icon {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 1rem;
+                display: block;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: #666;
+                font-size: 14px;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+    }
+
+    .right-section {
+        flex: 3;
+
+        .video-section {
+            border-radius: 16px;
+            padding: 0;
+            width: auto;
+            min-height: 350px;
+
+            .video-tag {
+                display: inline-block;
+                background: white;
+                padding: 6px 12px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+
+            .video-title {
+                font-size: 24px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            iframe {
+                width: 100%;
+                border-radius: 2rem;
+            }
+
+            .video-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 16px;
+
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+
+                    &.active {
+                        background: #6E2FEB;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+.trial-period-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 232, 174, 0.30);
+    margin-top: 0;
+    padding: 16px 32px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+
+    .trial-text {
+        display: flex;
+        font-family: Roboto;
+        align-items: center;
+        gap: 8px;
+        color: #454551 !important;
+        font-size: 1rem;
+        letter-spacing: 0.0125rem;
+    }
+
+    .upgrade-link-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 1rem;
+
+        span {
+            color: #454551 !important;
+            font-family: Roboto;
+        }
+    }
+
+    .upgrade-link {
+        color: #4B4AD5 !important;
+        text-decoration: none;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.device-warning-content {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    z-index: 1001;
+    background: #7de781;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    width: calc(100% - 32px);
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    .desktop-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .warning-title {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+        font-weight: normal;
+    }
+
+    .link-wrapper {
+        //   background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 12px;
+        margin: 0 -8px;
+
+        .platform-link {
+            color: white;
+            text-decoration: underline;
+            background: rgba(255, 255, 255, 0.1);
+
+            display: block;
+            // margin-bottom: 12px;
+            word-break: break-all;
+            font-size: 14px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+
+            .action-btn {
+                background: none;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 8px 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    filter: brightness(0) invert(1); // Make icons white
+                }
+
+            }
+        }
+    }
+}
+
+// Ensure proper stacking
+.ant-modal-wrap {
+    &.modal-onboarding {
+        z-index: 1000;
+    }
+
+    &.device-warning-modal {
+        z-index: 1001;
+    }
+}
+
+// If the above selector doesn't work, try this alternative
+.ant-modal.modal-onboarding {
+    width: 900px !important;
+    max-width: 90vw !important;
+}
+
+// For the content width
+.modal-onboarding {
+    .ant-modal-content {
+        width: 100% !important;
+        max-width: 80rem !important;
+        margin: 0 auto;
+        padding: 0 !important;
+    }
+    :where(.css-dev-only-do-not-override-1okl62o).ant-modal-root {
+        .ant-modal-wrap {
+            .ant-modal {
+                width: 75vw !important;
+                max-width: 90vw !important;
+            }
+        }
+
+        .ant-modal {
+            .ant-modal-content {
+                position: relative;
+                background-color: #ffffff;
+                background-clip: padding-box;
+                border: 0;
+                border-radius: 2rem;
+                box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+                pointer-events: auto;
+            }
+        }
+
+        .ant-modal {
+            .ant-modal-close-x {
+                display: flex;
+                padding: 0.3rem 0.5rem;
+                font-size: 1.3rem;
+                font-weight: 500;
+                line-height: 32px;
+                align-items: center;
+                justify-content: center;
+                color: #454551 !important;
+
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-modals-wrapper {
+        .modal-content {
+            flex-direction: column;
+        }
+
+        .trial-period-footer {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+            padding: 16px;
+        }
+    }
+
+    .modal-content-container .left-section .support-box h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .modal-content-container {
+        flex-direction: column !important;
+    }
+
+    .modal-content-container .left-section .welcome-title {
+        color: #454551 !important;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    .modal-onboarding .ant-modal-content {
+        padding: 1rem !important;
+        margin-top: -12rem !important;
+        max-height: 70vh !important;
+        overflow-y: scroll;
+        border-radius: 1rem !important;
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    :where(.css-dev-only-do-not-override-1okl62o).ant-modal-root .ant-modal-wrap .ant-modal {
+        width: 90vw !important;
+        max-width: 95vw !important;
+    }
+
+    :where(.css-dev-only-do-not-override-1okl62o).ant-modal .ant-modal-body {
+        .welcome-icon{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    // :where(.css-dev-only-do-not-override-1okl62o).ant-modal-root .ant-modal .ant-modal-content {
+    //     padding: 1rem !important;
+    //     margin-top: -12rem !important;
+    //     max-height: 70vh !important;
+    //     overflow-y: scroll;
+    //     border-radius: 1rem;
+        
+    //     /* Hide scrollbar for Chrome, Safari and Opera */
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
+        
+    //     /* Hide scrollbar for IE, Edge and Firefox */
+    //     -ms-overflow-style: none;  /* IE and Edge */
+    //     scrollbar-width: none;  /* Firefox */
+    // }
+
+    .modal-content-container .right-section .video-section {
+        min-height: auto !important;
+    }
+}

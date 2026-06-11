@@ -1,0 +1,145 @@
+.abha-standalone {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  padding: 0;
+
+  &.embedded {
+    background-color: transparent;
+    min-height: auto;
+
+    .abha-standalone-container {
+      box-shadow: none;
+      border-radius: 0;
+      max-width: 100%;
+      min-height: 100vh;
+    }
+  }
+
+  .abha-standalone-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .abha-standalone-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid #e8e8e8;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .abha-standalone-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+    }
+  }
+}
+
+.abha-standalone-error {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+
+  .error-container {
+    text-align: center;
+    padding: 32px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+
+    h2 {
+      color: #ff4d4f;
+      margin-bottom: 16px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    p {
+      color: #454551;
+      margin-bottom: 24px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 10px 24px;
+      background: #4b4ad5;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+.abha-standalone-loading {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4b4ad5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #454551;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .abha-standalone {
+    .abha-standalone-container {
+      max-width: 100%;
+      border-radius: 0;
+
+      .abha-standalone-header {
+        padding: 12px 16px;
+      }
+    }
+  }
+}
+

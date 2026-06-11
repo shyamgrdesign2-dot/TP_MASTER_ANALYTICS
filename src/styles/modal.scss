@@ -1,0 +1,522 @@
+.modalcommon {
+    .ant-modal-content {
+        padding: 0;
+        border-radius: 20px;
+
+        .ant-card-head {
+            min-height: 70px;
+            border-color: $bordercolor;
+
+            .ant-card-head-title {
+                color: $welcomecolor !important;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: 0.1px;
+            }
+        }
+
+        .ant-card {
+            border-radius: 20px;
+        }
+    }
+}
+
+body {
+    .ant-drawer {
+        .ant-drawer-header {
+            padding: 12px 20px;
+
+            .ant-drawer-close {
+                margin-inline-end: 10px;
+                font-size: 20px;
+                padding: 0;
+            }
+
+            .ant-drawer-title {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+                letter-spacing: 0.1px;
+            }
+        }
+
+        .ant-drawer-body {
+            padding: 0;
+            background-color: $bgbody;
+
+            .tab-template-height {
+                height: calc(100vh - 120px);
+                overflow-y: auto;
+            }
+
+            .medicine-templates {
+                &:hover {
+                    background-color: $white;
+                }
+            }
+        }
+
+        .ant-drawer-content {
+            &.modalWidth-400 {
+                width: 400px !important;
+            }
+            
+            &.modalWidth-563 {
+                width: 563px !important;
+            }
+
+            &.modalWidth-645 {
+                width: 645px;
+            }
+
+            &.modalWidth-700 {
+                width: 700px;
+            }
+
+            &.modalWidth-800 {
+                width: 800px;
+            }
+
+            &.modalWidth-900 {
+                width: 900px;
+            }
+            &.scroll-y-hidden{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 135%;
+                overflow: hidden;
+                background: #ffffff;
+                pointer-events: auto;
+                @media only screen and (max-width: 2000px) {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 120%;
+                    overflow: hidden;
+                    background: #ffffff;
+                    pointer-events: auto;
+                }
+            }
+        }
+
+        .ant-card {
+            &.search-modalCard {
+                border-radius: 0;
+                box-shadow: none;
+
+                .ant-card-body {
+                    padding: 0;
+                    height: 100%;
+                }
+
+                .modalcard-body {
+                    height: calc(100vh - 74px);
+                    overflow-y: auto;
+
+                    .selectedchip-header {
+                        height: 60px;
+                        background-color: $drawerHeaderColor;
+
+                        span {
+                            font-size: 18px;
+                            line-height: 25px;
+                            font-weight: 600;
+                            letter-spacing: 0.1px;
+                            color: $maincolor !important;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .searchdrawer-content {
+            .ant-card {
+                background: $bgbody !important;
+            }
+        }
+    }
+
+    .selectedchip-header1 {
+        height: 60px;
+        background-color: $drawerHeaderColor;
+        span {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+            color: $maincolor !important;
+        }
+    }
+
+    .modalCard-header {
+        height: 60px;
+        border-bottom: 1px solid $bordercolor;
+        background-color: $white;
+
+        &.h-74 {
+            height: 74px;
+        }
+
+        .btn-delete-prescription {
+            padding-top: 10px;
+
+            i {
+                color: $maincolor;
+            }
+        }
+    }
+
+    .modal-title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        color: $maincolor !important;
+        margin-right: 15px;
+    }
+}
+
+.modalcommon-onbording {
+    overflow: hidden;
+    border-radius: 30px;
+
+    .ant-modal-content {
+        padding: 0px;
+
+        .col-md-12 {
+            padding: 0px;
+        }
+    }
+
+    .img-width {
+        max-width: 100%;
+    }
+
+    .welcom-doc-title {
+        padding: 0px;
+
+        h2 {
+            padding: 0px;
+            color: #475467;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            padding: 0px;
+            margin: 0px;
+            color: #101828;
+            font-size: 60px;
+            line-height: 72px;
+            letter-spacing: -2px;
+        }
+    }
+
+    .will-connect-doc {
+        background: #fef4f5;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 432px;
+
+        & p {
+            margin: 15px 0 0 0;
+            color: #101828;
+            line-height: 28px;
+        }
+
+        & h3 {
+            margin: 9px 0 0 0;
+            font-size: 20px;
+            color: #101828;
+        }
+    }
+
+    .welcom-doc-title {
+        padding-left: 2.5rem;
+    }
+
+    .will-connect-doc {
+        margin-left: 2.5rem;
+    }
+}
+
+.modal-onbording {
+    &.ant-modal {
+        width: 1045px !important;
+        .ant-modal-content {
+            padding: 0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+}
+
+.doc-enjoy-secton {
+    background: #fff8e8;
+    padding-top:5px;
+    padding-bottom:10px;
+
+    h3 {
+        color: #171725;
+        padding:10px 0 0 0; margin: 0px;
+
+        & span {
+            margin-right: 10px;
+        }
+    }
+
+    & p {
+        color: #454551;
+        padding:5px 0 0 0;
+        margin: 0px;
+        text-align: center;
+    }
+}
+
+.prescription-pad {
+    .ant-modal-footer {
+        display: none;
+    }
+    .ant-modal-content {
+        border-radius: 25px !important;
+        padding: 0px;
+        overflow: hidden;
+        .ant-modal-close {
+            padding: 0px;
+            top: 19px;
+            position: absolute;
+            right: 20px;
+            &:hover {
+                background: transparent;
+            }
+            .ant-modal-close-icon {
+                color: $maincolor !important;
+                font-size: 18px;
+            }
+        }
+        .ant-modal-header {
+            background-color: $descpadcolor;
+            margin: 0px;
+            .ant-modal-title {
+                font-size: 20px;
+                line-height: 36px;
+                font-weight: 500;
+                color: #454551;
+                letter-spacing: 0.1px;
+                font-family: 'Poppins';
+                padding: 20px 0 20px 25px;
+            }
+        }
+    }
+}
+
+.sc-popup {
+    .ant-modal-header {
+        margin: 0px;
+    }
+}
+
+.opd-plan-qr {
+    width: 45rem;
+    .ant-modal-content {
+        display: inline-flex;
+        padding: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        /* gap: 3.75rem; */
+        border-radius: 2rem;
+        background: linear-gradient(180deg, #5958F8 0%, #0D0D66 100%);
+        position: relative;
+        height: 35rem;
+        left: -8%;
+
+        .ant-card-head {
+            min-height: 70px;
+            border-color: $bordercolor;
+
+            .ant-card-head-title {
+                color: $welcomecolor !important;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: 0.1px;
+            }
+        }
+
+        // .ant-card {
+        //     border-radius: 32px;
+        // }
+    }
+}
+
+.abha-qr-modal {
+    width: 45rem;
+    .ant-modal-content {
+        display: inline-flex;
+        padding: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        background: linear-gradient(180deg, #5958F8 0%, #0D0D66 100%);
+        position: relative;
+        height: 35rem;
+        left: -8%;
+    }
+    
+    /* Clinic name font size for modal view */
+    .abha-clinic-name {
+        font-size: 1.7rem;
+    }
+}
+
+/* ABHA QR Code Print Styles */
+@media print {
+    .abha-clinic-name {
+        font-size: 3.5rem !important;
+    }
+    
+    .abha-scan-text-screen {
+        display: none !important;
+    }
+    
+    .abha-print-text {
+        display: block !important;
+        margin-top: 3rem !important;
+    }
+    
+    .abha-print-text .opd-scan-text:first-child {
+        font-size: 1.8rem !important;
+    }
+    
+    .abha-print-text .opd-scan-text:last-child {
+        font-size: 2rem !important;
+        font-style: italic !important;
+    }
+    
+    .qr-close-btn {
+        display: none !important;
+    }
+    
+    /* Container needs relative positioning and full height */
+    .opd-plans-inner-contianer {
+        position: relative !important;
+        min-height: calc(100vh - 40px) !important;
+        padding-bottom: 80px !important;
+    }
+    
+    /* Position Powered by section at bottom of page */
+    .abha-powered-by {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.expired-model {
+    .ant-modal-content {
+        padding: 0;
+        border-radius: 25px;
+        .ant-card {
+            background: linear-gradient(0.48deg, #1716b8 -0.54%, #A461D8 158.7%);
+            border-color: #A461D8;
+            border-radius: 25px;
+            position: relative;
+            &.expired-red-card {
+                background: linear-gradient(142.92deg, #d85e53 3.88%, #620403 104.92%);
+                border-color: #d85e53;
+            }
+            .expiredInfographic {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .ant-card-head {
+                border: none;
+                min-height: 60px !important;
+                padding: 0 20px
+            }
+            .ant-card-body {
+                padding: 40px 40px 25px;
+                .expired-modal-title {
+                    font-size: 46px ;
+                    font-weight: bold;
+                    color: $white !important;
+                }
+                .extend-free-trial {
+                    background-image: url('#{$tp-assets-base}/images/extend-subtract.svg');
+                    background-repeat: no-repeat;
+                    content: '';
+                    width: 325px;
+                    height: 195px;
+                }
+                .text-yellow-light {
+                    color: #604407 !important;
+                }
+                .plan-expired-clock {
+                    position: absolute;
+                    left: -32px;
+                    bottom: -27px;
+                    height: 290px;
+                }
+            }
+        }
+    }
+}
+
+.voicerx-modal {
+    .ant-modal-content {
+        padding: 0;
+        border-radius: 42px;
+    }
+    .ant-card {
+        background: linear-gradient(180deg, #EC6D62 -29.15%, #680800 118.96%);
+        border-color: #EC6D62;
+        border-radius: 42px;
+        .ant-card-head {
+            border: none;
+            min-height: 60px !important;
+            padding: 0 20px;
+            .coinLg {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+                z-index: 9;
+            }
+            .expiredInfographic {
+                position: absolute;
+                top: 0;
+                left: -1px;
+            }
+            .btnclose {
+                i {
+                    color: $white;
+                }
+            }
+        }
+        .ant-card-body {
+            position: relative;
+            padding-top: 0;
+            .plan-expired-clock {
+                height: 160px;
+                margin-bottom: 10px;
+                margin-top: -20px;
+            }
+        }
+    }
+    &.ddx-side {
+        .ant-card-head {
+            min-height: 30px !important;
+        }
+    }
+}

@@ -1,0 +1,253 @@
+/* Container Styling */
+.add-custom-module-cta-container {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Dynamically Rendered Input Module */
+.custom-module-input-container {
+  display: flex;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.custom-module-input {
+  width: 100%;
+  font-size: 16px;
+  color: #4a4a4a;
+  // border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.custom-module-input:focus {
+  border: 1px solid #4B4AD5 !important;
+  box-shadow: none;
+}
+
+.custom-module-input-icon {
+  font-size: 16px;
+  color: #4a90e2;
+}
+
+.input-action-icon {
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  color: #3D8C40 !important;
+}
+
+.tick-icon {
+  color: #3D8C40 !important;
+}
+
+.cross-icon {
+  color: #B73A3A !important;
+}
+
+/* Add Custom Module CTA */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px dashed #4b4ad5;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 8px;
+}
+
+.add-custom-module-link {
+  font-size: 16px;
+  color: #4b4ad5 !important; /* Ensures the text color applies */
+  font-weight: 500;
+  padding: 0 !important;
+  margin: 0;
+  text-decoration: none;
+}
+
+.add-custom-module-link > span {
+  color: #4b4ad5 !important; /* Targets the text specifically inside the button */
+}
+
+.add-custom-module-link .anticon {
+  color: #4b4ad5 !important; /* Applies the color to the Ant Design icon */
+}
+
+.add-custom-module-link:hover {
+  text-decoration: underline;
+}
+
+.module-info {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 4px;
+}
+
+.module-count {
+  color: #4b4ad5 !important;
+}
+
+.info-icon {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.info-icon:hover {
+  color: #4a90e2;
+}
+
+.info-tooltip {
+  background-color: white !important;
+  background: white !important;
+  &.ant-tooltip .ant-tooltip-inner {
+    background-color: #ffffff !important;
+    min-width: 310px;
+    border-radius: 10px;
+    padding: 18px;
+    color :black;
+  }
+
+  &.ant-tooltip .ant-tooltip-arrow {
+    --antd-arrow-background-color: #ffffff !important;
+  }
+}
+
+/* Container for the More Options Button */
+.more-options-btn {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.more-options-btn:hover {
+  background: #f0f0f0;
+  border-radius: 50%;
+}
+
+/* Menu Item Styles */
+.menu-item {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a4a4a;
+  padding: 8px 16px;
+}
+
+.menu-item:hover {
+  background: #f9f9f9;
+}
+
+.menu-icon {
+  font-size: 16px !important;
+  color: #4a90e2 !important;
+}
+
+.menu-item.delete-icon {
+  color: #ff4d4f;
+}
+
+.menu-item.delete-icon:hover {
+  color: #ff7875;
+}
+
+.delete-module{
+  padding: 20px 21px 20px 21px;
+  gap: 20px;
+  border-radius: 10px 0px 0px 0px;
+  background: #ED8A001A;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: #454551;
+}
+
+/* Tooltip for disabled menu items */
+.module-disabled-tooltip {
+  &.ant-tooltip .ant-tooltip-inner {
+    background-color: #FFF9E6 !important;
+    color: #171725;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    line-height: 1.5;
+    
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &.ant-tooltip .ant-tooltip-arrow {
+    --antd-arrow-background-color: #FFF9E6 !important;
+  }
+}
+
+@keyframes customModuleVoiceTargetShimmer {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(260%) skewX(-18deg);
+  }
+}
+
+.custom-module-voice-target-cell {
+  position: relative;
+}
+
+.custom-module-voice-target-cell::before {
+  content: "";
+  position: absolute;
+  inset: 8px 12px;
+  min-height: 32px;
+  border-radius: 4px !important;
+  background-color: #F3F4F6 !important;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.custom-module-voice-target-cell::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 12px;
+  width: 42%;
+  min-height: 32px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), transparent);
+  pointer-events: none;
+  z-index: 1;
+  animation: customModuleVoiceTargetShimmer 1.5s infinite;
+}
+
+.custom-module-voice-target-cell > * {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-module-voice-target-cell textarea,
+.custom-module-voice-target-cell .ant-input,
+.custom-module-voice-target-cell .ant-select-selector,
+.custom-module-voice-target-cell .ant-select-selection-search-input {
+  background: transparent !important;
+}

@@ -1,0 +1,402 @@
+.root {
+  position: relative;
+  sticky: bottom;
+  bottom: 0;
+  background: #fff;
+  padding: 6px 10px 4px;
+}
+
+.gradientOverlay {
+  pointer-events: none;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.55) 55%, transparent);
+}
+
+/* ── Recording mode ── */
+.recordingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recordingBar {
+  display: flex;
+  height: 36px;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0 12px;
+}
+
+.recordingBarActive {
+  border-color: var(--tp-violet-300, #c4b5fd);
+  background: linear-gradient(to right, var(--tp-violet-50, #f5f3ff), var(--tp-blue-50, #eff6ff));
+}
+
+.recordingBarPaused {
+  border-color: var(--tp-slate-300, #cbd5e1);
+  background: var(--tp-slate-50, #f8fafc);
+}
+
+.recordingDot {
+  height: 6px;
+  width: 6px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+}
+
+.recordingDotActive {
+  background: var(--tp-error-500, #ef4444);
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.recordingDotPaused {
+  background: var(--tp-slate-400, #94a3b8);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pausedLabel {
+  font-size: 14px;
+  color: var(--tp-slate-400, #94a3b8);
+}
+
+.timerText {
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--tp-slate-500, #667085);
+}
+
+.recordingAction {
+  display: flex;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--tp-slate-500, #667085);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background: var(--tp-slate-100, #f1f5f9);
+  }
+}
+
+.recordingSend {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--tp-success-600, #16a34a);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background: var(--tp-success-50, #f0fdf4);
+  }
+}
+
+.recordingDiscard {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--tp-slate-400, #94a3b8);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+
+  &:hover {
+    background: var(--tp-slate-100, #f1f5f9);
+    color: var(--tp-slate-600, #475569);
+  }
+}
+
+/* ── Wave animation ── */
+.waveAnimation {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+
+.waveBar {
+  width: 2.5px;
+  border-radius: 9999px;
+  height: 6px;
+  animation: waveBar 1s ease-in-out infinite alternate;
+}
+
+@keyframes waveBar {
+  0% {
+    height: 4px;
+    opacity: 0.4;
+  }
+  50% {
+    height: 16px;
+    opacity: 1;
+  }
+  100% {
+    height: 6px;
+    opacity: 0.5;
+  }
+}
+
+/* ── Input container ── */
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 12px;
+  padding: 6px 10px;
+  gap: 6px;
+  border: 1px solid var(--tp-slate-200, #e2e2ea);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+
+  &:focus-within {
+    border-color: var(--tp-blue-400, #6c6bde);
+    box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.14);
+  }
+
+  textarea::placeholder {
+    color: var(--tp-slate-300, #d0d5dd);
+    line-height: 16px;
+  }
+}
+
+/* Animated AI gradient border for pre-filled state */
+.inputContainerPrefilled {
+  border-color: transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(135deg, #d565ea, #673aac, #1a1994, #d565ea, #673aac);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: aiGradientBorderFlow 3s ease-in-out infinite;
+  box-shadow: 0 0 0 2px rgba(103, 58, 172, 0.08);
+
+  &:focus-within {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(103, 58, 172, 0.12);
+  }
+}
+
+@keyframes aiGradientBorderFlow {
+  0% {
+    background-position: 0% 0%, 0% 50%;
+  }
+  50% {
+    background-position: 0% 0%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 50%;
+  }
+}
+
+.inputContainerDisabled {
+  opacity: 0.5;
+}
+
+/* ── Textarea ── */
+.textarea {
+  width: 100%;
+  resize: none;
+  background: transparent;
+  padding: 0 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--tp-slate-800, #1d2939);
+  font-weight: 400;
+  outline: none;
+  border: none;
+  min-height: 22px;
+  max-height: 100px;
+}
+
+/* ── Footer row ── */
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 24px;
+}
+
+.footerLeft {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.footerRight {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Icon buttons ── */
+.iconBtn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.iconBtnDisabled {
+  pointer-events: none;
+}
+
+/* ── VoiceRx CTA button ── */
+.voiceRxCtaBtn {
+  display: flex;
+  height: 36px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  min-width: 96px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #d565ea 0%, #673aac 55%, #1a1994 100%);
+  transition: opacity 150ms ease, transform 150ms ease;
+
+  &:hover {
+    opacity: 0.95;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.voiceRxCtaBtnDisabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ── Patient chip ── */
+.patientChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 150ms ease;
+  background: var(--tp-slate-100, #f1f5f9);
+  border-radius: 6px;
+  padding: 3px 5px 3px 6px;
+  height: 24px;
+  max-width: 175px;
+  min-width: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.chipLocked {
+  cursor: default;
+}
+
+.chipClickable {
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.chipName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--tp-slate-800, #3d3d4e);
+  line-height: 12px;
+}
+
+.chipMeta {
+  font-size: 10px;
+  line-height: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.chipMetaText {
+  color: var(--tp-slate-300, #b0b7c3);
+  font-weight: 400;
+}
+
+.chipMetaDivider {
+  color: var(--tp-slate-200, #d0d5dd);
+  font-weight: 400;
+  margin: 0 2px;
+}
+
+.chipChevron {
+  flex-shrink: 0;
+  color: var(--tp-slate-500, #667085);
+}
+
+.lockedTooltip {
+  border-radius: 6px;
+  background: var(--tp-slate-800, #1e293b);
+  padding: 5px 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  white-space: normal;
+}
+
+/* ── Trust indicator ── */
+.trustRow {
+  margin-top: 4px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.trustText {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--tp-slate-300, #d0d5dd);
+}

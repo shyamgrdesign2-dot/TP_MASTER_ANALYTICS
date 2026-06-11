@@ -1,0 +1,628 @@
+// Antd Drawer content styling
+
+@mixin position-relative-full-size {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.preview-drawer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 0 16px;
+
+  .snaprx-preview-container {
+    flex: 1;
+  }
+
+  .preview-area {
+    background: #79797b;
+    backdrop-filter: blur(5.09337854385376px);
+    border-radius: 20px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 37.5625rem;
+    margin: auto;
+    width: 580px;
+    height: 580px;
+
+    .skeleton-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ant-skeleton-image {
+        width: 100% !important;
+        height: 100% !important;
+
+        .ant-skeleton-image-svg {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .loading-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      .loading-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        color: white;
+
+        .spinner {
+          width: 32px;
+          height: 32px;
+          border: 3px solid rgba(255, 255, 255, 0.3);
+          border-top: 3px solid white;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .error-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      .error-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        color: white;
+
+        .error-icon {
+          font-size: 48px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        .retry-btn {
+          padding: 8px 16px;
+          background: #ef4444;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background: #dc2626;
+          }
+        }
+      }
+    }
+
+    .crop-container {
+      position: relative;
+      max-width: 485px;
+      max-height: auto;
+      margin: auto;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .react-crop-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ReactCrop__child-wrapper {
+          max-width: 480px;
+          max-height: 480px;
+          display: inline-grid;
+          place-items: center;
+          .prescription-image {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: block;
+          }
+        }
+      }
+
+      .react-crop-wrapper .ReactCrop__crop-selection {
+        box-shadow: none !important;
+      }
+
+      .react-crop-wrapper .ReactCrop__crop-selection::before {
+        box-shadow: none !important;
+      }
+
+      /* Remove the dark overlay/mask */
+      .react-crop-wrapper .ReactCrop__crop-selection {
+        background: transparent !important;
+      }
+
+      /* If there's still a mask, target the crop container */
+      .ReactCrop {
+        position: relative;
+      }
+
+      .ReactCrop::before,
+      .ReactCrop::after {
+        display: none !important;
+      }
+    }
+    .preview-area .crop-container {
+      width: 480px;
+      height: 480px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    
+    .preview-area .react-crop-wrapper .ReactCrop__child-wrapper {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  // React Image Crop Customization
+  .ReactCrop {
+    position: relative;
+    display: inline-block;
+    cursor: crosshair;
+    max-width: 100%;
+    max-height: 100%;
+
+    &__crop-selection {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate3d(0, 0, 0);
+      box-sizing: border-box;
+      border: 3px solid #3b82f6 !important;
+      background: rgba(59, 130, 246, 0.1) !important;
+      cursor: move;
+    }
+
+    &__crop-handle {
+      position: absolute;
+      width: 16px !important;
+      height: 16px !important;
+      background: #3b82f6 !important;
+      border: 3px solid white !important;
+      border-radius: 50% !important;
+      cursor: grab;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #2563eb !important;
+        transform: scale(1.2);
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+
+      // Position the corner handles
+      &--nw {
+        top: -8px;
+        left: -8px;
+      }
+
+      &--ne {
+        top: -8px;
+        right: -8px;
+      }
+
+      &--sw {
+        bottom: -8px;
+        left: -8px;
+      }
+
+      &--se {
+        bottom: -8px;
+        right: -8px;
+      }
+
+      // Hide edge handles to only show corner handles like in screenshot
+      &--n,
+      &--s,
+      &--e,
+      &--w {
+        display: none !important;
+      }
+    }
+
+    &__image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &__disabled &__crop-selection {
+      cursor: inherit;
+    }
+
+    &__disabled &__crop-handle {
+      cursor: inherit;
+    }
+
+    &__rule-of-thirds-hz:before,
+    &__rule-of-thirds-hz:after,
+    &__rule-of-thirds-vt:before,
+    &__rule-of-thirds-vt:after {
+      display: none;
+    }
+  }
+
+  // Action Bar - positioned below the image
+  .preview-drawer-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    width: 100%;
+
+    .srxpd-action-buttons {
+      display: flex;
+      gap: 12px;
+
+      .action-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &.reupload-btn {
+          display: flex;
+          height: 1.85806rem;
+          padding: 0.25469rem 0.50931rem;
+          justify-content: center;
+          align-items: center;
+          gap: 0.382rem;
+          border-radius: 0.39813rem;
+          background: linear-gradient(
+            103deg,
+            rgba(255, 255, 255, 0.6) 5.1%,
+            rgba(255, 255, 255, 0.6) 51.64%,
+            rgba(255, 255, 255, 0.6) 98.18%
+          );
+          backdrop-filter: blur(3px);
+
+          span {
+            color: #4b4ad5 !important;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+
+        &.remove-btn {
+          display: flex;
+          height: 1.85806rem;
+          padding: 0.25469rem 0.50931rem;
+          justify-content: center;
+          align-items: center;
+          gap: 0.382rem;
+          border-radius: 0.39813rem;
+          background: linear-gradient(
+            103deg,
+            rgba(255, 255, 255, 0.6) 5.1%,
+            rgba(255, 255, 255, 0.6) 51.64%,
+            rgba(255, 255, 255, 0.6) 98.18%
+          );
+          backdrop-filter: blur(3px);
+
+          span {
+            color: #fc5a5a !important;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .srxpd-zoom-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      padding: 0;
+
+      .rotate-btn {
+        display: flex;
+        width: 1.85806rem;
+        height: 1.85806rem;
+        padding: 0.25rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1.32719rem;
+        border: none;
+        border-radius: 0.39813rem;
+        background: linear-gradient(
+          103deg,
+          rgba(255, 255, 255, 0.6) 5.1%,
+          rgba(255, 255, 255, 0.6) 51.64%,
+          rgba(255, 255, 255, 0.6) 98.18%
+        );
+        backdrop-filter: blur(3px);
+      }
+
+      .zoom-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: #f9fafb;
+        border-radius: 8px;
+        color: #6b7280;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 16px;
+
+        &:hover {
+          background: #f3f4f6;
+          color: #374151;
+        }
+      }
+
+      .zoom-btn-combined {
+        display: flex;
+        padding: 0.25rem 0.5rem;
+        align-items: center;
+        gap: 0.5rem;
+        align-self: stretch;
+        border-radius: 0.39813rem;
+        background: linear-gradient(
+          103deg,
+          rgba(255, 255, 255, 0.6) 5.1%,
+          rgba(255, 255, 255, 0.6) 51.64%,
+          rgba(255, 255, 255, 0.6) 98.18%
+        );
+        backdrop-filter: blur(3px);
+
+        .zoom-divider {
+          display: flex;
+          width: 0.33181rem;
+          height: 1.01069rem;
+          flex-direction: column;
+          justify-content: center;
+          color: #a2a2a8 !important;
+          font-size: 0.929rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  // Thumbnails Section
+  .thumbnails-section {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    // padding: 16px;
+    overflow-x: auto;
+    overflow-y: visible;
+    flex-shrink: 0;
+    min-height: 100px;
+    background: #f8f9fa;
+
+    .thumbnail-item {
+      flex-shrink: 0;
+      width: 4.48981rem !important;
+      height: 5rem !important;
+      border-radius: 0.5rem !important;
+      border: 0.5px solid #e2e2ea;
+      background: #fdfdfd;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.06);
+
+      &:hover {
+        border: 1px solid #4b4ad5;
+        box-shadow: 0px 2px 8px 0px rgba(75, 74, 213, 0.2);
+        transform: translateY(-1px);
+      }
+
+      &.selected {
+        border: 1.8px solid #4b4ad5;
+        background: #fdfdfd;
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.18);
+
+        &:hover {
+          transform: none; // Don't lift selected items on hover
+        }
+      }
+
+      .thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .thumbnail-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        padding: 2px 4px;
+
+        .page-number {
+          color: white;
+          font-size: 0.6rem;
+          font-weight: 600;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+          line-height: 1;
+        }
+      }
+
+      .thumbnail-error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: #f5f5f5;
+        border-radius: 8px;
+        font-size: 20px;
+      }
+    }
+
+    .add-more-item {
+      display: flex;
+      padding: 1.0625rem 0.74488rem 1.30025rem 0.74488rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.14519rem;
+      border-radius: 0.5rem;
+      border: 0.4px dashed #4b4ad5;
+      background: rgba(75, 74, 213, 0.04);
+      width: 4.48981rem !important;
+      height: 5rem !important;
+      cursor: pointer;
+
+      .upload-icon {
+        font-size: 20px;
+        color: #6366f1 !important;
+      }
+
+      .add-text {
+        color: #4b4ad5 !important;
+        text-align: center;
+        font-size: 0.625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  .no-files-message {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .preview-drawer-content {
+    gap: 16px;
+
+    .preview-area {
+      padding: 20px;
+      // min-height: 400px;
+    }
+
+    .preview-drawer-action-bar {
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+
+      .action-buttons {
+        justify-content: center;
+      }
+
+      .srxpd-zoom-controls {
+        justify-content: center;
+      }
+    }
+
+    .thumbnails-section {
+      gap: 12px;
+
+      .thumbnail-item,
+      .add-more-item {
+        cursor: pointer;
+        width: 60px !important;
+        height: 80px !important;
+      }
+    }
+  }
+}
+
+// Page indicator styling
+.snaprx-drawer-title {
+  .page-indicator {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #6b7280;
+    margin-left: 0.5rem;
+  }
+}
+
+// Thumbnails Section
+
+.save-btn {
+  display: flex;
+  width: 7.8125rem;
+  padding: 0.625rem 1rem !important;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  border-radius: 0.625rem !important;
+  background: #4b4ad5 !important;
+}
+
+.snaprx-drawer-title {
+  color: #454551;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.625rem; /* 144.444% */
+}

@@ -1,0 +1,478 @@
+/* ─── Reset / Base scoped to Editor ───────────────────────────────────────── */
+.health-checkup-editor__smart-editor-wrap {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    font-family: 'Poppins',
+    sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.0607px;
+    color: #454551;
+    /* T-Text-80 */
+    -webkit-font-smoothing: antialiased;
+    /* header handles its own padding; body content below header uses 14px sides */
+    padding: 0;
+
+    background: #ffffff;
+
+    /* Logo (left) + "HEALTH CHECK-UP SUMMARY" title (right), separated by 57px gap  */
+    .report-doc-header {
+        display: flex;
+        align-items: center;
+        gap: 57px;
+        padding: 12px 14px;
+        // border-bottom: 1px solid #e2e2ea;
+        margin-bottom: 0;
+    }
+
+    .report-doc-header-logo {
+        width: 89px;
+        height: 57.24px;
+        object-fit: contain;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    .report-doc-header-title {
+        flex: 1;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 21.382px;
+        line-height: 37.418px;
+        letter-spacing: 0.1782px;
+        color: #454551;
+        /* editable inside the Smart Editor */
+        outline: none;
+    }
+
+    /* Body content below the header gets 14px side padding + 24px bottom */
+    .report-doc-header+table,
+    .report-doc-header+h2,
+    .report-doc-header+div,
+    .report-doc-header+p {
+        margin-left: 0;
+    }
+
+    /* Wrap all post-header content in 14px side padding */
+    &>*:not(.report-doc-header) {
+        // padding-left: 14px;
+        // padding-right: 14px;
+    }
+
+    p {
+        margin: 0 0 4px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+    }
+
+    /* ─── Patient Info Table (first bordered table — dividers only) ─────────────── */
+
+    /* The patient info table is .report-patient-table or the first <table> */
+    .report-patient-table,
+    table.report-patient-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: none;
+        background: transparent;
+        margin-bottom: 11px;
+        padding: 0;
+    }
+
+    /* Divider rows (first & last tr — contain a <p class="report-divider">) */
+    .report-patient-table tr:first-child td,
+    .report-patient-table tr:last-child td {
+        padding: 0;
+        border: none;
+        vertical-align: top;
+    }
+
+    .report-patient-table tr:first-child td p.report-divider,
+    .report-patient-table .report-divider {
+        margin: 0;
+        padding: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        border: none;
+        border-top: 1px solid #f1f1f5;
+    }
+
+    .report-patient-table tr:last-child td p.report-divider {
+        border-top: none;
+        border-bottom: 1px solid #f1f1f5;
+    }
+
+    /* Patient data row */
+    .report-patient-table tr:nth-child(2) td {
+        padding: 12px 14px 12px 14px;
+        border: none;
+        vertical-align: top;
+    }
+
+    .report-patient-table tr:nth-child(2) td.report-patient-left,
+    .report-patient-table tr:nth-child(2) td:first-child {
+        width: 273px;
+    }
+
+    .report-patient-table tr:nth-child(2) td.report-patient-right,
+    .report-patient-table tr:nth-child(2) td:last-child {
+        width: 204px;
+    }
+
+    .report-patient-table td p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #171725;
+        /* T-Text-100 */
+        margin: 0 0 4px;
+    }
+
+    .report-patient-table td p:last-child {
+        margin-bottom: 0;
+    }
+
+    .report-patient-table td p strong {
+        font-weight: 600;
+    }
+
+    /* ─── Section Titles (h2) ───────────────────────────────────────────────────── */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 10;
+        padding: 0;
+    }
+
+    h2,
+    .report-section-title {
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #171725;
+        /* T-Text-100 */
+        background: #f1f1f5;
+        /* T-BG-10 */
+        padding: 6px;
+        border-radius: 4px;
+        // margin: 24px 0 4px;
+        overflow: hidden;
+    }
+
+    /* First h2 / section title — no top margin */
+    h2:first-of-type,
+    .report-section-title:first-child {
+        margin-top: 0;
+    }
+
+    h2::before,
+    .report-section-title::before {
+        content: '';
+        position: absolute;
+        width: 734.617px;
+        height: 715.67px;
+        left: calc(50% - 438.76px);
+        top: -694.67px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+        pointer-events: none;
+        opacity: 0.4;
+    }
+
+    /* ─── Chief Complaints, Impression, Advice, General Recommendations boxes ─────── */
+    /* Using table.report-section-box so Jodit never deletes or splits the box natively */
+    table.report-section-box {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 0 12px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #f1f1f5 !important;
+        border-radius: 0;
+
+        td {
+            overflow: visible;
+            padding: 6px 12px;
+            border: none;
+            height: 52px;
+            word-break: normal;
+            overflow-wrap: normal;
+            vertical-align: top;
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 0.0607px;
+                color: #454551;
+                margin: 0;
+                word-break: normal;
+                overflow-wrap: normal;
+            }
+        }
+    }
+
+    /* General Recommendations: taller default empty-box height */
+    table.report-section-box.report-general-rec td {
+        min-height: 154px;
+    }
+
+    /* ─── Data Tables (Patient History, General Exam, Radiology, etc.) ─────────── */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+        margin: 0;
+    }
+
+    .report-data-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 1px solid #f1f1f5;
+        background: rgba(255, 255, 255, 0.5);
+        margin: 12px 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+    }
+
+    /* Wrapper padding (between h2 and table, and after table) */
+    h2+.report-data-table,
+    .report-section-title+.report-data-table {
+        margin-top: 0;
+    }
+
+    /* ── Table: Header row ── */
+    .report-data-table thead tr th {
+        background: #fafafb;
+        /* T-BG-100 */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+        text-align: left;
+        vertical-align: middle;
+        padding: 6px 6.681px;
+        border: 0.607px solid #f1f1f5;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .report-data-table thead tr th p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* ── Table: Body rows ── */
+    /* Use min-height ONLY — never fixed height, so cells expand as content grows */
+    .report-data-table tbody tr td {
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+        text-align: left;
+        vertical-align: top;
+        padding: 6px 6.681px;
+        border: 0.607px solid #f1f1f5;
+        min-height: 40px;
+        height: auto;
+        overflow: visible;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .report-data-table tbody tr td p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* ── Column widths: 2-column tables (NAME | NOTE/NOTES) ── */
+    .report-data-table:not(.report-consultations) thead tr th:first-child,
+    .report-data-table:not(.report-consultations) tbody tr td:first-child {
+        width: 165px;
+        min-width: 165px;
+        max-width: 165px;
+        font-weight: 500;
+    }
+
+    /* ── Column widths: Consultations table (3 columns) ── */
+    .report-consultations thead tr th:nth-child(1),
+    .report-consultations tbody tr td:nth-child(1) {
+        width: 122px;
+        min-width: 122px;
+        max-width: 122px;
+        font-weight: 500;
+    }
+
+    .report-consultations thead tr th:nth-child(2),
+    .report-consultations tbody tr td:nth-child(2) {
+        width: 165px;
+        min-width: 165px;
+        max-width: 165px;
+    }
+
+    /* Consultations rows: min-height so they can also expand */
+    .report-consultations tbody tr td {
+        min-height: 52px;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Then the h2 top margin of 24px creates the 24px gap visually (12px bottom + 12px of margin visual) */
+    .report-data-table+h2,
+    .report-data-table+.report-section-title {
+        margin-top: 12px;
+    }
+
+    /* ─── Utility: lists inside tables ─────────────────────────────────────────── */
+    ul,
+    ol {
+        margin: 0;
+        padding-left: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.0607px;
+        color: #454551;
+    }
+
+    li p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 18px;
+        display: inline;
+    }
+}
+
+/* END .health-checkup-editor__smart-editor-wrap wrapper */
+
+/* ─── Smart Editor height: auto — must expand to full content height ────────── */
+/*
+ * The Smart Editor web component sets its own internal height.
+ * We override to height:auto so the outer page scrolls (not the editor internally).
+ */
+.smart-health-checkup-editor,
+.smart-health-checkup-editor smart-editor,
+.health-checkup-editor__smart-editor-wrap,
+.health-checkup-editor__smart-editor-wrap smart-editor {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+/* The inner content area rendered by Smart Editor */
+.smart-health-checkup-editor smart-editor::part(content),
+.smart-health-checkup-editor .smart-editor-content-area {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* ─── Print ──────────────────────────────────────────────────────────────────── */
+@media print {
+    .health-checkup-editor__smart-editor-wrap {
+        background: #ffffff;
+    }
+
+    .health-checkup-editor__smart-editor-wrap h2,
+    .health-checkup-editor__smart-editor-wrap .report-section-title {
+        page-break-after: avoid;
+    }
+
+    .health-checkup-editor__smart-editor-wrap .report-data-table {
+        page-break-inside: avoid;
+    }
+}
+
+.smart-container {
+    background: #FAFAFB !important;
+    gap: 19px;
+}
+
+/* Jodit Editor Styles */
+.health-checkup-editor__document-body.jodit-container {
+    background: #FAFAFB !important;
+    border: none !important;
+    height: auto !important;
+}
+
+.health-checkup-editor__document-body .jodit-toolbar__box {
+    background: #FAFAFB !important;
+    border: none !important;
+    border-bottom: 1px solid #e2e2ea !important;
+    padding: 10px 40px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 90 !important;
+}
+
+.health-checkup-editor__document-body .jodit-workplace {
+    background: transparent !important;
+    padding-top: 19px !important;
+    height: auto !important;
+    min-height: 800px !important;
+    overflow: visible !important;
+}
+
+.health-checkup-editor__document-body .jodit-wysiwyg {
+    width: 595px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background: #FFF !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    min-height: 800px !important;
+    height: auto !important;
+    padding: 20px !important;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.health-checkup-editor__smart-editor-wrap .jodit-wysiwyg {
+    height: auto !important;
+    min-height: 800px !important;
+    overflow: visible !important;
+}
+
+.jodit-context table tr,
+.jodit-wysiwyg table tr {
+    min-height: 32px;
+}

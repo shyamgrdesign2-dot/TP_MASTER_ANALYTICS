@@ -1,0 +1,576 @@
+.mobile-obstetric-history-edit {
+  .ant-drawer-content-wrapper {
+    border-radius: 16px 16px 0 0;
+    max-height: 90vh !important;
+  }
+  &.ant-drawer-content {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.mobile-obstetric-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 90vh;
+  background: #FAF8FD;
+  overflow: hidden;
+}
+
+.mobile-obstetric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  flex-shrink: 0; // Prevent header from shrinking
+
+  .mobile-obstetric-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #454551 !important;
+    margin: 0;
+  }
+
+  .mobile-obstetric-close {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.mobile-obstetric-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; // Important for flex scrolling
+  gap: 20px;
+
+  .loading-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6B7280;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+}
+
+// Form sections
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.80) !important;
+  padding: 16px !important;
+  border-radius: 16px !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 0 6px 0 rgba(242, 77, 182, 0.05);
+
+  .section-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #454551 !important;
+    margin: 0;
+  }
+}
+
+// GPLAE Grid
+.gplae-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+
+  .gplae-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .gplae-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #6B7280;
+    }
+
+    .gplae-input {
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      padding: 0 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+
+      &:focus {
+        border-color: #4b4ad5;
+        box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+      }
+    }
+  }
+}
+
+// Date pickers
+.lmp-date-picker,
+.edd-date-picker,
+.ceed-date-picker {
+  .ant-picker {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    padding: 12px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    &:focus,
+    &:hover {
+      border-color: #4b4ad5;
+    }
+  }
+}
+
+// Blood group and Marital Status Select inputs (Ant Design Select)
+.blood-input,
+.husbands-blood-input,
+.marital-status-input {
+  &.ant-select {
+    width: 100%;
+    
+    .ant-select-selector {
+      height: 44px !important;
+      border-radius: 8px !important;
+      border: 1px solid #E5E7EB !important;
+      padding: 0 12px !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+
+      .ant-select-selection-item {
+        line-height: 42px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #111827;
+      }
+
+      .ant-select-selection-placeholder {
+        line-height: 42px;
+        color: #9CA3AF;
+      }
+    }
+
+    &:hover .ant-select-selector {
+      border-color: #4b4ad5 !important;
+    }
+
+    &.ant-select-focused .ant-select-selector {
+      border-color: #4b4ad5 !important;
+      box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1) !important;
+    }
+
+    .ant-select-arrow {
+      color: #6B7280;
+    }
+  }
+}
+
+// Consanguinity radio group
+.consang-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 44px;
+
+  .ant-radio-wrapper {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #111827;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+
+    .ant-radio {
+      .ant-radio-inner {
+        width: 18px;
+        height: 18px;
+        border-color: #D1D5DB;
+
+        &::after {
+          width: 10px;
+          height: 10px;
+          margin-block-start: -5px;
+          margin-inline-start: -5px;
+        }
+      }
+    }
+
+    .ant-radio-checked .ant-radio-inner {
+      border-color: #4b4ad5;
+      background-color: #4b4ad5;
+    }
+
+    span:last-child {
+      padding-inline-start: 8px;
+    }
+  }
+}
+
+// Marriage duration grid
+.marriage-duration-grid {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+
+  .marriage-duration-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .marriage-duration-input {
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      padding: 0 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      text-align: center;
+
+      &:focus {
+        border-color: #4b4ad5;
+        box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+      }
+    }
+
+    .marriage-duration-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #6B7280;
+      text-align: center;
+    }
+  }
+}
+
+// Section header with actions
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+
+  .section-label {
+    margin: 0;
+  }
+
+  .delete-note-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    color: #EF4444;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:active {
+      background: #FEE2E2;
+    }
+
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+// Notes textarea
+.notes-textarea {
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: none;
+
+  &::placeholder {
+    color: #9CA3AF;
+  }
+
+  &:focus {
+    border-color: #4b4ad5;
+    box-shadow: 0 0 0 2px rgba(75, 74, 213, 0.1);
+  }
+}
+
+.mobile-obstetric-footer {
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+  flex-shrink: 0; // Prevent footer from shrinking
+
+  .save-btn {
+    height: 48px;
+    border-radius: 12px;
+    background: #4b4ad5;
+    border-color: #4b4ad5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+    &:active {
+      background: #6B3FE0;
+      border-color: #6B3FE0;
+    }
+
+    &:hover {
+      background: #6B3FE0;
+      border-color: #6B3FE0;
+    }
+  }
+}
+
+// Delete Note Modal
+.delete-note-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.delete-modal-content {
+  .delete-modal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E5E7EB;
+
+    h3 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+  }
+
+  .delete-modal-body {
+    padding: 20px;
+
+    .alert-warning-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #FEF3C7;
+      border-radius: 10px;
+      padding: 12px 16px;
+
+      .alert-icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #92400E;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .delete-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-top: 1px solid #E5E7EB;
+
+    .yes-delete-btn {
+      background: none;
+      border: none;
+      color: #4b4ad5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 8px 4px;
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    .no-keep-btn {
+      height: 40px;
+      border-radius: 8px;
+      background: #4b4ad5;
+      border-color: #4b4ad5;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 20px;
+
+      &:hover {
+        background: #5D5CE8;
+        border-color: #5D5CE8;
+      }
+    }
+  }
+}
+
+// ANC Summary Section
+.anc-summary {
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+
+  .anc-summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .anc-count {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .anc-completed {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: #16A34A;
+      background: #DCFCE7;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .no-anc-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+// Immunisation Summary Section
+.immunisation-summary {
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+
+  .immunisation-summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .immunisation-count {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #111827;
+    }
+
+    .immunisation-given {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: #16A34A;
+      background: #DCFCE7;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .no-immunisation-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0;
+    text-align: center;
+  }
+
+  // Complete Pregnancy Section
+  .complete-pregnancy-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed #E5E7EB;
+
+    .or-divider {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+
+    .complete-pregnancy-btn {
+      border: 1px solid #FC5A5A;
+      border-radius: 10px;
+      color: #FC5A5A;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      height: auto;
+      background: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: #FC5A5A;
+        color: #FC5A5A;
+        background: rgba(252, 90, 90, 0.05);
+      }
+    }
+  }
+}
+
+// Discard Changes Modal
+.discard-changes-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+  }
+}

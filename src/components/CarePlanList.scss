@@ -1,0 +1,34 @@
+.care-plan-list-container {
+  .care-plan-item {
+    &:hover {
+      background-color: #fafafa !important;
+      border-color: #d9d9d9 !important;
+    }
+
+    &:active {
+      background-color: #f0f0f0 !important;
+    }
+  }
+
+  .ant-list {
+    .ant-list-item {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .ant-empty {
+    .ant-empty-description {
+      color: #8c8c8c;
+      font-size: 14px;
+    }
+  }
+}
+
+// Ensure consistent spacing with other prescription components
+.prescription-box-sm {
+  .care-plan-list-container {
+    margin-top: 4px;
+    padding-top: 4px;
+  }
+}

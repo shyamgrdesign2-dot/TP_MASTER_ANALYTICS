@@ -1,0 +1,49 @@
+name: Trigger auto deployment for pm-prod-doctor-portal
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ prod ]
+    paths:
+    - '**'
+    - '.github/workflows/pm-prod-doctor-portal-AutoDeployTrigger-3f2aba67-98a9-4e87-b2ab-44914b2c674a.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:      
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      REACT_APP_ENV: prod
+    permissions: 
+      id-token: write #This is required for requesting the OIDC JWT Token
+      contents: read #Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.PMPRODDOCTORPORTAL_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.PMPRODDOCTORPORTAL_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.PMPRODDOCTORPORTAL_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: acinacr.azurecr.io
+          registryUsername: ${{ secrets.PMPRODDOCTORPORTAL_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.PMPRODDOCTORPORTAL_REGISTRY_PASSWORD }}
+          containerAppName: pm-prod-doctor-portal
+          resourceGroup: tatva-prod
+          imageToBuild: acinacr.azurecr.io/pm-prod-doctor-portal:${{ github.sha }}
+          buildArguments: |
+            REACT_APP_ENV=prod
+            GENERATE_SOURCEMAP=false
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}

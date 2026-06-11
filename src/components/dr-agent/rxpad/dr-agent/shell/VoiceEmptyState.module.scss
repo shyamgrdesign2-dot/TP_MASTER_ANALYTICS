@@ -1,0 +1,235 @@
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px 20px;
+  position: relative;
+}
+
+.centerZone {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sparkWrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 14px;
+}
+
+.sparkWrapperInner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+}
+
+.sparkBase {
+  border-radius: 16px;
+}
+
+.sparkGif {
+  background-image: url(../../../assets/icons/chat-bg.gif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  opacity: 0.32;
+}
+
+.greeting {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--tp-slate-700, #454551);
+  text-align: center;
+  line-height: 26px;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+  color: var(--tp-slate-400, #a2a2a8);
+}
+
+.subtitleEm {
+  font-weight: 500;
+  color: var(--tp-slate-500, #717179);
+}
+
+.ctaRow {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 14px;
+}
+
+.voiceCta {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #d565ea 0%, #673aac 55%, #1a1994 100%);
+  transition: filter 150ms ease, transform 150ms ease;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.05);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}
+
+.voiceCtaLocked {
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.bottomZone {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.chipGroup {
+  position: relative;
+}
+
+.chipTooltipWrap {
+  pointer-events: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 50;
+  margin-bottom: 10px;
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+
+  .chipGroup:hover & {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.tooltipBox {
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: rgba(30, 20, 50, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  width: 220px;
+  text-align: center;
+}
+
+.tooltipTitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+}
+
+.tooltipSubtext {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.tooltipArrow {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(30, 20, 50, 0.9);
+}
+
+.patientChip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.56) 0%,
+      rgba(255, 255, 255, 0.28) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(213, 101, 234, 0.16) 0%,
+      rgba(103, 58, 172, 0.2) 55%,
+      rgba(26, 25, 148, 0.16) 100%
+    );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(183, 130, 220, 0.3),
+    0 6px 20px -6px rgba(103, 58, 172, 0.22);
+}
+
+.patientChipText {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  background: linear-gradient(135deg, #c850e8 0%, #673aac 55%, #3a38b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--tp-slate-400, #a2a2a8);
+}

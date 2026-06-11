@@ -1,0 +1,141 @@
+.details-header {
+  background: transparent;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 12px;
+
+  .header-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+
+    .back-button {
+      background: transparent;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      margin-left: -8px; // Offset padding for better alignment
+
+      img {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    .header-profile-section {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .header-title-section {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .header-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-patient-details {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF !important;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .voice-circle-button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+
+      img {
+        display: block;
+        object-fit: contain;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    .edit-button {
+      background: transparent;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      margin-right: -8px; // Offset padding for better alignment
+      color: #FFFFFF;
+
+      img {
+        width: 24px;
+        height: 24px;
+        display: block;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    .header-spacer {
+      width: 40px; // Same width as buttons for proper centering
+      flex-shrink: 0;
+    }
+  }
+}
+

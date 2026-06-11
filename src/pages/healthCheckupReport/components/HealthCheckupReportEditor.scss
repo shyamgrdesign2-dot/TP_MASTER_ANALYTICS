@@ -1,0 +1,906 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap");
+@import "../designTokens";
+
+$text-100: $token-text-100;
+$text-80: $token-text-80;
+$text-40: $token-text-40;
+$bg-10: $token-bg-10;
+$bg-100: $token-bg-100;
+$white: $token-white;
+
+$editor-border: $token-editor-border;
+$editor-text: $token-editor-text;
+$editor-toolbar-bg: $token-editor-toolbar-bg;
+$editor-purple: $token-editor-purple;
+
+.health-checkup-editor {
+  &.health-checkup-editor--drawer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+.health-checkup-editor__header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: $white;
+  border-bottom: $token-header-border solid $editor-border;
+  box-shadow: $token-header-shadow;
+  z-index: 100;
+}
+
+.health-checkup-editor__header-left {
+  display: flex;
+  align-items: center;
+  gap: $token-header-gap;
+}
+
+.health-checkup-editor__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $token-back-btn-padding;
+  background: none;
+  border: none;
+  border-radius: $token-back-btn-radius;
+  cursor: pointer;
+  color: $editor-text;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.health-checkup-editor__header-title {
+  margin: 0;
+  font-size: $token-header-title-size;
+  font-weight: $token-header-title-weight;
+  color: $editor-text;
+}
+
+.health-checkup-editor__header-right {
+  display: flex;
+  align-items: center;
+  gap: $token-header-right-gap;
+}
+
+.health-checkup-editor__preview-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+  color: $editor-text;
+}
+
+.health-checkup-editor__header-divider {
+  width: $token-toolbar-sep-width;
+  height: $token-divider-height;
+  background: $editor-border;
+}
+
+.health-checkup-editor__save-btn,
+.health-checkup-editor__download-btn {
+  display: flex;
+  width: $token-save-btn-width;
+  height: $token-save-btn-height;
+  padding: $token-save-btn-padding-y $token-save-btn-padding-x;
+  justify-content: center;
+  align-items: center;
+  gap: $token-save-btn-gap;
+  border-radius: $token-save-btn-radius;
+  background-color: $editor-purple;
+  border-color: $editor-purple;
+  font-weight: 600;
+
+  &:hover:not(:disabled) {
+    background-color: $token-editor-purple-hover;
+    border-color: $token-editor-purple-hover;
+  }
+
+  &:focus {
+    background-color: $token-editor-purple-hover;
+    border-color: $token-editor-purple-hover;
+  }
+}
+
+.health-checkup-editor__toolbar {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $token-toolbar-gap;
+  padding: $token-toolbar-padding-top $token-toolbar-padding-x $token-toolbar-padding-bottom;
+  min-height: $token-toolbar-min-height;
+  background-color: $editor-toolbar-bg;
+  border-bottom: $token-header-border solid $editor-border;
+
+  &--smart-slot {
+    justify-content: flex-start;
+    overflow: visible;
+
+    >* {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.health-checkup-editor__toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $token-toolbar-row-gap;
+}
+
+.health-checkup-editor__toolbar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: $token-toolbar-row-gap;
+}
+
+.health-checkup-editor__toolbar-row button {
+  min-width: $token-toolbar-btn-size;
+  height: $token-toolbar-btn-size;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $token-toolbar-btn-font-size;
+  background: none;
+  border: none;
+  border-radius: $token-toolbar-btn-radius;
+  cursor: pointer;
+  color: $editor-text;
+
+  &:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  &.is-active {
+    background: rgba(98, 67, 206, 0.12);
+    color: $editor-purple;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.health-checkup-editor__toolbar-sep {
+  width: $token-toolbar-sep-width;
+  height: $token-toolbar-sep-height;
+  background: $editor-border;
+  margin: 0 $token-toolbar-sep-margin;
+}
+
+.health-checkup-editor__toolbar-row select,
+.health-checkup-editor__toolbar-select.ant-select .ant-select-selector {
+  height: $token-toolbar-btn-size;
+  padding: 0 $token-toolbar-select-padding-x;
+  font-size: $token-toolbar-btn-font-size;
+  border: $token-header-border solid $editor-border;
+  border-radius: $token-toolbar-btn-radius;
+  background: $white;
+  cursor: pointer;
+}
+
+.health-checkup-editor__toolbar-group--select {
+  gap: $token-toolbar-select-gap;
+}
+
+.health-checkup-editor__toolbar-font {
+  min-width: $token-toolbar-font-min-width;
+}
+
+.health-checkup-editor__toolbar-size {
+  min-width: $token-toolbar-size-min-width;
+}
+
+.health-checkup-editor__case-btn {
+  font-size: $token-toolbar-case-font-size;
+  text-transform: lowercase;
+
+  &--upper {
+    text-transform: uppercase;
+  }
+}
+
+.health-checkup-editor__document-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background: $token-bg-10;
+  width: 100%;
+}
+
+.health-checkup-editor__document-paper {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: $token-paper-radius;
+  box-sizing: border-box;
+}
+
+.health-checkup-editor__doc-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: $token-doc-header-gap;
+  padding: $token-doc-header-padding-y $token-doc-header-padding-x;
+  border-bottom: 1px solid $editor-border;
+}
+
+.health-checkup-editor__doc-header-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $token-doc-logo-wrap-gap;
+  flex-shrink: 0;
+}
+
+.health-checkup-editor__doc-header-logo {
+  width: $token-doc-logo-width;
+  height: $token-doc-logo-height;
+  object-fit: contain;
+  display: block;
+}
+
+.health-checkup-editor__doc-header-logo-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.health-checkup-editor__doc-header-logo-edit,
+.health-checkup-editor__doc-header-logo-reset {
+  font-size: 12px;
+  color: $editor-purple;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+
+  &:hover {
+    color: darken($editor-purple, 8%);
+  }
+}
+
+.health-checkup-editor__doc-header-logo-reset {
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+.health-checkup-editor__doc-header-title-input,
+.health-checkup-editor__doc-header-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0 $token-doc-title-padding-x;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: $token-doc-title-font-size;
+  line-height: $token-doc-title-line-height;
+  letter-spacing: $token-doc-title-letter-spacing;
+  color: $text-80;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: $token-h2-radius;
+  outline: none;
+
+  &:hover {
+    border-color: $editor-border;
+  }
+
+  &:focus {
+    border-color: $editor-purple;
+    background: rgba($editor-purple, 0.04);
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.health-checkup-editor__document-body-wrap {
+  flex: none;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+
+  .ProseMirror {
+    flex: 1;
+    min-height: $token-body-min-height;
+    padding: 0 $token-body-padding-x $token-body-padding-bottom $token-body-padding-x;
+    font-size: $token-body-font-size;
+    line-height: $token-body-line-height;
+    letter-spacing: $token-body-letter-spacing;
+    color: $text-80;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .health-checkup-editor__document-body {
+    outline: none;
+  }
+}
+
+.health-checkup-editor__document-wrap .ProseMirror {
+
+  // Target first table (with or without tableWrapper)
+  >.tableWrapper:first-of-type,
+  >table:first-of-type {
+    margin: 0 0 $token-patient-table-margin-bottom;
+    padding: 0 $token-patient-table-padding-x;
+  }
+
+  >.tableWrapper:first-of-type table,
+  >table:first-of-type {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+
+    tr:first-child td,
+    tr:last-child td {
+      padding: 0;
+      border: none;
+      vertical-align: top;
+
+      p {
+        margin: 0;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        border: none;
+        border-top: 1px solid $bg-10;
+      }
+    }
+
+    tr:last-child td p {
+      border-top: none;
+      border-bottom: 1px solid $bg-10;
+    }
+
+    tr:nth-child(2) td {
+      padding: 0;
+      padding-top: $token-patient-row-padding-top;
+      padding-bottom: $token-patient-row-padding-bottom;
+      padding-right: $token-patient-row-padding-right;
+      border: none;
+      vertical-align: top;
+
+      &:first-child {
+        width: $token-patient-cell-left-width;
+      }
+
+      &:last-child {
+        width: $token-patient-cell-right-width;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-size: $token-body-font-size;
+        line-height: $token-body-line-height;
+        color: $text-100;
+        margin: 0 0 $token-patient-label-margin-bottom;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  >h2 {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: $token-h2-font-weight;
+    font-size: $token-h2-font-size;
+    line-height: normal;
+    color: $text-100;
+    background: $bg-10;
+    padding: $token-h2-padding;
+    border-radius: $token-h2-radius;
+    margin: $token-h2-margin-top 0 $token-h2-margin-bottom;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 715.67px;
+      height: 715.67px;
+      left: calc(50% - 438.76px);
+      top: -694.67px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+
+  // Content after section headers
+  >h2+p,
+  >h2+.tableWrapper {
+    margin-top: 0;
+  }
+
+  >h2+p {
+    min-height: $token-p-box-min-height;
+    padding: $token-p-box-padding;
+    margin: 0 0 $token-p-box-margin-bottom;
+    background: rgba($white, 0.5);
+    border: 1px solid $bg-10;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: $token-body-font-size;
+    line-height: $token-body-line-height;
+    color: $text-80;
+  }
+
+  >h2:last-of-type+p {
+    min-height: $token-general-rec-min-height;
+    padding: $token-general-rec-padding-y $token-general-rec-padding-x;
+  }
+
+  // Regular paragraphs
+  >p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: $token-body-font-size;
+    line-height: $token-body-line-height;
+    letter-spacing: $token-body-letter-spacing;
+    color: $text-80;
+    margin: 0 0 $token-p-margin-bottom;
+  }
+
+  // Target tables (with or without tableWrapper wrapper)
+  .tableWrapper:not(:first-of-type),
+  >table:not(:first-of-type):has(thead) {
+    max-width: 100%;
+    overflow: hidden;
+    // margin: 0 0 24px;
+    padding: $token-table-padding-block 0;
+
+    colgroup col {
+      min-width: 0 !important;
+    }
+
+    // Force 20/80 split for 2-column tables via colgroup
+    colgroup:has(col:nth-child(2):last-child) col:first-child {
+      width: 20% !important;
+    }
+
+    colgroup:has(col:nth-child(2):last-child) col:nth-child(2) {
+      width: 80% !important;
+    }
+  }
+
+  .tableWrapper:not(:first-of-type)>table,
+  >table:not(:first-of-type):has(thead) {
+    width: 100% !important;
+    max-width: 100% !important;
+    // table-layout: fixed !important;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: $token-body-font-size;
+    letter-spacing: $token-body-letter-spacing;
+    color: $text-80;
+    margin: 0;
+    border: 1px solid $bg-10;
+    background: rgba($white, 0.5);
+    box-sizing: border-box;
+
+    th,
+    td {
+      padding: $token-table-cell-padding-y $token-table-cell-padding-x;
+      border: $token-table-cell-border solid $bg-10;
+      text-align: left;
+      vertical-align: top;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+
+      p {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: $token-body-font-size;
+        line-height: $token-body-line-height;
+        letter-spacing: $token-body-letter-spacing;
+      }
+    }
+
+    // Table headers
+    thead tr th {
+      background: $bg-100;
+      font-weight: 500;
+      color: $text-80;
+      height: auto;
+      min-height: $token-table-header-min-height;
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    // Column widths for 2-column tables (NAME | NOTE)
+    // Only apply to tables where first header has colwidth [119] (20% of 595px)
+    thead tr th[colwidth*="119"]:first-child:nth-last-child(2) {
+      width: 20% !important;
+      max-width: 20% !important;
+      min-width: 20% !important;
+    }
+
+    thead tr th[colwidth*="476"]:nth-child(2):nth-last-child(1) {
+      width: 80% !important;
+      max-width: 80% !important;
+      min-width: 80% !important;
+    }
+
+    // Table body cells
+    tbody tr td {
+      background: transparent;
+      font-weight: 400;
+      min-height: $token-table-body-min-height;
+      height: auto;
+
+      p {
+        font-weight: 400;
+      }
+    }
+
+    // Apply column widths to tbody cells only if table has matching thead
+    tbody tr td:first-child:nth-last-child(2) {
+      width: 20% !important;
+      max-width: 20% !important;
+      min-width: 20% !important;
+    }
+
+    tbody tr td:nth-child(2):nth-last-child(1) {
+      width: 80% !important;
+      max-width: 80% !important;
+      min-width: 80% !important;
+    }
+  }
+
+  // General Examination - Table 1 (Temp, BP, SPO2, RR, Pulse - 10 columns)
+  .tableWrapper:not(:first-of-type)>table:has(tr:only-child td:nth-child(10)),
+  >table:not(:first-of-type):has(tr:only-child td:nth-child(10)) {
+    margin-bottom: $token-table-gap-between-vitals !important;
+
+    tr td {
+
+      // Odd columns (labels): narrower, bold
+      &:nth-child(odd) {
+        width: 8.4% !important;
+        max-width: 8.4% !important;
+        min-width: 8.4% !important;
+        font-weight: 500 !important;
+      }
+
+      // Even columns (values): wider
+      &:nth-child(even) {
+        width: 11.6% !important;
+        max-width: 11.6% !important;
+        min-width: 11.6% !important;
+      }
+    }
+  }
+
+  // General Examination - Table 2 (Weight, Height, BMI - 6 columns)
+  .tableWrapper:not(:first-of-type)>table:has(tr:only-child td:nth-child(6):last-child),
+  >table:not(:first-of-type):has(tr:only-child td:nth-child(6):last-child) {
+    tr td {
+
+      // Odd columns (labels): narrower, bold
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 8.4% !important;
+        max-width: 8.4% !important;
+        min-width: 8.4% !important;
+        font-weight: 500 !important;
+      }
+
+      // Even columns (values for Weight and Height): wider
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: 10% !important;
+        max-width: 10% !important;
+        min-width: 10% !important;
+      }
+
+      // BMI label and value
+      &:nth-child(5) {
+        width: 10% !important;
+        max-width: 10% !important;
+        min-width: 10% !important;
+        font-weight: 500 !important;
+      }
+
+      &:nth-child(6) {
+        width: 10% !important;
+        max-width: 10% !important;
+        min-width: 10% !important;
+      }
+    }
+  }
+
+  // Bullet lists (ul/li) - Used in Chief Complaints and table cells
+  >ul,
+  .tableWrapper table td ul,
+  .tableWrapper table th ul,
+  >table td ul,
+  >table th ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: disc;
+    font-family: 'Poppins', sans-serif;
+    font-size: $token-body-font-size;
+    line-height: $token-body-line-height;
+    letter-spacing: $token-body-letter-spacing;
+    color: $text-80;
+
+    li {
+      margin-left: $token-list-margin-left;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      p {
+        margin: 0;
+        font-size: $token-body-font-size;
+        line-height: $token-body-line-height;
+        display: inline;
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      &::marker {
+        color: $text-80;
+      }
+    }
+
+    ul {
+      margin-top: $token-list-nested-margin-top;
+    }
+  }
+
+  // Bullet lists in table cells specifically
+  .tableWrapper table td ul,
+  .tableWrapper table th ul,
+  >table td ul,
+  >table th ul {
+    line-height: $token-list-line-height-in-table;
+
+    li {
+      text-transform: capitalize;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Additional fallback rules for tables without tableWrapper (for preview/patient view)
+// These are outside the .ProseMirror block to ensure they apply with high specificity
+.health-checkup-editor__document-body>table:not(:first-of-type) {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-collapse: collapse !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: $token-body-font-size !important;
+  letter-spacing: $token-body-letter-spacing !important;
+  color: $text-80 !important;
+  margin: 0 0 24px !important;
+  padding: $token-table-padding-block 0 !important;
+  border: 1px solid $bg-10 !important;
+  background: rgba($white, 0.5) !important;
+  box-sizing: border-box !important;
+
+  th,
+  td {
+    padding: $token-table-cell-padding-y $token-table-cell-padding-x !important;
+    border: $token-table-cell-border solid $bg-10 !important;
+    text-align: left !important;
+    vertical-align: top !important;
+    overflow: hidden !important;
+    overflow-wrap: anywhere !important;
+
+    p {
+      min-width: 0 !important;
+      overflow-wrap: anywhere !important;
+      word-break: normal !important;
+      margin: 0 !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: $token-body-font-size !important;
+      line-height: $token-body-line-height !important;
+      letter-spacing: $token-body-letter-spacing !important;
+    }
+  }
+
+  thead tr th {
+    background: $bg-100 !important;
+    font-weight: 500 !important;
+    color: $text-80 !important;
+    height: auto !important;
+    min-height: $token-table-header-min-height !important;
+
+    p {
+      font-weight: 500 !important;
+    }
+  }
+
+  tbody tr td {
+    background: transparent !important;
+    font-weight: 400 !important;
+    min-height: $token-table-body-min-height !important;
+    height: auto !important;
+
+    p {
+      font-weight: 400 !important;
+    }
+  }
+
+  // Column widths for 2-column tables
+  thead tr th[colwidth*="119"]:first-child:nth-last-child(2) {
+    width: 20% !important;
+    max-width: 20% !important;
+    min-width: 20% !important;
+  }
+
+  thead tr th[colwidth*="476"]:nth-child(2):nth-last-child(1) {
+    width: 80% !important;
+    max-width: 80% !important;
+    min-width: 80% !important;
+  }
+
+  tbody tr td:first-child:nth-last-child(2) {
+    width: 20% !important;
+    max-width: 20% !important;
+    min-width: 20% !important;
+  }
+
+  tbody tr td:nth-child(2):nth-last-child(1) {
+    width: 80% !important;
+    max-width: 80% !important;
+    min-width: 80% !important;
+  }
+}
+
+// Repeating Page Header (appears on every page from page 2 onwards)
+.health-checkup-editor__page-header {
+  display: block;
+  margin: 0 0 12px;
+}
+
+.health-checkup-editor__page-header-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.health-checkup-editor__page-header-divider {
+  padding: 0 !important;
+  border: none !important;
+  height: 1px;
+
+  .health-checkup-editor__page-header-line {
+    width: 100%;
+    height: 1px;
+    background: $bg-10;
+    margin: 0;
+  }
+}
+
+.health-checkup-editor__page-header-cell {
+  padding: 12px 14px !important;
+  border: none !important;
+  vertical-align: top;
+  width: 50%;
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    line-height: 18px;
+    color: $text-100;
+    margin: 0;
+
+    span {
+      font-weight: 400;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+// Print and PDF-specific styles
+@media print {
+  .health-checkup-editor__document-wrap {
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .health-checkup-editor__document-paper {
+    break-after: page;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    // width: 595px !important;
+    // max-width: 595px !important;
+    margin: 0 !important;
+  }
+
+  .health-checkup-editor__page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    z-index: 1000;
+    break-after: avoid;
+    margin: 0;
+  }
+
+  .health-checkup-editor__document-body-wrap {
+    margin-top: 60px;
+  }
+
+  .health-checkup-editor__document-paper:first-child .health-checkup-editor__page-header {
+    display: none;
+  }
+
+  table {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+}
+
+// Smart Web Components editor wrapper (when USE_SMART_EDITOR is true)
+.health-checkup-editor__smart-editor-wrap,
+.smart-health-checkup-editor {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.smart-health-checkup-editor--loading,
+  &.smart-health-checkup-editor--error {
+    padding: 20px;
+    color: $text-80;
+
+    pre {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  }
+}

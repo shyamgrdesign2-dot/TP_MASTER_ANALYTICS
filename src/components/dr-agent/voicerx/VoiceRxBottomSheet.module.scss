@@ -1,0 +1,307 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.36);
+  backdrop-filter: blur(2px);
+}
+
+.sheet {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  padding-bottom: 24px;
+  box-shadow: 0 -8px 32px rgba(15, 23, 42, 0.12);
+}
+
+.dragHandle {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+}
+
+.dragPill {
+  display: block;
+  height: 4px;
+  width: 40px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 8px 16px 12px;
+}
+
+.headerTitle {
+  min-width: 0;
+}
+
+.heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #0f172a;
+  margin: 0;
+}
+
+.infoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 140ms ease;
+
+  &:hover { color: #64748b; }
+}
+
+.infoTooltip {
+  max-width: 320px;
+  border-radius: 14px;
+  background: #1e293b !important;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #fff !important;
+  text-align: center;
+  box-shadow: 0 18px 38px -12px rgba(15, 23, 42, 0.55);
+}
+
+.tooltipTitle {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.tooltipBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #ffffff !important;
+  text-align: center;
+
+  & > div {
+    color: #ffffff !important;
+  }
+  strong, b {
+    color: #ffffff !important;
+    font-weight: 500;
+  }
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2px;
+  color: #334155;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 140ms ease, transform 120ms ease;
+
+  &:hover { color: #0f172a; }
+  &:active { transform: scale(0.95); }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 16px 0;
+}
+
+.optionCard {
+  overflow: hidden;
+  border-radius: 14px;
+  transition: background 200ms ease;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 0 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.optionTile {
+  margin-right: 12px;
+}
+
+.optionLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionLabelText {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155 !important;
+  transition: color 140ms ease;
+  line-height: 1.3;
+}
+
+.optionLabelSelected {
+  font-weight: 600 !important;
+  color: var(--tp-blue-600, #3C3BB5) !important;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 1.5px solid #cbd5e1;
+  flex-shrink: 0;
+  transition: border-color 140ms ease;
+}
+
+.radioSelected {
+  border-color: var(--tp-blue-500, #4B4AD5);
+}
+
+.radioDot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--tp-blue-500, #4B4AD5);
+}
+
+.consentPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 12px 12px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.checkboxWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.checkboxInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.checkboxBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid #93c5fd;
+  background: #fff;
+  transition: background 140ms ease, border-color 140ms ease;
+  pointer-events: none;
+}
+
+.checkboxChecked {
+  background: var(--tp-blue-500, #4B4AD5);
+  border-color: var(--tp-blue-500, #4B4AD5);
+}
+
+.consentText {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--tp-blue-600, #3C3BB5);
+  flex: 1;
+  min-width: 0;
+}
+
+.ctaWrap {
+  padding: 12px 16px 16px;
+}
+
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 0 18px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  transition: filter 160ms ease, transform 120ms ease;
+}
+
+.ctaEnabled {
+  background: linear-gradient(135deg, #D565EA 0%, #673AAC 55%, #1A1994 100%) !important;
+  color: #fff !important;
+
+  &:hover { filter: brightness(1.06); }
+  &:active { transform: scale(0.98); }
+}
+
+.ctaDisabled {
+  background: #f1f5f9 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+}
+
+.ctaIcon {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  color: #fff !important;
+}
+
+.ctaLabel {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #fff !important;
+}

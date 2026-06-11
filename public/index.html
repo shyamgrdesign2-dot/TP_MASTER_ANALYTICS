@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google Tag Manager (deferred to after interactive) -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const isReceptionist = urlParams.has("receptionist");
+      const isPatientViewBill = urlParams.has("patientViewBill");
+
+      function loadGTM() {
+        !isReceptionist && (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N5GKPHK');
+      }
+
+      function loadClarityAndMoengage() {
+        if (isPatientViewBill) return;
+        var moeDataCenter = "dc_3";
+        var moeAppID = "DVIY0IUVG5KDW20CQ08VIWWM";
+        !function (e, n, i, t, a, r, o, d) { if (!moeDataCenter || "{DC}" === moeDataCenter) return console.error("Data center has not been passed correctly. Please follow the SDK installation instruction carefully."); var s = e[a] = e[a] || []; if (s.invoked = 0, s.initialised > 0 || s.invoked > 0) return console.error("MoEngage Web SDK initialised multiple times. Please integrate the Web SDK only once!"), !1; e.moengage_object = a; var l = {}, g = function n(i) { return function () { for (var n = arguments.length, t = Array(n), a = 0; a < n; a++)t[a] = arguments[a]; (e.moengage_q = e.moengage_q || []).push({ f: i, a: t }) } }, u = ["track_event", "add_user_attribute", "add_first_name", "add_last_name", "add_email", "add_mobile", "add_user_name", "add_gender", "add_birthday", "destroy_session", "add_unique_user_id", "update_unique_user_id", "moe_events", "call_web_push", "track", "location_type_attribute"], m = { onsite: ["getData", "registerCallback"] }; for (var c in u) l[u[c]] = g(u[c]); for (var v in m) for (var f in m[v]) null == l[v] && (l[v] = {}), l[v][m[v][f]] = g(v + "." + m[v][f]); r = n.createElement(i), o = n.getElementsByTagName("head")[0], r.async = 1, r.src = t, o.appendChild(r), e.moe = e.moe || function () { return (s.invoked = s.invoked + 1, s.invoked > 1) ? (console.error("MoEngage Web SDK initialised multiple times. Please integrate the Web SDK only once!"), !1) : (d = arguments.length <= 0 ? void 0 : arguments[0], l) }, r.addEventListener("load", function () { if (d) return e[a] = e.moe(d), e[a].initialised = e[a].initialised + 1 || 1, !0 }), r.addEventListener("error", function () { return console.error("Moengage Web SDK loading failed."), !1 }) }(window, document, "script", "https://cdn.moengage.com/release/" + moeDataCenter + "/moe_webSdk.min.latest.js", "Moengage");
+        var environment = '<%= process.env.REACT_APP_ENV %>';
+        var isProductionEnv = ["prod", "zy-preprod", "zy-prod"].includes(environment);
+        var debugLogs = isProductionEnv ? 0 : 1;
+        var clarityId = isProductionEnv ? "n9d6pfs5wc" : "n93vwh8yqg";
+        Moengage = moe({ app_id: moeAppID, debug_logs: debugLogs });
+        if (window.__flushMoeQueue) window.__flushMoeQueue(Moengage);
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", clarityId);
+      }
+
+      // DEMO build: GTM / Clarity / MoEngage trackers are disabled — this is a
+      // standalone demo with mock data; nothing should phone home.
+      var TP_DEMO = true;
+      // Defer non-critical tags until after first paint
+      window.addEventListener('load', () => {
+        if (TP_DEMO) return;
+        window.requestIdleCallback ? requestIdleCallback(() => {
+          loadGTM();
+          loadClarityAndMoengage();
+        }) : setTimeout(() => {
+          loadGTM();
+          loadClarityAndMoengage();
+        }, 200);
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <!-- Performance hints -->
+    <!-- Keep preconnects lean to avoid overhead -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdn.moengage.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.moengage.com">
+    <!-- Replace public/favicon.ico with your Tatva logo (e.g. 48x48 .ico) for tab + Google search -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico?v=2" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Your trusted healthcare platform." />
+    <link rel="preload" href="%PUBLIC_URL%/nodata-found.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="%PUBLIC_URL%/assets/images/webStructure.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="%PUBLIC_URL%/assets/images/website-images/SmartSyncBanner.webp" as="image" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fonts/popins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fonts/popins/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+      /* Local Poppins with font-display swap to avoid FOIT */
+      @font-face {
+        font-family: 'Poppins';
+        src: url('%PUBLIC_URL%/fonts/popins/Poppins-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Poppins';
+        src: url('%PUBLIC_URL%/fonts/popins/Poppins-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      /* Critical fold styles for /login to avoid waiting on main.css */
+      .onboarding-container {
+        display: flex;
+        max-height: 100vh;
+        max-width: 90rem;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .onboarding-left { flex: 1; display: flex; position: relative; }
+      .onboarding-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 1rem 1.2rem 1rem 1rem;
+        border-radius: 0 4rem 0 4rem;
+        padding: 0;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      @media (max-width: 768px) {
+        .onboarding-container { flex-direction: column; max-height: 100%; }
+        .onboarding-right { width: 100vw; margin: 0; border-radius: 0 3rem 0 3rem; }
+      }
+    </style>
+    <meta property="og:image" content="https://www.tatvacare.in/wp-content/uploads/2023/11/main-logo-1-1.jpg"/>
+    <meta property="og:image:secure_url" content="https://www.tatvacare.in/wp-content/uploads/2023/11/main-logo-1-1.jpg" />
+    <meta property="og:image:width" content="616" />
+    <meta property="og:image:height" content="169" />
+    <!-- <meta property="og:title" content="Your trusted healthcare platform" /> -->
+    <meta property="og:url" content="https://www.tatvacare.in/" />
+    
+    <!-- iOS PWA Configuration -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Tatva Practice" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="%PUBLIC_URL%/logo512.png" />
+    
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <base href="/">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Tatva Practice</title> 
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5GKPHK"
+height="0" width="0" style="display:none;visibility:hidden" loading="lazy"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+<script>
+  var beamer_config = {
+    // oMqlKykf61816
+    product_id: "",
+    selector: "beamerButton",
+    display: "left",
+    nps_delay: 3,
+
+    filter: "",
+    user_firstname: "",
+    user_lastname: "",
+    user_id: "",
+   
+    // onclose: function() {
+    //   let BeamerOn = false;
+    //   $("#beamerOverlay").remove();
+    //   if (!BeamerOn) {
+    //     Beamer.init();
+    //     BeamerOn = true;
+    //   }
+    // }
+  };
+</script>
+
+<!-- Only load Beamer if NOT a receptionist -->
+<script>
+    if (!isReceptionist) {
+        const loadBeamer = () => {
+            const beamerScript = document.createElement('script');
+            beamerScript.type = "text/javascript";
+            beamerScript.src = "https://app.getbeamer.com/js/beamer-embed.js";
+            beamerScript.defer = true;
+            beamerScript.async = true;
+            document.body.appendChild(beamerScript);
+        };
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadBeamer);
+        } else {
+            window.addEventListener('load', loadBeamer);
+        }
+    }
+</script>
+
+<script>
+    // Only load Razorpay script if NOT a receptionist
+    if (!isReceptionist) {
+        const loadRazorpay = () => {
+            const script = document.createElement('script');
+            script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        };
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadRazorpay);
+        } else {
+            window.addEventListener('load', loadRazorpay);
+        }
+    }
+</script>
+
+</html>
